@@ -24,4 +24,4 @@
 libros/
 
 # Opcional: Descomenta si no deseas subir los PDFs generados
-# *.pdf
+*.pdf
