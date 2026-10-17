@@ -1,0 +1,760 @@
+\section{De la recta al plano y al espacio}
+
+En los capítulos anteriores describimos el movimiento mediante una coordenada:
+la posición sobre una carretera recta o la altura de un cuerpo en movimiento
+vertical. Las definiciones de desplazamiento, velocidad y aceleración siguen
+siendo válidas cuando la trayectoria deja de ser recta. Lo que cambia es la
+información necesaria para indicar la posición y la orientación del movimiento.
+
+Pensemos en una cámara transportada por un vehículo aéreo. Para localizarla
+no basta conocer su altura: también necesitamos dos coordenadas horizontales.
+Si mantiene su altura, su movimiento puede estudiarse en un plano. Si asciende
+mientras cambia de posición horizontal, necesitamos en general una descripción
+espacial. Podemos representarla como una partícula si interesa su ubicación
+y no su tamaño ni su orientación.
+
+La pregunta central es cómo combinar los cambios de varias coordenadas para
+describir \emph{un mismo movimiento}. Utilizaremos vectores y recuperaremos,
+sobre cada eje, las relaciones cinemáticas conocidas. Este capítulo establece
+el lenguaje general; proyectiles, movimiento circular y comparación entre
+observadores se desarrollarán en los capítulos siguientes.
+
+\section{Referencia, coordenadas y vector de posición}
+
+\subsection{Una referencia fija para toda la descripción}
+
+Elegimos un origen espacial \(O\), tres ejes cartesianos perpendiculares y un
+reloj con un origen temporal definido. Mantendremos los ejes fijos respecto
+del observador elegido, sin cambiar su orientación durante el análisis.
+Los unitarios \(\ihat\), \(\jhat\) y \(\khat\) apuntan en los sentidos
+positivos de \(x\), \(y\) y \(z\), respectivamente, y son adimensionales.
+Usaremos un sistema derecho, con \(\ihat\pcross\jhat=\khat\).
+
+Cuando el plano representado sea vertical, tomaremos habitualmente \(+x\)
+hacia la derecha y \(+y\) hacia arriba, como en el capítulo anterior;
+\(+z\) saldrá del plano de la página. Para un plano horizontal indicaremos
+las direcciones geográficas o de laboratorio correspondientes. Ninguna letra
+representa por sí misma una dirección física universal.
+
+Las coordenadas se expresan en metros y el tiempo en segundos. Denotamos
+el instante inicial mediante \(t_0\); el subíndice \(0\) indicará valores
+en ese instante. El origen espacial no tiene que coincidir con la posición inicial.
+
+\subsection{El vector y sus componentes}
+
+\begin{definicion}[Vector de posición]
+El vector de posición \(\vect{r}(t)\) va desde el origen hasta la posición
+de la partícula en el instante \(t\). En coordenadas cartesianas,
+\[ \vect{r}(t)=x(t)\ihat+y(t)\jhat+z(t)\khat. \]
+Las coordenadas \(x(t)\), \(y(t)\) y \(z(t)\) son sus componentes escalares.
+\end{definicion}
+
+Distinguimos \(x\), componente escalar con signo; \(x\ihat\), contribución
+vectorial sobre el eje \(x\); y \(\vect{r}\), vector completo. Su magnitud,
+\[ r=\norm{\vect{r}}=\sqrt{x^2+y^2+z^2}, \]
+es la distancia al origen, no la distancia recorrida. Una coordenada negativa
+indica una ubicación respecto del origen y no un sentido de movimiento.
+
+Para un movimiento contenido en el plano \(xy\), elegimos el origen en ese
+plano, de modo que \(z(t)=0\) y
+\[ \vect{r}(t)=x(t)\ihat+y(t)\jhat. \]
+Si el plano es paralelo a \(xy\), pero no contiene el origen, \(z\) será
+constante y no necesariamente nula. Un movimiento rectilíneo oblicuo puede
+tener tres coordenadas variables: que varíen tres coordenadas no demuestra
+que la trayectoria sea una curva espacial. Podemos reducir la descripción
+si elegimos ejes adecuados a la geometría.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[x={(0.95cm,-0.32cm)},y={(0cm,1cm)},z={(-0.7cm,-0.5cm)}]
+        \coordinate (O) at (0,0,0);
+        \coordinate (P) at (3,2.5,1.5);
+        \draw[-{Latex},thick] (O) -- (4.4,0,0) node[right] {$x$};
+        \draw[-{Latex},thick] (O) -- (0,3.8,0) node[above] {$y$};
+        \draw[-{Latex},thick] (O) -- (0,0,3) node[left] {$z$};
+        \draw[dashed,GrisPrincipal] (3,0,0) -- (3,0,1.5) -- (0,0,1.5);
+        \draw[dashed,GrisPrincipal] (3,0,1.5) -- (P) -- (0,2.5,1.5) -- (0,2.5,0);
+        \draw[-{Latex},very thick,AzulPrincipal] (O) -- (P)
+            node[midway,right] {$\vect{r}$};
+        \fill (P) circle (2pt) node[above right] {$P(x,y,z)$};
+        \node[above left] at (O) {$O$};
+        \node[below] at (3,0,0) {$x$};
+        \node[left] at (0,2.5,0) {$y$};
+        \node[below left] at (0,0,1.5) {$z$};
+    \end{tikzpicture}
+    \caption{Sistema cartesiano en perspectiva. Las líneas auxiliares
+    localizan las coordenadas de \(P\); los tres ejes físicos son perpendiculares.}
+\end{figure}
+
+\subsection{Trayectoria y ecuaciones paramétricas}
+
+Las funciones \(x(t)\), \(y(t)\) y \(z(t)\) son las \textbf{ecuaciones
+paramétricas} del movimiento: el mismo valor de \(t\) selecciona las tres
+coordenadas de una única posición. Al variar el tiempo, el extremo de
+\(\vect{r}(t)\) dibuja la trayectoria.
+
+A veces podemos eliminar \(t\) para obtener una relación entre coordenadas,
+como \(y=f(x)\). Esta describe el camino geométrico, pero por sí sola no
+dice cuándo pasa la partícula por cada punto, con qué rapidez ni en qué
+sentido. Tampoco toda trayectoria admite una única función \(y=f(x)\):
+una misma coordenada \(x\) puede corresponder a varias posiciones.
+
+\begin{ejemplo}[La trayectoria no determina el ritmo del movimiento]
+En una mesa horizontal fijamos \(+x\) hacia la derecha y \(+y\) hacia el
+fondo. Dos puntos móviles parten del origen en \(t=0\), con
+\[
+\begin{aligned}
+ x_A(t)&=(\SI{1}{\meter\per\second})t,
+ &y_A(t)&=(\SI{2}{\meter\per\second})t,\\
+ x_B(t)&=(\SI{1}{\meter\per\second\squared})t^2,
+ &y_B(t)&=(\SI{2}{\meter\per\second\squared})t^2.
+\end{aligned}
+\]
+Para \(t\geq0\), ambos recorren la semirrecta \(y=2x\), \(x\geq0\).
+A recorre incrementos iguales de posición en tiempos iguales; B recorre
+incrementos cada vez mayores. Coinciden en
+\((\SI{1}{\meter},\SI{2}{\meter})\) a \(t=\SI{1}{\second}\), pero no
+tienen el mismo movimiento. Cada término tiene unidades de longitud:
+los coeficientes de \(t\) y \(t^2\) deben tener unidades distintas.
+\end{ejemplo}
+
+\section{Desplazamiento y distancia en una trayectoria curva}
+
+Entre \(t_i\) y \(t_f>t_i\), el cambio de posición es
+\[ \Delta\vect{r}=\vect{r}_f-\vect{r}_i
+=\Delta x\ihat+\Delta y\jhat+\Delta z\khat, \]
+donde \(\Delta x=x_f-x_i\), \(\Delta y=y_f-y_i\) y
+\(\Delta z=z_f-z_i\). Restamos componentes del mismo eje.
+Geométricamente, \(\Delta\vect{r}\) va desde la posición inicial hasta la
+final; no comienza necesariamente en el origen ni sigue la curva recorrida.
+
+Su magnitud es
+\[ \norm{\Delta\vect{r}}=\sqrt{(\Delta x)^2+(\Delta y)^2+(\Delta z)^2}. \]
+La distancia recorrida \(s\), introducida en el capítulo 7, suma las
+longitudes de todos los tramos efectivamente recorridos. Por tanto,
+\[ s\geq\norm{\Delta\vect{r}}. \]
+Para un desplazamiento no nulo, hay igualdad si se recorre el segmento recto
+entre los extremos sin invertir el sentido; las pausas no alteran esa
+igualdad. Un camino curvo puede producir desigualdad estricta aunque la
+partícula nunca retroceda sobre su trayectoria.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[scale=0.95]
+        \draw[-{Latex}] (0,0) -- (6.7,0) node[right] {$x$};
+        \draw[-{Latex}] (0,0) -- (0,4.3) node[above] {$y$};
+        \node[below left] at (0,0) {$O$};
+        \coordinate (A) at (1.3,1);
+        \coordinate (B) at (5.5,2.8);
+        \draw[thick,GrisPrincipal] (A) .. controls (1.7,3.8) and (4.2,4.1) .. (B);
+        \node[above] at (3.3,3.4) {trayectoria};
+        \draw[-{Latex},thick,AzulPrincipal] (0,0) -- (A)
+            node[midway,below right] {$\vect{r}_i$};
+        \draw[-{Latex},thick,AzulPrincipal] (0,0) -- (B)
+            node[pos=0.64,below right] {$\vect{r}_f$};
+        \draw[-{Latex},very thick,VerdePrincipal] (A) -- (B)
+            node[midway,above] {$\Delta\vect{r}$};
+        \fill (A) circle (2pt) node[left] {$P_i$};
+        \fill (B) circle (2pt) node[right] {$P_f$};
+    \end{tikzpicture}
+    \caption{El desplazamiento une los extremos del recorrido.
+    La suma \(\vect{r}_i+\Delta\vect{r}=\vect{r}_f\) no depende
+    de la forma del camino. Esquema sin escala.}
+\end{figure}
+
+\begin{ejemplo}[Dos tramos perpendiculares]
+Un vehículo de inspección se mueve sobre un suelo horizontal. Tomamos
+el origen en una esquina, \(+x\) al este y \(+y\) al norte.
+Parte de \((\SI{1}{\meter},\SI{2}{\meter})\), avanza \(\SI{3}{\meter}\)
+al este y después \(\SI{4}{\meter}\) al norte. Su posición final es
+\((\SI{4}{\meter},\SI{6}{\meter})\), de modo que
+\[ \Delta\vect{r}=(\SI{3}{\meter})\ihat+(\SI{4}{\meter})\jhat,
+\qquad \norm{\Delta\vect{r}}=\SI{5}{\meter}. \]
+La distancia recorrida es \(s=\SI{7}{\meter}\). La distancia final al origen
+es otra cantidad: \(r_f=\sqrt{4^2+6^2}\,\si{\meter}\approx\SI{7.21}{\meter}\).
+Los tres resultados responden preguntas distintas. El recorrido por tramos
+idealiza el giro; no describe la aceleración durante una esquina instantánea.
+\end{ejemplo}
+
+\section{Velocidad vectorial y rapidez}
+
+\subsection{Velocidad media}
+
+Generalizamos la definición del capítulo 8 sin cambiar su significado:
+\[ \overline{\vect{v}}=\frac{\Delta\vect{r}}{\Delta t},
+\qquad \Delta t=t_f-t_i>0. \]
+Al dividir por un escalar positivo, la velocidad media tiene la dirección
+y el sentido del desplazamiento cuando este no es nulo. Sus componentes son
+\[ \bar v_x=\frac{\Delta x}{\Delta t},\qquad
+\bar v_y=\frac{\Delta y}{\Delta t},\qquad
+\bar v_z=\frac{\Delta z}{\Delta t}. \]
+El vector y cada componente tienen unidades de \(\si{\meter\per\second}\).
+La velocidad media no tiene por qué ser tangente al camino en sus extremos.
+Si se vuelve al punto inicial, es nula aunque haya habido movimiento.
+
+La rapidez media conserva la definición \(s/\Delta t\). Por ello,
+\[ \text{rapidez media}=\frac{s}{\Delta t}
+\geq\norm{\overline{\vect{v}}}. \]
+Si el recorrido anterior dura \(\SI{5}{\second}\),
+\(\overline{\vect{v}}=(\SI{0.6}{\meter\per\second})\ihat
++(\SI{0.8}{\meter\per\second})\jhat\). Su magnitud es
+\(\SI{1}{\meter\per\second}\), mientras la rapidez media es
+\(\SI{1.4}{\meter\per\second}\). Estos datos no determinan las velocidades
+instantáneas durante cada tramo.
+
+\subsection{Velocidad instantánea y tangente a la trayectoria}
+
+Al reducir el intervalo alrededor de un instante, la secante que une las
+posiciones sucesivas se aproxima a la tangente de una trayectoria suave.
+Así se obtiene la generalización vectorial de la derivada ya conocida:
+\begin{definicion}[Velocidad instantánea]
+\[ \vect{v}(t)=\lim_{\Delta t\to0}
+\frac{\vect{r}(t+\Delta t)-\vect{r}(t)}{\Delta t}
+=\deriv{\vect{r}}{t}. \]
+Cuando \(\vect{v}\ne\vect{0}\), su dirección es tangente a la trayectoria
+y su sentido es el del movimiento.
+\end{definicion}
+
+Como los unitarios de nuestros ejes fijos no cambian con el tiempo,
+derivar el vector equivale a derivar sus componentes:
+\[ \vect{v}=v_x\ihat+v_y\jhat+v_z\khat,
+\qquad v_x=\deriv{x}{t},\quad v_y=\deriv{y}{t},\quad v_z=\deriv{z}{t}. \]
+Cada componente expresa la tasa de cambio de una coordenada. Si \(v_x<0\),
+\(x\) disminuye en ese instante, aunque \(x\) sea positivo. Si \(v_x=0\),
+la proyección sobre \(x\) está momentáneamente en reposo, pero la partícula
+puede seguir moviéndose sobre los otros ejes. El reposo instantáneo exige
+que todas las componentes sean simultáneamente nulas.
+
+La rapidez es la magnitud de la velocidad:
+\[ v=\norm{\vect{v}}=\sqrt{v_x^2+v_y^2+v_z^2}\geq0. \]
+No se obtiene sumando componentes ni sus valores absolutos. Tampoco es,
+en general, \(\dd r/\dd t\): una partícula puede cambiar de posición sin
+variar su distancia al origen. Cuando \(\vect{v}=\vect{0}\), el vector
+velocidad no tiene dirección definida; la frase ``velocidad tangente'' no
+permite asignarle una orientación a un vector nulo.
+
+\subsection{Orientación de la velocidad}
+
+En el plano \(xy\), para \(v>0\), medimos \(\theta_v\) desde \(+x\)
+hacia \(+y\), en sentido antihorario. Entonces,
+\[ v_x=v\cos\theta_v,\qquad v_y=v\sen\theta_v. \]
+Si conocemos las componentes, \(\tan\theta_v=v_y/v_x\) cuando
+\(v_x\ne0\), pero el cociente no distingue cuadrantes opuestos: hay que
+utilizar los signos de ambas componentes. Si \(v_x=0\) y \(v_y\ne0\),
+la velocidad es paralela al eje \(y\).
+
+En tres dimensiones un único ángulo no basta. Para \(v>0\), los ángulos
+\(\alpha\), \(\beta\) y \(\gamma\) respecto de los semiejes positivos
+satisfacen
+\[ \cos\alpha=\frac{v_x}{v},\qquad
+\cos\beta=\frac{v_y}{v},\qquad \cos\gamma=\frac{v_z}{v}, \]
+y \(\cos^2\alpha+\cos^2\beta+\cos^2\gamma=1\). No son tres datos
+independientes. También podemos especificar la orientación mediante
+el unitario \(\vect{v}/v\), sin calcular ángulos.
+
+\begin{ejemplo}[Componente negativa y rapidez positiva]
+En una mesa, con \(+x\) a la derecha y \(+y\) hacia el fondo, una partícula
+tiene \(\vect{v}=(-\SI{3}{\meter\per\second})\ihat
++(\SI{4}{\meter\per\second})\jhat\). Su rapidez es
+\(v=\SI{5}{\meter\per\second}\). Se mueve hacia valores menores de \(x\)
+y mayores de \(y\); la velocidad apunta al segundo cuadrante:
+\[ \theta_v=180\grado-\arctan(4/3)\approx126.9\grado. \]
+El valor \(-53.1\grado\) que puede devolver una calculadora para
+\(\arctan(-4/3)\) señalaría el cuarto cuadrante y sería incorrecto.
+La dirección de esta velocidad no informa dónde está la partícula.
+\end{ejemplo}
+
+\section{De las gráficas temporales a la trayectoria}
+
+Una gráfica \(x\)-\(t\) conserva la interpretación del capítulo 8: su
+pendiente es \(v_x\). Las pendientes de \(y\)-\(t\) y \(z\)-\(t\)
+proporcionan \(v_y\) y \(v_z\). Para reconstruir la posición hay que leer
+todas las gráficas en el \emph{mismo instante}.
+
+En cambio, una gráfica de la trayectoria \(y\)-\(x\) tiene dos ejes
+espaciales. Su pendiente describe orientación, no rapidez. Si \(v_x\ne0\),
+la regla de la cadena da
+\[ \deriv{y}{x}=\frac{\dd y/\dd t}{\dd x/\dd t}=\frac{v_y}{v_x}. \]
+La pendiente \(\dd y/\dd x\) es adimensional; \(\dd x/\dd t\) tiene
+unidades de velocidad. Si \(v_x=0\) y \(v_y\ne0\), la tangente es
+vertical en la gráfica \(y\)-\(x\) y el cociente no es finito.
+
+\begin{ejemplo}[Una descripción en tres gráficas]
+Un punto luminoso recorre una pantalla plana, con origen en su esquina
+inferior izquierda, \(+x\) a la derecha y \(+y\) arriba. Durante
+\(0\leq t\leq\SI{3}{\second}\), su programa establece
+\[ x(t)=(\SI{2}{\meter\per\second})t,\qquad
+y(t)=(\SI{0.5}{\meter\per\second\squared})t^2. \]
+La coordenada \(x\) crece uniformemente; \(y\) aumenta cada vez más deprisa.
+Al derivar,
+\[ v_x=\SI{2}{\meter\per\second},\qquad
+v_y=(\SI{1}{\meter\per\second\squared})t. \]
+A \(t=\SI{2}{\second}\), la posición es
+\((\SI{4}{\meter},\SI{2}{\meter})\) y
+\[ \vect{v}=(\SI{2}{\meter\per\second})\ihat
++(\SI{2}{\meter\per\second})\jhat. \]
+La rapidez vale \(2\sqrt{2}\,\si{\meter\per\second}\approx
+\SI{2.83}{\meter\per\second}\), y la velocidad forma \(45\grado\)
+con \(+x\). Eliminando el tiempo,
+\[ y=\frac{x^2}{\SI{8}{\meter}},\qquad 0\leq x\leq\SI{6}{\meter}. \]
+La pendiente de esta trayectoria en \(x=\SI{4}{\meter}\) es \(1\),
+coherente con \(v_y/v_x=1\). El vector de posición apunta desde el origen
+hasta \((4,2)\), pero la velocidad apunta a lo largo de la tangente:
+no tienen igual orientación. La curva es parabólica por las funciones
+programadas, sin que el punto luminoso sea un proyectil.
+\end{ejemplo}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[width=6.2cm,height=4.6cm,xmin=0,xmax=3.3,ymin=0,ymax=6.6,
+            xlabel={$t\;(\si{\second})$},ylabel={$x\;(\si{\meter})$},
+            grid=major,xtick={0,1,2,3},ytick={0,2,4,6}]
+            \addplot[AzulPrincipal,thick,domain=0:3] {2*x};
+            \addplot[only marks,AzulPrincipal] coordinates {(2,4)};
+        \end{axis}
+    \end{tikzpicture}
+    \hfill
+    \begin{tikzpicture}
+        \begin{axis}[width=6.2cm,height=4.6cm,xmin=0,xmax=3.3,ymin=0,ymax=5,
+            xlabel={$t\;(\si{\second})$},ylabel={$y\;(\si{\meter})$},
+            grid=major,xtick={0,1,2,3},ytick={0,1,2,3,4}]
+            \addplot[VerdePrincipal,thick,domain=0:3] {0.5*x^2};
+            \addplot[only marks,VerdePrincipal] coordinates {(2,2)};
+        \end{axis}
+    \end{tikzpicture}
+
+    \begin{tikzpicture}
+        \begin{axis}[width=9cm,height=6.8cm,axis equal image,
+            xmin=0,xmax=6.6,ymin=0,ymax=5,
+            xlabel={$x\;(\si{\meter})$},ylabel={$y\;(\si{\meter})$},
+            grid=major,xtick={0,1,2,3,4,5,6},ytick={0,1,2,3,4,5}]
+            \addplot[AzulPrincipal,thick,domain=0:6,samples=60] {x^2/8};
+            \addplot[only marks] coordinates {(0,0) (2,0.5) (4,2) (6,4.5)};
+            \addplot[dashed,GrisPrincipal,domain=2.8:5.5] {x-2};
+            \draw[-{Latex},very thick,VerdePrincipal]
+                (axis cs:4,2) -- (axis cs:5,3) node[right] {$\vect{v}$};
+            \node[anchor=north west] at (axis cs:4,1.9) {$t=\SI{2}{\second}$};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Arriba, coordenadas en función del tiempo. Abajo, trayectoria
+    con posiciones separadas por \(\SI{1}{\second}\) y tangente en
+    \(t=\SI{2}{\second}\). La flecha indica la orientación de la velocidad;
+    su longitud no se mide con la escala espacial.}
+\end{figure}
+
+\section{Aceleración: cambio de rapidez y cambio de dirección}
+
+\subsection{La resta de velocidades es vectorial}
+
+Un vehículo que toma una curva cambia su velocidad aunque su indicador de
+rapidez mantenga la misma lectura. En una recta seguíamos el cambio de una
+componente; ahora también puede cambiar la orientación del vector.
+\[ \overline{\vect{a}}=\frac{\Delta\vect{v}}{\Delta t},
+\qquad \Delta\vect{v}=\vect{v}_f-\vect{v}_i. \]
+Por componentes,
+\[ \bar a_x=\frac{v_{fx}-v_{ix}}{\Delta t},\quad
+\bar a_y=\frac{v_{fy}-v_{iy}}{\Delta t},\quad
+\bar a_z=\frac{v_{fz}-v_{iz}}{\Delta t}. \]
+Para representar \(\Delta\vect{v}\), trasladamos las dos velocidades a
+un origen común y dibujamos una flecha desde la punta de \(\vect{v}_i\)
+hasta la de \(\vect{v}_f\). Es un diagrama de velocidades, no de posiciones.
+
+\begin{ejemplo}[Aceleración media sin cambio neto de rapidez]
+Un vehículo pasa de moverse al este con \(\SI{5}{\meter\per\second}\)
+a moverse al norte con igual rapidez en \(\SI{2}{\second}\). Con \(+x\)
+al este y \(+y\) al norte,
+\[ \vect{v}_i=(\SI{5}{\meter\per\second})\ihat,
+\qquad \vect{v}_f=(\SI{5}{\meter\per\second})\jhat. \]
+Por tanto,
+\[ \Delta\vect{v}=(-\SI{5}{\meter\per\second})\ihat
++(\SI{5}{\meter\per\second})\jhat, \]
+\[ \overline{\vect{a}}=(-\SI{2.5}{\meter\per\second\squared})\ihat
++(\SI{2.5}{\meter\per\second\squared})\jhat. \]
+Su magnitud es aproximadamente \(\SI{3.54}{\meter\per\second\squared}\),
+y apunta al noroeste. Restar las rapideces habría dado cero y perdido la
+información del giro. Los datos de los extremos no permiten conocer la
+aceleración instantánea ni asegurar rapidez constante durante todo el intervalo.
+\end{ejemplo}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[scale=0.7]
+        \draw[-{Latex}] (0,0) -- (6.2,0) node[right] {$v_x\;(\si{\meter\per\second})$};
+        \draw[-{Latex}] (0,0) -- (0,6.2) node[above] {$v_y\;(\si{\meter\per\second})$};
+        \draw[-{Latex},very thick,AzulPrincipal] (0,0) -- (5,0)
+            node[midway,below] {$\vect{v}_i$};
+        \draw[-{Latex},very thick,AzulPrincipal] (0,0) -- (0,5)
+            node[midway,left] {$\vect{v}_f$};
+        \draw[-{Latex},very thick,RojoPrincipal] (5,0) -- (0,5)
+            node[midway,above right] {$\Delta\vect{v}$};
+        \node[below] at (5,0) {$5$};
+        \node[left] at (0,5) {$5$};
+        \node[below left] at (0,0) {$0$};
+    \end{tikzpicture}
+    \caption{Resta de velocidades del ejemplo. Las flechas azules tienen
+    igual magnitud, pero su diferencia no es nula.}
+\end{figure}
+
+\subsection{Aceleración instantánea por componentes}
+
+Aplicamos el límite del capítulo 9 al vector completo:
+\[ \vect{a}=\lim_{\Delta t\to0}\frac{\Delta\vect{v}}{\Delta t}
+=\deriv{\vect{v}}{t}=\derivdos{\vect{r}}{t}. \]
+En nuestros ejes cartesianos fijos,
+\[
+\begin{aligned}
+\vect{a}&=a_x\ihat+a_y\jhat+a_z\khat,\\
+a_x&=\deriv{v_x}{t}=\derivdos{x}{t},\qquad
+a_y=\deriv{v_y}{t}=\derivdos{y}{t},\qquad
+a_z=\deriv{v_z}{t}=\derivdos{z}{t}.
+\end{aligned}
+\]
+Su magnitud es \(a=\sqrt{a_x^2+a_y^2+a_z^2}\), y la unidad SI es
+\(\si{\meter\per\second\squared}\). La aceleración no tiene que ser
+paralela a la velocidad ni apuntar al origen. Para el punto luminoso
+anterior, \(a_x=0\) y \(a_y=\SI{1}{\meter\per\second\squared}\):
+la aceleración es vertical mientras la velocidad cambia de orientación.
+
+\subsection{¿Qué parte de la aceleración modifica la rapidez?}
+
+Para \(v>0\), introducimos el unitario tangente \(\uvec{t}=\vect{v}/v\).
+Al escribir \(\vect{v}=v\uvec{t}\) y derivar un producto,
+\[ \vect{a}=\deriv{v}{t}\uvec{t}+v\deriv{\uvec{t}}{t}. \]
+El primer término cambia la rapidez; el segundo cambia la orientación.
+Como \(\uvec{t}\pdot\uvec{t}=1\), su derivada implica
+\(\uvec{t}\pdot\dd\uvec{t}/\dd t=0\): el cambio del unitario es
+perpendicular a él. La componente de aceleración paralela a la velocidad
+es, por tanto, la que determina la variación de rapidez.
+
+El producto escalar permite medir esa proyección. Para dos vectores
+\(\vect{A}\) y \(\vect{B}\), se define en esta base ortonormal como
+\(\vect{A}\pdot\vect{B}=A_xB_x+A_yB_y+A_zB_z\); si ambos son no nulos,
+también equivale a \(AB\cos\phi\), donde \(\phi\) es el ángulo entre
+ellos. Es una cantidad escalar, positiva para ángulos agudos, negativa
+para obtusos y nula para vectores perpendiculares.
+
+Podemos expresar el cambio de rapidez mediante este producto:
+\[ v^2=\vect{v}\pdot\vect{v}
+\quad\Longrightarrow\quad 2v\deriv{v}{t}=2\vect{v}\pdot\vect{a}. \]
+Así, para \(v\ne0\),
+\[ \deriv{v}{t}=\frac{\vect{v}\pdot\vect{a}}{v}
+=\frac{v_xa_x+v_ya_y+v_za_z}{v}. \]
+Si el producto escalar es positivo, la rapidez aumenta; si es negativo,
+disminuye. Si es cero, su tasa instantánea de cambio es cero, aunque la
+dirección puede estar cambiando. Que se anule en un instante no implica
+rapidez constante durante un intervalo.
+
+Esta relación generaliza el criterio de signos del movimiento rectilíneo.
+No basta examinar \(a_x\) o \(a_y\) por separado para saber si aumenta
+la rapidez total. Tampoco se identifica \(a\) con \(\dd v/\dd t\): la
+magnitud de la aceleración incluye el efecto del cambio de dirección.
+En reposo instantáneo no se divide por \(v\); se examinan directamente
+las componentes y su evolución próxima. La relación entre aceleración
+normal y radio de curvatura se retomará al estudiar movimiento circular.
+
+\section{Componentes de un mismo movimiento}
+
+\subsection{Qué significa analizar los ejes por separado}
+
+Una igualdad vectorial en una base cartesiana equivale a tres igualdades
+escalares. De este modo,
+\[ \deriv{\vect{v}}{t}=\vect{a}
+\quad\Longleftrightarrow\quad
+\deriv{v_x}{t}=a_x,\quad \deriv{v_y}{t}=a_y,\quad \deriv{v_z}{t}=a_z. \]
+La componente \(a_y\) no se suma a \(a_x\) para calcular el cambio de
+\(v_x\). Si \(a_x=0\) durante un intervalo, \(v_x\) permanece constante
+en él, aunque cambien \(v_y\) y \(v_z\). Esto no exige que \(v_x=0\).
+
+Las proyecciones no son etapas sucesivas del recorrido: la partícula
+evoluciona en todos los ejes simultáneamente. Debemos usar el mismo reloj
+y las condiciones iniciales del mismo instante. No existen tiempos de
+movimiento horizontal y vertical independientes para un único evento.
+
+\begin{advertencia}[Descomposición e independencia]
+La descomposición cartesiana es válida bajo la elección de ejes fijos
+utilizada aquí. Resolver las ecuaciones \emph{independientemente} requiere
+además que los datos o el modelo lo permitan. Si \(a_x\) depende de
+\(y(t)\), las ecuaciones están acopladas: para conocer \(x(t)\) puede
+ser necesario conocer también \(y(t)\). Con aceleración constante, o con
+cada componente de aceleración prescrita solo como función del tiempo,
+podemos integrar los ejes por separado.
+\end{advertencia}
+
+\subsection{Reconstrucción a partir de velocidad o aceleración}
+
+Derivar permite pasar de posición a velocidad y de velocidad a aceleración.
+El proceso inverso acumula pequeños cambios a lo largo del tiempo.
+Si conocemos \(\vect{v}(t)\),
+\[ \vect{r}(t)=\vect{r}_0+\int_{t_0}^{t}\vect{v}(t')\,\dd t'. \]
+El símbolo \(t'\) es una variable de integración. Por ejemplo,
+\[ x(t)=x_0+\int_{t_0}^{t}v_x(t')\,\dd t', \]
+y se procede igual para \(y\) y \(z\). El área algebraica bajo
+\(v_x\)-\(t\) es \(\Delta x\), no la distancia total. Las tres áreas
+proporcionan las componentes de \(\Delta\vect{r}\).
+
+Si conocemos la aceleración y la velocidad inicial,
+\[ \vect{v}(t)=\vect{v}_0+\int_{t_0}^{t}\vect{a}(t')\,\dd t'. \]
+Cada área algebraica bajo \(a_x\)-\(t\), \(a_y\)-\(t\) o \(a_z\)-\(t\)
+es el cambio de la componente correspondiente de velocidad. Hace falta
+\(\vect{v}_0\) para determinar la velocidad y, además, \(\vect{r}_0\)
+para determinar la posición: la aceleración sola no especifica el movimiento.
+
+Para la distancia recorrida desde \(t_0\), con \(s(t_0)=0\), acumulamos
+la rapidez:
+\[ s(t)=\int_{t_0}^{t}v(t')\,\dd t'
+=\int_{t_0}^{t}\sqrt{v_x(t')^2+v_y(t')^2+v_z(t')^2}\,\dd t'. \]
+Primero se calcula la magnitud y luego se integra. Integrar el vector y
+tomar después su norma daría la magnitud del desplazamiento, en general
+menor. Las unidades lo confirman: velocidad por tiempo es longitud,
+y aceleración por tiempo es velocidad.
+
+\section{Movimiento con aceleración vectorial constante}
+
+\subsection{Hipótesis y construcción de las ecuaciones}
+
+Supongamos que \(\vect{a}\) permanece constante en el intervalo estudiado.
+Sus componentes sobre nuestros ejes fijos deben ser constantes; conservar
+solo la magnitud no basta. Definimos \(\Delta t=t-t_0\). Al integrar,
+\[ \vect{v}(t)=\vect{v}_0+\vect{a}\Delta t. \]
+La velocidad es la suma de la velocidad inicial y el cambio acumulado
+\(\vect{a}\Delta t\). Integrando de nuevo,
+\[
+\begin{aligned}
+\vect{r}(t)-\vect{r}_0
+&=\int_{t_0}^{t}\bigl[\vect{v}_0+\vect{a}(t'-t_0)\bigr]\,\dd t'\\
+&=\vect{v}_0\Delta t+\frac12\vect{a}(\Delta t)^2.
+\end{aligned}
+\]
+El primer término es el desplazamiento que habría con la velocidad inicial
+constante; el segundo es la corrección debida a la aceleración. Son
+contribuciones simultáneas, no dos tramos recorridos por separado.
+
+Las ecuaciones equivalentes por componentes son
+\[
+\begin{aligned}
+v_x&=v_{0x}+a_x\Delta t,&
+x&=x_0+v_{0x}\Delta t+\tfrac12a_x(\Delta t)^2,\\
+v_y&=v_{0y}+a_y\Delta t,&
+y&=y_0+v_{0y}\Delta t+\tfrac12a_y(\Delta t)^2,\\
+v_z&=v_{0z}+a_z\Delta t,&
+z&=z_0+v_{0z}\Delta t+\tfrac12a_z(\Delta t)^2.
+\end{aligned}
+\]
+Si \(t_0=0\), \(\Delta t=t\), y recuperamos en cada eje las expresiones
+del capítulo 9. En cada ecuación de posición todos los términos tienen
+dimensiones de longitud. Si la aceleración es aproximadamente constante,
+estas expresiones también son aproximadas y se restringen al intervalo
+en que el modelo resulta adecuado.
+
+\subsection{Consecuencias y casos particulares}
+
+Si \(\vect{a}=\vect{0}\) durante todo el intervalo, la velocidad es
+constante. Para \(\vect{v}_0\ne\vect{0}\) la trayectoria es recta aunque
+varíen varias coordenadas: es el MRU expresado con vectores. Si también
+\(\vect{v}_0=\vect{0}\), la partícula permanece en reposo.
+
+Con aceleración constante no nula, si \(\vect{v}_0\) es paralela a
+\(\vect{a}\), o nula, el movimiento sigue una recta. Si no son paralelos,
+todos los desplazamientos son combinaciones de esos dos vectores: la
+trayectoria queda en el plano que ambos generan, trasladado hasta
+\(\vect{r}_0\). Usar tres componentes no impide que el movimiento sea
+plano. La trayectoria de los proyectiles se estudiará en el próximo capítulo.
+
+La linealidad de \(\vect{v}(t)\) permite escribir, bajo esta misma hipótesis,
+\[ \overline{\vect{v}}=\frac{\vect{v}_0+\vect{v}(t)}{2},\qquad
+\Delta\vect{r}=\frac{\vect{v}_0+\vect{v}(t)}{2}\,\Delta t. \]
+No se deduce que la rapidez media sea la semisuma de las rapideces:
+tomar la magnitud no es una operación lineal.
+
+La relación sin tiempo también se generaliza con cuidado. Multiplicando
+escalarmente el desplazamiento por \(2\vect{a}\),
+\[ 2\vect{a}\pdot\Delta\vect{r}
+=2\vect{a}\pdot\vect{v}_0\Delta t+a^2(\Delta t)^2. \]
+El miembro derecho coincide con la diferencia entre
+\(\norm{\vect{v}_0+\vect{a}\Delta t}^2\) y \(v_0^2\). Por tanto,
+\[ v^2=v_0^2+2\vect{a}\pdot\Delta\vect{r}
+=v_0^2+2(a_x\Delta x+a_y\Delta y+a_z\Delta z). \]
+Aquí \(v\) y \(v_0\) son rapideces. No se sustituye el producto escalar
+por \(as\): la distancia recorrida no conserva la orientación.
+Esta ecuación escalar tampoco determina por sí sola las tres componentes
+finales de velocidad.
+
+\begin{ejemplo}[Una proyección se invierte mientras la partícula avanza]
+En una mesa horizontal un punto controlado por un mecanismo parte en
+\(t_0=0\) de \(x_0=\SI{1}{\meter}\), \(y_0=\SI{2}{\meter}\), con
+\(v_{0x}=\SI{2}{\meter\per\second}\) y
+\(v_{0y}=-\SI{2}{\meter\per\second}\). Tomamos \(+x\) a la derecha,
+\(+y\) hacia el fondo. Durante \(0\leq t\leq\SI{4}{\second}\),
+\(a_x=0\) y \(a_y=\SI{1}{\meter\per\second\squared}\).
+
+La componente \(x\) corresponde a un MRU; la componente \(y\), a un MRUA:
+\[
+\begin{aligned}
+x(t)&=\SI{1}{\meter}+(\SI{2}{\meter\per\second})t,\\
+y(t)&=\SI{2}{\meter}-(\SI{2}{\meter\per\second})t
++\tfrac12(\SI{1}{\meter\per\second\squared})t^2,\\
+v_x(t)&=\SI{2}{\meter\per\second},\\
+v_y(t)&=-\SI{2}{\meter\per\second}
++(\SI{1}{\meter\per\second\squared})t.
+\end{aligned}
+\]
+En \(t=\SI{2}{\second}\), \(y\) alcanza su mínimo y \(v_y=0\), pero
+\(v_x\ne0\). La partícula pasa por \((\SI{5}{\meter},0)\) con rapidez
+\(\SI{2}{\meter\per\second}\) y tangente paralela a \(x\); no se detiene.
+Antes, \(v_ya_y<0\) y la rapidez disminuye. Después, \(v_ya_y>0\) y
+aumenta, aunque la aceleración no haya cambiado.
+
+En \(t=\SI{4}{\second}\), la posición es
+\((\SI{9}{\meter},\SI{2}{\meter})\), y
+\(\vect{v}=(\SI{2}{\meter\per\second})\ihat
++(\SI{2}{\meter\per\second})\jhat\). Regresa al valor inicial de \(y\),
+pero no a la posición inicial: \(\Delta\vect{r}=(\SI{8}{\meter})\ihat\).
+La velocidad media es \((\SI{2}{\meter\per\second})\ihat\), en acuerdo
+con la semisuma vectorial de las velocidades extremas. Además,
+\(\vect{a}\pdot\Delta\vect{r}=0\): las rapideces inicial y final son
+iguales, aunque la rapidez intermedia haya sido menor.
+\end{ejemplo}
+
+\section{Una trayectoria genuinamente espacial}
+
+La descripción en tres dimensiones no exige nuevas definiciones, pero sí
+conservar las tres componentes al reconstruir vectores y magnitudes.
+Un movimiento con aceleración variable puede abandonar cualquier plano fijo.
+
+\begin{ejemplo}[Posición, velocidad y aceleración en el espacio]
+Un mecanismo desplaza una sonda respecto de un origen fijo del laboratorio.
+Elegimos \(+x\) al este, \(+y\) al norte y \(+z\) hacia arriba.
+Durante \(0\leq t\leq\SI{2}{\second}\), su movimiento se modela mediante
+\[
+\begin{aligned}
+x(t)&=(\SI{1}{\meter\per\second})t,\\
+y(t)&=(\SI{0.5}{\meter\per\second\squared})t^2,\\
+z(t)&=\SI{1}{\meter}+(\SI{0.25}{\meter\per\second\cubed})t^3.
+\end{aligned}
+\]
+Los coeficientes tienen las unidades necesarias para obtener longitudes.
+La sonda avanza hacia el este, el norte y arriba; no se supone caída libre.
+Derivando cada coordenada,
+\[
+\begin{aligned}
+\vect{v}(t)&=(\SI{1}{\meter\per\second})\ihat
++(\SI{1}{\meter\per\second\squared})t\jhat
++(\SI{0.75}{\meter\per\second\cubed})t^2\khat,\\
+\vect{a}(t)&=(\SI{1}{\meter\per\second\squared})\jhat
++(\SI{1.5}{\meter\per\second\cubed})t\khat.
+\end{aligned}
+\]
+La aceleración no es constante; no sería válido insertar su valor final
+en las ecuaciones del apartado anterior para todo el intervalo.
+
+En \(t=\SI{2}{\second}\),
+\[
+\begin{aligned}
+\vect{r}&=(2\ihat+2\jhat+3\khat)\,\si{\meter},\\
+\vect{v}&=(\ihat+2\jhat+3\khat)\,\si{\meter\per\second},\\
+\vect{a}&=(\jhat+3\khat)\,\si{\meter\per\second\squared}.
+\end{aligned}
+\]
+La rapidez es \(\sqrt{14}\,\si{\meter\per\second}\approx
+\SI{3.74}{\meter\per\second}\); la magnitud de la aceleración es
+\(\sqrt{10}\,\si{\meter\per\second\squared}\approx
+\SI{3.16}{\meter\per\second\squared}\). La dirección de la velocidad
+queda especificada por \((\ihat+2\jhat+3\khat)/\sqrt{14}\).
+Además,
+\[ \vect{v}\pdot\vect{a}=\SI{11}{\meter\squared\per\second\cubed}>0, \]
+por lo que la rapidez aumenta. Su tasa de cambio es
+\(11/\sqrt{14}\,\si{\meter\per\second\squared}\approx
+\SI{2.94}{\meter\per\second\squared}\), distinta de \(a\).
+
+Al comienzo, \(\vect{r}_0=(\SI{1}{\meter})\khat\). En dos segundos,
+\(\Delta\vect{r}=(2\ihat+2\jhat+2\khat)\,\si{\meter}\), de modo que
+\(\overline{\vect{v}}=(\ihat+\jhat+\khat)\,\si{\meter\per\second}\).
+La posición inicial no puede omitirse al calcular el desplazamiento.
+
+Esta curva no está contenida en un plano. Si existieran constantes
+\(A,B,C,D\), con \(A,B,C\) no todas nulas, tales que \(Ax+By+Cz=D\)
+durante todo el intervalo, al sustituir obtendríamos una identidad con
+términos en \(t\), \(t^2\) y \(t^3\). Sus coeficientes deben anularse
+por separado: resultaría \(A=B=C=0\), contradiciendo la condición de
+un plano. Aquí la tercera dimensión es esencial.
+\end{ejemplo}
+
+\section{Cómo observar y comprobar la descripción}
+
+Registrar posiciones a intervalos iguales permite relacionar los vectores
+con una observación real. Para un movimiento plano puede filmarse un punto
+desde una cámara fija, con el eje óptico perpendicular al plano del
+movimiento y una escala de longitud en ese mismo plano. Después se asignan
+coordenadas a cada imagen y tiempos mediante el registro de la cámara.
+La perspectiva y la calibración deben controlarse antes de interpretar
+píxeles como distancias.
+
+Con un intervalo de muestreo \(h\), podemos estimar, en instantes interiores,
+\[ \vect{v}(t)\approx\frac{\vect{r}(t+h)-\vect{r}(t-h)}{2h},\qquad
+\vect{a}(t)\approx\frac{\vect{r}(t+h)-2\vect{r}(t)+\vect{r}(t-h)}{h^2}. \]
+Son aproximaciones para movimientos suficientemente suaves, no definiciones
+exactas con \(h\) finito. Reducir \(h\) mejora la resolución temporal,
+pero puede hacer más importante el error de localización, especialmente
+en la segunda diferencia usada para la aceleración. Una sola imagen plana
+no determina en general la profundidad de una trayectoria espacial: hacen
+falta datos adicionales, como vistas calibradas desde otras posiciones.
+
+\begin{estrategia}[Leer el movimiento antes de calcular]
+Fije el origen, los ejes y el reloj; identifique si conoce posición,
+velocidad o aceleración. Trabaje por componentes con sus signos y unidades,
+manteniendo el mismo instante para todas ellas. Use derivadas para obtener
+tasas de cambio e integrales con condiciones iniciales para reconstruir el
+movimiento. Aplique las ecuaciones de aceleración constante solo después
+de comprobar esa hipótesis. Al final, reconstruya el vector, su magnitud
+y su orientación, y contraste el resultado con la trayectoria y las gráficas.
+\end{estrategia}
+
+\section{Comprobación conceptual y continuidad}
+
+\begin{errorfrecuente}[Confundir la proyección con el movimiento completo]
+Una componente nula no hace nulo al vector. Por ejemplo, \(v_y=0\) no
+implica reposo si \(v_x\ne0\). Del mismo modo, \(a_x=0\) permite que
+\(v_x\) sea una constante no nula. Volver a la coordenada inicial
+\(y_0\) tampoco equivale a volver al punto inicial: deben coincidir
+todas las coordenadas en el mismo instante.
+\end{errorfrecuente}
+
+Como comprobación de comprensión, conviene discutir estas preguntas:
+\begin{itemize}
+    \item Si dos partículas recorren la misma curva, ¿qué falta para
+    afirmar que tienen el mismo movimiento? La dependencia temporal
+    de sus posiciones.
+    \item Si la rapidez es constante, ¿debe ser nula la aceleración?
+    No: la orientación de la velocidad puede variar.
+    \item Si \(\vect{a}\) es constante y tiene tres componentes no nulas,
+    ¿debe la trayectoria abandonar todo plano? No: el desplazamiento
+    pertenece al plano generado por \(\vect{v}_0\) y \(\vect{a}\),
+    o a una recta en el caso degenerado.
+\end{itemize}
+
+\begin{notapedagogica}
+Para presentar el tema puede seguirse un punto sobre una mesa: registrar
+posiciones, unirlas mediante desplazamientos y comparar después las
+velocidades tangentes en puntos sucesivos. Contrastar la trayectoria con
+las gráficas temporales separa geometría y evolución temporal. El ejemplo
+de la proyección que invierte su sentido muestra por qué los ejes deben
+analizarse por separado y reconstruirse conjuntamente.
+\end{notapedagogica}
+
+\begin{resumen}
+Posición, velocidad y aceleración son vectores distintos: describen dónde
+está la partícula, cómo cambia su posición y cómo cambia su velocidad.
+Las componentes cartesianas permiten aplicar las relaciones conocidas de
+una dimensión a cada proyección, siempre con un tiempo común. La velocidad
+no nula es tangente a la trayectoria; la aceleración puede modificar su
+magnitud, su orientación o ambas. Las magnitudes se reconstruyen a partir
+de todas las componentes; la distancia se obtiene acumulando la rapidez.
+\end{resumen}
+
+El movimiento vertical anterior se recupera al mantener fijas las
+coordenadas horizontales. En el próximo capítulo combinaremos esa
+descripción vertical con el movimiento horizontal para estudiar proyectiles
+bajo hipótesis explícitas. El movimiento circular permitirá cuantificar
+el cambio de dirección, y el movimiento relativo comparará descripciones
+realizadas por observadores diferentes.

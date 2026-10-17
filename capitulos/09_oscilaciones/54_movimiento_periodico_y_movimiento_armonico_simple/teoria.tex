@@ -1,0 +1,1516 @@
+﻿\section{Movimiento periódico}
+
+Muchos sistemas físicos realizan movimientos que se repiten. El vaivén de un columpio, la vibración de una cuerda, el movimiento de un pistón, las vibraciones de los átomos en un sólido y las oscilaciones de ciertas señales eléctricas son ejemplos de fenómenos en los que alguna magnitud cambia y vuelve a presentar el mismo comportamiento después de cierto intervalo de tiempo.
+
+El estudio de estos movimientos es importante porque las oscilaciones aparecen en prácticamente todas las ramas de la Física. Además, constituyen la base para comprender posteriormente las ondas mecánicas, el sonido y muchos fenómenos electromagnéticos.
+
+Antes de estudiar un tipo particular de oscilación conviene responder una pregunta:
+
+\begin{idea}[¿Qué significa que un movimiento se repita?]
+Decir que un movimiento es periódico no significa simplemente que un objeto pase varias veces por el mismo lugar. Significa que el estado del movimiento se reproduce después de intervalos iguales de tiempo.
+
+En particular, para una coordenada \(x(t)\), un movimiento es periódico si existe un intervalo \(T>0\) tal que
+
+\[ x(t+T)=x(t) \]
+
+para todo instante en el que se describa el movimiento.
+\end{idea}
+
+\begin{definicion}[Movimiento periódico]
+Un movimiento es \textbf{periódico} cuando se repite en intervalos iguales de tiempo.
+
+El menor intervalo positivo después del cual el movimiento completo vuelve a repetirse se denomina \textbf{periodo}.
+\end{definicion}
+
+Debe prestarse atención a la expresión ``movimiento completo''. Que un objeto vuelva a ocupar la misma posición no garantiza que haya completado un ciclo.
+
+Por ejemplo, una partícula que oscila puede atravesar dos veces la posición de equilibrio durante un mismo ciclo: una vez moviéndose hacia la derecha y otra moviéndose hacia la izquierda. La posición es la misma, pero el estado del movimiento no lo es.
+
+\subsection{Movimiento oscilatorio}
+
+Un caso especialmente importante de movimiento repetitivo es aquel en el que una magnitud física cambia a un lado y al otro de un valor de equilibrio.
+
+\begin{definicion}[Oscilación]
+Una \textbf{oscilación} es una variación repetida de un sistema alrededor de una posición o estado de equilibrio.
+\end{definicion}
+
+Un objeto que se mueve de un extremo al otro y regresa puede realizar una oscilación. Sin embargo, no todo movimiento periódico es necesariamente oscilatorio.
+
+Por ejemplo, una partícula que describe una circunferencia con rapidez constante realiza un movimiento periódico, pues vuelve regularmente al mismo estado de movimiento, pero no se desplaza hacia un lado y otro de una posición de equilibrio sobre la circunferencia.
+
+\begin{advertencia}
+\textbf{Movimiento periódico} y \textbf{movimiento oscilatorio} no son sinónimos.
+
+Todo movimiento armónico simple es periódico y oscilatorio, pero existen movimientos periódicos que no son oscilatorios y movimientos oscilatorios que no son armónicos simples.
+\end{advertencia}
+
+\subsection{Posición de equilibrio}
+
+Para comprender una oscilación natural debemos identificar primero una posición especial: el equilibrio.
+
+\begin{definicion}[Posición de equilibrio estable]
+Una posición es de \textbf{equilibrio estable} cuando, después de producir un pequeño desplazamiento y liberar el sistema, aparece una interacción que tiende a llevarlo nuevamente hacia esa posición.
+\end{definicion}
+
+Imaginemos una partícula que puede moverse a lo largo del eje \(x\). Elegiremos el origen en la posición de equilibrio:
+
+\[ x=0. \]
+
+Si la partícula se encuentra a la derecha del equilibrio, \(x>0\), la interacción restauradora debe tender hacia la izquierda. Si se encuentra a la izquierda, \(x<0\), debe tender hacia la derecha.
+
+Por tanto, el desplazamiento y la fuerza restauradora tienen sentidos opuestos.
+
+\begin{center}
+\begin{tikzpicture}[scale=1.05]
+
+    \draw[-{Latex},thick] (-4,0) -- (4,0) node[right] {\(x\)};
+
+    \draw (-3,0.12) -- (-3,-0.12);
+    \draw (0,0.15) -- (0,-0.15);
+    \draw (3,0.12) -- (3,-0.12);
+
+    \node[below] at (-3,-0.12) {\(-A\)};
+    \node[below] at (0,-0.12) {\(0\)};
+    \node[below] at (3,-0.12) {\(+A\)};
+
+    \node[above] at (0,0.18) {equilibrio};
+
+    \fill (1.9,0) circle (2.5pt);
+    \node[above] at (1.9,0.12) {\(x>0\)};
+
+    \draw[-{Latex},very thick] (1.75,0.55) -- (0.65,0.55);
+    \node[above] at (1.2,0.55) {restauración};
+
+    \draw[<->] (0,-0.85) -- (3,-0.85);
+    \node[below] at (1.5,-0.85) {\(A\)};
+
+\end{tikzpicture}
+\end{center}
+
+La existencia de una fuerza restauradora, sin embargo, todavía no garantiza que el movimiento sea armónico simple. La forma en que esa fuerza depende del desplazamiento será esencial.
+
+\section{Magnitudes que describen una oscilación}
+
+Antes de estudiar el movimiento armónico simple debemos establecer algunas magnitudes que permiten describir cualquier movimiento periódico.
+
+\subsection{Ciclo}
+
+\begin{definicion}[Ciclo]
+Un \textbf{ciclo} es una repetición completa del movimiento, después de la cual el sistema vuelve al mismo estado de movimiento.
+\end{definicion}
+
+Si una partícula comienza en \(x=A\), un ciclo completo puede representarse como
+
+\[ A\longrightarrow 0\longrightarrow -A\longrightarrow 0\longrightarrow A. \]
+
+Ir solamente desde \(+A\) hasta \(-A\) corresponde a medio ciclo.
+
+\subsection{Periodo}
+
+\begin{definicion}[Periodo]
+El \textbf{periodo}, representado por \(T\), es el tiempo necesario para completar un ciclo.
+
+Su unidad en el SI es el segundo:
+
+\[ [T]=\si{\second}. \]
+\end{definicion}
+
+Si un sistema tarda \(\SI{0.50}{\second}\) en completar cada oscilación, entonces
+
+\[ T=\SI{0.50}{\second}. \]
+
+\subsection{Frecuencia}
+
+También podemos describir la rapidez con la que se repiten las oscilaciones contando cuántos ciclos ocurren por unidad de tiempo.
+
+\begin{definicion}[Frecuencia]
+La \textbf{frecuencia}, representada por \(f\), es el número de ciclos completos realizados por unidad de tiempo.
+\end{definicion}
+
+Periodo y frecuencia son recíprocos:
+
+\[ \boxed{f=\frac{1}{T}},\qquad \boxed{T=\frac{1}{f}}. \]
+
+La unidad SI de frecuencia es el hertz:
+
+\[ \SI{1}{\hertz}=1\ \text{ciclo por segundo}=\si{\per\second}. \]
+
+Un sistema con frecuencia
+
+\[ f=\SI{4}{\hertz} \]
+
+realiza cuatro ciclos completos cada segundo.
+
+\begin{interpretacion}
+Una frecuencia grande corresponde a oscilaciones rápidas y, por tanto, a un periodo pequeño.
+
+Una frecuencia pequeña corresponde a oscilaciones lentas y a un periodo grande.
+\end{interpretacion}
+
+\subsection{Frecuencia angular}
+
+En un ciclo completo, la fase de una oscilación sinusoidal aumenta \(2\pi\) radianes. Esto permite introducir una magnitud especialmente útil.
+
+\begin{definicion}[Frecuencia angular]
+La \textbf{frecuencia angular}, representada por \(\omega\), mide la rapidez con la que cambia la fase de una oscilación.
+
+Se relaciona con la frecuencia y el periodo mediante
+
+\[ \boxed{\omega=2\pi f=\frac{2\pi}{T}}. \]
+
+Su unidad es
+
+\[ [\omega]=\si{\radian\per\second}. \]
+\end{definicion}
+
+Aunque se denomina frecuencia \emph{angular}, el objeto que oscila no tiene que estar girando físicamente. El término aparece porque la fase puede representarse mediante un ángulo.
+
+\begin{advertencia}
+No confundir \(f\) con \(\omega\):
+
+\[ f\ \text{se expresa en}\ \si{\hertz}, \]
+
+mientras que
+
+\[ \omega\ \text{se expresa en}\ \si{\radian\per\second}. \]
+
+Se relacionan mediante \(\omega=2\pi f\), no mediante \(\omega=f\).
+\end{advertencia}
+
+\subsection{Desplazamiento y amplitud}
+
+Tomaremos la posición de equilibrio como origen:
+
+\[ x=0. \]
+
+La coordenada \(x\) representa entonces el desplazamiento instantáneo con respecto al equilibrio.
+
+\begin{definicion}[Amplitud]
+La \textbf{amplitud}, representada por \(A\), es la máxima magnitud del desplazamiento respecto de la posición de equilibrio:
+
+\[ \boxed{A=|x|_{\max}}. \]
+
+Por definición,
+
+\[ A>0. \]
+\end{definicion}
+
+Por tanto, una oscilación de amplitud \(A\) se desarrolla entre:
+
+\[ -A\leq x\leq A. \]
+
+La distancia entre los dos extremos es \(2A\).
+
+\begin{errorfrecuente}
+La amplitud no es la distancia entre los dos extremos.
+
+Si un objeto oscila entre \(-\SI{8}{\centi\meter}\) y \(+\SI{8}{\centi\meter}\), su amplitud es
+
+\[ A=\SI{8}{\centi\meter}, \]
+
+no \(\SI{16}{\centi\meter}\).
+\end{errorfrecuente}
+
+\begin{ejemplo}[Periodo, frecuencia y frecuencia angular]
+Una pieza de una máquina realiza \(150\) oscilaciones completas en un minuto. Determinemos \(f\), \(T\) y \(\omega\).
+
+En \(\SI{60}{\second}\) se realizan \(150\) ciclos, por tanto:
+
+\[ f=\frac{150}{\SI{60}{\second}}=\SI{2.50}{\hertz}. \]
+
+El periodo es:
+
+\[ T=\frac{1}{f}=\frac{1}{\SI{2.50}{\hertz}}=\SI{0.400}{\second}. \]
+
+Finalmente:
+
+\[ \omega=2\pi f=2\pi(\SI{2.50}{\hertz})=5\pi\ \si{\radian\per\second}. \]
+
+Numéricamente:
+
+\[ \boxed{\omega\approx\SI{15.7}{\radian\per\second}}. \]
+
+La interpretación es directa: cada ciclo tarda \(\SI{0.400}{\second}\) y la fase avanza aproximadamente \(\SI{15.7}{\radian}\) por segundo.
+\end{ejemplo}
+
+\section{Movimiento armónico simple}
+
+Ya sabemos describir un movimiento periódico mediante amplitud, periodo y frecuencia. Ahora debemos identificar qué hace especial al movimiento armónico simple.
+
+\begin{definicion}[Movimiento armónico simple]
+Un movimiento unidimensional es \textbf{armónico simple} cuando su aceleración es directamente proporcional al desplazamiento respecto del equilibrio y tiene sentido opuesto a dicho desplazamiento:
+
+\[ \boxed{a_x=-\omega^2x}. \]
+
+Aquí \(\omega\) es una constante positiva característica del oscilador.
+\end{definicion}
+
+Esta ecuación contiene la esencia física del movimiento.
+
+Si:
+
+\[ x>0, \]
+
+entonces:
+
+\[ a_x<0. \]
+
+Si:
+
+\[ x<0, \]
+
+entonces:
+
+\[ a_x>0. \]
+
+Y si:
+
+\[ x=0, \]
+
+entonces:
+
+\[ a_x=0. \]
+
+La aceleración siempre apunta hacia la posición de equilibrio.
+
+\begin{interpretacion}
+En un movimiento armónico simple:
+
+- cuanto más lejos del equilibrio se encuentra el objeto, mayor es la magnitud de su aceleración;
+- en los extremos, la aceleración alcanza su magnitud máxima;
+- en el equilibrio, la aceleración es cero.
+
+Esto no significa que la velocidad sea cero en el equilibrio. De hecho, como veremos, allí su magnitud es máxima.
+\end{interpretacion}
+
+\subsection{Condición dinámica del MAS}
+
+Por la segunda ley de Newton:
+
+\[ F_{\text{net},x}=ma_x. \]
+
+Si el movimiento es armónico simple:
+
+\[ a_x=-\omega^2x. \]
+
+Por tanto:
+
+\[ F_{\text{net},x}=-m\omega^2x. \]
+
+Podemos escribir:
+
+\[ \boxed{F_{\text{net},x}=-\kappa x}, \]
+
+donde:
+
+\[ \kappa=m\omega^2>0. \]
+
+\begin{leyfisica}[Condición de fuerza restauradora lineal]
+Un sistema realiza movimiento armónico simple cuando la fuerza neta en la dirección del movimiento es proporcional al desplazamiento respecto del equilibrio y posee sentido opuesto:
+
+\[ \boxed{F_{\text{net},x}=-\kappa x}. \]
+\end{leyfisica}
+
+El signo negativo no significa que la magnitud de la fuerza sea negativa. Indica que la fuerza tiene sentido opuesto al desplazamiento.
+
+\begin{observacion}
+En el capítulo siguiente se estudiará detalladamente el sistema masa--resorte, para el cual la constante restauradora \(\kappa\) corresponde a la constante elástica \(k\).
+
+En otros sistemas, la interacción restauradora puede tener un origen físico completamente diferente.
+\end{observacion}
+
+\subsection{No todo movimiento periódico es armónico simple}
+
+Un movimiento puede repetirse exactamente y, aun así, no satisfacer:
+
+\[ a_x=-\omega^2x. \]
+
+Por tanto:
+
+\[ \boxed{\text{MAS}\Longrightarrow\text{movimiento periódico}} \]
+
+pero, en general:
+
+\[ \boxed{\text{movimiento periódico}\not\Longrightarrow\text{MAS}}. \]
+
+Por ejemplo, un objeto que rebota repetidamente entre dos superficies puede realizar un movimiento periódico, pero su aceleración no es proporcional al desplazamiento respecto de una posición de equilibrio.
+
+Del mismo modo, un péndulo con una amplitud angular grande puede oscilar periódicamente sin realizar exactamente un movimiento armónico simple.
+
+\begin{errorfrecuente}
+No basta con que un movimiento ``vaya y vuelva'' para clasificarlo como MAS.
+
+Debe cumplirse la relación:
+
+\[ a_x=-\omega^2x \]
+
+o, de forma equivalente para una partícula de masa constante,
+
+\[ F_{\text{net},x}=-\kappa x. \]
+\end{errorfrecuente}
+
+\subsection{¿Por qué aparece tan frecuentemente el MAS?}
+
+Muchos sistemas físicos tienen una posición de equilibrio estable. Cerca de ella, una fuerza restauradora complicada puede aproximarse mediante una relación lineal.
+
+Si \(x=0\) representa el equilibrio, entonces:
+
+\[ F(0)=0. \]
+
+Para desplazamientos pequeños puede aproximarse la fuerza mediante:
+
+\[ F(x)\approx F(0)+F'(0)x. \]
+
+Como \(F(0)=0\):
+
+\[ F(x)\approx F'(0)x. \]
+
+Para que el equilibrio sea estable, la fuerza debe apuntar en sentido contrario al desplazamiento, de modo que:
+
+\[ F'(0)<0. \]
+
+Definiendo:
+
+\[ \kappa=-F'(0)>0, \]
+
+obtenemos:
+
+\[ F(x)\approx-\kappa x. \]
+
+\begin{interpretacion}[El MAS como aproximación local]
+Esta es una de las razones por las que el movimiento armónico simple aparece en tantos sistemas diferentes.
+
+Aunque la fuerza real no sea exactamente lineal, cerca de un equilibrio estable puede comportarse aproximadamente como
+
+\[ F\approx-\kappa x. \]
+
+Por ello, muchas oscilaciones de pequeña amplitud pueden modelarse aproximadamente como armónicas simples.
+\end{interpretacion}
+
+\section{Ecuación diferencial del movimiento armónico simple}
+
+Partimos de la condición:
+
+\[ a_x=-\omega^2x. \]
+
+Como:
+
+\[ a_x=\derivdos{x}{t}, \]
+
+obtenemos:
+
+\[ \boxed{\derivdos{x}{t}+\omega^2x=0}. \]
+
+Esta es la ecuación diferencial fundamental del movimiento armónico simple.
+
+No es una ecuación de aceleración constante. La aceleración cambia continuamente porque depende de la posición.
+
+\begin{advertencia}
+Las ecuaciones de MRUA no pueden utilizarse directamente para describir un MAS.
+
+En el MAS:
+
+\[ a_x=-\omega^2x, \]
+
+por lo que la aceleración cambia a medida que cambia la posición.
+\end{advertencia}
+
+\subsection{Solución sinusoidal}
+
+Buscamos una función cuya segunda derivada sea igual a la función original multiplicada por una constante negativa.
+
+Las funciones seno y coseno poseen precisamente esta propiedad.
+
+La solución general puede escribirse como:
+
+\[ \boxed{x(t)=A\cos(\omega t+\phi)}. \]
+
+También podría escribirse mediante una función seno. Ambas representaciones son equivalentes porque seno y coseno difieren únicamente en una fase.
+
+En la expresión:
+
+\[ x(t)=A\cos(\omega t+\phi), \]
+
+tenemos:
+
+\[
+A=\text{amplitud},
+\qquad
+\omega=\text{frecuencia angular},
+\qquad
+\phi=\text{fase inicial}.
+\]
+
+El argumento:
+
+\[ \theta(t)=\omega t+\phi \]
+
+se denomina \textbf{fase} del movimiento.
+
+\begin{definicion}[Fase]
+La \textbf{fase} de una oscilación armónica es
+
+\[ \boxed{\theta=\omega t+\phi}. \]
+
+Indica en qué estado del ciclo se encuentra el oscilador en un instante determinado.
+\end{definicion}
+
+La fase es una cantidad angular y se expresa normalmente en radianes.
+
+\subsection{Interpretación de la fase inicial}
+
+En \(t=0\):
+
+\[ x_0=A\cos\phi. \]
+
+Por tanto, la constante \(\phi\) determina en qué punto del ciclo se encuentra el sistema cuando comenzamos a medir el tiempo.
+
+Si:
+
+\[ \phi=0, \]
+
+entonces:
+
+\[ x(0)=A. \]
+
+El objeto comienza en el extremo positivo.
+
+Si:
+
+\[ \phi=\frac{\pi}{2}, \]
+
+entonces:
+
+\[ x(0)=0. \]
+
+Pero conocer solamente la posición inicial no basta para determinar completamente el estado: también es necesario conocer el sentido de la velocidad.
+
+\subsection{Periodo a partir de la función sinusoidal}
+
+La función coseno se repite cuando su argumento aumenta \(2\pi\):
+
+\[ \omega(t+T)+\phi=(\omega t+\phi)+2\pi. \]
+
+Entonces:
+
+\[ \omega T=2\pi. \]
+
+Por tanto:
+
+\[ \boxed{T=\frac{2\pi}{\omega}}. \]
+
+Y como \(f=1/T\):
+
+\[ \boxed{f=\frac{\omega}{2\pi}}. \]
+
+Así recuperamos:
+
+\[ \boxed{\omega=2\pi f=\frac{2\pi}{T}}. \]
+
+\begin{interpretacion}
+En un MAS ideal, \(A\) determina cuánto se aleja el sistema del equilibrio, mientras que \(\omega\) determina qué tan rápidamente oscila.
+
+La amplitud no aparece en
+
+\[ T=\frac{2\pi}{\omega}. \]
+
+Por ello, para un oscilador armónico ideal cuya \(\omega\) está fijada por las propiedades del sistema, el periodo no depende de la amplitud.
+\end{interpretacion}
+
+\section{Posición, velocidad y aceleración}
+
+La función de posición es:
+
+\[ x(t)=A\cos(\omega t+\phi). \]
+
+Definamos por brevedad:
+
+\[ \theta=\omega t+\phi. \]
+
+Entonces:
+
+\[ x=A\cos\theta. \]
+
+\subsection{Velocidad}
+
+La velocidad instantánea es:
+
+\[ v_x=\deriv{x}{t}. \]
+
+Derivando:
+
+\[ v_x=-A\omega\sin(\omega t+\phi). \]
+
+Por tanto:
+
+\[ \boxed{v_x(t)=-\omega A\sin(\omega t+\phi)}. \]
+
+La velocidad no alcanza su máximo en los extremos. Allí el objeto cambia de sentido, por lo que:
+
+\[ v_x=0\qquad\text{cuando}\qquad x=\pm A. \]
+
+En cambio, al pasar por el equilibrio:
+
+\[ x=0, \]
+
+la magnitud de la velocidad es máxima.
+
+Como el máximo valor de \(|\sin\theta|\) es 1:
+
+\[ \boxed{v_{\max}=\omega A}. \]
+
+\subsection{Aceleración}
+
+Derivando nuevamente:
+
+\[ a_x=\deriv{v_x}{t}. \]
+
+Obtenemos:
+
+\[ a_x=-\omega^2A\cos(\omega t+\phi). \]
+
+Pero:
+
+\[ x=A\cos(\omega t+\phi). \]
+
+Por tanto:
+
+\[ \boxed{a_x=-\omega^2x}. \]
+
+La magnitud máxima de la aceleración es:
+
+\[ \boxed{a_{\max}=\omega^2A}. \]
+
+Esta ocurre en los extremos:
+
+\[ x=\pm A. \]
+
+\begin{interpretacion}
+El comportamiento puede resumirse así:
+
+\[
+\begin{array}{c|c|c}
+\text{Posición} & \text{Velocidad} & \text{Aceleración} \\ \hline
+x=+A & v=0 & a=-\omega^2A \\
+x=0 & |v|=\omega A & a=0 \\
+x=-A & v=0 & a=+\omega^2A
+\end{array}
+\]
+
+La velocidad es máxima en magnitud donde la aceleración es cero, y la aceleración es máxima en magnitud donde la velocidad es cero.
+\end{interpretacion}
+
+\subsection{Un ciclo completo}
+
+Para visualizarlo con claridad, consideremos:
+
+\[ x(t)=A\cos\omega t, \]
+
+es decir, \(\phi=0\).
+
+\begin{center}
+\begin{tabularx}{0.95\textwidth}{cYYYY}
+\toprule
+\textbf{Tiempo} & \textbf{Fase} & \textbf{Posición} & \textbf{Velocidad} & \textbf{Aceleración} \\
+\midrule
+\(0\) & \(0\) & \(+A\) & \(0\) & \(-\omega^2A\) \\
+\(T/4\) & \(\pi/2\) & \(0\) & \(-\omega A\) & \(0\) \\
+\(T/2\) & \(\pi\) & \(-A\) & \(0\) & \(+\omega^2A\) \\
+\(3T/4\) & \(3\pi/2\) & \(0\) & \(+\omega A\) & \(0\) \\
+\(T\) & \(2\pi\) & \(+A\) & \(0\) & \(-\omega^2A\) \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Esta tabla muestra que posición, velocidad y aceleración cambian continuamente aunque todas se repiten con el mismo periodo \(T\).
+
+\subsection{Relación entre velocidad y posición}
+
+A partir de:
+
+\[ x=A\cos\theta \]
+
+y:
+
+\[ v_x=-\omega A\sin\theta, \]
+
+tenemos:
+
+\[ \frac{x^2}{A^2}=\cos^2\theta \]
+
+y:
+
+\[ \frac{v_x^2}{\omega^2A^2}=\sin^2\theta. \]
+
+Sumando y utilizando:
+
+\[ \sin^2\theta+\cos^2\theta=1, \]
+
+obtenemos:
+
+\[ \frac{x^2}{A^2}+\frac{v_x^2}{\omega^2A^2}=1. \]
+
+Por tanto:
+
+\[ \boxed{v_x^2=\omega^2(A^2-x^2)}. \]
+
+Y para la rapidez:
+
+\[ \boxed{|v_x|=\omega\sqrt{A^2-x^2}}. \]
+
+\begin{advertencia}
+La ecuación
+
+\[ v_x^2=\omega^2(A^2-x^2) \]
+
+permite obtener la \textbf{magnitud} de la velocidad, pero no determina por sí sola su sentido.
+
+Para conocer el signo de \(v_x\) se necesita información adicional sobre la fase o sobre el sentido del movimiento.
+\end{advertencia}
+
+\section{Gráficas del movimiento armónico simple}
+
+Las funciones de posición, velocidad y aceleración son sinusoidales.
+
+Consideremos nuevamente el caso:
+
+\[ x=A\cos\omega t. \]
+
+Podemos representar las tres magnitudes normalizadas:
+
+\[
+\frac{x}{A},
+\qquad
+\frac{v_x}{\omega A},
+\qquad
+\frac{a_x}{\omega^2A}.
+\]
+
+\begin{center}
+\begin{tikzpicture}
+
+\begin{axis}[
+    width=0.92\textwidth,
+    height=7cm,
+    axis lines=middle,
+    xmin=0,
+    xmax=6.2832,
+    ymin=-1.35,
+    ymax=1.35,
+    xlabel={\(\omega t\)},
+    ylabel={valor normalizado},
+    xtick={0,1.5708,3.1416,4.7124,6.2832},
+    xticklabels={\(0\),\(\frac{\pi}{2}\),\(\pi\),\(\frac{3\pi}{2}\),\(2\pi\)},
+    ytick={-1,0,1},
+    legend style={
+        at={(0.5,-0.20)},
+        anchor=north,
+        legend columns=3
+    },
+    samples=200
+]
+
+\addplot[very thick,AzulPrincipal,domain=0:6.2832] {cos(deg(x))};
+\addlegendentry{\(\dfrac{x}{A}\)}
+
+\addplot[very thick,VerdePrincipal,domain=0:6.2832] {-sin(deg(x))};
+\addlegendentry{\(\dfrac{v_x}{\omega A}\)}
+
+\addplot[very thick,RojoPrincipal,domain=0:6.2832] {-cos(deg(x))};
+\addlegendentry{\(\dfrac{a_x}{\omega^2A}\)}
+
+\end{axis}
+
+\end{tikzpicture}
+\end{center}
+
+La gráfica permite observar varias propiedades importantes:
+
+\begin{itemize}
+    \item posición y aceleración tienen siempre signos opuestos;
+    \item cuando \(|x|\) es máximo, \(v_x=0\);
+    \item cuando \(x=0\), la rapidez es máxima;
+    \item posición y aceleración están desfasadas \(\pi\) rad;
+    \item posición y velocidad están separadas un cuarto de ciclo.
+\end{itemize}
+
+\begin{errorfrecuente}
+La gráfica \(x-t\) no representa la trayectoria geométrica del objeto.
+
+El objeto puede estar moviéndose únicamente sobre una línea recta. La gráfica muestra cómo cambia su posición con el tiempo.
+\end{errorfrecuente}
+
+\section{Fase y diferencia de fase}
+
+La fase:
+
+\[ \theta=\omega t+\phi \]
+
+permite identificar exactamente el estado de la oscilación.
+
+Dos estados que difieren en:
+
+\[ 2\pi \]
+
+son físicamente equivalentes dentro del ciclo.
+
+Por ejemplo:
+
+\[ \theta=\frac{\pi}{3} \]
+
+y:
+
+\[ \theta=\frac{7\pi}{3} \]
+
+corresponden al mismo punto del ciclo.
+
+\subsection{Diferencia de fase y diferencia de tiempo}
+
+Si dos instantes están separados por \(\Delta t\), la diferencia de fase es:
+
+\[ \boxed{\Delta\theta=\omega\Delta t}. \]
+
+Como:
+
+\[ \omega=\frac{2\pi}{T}, \]
+
+también:
+
+\[ \boxed{\Delta\theta=2\pi\frac{\Delta t}{T}}. \]
+
+Por ejemplo:
+
+\[
+\Delta t=\frac{T}{4}
+\quad\Longrightarrow\quad
+\Delta\theta=\frac{\pi}{2}.
+\]
+
+Así, un cuarto de periodo corresponde a un cambio de fase de \(\pi/2\) rad.
+
+\begin{ejemplo}[Lectura de una ecuación de MAS]
+La posición de una partícula está dada por:
+
+\[ x(t)=\SI{0.080}{\meter}\cos\left(3\pi t+\frac{\pi}{6}\right). \]
+
+Comparando con:
+
+\[ x(t)=A\cos(\omega t+\phi), \]
+
+identificamos:
+
+\[
+A=\SI{0.080}{\meter},
+\qquad
+\omega=3\pi\ \si{\radian\per\second},
+\qquad
+\phi=\frac{\pi}{6}.
+\]
+
+La frecuencia es:
+
+\[ f=\frac{\omega}{2\pi}=\frac{3\pi}{2\pi}=\SI{1.50}{\hertz}. \]
+
+El periodo:
+
+\[ T=\frac{1}{f}=\SI{0.667}{\second}. \]
+
+La posición inicial es:
+
+\[ x_0=A\cos\phi. \]
+
+Por tanto:
+
+\[ x_0=(\SI{0.080}{\meter})\cos\left(\frac{\pi}{6}\right)\approx\SI{0.0693}{\meter}. \]
+
+La velocidad es:
+
+\[ v_x=-\omega A\sin(\omega t+\phi). \]
+
+En \(t=0\):
+
+\[
+v_0
+=
+-(3\pi)(\SI{0.080}{\meter})
+\sin\left(\frac{\pi}{6}\right)
+\approx
+-\SI{0.377}{\meter\per\second}.
+\]
+
+El signo negativo indica que, en el instante inicial, la partícula se mueve hacia el sentido negativo del eje.
+
+Finalmente:
+
+\[ a_0=-\omega^2x_0. \]
+
+Por tanto:
+
+\[ a_0\approx-\SI{6.15}{\meter\per\second\squared}. \]
+
+La aceleración también apunta inicialmente hacia el sentido negativo porque la partícula se encuentra a la derecha del equilibrio.
+\end{ejemplo}
+
+\section{Condiciones iniciales}
+
+La amplitud y la fase inicial no son cantidades independientes elegidas arbitrariamente cuando el estado inicial del sistema ya es conocido.
+
+Supongamos que en:
+
+\[ t=0 \]
+
+conocemos:
+
+\[ x_0 \]
+
+y:
+
+\[ v_0. \]
+
+De:
+
+\[ x=A\cos(\omega t+\phi) \]
+
+obtenemos:
+
+\[ x_0=A\cos\phi. \]
+
+De:
+
+\[ v_x=-\omega A\sin(\omega t+\phi) \]
+
+obtenemos:
+
+\[ v_0=-\omega A\sin\phi. \]
+
+Entonces:
+
+\[ \frac{x_0^2}{A^2}+\frac{v_0^2}{\omega^2A^2}=1. \]
+
+Por tanto:
+
+\[ \boxed{A=\sqrt{x_0^2+\left(\frac{v_0}{\omega}\right)^2}}. \]
+
+Una vez conocida la amplitud:
+
+\[ \cos\phi=\frac{x_0}{A}, \]
+
+y:
+
+\[ \sin\phi=-\frac{v_0}{\omega A}. \]
+
+Para determinar correctamente el cuadrante de la fase conviene utilizar ambas relaciones.
+
+Puede expresarse formalmente como:
+
+\[ \boxed{\phi=\operatorname{atan2}\left(-\frac{v_0}{\omega},x_0\right)}. \]
+
+\begin{advertencia}
+Utilizar solamente
+
+\[ \tan\phi=-\frac{v_0}{\omega x_0} \]
+
+puede producir una fase en el cuadrante incorrecto.
+
+La posición y la velocidad iniciales deben utilizarse conjuntamente para identificar correctamente \(\phi\).
+\end{advertencia}
+
+\begin{ejemplo}[Determinación de la amplitud y la fase]
+Una partícula realiza MAS con:
+
+\[ \omega=\SI{10}{\radian\per\second}. \]
+
+En \(t=0\):
+
+\[
+x_0=\SI{3.0}{\centi\meter},
+\qquad
+v_0=-\SI{0.40}{\meter\per\second}.
+\]
+
+Primero expresamos la posición en metros:
+
+\[ x_0=\SI{0.030}{\meter}. \]
+
+La amplitud es:
+
+\[
+A
+=
+\sqrt{
+(\SI{0.030}{\meter})^2
++
+\left(
+\frac{-\SI{0.40}{\meter\per\second}}
+{\SI{10}{\radian\per\second}}
+\right)^2
+}.
+\]
+
+Como el radián es adimensional:
+
+\[
+A
+=
+\sqrt{
+(0.030)^2+(0.040)^2
+}\ \si{\meter}.
+\]
+
+Por tanto:
+
+\[ \boxed{A=\SI{0.050}{\meter}}. \]
+
+Ahora:
+
+\[ \cos\phi=\frac{0.030}{0.050}=0.60, \]
+
+y:
+
+\[
+\sin\phi
+=
+-\frac{-0.40}{(10)(0.050)}
+=
+0.80.
+\]
+
+Seno y coseno son positivos, por lo que la fase se encuentra en el primer cuadrante:
+
+\[ \phi\approx\SI{0.927}{\radian}. \]
+
+La ecuación del movimiento es:
+
+\[ \boxed{x(t)=\SI{0.050}{\meter}\cos(10t+0.927)}. \]
+
+El signo inicial de la velocidad es negativo, como exigían las condiciones del problema.
+\end{ejemplo}
+
+\section{Relación con el movimiento circular uniforme}
+
+Existe una interpretación geométrica muy útil del MAS.
+
+Consideremos un punto \(P\) que describe una circunferencia de radio \(A\) con frecuencia angular constante \(\omega\).
+
+Su posición angular puede escribirse:
+
+\[ \theta=\omega t+\phi. \]
+
+La coordenada horizontal del punto es:
+
+\[ x=A\cos\theta. \]
+
+Por tanto:
+
+\[ x=A\cos(\omega t+\phi). \]
+
+Esta es exactamente la ecuación de un movimiento armónico simple.
+
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+
+    \coordinate (O) at (0,0);
+    \coordinate (P) at ({2.2*cos(40)},{2.2*sin(40)});
+    \coordinate (Q) at ({2.2*cos(40)},0);
+
+    \draw[thick] (O) circle (2.2);
+
+    \draw[-{Latex},thick] (-2.8,0) -- (3.0,0) node[right] {\(x\)};
+    \draw[-{Latex},thick] (0,-2.7) -- (0,2.8) node[above] {\(y\)};
+
+    \draw[very thick] (O) -- (P);
+    \draw[dashed] (P) -- (Q);
+
+    \fill (P) circle (2.3pt);
+    \fill (Q) circle (2.3pt);
+
+    \node[above right] at (P) {\(P\)};
+    \node[below] at (Q) {\(x\)};
+
+    \node[above left] at (1.0,0.95) {\(A\)};
+
+    \draw[-{Latex}] (0.75,0) arc[start angle=0,end angle=40,radius=0.75];
+    \node at (1.03,0.28) {\(\theta\)};
+
+    \draw[<->] (0,-2.45) -- (2.2,-2.45);
+    \node[below] at (1.1,-2.45) {\(A\)};
+
+\end{tikzpicture}
+\end{center}
+
+\begin{interpretacion}[Proyección de un movimiento circular]
+El movimiento armónico simple puede interpretarse como la proyección sobre un diámetro de un movimiento circular uniforme.
+
+El punto \(P\) se mueve sobre una circunferencia, mientras que su proyección \(Q\) se mueve hacia adelante y hacia atrás entre:
+
+\[ x=-A \]
+
+y:
+
+\[ x=+A. \]
+\end{interpretacion}
+
+Esta relación permite comprender de forma geométrica:
+
+- la aparición de funciones seno y coseno;
+- el significado de la fase;
+- la relación \(\omega=2\pi/T\);
+- el desfase entre posición, velocidad y aceleración.
+
+\begin{advertencia}
+La partícula que realiza MAS no tiene que moverse físicamente en una circunferencia.
+
+El movimiento circular es una representación matemática útil del movimiento armónico.
+\end{advertencia}
+
+\section{Análisis cualitativo del movimiento}
+
+Una característica importante del MAS es que podemos predecir el sentido de la aceleración sin realizar ningún cálculo.
+
+\subsection{Partícula a la derecha del equilibrio}
+
+Si:
+
+\[ x>0, \]
+
+entonces:
+
+\[ a_x=-\omega^2x<0. \]
+
+La aceleración apunta hacia la izquierda, es decir, hacia el equilibrio.
+
+Sin embargo, esto no determina por sí solo el sentido de la velocidad.
+
+La partícula podría estar:
+
+- alejándose del equilibrio hacia \(+A\), con \(v_x>0\);
+- regresando hacia el equilibrio, con \(v_x<0\).
+
+\subsection{Partícula a la izquierda del equilibrio}
+
+Si:
+
+\[ x<0, \]
+
+entonces:
+
+\[ a_x>0. \]
+
+La aceleración apunta hacia la derecha.
+
+Nuevamente, la velocidad puede ser positiva o negativa dependiendo de la fase.
+
+\begin{errorfrecuente}
+El signo de la posición no determina el signo de la velocidad.
+
+Una partícula puede estar en:
+
+\[ x>0 \]
+
+y moverse hacia la izquierda:
+
+\[ v_x<0. \]
+
+Posición y velocidad representan información diferente.
+\end{errorfrecuente}
+
+\subsection{En los extremos}
+
+Cuando:
+
+\[ x=\pm A, \]
+
+tenemos:
+
+\[ v_x=0. \]
+
+Pero:
+
+\[ |a_x|=\omega^2A. \]
+
+El objeto está instantáneamente en reposo, pero no permanece allí porque su aceleración es máxima y apunta hacia el equilibrio.
+
+\subsection{En el equilibrio}
+
+Cuando:
+
+\[ x=0, \]
+
+tenemos:
+
+\[ a_x=0. \]
+
+Pero:
+
+\[ |v_x|=\omega A. \]
+
+Por tanto, la partícula atraviesa la posición de equilibrio con rapidez máxima.
+
+\begin{errorfrecuente}
+Que la aceleración sea cero en un instante no significa que la velocidad también sea cero.
+
+En el MAS ocurre precisamente lo contrario en el equilibrio:
+
+\[ a_x=0,\qquad |v_x|=v_{\max}. \]
+\end{errorfrecuente}
+
+\section{Identificación de un movimiento armónico simple}
+
+La forma más directa de reconocer un MAS no consiste en buscar una gráfica senoidal, sino en analizar la ecuación dinámica.
+
+\begin{estrategia}[Cómo identificar un MAS]
+Para determinar si un sistema realiza movimiento armónico simple:
+
+\begin{enumerate}
+    \item identifique la posición de equilibrio;
+    \item defina \(x\) como desplazamiento respecto de ese equilibrio;
+    \item determine la fuerza neta o la aceleración;
+    \item compruebe si puede escribirse en la forma
+    \[ F_{\text{net},x}=-\kappa x \]
+    o
+    \[ a_x=-\omega^2x; \]
+    \item si el coeficiente es constante y positivo, el movimiento es armónico simple.
+\end{enumerate}
+\end{estrategia}
+
+\begin{ejemplo}[Identificación mediante la aceleración]
+Supongamos que el movimiento de una partícula satisface:
+
+\[ a_x=-25x, \]
+
+donde las magnitudes se expresan en unidades SI.
+
+Comparando con:
+
+\[ a_x=-\omega^2x, \]
+
+obtenemos:
+
+\[ \omega^2=25\ \si{\per\second\squared}. \]
+
+Por tanto:
+
+\[ \boxed{\omega=\SI{5.0}{\radian\per\second}}. \]
+
+El movimiento es armónico simple.
+
+Su periodo es:
+
+\[ T=\frac{2\pi}{\omega}=\frac{2\pi}{5}\ \si{\second}. \]
+
+Así:
+
+\[ \boxed{T\approx\SI{1.26}{\second}}. \]
+
+La frecuencia es:
+
+\[ f=\frac{1}{T}\approx\SI{0.796}{\hertz}. \]
+
+Si en cierto instante:
+
+\[ x=\SI{0.12}{\meter}, \]
+
+entonces:
+
+\[ a_x=-25(\SI{0.12}{\meter})=-\SI{3.0}{\meter\per\second\squared}. \]
+
+El signo negativo indica que la aceleración apunta hacia el equilibrio.
+\end{ejemplo}
+
+\section{Un problema de fase}
+
+La fase permite responder preguntas que no pueden resolverse observando únicamente la posición.
+
+\begin{ejemplo}[Misma posición, distinto estado de movimiento]
+Una partícula en MAS se encuentra en:
+
+\[ x=\frac{A}{2}. \]
+
+¿Queda determinada completamente su fase?
+
+De:
+
+\[ x=A\cos\theta, \]
+
+obtenemos:
+
+\[ \cos\theta=\frac{1}{2}. \]
+
+Durante un ciclo existen dos posibilidades:
+
+\[ \theta=\frac{\pi}{3} \]
+
+y:
+
+\[ \theta=\frac{5\pi}{3}. \]
+
+Por tanto, conocer solamente la posición no basta.
+
+Supongamos ahora que además sabemos que la partícula se mueve en el sentido positivo:
+
+\[ v_x>0. \]
+
+Como:
+
+\[ v_x=-\omega A\sin\theta, \]
+
+para que \(v_x>0\) debe cumplirse:
+
+\[ \sin\theta<0. \]
+
+La fase compatible es entonces:
+
+\[ \boxed{\theta=\frac{5\pi}{3}}. \]
+
+La aceleración en ese instante es:
+
+\[ a_x=-\omega^2x=-\frac{1}{2}\omega^2A. \]
+
+Por tanto, aunque la partícula se mueve hacia \(+x\), su aceleración apunta hacia \(-x\): se dirige hacia el extremo positivo mientras disminuye su rapidez.
+\end{ejemplo}
+
+\section{Condiciones de validez del modelo}
+
+El movimiento armónico simple ideal supone que la ecuación:
+
+\[ a_x=-\omega^2x \]
+
+se mantiene durante la oscilación.
+
+En sistemas reales esto puede ser solamente aproximado.
+
+El modelo puede dejar de ser adecuado cuando:
+
+\begin{itemize}
+    \item la fuerza restauradora deja de ser proporcional al desplazamiento;
+    \item la amplitud es demasiado grande para utilizar una aproximación lineal;
+    \item existen fuerzas disipativas importantes;
+    \item actúan fuerzas externas variables;
+    \item cambian significativamente las propiedades físicas del sistema durante la oscilación.
+\end{itemize}
+
+Los efectos disipativos se estudiarán posteriormente en el capítulo dedicado a oscilaciones amortiguadas.
+
+\begin{modelo}[Oscilador armónico ideal]
+En este capítulo se considera un oscilador ideal cuya dinámica satisface
+
+\[ a_x=-\omega^2x \]
+
+con \(\omega\) constante.
+
+El movimiento resultante es sinusoidal, periódico y de amplitud constante.
+\end{modelo}
+
+\section{Aplicaciones y presencia del MAS}
+
+El movimiento armónico simple es importante no solamente porque describa algunos sistemas de forma exacta o aproximada, sino porque constituye un modelo fundamental para estudiar oscilaciones.
+
+Puede aparecer aproximadamente en:
+
+\begin{itemize}
+    \item vibraciones mecánicas de estructuras;
+    \item sistemas elásticos;
+    \item pequeños movimientos de péndulos;
+    \item vibraciones de moléculas y sólidos;
+    \item oscilaciones eléctricas;
+    \item producción y propagación de ondas;
+    \item instrumentos de medición del tiempo;
+    \item sistemas acústicos.
+\end{itemize}
+
+Los capítulos siguientes permitirán aplicar el modelo a sistemas físicos concretos.
+
+\begin{aplicacion}[Medición del tiempo]
+Un oscilador con una frecuencia muy estable puede utilizarse como referencia temporal.
+
+En un reloj, contar un número conocido de oscilaciones permite medir intervalos de tiempo. Esta idea aparece tanto en sistemas mecánicos como en osciladores basados en cristales y fenómenos atómicos.
+\end{aplicacion}
+
+\section{Errores frecuentes}
+
+\begin{errorfrecuente}
+\textbf{Confundir movimiento periódico con MAS.}
+
+Que un movimiento se repita no implica que cumpla
+
+\[ a_x=-\omega^2x. \]
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+\textbf{Confundir amplitud con recorrido entre extremos.}
+
+Si el movimiento ocurre entre \(-A\) y \(+A\), la distancia entre extremos es \(2A\), pero la amplitud es \(A\).
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+\textbf{Confundir frecuencia con frecuencia angular.}
+
+\[ \omega=2\pi f. \]
+
+No representan la misma magnitud ni utilizan las mismas unidades.
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+\textbf{Suponer aceleración constante.}
+
+En un MAS:
+
+\[ a_x=-\omega^2x. \]
+
+La aceleración cambia continuamente.
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+\textbf{Suponer que la velocidad es máxima en los extremos.}
+
+En los extremos:
+
+\[ v_x=0. \]
+
+La rapidez máxima ocurre al atravesar el equilibrio.
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+\textbf{Suponer que la aceleración es máxima en el equilibrio.}
+
+En el equilibrio:
+
+\[ a_x=0. \]
+
+La magnitud máxima de la aceleración ocurre en:
+
+\[ x=\pm A. \]
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+\textbf{Confundir posición con sentido del movimiento.}
+
+Conocer \(x\) no basta para determinar el signo de \(v_x\). También debe conocerse la fase o alguna información equivalente.
+\end{errorfrecuente}
+
+\section{Secuencia sugerida para impartir la clase}
+
+\begin{notapedagogica}
+Una posible secuencia para desarrollar este tema en clase es:
+
+\begin{enumerate}
+    \item Mostrar ejemplos de fenómenos repetitivos: un columpio, una regla vibrando, un péndulo o una masa conectada a un resorte.
+
+    \item Preguntar qué tienen en común y qué significa exactamente que un movimiento sea periódico.
+
+    \item Introducir ciclo, periodo y frecuencia antes de presentar ecuaciones del MAS.
+
+    \item Diferenciar movimiento periódico, movimiento oscilatorio y movimiento armónico simple.
+
+    \item Elegir la posición de equilibrio como \(x=0\) y discutir cualitativamente el sentido de la fuerza restauradora.
+
+    \item Introducir la condición fundamental:
+    \[ a_x=-\omega^2x. \]
+
+    \item Analizar físicamente qué ocurre en \(x>0\), \(x<0\), \(x=0\) y \(x=\pm A\).
+
+    \item Construir la función:
+    \[ x=A\cos(\omega t+\phi). \]
+
+    \item Derivar velocidad y aceleración, relacionándolas continuamente con el movimiento real.
+
+    \item Utilizar las gráficas de \(x\), \(v_x\) y \(a_x\) para discutir máximos, ceros y desfases.
+
+    \item Presentar la proyección de un movimiento circular uniforme para interpretar la fase.
+
+    \item Resolver un ejemplo donde se identifiquen \(A\), \(T\), \(f\), \(\omega\) y \(\phi\) a partir de una ecuación.
+
+    \item Resolver un segundo ejemplo donde se determine si una ecuación de aceleración corresponde a MAS.
+
+    \item Finalizar con preguntas conceptuales antes de pasar al sistema masa--resorte.
+\end{enumerate}
+\end{notapedagogica}
+
+\section{Preguntas de comprensión}
+
+\begin{enumerate}
+    \item ¿Todo movimiento periódico es armónico simple? Explique.
+
+    \item ¿Todo movimiento armónico simple es periódico?
+
+    \item ¿Qué diferencia existe entre periodo y frecuencia?
+
+    \item Si la frecuencia de una oscilación se duplica, ¿qué ocurre con su periodo?
+
+    \item ¿Qué diferencia existe entre \(f\) y \(\omega\)?
+
+    \item ¿Por qué la amplitud siempre se considera positiva?
+
+    \item ¿Qué significa físicamente el signo negativo en
+    \[ a_x=-\omega^2x? \]
+
+    \item ¿En qué posiciones la rapidez es cero?
+
+    \item ¿Dónde alcanza la rapidez su valor máximo?
+
+    \item ¿Dónde alcanza la aceleración su máxima magnitud?
+
+    \item Si una partícula tiene \(x>0\), ¿puede tener \(v_x<0\)? Explique.
+
+    \item Si \(a_x=0\), ¿significa necesariamente que la partícula está en reposo?
+
+    \item ¿Por qué no pueden utilizarse las ecuaciones de MRUA para describir un MAS completo?
+
+    \item ¿Qué información proporciona la fase de una oscilación?
+
+    \item Dos partículas tienen la misma posición dentro de una oscilación. ¿Significa esto que se encuentran necesariamente en el mismo estado de movimiento?
+
+    \item ¿Qué relación existe entre un MAS y la proyección de un movimiento circular uniforme?
+
+    \item ¿Por qué muchos sistemas físicos pueden aproximarse mediante MAS cuando realizan oscilaciones pequeñas?
+\end{enumerate}
+
+\begin{resumen}
+Un movimiento periódico repite su estado después de un intervalo denominado periodo \(T\). Su frecuencia es
+
+\[ f=\frac{1}{T}, \]
+
+y su frecuencia angular:
+
+\[ \omega=2\pi f=\frac{2\pi}{T}. \]
+
+Una oscilación ocurre alrededor de una posición de equilibrio.
+
+El movimiento armónico simple es un caso especial en el que:
+
+\[ \boxed{a_x=-\omega^2x}. \]
+
+Equivalentemente, para una partícula de masa constante:
+
+\[ \boxed{F_{\text{net},x}=-m\omega^2x}. \]
+
+Su posición puede expresarse como:
+
+\[ \boxed{x=A\cos(\omega t+\phi)}. \]
+
+La velocidad es:
+
+\[ \boxed{v_x=-\omega A\sin(\omega t+\phi)}, \]
+
+y la aceleración:
+
+\[ \boxed{a_x=-\omega^2A\cos(\omega t+\phi)=-\omega^2x}. \]
+
+Las magnitudes máximas son:
+
+\[ v_{\max}=\omega A,\qquad a_{\max}=\omega^2A. \]
+
+En los extremos \(x=\pm A\), la velocidad es cero y la aceleración tiene magnitud máxima.
+
+En el equilibrio \(x=0\), la aceleración es cero y la rapidez es máxima.
+
+La fase
+
+\[ \theta=\omega t+\phi \]
+
+determina el estado de la oscilación dentro del ciclo.
+
+El MAS también puede interpretarse como la proyección sobre un diámetro de un movimiento circular uniforme.
+
+No todo movimiento periódico es armónico simple. La característica decisiva es que la aceleración o fuerza restauradora sea lineal y de sentido opuesto al desplazamiento.
+\end{resumen}

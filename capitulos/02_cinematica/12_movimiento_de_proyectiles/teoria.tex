@@ -1,0 +1,3630 @@
+﻿\section{Movimiento de proyectiles}
+
+Lanzar una pelota hacia una canasta, patear un balón, dejar caer un paquete desde
+un vehículo en movimiento o hacer salir agua de una fuente son situaciones que,
+aunque parecen diferentes, comparten una característica importante: una vez que
+el objeto queda libre, puede describir una trayectoria curva mientras la gravedad
+modifica continuamente su movimiento vertical.
+
+En el capítulo anterior aprendimos a describir movimientos en dos y tres
+dimensiones mediante componentes rectangulares. Ahora aplicaremos esas ideas a
+uno de los modelos más importantes de la cinemática: el movimiento de
+proyectiles.
+
+\begin{idea}[Dos movimientos simultáneos]
+La clave para comprender el movimiento de un proyectil consiste en reconocer que
+puede analizarse como la combinación de dos movimientos que ocurren
+simultáneamente:
+
+\[
+\text{movimiento horizontal}
+\]
+
+y
+
+\[
+\text{movimiento vertical}.
+\]
+
+En el modelo ideal:
+
+\[
+a_x=0,
+\qquad
+a_y=-g.
+\]
+
+Por tanto, horizontalmente existe movimiento uniforme, mientras que
+verticalmente existe movimiento uniformemente acelerado debido a la gravedad.
+
+Ambas componentes están unidas por una variable común:
+
+\[
+\boxed{t}.
+\]
+\end{idea}
+
+
+\section{¿Qué es un proyectil?}
+
+\begin{definicion}[Proyectil]
+Un \textbf{proyectil} es un objeto que, después de recibir una velocidad inicial,
+se mueve durante cierto intervalo bajo la acción de la aceleración gravitatoria,
+dentro de un modelo en el que se desprecia la resistencia del aire y cualquier
+otra interacción significativa.
+\end{definicion}
+
+Pueden modelarse como proyectiles, durante parte de su movimiento:
+
+\begin{itemize}
+    \item una pelota después de abandonar la mano de quien la lanza;
+    \item un balón después de ser pateado;
+    \item una piedra después de ser arrojada;
+    \item un paquete después de ser liberado desde un vehículo;
+    \item una gota de agua lanzada por una fuente;
+    \item un objeto que sale horizontalmente del borde de una mesa.
+\end{itemize}
+
+La expresión ``después de recibir una velocidad inicial'' es importante.
+
+Mientras una persona impulsa una pelota con la mano, o mientras una máquina
+todavía está acelerando un objeto dentro de un mecanismo de lanzamiento, el
+objeto todavía no se encuentra en la etapa que modelaremos mediante las
+ecuaciones de proyectiles.
+
+\begin{advertencia}
+Las ecuaciones del movimiento de proyectiles se aplican \textbf{después de que
+el objeto ha sido liberado} y mientras se cumplan las hipótesis del modelo.
+
+No deben utilizarse para describir la fase durante la cual una mano, una rampa,
+un resorte u otro mecanismo todavía está impulsando el objeto.
+\end{advertencia}
+
+
+\section{Modelo ideal de proyectil}
+
+El movimiento real de una pelota o de cualquier otro objeto puede estar afectado
+por numerosos factores.
+
+Para construir primero una descripción comprensible utilizaremos un modelo
+ideal.
+
+\begin{modelo}[Proyectil ideal]
+Representaremos el proyectil como una partícula y supondremos que:
+
+\begin{itemize}
+    \item la resistencia del aire es despreciable;
+    \item no existe viento;
+    \item la aceleración gravitatoria es constante;
+    \item el movimiento ocurre cerca de la superficie terrestre;
+    \item las distancias son suficientemente pequeñas para despreciar la curvatura
+    terrestre;
+    \item se desprecia la rotación de la Tierra;
+    \item después del lanzamiento, la aceleración del proyectil es únicamente la
+    aceleración gravitatoria.
+\end{itemize}
+\end{modelo}
+
+Dentro de este modelo:
+
+\[
+\vect{a}=-g\jhat
+\]
+
+si elegimos el eje \(+y\) hacia arriba.
+
+Por tanto:
+
+\[
+\boxed{a_x=0},
+\]
+
+y:
+
+\[
+\boxed{a_y=-g}.
+\]
+
+Utilizaremos:
+
+\[
+g\approx\SI{9.81}{\meter\per\second\squared}.
+\]
+
+\begin{interpretacion}
+La gravedad no ``empuja hacia adelante'' ni ``frena horizontalmente'' al
+proyectil dentro de este modelo.
+
+Su aceleración es vertical.
+
+Por ello:
+
+\[
+a_x=0
+\]
+
+aunque el proyectil continúe avanzando horizontalmente.
+\end{interpretacion}
+
+
+\section{Sistema de referencia}
+
+Adoptaremos normalmente:
+
+\begin{itemize}
+    \item el eje \(x\) horizontal;
+    \item el eje \(y\) vertical;
+    \item \(+x\) en el sentido horizontal inicial del movimiento;
+    \item \(+y\) hacia arriba.
+\end{itemize}
+
+Con esta elección:
+
+\[
+\vect{a}
+=
+-g\jhat.
+\]
+
+\begin{center}
+\begin{tikzpicture}[scale=0.95]
+
+    \draw[-{Latex},thick] (-0.5,0) -- (7.2,0)
+        node[right] {\(x\)};
+
+    \draw[-{Latex},thick] (0,-0.5) -- (0,5.2)
+        node[above] {\(y\)};
+
+    \draw[
+        very thick,
+        AzulPrincipal,
+        domain=0:6.2,
+        samples=80
+    ]
+    plot (\x,{0.95*\x-0.13*\x*\x});
+
+    \fill (0,0) circle (2.5pt);
+    \node[below left] at (0,0) {\(O\)};
+
+    \draw[-{Latex},very thick,VerdePrincipal]
+        (0,0) -- (2.1,2.4)
+        node[above right] {\(\vect{v}_0\)};
+
+    \draw[dashed] (0,0) -- (2.1,0);
+    \draw[dashed] (2.1,0) -- (2.1,2.4);
+
+    \draw[-{Latex},thick,AzulSecundario]
+        (0,0.25) -- (1.8,0.25)
+        node[midway,below] {\(v_{0x}\)};
+
+    \draw[-{Latex},thick,AzulSecundario]
+        (0.25,0) -- (0.25,2.0)
+        node[midway,left] {\(v_{0y}\)};
+
+    \draw[-{Latex},very thick,RojoPrincipal]
+        (4.8,3.2) -- (4.8,2.0)
+        node[right] {\(\vect{a}=-g\jhat\)};
+
+    \draw (0.75,0) arc[start angle=0,end angle=48,radius=0.75];
+    \node at (1.0,0.37) {\(\theta_0\)};
+
+\end{tikzpicture}
+\end{center}
+
+\begin{advertencia}
+El signo:
+
+\[
+a_y=-g
+\]
+
+no significa que \(g\) sea una cantidad negativa.
+
+La magnitud:
+
+\[
+g>0
+\]
+
+y el signo negativo aparece porque hemos definido el sentido \(+y\) hacia
+arriba, mientras la aceleración gravitatoria apunta hacia abajo.
+\end{advertencia}
+
+
+\section{Velocidad inicial y componentes rectangulares}
+
+Supongamos que el proyectil se lanza con rapidez inicial:
+
+\[
+v_0
+\]
+
+formando un ángulo:
+
+\[
+\theta_0
+\]
+
+respecto del eje horizontal positivo.
+
+El vector velocidad inicial es:
+
+\[
+\vect{v}_0
+=
+v_{0x}\ihat+v_{0y}\jhat.
+\]
+
+Utilizando componentes rectangulares:
+
+\[
+\boxed{
+v_{0x}=v_0\cos\theta_0
+},
+\]
+
+\[
+\boxed{
+v_{0y}=v_0\sen\theta_0
+}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{v}_0
+=
+v_0\cos\theta_0\,\ihat
++
+v_0\sen\theta_0\,\jhat
+}.
+\]
+
+\begin{recordatorio}[Método de componentes]
+En este proyecto utilizaremos prioritariamente componentes rectangulares.
+
+El procedimiento será:
+
+\[
+\vect{v}_0
+\longrightarrow
+v_{0x},v_{0y}
+\longrightarrow
+\text{resolver cada eje}
+\longrightarrow
+\text{reconstruir el resultado}.
+\]
+
+Este método es general y evita depender de fórmulas particulares para cada
+configuración geométrica.
+\end{recordatorio}
+
+
+\section{La independencia de las componentes}
+
+Una vez conocidas las componentes iniciales, analizamos por separado los ejes
+\(x\) y \(y\).
+
+En la dirección horizontal:
+
+\[
+a_x=0.
+\]
+
+En la dirección vertical:
+
+\[
+a_y=-g.
+\]
+
+Por ello:
+
+\[
+\boxed{
+\text{horizontal}
+\longrightarrow
+\text{MRU}
+}
+\]
+
+mientras:
+
+\[
+\boxed{
+\text{vertical}
+\longrightarrow
+\text{MRUA}
+}
+\]
+
+con aceleración:
+
+\[
+-g.
+\]
+
+\begin{principio}[Superposición de movimientos]
+Dentro del modelo ideal de proyectil, el movimiento bidimensional puede
+analizarse como la superposición de:
+
+\begin{itemize}
+    \item un movimiento horizontal con velocidad constante;
+    \item un movimiento vertical de caída libre.
+\end{itemize}
+
+Ambas componentes evolucionan simultáneamente y comparten el mismo tiempo.
+\end{principio}
+
+\begin{interpretacion}
+El movimiento horizontal no hace que el objeto ``tarde más en caer''.
+
+Si dos objetos comienzan desde la misma altura y con la misma componente
+vertical inicial, uno soltado directamente y otro con velocidad horizontal,
+ambos tienen exactamente el mismo movimiento vertical dentro del modelo ideal.
+
+La componente horizontal sólo determina cuánto avanzará uno de ellos mientras
+cae.
+\end{interpretacion}
+
+
+\section{Ecuaciones horizontales}
+
+Como:
+
+\[
+a_x=0,
+\]
+
+la componente horizontal de la velocidad permanece constante:
+
+\[
+v_x=v_{0x}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v_x=v_0\cos\theta_0
+}.
+\]
+
+La ecuación de posición horizontal es:
+
+\[
+x=x_0+v_{0x}t.
+\]
+
+Así:
+
+\[
+\boxed{
+x=x_0+(v_0\cos\theta_0)t
+}.
+\]
+
+El desplazamiento horizontal es:
+
+\[
+\boxed{
+\Delta x=v_{0x}t
+}.
+\]
+
+\begin{interpretacion}
+En intervalos iguales de tiempo, el proyectil recorre desplazamientos
+horizontales iguales.
+
+Por ejemplo, si:
+
+\[
+v_x=\SI{10}{\meter\per\second},
+\]
+
+entonces durante cada segundo avanza horizontalmente:
+
+\[
+\SI{10}{\meter},
+\]
+
+independientemente de si en ese instante está subiendo o bajando.
+\end{interpretacion}
+
+
+\section{Ecuaciones verticales}
+
+En la dirección vertical:
+
+\[
+a_y=-g.
+\]
+
+La velocidad vertical es:
+
+\[
+v_y=v_{0y}-gt.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v_y=v_0\sen\theta_0-gt
+}.
+\]
+
+La posición vertical es:
+
+\[
+y=y_0+v_{0y}t-\frac{1}{2}gt^2.
+\]
+
+Entonces:
+
+\[
+\boxed{
+y
+=
+y_0
++
+(v_0\sen\theta_0)t
+-
+\frac{1}{2}gt^2
+}.
+\]
+
+También podemos utilizar:
+
+\[
+v_y^2
+=
+v_{0y}^2
+-
+2g(y-y_0).
+\]
+
+Es decir:
+
+\[
+\boxed{
+v_y^2
+=
+(v_0\sen\theta_0)^2
+-
+2g(y-y_0)
+}.
+\]
+
+Estas son exactamente las ecuaciones de caída libre desarrolladas
+anteriormente.
+
+
+\section{Ecuaciones generales del movimiento}
+
+Reuniendo ambos ejes:
+
+\[
+\boxed{
+x
+=
+x_0
++
+v_0\cos\theta_0\,t
+},
+\]
+
+\[
+\boxed{
+y
+=
+y_0
++
+v_0\sen\theta_0\,t
+-
+\frac{1}{2}gt^2
+}.
+\]
+
+Las componentes de velocidad son:
+
+\[
+\boxed{
+v_x=v_0\cos\theta_0
+},
+\]
+
+\[
+\boxed{
+v_y=v_0\sen\theta_0-gt
+}.
+\]
+
+El vector velocidad es:
+
+\[
+\boxed{
+\vect{v}
+=
+v_0\cos\theta_0\,\ihat
++
+\left(
+v_0\sen\theta_0-gt
+\right)\jhat
+}.
+\]
+
+El vector posición es:
+
+\[
+\boxed{
+\vect{r}
+=
+\left[
+x_0+v_0\cos\theta_0\,t
+\right]\ihat
++
+\left[
+y_0+v_0\sen\theta_0\,t-\frac{1}{2}gt^2
+\right]\jhat
+}.
+\]
+
+Y la aceleración:
+
+\[
+\boxed{
+\vect{a}=-g\jhat
+}.
+\]
+
+
+\section{Rapidez y dirección de la velocidad}
+
+Aunque:
+
+\[
+v_x
+\]
+
+permanece constante, la componente:
+
+\[
+v_y
+\]
+
+cambia continuamente.
+
+La rapidez instantánea es:
+
+\[
+v
+=
+\norm{\vect{v}}.
+\]
+
+Entonces:
+
+\[
+\boxed{
+v
+=
+\sqrt{v_x^2+v_y^2}
+}.
+\]
+
+Sustituyendo las componentes:
+
+\[
+\boxed{
+v
+=
+\sqrt{
+(v_0\cos\theta_0)^2
++
+(v_0\sen\theta_0-gt)^2
+}
+}.
+\]
+
+La dirección instantánea de la velocidad puede obtenerse mediante:
+
+\[
+\tan\theta
+=
+\frac{v_y}{v_x}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\theta
+=
+\arctan
+\left(
+\frac{v_y}{v_x}
+\right)
+}
+\]
+
+teniendo siempre en cuenta el cuadrante físico correcto.
+
+\begin{interpretacion}
+El vector velocidad es tangente a la trayectoria.
+
+Durante el ascenso:
+
+\[
+v_y>0.
+\]
+
+En el punto más alto:
+
+\[
+v_y=0.
+\]
+
+Durante el descenso:
+
+\[
+v_y<0.
+\]
+
+Sin embargo, mientras el proyectil continúe avanzando hacia \(+x\):
+
+\[
+v_x>0
+\]
+
+durante todo el vuelo.
+\end{interpretacion}
+
+
+\section{El punto más alto}
+
+Cuando un proyectil se lanza con componente vertical inicial positiva, asciende
+hasta alcanzar un punto máximo.
+
+En ese instante:
+
+\[
+\boxed{v_y=0}.
+\]
+
+Sin embargo:
+
+\[
+v_x\neq0
+\]
+
+en general.
+
+Por tanto, el proyectil no está completamente en reposo.
+
+\begin{errorfrecuente}[Velocidad en la altura máxima]
+En el punto más alto no debe escribirse:
+
+\[
+\vect{v}=\vect{0}.
+\]
+
+Lo correcto es:
+
+\[
+v_y=0,
+\]
+
+mientras:
+
+\[
+v_x=v_0\cos\theta_0.
+\]
+
+Por tanto:
+
+\[
+\vect{v}
+=
+v_x\ihat.
+\]
+
+La velocidad es horizontal en ese instante.
+\end{errorfrecuente}
+
+La aceleración tampoco desaparece:
+
+\[
+\boxed{
+\vect{a}=-g\jhat
+}.
+\]
+
+Así, en el punto más alto:
+
+\[
+\vect{v}\perp\vect{a}.
+\]
+
+
+\section{Tiempo para alcanzar la altura máxima}
+
+Partimos de:
+
+\[
+v_y=v_{0y}-gt.
+\]
+
+En la altura máxima:
+
+\[
+v_y=0.
+\]
+
+Entonces:
+
+\[
+0=v_{0y}-gt_H.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+t_H=\frac{v_{0y}}{g}
+}.
+\]
+
+Como:
+
+\[
+v_{0y}=v_0\sen\theta_0,
+\]
+
+obtenemos:
+
+\[
+\boxed{
+t_H
+=
+\frac{v_0\sen\theta_0}{g}
+}.
+\]
+
+Esta ecuación supone:
+
+\[
+v_{0y}>0.
+\]
+
+
+\section{Altura máxima}
+
+Utilizamos la relación vertical:
+
+\[
+v_y^2
+=
+v_{0y}^2
+-
+2g(y-y_0).
+\]
+
+En el punto más alto:
+
+\[
+v_y=0.
+\]
+
+Entonces:
+
+\[
+0
+=
+v_{0y}^2
+-
+2g(y_H-y_0).
+\]
+
+Por tanto:
+
+\[
+y_H-y_0
+=
+\frac{v_{0y}^2}{2g}.
+\]
+
+Definiendo:
+
+\[
+H=y_H-y_0,
+\]
+
+como la altura ganada respecto del punto de lanzamiento:
+
+\[
+\boxed{
+H
+=
+\frac{v_{0y}^2}{2g}
+}.
+\]
+
+En términos de \(v_0\) y \(\theta_0\):
+
+\[
+\boxed{
+H
+=
+\frac{
+v_0^2\sen^2\theta_0
+}{
+2g
+}
+}.
+\]
+
+\begin{advertencia}
+Esta \(H\) representa la altura máxima \textbf{respecto del punto de lanzamiento}.
+
+Si el proyectil se lanza desde una altura inicial:
+
+\[
+y_0\neq0,
+\]
+
+la coordenada máxima es:
+
+\[
+\boxed{
+y_H
+=
+y_0
++
+\frac{
+v_0^2\sen^2\theta_0
+}{
+2g
+}
+}.
+\]
+\end{advertencia}
+
+
+\section{La trayectoria es parabólica}
+
+Hasta ahora hemos descrito:
+
+\[
+x(t)
+\]
+
+y:
+
+\[
+y(t).
+\]
+
+Podemos eliminar el tiempo y obtener directamente la relación entre \(x\) y
+\(y\).
+
+Partimos de:
+
+\[
+x
+=
+x_0
++
+v_0\cos\theta_0\,t.
+\]
+
+Despejando:
+
+\[
+t
+=
+\frac{x-x_0}
+{v_0\cos\theta_0}.
+\]
+
+Sustituimos en:
+
+\[
+y
+=
+y_0
++
+v_0\sen\theta_0\,t
+-
+\frac{1}{2}gt^2.
+\]
+
+Entonces:
+
+\[
+y
+=
+y_0
++
+v_0\sen\theta_0
+\left(
+\frac{x-x_0}
+{v_0\cos\theta_0}
+\right)
+-
+\frac{1}{2}g
+\left(
+\frac{x-x_0}
+{v_0\cos\theta_0}
+\right)^2.
+\]
+
+Simplificando:
+
+\[
+\boxed{
+y
+=
+y_0
++
+(x-x_0)\tan\theta_0
+-
+\frac{
+g(x-x_0)^2
+}{
+2v_0^2\cos^2\theta_0
+}
+}.
+\]
+
+Esta expresión tiene la forma:
+
+\[
+y=A+Bx-Cx^2,
+\]
+
+que corresponde a una parábola.
+
+\begin{principio}[Trayectoria ideal]
+Dentro del modelo de proyectil ideal, con aceleración gravitatoria uniforme y
+sin resistencia del aire, la trayectoria en un plano vertical es parabólica.
+\end{principio}
+
+\begin{advertencia}
+Una pelota real no sigue necesariamente una parábola perfecta.
+
+Cuando la resistencia del aire, el viento o la rotación del objeto tienen
+efectos importantes, la trayectoria puede diferir considerablemente de la
+predicción ideal.
+\end{advertencia}
+
+
+\section{Diagrama de movimiento}
+
+Una manera útil de comprender el movimiento consiste en representar la posición
+del proyectil en intervalos iguales de tiempo.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.95]
+
+    \draw[-{Latex},thick] (-0.4,0) -- (7.2,0)
+        node[right] {\(x\)};
+
+    \draw[-{Latex},thick] (0,-0.3) -- (0,4.4)
+        node[above] {\(y\)};
+
+    \draw[
+        very thick,
+        AzulPrincipal,
+        domain=0:6.2,
+        samples=100
+    ]
+    plot (\x,{1.05*\x-0.17*\x*\x});
+
+    \foreach \x in {0,1,2,3,4,5,6}{
+        \pgfmathsetmacro{\yy}{1.05*\x-0.17*\x*\x}
+        \fill (\x,\yy) circle (2.2pt);
+    }
+
+    \draw[-{Latex},thick,RojoPrincipal]
+        (1,1.55) -- (1,0.80);
+
+    \draw[-{Latex},thick,RojoPrincipal]
+        (3,2.55) -- (3,1.80);
+
+    \draw[-{Latex},thick,RojoPrincipal]
+        (5,1.55) -- (5,0.80);
+
+    \node[right] at (5,1.15) {\(\vect{a}\)};
+
+\end{tikzpicture}
+\end{center}
+
+Observe que los puntos están separados horizontalmente por cantidades iguales si
+los intervalos de tiempo son iguales.
+
+Esto ocurre porque:
+
+\[
+v_x=\text{constante}.
+\]
+
+En cambio, las separaciones verticales cambian debido a:
+
+\[
+a_y=-g.
+\]
+
+
+\section{Lanzamiento horizontal}
+
+Un caso importante ocurre cuando el proyectil abandona una superficie con
+velocidad completamente horizontal.
+
+Entonces:
+
+\[
+\theta_0=0.
+\]
+
+Por tanto:
+
+\[
+v_{0x}=v_0,
+\]
+
+y:
+
+\[
+v_{0y}=0.
+\]
+
+Las ecuaciones se reducen a:
+
+\[
+\boxed{
+x=x_0+v_0t
+},
+\]
+
+\[
+\boxed{
+y=y_0-\frac{1}{2}gt^2
+},
+\]
+
+\[
+\boxed{
+v_x=v_0
+},
+\]
+
+\[
+\boxed{
+v_y=-gt
+}.
+\]
+
+\begin{idea}[El objeto comienza a caer inmediatamente]
+Un proyectil lanzado horizontalmente no permanece horizontal durante cierto
+tiempo antes de comenzar a caer.
+
+Desde el primer instante después de ser liberado:
+
+\[
+a_y=-g.
+\]
+
+Por tanto, su componente vertical de velocidad comienza a cambiar
+inmediatamente.
+\end{idea}
+
+
+\section{Lanzamiento horizontal desde una altura}
+
+Supongamos que un objeto se lanza horizontalmente desde una altura \(h\) sobre
+el suelo.
+
+Elegimos:
+
+\[
+y_0=h,
+\qquad
+y_f=0.
+\]
+
+Como:
+
+\[
+v_{0y}=0,
+\]
+
+tenemos:
+
+\[
+0
+=
+h-\frac{1}{2}gt^2.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+t_f
+=
+\sqrt{\frac{2h}{g}}
+}.
+\]
+
+Observe que este tiempo no depende de la velocidad horizontal inicial.
+
+El desplazamiento horizontal hasta el impacto es:
+
+\[
+R=v_0t_f.
+\]
+
+Entonces:
+
+\[
+\boxed{
+R
+=
+v_0
+\sqrt{\frac{2h}{g}}
+}.
+\]
+
+\begin{interpretacion}
+Para una altura fija, aumentar la rapidez horizontal no modifica el tiempo que
+tarda el proyectil en llegar al suelo dentro del modelo ideal.
+
+Lo que aumenta es la distancia horizontal recorrida durante ese mismo tiempo.
+\end{interpretacion}
+
+
+\section{Ejemplo: lanzamiento horizontal}
+
+\begin{ejemplo}[Objeto que sale del borde de una plataforma]
+Una pelota abandona horizontalmente una plataforma situada a:
+
+\[
+h=\SI{20.0}{\meter}
+\]
+
+sobre el suelo con rapidez:
+
+\[
+v_0=\SI{12.0}{\meter\per\second}.
+\]
+
+Despreciando la resistencia del aire, determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item el tiempo de caída;
+    \item la distancia horizontal recorrida;
+    \item las componentes de la velocidad inmediatamente antes del impacto;
+    \item la rapidez de impacto;
+    \item la dirección de la velocidad al impactar.
+\end{enumerate}
+\end{ejemplo}
+
+\subsubsection*{Sistema de referencia}
+
+Elegimos:
+
+\[
++x
+\]
+
+horizontal en el sentido del lanzamiento y:
+
+\[
++y
+\]
+
+hacia arriba.
+
+Tomamos:
+
+\[
+x_0=0,
+\qquad
+y_0=\SI{20.0}{\meter}.
+\]
+
+La velocidad inicial tiene componentes:
+
+\[
+v_{0x}=\SI{12.0}{\meter\per\second},
+\]
+
+\[
+v_{0y}=0.
+\]
+
+
+\subsubsection*{Tiempo de caída}
+
+Verticalmente:
+
+\[
+y
+=
+y_0-\frac{1}{2}gt^2.
+\]
+
+Al llegar al suelo:
+
+\[
+y=0.
+\]
+
+Entonces:
+
+\[
+0
+=
+\SI{20.0}{\meter}
+-
+\frac{1}{2}
+(\SI{9.81}{\meter\per\second\squared})t^2.
+\]
+
+Por tanto:
+
+\[
+t
+=
+\sqrt{
+\frac{
+2(\SI{20.0}{\meter})
+}{
+\SI{9.81}{\meter\per\second\squared}
+}
+}.
+\]
+
+Así:
+
+\[
+\boxed{
+t\approx\SI{2.02}{\second}
+}.
+\]
+
+
+\subsubsection*{Desplazamiento horizontal}
+
+Horizontalmente:
+
+\[
+x=v_{0x}t.
+\]
+
+Entonces:
+
+\[
+x
+=
+(\SI{12.0}{\meter\per\second})
+(\SI{2.02}{\second}).
+\]
+
+Por tanto:
+
+\[
+\boxed{
+x\approx\SI{24.2}{\meter}
+}.
+\]
+
+
+\subsubsection*{Velocidad de impacto}
+
+La componente horizontal permanece constante:
+
+\[
+\boxed{
+v_x=\SI{12.0}{\meter\per\second}
+}.
+\]
+
+La componente vertical es:
+
+\[
+v_y=-gt.
+\]
+
+Entonces:
+
+\[
+v_y
+=
+-
+(\SI{9.81}{\meter\per\second\squared})
+(\SI{2.02}{\second}).
+\]
+
+Así:
+
+\[
+\boxed{
+v_y\approx-\SI{19.8}{\meter\per\second}
+}.
+\]
+
+El signo negativo indica que la componente vertical apunta hacia abajo.
+
+La rapidez es:
+
+\[
+v
+=
+\sqrt{v_x^2+v_y^2}.
+\]
+
+Por tanto:
+
+\[
+v
+=
+\sqrt{
+(12.0)^2+(19.8)^2
+}
+\,
+\si{\meter\per\second}.
+\]
+
+Así:
+
+\[
+\boxed{
+v\approx\SI{23.2}{\meter\per\second}
+}.
+\]
+
+
+\subsubsection*{Dirección de impacto}
+
+La magnitud del ángulo debajo de la horizontal satisface:
+
+\[
+\tan\theta
+=
+\frac{|v_y|}{v_x}.
+\]
+
+Entonces:
+
+\[
+\theta
+=
+\arctan
+\left(
+\frac{19.8}{12.0}
+\right).
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\theta\approx58.8\grado
+}
+\]
+
+por debajo del eje \(+x\).
+
+\begin{interpretacion}
+La pelota mantuvo durante todo el vuelo su componente horizontal de velocidad,
+pero adquirió una componente vertical cada vez mayor en magnitud.
+
+Por ello, el vector velocidad fue cambiando de dirección continuamente.
+\end{interpretacion}
+
+
+\section{Lanzamiento oblicuo}
+
+Cuando:
+
+\[
+0<\theta_0<90\grado,
+\]
+
+la velocidad inicial posee simultáneamente una componente horizontal y una
+componente vertical positiva:
+
+\[
+v_{0x}=v_0\cos\theta_0,
+\]
+
+\[
+v_{0y}=v_0\sen\theta_0.
+\]
+
+El proyectil comienza ascendiendo porque:
+
+\[
+v_{0y}>0.
+\]
+
+Durante el ascenso, la gravedad reduce progresivamente \(v_y\).
+
+En la altura máxima:
+
+\[
+v_y=0.
+\]
+
+Después:
+
+\[
+v_y<0,
+\]
+
+y el proyectil desciende.
+
+Mientras tanto:
+
+\[
+v_x=v_{0x}
+\]
+
+permanece constante.
+
+
+\section{Caso simétrico: mismo nivel de lanzamiento y llegada}
+
+Consideremos ahora una situación especial y muy útil.
+
+El proyectil parte desde:
+
+\[
+y_0
+\]
+
+y finalmente regresa a esa misma altura:
+
+\[
+y_f=y_0.
+\]
+
+Además:
+
+\[
+v_{0y}>0.
+\]
+
+Dentro del modelo ideal aparece una simetría importante.
+
+
+\subsection{Simetría temporal}
+
+El tiempo empleado en subir desde la altura de lanzamiento hasta la altura
+máxima es igual al tiempo empleado en regresar desde la altura máxima hasta esa
+misma altura.
+
+Por tanto:
+
+\[
+t_{\mathrm{vuelo}}
+=
+2t_H.
+\]
+
+Como:
+
+\[
+t_H
+=
+\frac{v_0\sen\theta_0}{g},
+\]
+
+resulta:
+
+\[
+\boxed{
+t_{\mathrm{vuelo}}
+=
+\frac{
+2v_0\sen\theta_0
+}{
+g
+}
+}.
+\]
+
+\begin{condicion}
+Esta fórmula requiere:
+
+\[
+y_f=y_0.
+\]
+
+No es una expresión general para cualquier movimiento de proyectil.
+\end{condicion}
+
+
+\subsection{Simetría de las velocidades}
+
+Al regresar a la misma altura:
+
+\[
+v_x=v_{0x},
+\]
+
+y:
+
+\[
+v_y=-v_{0y}.
+\]
+
+Por tanto, la rapidez es:
+
+\[
+v
+=
+\sqrt{
+v_{0x}^2+(-v_{0y})^2
+}.
+\]
+
+Así:
+
+\[
+\boxed{
+v=v_0
+}.
+\]
+
+\begin{interpretacion}
+En ausencia de resistencia del aire, un proyectil que regresa a su altura inicial
+lo hace con la misma rapidez con la que fue lanzado, pero con una componente
+vertical de sentido contrario.
+\end{interpretacion}
+
+
+\section{Alcance horizontal}
+
+Llamaremos alcance horizontal \(R\) a la distancia horizontal recorrida cuando el
+proyectil vuelve a la misma altura desde la que fue lanzado.
+
+Como horizontalmente:
+
+\[
+R=v_{0x}t_{\mathrm{vuelo}},
+\]
+
+tenemos:
+
+\[
+R
+=
+v_0\cos\theta_0
+\left(
+\frac{
+2v_0\sen\theta_0
+}{
+g
+}
+\right).
+\]
+
+Por tanto:
+
+\[
+R
+=
+\frac{
+2v_0^2\sen\theta_0\cos\theta_0
+}{
+g
+}.
+\]
+
+Utilizando:
+
+\[
+2\sen\theta_0\cos\theta_0
+=
+\sen(2\theta_0),
+\]
+
+obtenemos:
+
+\[
+\boxed{
+R
+=
+\frac{
+v_0^2\sen(2\theta_0)
+}{
+g
+}
+}.
+\]
+
+\begin{condicion}[Condiciones de la fórmula del alcance]
+La expresión:
+
+\[
+R
+=
+\frac{
+v_0^2\sen(2\theta_0)
+}{
+g
+}
+\]
+
+es válida cuando:
+
+\begin{itemize}
+    \item se desprecia la resistencia del aire;
+    \item \(g\) puede considerarse constante;
+    \item el punto final está a la misma altura que el punto inicial;
+    \item la superficie de referencia es horizontal.
+\end{itemize}
+\end{condicion}
+
+\begin{errorfrecuente}
+No debe utilizarse automáticamente la fórmula:
+
+\[
+R
+=
+\frac{
+v_0^2\sen(2\theta_0)
+}{
+g
+}
+\]
+
+cuando el proyectil se lanza desde una montaña, edificio, plataforma u otra
+altura diferente de la posición final.
+
+En esos casos debe utilizarse primero la ecuación vertical general para
+determinar el tiempo.
+\end{errorfrecuente}
+
+
+\section{Ángulo de alcance máximo}
+
+Para una rapidez inicial fija:
+
+\[
+v_0=\text{constante},
+\]
+
+y bajo las condiciones del caso simétrico:
+
+\[
+R
+=
+\frac{v_0^2}{g}
+\sen(2\theta_0).
+\]
+
+El valor máximo de:
+
+\[
+\sen(2\theta_0)
+\]
+
+es:
+
+\[
+1.
+\]
+
+Esto ocurre cuando:
+
+\[
+2\theta_0=90\grado.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\theta_0=45\grado
+}.
+\]
+
+El alcance máximo es entonces:
+
+\[
+\boxed{
+R_{\max}
+=
+\frac{v_0^2}{g}
+}.
+\]
+
+\begin{advertencia}
+La afirmación:
+
+\[
+\text{``el alcance máximo ocurre siempre a }45\grado\text{''}
+\]
+
+es incorrecta.
+
+El resultado de \(45\grado\) corresponde al modelo ideal cuando lanzamiento y
+llegada ocurren a la misma altura y se desprecia la resistencia del aire.
+
+Si las alturas son distintas o el aire tiene efectos importantes, el ángulo que
+maximiza el alcance puede ser diferente.
+\end{advertencia}
+
+
+\section{Ángulos complementarios}
+
+Para el caso simétrico:
+
+\[
+R
+=
+\frac{
+v_0^2\sen(2\theta_0)
+}{
+g
+}.
+\]
+
+Consideremos dos ángulos:
+
+\[
+\theta_1
+\]
+
+y:
+
+\[
+\theta_2=90\grado-\theta_1.
+\]
+
+Entonces:
+
+\[
+2\theta_2
+=
+180\grado-2\theta_1.
+\]
+
+Como:
+
+\[
+\sen(180\grado-\alpha)=\sen\alpha,
+\]
+
+ambos producen el mismo alcance.
+
+Por tanto:
+
+\[
+\boxed{
+R(\theta)
+=
+R(90\grado-\theta)
+}.
+\]
+
+Por ejemplo, dentro del modelo ideal:
+
+\[
+30\grado
+\]
+
+y:
+
+\[
+60\grado
+\]
+
+producen el mismo alcance horizontal si \(v_0\) es igual y el proyectil regresa a
+la altura de lanzamiento.
+
+\begin{interpretacion}
+Tener el mismo alcance no significa tener la misma trayectoria.
+
+El lanzamiento con mayor ángulo:
+
+\begin{itemize}
+    \item alcanza mayor altura;
+    \item permanece más tiempo en el aire.
+\end{itemize}
+
+El de menor ángulo:
+
+\begin{itemize}
+    \item alcanza menor altura;
+    \item posee mayor componente horizontal inicial.
+\end{itemize}
+\end{interpretacion}
+
+
+\section{Ejemplo: lanzamiento oblicuo al mismo nivel}
+
+\begin{ejemplo}[Pelota lanzada desde el suelo]
+Una pelota se lanza desde el suelo con rapidez inicial:
+
+\[
+v_0=\SI{20.0}{\meter\per\second}
+\]
+
+formando un ángulo:
+
+\[
+\theta_0=35.0\grado
+\]
+
+con la horizontal.
+
+Despreciando la resistencia del aire, determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item las componentes iniciales de la velocidad;
+    \item el tiempo para alcanzar la altura máxima;
+    \item la altura máxima;
+    \item el tiempo total de vuelo;
+    \item el alcance horizontal.
+\end{enumerate}
+\end{ejemplo}
+
+
+\subsubsection*{Componentes de la velocidad inicial}
+
+Utilizamos:
+
+\[
+v_{0x}=v_0\cos\theta_0.
+\]
+
+Entonces:
+
+\[
+v_{0x}
+=
+(\SI{20.0}{\meter\per\second})
+\cos(35.0\grado).
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v_{0x}\approx\SI{16.4}{\meter\per\second}
+}.
+\]
+
+La componente vertical es:
+
+\[
+v_{0y}=v_0\sen\theta_0.
+\]
+
+Así:
+
+\[
+v_{0y}
+=
+(\SI{20.0}{\meter\per\second})
+\sen(35.0\grado).
+\]
+
+Entonces:
+
+\[
+\boxed{
+v_{0y}\approx\SI{11.5}{\meter\per\second}
+}.
+\]
+
+
+\subsubsection*{Tiempo hasta la altura máxima}
+
+\[
+t_H
+=
+\frac{v_{0y}}{g}.
+\]
+
+Por tanto:
+
+\[
+t_H
+=
+\frac{
+\SI{11.5}{\meter\per\second}
+}{
+\SI{9.81}{\meter\per\second\squared}
+}.
+\]
+
+Así:
+
+\[
+\boxed{
+t_H\approx\SI{1.17}{\second}
+}.
+\]
+
+
+\subsubsection*{Altura máxima}
+
+\[
+H
+=
+\frac{v_{0y}^2}{2g}.
+\]
+
+Entonces:
+
+\[
+H
+=
+\frac{
+(\SI{11.5}{\meter\per\second})^2
+}{
+2(\SI{9.81}{\meter\per\second\squared})
+}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+H\approx\SI{6.71}{\meter}
+}.
+\]
+
+
+\subsubsection*{Tiempo total de vuelo}
+
+Como regresa al mismo nivel:
+
+\[
+t_{\mathrm{vuelo}}=2t_H.
+\]
+
+Entonces:
+
+\[
+\boxed{
+t_{\mathrm{vuelo}}
+\approx
+\SI{2.34}{\second}
+}.
+\]
+
+
+\subsubsection*{Alcance}
+
+Utilizamos:
+
+\[
+R=v_{0x}t_{\mathrm{vuelo}}.
+\]
+
+Así:
+
+\[
+R
+=
+(\SI{16.4}{\meter\per\second})
+(\SI{2.34}{\second}).
+\]
+
+Por tanto:
+
+\[
+\boxed{
+R\approx\SI{38.3}{\meter}
+}.
+\]
+
+También podríamos utilizar, porque el proyectil vuelve al mismo nivel:
+
+\[
+R
+=
+\frac{
+v_0^2\sen(2\theta_0)
+}{
+g
+}.
+\]
+
+\begin{interpretacion}
+El movimiento horizontal continuó uniformemente durante los
+\(\SI{2.34}{\second}\) de vuelo.
+
+Simultáneamente, la componente vertical disminuyó desde un valor positivo hasta
+cero y posteriormente se hizo negativa durante el descenso.
+\end{interpretacion}
+
+
+\section{Cuando las alturas inicial y final son diferentes}
+
+Muchos problemas reales no presentan simetría.
+
+Por ejemplo:
+
+\begin{itemize}
+    \item un balón puede lanzarse desde una plataforma y caer al suelo;
+    \item una piedra puede lanzarse desde un acantilado;
+    \item un objeto puede lanzarse desde el suelo hacia una ventana elevada;
+    \item un paquete puede liberarse desde una aeronave.
+\end{itemize}
+
+En estas situaciones:
+
+\[
+y_f\neq y_0.
+\]
+
+La estrategia más segura consiste en utilizar siempre las ecuaciones generales.
+
+
+\subsection{Determinación del tiempo}
+
+La ecuación vertical es:
+
+\[
+y_f
+=
+y_0
++
+v_{0y}t
+-
+\frac{1}{2}gt^2.
+\]
+
+Definiendo:
+
+\[
+\Delta y=y_f-y_0,
+\]
+
+tenemos:
+
+\[
+\Delta y
+=
+v_{0y}t
+-
+\frac{1}{2}gt^2.
+\]
+
+Reordenando:
+
+\[
+\frac{1}{2}gt^2
+-
+v_{0y}t
++
+\Delta y
+=
+0.
+\]
+
+Esta ecuación puede resolverse mediante la fórmula cuadrática.
+
+\begin{interpretacion}
+El tiempo suele obtenerse primero a partir del movimiento vertical.
+
+Una vez conocido, ese mismo valor de \(t\) se utiliza en el movimiento horizontal:
+
+\[
+x_f=x_0+v_{0x}t.
+\]
+
+No existen un ``tiempo horizontal'' y un ``tiempo vertical'' distintos.
+\end{interpretacion}
+
+
+\section{Ejemplo: lanzamiento desde una altura}
+
+\begin{ejemplo}[Proyectil lanzado desde una plataforma]
+Desde una plataforma situada a:
+
+\[
+y_0=\SI{12.0}{\meter}
+\]
+
+sobre el suelo se lanza una pelota con rapidez:
+
+\[
+v_0=\SI{18.0}{\meter\per\second}
+\]
+
+y ángulo:
+
+\[
+\theta_0=30.0\grado.
+\]
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item el tiempo que tarda en llegar al suelo;
+    \item la distancia horizontal recorrida;
+    \item la velocidad inmediatamente antes del impacto;
+    \item la rapidez de impacto.
+\end{enumerate}
+\end{ejemplo}
+
+
+\subsubsection*{Componentes iniciales}
+
+Horizontalmente:
+
+\[
+v_{0x}
+=
+v_0\cos\theta_0.
+\]
+
+Entonces:
+
+\[
+v_{0x}
+=
+(\SI{18.0}{\meter\per\second})
+\cos(30.0\grado).
+\]
+
+Así:
+
+\[
+\boxed{
+v_{0x}\approx\SI{15.6}{\meter\per\second}
+}.
+\]
+
+Verticalmente:
+
+\[
+v_{0y}
+=
+v_0\sen\theta_0.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v_{0y}=\SI{9.00}{\meter\per\second}
+}.
+\]
+
+
+\subsubsection*{Tiempo hasta el suelo}
+
+Tomamos:
+
+\[
+y_f=0.
+\]
+
+Entonces:
+
+\[
+0
+=
+12.0
++
+9.00t
+-
+4.905t^2.
+\]
+
+Reordenando:
+
+\[
+4.905t^2
+-
+9.00t
+-
+12.0
+=
+0.
+\]
+
+La fórmula cuadrática produce dos raíces.
+
+La raíz positiva es:
+
+\[
+\boxed{
+t\approx\SI{2.73}{\second}
+}.
+\]
+
+La otra raíz es negativa y no pertenece al intervalo posterior al lanzamiento.
+
+
+\subsubsection*{Distancia horizontal}
+
+\[
+\Delta x=v_{0x}t.
+\]
+
+Entonces:
+
+\[
+\Delta x
+=
+(\SI{15.6}{\meter\per\second})
+(\SI{2.73}{\second}).
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\Delta x\approx\SI{42.6}{\meter}
+}.
+\]
+
+
+\subsubsection*{Velocidad de impacto}
+
+La componente horizontal es:
+
+\[
+\boxed{
+v_x\approx\SI{15.6}{\meter\per\second}
+}.
+\]
+
+La componente vertical:
+
+\[
+v_y=v_{0y}-gt.
+\]
+
+Así:
+
+\[
+v_y
+=
+\SI{9.00}{\meter\per\second}
+-
+(\SI{9.81}{\meter\per\second\squared})
+(\SI{2.73}{\second}).
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v_y\approx-\SI{17.8}{\meter\per\second}
+}.
+\]
+
+El vector velocidad es:
+
+\[
+\boxed{
+\vect{v}
+\approx
+(15.6\ihat-17.8\jhat)
+\,\si{\meter\per\second}
+}.
+\]
+
+La rapidez es:
+
+\[
+v
+=
+\sqrt{
+(15.6)^2+(17.8)^2
+}
+\,\si{\meter\per\second}.
+\]
+
+Entonces:
+
+\[
+\boxed{
+v\approx\SI{23.7}{\meter\per\second}
+}.
+\]
+
+\begin{interpretacion}
+La rapidez de impacto es mayor que la rapidez inicial porque el proyectil termina
+a una altura menor que aquella desde la que fue lanzado.
+
+Además, este problema no es simétrico:
+
+\[
+y_f\neq y_0.
+\]
+
+Por ello, no era válido utilizar directamente la fórmula especial del alcance.
+\end{interpretacion}
+
+
+\section{Una misma altura puede alcanzarse dos veces}
+
+Cuando un proyectil asciende y luego desciende, puede atravesar una misma altura
+en dos instantes diferentes.
+
+Supongamos:
+
+\[
+y_0<y<y_H.
+\]
+
+La ecuación:
+
+\[
+y
+=
+y_0
++
+v_{0y}t
+-
+\frac{1}{2}gt^2
+\]
+
+puede producir dos valores positivos de \(t\).
+
+Uno corresponde al ascenso y el otro al descenso.
+
+En esos dos puntos:
+
+\[
+v_x
+\]
+
+es el mismo, pero:
+
+\[
+v_y
+\]
+
+tiene signos opuestos si la altura está a ambos lados simétricos del ápice.
+
+\begin{interpretacion}
+Conocer únicamente la posición del proyectil no determina completamente su
+estado de movimiento.
+
+También necesitamos conocer su velocidad o saber si está ascendiendo o
+descendiendo.
+\end{interpretacion}
+
+
+\section{Simetría de la trayectoria ideal}
+
+Cuando lanzamiento y llegada ocurren a la misma altura, la trayectoria presenta
+simetría respecto de la vertical que pasa por el punto más alto.
+
+Para posiciones situadas a igual altura antes y después del ápice:
+
+\[
+v_x=\text{constante},
+\]
+
+mientras:
+
+\[
+v_{y,\mathrm{descenso}}
+=
+-v_{y,\mathrm{ascenso}}.
+\]
+
+Por tanto:
+
+\[
+v_{\mathrm{descenso}}
+=
+v_{\mathrm{ascenso}}.
+\]
+
+También:
+
+\[
+x_H=\frac{R}{2}.
+\]
+
+\begin{advertencia}
+Esta simetría pertenece al modelo ideal y al caso:
+
+\[
+y_f=y_0.
+\]
+
+La resistencia del aire rompe esta simetría y hace que el movimiento real de
+muchos proyectiles sea diferente durante el ascenso y el descenso.
+\end{advertencia}
+
+
+\section{Comparación de distintos ángulos de lanzamiento}
+
+Para una misma rapidez inicial, el ángulo modifica las dos componentes:
+
+\[
+v_{0x}=v_0\cos\theta_0,
+\]
+
+\[
+v_{0y}=v_0\sen\theta_0.
+\]
+
+Si aumentamos el ángulo desde valores pequeños:
+
+\begin{itemize}
+    \item disminuye la componente horizontal;
+    \item aumenta inicialmente la componente vertical;
+    \item aumenta la altura máxima;
+    \item aumenta el tiempo de vuelo, en el caso simétrico;
+    \item el alcance aumenta hasta \(45\grado\) y luego disminuye, bajo las
+    condiciones ideales del mismo nivel.
+\end{itemize}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.88]
+
+    \draw[-{Latex},thick] (-0.3,0) -- (10.0,0)
+        node[right] {\(x\)};
+
+    \draw[-{Latex},thick] (0,-0.3) -- (0,5.0)
+        node[above] {\(y\)};
+
+    \draw[
+        very thick,
+        AzulSecundario,
+        domain=0:8.7,
+        samples=80
+    ]
+    plot (\x,{0.35*\x-0.04*\x*\x});
+
+    \draw[
+        very thick,
+        VerdePrincipal,
+        domain=0:9.2,
+        samples=80
+    ]
+    plot (\x,{0.95*\x-0.103*\x*\x});
+
+    \draw[
+        very thick,
+        RojoPrincipal,
+        domain=0:8.7,
+        samples=80
+    ]
+    plot (\x,{1.65*\x-0.19*\x*\x});
+
+    \node[AzulSecundario] at (5.2,0.55) {ángulo pequeño};
+    \node[VerdePrincipal] at (5.4,2.0) {ángulo intermedio};
+    \node[RojoPrincipal] at (3.6,4.0) {ángulo grande};
+
+\end{tikzpicture}
+\end{center}
+
+El dibujo es cualitativo: su función es mostrar que una misma rapidez inicial
+puede producir trayectorias diferentes dependiendo del ángulo.
+
+
+\section{Interpretación mediante vectores de velocidad}
+
+Durante el vuelo:
+
+\[
+\vect{v}
+=
+v_x\ihat+v_y\jhat.
+\]
+
+La componente horizontal:
+
+\[
+v_x
+\]
+
+permanece constante.
+
+En cambio:
+
+\[
+v_y
+\]
+
+disminuye linealmente con el tiempo.
+
+Podemos pensar en tres momentos.
+
+\subsection{Durante el ascenso}
+
+\[
+v_x>0,
+\qquad
+v_y>0.
+\]
+
+La velocidad apunta hacia adelante y hacia arriba.
+
+
+\subsection{En el punto más alto}
+
+\[
+v_x>0,
+\qquad
+v_y=0.
+\]
+
+La velocidad es horizontal.
+
+
+\subsection{Durante el descenso}
+
+\[
+v_x>0,
+\qquad
+v_y<0.
+\]
+
+La velocidad apunta hacia adelante y hacia abajo.
+
+En los tres casos:
+
+\[
+\vect{a}=-g\jhat.
+\]
+
+
+\section{¿Por qué el proyectil no cae verticalmente de inmediato?}
+
+Una confusión frecuente consiste en imaginar que, como la aceleración apunta
+hacia abajo, el proyectil debería moverse únicamente hacia abajo.
+
+Esto no ocurre porque aceleración y velocidad son magnitudes diferentes.
+
+El proyectil posee una componente horizontal de velocidad:
+
+\[
+v_x=v_{0x}.
+\]
+
+Como:
+
+\[
+a_x=0,
+\]
+
+esa componente no desaparece.
+
+Simultáneamente, la gravedad cambia:
+
+\[
+v_y.
+\]
+
+La combinación de ambos movimientos produce la trayectoria curva.
+
+\begin{idea}
+La aceleración indica cómo cambia la velocidad, no necesariamente la dirección
+instantánea del movimiento.
+
+Un proyectil puede tener:
+
+\[
+\vect{a}
+\]
+
+vertical hacia abajo y, al mismo tiempo:
+
+\[
+\vect{v}
+\]
+
+oblicua.
+\end{idea}
+
+
+\section{Estrategia general para resolver problemas}
+
+\begin{estrategia}[Movimiento de proyectiles]
+Para resolver un problema de proyectiles conviene seguir esta secuencia:
+
+\begin{enumerate}
+    \item Identifique el intervalo durante el cual el objeto puede modelarse como
+    proyectil.
+
+    \item Dibuje un esquema de la trayectoria.
+
+    \item Defina claramente:
+    \[
+    x,\qquad y,\qquad O,\qquad +x,\qquad +y.
+    \]
+
+    \item Registre:
+    \[
+    x_0,\qquad y_0,\qquad x_f,\qquad y_f.
+    \]
+
+    \item Descomponga la velocidad inicial:
+    \[
+    v_{0x}=v_0\cos\theta_0,
+    \]
+    \[
+    v_{0y}=v_0\sen\theta_0.
+    \]
+
+    \item Escriba las aceleraciones:
+    \[
+    a_x=0,
+    \qquad
+    a_y=-g.
+    \]
+
+    \item Analice el eje horizontal:
+    \[
+    x=x_0+v_{0x}t.
+    \]
+
+    \item Analice el eje vertical:
+    \[
+    y=y_0+v_{0y}t-\frac{1}{2}gt^2.
+    \]
+
+    \item Utilice el mismo tiempo en ambos ejes.
+
+    \item Determine primero la variable que conecta los dos movimientos, que con
+    frecuencia es \(t\).
+
+    \item Reconstruya la velocidad final mediante:
+    \[
+    \vect{v}=v_x\ihat+v_y\jhat.
+    \]
+
+    \item Si se pide rapidez:
+    \[
+    v=\sqrt{v_x^2+v_y^2}.
+    \]
+
+    \item Si se pide dirección, determine el ángulo a partir de las componentes y
+    compruebe el cuadrante.
+
+    \item Verifique que cualquier fórmula especial utilizada cumpla sus
+    condiciones de aplicación.
+
+    \item Interprete físicamente el resultado.
+\end{enumerate}
+\end{estrategia}
+
+
+\section{Cómo elegir la ecuación adecuada}
+
+No es necesario utilizar todas las ecuaciones en cada problema.
+
+\subsection{Cuando se busca el tiempo de vuelo}
+
+La ecuación vertical suele ser la más útil:
+
+\[
+y_f
+=
+y_0
++
+v_{0y}t
+-
+\frac{1}{2}gt^2.
+\]
+
+
+\subsection{Cuando se busca la posición horizontal}
+
+Una vez conocido el tiempo:
+
+\[
+x_f
+=
+x_0+v_{0x}t.
+\]
+
+
+\subsection{Cuando se busca la altura máxima}
+
+Utilice:
+
+\[
+v_y=0
+\]
+
+en el punto máximo.
+
+Puede resultar eficiente usar:
+
+\[
+v_y^2
+=
+v_{0y}^2
+-
+2g(y-y_0).
+\]
+
+
+\subsection{Cuando se busca la velocidad de impacto}
+
+Determine por separado:
+
+\[
+v_x
+\]
+
+y:
+
+\[
+v_y.
+\]
+
+Después reconstruya:
+
+\[
+\vect{v}
+=
+v_x\ihat+v_y\jhat.
+\]
+
+
+\section{Casos especiales}
+
+Las diferentes situaciones habituales no requieren teorías distintas.
+
+Todas proceden de:
+
+\[
+a_x=0,
+\qquad
+a_y=-g.
+\]
+
+
+\subsection{Lanzamiento horizontal}
+
+\[
+v_{0y}=0.
+\]
+
+
+\subsection{Lanzamiento oblicuo hacia arriba}
+
+\[
+v_{0x}>0,
+\qquad
+v_{0y}>0.
+\]
+
+
+\subsection{Lanzamiento oblicuo hacia abajo}
+
+Con \(+y\) hacia arriba:
+
+\[
+v_{0x}>0,
+\qquad
+v_{0y}<0.
+\]
+
+
+\subsection{Lanzamiento vertical}
+
+Si:
+
+\[
+v_{0x}=0,
+\]
+
+el movimiento deja de ser bidimensional y se reduce al movimiento vertical
+estudiado anteriormente.
+
+\begin{interpretacion}
+Los casos especiales deben entenderse como consecuencias del modelo general.
+
+No es necesario memorizar un conjunto diferente de ecuaciones para cada tipo de
+lanzamiento.
+\end{interpretacion}
+
+
+\section{Casos límite}
+
+Los casos límite permiten comprobar la coherencia de las ecuaciones.
+
+
+\subsection{Ángulo nulo}
+
+Si:
+
+\[
+\theta_0=0,
+\]
+
+entonces:
+
+\[
+v_{0x}=v_0,
+\qquad
+v_{0y}=0.
+\]
+
+Recuperamos el lanzamiento horizontal.
+
+
+\subsection{Ángulo de noventa grados}
+
+Si:
+
+\[
+\theta_0=90\grado,
+\]
+
+entonces:
+
+\[
+v_{0x}=0,
+\qquad
+v_{0y}=v_0.
+\]
+
+El movimiento se reduce a un lanzamiento vertical.
+
+
+\subsection{Gravedad nula}
+
+Si hipotéticamente:
+
+\[
+g\to0,
+\]
+
+entonces:
+
+\[
+a_x=a_y=0.
+\]
+
+El proyectil se movería con velocidad vectorial constante y su trayectoria sería
+rectilínea:
+
+\[
+\vect{r}
+=
+\vect{r}_0+\vect{v}_0t.
+\]
+
+
+\section{Limitaciones del modelo ideal}
+
+El modelo parabólico es muy útil, pero no describe perfectamente todos los
+proyectiles reales.
+
+\subsection{Resistencia del aire}
+
+La resistencia del aire puede:
+
+\begin{itemize}
+    \item reducir la rapidez;
+    \item disminuir la altura máxima;
+    \item reducir el alcance;
+    \item modificar la simetría de la trayectoria;
+    \item hacer que la trayectoria deje de ser parabólica.
+\end{itemize}
+
+
+\subsection{Viento}
+
+El movimiento del aire puede introducir modificaciones horizontales y
+verticales que el modelo ideal no contempla.
+
+
+\subsection{Rotación del proyectil}
+
+Una pelota en rotación puede experimentar desviaciones adicionales asociadas a
+su interacción con el aire.
+
+Por ello, trayectorias de fútbol, béisbol, tenis o golf pueden diferir
+considerablemente de una parábola ideal.
+
+
+\subsection{Grandes distancias}
+
+Para proyectiles de gran alcance pueden dejar de ser despreciables:
+
+\begin{itemize}
+    \item la curvatura terrestre;
+    \item la rotación terrestre;
+    \item la variación de \(g\) con la posición.
+\end{itemize}
+
+\begin{interpretacion}
+Un modelo ideal no es ``incorrecto'' porque ignore ciertos efectos.
+
+Es útil cuando conserva los factores dominantes para la precisión requerida.
+
+La pregunta física correcta es:
+
+\begin{quote}
+¿son razonables las aproximaciones para esta situación?
+\end{quote}
+\end{interpretacion}
+
+
+\section{Aplicaciones}
+
+El movimiento de proyectiles aparece en una gran variedad de contextos.
+
+\begin{itemize}
+    \item deportes;
+    \item chorros de agua;
+    \item transporte de materiales;
+    \item sistemas de descarga;
+    \item experimentos de laboratorio;
+    \item diseño de trayectorias idealizadas;
+    \item análisis de objetos liberados desde vehículos.
+\end{itemize}
+
+\begin{aplicacion}[Chorro de agua]
+Si un chorro sale de una boquilla con una velocidad inicial bien definida y los
+efectos del aire son pequeños, cada pequeña porción de agua puede aproximarse
+como un proyectil después de abandonar la boquilla.
+
+La forma parabólica visible del chorro constituye una representación directa de
+la trayectoria prevista por el modelo ideal.
+\end{aplicacion}
+
+
+\section{Comprobación experimental}
+
+El modelo puede estudiarse mediante una cámara que registre posiciones en
+intervalos iguales de tiempo.
+
+Si se obtienen coordenadas:
+
+\[
+(x_i,y_i)
+\]
+
+para tiempos igualmente espaciados, el modelo ideal predice que:
+
+\begin{itemize}
+    \item los incrementos horizontales son aproximadamente iguales;
+    \item la velocidad horizontal es aproximadamente constante;
+    \item la coordenada vertical presenta comportamiento cuadrático con el tiempo;
+    \item la velocidad vertical cambia linealmente con el tiempo;
+    \item la aceleración vertical es aproximadamente constante.
+\end{itemize}
+
+Una gráfica:
+
+\[
+x-t
+\]
+
+debe ser aproximadamente lineal.
+
+Una gráfica:
+
+\[
+y-t
+\]
+
+debe ser parabólica.
+
+Una gráfica:
+
+\[
+v_y-t
+\]
+
+debe ser lineal con pendiente:
+
+\[
+-g.
+\]
+
+\begin{interpretacion}
+Las desviaciones sistemáticas respecto de estas predicciones pueden indicar que
+la resistencia del aire u otros efectos no son despreciables.
+\end{interpretacion}
+
+
+\section{Errores frecuentes}
+
+\begin{errorfrecuente}
+\textbf{Utilizar una sola ecuación escalar para todo el movimiento.}
+
+El movimiento es bidimensional.
+
+Debe analizarse mediante componentes:
+
+\[
+x
+\qquad\text{y}\qquad
+y.
+\]
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Asignar aceleración horizontal debido a que el proyectil avanza.}
+
+Que exista velocidad horizontal no implica aceleración horizontal.
+
+Dentro del modelo ideal:
+
+\[
+a_x=0.
+\]
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Creer que la velocidad horizontal disminuye durante el vuelo.}
+
+Sin resistencia del aire:
+
+\[
+v_x=v_{0x}.
+\]
+
+La componente horizontal permanece constante.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Creer que en el punto más alto la velocidad total es cero.}
+
+En general:
+
+\[
+v_y=0,
+\]
+
+pero:
+
+\[
+v_x\neq0.
+\]
+
+Por tanto:
+
+\[
+\vect{v}\neq\vect{0}.
+\]
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Creer que la aceleración es cero en el punto más alto.}
+
+Durante todo el vuelo ideal:
+
+\[
+\vect{a}=-g\jhat.
+\]
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Usar tiempos diferentes para el movimiento horizontal y vertical.}
+
+Existe un único movimiento físico y un único tiempo:
+
+\[
+t.
+\]
+
+Las componentes se evalúan simultáneamente.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Utilizar el alcance especial cuando las alturas son diferentes.}
+
+La expresión:
+
+\[
+R
+=
+\frac{
+v_0^2\sen(2\theta_0)
+}{
+g
+}
+\]
+
+requiere que el proyectil regrese a la altura de lanzamiento.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Afirmar que \(45\grado\) siempre produce el alcance máximo.}
+
+El resultado depende de las hipótesis:
+
+\begin{itemize}
+    \item ausencia de resistencia del aire;
+    \item misma altura inicial y final;
+    \item aceleración gravitatoria uniforme.
+\end{itemize}
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Confundir trayectoria y gráfica posición--tiempo.}
+
+La trayectoria parabólica es una gráfica espacial:
+
+\[
+y\text{ contra }x.
+\]
+
+No es una gráfica:
+
+\[
+y\text{ contra }t.
+\]
+
+La función \(y(t)\) también es parabólica en este caso, pero representa una
+relación física diferente.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Introducir el ángulo directamente en todas las ecuaciones sin
+descomponer la velocidad.}
+
+El procedimiento más seguro es calcular primero:
+
+\[
+v_{0x}=v_0\cos\theta_0,
+\]
+
+\[
+v_{0y}=v_0\sen\theta_0.
+\]
+
+Después se trabaja por componentes.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Ignorar el signo de la componente vertical final.}
+
+Durante el descenso:
+
+\[
+v_y<0
+\]
+
+si hemos elegido \(+y\) hacia arriba.
+
+Una rapidez positiva no sustituye la información vectorial de la velocidad.
+\end{errorfrecuente}
+
+
+\section{Secuencia sugerida para impartir la clase}
+
+\begin{notapedagogica}
+Una posible secuencia para desarrollar este tema en clase es:
+
+\begin{enumerate}
+    \item Lanzar o imaginar una pelota de manera oblicua y preguntar qué ocurre
+    simultáneamente en las direcciones horizontal y vertical.
+
+    \item Recordar brevemente el movimiento en dos dimensiones y el método de
+    componentes rectangulares.
+
+    \item Definir qué intervalo del movimiento se modelará como movimiento de
+    proyectil.
+
+    \item Establecer explícitamente las hipótesis:
+    \begin{itemize}
+        \item resistencia del aire despreciable;
+        \item \(g\) constante;
+        \item superficie terrestre localmente plana.
+    \end{itemize}
+
+    \item Dibujar el sistema de referencia con:
+    \[
+    +x
+    \]
+    horizontal y:
+    \[
+    +y
+    \]
+    hacia arriba.
+
+    \item Establecer:
+    \[
+    a_x=0,
+    \qquad
+    a_y=-g.
+    \]
+
+    \item Descomponer la velocidad inicial:
+    \[
+    v_{0x}=v_0\cos\theta_0,
+    \]
+    \[
+    v_{0y}=v_0\sen\theta_0.
+    \]
+
+    \item Analizar primero el movimiento horizontal como MRU.
+
+    \item Analizar después el movimiento vertical como caída libre.
+
+    \item Insistir en que ambos movimientos comparten el mismo tiempo.
+
+    \item Construir las ecuaciones generales:
+    \[
+    x=x_0+v_{0x}t,
+    \]
+    \[
+    y=y_0+v_{0y}t-\frac{1}{2}gt^2.
+    \]
+
+    \item Dibujar los vectores velocidad en varios puntos de la trayectoria.
+
+    \item Preguntar antes de responder qué ocurre con:
+    \[
+    v_x,\qquad v_y,\qquad\vect{a}
+    \]
+    en la altura máxima.
+
+    \item Derivar la ecuación parabólica de la trayectoria eliminando \(t\).
+
+    \item Resolver un lanzamiento horizontal.
+
+    \item Resolver un lanzamiento oblicuo que regrese al mismo nivel.
+
+    \item Deducir altura máxima, tiempo de vuelo y alcance como casos particulares,
+    no como fórmulas aisladas.
+
+    \item Mostrar por qué \(45\grado\) maximiza el alcance únicamente bajo las
+    condiciones del caso simétrico.
+
+    \item Resolver un problema con alturas inicial y final diferentes para mostrar
+    que el método general continúa funcionando.
+
+    \item Finalizar comparando el modelo ideal con una trayectoria real afectada por
+    resistencia del aire.
+\end{enumerate}
+\end{notapedagogica}
+
+
+\section{Preguntas de comprensión}
+
+\begin{enumerate}
+    \item ¿Qué condiciones deben cumplirse para modelar un objeto como proyectil
+    ideal?
+
+    \item ¿En qué momento comienza el movimiento de proyectil de una pelota lanzada
+    con la mano?
+
+    \item ¿Por qué resulta conveniente utilizar componentes rectangulares?
+
+    \item Si \(+y\) apunta hacia arriba, ¿cuáles son las componentes de la
+    aceleración de un proyectil ideal?
+
+    \item ¿Por qué la componente horizontal de la velocidad permanece constante?
+
+    \item ¿Por qué la componente vertical de la velocidad cambia?
+
+    \item ¿El movimiento horizontal afecta el tiempo de caída vertical dentro del
+    modelo ideal?
+
+    \item ¿Qué variable comparten el movimiento horizontal y el vertical?
+
+    \item ¿Qué representa físicamente \(v_{0x}\)?
+
+    \item ¿Qué representa físicamente \(v_{0y}\)?
+
+    \item ¿Qué ocurre con \(v_y\) mientras el proyectil asciende?
+
+    \item ¿Cuál es el valor de \(v_y\) en el punto más alto?
+
+    \item ¿Cuál es el valor de \(a_y\) en el punto más alto?
+
+    \item ¿La velocidad total es cero en la altura máxima?
+
+    \item ¿En qué dirección apunta la velocidad en el ápice?
+
+    \item ¿Por qué la trayectoria ideal es parabólica?
+
+    \item ¿Qué diferencia existe entre una trayectoria \(y-x\) y una gráfica
+    \(y-t\)?
+
+    \item Si un objeto se lanza horizontalmente desde una plataforma, ¿su componente
+    vertical inicial es cero?
+
+    \item ¿Significa eso que su aceleración vertical también es cero?
+
+    \item ¿De qué depende el tiempo de caída de un lanzamiento horizontal desde una
+    altura fija?
+
+    \item Si duplicamos la rapidez horizontal de un lanzamiento desde la misma
+    altura, ¿qué ocurre con el tiempo de caída?
+
+    \item ¿Qué ocurre con el alcance horizontal en ese caso?
+
+    \item ¿En qué condición el tiempo de descenso desde el punto más alto es igual
+    al tiempo de ascenso?
+
+    \item ¿Cuándo puede utilizarse:
+    \[
+    t_{\mathrm{vuelo}}
+    =
+    \frac{2v_0\sen\theta_0}{g}?
+    \]
+
+    \item ¿Cuándo puede utilizarse:
+    \[
+    R
+    =
+    \frac{v_0^2\sen(2\theta_0)}{g}?
+    \]
+
+    \item ¿Por qué los ángulos complementarios producen el mismo alcance bajo las
+    condiciones ideales del caso simétrico?
+
+    \item ¿Tienen también la misma altura máxima?
+
+    \item ¿Por qué \(45\grado\) no debe considerarse universalmente el ángulo de
+    alcance máximo?
+
+    \item ¿Qué sucede con la trayectoria cuando la resistencia del aire deja de ser
+    despreciable?
+
+    \item ¿Puede un proyectil tener la misma rapidez en dos puntos diferentes de su
+    trayectoria?
+
+    \item Si el punto final está por debajo del punto inicial, ¿puede la rapidez de
+    impacto ser mayor que la rapidez inicial?
+
+    \item ¿Por qué una aceleración vertical puede producir una trayectoria curva
+    aunque la componente horizontal de la velocidad sea constante?
+\end{enumerate}
+
+
+\begin{resumen}
+El movimiento de proyectiles es un movimiento bidimensional que, dentro del
+modelo ideal, puede analizarse mediante componentes rectangulares.
+
+Se supone que:
+
+\begin{itemize}
+    \item la resistencia del aire es despreciable;
+    \item la aceleración gravitatoria es constante;
+    \item el proyectil se representa como una partícula.
+\end{itemize}
+
+Con:
+
+\[
++x
+\]
+
+horizontal y:
+
+\[
++y
+\]
+
+hacia arriba:
+
+\[
+\boxed{
+a_x=0,
+\qquad
+a_y=-g
+}.
+\]
+
+Si la rapidez inicial es \(v_0\) y el ángulo de lanzamiento es \(\theta_0\):
+
+\[
+\boxed{
+v_{0x}=v_0\cos\theta_0
+},
+\]
+
+\[
+\boxed{
+v_{0y}=v_0\sen\theta_0
+}.
+\]
+
+El movimiento horizontal es uniforme:
+
+\[
+\boxed{
+x=x_0+v_{0x}t
+},
+\]
+
+\[
+\boxed{
+v_x=v_{0x}
+}.
+\]
+
+El movimiento vertical es uniformemente acelerado:
+
+\[
+\boxed{
+y=y_0+v_{0y}t-\frac{1}{2}gt^2
+},
+\]
+
+\[
+\boxed{
+v_y=v_{0y}-gt
+}.
+\]
+
+El vector velocidad es:
+
+\[
+\boxed{
+\vect{v}
+=
+v_x\ihat+v_y\jhat
+}.
+\]
+
+Su magnitud es:
+
+\[
+\boxed{
+v=\sqrt{v_x^2+v_y^2}
+}.
+\]
+
+El vector aceleración permanece:
+
+\[
+\boxed{
+\vect{a}=-g\jhat
+}.
+\]
+
+La ecuación de la trayectoria es:
+
+\[
+\boxed{
+y
+=
+y_0
++
+(x-x_0)\tan\theta_0
+-
+\frac{
+g(x-x_0)^2
+}{
+2v_0^2\cos^2\theta_0
+}
+},
+\]
+
+por lo que la trayectoria ideal es parabólica.
+
+En la altura máxima:
+
+\[
+\boxed{
+v_y=0
+},
+\]
+
+pero:
+
+\[
+\boxed{
+v_x\neq0
+}
+\]
+
+en general, y:
+
+\[
+\boxed{
+a_y=-g
+}.
+\]
+
+El tiempo hasta la altura máxima es:
+
+\[
+\boxed{
+t_H
+=
+\frac{v_0\sen\theta_0}{g}
+}.
+\]
+
+La altura ganada respecto del punto de lanzamiento es:
+
+\[
+\boxed{
+H
+=
+\frac{
+v_0^2\sen^2\theta_0
+}{
+2g
+}
+}.
+\]
+
+Si el proyectil regresa a la misma altura de lanzamiento:
+
+\[
+\boxed{
+t_{\mathrm{vuelo}}
+=
+\frac{
+2v_0\sen\theta_0
+}{
+g
+}
+},
+\]
+
+y:
+
+\[
+\boxed{
+R
+=
+\frac{
+v_0^2\sen(2\theta_0)
+}{
+g
+}
+}.
+\]
+
+Solamente bajo esas condiciones ideales, para una rapidez inicial fija, el
+alcance máximo ocurre cuando:
+
+\[
+\boxed{
+\theta_0=45\grado
+}.
+\]
+
+Cuando las alturas inicial y final son diferentes, deben utilizarse las
+ecuaciones generales por componentes.
+
+La idea fundamental de todo el capítulo puede resumirse mediante:
+
+\[
+\boxed{
+\begin{array}{c}
+a_x=0
+\\[2mm]
+a_y=-g
+\end{array}
+}
+\]
+
+junto con:
+
+\[
+\boxed{
+\text{un único tiempo para ambos movimientos}
+}.
+\]
+
+Por ello, el procedimiento general consiste siempre en descomponer, analizar las
+componentes rectangulares y reconstruir posteriormente las magnitudes vectoriales
+que se necesiten.
+\end{resumen}

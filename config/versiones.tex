@@ -1,0 +1,91 @@
+﻿% ============================================================
+% VERSIONES DEL DOCUMENTO
+% Proyecto: Física
+% ============================================================
+%
+% Este archivo controla únicamente las versiones de ejercicios:
+%
+% estudiante
+% respuestas
+% docente
+%
+% Otros documentos, como teoria.tex, clase.tex o formulario.tex,
+% no necesitan definir una versión.
+% ============================================================
+
+
+% ------------------------------------------------------------
+% ESTADO INICIAL
+% ------------------------------------------------------------
+
+\newif\ifmostrarrespuestas
+\newif\ifmostrarsoluciones
+
+\mostrarrespuestasfalse
+\mostrarsolucionesfalse
+
+
+% ------------------------------------------------------------
+% DETECCIÓN DE VERSIÓN
+% ------------------------------------------------------------
+
+\ifcsdef{versiondocumento}{
+
+    % --------------------------------------------------------
+    % VERSIÓN CON RESPUESTAS
+    % --------------------------------------------------------
+
+    \ifdefstring{\versiondocumento}{respuestas}{
+        \mostrarrespuestastrue
+        \mostrarsolucionesfalse
+    }{}
+
+
+    % --------------------------------------------------------
+    % VERSIÓN DOCENTE
+    % --------------------------------------------------------
+
+    \ifdefstring{\versiondocumento}{docente}{
+        \mostrarrespuestastrue
+        \mostrarsolucionestrue
+    }{}
+
+}{}
+
+
+% ------------------------------------------------------------
+% RESPUESTAS
+% ------------------------------------------------------------
+
+\ifmostrarrespuestas
+
+    \newenvironment{respuesta}{
+        \begin{tcolorbox}[estiloRespuesta]
+    }{
+        \end{tcolorbox}
+    }
+
+\else
+
+    \excludecomment{respuesta}
+
+\fi
+
+
+% ------------------------------------------------------------
+% SOLUCIONES
+% ------------------------------------------------------------
+
+\ifmostrarsoluciones
+
+    \newenvironment{explicacion}{
+        \begin{tcolorbox}[estiloSolucion]
+    }{
+        \end{tcolorbox}
+    }
+
+\else
+
+    \excludecomment{explicacion}
+
+\fi

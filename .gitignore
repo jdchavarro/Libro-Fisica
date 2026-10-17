@@ -1,0 +1,27 @@
+# Archivos auxiliares de compilación
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.code-workspace
+*.synctex*
+
+# Archivos de respaldo de editores
+*~
+*.bak
+*.swp
+
+# Ignorar carpeta de referencias bibliográficas
+libros/
+
+# Opcional: Descomenta si no deseas subir los PDFs generados
+# *.pdf

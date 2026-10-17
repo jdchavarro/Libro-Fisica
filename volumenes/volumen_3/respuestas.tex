@@ -1,0 +1,149 @@
+﻿\documentclass[11pt,letterpaper,openany]{book}
+
+% ============================================================
+% VERSIÃ“N DEL DOCUMENTO
+% ============================================================
+
+% Muestra:
+%
+% - enunciados de los ejercicios;
+% - respuestas breves.
+%
+% Oculta:
+%
+% - soluciones desarrolladas.
+
+\newcommand{\versiondocumento}{respuestas}
+
+\newcommand{\rutaraiz}{../..}
+
+
+% ============================================================
+% INFORMACIÃ“N DEL VOLUMEN
+% ============================================================
+
+\newcommand{\numerovolumen}{III}
+\newcommand{\nombrevolumen}{Electricidad, magnetismo y Ã³ptica}
+\newcommand{\tipodocumento}{Ejercicios con respuestas}
+
+
+% ============================================================
+% CONFIGURACIÃ“N GENERAL
+% ============================================================
+
+\input{\rutaraiz/config/configuracion}
+
+
+% ============================================================
+% DOCUMENTO
+% ============================================================
+
+\begin{document}
+
+
+% ============================================================
+% PORTADA
+% ============================================================
+
+\begin{titlepage}
+
+    \centering
+
+    \vspace*{2.5cm}
+
+    {\color{RojoPrincipal}
+    \Huge\bfseries
+    FÃ­sica
+    \par}
+
+    \vspace{0.8cm}
+
+    {\color{AzulPrincipal}
+    \LARGE\bfseries
+    Volumen \numerovolumen
+    \par}
+
+    \vspace{0.5cm}
+
+    {\Large
+    \nombrevolumen
+    \par}
+
+    \vspace{1.5cm}
+
+    {\color{AzulPrincipal}
+    \Large
+    Ejercicios con respuestas
+    \par}
+
+    \vfill
+
+    {\Large\bfseries
+    \autorlibro
+    \par}
+
+    \vspace{2cm}
+
+\end{titlepage}
+
+
+% ============================================================
+% MATERIAL PRELIMINAR
+% ============================================================
+
+\frontmatter
+
+\tableofcontents
+
+\cleardoublepage
+
+
+% ============================================================
+% EJERCICIOS Y RESPUESTAS
+% ============================================================
+
+\mainmatter
+
+% ------------------------------------------------------------
+% Partes XII--XV
+% CapÃ­tulos 78--116
+% ------------------------------------------------------------
+%
+% Este documento carga exactamente los mismos:
+%
+% ejercicios.tex
+%
+% utilizados por la versiÃ³n estudiante.
+%
+% La diferencia es que:
+%
+% \versiondocumento = respuestas
+%
+% hace visibles los entornos:
+%
+% \begin{respuesta}
+% ...
+% \end{respuesta}
+%
+% mientras mantiene ocultos:
+%
+% \begin{solucion}
+% ...
+% \end{solucion}
+%
+%
+% Ejemplo:
+%
+% \part{CinemÃ¡tica}
+%
+% \chapter{Movimiento rectilÃ­neo}
+%
+% \input{
+% \rutaraiz/capitulos/
+% 02_cinematica/
+% 08_movimiento_rectilineo/
+% ejercicios
+% }
+
+
+\end{document}

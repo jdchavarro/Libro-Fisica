@@ -1,0 +1,170 @@
+﻿\documentclass[11pt,letterpaper,openany]{book}
+
+% ============================================================
+% RUTA DEL PROYECTO
+% ============================================================
+
+% Desde volumenes/volumen_3 hasta la raíz del proyecto.
+\newcommand{\rutaraiz}{../..}
+
+
+% ============================================================
+% INFORMACIÓN DEL VOLUMEN
+% ============================================================
+
+\newcommand{\numerovolumen}{III}
+\newcommand{\nombrevolumen}{Electricidad, magnetismo y óptica}
+\newcommand{\tipodocumento}{Teoría}
+
+
+% ============================================================
+% CONFIGURACIÓN GENERAL
+% ============================================================
+
+\input{\rutaraiz/config/configuracion}
+
+
+% ============================================================
+% DOCUMENTO
+% ============================================================
+
+\begin{document}
+
+
+% ============================================================
+% PORTADA
+% ============================================================
+
+\begin{titlepage}
+
+    \centering
+
+    \vspace*{2.5cm}
+
+    {\color{RojoPrincipal}
+    \Huge\bfseries
+    Física
+    \par}
+
+    \vspace{0.8cm}
+
+    {\color{AzulPrincipal}
+    \LARGE\bfseries
+    Volumen \numerovolumen
+    \par}
+
+    \vspace{0.5cm}
+
+    {\Large
+    \nombrevolumen
+    \par}
+
+    \vspace{1.5cm}
+
+    {\color{AzulPrincipal}
+    \Large
+    \tipodocumento
+    \par}
+
+    \vfill
+
+    {\Large\bfseries
+    \autorlibro
+    \par}
+
+    \vspace{2cm}
+
+\end{titlepage}
+
+
+% ============================================================
+% MATERIAL PRELIMINAR
+% ============================================================
+
+\frontmatter
+
+\tableofcontents
+
+\cleardoublepage
+
+
+% ============================================================
+% CONTENIDO PRINCIPAL
+% ============================================================
+
+\mainmatter
+
+
+% ============================================================
+% PARTE XII — ELECTRICIDAD
+% Capítulos 78--86
+% ============================================================
+
+\setcounter{part}{11}
+\part{Electricidad}
+
+\setcounter{chapter}{77}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 78
+% ------------------------------------------------------------
+
+\chapter{Carga eléctrica y electrización}
+
+\input{\rutaraiz/capitulos/12_electricidad/78_carga_electrica_y_electrizacion/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 79
+% ------------------------------------------------------------
+
+\chapter{Ley de Coulomb}
+
+\input{\rutaraiz/capitulos/12_electricidad/79_ley_de_coulomb/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 80
+% ------------------------------------------------------------
+
+\chapter{Campo eléctrico}
+
+\input{\rutaraiz/capitulos/12_electricidad/80_campo_electrico/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 81
+% ------------------------------------------------------------
+
+\chapter{Flujo eléctrico y ley de Gauss}
+
+\input{\rutaraiz/capitulos/12_electricidad/81_flujo_electrico_y_ley_de_gauss/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 82
+% ------------------------------------------------------------
+
+\chapter{Energía potencial eléctrica}
+
+\input{\rutaraiz/capitulos/12_electricidad/82_energia_potencial_electrica/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 83
+% ------------------------------------------------------------
+
+\chapter{Potencial eléctrico}
+
+\input{\rutaraiz/capitulos/12_electricidad/83_potencial_electrico/teoria}
+
+
+% ============================================================
+% MATERIAL FINAL
+% ============================================================
+
+\backmatter
+
+
+\end{document}

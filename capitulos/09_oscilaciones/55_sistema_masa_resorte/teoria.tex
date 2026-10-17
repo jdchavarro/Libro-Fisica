@@ -1,0 +1,1843 @@
+﻿\section{El sistema masa--resorte}
+
+Uno de los sistemas físicos más sencillos en los que aparece el movimiento armónico simple está formado por una masa unida a un resorte.
+
+Este sistema resulta especialmente importante porque permite conectar ideas ya conocidas:
+
+\begin{itemize}
+    \item la fuerza elástica y la ley de Hooke;
+    \item la segunda ley de Newton;
+    \item el movimiento armónico simple;
+    \item el periodo, la frecuencia y la frecuencia angular.
+\end{itemize}
+
+La pregunta central será: ¿por qué una masa unida a un resorte puede oscilar?
+
+\begin{idea}[¿Por qué una masa unida a un resorte puede oscilar?]
+Cuando un resorte se estira o se comprime respecto de su condición de equilibrio, ejerce una fuerza que tiende a devolver el sistema hacia dicha condición.
+
+Si la masa posee velocidad al alcanzar el equilibrio, su inercia hace que continúe moviéndose y deforme el resorte en el sentido contrario. Aparece entonces una nueva fuerza restauradora que vuelve a acelerar la masa hacia el equilibrio.
+
+Bajo determinadas condiciones, este proceso se repite y constituye un movimiento armónico simple.
+\end{idea}
+
+
+\subsection{Modelo ideal de un sistema masa--resorte}
+
+Comenzaremos con el caso más sencillo: un bloque de masa \(m\) unido a un resorte horizontal.
+
+Supondremos que:
+
+\begin{itemize}
+    \item el bloque puede tratarse como una partícula;
+    \item el resorte tiene masa despreciable;
+    \item el resorte cumple la ley de Hooke;
+    \item la superficie es horizontal y sin rozamiento;
+    \item el movimiento ocurre únicamente a lo largo del eje \(x\);
+    \item no actúan fuerzas externas variables sobre el sistema.
+\end{itemize}
+
+\begin{modelo}[Sistema masa--resorte ideal]
+Un sistema masa--resorte ideal está formado por una masa \(m\) unida a un resorte de constante elástica \(k\), cuya masa se desprecia y que obedece la ley de Hooke.
+
+Si además se desprecia el rozamiento, el sistema puede realizar movimiento armónico simple.
+\end{modelo}
+
+
+\subsection{Posición de equilibrio}
+
+Cuando el resorte horizontal se encuentra en su longitud natural y no existe ninguna otra fuerza horizontal, el bloque permanece en reposo.
+
+Elegiremos esta posición como origen:
+
+\[ x=0. \]
+
+La coordenada \(x\) medirá el desplazamiento de la masa respecto de la posición de equilibrio.
+
+Tomaremos el sentido positivo del eje \(x\) hacia la derecha.
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+
+    \draw[very thick] (-4,-0.8) -- (4,-0.8);
+
+    \draw[very thick] (-4,-0.8) -- (-4,1.2);
+    \foreach \y in {-0.6,-0.2,0.2,0.6,1.0}{
+        \draw (-4,\y) -- (-4.25,\y-0.18);
+    }
+
+    \draw[
+        thick,
+        decorate,
+        decoration={coil,aspect=0.45,segment length=5pt,amplitude=5pt}
+    ] (-4,0.2) -- (-0.8,0.2);
+
+    \draw[fill=GrisFondo,thick] (-0.8,-0.35) rectangle (0.6,0.75);
+    \node at (-0.1,0.2) {\(m\)};
+
+    \draw[dashed] (-0.1,-1.1) -- (-0.1,1.3);
+    \node[below] at (-0.1,-1.1) {\(x=0\)};
+
+    \draw[-{Latex},thick] (-0.1,-1.45) -- (3.5,-1.45);
+    \node[right] at (3.5,-1.45) {\(+x\)};
+
+    \node[above] at (-2.3,0.75) {resorte};
+
+\end{tikzpicture}
+\end{center}
+
+Si desplazamos la masa hacia la derecha:
+
+\[ x>0, \]
+
+el resorte queda estirado y ejerce una fuerza hacia la izquierda.
+
+Si desplazamos la masa hacia la izquierda:
+
+\[ x<0, \]
+
+el resorte queda comprimido y ejerce una fuerza hacia la derecha.
+
+En ambos casos, la fuerza apunta hacia la posición de equilibrio.
+
+
+\section{Fuerza restauradora del resorte}
+
+Dentro del régimen elástico lineal, la ley de Hooke establece:
+
+\[ \boxed{F_{s,x}=-kx}. \]
+
+Aquí:
+
+\[
+F_{s,x}=\text{componente de la fuerza ejercida por el resorte},
+\]
+
+\[
+k=\text{constante elástica del resorte},
+\]
+
+\[
+x=\text{desplazamiento respecto del equilibrio}.
+\]
+
+La unidad SI de \(k\) es:
+
+\[ [k]=\si{\newton\per\meter}. \]
+
+El signo negativo contiene información física fundamental.
+
+\begin{interpretacion}[Significado del signo negativo]
+En
+
+\[ F_{s,x}=-kx, \]
+
+el signo negativo indica que la fuerza del resorte tiene sentido opuesto al desplazamiento.
+
+Por tanto:
+
+\[
+x>0
+\quad\Longrightarrow\quad
+F_{s,x}<0,
+\]
+
+mientras que:
+
+\[
+x<0
+\quad\Longrightarrow\quad
+F_{s,x}>0.
+\]
+
+La fuerza siempre tiende a devolver la masa hacia \(x=0\).
+\end{interpretacion}
+
+\begin{advertencia}
+No debe escribirse siempre
+
+\[ F_s=kx \]
+
+si se está trabajando con componentes y signos.
+
+La expresión
+
+\[ F_s=k|x| \]
+
+puede utilizarse para la \textbf{magnitud} de la fuerza, mientras que
+
+\[ F_{s,x}=-kx \]
+
+expresa correctamente su componente y su sentido sobre el eje elegido.
+\end{advertencia}
+
+
+\section{Segunda ley de Newton aplicada al sistema}
+
+Sobre el bloque horizontal actúan:
+
+\begin{itemize}
+    \item el peso \(\vect{P}=m\vect{g}\);
+    \item la fuerza normal \(\vect{N}\);
+    \item la fuerza elástica \(\vect{F}_s\).
+\end{itemize}
+
+En la dirección vertical no existe aceleración, por lo que:
+
+\[ \sum F_y=0. \]
+
+Así:
+
+\[ N-mg=0. \]
+
+Por tanto:
+
+\[ N=mg. \]
+
+Estas fuerzas se equilibran verticalmente y no determinan la oscilación horizontal.
+
+En el eje \(x\), la única fuerza es la fuerza elástica:
+
+\[ \sum F_x=F_{s,x}. \]
+
+Aplicando la segunda ley de Newton:
+
+\[ \sum F_x=ma_x. \]
+
+Entonces:
+
+\[ -kx=ma_x. \]
+
+Despejando la aceleración:
+
+\[ a_x=-\frac{k}{m}x. \]
+
+Esta relación tiene exactamente la forma característica del movimiento armónico simple:
+
+\[ a_x=-\omega^2x. \]
+
+Por comparación:
+
+\[ \omega^2=\frac{k}{m}. \]
+
+Por tanto:
+
+\[ \boxed{\omega=\sqrt{\frac{k}{m}}}. \]
+
+\begin{leyfisica}[Sistema masa--resorte ideal]
+Una masa \(m\) unida a un resorte ideal de constante elástica \(k\), sin rozamiento, realiza movimiento armónico simple alrededor de su posición de equilibrio con frecuencia angular
+
+\[ \boxed{\omega=\sqrt{\frac{k}{m}}}. \]
+\end{leyfisica}
+
+
+\subsection{Comprobación dimensional}
+
+La constante elástica posee unidades:
+
+\[ [k]=\frac{\si{\newton}}{\si{\meter}}. \]
+
+Como:
+
+\[ \SI{1}{\newton}=\SI{1}{\kilogram\meter\per\second\squared}, \]
+
+tenemos:
+
+\[
+[k]
+=
+\frac{\si{\kilogram\meter\per\second\squared}}{\si{\meter}}
+=
+\si{\kilogram\per\second\squared}.
+\]
+
+Entonces:
+
+\[
+\left[\frac{k}{m}\right]
+=
+\frac{\si{\kilogram\per\second\squared}}{\si{\kilogram}}
+=
+\si{\per\second\squared}.
+\]
+
+Por tanto:
+
+\[
+\left[\sqrt{\frac{k}{m}}\right]
+=
+\si{\per\second},
+\]
+
+que corresponde a las dimensiones de una frecuencia angular.
+
+
+\section{Periodo y frecuencia del sistema masa--resorte}
+
+Sabemos que:
+
+\[ \omega=\frac{2\pi}{T}. \]
+
+Para el sistema masa--resorte:
+
+\[ \omega=\sqrt{\frac{k}{m}}. \]
+
+Entonces:
+
+\[ \frac{2\pi}{T}=\sqrt{\frac{k}{m}}. \]
+
+Despejando:
+
+\[ \boxed{T=2\pi\sqrt{\frac{m}{k}}}. \]
+
+Como:
+
+\[ f=\frac{1}{T}, \]
+
+obtenemos:
+
+\[ \boxed{f=\frac{1}{2\pi}\sqrt{\frac{k}{m}}}. \]
+
+Así, las tres relaciones fundamentales son:
+
+\[
+\boxed{
+\omega=\sqrt{\frac{k}{m}},
+\qquad
+T=2\pi\sqrt{\frac{m}{k}},
+\qquad
+f=\frac{1}{2\pi}\sqrt{\frac{k}{m}}
+}.
+\]
+
+
+\subsection{¿De qué depende el periodo?}
+
+La ecuación
+
+\[ T=2\pi\sqrt{\frac{m}{k}} \]
+
+permite interpretar físicamente el sistema.
+
+Si la masa aumenta:
+
+\[ T\propto\sqrt{m}. \]
+
+Una masa mayor posee mayor inercia y responde más lentamente a la fuerza del resorte.
+
+Si la constante elástica aumenta:
+
+\[ T\propto\frac{1}{\sqrt{k}}. \]
+
+Un resorte más rígido produce una fuerza restauradora mayor para el mismo desplazamiento y, por tanto, el sistema oscila más rápidamente.
+
+\begin{interpretacion}
+Para un sistema masa--resorte ideal:
+
+\[
+m\uparrow
+\quad\Longrightarrow\quad
+T\uparrow,\qquad f\downarrow,
+\]
+
+mientras que:
+
+\[
+k\uparrow
+\quad\Longrightarrow\quad
+T\downarrow,\qquad f\uparrow.
+\]
+\end{interpretacion}
+
+
+\subsection{Dependencia con la amplitud}
+
+Observe que la amplitud \(A\) no aparece en:
+
+\[ T=2\pi\sqrt{\frac{m}{k}}. \]
+
+Por tanto, dentro del modelo ideal:
+
+\begin{principio}[Independencia del periodo respecto de la amplitud]
+Mientras el resorte permanezca dentro del régimen donde se cumple la ley de Hooke, el periodo de un sistema masa--resorte ideal no depende de la amplitud.
+\end{principio}
+
+Esto significa que dos oscilaciones del mismo sistema con amplitudes diferentes tienen el mismo periodo, siempre que ambas permanezcan dentro del régimen lineal del resorte.
+
+\begin{advertencia}
+La independencia respecto de la amplitud es una consecuencia del modelo lineal:
+
+\[ F_{s,x}=-kx. \]
+
+Si la deformación es suficientemente grande para que el resorte deje de obedecer la ley de Hooke, el movimiento deja de ser exactamente armónico simple y el periodo puede depender de la amplitud.
+\end{advertencia}
+
+
+\section{Ecuación del movimiento de una masa unida a un resorte}
+
+Para cualquier movimiento armónico simple:
+
+\[ x(t)=A\cos(\omega t+\phi). \]
+
+En un sistema masa--resorte:
+
+\[ \omega=\sqrt{\frac{k}{m}}. \]
+
+Por tanto:
+
+\[ \boxed{x(t)=A\cos\left(\sqrt{\frac{k}{m}}\,t+\phi\right)}. \]
+
+La velocidad es:
+
+\[ v_x(t)=-\omega A\sin(\omega t+\phi). \]
+
+Entonces:
+
+\[ \boxed{v_x(t)=-A\sqrt{\frac{k}{m}}\sin\left(\sqrt{\frac{k}{m}}\,t+\phi\right)}. \]
+
+La aceleración es:
+
+\[ a_x=-\omega^2x. \]
+
+Como:
+
+\[ \omega^2=\frac{k}{m}, \]
+
+obtenemos:
+
+\[ \boxed{a_x=-\frac{k}{m}x}. \]
+
+O, explícitamente en función del tiempo:
+
+\[ \boxed{a_x(t)=-\frac{k}{m}A\cos\left(\sqrt{\frac{k}{m}}\,t+\phi\right)}. \]
+
+
+\subsection{Caso especial: liberación desde un extremo}
+
+Una situación muy frecuente ocurre cuando la masa se lleva hasta:
+
+\[ x=A \]
+
+y se libera desde el reposo en:
+
+\[ t=0. \]
+
+Entonces:
+
+\[ x(0)=A \]
+
+y:
+
+\[ v_x(0)=0. \]
+
+Estas condiciones se satisfacen con:
+
+\[ \phi=0. \]
+
+Por tanto:
+
+\[ \boxed{x(t)=A\cos(\omega t)}. \]
+
+Para el sistema masa--resorte:
+
+\[ \boxed{x(t)=A\cos\left(\sqrt{\frac{k}{m}}\,t\right)}. \]
+
+La velocidad será:
+
+\[ \boxed{v_x(t)=-\omega A\sin(\omega t)}, \]
+
+y la aceleración:
+
+\[ \boxed{a_x(t)=-\omega^2A\cos(\omega t)}. \]
+
+
+\section{Interpretación física de una oscilación completa}
+
+Supongamos que la masa se desplaza inicialmente hasta:
+
+\[ x=+A \]
+
+y se libera desde el reposo.
+
+En ese instante:
+
+\[ v_x=0. \]
+
+La fuerza elástica es:
+
+\[ F_{s,x}=-kA, \]
+
+por lo que la aceleración apunta hacia el equilibrio.
+
+La masa comienza a moverse hacia la izquierda.
+
+Al acercarse a:
+
+\[ x=0, \]
+
+la deformación disminuye y también disminuye la magnitud de la fuerza restauradora.
+
+Cuando la masa atraviesa el equilibrio:
+
+\[ x=0, \]
+
+tenemos:
+
+\[ F_{s,x}=0 \]
+
+y:
+
+\[ a_x=0. \]
+
+Sin embargo, la masa no se detiene. Debido a su inercia, continúa moviéndose hacia la izquierda.
+
+El resorte comienza entonces a comprimirse.
+
+Cuando alcanza:
+
+\[ x=-A, \]
+
+la velocidad vuelve a ser cero, pero la fuerza y la aceleración poseen magnitud máxima y apuntan nuevamente hacia el equilibrio.
+
+La masa invierte su movimiento y el proceso se repite.
+
+\begin{center}
+\begin{tabularx}{0.94\textwidth}{cYYY}
+\toprule
+\textbf{Posición} & \textbf{Fuerza} & \textbf{Velocidad} & \textbf{Aceleración} \\
+\midrule
+\(x=+A\) & máxima hacia \(-x\) & \(0\) & máxima hacia \(-x\) \\
+\(x=0\) & \(0\) & máxima en magnitud & \(0\) \\
+\(x=-A\) & máxima hacia \(+x\) & \(0\) & máxima hacia \(+x\) \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\begin{errorfrecuente}
+En la posición de equilibrio la fuerza neta y la aceleración son cero, pero la masa no está necesariamente en reposo.
+
+Durante una oscilación, la rapidez es máxima cuando la masa atraviesa el equilibrio.
+\end{errorfrecuente}
+
+
+\section{Ejemplo: sistema horizontal}
+
+\begin{ejemplo}[Oscilación horizontal de un bloque]
+Un bloque de masa
+
+\[ m=\SI{0.500}{\kilogram} \]
+
+está unido a un resorte horizontal de constante elástica
+
+\[ k=\SI{200}{\newton\per\meter}. \]
+
+La superficie es horizontal y sin rozamiento. El bloque se desplaza
+
+\[ A=\SI{8.0}{\centi\meter} \]
+
+hacia la derecha y se libera desde el reposo.
+
+Determinemos la frecuencia angular, el periodo, la frecuencia y la ecuación de posición.
+\end{ejemplo}
+
+\subsubsection*{Datos}
+
+Primero expresamos la amplitud en unidades SI:
+
+\[ A=\SI{0.080}{\meter}. \]
+
+Tenemos:
+
+\[
+m=\SI{0.500}{\kilogram},
+\qquad
+k=\SI{200}{\newton\per\meter}.
+\]
+
+\subsubsection*{Modelo físico}
+
+El bloque está unido a un resorte ideal y no existe rozamiento significativo.
+
+Por tanto, el movimiento es armónico simple y:
+
+\[ \omega=\sqrt{\frac{k}{m}}. \]
+
+\subsubsection*{Frecuencia angular}
+
+Sustituyendo:
+
+\[
+\omega
+=
+\sqrt{
+\frac{\SI{200}{\newton\per\meter}}
+{\SI{0.500}{\kilogram}}
+}.
+\]
+
+Entonces:
+
+\[ \boxed{\omega=\SI{20.0}{\radian\per\second}}. \]
+
+\subsubsection*{Periodo}
+
+\[ T=\frac{2\pi}{\omega}. \]
+
+Por tanto:
+
+\[
+T
+=
+\frac{2\pi}
+{\SI{20.0}{\radian\per\second}}
+\approx
+\SI{0.314}{\second}.
+\]
+
+Así:
+
+\[ \boxed{T\approx\SI{0.314}{\second}}. \]
+
+\subsubsection*{Frecuencia}
+
+\[ f=\frac{1}{T}. \]
+
+Entonces:
+
+\[ \boxed{f\approx\SI{3.18}{\hertz}}. \]
+
+\subsubsection*{Ecuación del movimiento}
+
+Como el bloque comienza en:
+
+\[ x=A \]
+
+y se libera desde el reposo:
+
+\[ \phi=0. \]
+
+Por tanto:
+
+\[ x(t)=A\cos(\omega t). \]
+
+Sustituyendo:
+
+\[ \boxed{x(t)=(\SI{0.080}{\meter})\cos(20.0t)}. \]
+
+La velocidad es:
+
+\[ v_x(t)=-\omega A\sin(\omega t), \]
+
+por lo que:
+
+\[ \boxed{v_x(t)=-(\SI{1.60}{\meter\per\second})\sin(20.0t)}. \]
+
+La aceleración es:
+
+\[ a_x(t)=-\omega^2A\cos(\omega t), \]
+
+de modo que:
+
+\[ \boxed{a_x(t)=-(\SI{32.0}{\meter\per\second\squared})\cos(20.0t)}. \]
+
+\begin{interpretacion}
+El sistema completa un ciclo aproximadamente cada \(\SI{0.314}{\second}\).
+
+En los extremos, la masa se detiene momentáneamente y su aceleración tiene magnitud máxima.
+
+Al atravesar el equilibrio, su aceleración es cero y su rapidez es máxima.
+\end{interpretacion}
+
+
+\section{Efecto de cambiar la masa o el resorte}
+
+Las relaciones:
+
+\[ \omega=\sqrt{\frac{k}{m}} \]
+
+y:
+
+\[ T=2\pi\sqrt{\frac{m}{k}} \]
+
+permiten realizar predicciones sin efectuar cálculos completos.
+
+
+\subsection{Cambio de masa}
+
+Supongamos que se mantiene el mismo resorte y la masa cambia de \(m\) a \(4m\).
+
+El nuevo periodo es:
+
+\[
+T'
+=
+2\pi\sqrt{\frac{4m}{k}}.
+\]
+
+Entonces:
+
+\[ T'=2T. \]
+
+La frecuencia se reduce a la mitad:
+
+\[ f'=\frac{f}{2}. \]
+
+\begin{interpretacion}
+Cuadruplicar la masa duplica el periodo.
+
+La dependencia no es lineal, sino proporcional a \(\sqrt{m}\).
+\end{interpretacion}
+
+
+\subsection{Cambio de constante elástica}
+
+Si se mantiene la masa y se cambia el resorte por otro con:
+
+\[ k'=4k, \]
+
+entonces:
+
+\[
+T'
+=
+2\pi\sqrt{\frac{m}{4k}}
+=
+\frac{T}{2}.
+\]
+
+Por tanto:
+
+\[ f'=2f. \]
+
+Un resorte cuatro veces más rígido produce una frecuencia dos veces mayor.
+
+\begin{ejemplo}[Comparación sin cálculo completo]
+Dos sistemas utilizan resortes idénticos. El primero contiene una masa \(m\) y el segundo una masa \(9m\).
+
+Como:
+
+\[ T\propto\sqrt{m}, \]
+
+tenemos:
+
+\[
+\frac{T_2}{T_1}
+=
+\sqrt{\frac{9m}{m}}
+=
+3.
+\]
+
+Por tanto:
+
+\[ \boxed{T_2=3T_1}. \]
+
+La frecuencia del segundo sistema será:
+
+\[ \boxed{f_2=\frac{f_1}{3}}. \]
+
+No fue necesario conocer el valor de \(k\).
+\end{ejemplo}
+
+
+\section{Sistema masa--resorte vertical}
+
+El sistema también puede disponerse verticalmente.
+
+Ahora la gravedad actúa a lo largo de la dirección de movimiento, por lo que debemos analizar cuidadosamente la posición de equilibrio.
+
+
+\subsection{Longitud natural y posición de equilibrio}
+
+Consideremos un resorte vertical de constante elástica \(k\).
+
+Antes de colocar la masa, el resorte posee una longitud natural.
+
+Al colgar una masa \(m\), el resorte se estira hasta alcanzar una nueva posición de equilibrio.
+
+Representaremos mediante:
+
+\[ \Delta\ell_{\mathrm{eq}} \]
+
+el alargamiento estático producido por el peso.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.95]
+
+    \draw[very thick] (-2.0,2.5) -- (2.0,2.5);
+
+    \foreach \x in {-1.8,-1.4,...,1.8}{
+        \draw (\x,2.5) -- (\x-0.25,2.75);
+    }
+
+    \draw[
+        thick,
+        decorate,
+        decoration={coil,aspect=0.45,segment length=5pt,amplitude=5pt}
+    ] (0,2.5) -- (0,-0.2);
+
+    \draw[fill=GrisFondo,thick] (-0.65,-0.2) rectangle (0.65,-1.2);
+    \node at (0,-0.7) {\(m\)};
+
+    \draw[-{Latex},thick] (1.8,1.3) -- (1.8,-1.8);
+    \node[right] at (1.8,-1.8) {\(+y\)};
+
+    \draw[dashed] (-1.3,-0.7) -- (1.3,-0.7);
+    \node[left] at (-1.3,-0.7) {equilibrio};
+
+\end{tikzpicture}
+\end{center}
+
+Elegiremos ahora el eje \(y\) positivo hacia abajo.
+
+En equilibrio:
+
+\[ a_y=0. \]
+
+Las fuerzas sobre la masa son:
+
+\begin{itemize}
+    \item el peso \(mg\), hacia abajo;
+    \item la fuerza del resorte, hacia arriba.
+\end{itemize}
+
+Por tanto:
+
+\[ \sum F_y=0. \]
+
+Así:
+
+\[ mg-k\Delta\ell_{\mathrm{eq}}=0. \]
+
+Entonces:
+
+\[ \boxed{k\Delta\ell_{\mathrm{eq}}=mg}. \]
+
+De aquí:
+
+\[ \boxed{\Delta\ell_{\mathrm{eq}}=\frac{mg}{k}}. \]
+
+\begin{interpretacion}
+En un sistema vertical, el peso modifica la posición de equilibrio.
+
+Cuanto mayor sea la masa, mayor será el alargamiento estático.
+
+Cuanto más rígido sea el resorte, menor será dicho alargamiento.
+\end{interpretacion}
+
+
+\subsection{Oscilaciones alrededor del nuevo equilibrio}
+
+Ahora desplazemos la masa una distancia \(y\) respecto de su posición de equilibrio.
+
+Elegimos:
+
+\[ y=0 \]
+
+en el equilibrio y \(+y\) hacia abajo.
+
+La deformación total del resorte será:
+
+\[ \Delta\ell=\Delta\ell_{\mathrm{eq}}+y. \]
+
+La segunda ley de Newton da:
+
+\[ ma_y=mg-k(\Delta\ell_{\mathrm{eq}}+y). \]
+
+Distribuyendo:
+
+\[ ma_y=mg-k\Delta\ell_{\mathrm{eq}}-ky. \]
+
+Pero en equilibrio:
+
+\[ mg=k\Delta\ell_{\mathrm{eq}}. \]
+
+Por tanto, los dos primeros términos se cancelan:
+
+\[ ma_y=-ky. \]
+
+Entonces:
+
+\[ a_y=-\frac{k}{m}y. \]
+
+Esta es nuevamente la ecuación de un movimiento armónico simple.
+
+Por tanto:
+
+\[ \boxed{\omega=\sqrt{\frac{k}{m}}}, \]
+
+\[ \boxed{T=2\pi\sqrt{\frac{m}{k}}}, \]
+
+y:
+
+\[ \boxed{f=\frac{1}{2\pi}\sqrt{\frac{k}{m}}}. \]
+
+\begin{principio}[Efecto de la gravedad en el sistema vertical]
+La gravedad cambia la posición de equilibrio del sistema masa--resorte vertical, pero no cambia su frecuencia angular ni su periodo dentro del modelo ideal.
+
+Una vez que el desplazamiento se mide respecto de la nueva posición de equilibrio, la ecuación del movimiento es:
+
+\[ a_y=-\frac{k}{m}y. \]
+\end{principio}
+
+\begin{errorfrecuente}
+En un sistema vertical no debe tomarse necesariamente como \(y=0\) la posición donde el resorte está sin deformar.
+
+La oscilación ocurre alrededor de la posición de equilibrio definida por:
+
+\[ k\Delta\ell_{\mathrm{eq}}=mg. \]
+\end{errorfrecuente}
+
+
+\subsection{Periodo a partir del alargamiento estático}
+
+Como:
+
+\[ k\Delta\ell_{\mathrm{eq}}=mg, \]
+
+podemos despejar:
+
+\[ k=\frac{mg}{\Delta\ell_{\mathrm{eq}}}. \]
+
+El periodo es:
+
+\[ T=2\pi\sqrt{\frac{m}{k}}. \]
+
+Sustituyendo:
+
+\[
+T
+=
+2\pi
+\sqrt{
+\frac{m}
+{mg/\Delta\ell_{\mathrm{eq}}}
+}.
+\]
+
+Simplificando:
+
+\[ \boxed{T=2\pi\sqrt{\frac{\Delta\ell_{\mathrm{eq}}}{g}}}. \]
+
+Esta expresión permite determinar el periodo de un sistema vertical si conocemos cuánto se alarga estáticamente el resorte al colocar la masa.
+
+\begin{advertencia}
+La expresión
+
+\[ T=2\pi\sqrt{\frac{\Delta\ell_{\mathrm{eq}}}{g}} \]
+
+no significa que el periodo fundamental del sistema dependa directamente de \(g\).
+
+Como:
+
+\[ \Delta\ell_{\mathrm{eq}}=\frac{mg}{k}, \]
+
+el cociente
+
+\[ \frac{\Delta\ell_{\mathrm{eq}}}{g}=\frac{m}{k}. \]
+
+Para un mismo sistema ideal con \(m\) y \(k\) fijos:
+
+\[ T=2\pi\sqrt{\frac{m}{k}}. \]
+\end{advertencia}
+
+
+\section{Ejemplo: resorte vertical}
+
+\begin{ejemplo}[Equilibrio y oscilación vertical]
+Una masa de
+
+\[ m=\SI{0.400}{\kilogram} \]
+
+se cuelga de un resorte vertical de constante
+
+\[ k=\SI{100}{\newton\per\meter}. \]
+
+Tomemos:
+
+\[ g=\SI{9.81}{\meter\per\second\squared}. \]
+
+Determinemos:
+
+\begin{enumerate}[label=\alph*)]
+    \item el alargamiento de equilibrio;
+    \item la frecuencia angular;
+    \item el periodo;
+    \item la frecuencia.
+\end{enumerate}
+\end{ejemplo}
+
+\subsubsection*{Alargamiento de equilibrio}
+
+En equilibrio:
+
+\[ k\Delta\ell_{\mathrm{eq}}=mg. \]
+
+Despejando:
+
+\[ \Delta\ell_{\mathrm{eq}}=\frac{mg}{k}. \]
+
+Sustituyendo:
+
+\[
+\Delta\ell_{\mathrm{eq}}
+=
+\frac{
+(\SI{0.400}{\kilogram})
+(\SI{9.81}{\meter\per\second\squared})
+}{
+\SI{100}{\newton\per\meter}
+}.
+\]
+
+Por tanto:
+
+\[ \boxed{\Delta\ell_{\mathrm{eq}}=\SI{0.0392}{\meter}\approx\SI{3.92}{\centi\meter}}. \]
+
+\subsubsection*{Frecuencia angular}
+
+\[ \omega=\sqrt{\frac{k}{m}}. \]
+
+Entonces:
+
+\[
+\omega
+=
+\sqrt{
+\frac{100}{0.400}
+}\ \si{\radian\per\second}.
+\]
+
+Así:
+
+\[ \boxed{\omega\approx\SI{15.8}{\radian\per\second}}. \]
+
+\subsubsection*{Periodo}
+
+\[ T=\frac{2\pi}{\omega}. \]
+
+Por tanto:
+
+\[ \boxed{T\approx\SI{0.397}{\second}}. \]
+
+\subsubsection*{Frecuencia}
+
+\[ f=\frac{1}{T}. \]
+
+Así:
+
+\[ \boxed{f\approx\SI{2.52}{\hertz}}. \]
+
+\begin{interpretacion}
+El peso produce un alargamiento permanente de aproximadamente \(\SI{3.92}{\centi\meter}\), estableciendo una nueva posición de equilibrio.
+
+Si la masa se perturba alrededor de esa posición, oscila con un periodo aproximado de \(\SI{0.397}{\second}\).
+\end{interpretacion}
+
+
+\section{Ecuación de movimiento en el sistema vertical}
+
+Si utilizamos \(y\) para medir el desplazamiento respecto de la posición de equilibrio, la ecuación es:
+
+\[ y(t)=A\cos(\omega t+\phi). \]
+
+Como:
+
+\[ \omega=\sqrt{\frac{k}{m}}, \]
+
+tenemos:
+
+\[ \boxed{y(t)=A\cos\left(\sqrt{\frac{k}{m}}\,t+\phi\right)}. \]
+
+Es importante distinguir entre dos cantidades:
+
+\[
+\Delta\ell_{\mathrm{eq}}
+=
+\text{alargamiento estático respecto de la longitud natural},
+\]
+
+y:
+
+\[
+y
+=
+\text{desplazamiento instantáneo respecto del equilibrio}.
+\]
+
+La deformación total del resorte será:
+
+\[ \boxed{\Delta\ell(t)=\Delta\ell_{\mathrm{eq}}+y(t)}. \]
+
+\begin{errorfrecuente}
+No confundir
+
+\[ \Delta\ell_{\mathrm{eq}} \]
+
+con la amplitud \(A\).
+
+El primero representa cuánto se deforma el resorte debido al peso cuando el sistema está en equilibrio.
+
+La amplitud representa el máximo desplazamiento adicional respecto de esa posición de equilibrio.
+\end{errorfrecuente}
+
+
+\subsection{Ejemplo de ecuación vertical}
+
+Supongamos que el sistema anterior se desplaza:
+
+\[ A=\SI{3.0}{\centi\meter} \]
+
+hacia abajo desde el equilibrio y se libera desde el reposo.
+
+Tomando \(+y\) hacia abajo:
+
+\[ y(0)=+A \]
+
+y:
+
+\[ v_y(0)=0. \]
+
+Entonces:
+
+\[ \phi=0. \]
+
+Como:
+
+\[ \omega\approx\SI{15.8}{\radian\per\second}, \]
+
+la ecuación del movimiento es:
+
+\[ \boxed{y(t)=(\SI{0.030}{\meter})\cos(15.8t)}. \]
+
+La deformación total del resorte en cualquier instante será:
+
+\[ \Delta\ell(t)=\Delta\ell_{\mathrm{eq}}+y(t). \]
+
+Por tanto:
+
+\[ \boxed{\Delta\ell(t)=\SI{0.0392}{\meter}+(\SI{0.030}{\meter})\cos(15.8t)}. \]
+
+Observe que la masa oscila alrededor de una posición en la que el resorte ya está estirado.
+
+
+\section{Determinación experimental de la constante elástica}
+
+La constante \(k\) puede determinarse de varias maneras.
+
+
+\subsection{Método estático}
+
+Aplicamos fuerzas conocidas y medimos la deformación correspondiente.
+
+Dentro del régimen de Hooke:
+
+\[ F=k\Delta\ell. \]
+
+Por tanto:
+
+\[ \boxed{k=\frac{F}{\Delta\ell}}. \]
+
+Si se representan experimentalmente los valores de \(F\) frente a \(\Delta\ell\), la pendiente de la gráfica corresponde a \(k\).
+
+\begin{center}
+\begin{tikzpicture}
+
+\begin{axis}[
+    width=0.72\textwidth,
+    height=6cm,
+    axis lines=left,
+    xlabel={\(\Delta\ell\)},
+    ylabel={\(F\)},
+    xmin=0,
+    xmax=5,
+    ymin=0,
+    ymax=5,
+    xtick=\empty,
+    ytick=\empty,
+    samples=2
+]
+
+\addplot[very thick,AzulPrincipal,domain=0:4.5] {x};
+
+\node at (axis cs:3.2,3.8) {\(F=k\Delta\ell\)};
+
+\end{axis}
+
+\end{tikzpicture}
+\end{center}
+
+En un resorte ideal, la gráfica es lineal en el intervalo donde se cumple la ley de Hooke.
+
+
+\subsection{Método dinámico}
+
+También podemos utilizar el periodo de oscilación.
+
+Partimos de:
+
+\[ T=2\pi\sqrt{\frac{m}{k}}. \]
+
+Elevando al cuadrado:
+
+\[ T^2=4\pi^2\frac{m}{k}. \]
+
+Por tanto:
+
+\[ \boxed{T^2=\frac{4\pi^2}{k}m}. \]
+
+Esta expresión tiene la forma de una relación lineal entre \(T^2\) y \(m\).
+
+Si construimos una gráfica:
+
+\[ T^2\quad\text{frente a}\quad m, \]
+
+la pendiente es:
+
+\[ b=\frac{4\pi^2}{k}. \]
+
+Por tanto:
+
+\[ \boxed{k=\frac{4\pi^2}{b}}. \]
+
+\begin{interpretacion}
+El método dinámico permite obtener \(k\) midiendo tiempos en lugar de fuerzas.
+
+Para reducir la incertidumbre en la medición del periodo suele ser conveniente medir el tiempo correspondiente a varias oscilaciones completas y dividir entre el número de ciclos.
+\end{interpretacion}
+
+\begin{ejemplo}[Determinación de \(k\) mediante el periodo]
+Una masa de
+
+\[ m=\SI{0.250}{\kilogram} \]
+
+oscila unida a un resorte y se mide un periodo:
+
+\[ T=\SI{0.500}{\second}. \]
+
+De:
+
+\[ T=2\pi\sqrt{\frac{m}{k}}, \]
+
+elevamos al cuadrado:
+
+\[ T^2=4\pi^2\frac{m}{k}. \]
+
+Despejando:
+
+\[ k=\frac{4\pi^2m}{T^2}. \]
+
+Sustituyendo:
+
+\[
+k
+=
+\frac{
+4\pi^2(\SI{0.250}{\kilogram})
+}{
+(\SI{0.500}{\second})^2
+}.
+\]
+
+Por tanto:
+
+\[ \boxed{k\approx\SI{39.5}{\newton\per\meter}}. \]
+\end{ejemplo}
+
+
+\section{Resortes equivalentes}
+
+En algunos sistemas una masa puede estar conectada a más de un resorte.
+
+Si la fuerza neta continúa siendo proporcional al desplazamiento:
+
+\[ F_{\text{net},x}=-k_{\mathrm{eq}}x, \]
+
+el sistema seguirá comportándose como un oscilador armónico simple con:
+
+\[ \boxed{\omega=\sqrt{\frac{k_{\mathrm{eq}}}{m}}}. \]
+
+La cantidad
+
+\[ k_{\mathrm{eq}} \]
+
+se denomina \textbf{constante elástica equivalente}.
+
+
+\subsection{Resortes en paralelo}
+
+Consideremos dos resortes de constantes:
+
+\[ k_1 \]
+
+y:
+
+\[ k_2 \]
+
+que experimentan el mismo desplazamiento \(x\).
+
+Cada uno ejerce una fuerza restauradora:
+
+\[ F_1=-k_1x, \]
+
+\[ F_2=-k_2x. \]
+
+La fuerza total es:
+
+\[ F_{\text{net}}=F_1+F_2. \]
+
+Entonces:
+
+\[ F_{\text{net}}=-(k_1+k_2)x. \]
+
+Comparando con:
+
+\[ F_{\text{net}}=-k_{\mathrm{eq}}x, \]
+
+obtenemos:
+
+\[ \boxed{k_{\mathrm{eq}}=k_1+k_2}. \]
+
+Para \(N\) resortes en paralelo:
+
+\[ \boxed{k_{\mathrm{eq}}=\sum_{i=1}^{N}k_i}. \]
+
+\begin{interpretacion}
+Los resortes en paralelo producen un sistema más rígido.
+
+Por tanto:
+
+\[ k_{\mathrm{eq}}>k_1 \]
+
+y:
+
+\[ k_{\mathrm{eq}}>k_2 \]
+
+para dos resortes con constantes positivas.
+
+Para una misma masa, el periodo disminuye.
+\end{interpretacion}
+
+
+\subsection{Una masa entre dos resortes}
+
+Un caso frecuente consiste en colocar una masa entre dos resortes.
+
+Si la masa se desplaza una distancia \(x\) hacia la derecha, un resorte se estira y el otro se comprime.
+
+Ambos ejercen fuerzas restauradoras hacia la izquierda.
+
+La fuerza neta es:
+
+\[ F_{\text{net},x}=-(k_1+k_2)x. \]
+
+Por tanto:
+
+\[ \boxed{k_{\mathrm{eq}}=k_1+k_2}. \]
+
+Y:
+
+\[ \boxed{T=2\pi\sqrt{\frac{m}{k_1+k_2}}}. \]
+
+
+\subsection{Resortes en serie}
+
+Consideremos ahora dos resortes conectados uno después del otro.
+
+Si la fuerza transmitida es \(F\), entonces:
+
+\[ F=k_1x_1 \]
+
+y:
+
+\[ F=k_2x_2. \]
+
+Las deformaciones son:
+
+\[ x_1=\frac{F}{k_1}, \]
+
+\[ x_2=\frac{F}{k_2}. \]
+
+La deformación total es:
+
+\[ x=x_1+x_2. \]
+
+Por tanto:
+
+\[
+x
+=
+\frac{F}{k_1}
++
+\frac{F}{k_2}.
+\]
+
+Factorizando:
+
+\[
+x
+=
+F
+\left(
+\frac{1}{k_1}
++
+\frac{1}{k_2}
+\right).
+\]
+
+Para el resorte equivalente:
+
+\[ F=k_{\mathrm{eq}}x. \]
+
+Entonces:
+
+\[ x=\frac{F}{k_{\mathrm{eq}}}. \]
+
+Comparando:
+
+\[ \boxed{\frac{1}{k_{\mathrm{eq}}}=\frac{1}{k_1}+\frac{1}{k_2}}. \]
+
+Para dos resortes:
+
+\[ \boxed{k_{\mathrm{eq}}=\frac{k_1k_2}{k_1+k_2}}. \]
+
+Para \(N\) resortes en serie:
+
+\[ \boxed{\frac{1}{k_{\mathrm{eq}}}=\sum_{i=1}^{N}\frac{1}{k_i}}. \]
+
+\begin{interpretacion}
+Una combinación en serie es menos rígida que cualquiera de los resortes individuales.
+
+Por tanto:
+
+\[ k_{\mathrm{eq}}<k_1 \]
+
+y:
+
+\[ k_{\mathrm{eq}}<k_2. \]
+
+Para una misma masa, una constante equivalente menor produce un periodo mayor.
+\end{interpretacion}
+
+
+\section{Ejemplo: comparación de dos configuraciones}
+
+\begin{ejemplo}[Resortes en paralelo y en serie]
+Una masa
+
+\[ m=\SI{0.600}{\kilogram} \]
+
+se conecta a dos resortes:
+
+\[
+k_1=\SI{120}{\newton\per\meter},
+\qquad
+k_2=\SI{180}{\newton\per\meter}.
+\]
+
+Comparemos el periodo cuando los resortes se conectan en paralelo y cuando se conectan en serie.
+\end{ejemplo}
+
+\subsubsection*{Resortes en paralelo}
+
+La constante equivalente es:
+
+\[ k_{\mathrm{eq}}=k_1+k_2. \]
+
+Entonces:
+
+\[
+k_{\mathrm{eq}}
+=
+120+180
+=
+\SI{300}{\newton\per\meter}.
+\]
+
+El periodo es:
+
+\[
+T
+=
+2\pi
+\sqrt{
+\frac{0.600}{300}
+}.
+\]
+
+Por tanto:
+
+\[ \boxed{T_{\mathrm{par}}\approx\SI{0.281}{\second}}. \]
+
+
+\subsubsection*{Resortes en serie}
+
+La constante equivalente es:
+
+\[ k_{\mathrm{eq}}=\frac{k_1k_2}{k_1+k_2}. \]
+
+Entonces:
+
+\[
+k_{\mathrm{eq}}
+=
+\frac{(120)(180)}{120+180}
+=
+\SI{72.0}{\newton\per\meter}.
+\]
+
+El periodo es:
+
+\[
+T
+=
+2\pi
+\sqrt{
+\frac{0.600}{72.0}
+}.
+\]
+
+Por tanto:
+
+\[ \boxed{T_{\mathrm{serie}}\approx\SI{0.574}{\second}}. \]
+
+\begin{interpretacion}
+La combinación en paralelo es más rígida y oscila más rápidamente.
+
+La combinación en serie es menos rígida y presenta un periodo mayor.
+\end{interpretacion}
+
+
+\section{Limitaciones del modelo ideal}
+
+La expresión
+
+\[ T=2\pi\sqrt{\frac{m}{k}} \]
+
+se obtiene bajo determinadas hipótesis.
+
+Entre ellas:
+
+\begin{itemize}
+    \item el resorte cumple la ley de Hooke;
+    \item la masa del resorte es despreciable frente a la masa oscilante;
+    \item no existe rozamiento significativo;
+    \item no existe resistencia del aire significativa;
+    \item las propiedades del resorte permanecen constantes;
+    \item el movimiento es esencialmente unidimensional.
+\end{itemize}
+
+
+\subsection{Masa del resorte}
+
+Un resorte real posee masa.
+
+Cuando su masa no es despreciable, distintas partes del resorte se mueven con velocidades diferentes durante la oscilación.
+
+Por ello, no toda la masa del resorte puede tratarse simplemente como si estuviera concentrada en el bloque.
+
+\begin{aproximacion}[Resorte ligero]
+La expresión
+
+\[ T=2\pi\sqrt{\frac{m}{k}} \]
+
+supone que la masa del resorte es despreciable frente a la masa unida a él.
+
+Si esta condición no se cumple, debe utilizarse un modelo más preciso que incluya la contribución dinámica del propio resorte.
+\end{aproximacion}
+
+
+\subsection{Deformaciones grandes}
+
+La ley
+
+\[ F=-kx \]
+
+es una aproximación lineal.
+
+Un resorte real puede dejar de comportarse linealmente si se deforma demasiado.
+
+En ese caso:
+
+\[ F\not\propto -x \]
+
+y el movimiento deja de ser exactamente armónico simple.
+
+
+\subsection{Rozamiento}
+
+Un sistema real presenta normalmente alguna forma de rozamiento o resistencia.
+
+En tal situación, las oscilaciones no continúan indefinidamente con amplitud constante.
+
+Por tanto, el sistema masa--resorte ideal representa una aproximación a sistemas reales durante aquellos intervalos en los que las pérdidas puedan despreciarse.
+
+
+\section{Aplicaciones del sistema masa--resorte}
+
+El modelo masa--resorte aparece en numerosas situaciones.
+
+Entre ellas:
+
+\begin{itemize}
+    \item suspensiones de vehículos;
+    \item básculas mecánicas;
+    \item vibraciones de máquinas;
+    \item sensores;
+    \item instrumentos de medición;
+    \item modelos de vibraciones moleculares;
+    \item estructuras elásticas;
+    \item sistemas de aislamiento de vibraciones.
+\end{itemize}
+
+En muchos casos el ``resorte'' no es literalmente un resorte helicoidal. Cualquier sistema cuya fuerza restauradora pueda aproximarse mediante:
+
+\[ F=-k_{\mathrm{ef}}x \]
+
+puede comportarse dinámicamente como un sistema masa--resorte.
+
+\begin{aplicacion}[Suspensión de un vehículo]
+La suspensión de un automóvil puede modelarse, en una primera aproximación, como una masa apoyada sobre resortes.
+
+Si la masa efectiva aumenta, el periodo de oscilación aumenta.
+
+Si la suspensión utiliza resortes más rígidos, la frecuencia natural aumenta.
+
+El modelo ideal no describe todos los detalles de una suspensión real, pero permite comprender su comportamiento básico.
+\end{aplicacion}
+
+
+\section{Errores frecuentes}
+
+\begin{errorfrecuente}
+\textbf{Utilizar la longitud natural como origen en un sistema vertical.}
+
+La masa oscila alrededor de la posición de equilibrio, no alrededor de la posición donde el resorte está sin deformar.
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+\textbf{Olvidar el signo de la fuerza elástica.}
+
+La relación por componentes es:
+
+\[ F_{s,x}=-kx. \]
+
+El signo negativo indica que la fuerza es restauradora.
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+\textbf{Creer que un resorte más rígido produce un periodo mayor.}
+
+En realidad:
+
+\[ T=2\pi\sqrt{\frac{m}{k}}. \]
+
+Al aumentar \(k\), el periodo disminuye.
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+\textbf{Creer que una masa mayor oscila más rápidamente.}
+
+Para un mismo resorte:
+
+\[ T\propto\sqrt{m}. \]
+
+Por tanto, una masa mayor produce un periodo mayor y una frecuencia menor.
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+\textbf{Introducir \(g\) innecesariamente en el periodo de un sistema vertical.}
+
+Para un sistema masa--resorte ideal:
+
+\[ T=2\pi\sqrt{\frac{m}{k}}. \]
+
+La gravedad modifica la posición de equilibrio, pero no cambia esta expresión.
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+\textbf{Confundir alargamiento de equilibrio y amplitud.}
+
+En un resorte vertical:
+
+\[ \Delta\ell_{\mathrm{eq}}=\frac{mg}{k} \]
+
+describe la deformación estática producida por el peso.
+
+La amplitud \(A\) describe el máximo desplazamiento respecto de esa posición de equilibrio.
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+\textbf{Aplicar la fórmula del periodo sin comprobar el modelo.}
+
+La expresión
+
+\[ T=2\pi\sqrt{\frac{m}{k}} \]
+
+requiere un comportamiento aproximadamente lineal, pérdidas despreciables y un resorte cuya masa pueda despreciarse o tratarse mediante una aproximación adecuada.
+\end{errorfrecuente}
+
+
+\section{Secuencia sugerida para impartir la clase}
+
+\begin{notapedagogica}
+Una posible secuencia para desarrollar este tema en clase es:
+
+\begin{enumerate}
+    \item Mostrar físicamente un resorte y una masa o representar el sistema horizontal.
+
+    \item Preguntar qué ocurre si la masa se desplaza hacia la derecha y se libera.
+
+    \item Definir la posición de equilibrio como \(x=0\).
+
+    \item Recordar brevemente la ley de Hooke:
+    \[ F_{s,x}=-kx. \]
+
+    \item Dibujar el diagrama de cuerpo libre y mostrar que peso y normal se equilibran verticalmente.
+
+    \item Aplicar la segunda ley de Newton en el eje \(x\):
+    \[ -kx=ma_x. \]
+
+    \item Obtener:
+    \[ a_x=-\frac{k}{m}x \]
+    y compararla con:
+    \[ a_x=-\omega^2x. \]
+
+    \item Deducir:
+    \[ \omega=\sqrt{\frac{k}{m}}. \]
+
+    \item Construir a partir de ella:
+    \[ T=2\pi\sqrt{\frac{m}{k}} \]
+    y:
+    \[ f=\frac{1}{2\pi}\sqrt{\frac{k}{m}}. \]
+
+    \item Analizar cualitativamente cómo cambian \(T\) y \(f\) al modificar \(m\) o \(k\).
+
+    \item Resolver un ejemplo numérico horizontal.
+
+    \item Pasar al resorte vertical y preguntar si la gravedad cambia el periodo.
+
+    \item Determinar primero la nueva posición de equilibrio:
+    \[ k\Delta\ell_{\mathrm{eq}}=mg. \]
+
+    \item Medir el desplazamiento desde esa nueva posición y demostrar que:
+    \[ ma_y=-ky. \]
+
+    \item Resolver un ejemplo vertical.
+
+    \item Mostrar cómo determinar experimentalmente \(k\) mediante una gráfica \(F-\Delta\ell\) o mediante el periodo.
+
+    \item Si el tiempo de clase lo permite, estudiar resortes equivalentes en paralelo y en serie.
+
+    \item Finalizar con preguntas conceptuales que permitan distinguir equilibrio, amplitud, rigidez, masa y periodo.
+\end{enumerate}
+\end{notapedagogica}
+
+
+\section{Preguntas de comprensión}
+
+\begin{enumerate}
+    \item ¿Por qué la fuerza ejercida por un resorte se denomina fuerza restauradora?
+
+    \item ¿Qué representa físicamente el signo negativo en
+    \[ F_{s,x}=-kx? \]
+
+    \item ¿Por qué un bloque sobre una superficie horizontal sin rozamiento realiza MAS cuando está unido a un resorte ideal?
+
+    \item ¿Qué relación existe entre \(k\), \(m\) y \(\omega\)?
+
+    \item Si se duplica la masa y se mantiene el mismo resorte, ¿el periodo se duplica? Justifique.
+
+    \item Si la constante elástica aumenta, ¿la frecuencia aumenta o disminuye?
+
+    \item ¿Por qué el periodo ideal no depende de la amplitud?
+
+    \item ¿Bajo qué condición podría comenzar a depender de la amplitud?
+
+    \item En un sistema horizontal, ¿qué fuerzas actúan verticalmente sobre la masa?
+
+    \item ¿Por qué esas fuerzas no determinan la oscilación horizontal?
+
+    \item ¿En qué punto de la oscilación la fuerza del resorte es cero?
+
+    \item ¿En qué punto la magnitud de la fuerza restauradora es máxima?
+
+    \item En un sistema vertical, ¿qué diferencia existe entre la longitud natural y la posición de equilibrio?
+
+    \item ¿Qué representa
+    \[ \Delta\ell_{\mathrm{eq}}=\frac{mg}{k}? \]
+
+    \item ¿Por qué la gravedad modifica la posición de equilibrio pero no el periodo ideal?
+
+    \item ¿Cuál es la diferencia entre \(\Delta\ell_{\mathrm{eq}}\) y la amplitud?
+
+    \item Si dos resortes se colocan en paralelo, ¿el sistema resulta más rígido o menos rígido?
+
+    \item Si dos resortes se colocan en serie, ¿cómo cambia la constante equivalente respecto de las constantes individuales?
+
+    \item ¿Por qué un resorte real de masa apreciable no queda completamente descrito por
+    \[ T=2\pi\sqrt{\frac{m}{k}}? \]
+
+    \item ¿Qué observación experimental indicaría que un resorte está dejando de obedecer la ley de Hooke?
+\end{enumerate}
+
+
+\begin{resumen}
+Un bloque de masa \(m\) unido a un resorte ideal de constante elástica \(k\) experimenta una fuerza restauradora:
+
+\[ F_{s,x}=-kx. \]
+
+Aplicando la segunda ley de Newton:
+
+\[ ma_x=-kx. \]
+
+Por tanto:
+
+\[ \boxed{a_x=-\frac{k}{m}x}. \]
+
+Comparando con la ecuación general del movimiento armónico simple:
+
+\[ a_x=-\omega^2x, \]
+
+se obtiene:
+
+\[ \boxed{\omega=\sqrt{\frac{k}{m}}}. \]
+
+El periodo y la frecuencia son:
+
+\[ \boxed{T=2\pi\sqrt{\frac{m}{k}}}, \]
+
+\[ \boxed{f=\frac{1}{2\pi}\sqrt{\frac{k}{m}}}. \]
+
+Una masa mayor produce oscilaciones más lentas, mientras que un resorte más rígido produce oscilaciones más rápidas.
+
+En un sistema vertical, la posición de equilibrio se encuentra mediante:
+
+\[ \boxed{k\Delta\ell_{\mathrm{eq}}=mg}. \]
+
+Al medir el desplazamiento desde esa posición, la dinámica vuelve a ser:
+
+\[ ma_y=-ky. \]
+
+Por ello, el periodo vertical ideal continúa siendo:
+
+\[ \boxed{T=2\pi\sqrt{\frac{m}{k}}}. \]
+
+Para varios resortes en paralelo:
+
+\[ \boxed{k_{\mathrm{eq}}=\sum_i k_i}. \]
+
+Para resortes en serie:
+
+\[ \boxed{\frac{1}{k_{\mathrm{eq}}}=\sum_i\frac{1}{k_i}}. \]
+
+En todos los casos, si la fuerza neta puede escribirse como:
+
+\[ F=-k_{\mathrm{eq}}x, \]
+
+el sistema realiza movimiento armónico simple con:
+
+\[ \boxed{\omega=\sqrt{\frac{k_{\mathrm{eq}}}{m}}}. \]
+
+Estas relaciones son válidas mientras el comportamiento sea aproximadamente lineal, las pérdidas puedan despreciarse y el modelo de resorte ideal sea adecuado.
+\end{resumen}

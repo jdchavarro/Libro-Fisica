@@ -1,0 +1,265 @@
+﻿% ------------------------------------------------------------
+% DEFINICIONES Y CONCEPTOS FUNDAMENTALES
+% ------------------------------------------------------------
+
+\newtcolorbox{definicion}[1][]{
+    estiloBase,
+    colback=AzulFondo,
+    colframe=AzulPrincipal,
+    title={
+        Definición
+        \ifstrempty{#1}{}{ --- #1}
+    }
+}
+
+\newtcolorbox{principio}[1][]{
+    estiloBase,
+    colback=AzulFondo,
+    colframe=AzulPrincipal,
+    title={
+        Principio
+        \ifstrempty{#1}{}{ --- #1}
+    }
+}
+
+\newtcolorbox{leyfisica}[1][]{
+    estiloBase,
+    colback=AzulFondo,
+    colframe=AzulPrincipal,
+    title={
+        Ley física
+        \ifstrempty{#1}{}{ --- #1}
+    }
+}
+
+\newtcolorbox{modelo}[1][]{
+    estiloBase,
+    colback=AzulFondo,
+    colframe=AzulSecundario,
+    title={
+        Modelo
+        \ifstrempty{#1}{}{ --- #1}
+    }
+}
+
+\newtcolorbox{hipotesis}[1][]{
+    estiloBase,
+    colback=AzulFondo,
+    colframe=AzulSecundario,
+    title={
+        Hipótesis
+        \ifstrempty{#1}{}{ --- #1}
+    }
+}
+
+\newtcolorbox{aproximacion}[1][]{
+    estiloBase,
+    colback=AzulFondo,
+    colframe=AzulSecundario,
+    title={
+        Aproximación
+        \ifstrempty{#1}{}{ --- #1}
+    }
+}
+
+
+% ------------------------------------------------------------
+% IDEAS, FÓRMULAS E INTERPRETACIONES
+% ------------------------------------------------------------
+
+\newtcolorbox{idea}[1][]{
+    estiloBase,
+    colback=AzulFondo,
+    colframe=AzulPrincipal,
+    title={
+        Idea fundamental
+        \ifstrempty{#1}{}{ --- #1}
+    }
+}
+
+\newtcolorbox{interpretacion}[1][]{
+    estiloBase,
+    colback=AzulFondo,
+    colframe=AzulSecundario,
+    title={
+        Interpretación física
+        \ifstrempty{#1}{}{ --- #1}
+    }
+}
+
+\newtcolorbox{formula}[1][]{
+    estiloBase,
+    colback=AzulFondo,
+    colframe=AzulPrincipal,
+    title={
+        Fórmula
+        \ifstrempty{#1}{}{ --- #1}
+    }
+}
+
+\newtcolorbox{condicion}[1][]{
+    estiloBase,
+    colback=AzulFondo,
+    colframe=AzulSecundario,
+    title={
+        Condiciones de aplicación
+        \ifstrempty{#1}{}{ --- #1}
+    }
+}
+
+
+% ------------------------------------------------------------
+% EJEMPLOS Y APLICACIONES
+% ------------------------------------------------------------
+
+\newtcolorbox{ejemplo}[1][]{
+    estiloBase,
+    colback=VerdeFondo,
+    colframe=VerdePrincipal,
+    title={
+        Ejemplo
+        \ifstrempty{#1}{}{ --- #1}
+    }
+}
+
+\newtcolorbox{aplicacion}[1][]{
+    estiloBase,
+    colback=VerdeFondo,
+    colframe=VerdePrincipal,
+    title={
+        Aplicación
+        \ifstrempty{#1}{}{ --- #1}
+    }
+}
+
+
+% ------------------------------------------------------------
+% ESTRATEGIAS
+% ------------------------------------------------------------
+
+\newtcolorbox{consejo}[1][]{
+    estiloBase,
+    colback=AmarilloFondo,
+    colframe=AmarilloPrincipal,
+    title={
+        Consejo
+        \ifstrempty{#1}{}{ --- #1}
+    }
+}
+
+\newtcolorbox{estrategia}[1][]{
+    estiloBase,
+    colback=AmarilloFondo,
+    colframe=AmarilloPrincipal,
+    title={
+        Estrategia
+        \ifstrempty{#1}{}{ --- #1}
+    }
+}
+
+
+% ------------------------------------------------------------
+% ADVERTENCIAS
+% ------------------------------------------------------------
+
+\newtcolorbox{advertencia}[1][]{
+    estiloBase,
+    colback=RojoFondo,
+    colframe=RojoPrincipal,
+    title={
+        Advertencia
+        \ifstrempty{#1}{}{ --- #1}
+    }
+}
+
+\newtcolorbox{errorfrecuente}[1][]{
+    estiloBase,
+    colback=RojoFondo,
+    colframe=RojoPrincipal,
+    title={
+        Error frecuente
+        \ifstrempty{#1}{}{ --- #1}
+    }
+}
+
+
+% ------------------------------------------------------------
+% NOTAS
+% ------------------------------------------------------------
+
+\newtcolorbox{observacion}[1][]{
+    estiloBase,
+    colback=GrisFondo,
+    colframe=GrisPrincipal,
+    title={
+        Observación
+        \ifstrempty{#1}{}{ --- #1}
+    }
+}
+
+\newtcolorbox{recordatorio}[1][]{
+    estiloBase,
+    colback=GrisFondo,
+    colframe=GrisPrincipal,
+    title={
+        Recordatorio
+        \ifstrempty{#1}{}{ --- #1}
+    }
+}
+
+\newtcolorbox{nota}[1][]{
+    estiloBase,
+    colback=GrisFondo,
+    colframe=GrisPrincipal,
+    title={
+        Nota
+        \ifstrempty{#1}{}{ --- #1}
+    }
+}
+
+\newtcolorbox{notapedagogica}[1][]{
+    estiloBase,
+    colback=GrisFondo,
+    colframe=GrisPrincipal,
+    title={
+        Nota pedagógica
+        \ifstrempty{#1}{}{ --- #1}
+    }
+}
+
+
+% ------------------------------------------------------------
+% RESUMEN
+% ------------------------------------------------------------
+
+\newtcolorbox{resumen}{
+    estiloBase,
+    colback=AzulFondo,
+    colframe=AzulPrincipal,
+    title=Resumen
+}
+
+
+% ------------------------------------------------------------
+% EJERCICIOS
+% ------------------------------------------------------------
+
+\newcounter{ejercicio}[chapter]
+
+\renewcommand{\theejercicio}{
+    \thechapter.\arabic{ejercicio}
+}
+
+\newenvironment{ejercicio}{
+    \refstepcounter{ejercicio}
+    \par
+    \medskip
+    \noindent
+    {\bfseries\color{AzulPrincipal}
+    Ejercicio \theejercicio.}
+    \par
+    \smallskip
+}{
+    \par
+    \medskip
+}

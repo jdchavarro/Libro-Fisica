@@ -1,0 +1,211 @@
+﻿% ============================================================
+% ESTILOS GENERALES
+% Proyecto: Física
+% ============================================================
+
+
+% ------------------------------------------------------------
+% TEXTO GENERAL
+% ------------------------------------------------------------
+
+\setstretch{1.15}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\AtBeginDocument{
+    \color{TextoPrincipal}
+}
+
+
+% ------------------------------------------------------------
+% LISTAS
+% ------------------------------------------------------------
+
+\setlist[itemize]{
+    topsep=4pt,
+    itemsep=2pt
+}
+
+\setlist[enumerate]{
+    topsep=4pt,
+    itemsep=2pt
+}
+
+
+% ------------------------------------------------------------
+% PARTES
+% ------------------------------------------------------------
+
+\titleformat{\part}[display]
+    {\normalfont\Huge\bfseries\color{ColorTitulos}\centering}
+    {\partname\ \thepart}
+    {1em}
+    {}
+
+
+% ------------------------------------------------------------
+% CAPÍTULOS
+% ------------------------------------------------------------
+
+\titleformat{\chapter}
+    {\normalfont\huge\bfseries\color{ColorTitulos}}
+    {\thechapter.}
+    {1em}
+    {}
+
+
+% ------------------------------------------------------------
+% SECCIONES
+% ------------------------------------------------------------
+
+\titleformat{\section}
+    {\normalfont\Large\bfseries\color{ColorTitulos}}
+    {\thesection.}
+    {0.7em}
+    {}
+
+\titleformat{\subsection}
+    {\normalfont\large\bfseries\color{ColorTitulos}}
+    {\thesubsection.}
+    {0.7em}
+    {}
+
+\titleformat{\subsubsection}
+    {\normalfont\normalsize\bfseries\color{ColorTitulos}}
+    {\thesubsubsection.}
+    {0.7em}
+    {}
+
+
+% ------------------------------------------------------------
+% PROFUNDIDAD DE NUMERACIÓN E ÍNDICE
+% ------------------------------------------------------------
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+
+% ------------------------------------------------------------
+% ENCABEZADOS Y PIES DE PÁGINA
+% ------------------------------------------------------------
+
+\pagestyle{fancy}
+
+\fancyhf{}
+
+\fancyhead[L]{
+    \nouppercase{\leftmark}
+}
+
+\fancyhead[R]{
+    \tituloobra
+}
+
+\fancyfoot[C]{
+    \thepage
+}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\setlength{\headheight}{15pt}
+
+
+% ------------------------------------------------------------
+% FIGURAS Y TABLAS
+% ------------------------------------------------------------
+
+\captionsetup{
+    font=small,
+    labelfont=bf
+}
+
+
+% ------------------------------------------------------------
+% UNIDADES SI
+% ------------------------------------------------------------
+
+\sisetup{
+    output-decimal-marker={,},
+    group-separator={\,},
+    group-minimum-digits=4,
+    exponent-product=\cdot,
+    per-mode=symbol,
+    separate-uncertainty=true
+}
+
+
+% ------------------------------------------------------------
+% HIPERVÍNCULOS
+% ------------------------------------------------------------
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=AzulPrincipal,
+    citecolor=VerdePrincipal,
+    urlcolor=AzulSecundario,
+    pdftitle={\tituloobra},
+    pdfauthor={\autorlibro},
+    pdfsubject={Colección general de Física},
+    pdfcreator={LaTeX}
+}
+
+
+% ------------------------------------------------------------
+% ESTILOS BASE DE TCOLORBOX
+% ------------------------------------------------------------
+%
+% IMPORTANTE:
+% No introducir líneas en blanco dentro de \tcbset{...}.
+% pgfkeys puede interpretar una línea en blanco como \par
+% y producir errores de análisis de claves.
+% ------------------------------------------------------------
+
+\tcbset{
+    estiloBase/.style={
+        enhanced,
+        breakable,
+        boxrule=0.7pt,
+        arc=2mm,
+        left=3mm,
+        right=3mm,
+        top=2mm,
+        bottom=2mm,
+        before skip=10pt,
+        after skip=10pt,
+        fonttitle=\bfseries
+    },
+    estiloRespuesta/.style={
+        enhanced,
+        breakable,
+        colback=GrisFondo,
+        colframe=GrisPrincipal,
+        boxrule=0.6pt,
+        arc=1.5mm,
+        left=3mm,
+        right=3mm,
+        top=2mm,
+        bottom=2mm,
+        before skip=6pt,
+        after skip=6pt,
+        title=Respuesta,
+        fonttitle=\bfseries
+    },
+    estiloSolucion/.style={
+        enhanced,
+        breakable,
+        colback=VerdeFondo,
+        colframe=VerdePrincipal,
+        boxrule=0.6pt,
+        arc=1.5mm,
+        left=3mm,
+        right=3mm,
+        top=2mm,
+        bottom=2mm,
+        before skip=6pt,
+        after skip=10pt,
+        title=Solución desarrollada,
+        fonttitle=\bfseries
+    }
+}

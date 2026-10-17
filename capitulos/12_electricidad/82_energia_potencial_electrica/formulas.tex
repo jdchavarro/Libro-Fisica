@@ -1,0 +1,901 @@
+\section{Formulario}
+
+\subsection{Trabajo de la fuerza eléctrica}
+
+Para un desplazamiento desde \(A\) hasta \(B\),
+
+\[
+\boxed{
+W_{e,A\to B}
+=
+\int_A^B \vec F_e\cdot d\vec r
+}
+\]
+
+En componentes rectangulares,
+
+\[
+\boxed{
+W_{e,A\to B}
+=
+\int_A^B
+\left(
+F_x\,dx+F_y\,dy+F_z\,dz
+\right)
+}
+\]
+
+Como
+
+\[
+F_x=qE_x,\qquad
+F_y=qE_y,\qquad
+F_z=qE_z,
+\]
+
+también puede escribirse
+
+\[
+\boxed{
+W_{e,A\to B}
+=
+q\int_A^B
+\left(
+E_x\,dx+E_y\,dy+E_z\,dz
+\right)
+}.
+\]
+
+
+\subsection{Fuerza electrostática conservativa}
+
+El trabajo entre dos puntos es independiente de la trayectoria.
+
+Para una trayectoria cerrada,
+
+\[
+\boxed{
+\oint\vec F_e\cdot d\vec r=0
+}.
+\]
+
+
+\subsection{Cambio de energía potencial eléctrica}
+
+\[
+\boxed{
+\Delta U=U_f-U_i
+}
+\]
+
+La relación con el trabajo de la fuerza eléctrica es
+
+\[
+\boxed{
+\Delta U=-W_e
+}
+\]
+
+o
+
+\[
+\boxed{
+W_e=U_i-U_f
+}.
+\]
+
+Por tanto,
+
+\[
+W_e>0
+\Longrightarrow
+\Delta U<0,
+\]
+
+\[
+W_e<0
+\Longrightarrow
+\Delta U>0.
+\]
+
+Unidad SI:
+
+\[
+\boxed{[U]=\si{\joule}}.
+\]
+
+
+\subsection{Trabajo externo}
+
+Si una fuerza externa desplaza lentamente las cargas y no cambia apreciablemente
+su energía cinética,
+
+\[
+\boxed{
+W_{\text{ext}}=\Delta U
+}
+\]
+
+y
+
+\[
+\boxed{
+W_{\text{ext}}=-W_e
+}.
+\]
+
+
+\subsection{Cambio de energía potencial a partir del campo}
+
+En general,
+
+\[
+\boxed{
+\Delta U
+=
+-q\int_A^B
+\left(
+E_x\,dx+E_y\,dy+E_z\,dz
+\right)
+}.
+\]
+
+Para un campo uniforme,
+
+\[
+\boxed{
+\Delta U
+=
+-q
+\left(
+E_x\Delta x+
+E_y\Delta y+
+E_z\Delta z
+\right)
+}.
+\]
+
+En una dimensión,
+
+\[
+\boxed{
+\Delta U=-qE_x\Delta x
+}.
+\]
+
+El trabajo eléctrico correspondiente es
+
+\[
+\boxed{
+W_e=
+q
+\left(
+E_x\Delta x+
+E_y\Delta y+
+E_z\Delta z
+\right)
+}.
+\]
+
+
+\subsection{Referencia de energía potencial}
+
+Para sistemas de cargas puntuales aisladas se utiliza normalmente
+
+\[
+\boxed{
+U(\infty)=0
+}.
+\]
+
+
+\subsection{Energía potencial de dos cargas puntuales}
+
+Para dos cargas \(q_1\) y \(q_2\) separadas una distancia \(r\),
+
+\[
+\boxed{
+U=k\frac{q_1q_2}{r}
+}
+\]
+
+con
+
+\[
+\boxed{
+k\approx
+\SI{8.99e9}{\newton\metre\squared\per\coulomb\squared}
+}.
+\]
+
+También,
+
+\[
+\boxed{
+k=\frac{1}{4\pi\varepsilon_0}
+}.
+\]
+
+En esta expresión no se utiliza valor absoluto:
+
+\[
+\boxed{
+U=k\frac{q_1q_2}{r}
+}.
+\]
+
+
+\subsection{Signo de la energía potencial}
+
+Cargas del mismo signo:
+
+\[
+q_1q_2>0
+\Longrightarrow
+\boxed{U>0}.
+\]
+
+Cargas de signos opuestos:
+
+\[
+q_1q_2<0
+\Longrightarrow
+\boxed{U<0}.
+\]
+
+Cuando
+
+\[
+r\to\infty,
+\]
+
+\[
+\boxed{U\to0}.
+\]
+
+
+\subsection{Dependencia con la distancia}
+
+Para dos cargas puntuales,
+
+\[
+\boxed{
+U\propto\frac{1}{r}
+}.
+\]
+
+Para cargas del mismo signo:
+
+\[
+r\downarrow
+\Longrightarrow
+U\uparrow.
+\]
+
+Para cargas de signos opuestos:
+
+\[
+r\downarrow
+\Longrightarrow
+U\text{ se hace más negativa}.
+\]
+
+
+\subsection{Cambio de separación entre dos cargas}
+
+Si la separación cambia de \(r_i\) a \(r_f\),
+
+\[
+U_i=k\frac{q_1q_2}{r_i},
+\qquad
+U_f=k\frac{q_1q_2}{r_f}.
+\]
+
+Entonces,
+
+\[
+\boxed{
+\Delta U
+=
+kq_1q_2
+\left(
+\frac{1}{r_f}
+-
+\frac{1}{r_i}
+\right)
+}.
+\]
+
+El trabajo realizado por la fuerza eléctrica es
+
+\[
+\boxed{
+W_e
+=
+kq_1q_2
+\left(
+\frac{1}{r_i}
+-
+\frac{1}{r_f}
+\right)
+}.
+\]
+
+El trabajo externo cuasiestático es
+
+\[
+\boxed{
+W_{\text{ext}}
+=
+kq_1q_2
+\left(
+\frac{1}{r_f}
+-
+\frac{1}{r_i}
+\right)
+}.
+\]
+
+
+\subsection{Ensamblaje desde el infinito}
+
+Si inicialmente
+
+\[
+r_i\to\infty,
+\]
+
+entonces
+
+\[
+U_i=0.
+\]
+
+Para llevar lentamente las cargas hasta una separación \(r\),
+
+\[
+\boxed{
+W_{\text{ext}}
+=
+U
+=
+k\frac{q_1q_2}{r}
+}.
+\]
+
+El trabajo realizado por la fuerza eléctrica es
+
+\[
+\boxed{
+W_e
+=
+-k\frac{q_1q_2}{r}
+}.
+\]
+
+
+\subsection{Separación de cargas de signos opuestos}
+
+Si dos cargas de signos opuestos están inicialmente separadas una distancia \(r\)
+y se llevan lentamente hasta el infinito,
+
+\[
+U_i=k\frac{q_1q_2}{r},
+\qquad
+U_f=0.
+\]
+
+Entonces,
+
+\[
+\boxed{
+W_{\text{ext}}
+=
+-k\frac{q_1q_2}{r}
+}.
+\]
+
+Como
+
+\[
+q_1q_2<0,
+\]
+
+se cumple
+
+\[
+W_{\text{ext}}>0.
+\]
+
+
+\subsection{Energía potencial de varias cargas}
+
+Para \(N\) cargas puntuales,
+
+\[
+\boxed{
+U
+=
+k\sum_{i<j}
+\frac{q_iq_j}{r_{ij}}
+}.
+\]
+
+Cada par debe contarse una sola vez.
+
+
+\subsection{Sistema de tres cargas}
+
+\[
+\boxed{
+U
+=
+k
+\left(
+\frac{q_1q_2}{r_{12}}
++
+\frac{q_1q_3}{r_{13}}
++
+\frac{q_2q_3}{r_{23}}
+\right)
+}.
+\]
+
+
+\subsection{Sistema de cuatro cargas}
+
+Para cuatro cargas existen seis interacciones:
+
+\[
+\boxed{
+U
+=
+k
+\left(
+\frac{q_1q_2}{r_{12}}
++
+\frac{q_1q_3}{r_{13}}
++
+\frac{q_1q_4}{r_{14}}
++
+\frac{q_2q_3}{r_{23}}
++
+\frac{q_2q_4}{r_{24}}
++
+\frac{q_3q_4}{r_{34}}
+\right)
+}.
+\]
+
+
+\subsection{Número de pares}
+
+Para \(N\) cargas,
+
+\[
+\boxed{
+N_{\text{pares}}
+=
+\frac{N(N-1)}{2}
+}.
+\]
+
+
+\subsection{Distancias entre cargas}
+
+En una dimensión,
+
+\[
+\boxed{
+r_{ij}=|x_j-x_i|
+}.
+\]
+
+En dos dimensiones,
+
+\[
+\boxed{
+r_{ij}
+=
+\sqrt{
+(x_j-x_i)^2+
+(y_j-y_i)^2
+}
+}.
+\]
+
+En tres dimensiones,
+
+\[
+\boxed{
+r_{ij}
+=
+\sqrt{
+(x_j-x_i)^2+
+(y_j-y_i)^2+
+(z_j-z_i)^2
+}
+}.
+\]
+
+
+\subsection{Conservación de la energía}
+
+Si sólo intervienen fuerzas conservativas electrostáticas,
+
+\[
+\boxed{
+K_i+U_i=K_f+U_f
+}.
+\]
+
+Equivalentemente,
+
+\[
+\boxed{
+\Delta K+\Delta U=0
+}
+\]
+
+o
+
+\[
+\boxed{
+\Delta K=-\Delta U
+}.
+\]
+
+
+\subsection{Energía cinética}
+
+Para una partícula de masa \(m\) y rapidez \(v\),
+
+\[
+\boxed{
+K=\frac12mv^2
+}.
+\]
+
+
+\subsection{Partícula liberada desde el reposo}
+
+Si
+
+\[
+K_i=0,
+\]
+
+entonces
+
+\[
+U_i=K_f+U_f.
+\]
+
+Por tanto,
+
+\[
+\boxed{
+K_f=U_i-U_f
+}.
+\]
+
+Como
+
+\[
+K_f=\frac12mv_f^2,
+\]
+
+resulta
+
+\[
+\boxed{
+\frac12mv_f^2=U_i-U_f
+}
+\]
+
+y
+
+\[
+\boxed{
+v_f=
+\sqrt{
+\frac{2(U_i-U_f)}{m}
+}
+}.
+\]
+
+
+\subsection{Rapidez entre dos posiciones}
+
+Si la partícula posee inicialmente rapidez \(v_i\),
+
+\[
+\frac12mv_i^2+U_i
+=
+\frac12mv_f^2+U_f.
+\]
+
+Despejando,
+
+\[
+\boxed{
+v_f
+=
+\sqrt{
+v_i^2+
+\frac{2(U_i-U_f)}{m}
+}
+}.
+\]
+
+
+\subsection{Dos cargas y conservación de la energía}
+
+Para una carga móvil \(q\) que interactúa con una carga fija \(Q\),
+
+\[
+U_i=k\frac{Qq}{r_i},
+\qquad
+U_f=k\frac{Qq}{r_f}.
+\]
+
+Entonces,
+
+\[
+\boxed{
+\frac12mv_i^2
++
+k\frac{Qq}{r_i}
+=
+\frac12mv_f^2
++
+k\frac{Qq}{r_f}
+}.
+\]
+
+Si parte del reposo,
+
+\[
+\boxed{
+\frac12mv_f^2
+=
+kQq
+\left(
+\frac{1}{r_i}
+-
+\frac{1}{r_f}
+\right)
+}.
+\]
+
+
+\subsection{Movimiento espontáneo}
+
+Si sólo actúa la interacción eléctrica,
+
+\[
+\boxed{
+U\downarrow
+\Longrightarrow
+K\uparrow
+}.
+\]
+
+Para cargas del mismo signo,
+
+\[
+\boxed{
+r\uparrow,\qquad U\downarrow,\qquad K\uparrow
+}.
+\]
+
+Para cargas de signos opuestos,
+
+\[
+\boxed{
+r\downarrow,\qquad U\downarrow,\qquad K\uparrow
+}.
+\]
+
+
+\subsection{Fuerza a partir de la energía potencial}
+
+Para una interacción radial,
+
+\[
+\boxed{
+F_r=-\frac{dU}{dr}
+}.
+\]
+
+Si
+
+\[
+U=k\frac{q_1q_2}{r},
+\]
+
+entonces
+
+\[
+\boxed{
+F_r=k\frac{q_1q_2}{r^2}
+}.
+\]
+
+El signo indica el sentido radial:
+
+\[
+q_1q_2>0
+\Longrightarrow
+F_r>0
+\]
+
+corresponde a repulsión,
+
+\[
+q_1q_2<0
+\Longrightarrow
+F_r<0
+\]
+
+corresponde a atracción.
+
+
+\subsection{Procedimiento para dos cargas}
+
+\begin{enumerate}
+    \item Identificar \(q_1\), \(q_2\) y la separación \(r\).
+    \item Convertir las magnitudes al SI.
+    \item Conservar los signos de las cargas.
+    \item Aplicar
+    \[
+    U=k\frac{q_1q_2}{r}.
+    \]
+    \item Interpretar el signo del resultado.
+\end{enumerate}
+
+
+\subsection{Procedimiento para un sistema de varias cargas}
+
+\begin{enumerate}
+    \item Identificar todas las cargas.
+    \item Determinar las distancias entre cada par.
+    \item Calcular
+    \[
+    U_{ij}=k\frac{q_iq_j}{r_{ij}}.
+    \]
+    \item Conservar el signo de cada producto \(q_iq_j\).
+    \item Contar cada par una sola vez.
+    \item Sumar:
+    \[
+    U=\sum_{i<j}U_{ij}.
+    \]
+    \item Interpretar el signo y el valor de la energía total.
+\end{enumerate}
+
+
+\subsection{Procedimiento para problemas de movimiento}
+
+\begin{enumerate}
+    \item Definir el estado inicial y el estado final.
+    \item Calcular \(U_i\).
+    \item Calcular \(U_f\).
+    \item Determinar \(K_i\).
+    \item Aplicar
+    \[
+    K_i+U_i=K_f+U_f.
+    \]
+    \item Despejar la rapidez o la magnitud solicitada.
+    \item Comprobar que la energía cinética obtenida sea físicamente posible:
+    \[
+    K_f\geq0.
+    \]
+\end{enumerate}
+
+
+\subsection{Advertencias}
+
+\begin{itemize}
+    \item No utilizar valor absoluto en
+    \[
+    U=k\frac{q_1q_2}{r}.
+    \]
+
+    \item La energía potencial es escalar; no tiene dirección.
+
+    \item Una energía potencial negativa es físicamente válida.
+
+    \item El valor de \(U\) depende de la referencia elegida.
+
+    \item Para cargas puntuales aisladas suele utilizarse
+    \[
+    U(\infty)=0.
+    \]
+
+    \item El trabajo realizado por la fuerza eléctrica satisface
+    \[
+    W_e=-\Delta U.
+    \]
+
+    \item El trabajo externo cuasiestático satisface
+    \[
+    W_{\text{ext}}=\Delta U.
+    \]
+
+    \item En un sistema de varias cargas, cada interacción se cuenta una sola vez.
+
+    \item Una carga neta total igual a cero no implica
+    \[
+    U=0.
+    \]
+
+    \item La conservación
+    \[
+    K_i+U_i=K_f+U_f
+    \]
+    requiere que no existan transferencias adicionales de energía que hayan sido
+    omitidas.
+\end{itemize}
+
+
+\subsection{Resumen de fórmulas}
+
+\begin{align*}
+W_e
+&=
+\int_A^B
+\left(
+F_x\,dx+F_y\,dy+F_z\,dz
+\right),\\
+W_e
+&=
+q\int_A^B
+\left(
+E_x\,dx+E_y\,dy+E_z\,dz
+\right),\\
+\Delta U
+&=-W_e,\\
+W_{\text{ext}}
+&=\Delta U,\\
+\Delta U
+&=
+-q\int_A^B
+\left(
+E_x\,dx+E_y\,dy+E_z\,dz
+\right),\\
+\Delta U_{\text{uniforme}}
+&=
+-q(E_x\Delta x+E_y\Delta y+E_z\Delta z),\\
+U
+&=
+k\frac{q_1q_2}{r},\\
+\Delta U
+&=
+kq_1q_2
+\left(
+\frac{1}{r_f}-\frac{1}{r_i}
+\right),\\
+W_e
+&=
+kq_1q_2
+\left(
+\frac{1}{r_i}-\frac{1}{r_f}
+\right),\\
+U_{\text{sistema}}
+&=
+k\sum_{i<j}\frac{q_iq_j}{r_{ij}},\\
+N_{\text{pares}}
+&=
+\frac{N(N-1)}{2},\\
+K
+&=
+\frac12mv^2,\\
+K_i+U_i
+&=
+K_f+U_f,\\
+\Delta K
+&=-\Delta U,\\
+F_r
+&=
+-\frac{dU}{dr}.
+\end{align*}

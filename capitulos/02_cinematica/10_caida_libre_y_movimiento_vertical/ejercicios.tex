@@ -1,0 +1,410 @@
+\begin{condicion}[Convenciones para los ejercicios]
+Salvo indicación contraria, represente cada cuerpo como una partícula, desprecie la resistencia del aire y considere constante \(g=\SI{9.81}{\meter\per\second\squared}\). El sistema de referencia está fijo al suelo y el sentido positivo del eje vertical es hacia arriba; por tanto, \(a_y=-g\). Cada solución precisa el origen espacial y temporal. El modelo termina al producirse un impacto o una captura.
+
+\(v_y\) es la componente vertical de la velocidad; la rapidez es \(\lvert v_y\rvert\). Conserve cifras durante el cálculo y exprese normalmente los resultados con tres cifras significativas. Justifique las respuestas conceptuales y compruebe que los tiempos pertenecen al intervalo físico estudiado.
+\end{condicion}
+
+\nivelbasico
+
+\begin{ejercicio}
+\textbf{Reconocer el modelo.} Determine cuáles de estas situaciones pueden describirse mediante caída libre ideal: a) una pelota que asciende después de abandonar la mano; b) la misma pelota en su punto más alto; c) un libro apoyado en una mesa; d) una hoja que desciende con resistencia del aire importante. Dos esferas de masas diferentes se sueltan simultáneamente desde una misma altura en el vacío: ¿cuál llega primero?
+\end{ejercicio}
+\begin{respuesta}
+a) y b) admiten el modelo; c) y d) no. Las esferas llegan simultáneamente si parten del reposo en el mismo campo gravitatorio.
+\end{respuesta}
+\begin{explicacion}
+La caída libre se define por las interacciones que actúan, no por el sentido de la velocidad. Después de abandonar la mano, la pelota puede estar ascendiendo, detenerse instantáneamente o descender mientras su aceleración sigue siendo gravitatoria. La mesa ejerce una interacción de soporte sobre el libro y el aire modifica significativamente el movimiento de la hoja, de modo que esos casos no corresponden al modelo.
+
+Para las esferas, elegimos el suelo como \(y=0\) y la liberación como \(t=0\). Ambas cumplen \(y=h-gt^2/2\), pues comparten \(y_0=h\), \(v_{0y}=0\) y \(a_y=-g\). El tiempo de llegada \(t=\sqrt{2h/g}\) no depende de la masa. Llegan juntas; esta conclusión no se traslada automáticamente a objetos que caen en el aire.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{Velocidad y aceleración.} Una pelota se lanza verticalmente hacia arriba. Indique los signos de \(v_y\) y \(a_y\), y cómo cambia su rapidez, durante el ascenso, en la altura máxima y durante el descenso. Explique qué significa \(g=\SI{9.81}{\meter\per\second\squared}\). ¿La aceleración cambia de sentido en el punto más alto?
+\end{ejercicio}
+\begin{respuesta}
+Ascenso: \(v_y>0\), \(a_y<0\), rapidez decreciente. Cima: \(v_y=0\), \(a_y=-g\). Descenso: \(v_y<0\), \(a_y<0\), rapidez creciente. La aceleración siempre apunta hacia abajo; \(v_y\) cambia en \(-\SI{9.81}{\meter\per\second}\) por cada segundo de vuelo.
+\end{respuesta}
+\begin{explicacion}
+Tomamos el punto de lanzamiento como origen y \(t=0\) al liberar la pelota. El modelo prescribe \(v_y=v_{0y}-gt\), cuya pendiente es siempre \(-g\). Mientras \(v_y>0\), restar \(g\Delta t\) reduce la rapidez. Cuando \(v_y<0\), la misma resta aumenta \(\lvert v_y\rvert\).
+
+En la cima, una velocidad instantáneamente nula no implica aceleración nula. Un breve intervalo \(\Delta t>0\) después, \(v_y=-g\Delta t<0\): la pelota comienza a bajar. Las unidades \(\si{\meter\per\second\squared}\) expresan un cambio de velocidad por unidad de tiempo, no una distancia fija recorrida cada segundo.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{Caída durante un intervalo conocido.} Se suelta una pequeña esfera desde el reposo. Aún no ha tocado el suelo después de \(\SI{1.20}{\second}\). Determine su desplazamiento, distancia recorrida y velocidad en ese instante.
+
+\textbf{Pista:} tome como origen el punto de liberación y distinga desplazamiento de distancia.
+\end{ejercicio}
+\begin{respuesta}
+\(\Delta y=-\SI{7.06}{\meter}\), distancia \(s=\SI{7.06}{\meter}\) y \(v_y=-\SI{11.8}{\meter\per\second}\), hacia abajo.
+\end{respuesta}
+\begin{explicacion}
+Con \(y_0=0\), \(v_{0y}=0\) y \(t=0\) al soltar, aplicamos el MRUA vertical:
+\[ \Delta y=-\frac12gt^2=-\frac12(\SI{9.81}{\meter\per\second\squared})(\SI{1.20}{\second})^2\approx-\SI{7.06}{\meter}. \]
+\[ v_y=-gt=-(\SI{9.81}{\meter\per\second\squared})(\SI{1.20}{\second})\approx-\SI{11.8}{\meter\per\second}. \]
+No hay inversión del movimiento, por lo que \(s=\lvert\Delta y\rvert=\SI{7.06}{\meter}\). Los signos negativos indican posiciones y velocidades hacia abajo respecto del origen. Como comprobación, la velocidad media es \(v_y/2\), y su producto por el tiempo reproduce el desplazamiento.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{Tiempo y velocidad de llegada.} Una esfera se suelta desde \(\SI{12.0}{\meter}\) sobre el suelo. Calcule el tiempo de caída y su velocidad justo antes del impacto. Explique cuál de las raíces temporales se utiliza.
+\end{ejercicio}
+\begin{respuesta}
+\(t\approx\SI{1.56}{\second}\); \(v_y\approx-\SI{15.3}{\meter\per\second}\), hacia abajo. Se utiliza la raíz positiva posterior a la liberación.
+\end{respuesta}
+\begin{explicacion}
+Situamos el suelo en \(y=0\) y fijamos \(t=0\) al soltar. Los datos son \(y_0=h=\SI{12.0}{\meter}\) y \(v_{0y}=0\). La condición de impacto es
+\[ 0=h-\frac12gt^2,\qquad t=\pm\sqrt{\frac{2h}{g}}. \]
+El movimiento pedido comienza en \(t=0\); la raíz negativa pertenece a una prolongación matemática anterior. Así,
+\[ t=\sqrt{\frac{2(\SI{12.0}{\meter})}{\SI{9.81}{\meter\per\second\squared}}}\approx\SI{1.56}{\second}. \]
+Sin redondear ese tiempo, \(v_y=-gt\approx-\SI{15.3}{\meter\per\second}\). También \(v_y=-\sqrt{2gh}\) da el mismo resultado. La rapidez es \(\SI{15.3}{\meter\per\second}\); el signo de la componente identifica el descenso.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{Lanzamiento hacia abajo.} Una pelota se lanza hacia abajo a \(\SI{3.00}{\meter\per\second}\). Durante los primeros \(\SI{0.800}{\second}\) no encuentra obstáculos. Determine su desplazamiento y velocidad al final del intervalo. ¿Sería correcto usar solamente \(h=gt^2/2\) para la distancia descendida?
+\end{ejercicio}
+\begin{respuesta}
+\(\Delta y\approx-\SI{5.54}{\meter}\) y \(v_y\approx-\SI{10.8}{\meter\per\second}\), hacia abajo. No: debe incluirse el término de velocidad inicial.
+\end{respuesta}
+\begin{explicacion}
+Con origen en el punto de lanzamiento y \(t=0\) al liberar, \(v_{0y}=-\SI{3.00}{\meter\per\second}\). La aceleración también es negativa. Las ecuaciones generales dan
+\[ \Delta y=v_{0y}t-\frac12gt^2=-(3.00)(0.800)\,\si{\meter}-\frac12(9.81)(0.800)^2\,\si{\meter}\approx-\SI{5.54}{\meter}, \]
+\[ v_y=v_{0y}-gt=-3.00\,\si{\meter\per\second}-(9.81)(0.800)\,\si{\meter\per\second}\approx-\SI{10.8}{\meter\per\second}. \]
+La distancia descendida es \(\SI{5.54}{\meter}\). La expresión \(gt^2/2\) omitiría \(\SI{2.40}{\meter}\) debidos al término \(\lvert v_{0y}\rvert t\). La rapidez aumenta porque velocidad y aceleración tienen el mismo sentido.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{Un lanzamiento y sus unidades.} Una pelota abandona un lanzador vertical con rapidez de \(\SI{54.0}{\kilo\meter\per\hour}\) hacia arriba. Determine el tiempo de subida, la altura ganada y el tiempo de regreso al nivel de lanzamiento. ¿Con qué velocidad regresa?
+
+\textbf{Pista:} convierta la rapidez al SI antes de calcular.
+\end{ejercicio}
+\begin{respuesta}
+\(v_{0y}=\SI{15.0}{\meter\per\second}\), \(t_{\text{subida}}\approx\SI{1.53}{\second}\), \(\Delta y_{\max}\approx\SI{11.5}{\meter}\), \(t_{\text{total}}\approx\SI{3.06}{\second}\) y \(v_y=-\SI{15.0}{\meter\per\second}\) al regresar.
+\end{respuesta}
+\begin{explicacion}
+El origen es el punto de lanzamiento y \(t=0\) corresponde a la salida. La conversión es
+\[ 54.0\,\frac{\si{\kilo\meter}}{\si{\hour}}\frac{1000\,\si{\meter}}{1\,\si{\kilo\meter}}\frac{1\,\si{\hour}}{3600\,\si{\second}}=\SI{15.0}{\meter\per\second}. \]
+En la cima \(v_y=0\), por lo que \(0=v_{0y}-gt_{\text{subida}}\) implica \(t_{\text{subida}}=15.0/9.81\,\si{\second}\approx\SI{1.53}{\second}\). Para la altura no necesitamos el tiempo:
+\[ 0=v_{0y}^2-2g\Delta y_{\max},\qquad \Delta y_{\max}=\frac{(\SI{15.0}{\meter\per\second})^2}{2(\SI{9.81}{\meter\per\second\squared})}\approx\SI{11.5}{\meter}. \]
+Al volver a \(y=0\), \(t(v_{0y}-gt/2)=0\). La raíz no nula es \(t_{\text{total}}=2v_{0y}/g\approx\SI{3.06}{\second}\). Entonces \(v_y=v_{0y}-2v_{0y}=-\SI{15.0}{\meter\per\second}\). Esta simetría exige regresar al mismo nivel y mantener el modelo ideal.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{Interpretar un esquema.} La figura representa una pelota en cierto instante. El origen está en el suelo y \(+y\) apunta hacia arriba. Escriba \(y\), \(v_y\), la rapidez y \(a_y\). Indique si la rapidez aumenta o disminuye. Si se conserva el origen y se invierte el eje, ¿cómo cambian estas cantidades?
+\begin{center}
+\begin{tikzpicture}[>=Latex]
+\draw[->] (0,0)--(0,3.2) node[above] {\(+y\)};
+\draw (-0.3,0)--(2.8,0) node[right] {suelo, \(y=0\)};
+\fill (1,2) circle (2.5pt);
+\draw[dashed] (0,2)--(1,2);
+\node[left] at (0,2) {\(\SI{6.00}{\meter}\)};
+\draw[->,thick] (1,1.9)--(1,0.8) node[right] {\(\vect{v}:\ \SI{4.00}{\meter\per\second}\)};
+\draw[->,thick] (2.3,2)--(2.3,1.3) node[right] {\(\vect{a}\)};
+\end{tikzpicture}
+\end{center}
+\end{ejercicio}
+\begin{respuesta}
+\(y=\SI{6.00}{\meter}\), \(v_y=-\SI{4.00}{\meter\per\second}\), rapidez \(\SI{4.00}{\meter\per\second}\), \(a_y=-\SI{9.81}{\meter\per\second\squared}\). La rapidez aumenta. Al invertir el eje cambian los signos de \(y\), \(v_y\) y \(a_y\); la rapidez no cambia.
+\end{respuesta}
+\begin{explicacion}
+La posición es positiva porque la pelota está sobre el origen. La velocidad es negativa porque apunta en sentido contrario a \(+y\): el signo de la posición no determina el signo de la velocidad. Como la aceleración y la velocidad apuntan hacia abajo, la rapidez aumenta.
+
+Con una nueva coordenada \(y'=-y\), se tiene \(v_{y'}=-v_y\) y \(a_{y'}=-a_y\). Por tanto, \(y'=-\SI{6.00}{\meter}\), \(v_{y'}=\SI{4.00}{\meter\per\second}\) y \(a_{y'}=\SI{9.81}{\meter\per\second\squared}\). Ni el movimiento ni la rapidez cambian: solo cambia su descripción mediante componentes.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{Dimensiones y condiciones de uso.} Para una altura \(h>0\) se proponen tres expresiones para el tiempo: a) \(\sqrt{2h/g}\); b) \(2h/g\); c) \(\sqrt{h/g}\). ¿Cuáles tienen dimensiones de tiempo? ¿Cuáles dan el tiempo correcto de caída desde el reposo? ¿Basta el análisis dimensional para demostrar una fórmula?
+\end{ejercicio}
+\begin{respuesta}
+a) y c) tienen dimensiones de tiempo; solo a) da el tiempo de caída desde el reposo. b) tiene dimensiones de tiempo al cuadrado. La homogeneidad dimensional es necesaria, pero no suficiente.
+\end{respuesta}
+\begin{explicacion}
+Como \([h]=L\) y \([g]=LT^{-2}\), \([h/g]=T^2\) y \([\sqrt{h/g}]=T\). Los factores numéricos adimensionales no alteran esas dimensiones.
+
+Elegimos el suelo como origen y \(t=0\) al liberar. El modelo físico aporta \(0=h-gt^2/2\), de donde \(t=\sqrt{2h/g}\) para \(t>0\). La opción c) omite un factor \(\sqrt{2}\), aunque sus dimensiones son correctas. Además, incluso a) requiere velocidad inicial nula, aceleración constante y ausencia de resistencia significativa del aire.
+\end{explicacion}
+
+\nivelintermedio
+
+\begin{ejercicio}
+\textbf{Lanzamiento desde una plataforma.} Desde una plataforma a \(\SI{18.0}{\meter}\) del suelo se lanza una pelota hacia arriba a \(\SI{12.0}{\meter\per\second}\), por una trayectoria libre de obstáculos. Prediga si su rapidez al llegar al suelo será mayor o menor que la inicial. Determine la altura máxima sobre el suelo, el tiempo total y la velocidad de impacto. Explique por qué no puede usarse \(2v_{0y}/g\) para el tiempo total.
+\end{ejercicio}
+\begin{respuesta}
+La rapidez final es mayor: \(y_{\max}\approx\SI{25.3}{\meter}\), \(t\approx\SI{3.50}{\second}\) y \(v_y\approx-\SI{22.3}{\meter\per\second}\), hacia abajo. El nivel final es distinto del inicial.
+\end{respuesta}
+\begin{explicacion}
+Con suelo en \(y=0\) y lanzamiento en \(t=0\), tenemos \(y_0=\SI{18.0}{\meter}\) y \(v_{0y}=\SI{12.0}{\meter\per\second}\). Al regresar a la plataforma recupera su rapidez inicial y luego sigue acelerando hacia abajo; por ello se espera una rapidez final mayor.
+\[ y_{\max}=y_0+\frac{v_{0y}^2}{2g}=18.0\,\si{\meter}+\frac{(\SI{12.0}{\meter\per\second})^2}{2(\SI{9.81}{\meter\per\second\squared})}\approx\SI{25.3}{\meter}. \]
+La condición de llegada \(0=y_0+v_{0y}t-gt^2/2\) produce
+\[ t=\frac{v_{0y}\pm\sqrt{v_{0y}^2+2gy_0}}{g}. \]
+Las raíces son aproximadamente \(\SI{3.50}{\second}\) y \(-\SI{1.05}{\second}\). Solo la positiva pertenece al vuelo posterior al lanzamiento. Sin redondear, \(v_y=v_{0y}-gt\approx-\SI{22.3}{\meter\per\second}\).
+
+La comprobación \(v_y^2=v_{0y}^2+2gy_0\) confirma la rapidez. El valor \(2v_{0y}/g\approx\SI{2.45}{\second}\) corresponde al regreso a la plataforma, no al impacto en el suelo.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{Dos pasos por una altura.} Una pelota sale del suelo a \(\SI{18.0}{\meter\per\second}\) hacia arriba. Determine todos los instantes posteriores al lanzamiento en que se encuentra a \(\SI{10.0}{\meter}\), así como su velocidad en cada paso. ¿Puede alcanzar \(\SI{18.0}{\meter}\) de altura?
+\end{ejercicio}
+\begin{respuesta}
+A \(\SI{10.0}{\meter}\): \(t_1\approx\SI{0.682}{\second}\), \(v_{y1}\approx+\SI{11.3}{\meter\per\second}\); \(t_2\approx\SI{2.99}{\second}\), \(v_{y2}\approx-\SI{11.3}{\meter\per\second}\). No alcanza \(\SI{18.0}{\meter}\): \(y_{\max}\approx\SI{16.5}{\meter}\).
+\end{respuesta}
+\begin{explicacion}
+Con origen en el suelo y \(t=0\) al lanzar, \(y=v_{0y}t-gt^2/2\). Para una altura \(h\),
+\[ t_{1,2}=\frac{v_{0y}\mp\sqrt{v_{0y}^2-2gh}}{g}. \]
+Con \(h=\SI{10.0}{\meter}\), la raíz cuadrada es \(\sqrt{324-196.2}\,\si{\meter\per\second}\). Resultan \(t_1\approx\SI{0.682}{\second}\) y \(t_2\approx\SI{2.99}{\second}\). Sustituir en \(v_y=v_{0y}-gt\) da \(+\SI{11.3}{\meter\per\second}\) en el ascenso y \(-\SI{11.3}{\meter\per\second}\) en el descenso. Ambas raíces pertenecen al vuelo.
+
+La altura máxima es \(v_{0y}^2/(2g)\approx\SI{16.5}{\meter}\). Para \(h=\SI{18.0}{\meter}\), \(v_{0y}^2-2gh<0\), por lo que no existe tiempo real: la ausencia de raíces expresa que esa altura es inaccesible con las condiciones iniciales dadas.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{Leer áreas y pendientes.} La gráfica muestra la velocidad de una pelota durante un vuelo ideal; en \(t=0\), \(y=0\). Los extremos corresponden a \(v_y=\pm\SI{19.62}{\meter\per\second}\).
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[width=0.82\linewidth,height=6cm,axis lines=middle,xmin=0,xmax=4.5,ymin=-23,ymax=24,xlabel={\(t\ (\si{\second})\)},ylabel={\(v_y\ (\si{\meter\per\second})\)},xtick={0,1,2,3,4},ytick={-19.62,0,19.62},grid=major]
+\addplot[AzulPrincipal,very thick,domain=0:4,samples=2]{19.62-9.81*x};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+Determine la aceleración, el instante de altura máxima, el desplazamiento y la distancia recorrida entre \(0\) y \(\SI{4.00}{\second}\). Construya las gráficas \(y-t\) y \(a_y-t\), indicando sus puntos o valores principales. ¿La parábola \(y-t\) es la trayectoria espacial?
+\end{ejercicio}
+\begin{respuesta}
+\(a_y=-\SI{9.81}{\meter\per\second\squared}\), cima en \(\SI{2.00}{\second}\), \(\Delta y=0\), \(s\approx\SI{39.2}{\meter}\). \(y-t\) es una parábola cóncava hacia abajo, con vértice en \((\SI{2.00}{\second},\SI{19.6}{\meter})\); \(a_y-t\) es horizontal en \(-g\). La trayectoria espacial es una recta vertical.
+\end{respuesta}
+\begin{explicacion}
+La pendiente representa la aceleración:
+\[ a_y=\frac{-19.62-19.62}{4.00}\,\si{\meter\per\second\squared}=-\SI{9.81}{\meter\per\second\squared}. \]
+La velocidad se anula en \(\SI{2.00}{\second}\). El área positiva del primer triángulo es \(\frac12(2.00)(19.62)\,\si{\meter}=\SI{19.62}{\meter}\); la del segundo tiene igual magnitud y signo negativo. Por ello, \(\Delta y=0\) y la suma de las magnitudes da \(s=\SI{39.24}{\meter}\approx\SI{39.2}{\meter}\).
+
+Integrar gráficamente la velocidad, o usar MRUA, conduce a \(y=(\SI{19.62}{\meter\per\second})t-\frac12gt^2\). La siguiente construcción muestra las otras dos representaciones del mismo vuelo:
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[width=0.73\linewidth,height=4.8cm,axis lines=left,xmin=0,xmax=4.2,ymin=0,ymax=23,xlabel={\(t\ (\si{\second})\)},ylabel={\(y\ (\si{\meter})\)},xtick={0,2,4},ytick={0,19.62},grid=major]
+\addplot[AzulPrincipal,thick,domain=0:4,samples=60]{19.62*x-4.905*x^2};
+\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\begin{axis}[width=0.73\linewidth,height=4.2cm,axis lines=left,xmin=0,xmax=4.2,ymin=-12,ymax=1,xlabel={\(t\ (\si{\second})\)},ylabel={\(a_y\ (\si{\meter\per\second\squared})\)},xtick={0,2,4},ytick={-9.81,0},grid=major]
+\addplot[RojoPrincipal,thick,domain=0:4,samples=2]{-9.81};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+La primera gráfica vuelve al origen en \(\SI{4.00}{\second}\); su pendiente cambia de positiva a negativa. La segunda no cambia en la cima. El eje horizontal de \(y-t\) es tiempo, no una coordenada horizontal espacial: el objeto se mueve sobre una recta vertical.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{Distancia y valores medios.} Una pelota se lanza desde el suelo hacia arriba a \(\SI{14.0}{\meter\per\second}\). Para el intervalo de los primeros \(\SI{2.00}{\second}\), calcule desplazamiento, distancia recorrida, velocidad media y rapidez media. Verifique antes que la pelota todavía no haya regresado al suelo.
+\end{ejercicio}
+\begin{respuesta}
+\(\Delta y=\SI{8.38}{\meter}\), \(s\approx\SI{11.6}{\meter}\), \(\bar v_y=\SI{4.19}{\meter\per\second}\) y rapidez media \(\approx\SI{5.80}{\meter\per\second}\). El regreso ocurre a los \(\SI{2.85}{\second}\).
+\end{respuesta}
+\begin{explicacion}
+Con suelo en \(y=0\) y salida en \(t=0\), \(t_{\max}=14.0/9.81\,\si{\second}\approx\SI{1.43}{\second}\) y \(t_{\text{regreso}}=2t_{\max}\approx\SI{2.85}{\second}\). El intervalo pedido incluye ascenso y parte del descenso, pero no el impacto.
+\[ y(\SI{2.00}{\second})=(14.0)(2.00)\,\si{\meter}-\frac12(9.81)(2.00)^2\,\si{\meter}=\SI{8.38}{\meter}. \]
+La cima está en \(y_{\max}=14.0^2/(2\cdot9.81)\,\si{\meter}\approx\SI{9.99}{\meter}\). Se recorre primero \(y_{\max}\) hacia arriba y luego \(y_{\max}-y(2.00\,\si{\second})\) hacia abajo:
+\[ s=2y_{\max}-y(\SI{2.00}{\second})\approx\SI{11.6}{\meter}. \]
+Por definición, \(\bar v_y=\Delta y/\Delta t=\SI{4.19}{\meter\per\second}\), mientras la rapidez media es \(s/\Delta t\approx\SI{5.80}{\meter\per\second}\). La desigualdad entre ambos valores procede de la inversión del movimiento, no de un cambio del eje.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{Liberaciones sucesivas.} Desde el mismo punto se sueltan dos pequeñas esferas, B exactamente \(\SI{0.400}{\second}\) después que A. Calcule su separación y sus velocidades cuando B lleva \(\SI{0.600}{\second}\) cayendo. Suponga que ninguna ha impactado. ¿La separación permanece constante porque ambas tienen la misma aceleración?
+\end{ejercicio}
+\begin{respuesta}
+Separación \(\SI{3.14}{\meter}\), con A debajo; \(v_{Ay}=-\SI{9.81}{\meter\per\second}\), \(v_{By}=-\SI{5.89}{\meter\per\second}\). La separación aumenta; la diferencia de velocidades permanece constante después de liberar B.
+\end{respuesta}
+\begin{explicacion}
+Elegimos el punto de liberación como \(y=0\) y \(t=0\) cuando sale A. B comienza en \(t=\tau=\SI{0.400}{\second}\). Para \(t\geq\tau\),
+\[ y_A=-\frac12gt^2,\qquad y_B=-\frac12g(t-\tau)^2. \]
+En el instante pedido, \(t=\SI{1.00}{\second}\) y el tiempo de vuelo de B es \(\SI{0.600}{\second}\). Entonces \(y_A=-\SI{4.905}{\meter}\), \(y_B=-\SI{1.7658}{\meter}\), y \(y_B-y_A\approx\SI{3.14}{\meter}\).
+
+Las velocidades son \(v_{Ay}=-gt=-\SI{9.81}{\meter\per\second}\) y \(v_{By}=-g(t-\tau)\approx-\SI{5.89}{\meter\per\second}\). Su diferencia \(v_{By}-v_{Ay}=g\tau\approx\SI{3.92}{\meter\per\second}\) es constante y positiva. Por tanto, la separación crece a ritmo constante después de la segunda liberación. Igual aceleración no significa igual velocidad ni separación constante.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{Estimar la gravedad a partir de datos.} Un sensor registra la distancia descendida \(h\) por una esfera soltada desde el reposo:
+\begin{center}
+\begin{tabular}{c c c c c}
+\toprule
+\(t\ (\si{\second})\)&0.100&0.200&0.300&0.400\\
+\(h\ (\si{\meter})\)&0.049&0.196&0.441&0.785\\
+\bottomrule
+\end{tabular}
+\end{center}
+Indique qué variables graficaría para obtener una recta. Estime su pendiente usando el primer y último punto, deduzca \(g_{\text{exp}}\) y calcule su diferencia porcentual respecto de \(\SI{9.81}{\meter\per\second\squared}\). ¿Prueba la tabla que la resistencia del aire sea exactamente cero?
+\end{ejercicio}
+\begin{respuesta}
+Graficar \(h\) frente a \(t^2\). Pendiente \(m\approx\SI{4.91}{\meter\per\second\squared}\), \(g_{\text{exp}}=2m\approx\SI{9.81}{\meter\per\second\squared}\); diferencia relativa aproximada \(\SI{0.034}{\percent}\) antes de redondear. Los datos son compatibles con el modelo, pero no prueban resistencia exactamente nula.
+\end{respuesta}
+\begin{explicacion}
+La distancia descendida es positiva, \(h=y_0-y\), y el reloj comienza al soltar. Para reposo inicial y aceleración constante, \(h=gt^2/2\); por tanto, la pendiente de \(h\) frente a \(t^2\) es \(g/2\), con unidades de aceleración.
+\[ m=\frac{\SI{0.785}{\meter}-\SI{0.049}{\meter}}{(\SI{0.400}{\second})^2-(\SI{0.100}{\second})^2}=\frac{0.736}{0.150}\,\si{\meter\per\second\squared}. \]
+De aquí, \(g_{\text{exp}}=2m=\SI{9.81333}{\meter\per\second\squared}\) antes del redondeo. La comparación pedida es
+\[ \frac{\lvert g_{\text{exp}}-9.81\,\si{\meter\per\second\squared}\rvert}{9.81\,\si{\meter\per\second\squared}}\,\SI{100}{\percent}\approx\SI{0.034}{\percent}. \]
+Ese porcentaje es una comparación aritmética, no una incertidumbre experimental. El redondeo de las alturas y los posibles errores del reloj limitan lo que puede concluirse. Un análisis experimental completo utilizaría todos los puntos y sus incertidumbres. La tabla respalda aproximadamente el modelo ideal en este intervalo, sin demostrar que todos los efectos omitidos sean exactamente nulos.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{Diagnosticar una solución incorrecta.} Una pelota sale hacia arriba a \(\SI{10.0}{\meter\per\second}\). Un estudiante elige \(+y\) hacia arriba, escribe \(g=-\SI{9.81}{\meter\per\second\squared}\) y concluye: «\(v_y=v_{0y}-gt\), así que a los \(\SI{0.500}{\second}\) lleva \(\SI{14.9}{\meter\per\second}\) hacia arriba; cuando llegue a la cima también se anulará su aceleración». Identifique y corrija los errores. Calcule la velocidad al instante indicado.
+\end{ejercicio}
+\begin{respuesta}
+\(g\) es una magnitud positiva y \(a_y=-g\); no debe introducirse dos veces el signo negativo. \(v_y\approx+\SI{5.10}{\meter\per\second}\). En la cima, \(v_y=0\), pero \(a_y=-\SI{9.81}{\meter\per\second\squared}\).
+\end{respuesta}
+\begin{explicacion}
+Fijamos \(t=0\) al lanzar y el origen en la salida. La ecuación general es \(v_y=v_{0y}+a_yt\). Con \(+y\) hacia arriba, \(a_y=-g\) y \(g=\SI{9.81}{\meter\per\second\squared}>0\). Por tanto,
+\[ v_y=\SI{10.0}{\meter\per\second}-(\SI{9.81}{\meter\per\second\squared})(\SI{0.500}{\second})\approx\SI{5.10}{\meter\per\second}. \]
+La pelota aún asciende, pero más despacio. La predicción incorrecta de aumento de rapidez habría sido una señal física del error de signos. La cima se alcanza a \(t=v_{0y}/g\approx\SI{1.02}{\second}\); allí solo se anula la velocidad. La aceleración permanece hacia abajo y produce el posterior descenso.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{Reconstruir el lanzamiento.} Una pelota lanzada desde \(y=0\) pasa por un sensor durante el ascenso a los \(\SI{0.800}{\second}\) y durante el descenso a los \(\SI{2.20}{\second}\). Determine su velocidad inicial, la altura del sensor y la altura máxima. Los tiempos se miden desde el lanzamiento.
+
+\textbf{Pista:} ambos tiempos satisfacen la misma ecuación de posición.
+\end{ejercicio}
+\begin{respuesta}
+\(v_{0y}\approx\SI{14.7}{\meter\per\second}\), altura del sensor \(h\approx\SI{8.63}{\meter}\) y \(y_{\max}\approx\SI{11.0}{\meter}\).
+\end{respuesta}
+\begin{explicacion}
+El sensor está en una posición fija \(h\). Para \(t_1\) y \(t_2\),
+\[ h=v_{0y}t_1-\frac12gt_1^2=v_{0y}t_2-\frac12gt_2^2. \]
+Al restar y factorizar \(t_2^2-t_1^2=(t_2-t_1)(t_2+t_1)\), se obtiene
+\[ v_{0y}=\frac{g(t_1+t_2)}2=\frac{(\SI{9.81}{\meter\per\second\squared})(\SI{3.00}{\second})}2\approx\SI{14.7}{\meter\per\second}. \]
+Sustituir esta expresión en la posición da \(h=gt_1t_2/2\approx\SI{8.63}{\meter}\). La altura máxima es \(y_{\max}=v_{0y}^2/(2g)\approx\SI{11.0}{\meter}\), calculada sin redondear la velocidad intermedia.
+
+Como comprobación, la cima ocurre en \((t_1+t_2)/2=\SI{1.50}{\second}\), entre ambos pasos. El sensor está por debajo de la cima, como exige la existencia de dos cruces distintos.
+\end{explicacion}
+
+\nivelavanzado
+
+\begin{ejercicio}
+\textbf{Una ventana como instrumento de medida.} Una esfera soltada desde el reposo pasa frente a una ventana vertical de \(\SI{1.80}{\meter}\) de altura en \(\SI{0.150}{\second}\). Determine cuánto más arriba del borde superior fue soltada, y sus velocidades al pasar por los dos bordes. La ventana solo permite observar ese tramo de la caída.
+\end{ejercicio}
+\begin{respuesta}
+La liberación ocurrió aproximadamente \(\SI{6.47}{\meter}\) sobre el borde superior. Las velocidades son \(-\SI{11.3}{\meter\per\second}\) en el borde superior y \(-\SI{12.7}{\meter\per\second}\) en el inferior.
+\end{respuesta}
+\begin{explicacion}
+Ponemos \(y=0\) en el borde superior y reiniciamos el reloj al pasar por él. Denotamos por \(u>0\) la rapidez de entrada, de modo que \(v_{0y}=-u\). Para el intervalo observado \(\tau\),
+\[ -L=-u\tau-\frac12g\tau^2,\qquad u=\frac{L}{\tau}-\frac12g\tau. \]
+Con \(L=\SI{1.80}{\meter}\) y \(\tau=\SI{0.150}{\second}\), \(u=12.0-0.73575=\SI{11.26425}{\meter\per\second}\) antes de redondear. La rapidez de salida es \(u+g\tau=\SI{12.73575}{\meter\per\second}\). Ambas componentes son negativas porque el movimiento es descendente.
+
+En la etapa anterior, la esfera pasó del reposo a rapidez \(u\) tras descender una distancia \(H\). El MRUA da \(u^2=2gH\), y por tanto
+\[ H=\frac{u^2}{2g}\approx\SI{6.47}{\meter}. \]
+La rapidez media en la ventana es \((11.26425+12.73575)/2=\SI{12.0}{\meter\per\second}\); multiplicada por \(\SI{0.150}{\second}\) reproduce \(\SI{1.80}{\meter}\). No sería correcto tratar el borde superior como un punto de reposo.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{El último segundo.} Una piedra soltada desde el reposo recorre \(\SI{15.0}{\meter}\) durante el último intervalo de \(\SI{1.00}{\second}\) anterior a llegar al suelo. Determine el tiempo total de caída y la altura de liberación. Compruebe que la solución permite hablar de un «último segundo» completo.
+\end{ejercicio}
+\begin{respuesta}
+\(T\approx\SI{2.03}{\second}\) y \(H\approx\SI{20.2}{\meter}\). Se cumple \(T>\SI{1.00}{\second}\).
+\end{respuesta}
+\begin{explicacion}
+Tomamos el punto de liberación como origen y \(t=0\) al soltar. La distancia descendida hasta \(t\) es \(h(t)=gt^2/2\). Si \(\tau=\SI{1.00}{\second}\) y \(L=\SI{15.0}{\meter}\), la distancia del último intervalo es una diferencia:
+\[ L=h(T)-h(T-\tau)=\frac12g\bigl[T^2-(T-\tau)^2\bigr]=gT\tau-\frac12g\tau^2. \]
+Así,
+\[ T=\frac{L}{g\tau}+\frac{\tau}{2}=\frac{\SI{15.0}{\meter}}{(\SI{9.81}{\meter\per\second\squared})(\SI{1.00}{\second})}+\SI{0.500}{\second}\approx\SI{2.03}{\second}. \]
+La altura es \(H=gT^2/2\approx\SI{20.2}{\meter}\). Ambos sumandos de \(T\) tienen dimensiones de tiempo. Además, \(T-\tau\approx\SI{1.03}{\second}>0\), de modo que el intervalo completo existe. La distancia previa es aproximadamente \(\SI{5.19}{\meter}\); al agregar \(\SI{15.0}{\meter}\) se recupera la altura total, dentro del redondeo.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{Encuentro en el aire.} Desde \(\SI{24.0}{\meter}\) sobre el suelo se suelta A, mientras desde el suelo se lanza simultáneamente B hacia arriba a \(\SI{16.0}{\meter\per\second}\), sobre la misma vertical. Determine si se encuentran antes de que alguno toque el suelo; si lo hacen, calcule tiempo, altura y velocidades inmediatamente antes del encuentro. Explique por qué las aceleraciones desaparecen de la ecuación de posición relativa.
+\end{ejercicio}
+\begin{respuesta}
+Se encuentran a los \(\SI{1.50}{\second}\), a \(\SI{13.0}{\meter}\) del suelo. \(v_{Ay}\approx-\SI{14.7}{\meter\per\second}\) y \(v_{By}\approx+\SI{1.29}{\meter\per\second}\). La aceleración relativa es nula porque ambas aceleraciones son iguales.
+\end{respuesta}
+\begin{explicacion}
+Usamos el suelo como origen y un reloj común desde la liberación y el lanzamiento. Antes de un encuentro o impacto,
+\[ y_A=H-\frac12gt^2,\qquad y_B=ut-\frac12gt^2. \]
+Igualar posiciones cancela los términos gravitatorios y da \(H=ut\). Por ello \(t=H/u=24.0/16.0\,\si{\second}=\SI{1.50}{\second}\). La altura común es
+\[ y=24.0\,\si{\meter}-\frac12(9.81)(1.50)^2\,\si{\meter}\approx\SI{13.0}{\meter}. \]
+Las velocidades son \(v_{Ay}=-gt\approx-\SI{14.7}{\meter\per\second}\) y \(v_{By}=u-gt\approx+\SI{1.29}{\meter\per\second}\). A desciende y B aún asciende.
+
+Sin encuentro, A llegaría al suelo a \(\sqrt{2H/g}\approx\SI{2.21}{\second}\) y B regresaría a \(2u/g\approx\SI{3.26}{\second}\); ambos tiempos son posteriores. La cancelación expresa \(a_{Ay}-a_{By}=0\), no ausencia de gravedad sobre cada cuerpo. El modelo utilizado no describe lo que ocurre después del contacto.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{Alcance con lanzamiento retrasado.} A se suelta desde una plataforma situada a \(\SI{30.0}{\meter}\) del suelo. Después de \(\SI{0.500}{\second}\), B se lanza desde el mismo punto hacia abajo a \(\SI{8.00}{\meter\per\second}\). Determine si B alcanza a A antes del suelo. Obtenga también una condición simbólica sobre la rapidez de lanzamiento \(u\), la demora \(\tau\) y la altura \(H\) para que el alcance ocurra en el aire.
+\end{ejercicio}
+\begin{respuesta}
+B alcanza a A \(\SI{0.396}{\second}\) después de su lanzamiento, o \(\SI{0.896}{\second}\) después de soltar A, a \(\SI{26.1}{\meter}\) del suelo. Para \(0<\tau<\sqrt{2H/g}\), se requiere
+\[ u>g\tau+\frac{g\tau^2}{2\bigl(\sqrt{2H/g}-\tau\bigr)}. \]
+\end{respuesta}
+\begin{explicacion}
+Tomamos el suelo como \(y=0\) y usamos \(s=0\) al lanzar B. A ya lleva \(\tau\) cayendo. Para \(s\geq0\),
+\[ y_A=H-\frac12g(s+\tau)^2,\qquad y_B=H-us-\frac12gs^2. \]
+La separación es \(y_B-y_A=\frac12g\tau^2+(g\tau-u)s\). Al imponer que sea cero,
+\[ s=\frac{g\tau^2}{2(u-g\tau)}. \]
+Se necesita \(u>g\tau\): B debe comenzar con mayor rapidez que la que A ya tiene. Con los datos,
+\[ s=\frac{(9.81)(0.500)^2}{2[8.00-(9.81)(0.500)]}\,\si{\second}\approx\SI{0.396}{\second}. \]
+El tiempo total de A es \(T=s+\tau\approx\SI{0.896}{\second}\), y \(y=H-gT^2/2\approx\SI{26.1}{\meter}>0\). El alcance sí sucede en el aire.
+
+Para generalizar, A tarda \(T_A=\sqrt{2H/g}\) en llegar al suelo. Además de \(\tau<T_A\), se exige \(s<T_A-\tau\). Sustituir la expresión de \(s\), con denominador positivo, produce la condición de la respuesta. La igualdad correspondería al alcance justo en el suelo. Si \(u\leq g\tau\), la separación no disminuye y no hay alcance durante el vuelo.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{Soltar desde un soporte que asciende.} Un globo sube verticalmente a velocidad constante de \(\SI{4.00}{\meter\per\second}\). Al estar a \(\SI{20.0}{\meter}\) del suelo libera un pequeño objeto sin impulsarlo. Determine la velocidad inicial del objeto respecto del suelo, su altura máxima y su tiempo y velocidad de llegada al suelo. Explique por qué «liberar» no significa aquí \(v_{0y}=0\). Suponga que, después de liberarlo, las interacciones con el aire y el globo son despreciables.
+\end{ejercicio}
+\begin{respuesta}
+\(v_{0y}=+\SI{4.00}{\meter\per\second}\), \(y_{\max}\approx\SI{20.8}{\meter}\), \(t\approx\SI{2.47}{\second}\) y \(v_y\approx-\SI{20.2}{\meter\per\second}\) justo antes del suelo.
+\end{respuesta}
+\begin{explicacion}
+El sistema de referencia está fijo al suelo, con \(y=0\) en él y \(t=0\) al liberar. Al cesar el contacto sin impulso, el objeto conserva inicialmente la velocidad que compartía con el globo: \(v_{0y}=\SI{4.00}{\meter\per\second}\). Reposo respecto del globo en ese instante no equivale a reposo respecto del suelo.
+
+La velocidad se anula después de \(v_{0y}/g\approx\SI{0.408}{\second}\). La altura adicional es \(v_{0y}^2/(2g)\approx\SI{0.815}{\meter}\), así que \(y_{\max}\approx\SI{20.8}{\meter}\).
+
+La condición \(0=y_0+v_{0y}t-gt^2/2\) da la raíz posterior a la liberación:
+\[ t=\frac{v_{0y}+\sqrt{v_{0y}^2+2gy_0}}{g}=\frac{4.00+\sqrt{4.00^2+2(9.81)(20.0)}}{9.81}\,\si{\second}\approx\SI{2.47}{\second}. \]
+La raíz restante es negativa y no corresponde a la etapa estudiada. Al llegar, \(v_y=-\sqrt{v_{0y}^2+2gy_0}\approx-\SI{20.2}{\meter\per\second}\). El objeto primero asciende brevemente, luego invierte su movimiento y finalmente llega al suelo descendiendo.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{Misma rapidez inicial, sentidos opuestos.} Desde una altura \(H>0\) se lanzan dos pelotas con la misma rapidez \(u>0\): una hacia arriba y otra hacia abajo, en trayectorias verticales separadas que no se intersectan. Deduzca sus velocidades al llegar al suelo y la diferencia entre sus tiempos de vuelo. Explique qué resultados dependen de \(H\) y compruebe el límite \(u\to0\).
+\end{ejercicio}
+\begin{respuesta}
+Ambas llegan con \(v_y=-\sqrt{u^2+2gH}\). Sus tiempos son
+\[ T_{\uparrow}=\frac{u+\sqrt{u^2+2gH}}{g},\qquad T_{\downarrow}=\frac{-u+\sqrt{u^2+2gH}}{g}. \]
+La diferencia \(T_{\uparrow}-T_{\downarrow}=2u/g\) es independiente de \(H\). Para \(u\to0\), ambos tiempos tienden a \(\sqrt{2H/g}\).
+\end{respuesta}
+\begin{explicacion}
+En cada trayectoria tomamos el suelo como origen y un reloj iniciado en el lanzamiento. Las condiciones son \(y_0=H\) y \(v_{0y}=\pm u\). La ecuación sin tiempo da
+\[ v_y^2=v_{0y}^2-2g(0-H)=u^2+2gH. \]
+La raíz negativa describe la llegada al suelo en ambos casos. Esto prueba la igualdad de rapidez final sin recurrir a conceptos de energía todavía no necesarios.
+
+Al resolver \(0=H\pm ut-gt^2/2\), la raíz positiva de cada caso produce los tiempos de la respuesta. Como \(H>0\), \(\sqrt{u^2+2gH}>u\) y ambos tiempos son positivos. Su diferencia es \(2u/g\): la pelota que sale hacia arriba emplea ese tiempo en volver al nivel inicial con velocidad \(-u\); desde allí repite las condiciones de la que se lanzó hacia abajo.
+
+Cada tiempo y la rapidez de impacto dependen de \(H\), pero la diferencia temporal no. Para \(u\to0\), ambos movimientos se convierten en una misma caída desde el reposo: \(T\to\sqrt{2H/g}\), \(v_y\to-\sqrt{2gH}\) y la diferencia de tiempos tiende a cero.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{Comparar campos gravitatorios.} En dos regiones ideales sin atmósfera las aceleraciones gravitatorias constantes tienen magnitudes \(g_A=g\) y \(g_B=g/4\). Se realiza en ambas un lanzamiento vertical con la misma rapidez inicial \(u\), y, en otro experimento, una caída desde el reposo desde la misma altura \(H\). Obtenga las razones B/A de: altura ganada, tiempo de subida, tiempo de caída desde \(H\) y rapidez de impacto desde \(H\). Explique por qué no todas las razones son iguales.
+\end{ejercicio}
+\begin{respuesta}
+Altura ganada: \(4\). Tiempo de subida: \(4\). Tiempo de caída: \(2\). Rapidez de impacto en la caída: \(1/2\).
+\end{respuesta}
+\begin{explicacion}
+Cada experimento se describe respecto de una superficie local fija, con eje positivo hacia arriba y \(t=0\) al liberar o lanzar. Para el lanzamiento,
+\[ \Delta y_{\max}=\frac{u^2}{2g_{\text{local}}},\qquad t_{\text{subida}}=\frac{u}{g_{\text{local}}}. \]
+Mantener \(u\) fija y dividir \(g\) entre cuatro multiplica ambas cantidades por cuatro.
+
+Para la caída desde reposo,
+\[ t_{\text{caída}}=\sqrt{\frac{2H}{g_{\text{local}}}},\qquad \lvert v_y\rvert=\sqrt{2g_{\text{local}}H}. \]
+Así, \(t_B/t_A=\sqrt{g_A/g_B}=2\) y \(\lvert v_{By}\rvert/\lvert v_{Ay}\rvert=\sqrt{g_B/g_A}=1/2\). Las razones difieren porque en el lanzamiento se fija la rapidez inicial, mientras que en la caída se fija la distancia. La gravedad menor permite subir más alto con una rapidez dada, pero produce menor rapidez tras descender una altura dada. Estas conclusiones requieren que el campo pueda aproximarse como uniforme en todo el recorrido.
+\end{explicacion}
+
+\begin{ejercicio}
+\textbf{Evaluar un experimento y sus límites.} Para estimar \(g\), un grupo suelta una esfera desde \(\SI{1.25}{\meter}\) y registra un tiempo de \(\SI{0.520}{\second}\). Calcule la estimación obtenida. Después descubre que el reloj registró \(\SI{0.020}{\second}\) más que el tiempo real: corrija el resultado. Deduzca cómo un pequeño sesgo temporal \(\delta t\) afecta aproximadamente a \(g_{\text{exp}}\), con la altura fija. ¿El primer resultado permite concluir por sí solo que existe resistencia del aire apreciable? Proponga una mejora experimental concreta.
+\end{ejercicio}
+\begin{respuesta}
+Sin corregir: \(g_{\text{exp}}\approx\SI{9.25}{\meter\per\second\squared}\). Con \(t=\SI{0.500}{\second}\): \(g_{\text{corr}}=\SI{10.0}{\meter\per\second\squared}\). Para \(\lvert\delta t\rvert\ll t\), \(\delta g_{\text{exp}}/g_{\text{exp}}\approx-2\delta t/t\). Un único resultado no identifica la causa de la discrepancia; conviene sincronizar liberación y cronometraje automático y repetir a varias alturas.
+\end{respuesta}
+\begin{explicacion}
+El modelo supone reposo inicial y toma el reloj desde la liberación hasta la llegada a una marca situada \(h\) más abajo. Entonces \(g_{\text{exp}}=2h/t^2\), y
+\[ g_{\text{exp}}=\frac{2(\SI{1.25}{\meter})}{(\SI{0.520}{\second})^2}\approx\SI{9.25}{\meter\per\second\squared}. \]
+El tiempo real corregido es \(0.520-0.020=\SI{0.500}{\second}\), de modo que
+\[ g_{\text{corr}}=\frac{2(\SI{1.25}{\meter})}{(\SI{0.500}{\second})^2}=\SI{10.0}{\meter\per\second\squared}. \]
+La corrección cambia la estimación, pero no garantiza que las demás mediciones y supuestos sean exactos. Para estudiar un sesgo pequeño sin cambiar \(h\), comparamos
+\[ \frac{g_{\text{exp}}(t+\delta t)}{g_{\text{exp}}(t)}=\left(1+\frac{\delta t}{t}\right)^{-2}. \]
+La pendiente de \(2h/t^2\) respecto de \(t\) es \(-4h/t^3\); multiplicar por \(\delta t\) y dividir por \(2h/t^2\) da \(\delta g_{\text{exp}}/g_{\text{exp}}\approx-2\delta t/t\). Es una aproximación de primer orden, válida únicamente para un sesgo pequeño. Un reloj que mide un tiempo excesivo subestima \(g\).
+
+Un tiempo sesgado, una altura mal medida, una pequeña velocidad inicial o la resistencia del aire pueden alterar el resultado. La primera estimación no permite distinguir esas causas. Una mejora es iniciar automáticamente el reloj con la liberación y detenerlo con una fotopuerta, repetir mediciones a varias alturas y revisar la linealidad de \(h\) frente a \(t^2\), junto con las incertidumbres instrumentales.
+\end{explicacion}
+
+

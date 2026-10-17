@@ -1,0 +1,3668 @@
+﻿\nivelbasico
+
+
+\begin{ejercicio}
+Un balón se lanza con rapidez inicial:
+
+\[
+v_0=\SI{20.0}{\meter\per\second}
+\]
+
+formando un ángulo:
+
+\[
+\theta_0=30.0\grado
+\]
+
+sobre la horizontal.
+
+Determine las componentes rectangulares de la velocidad inicial.
+
+\textit{Pista: descomponga primero el vector velocidad sobre los ejes \(x\) y \(y\).}
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+\boxed{
+v_{0x}\approx\SI{17.3}{\meter\per\second}
+}
+\]
+
+\[
+\boxed{
+v_{0y}=\SI{10.0}{\meter\per\second}
+}
+\]
+\end{respuesta}
+
+\begin{explicacion}
+Tomamos:
+
+\[
++x
+\]
+
+horizontal en el sentido del lanzamiento y:
+
+\[
++y
+\]
+
+vertical hacia arriba.
+
+El vector velocidad inicial puede escribirse como:
+
+\[
+\vect{v}_0
+=
+v_{0x}\ihat+v_{0y}\jhat.
+\]
+
+La componente horizontal es:
+
+\[
+v_{0x}
+=
+v_0\cos\theta_0.
+\]
+
+Sustituyendo:
+
+\[
+v_{0x}
+=
+(\SI{20.0}{\meter\per\second})
+\cos(30.0\grado).
+\]
+
+Entonces:
+
+\[
+\boxed{
+v_{0x}\approx\SI{17.3}{\meter\per\second}
+}.
+\]
+
+La componente vertical es:
+
+\[
+v_{0y}
+=
+v_0\sen\theta_0.
+\]
+
+Por tanto:
+
+\[
+v_{0y}
+=
+(\SI{20.0}{\meter\per\second})
+\sen(30.0\grado).
+\]
+
+Así:
+
+\[
+\boxed{
+v_{0y}=\SI{10.0}{\meter\per\second}
+}.
+\]
+
+Estas dos componentes describen completamente el vector velocidad inicial:
+
+\[
+\vect{v}_0
+\approx
+(17.3\ihat+10.0\jhat)
+\,\si{\meter\per\second}.
+\]
+\end{explicacion}
+
+
+\begin{ejercicio}
+Una pelota sale horizontalmente del borde de una plataforma situada a:
+
+\[
+h=\SI{19.6}{\meter}
+\]
+
+sobre el suelo, con rapidez:
+
+\[
+v_0=\SI{8.0}{\meter\per\second}.
+\]
+
+Despreciando la resistencia del aire, determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item el tiempo que tarda en llegar al suelo;
+    \item la distancia horizontal recorrida;
+    \item las componentes de la velocidad inmediatamente antes del impacto;
+    \item la rapidez de impacto.
+\end{enumerate}
+
+Use:
+
+\[
+g=\SI{9.81}{\meter\per\second\squared}.
+\]
+
+\textit{Pista: en un lanzamiento horizontal, \(v_{0y}=0\).}
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+t\approx\SI{2.00}{\second},
+\]
+
+\[
+\Delta x\approx\SI{16.0}{\meter},
+\]
+
+\[
+\vect{v}_f
+\approx
+(8.0\ihat-19.6\jhat)
+\,\si{\meter\per\second},
+\]
+
+\[
+\boxed{
+v_f\approx\SI{21.2}{\meter\per\second}
+}.
+\]
+\end{respuesta}
+
+\begin{explicacion}
+Elegimos:
+
+\[
++x
+\]
+
+horizontal en el sentido del lanzamiento y:
+
+\[
++y
+\]
+
+hacia arriba.
+
+Como el lanzamiento es horizontal:
+
+\[
+v_{0x}=\SI{8.0}{\meter\per\second},
+\]
+
+\[
+v_{0y}=0.
+\]
+
+Además:
+
+\[
+a_x=0,
+\qquad
+a_y=-g.
+\]
+
+Para determinar el tiempo utilizamos el movimiento vertical.
+
+Tomamos el punto de lanzamiento como:
+
+\[
+y_0=\SI{19.6}{\meter},
+\]
+
+y el suelo como:
+
+\[
+y_f=0.
+\]
+
+Entonces:
+
+\[
+y_f
+=
+y_0
++
+v_{0y}t
+-
+\frac{1}{2}gt^2.
+\]
+
+Como:
+
+\[
+v_{0y}=0,
+\]
+
+tenemos:
+
+\[
+0
+=
+19.6
+-
+\frac{1}{2}(9.81)t^2.
+\]
+
+Despejando:
+
+\[
+t
+=
+\sqrt{
+\frac{2(19.6)}{9.81}
+}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+t\approx\SI{2.00}{\second}
+}.
+\]
+
+Horizontalmente:
+
+\[
+\Delta x=v_{0x}t.
+\]
+
+Entonces:
+
+\[
+\Delta x
+=
+(8.0)(2.00).
+\]
+
+Así:
+
+\[
+\boxed{
+\Delta x\approx\SI{16.0}{\meter}
+}.
+\]
+
+La componente horizontal de la velocidad permanece constante:
+
+\[
+\boxed{
+v_x=\SI{8.0}{\meter\per\second}
+}.
+\]
+
+La componente vertical al impactar es:
+
+\[
+v_y
+=
+v_{0y}-gt.
+\]
+
+Entonces:
+
+\[
+v_y
+=
+-(9.81)(2.00)
+\approx
+-\SI{19.6}{\meter\per\second}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{v}_f
+\approx
+(8.0\ihat-19.6\jhat)
+\,\si{\meter\per\second}
+}.
+\]
+
+La rapidez es:
+
+\[
+v_f
+=
+\sqrt{
+v_x^2+v_y^2
+}.
+\]
+
+Entonces:
+
+\[
+v_f
+=
+\sqrt{
+(8.0)^2+(19.6)^2
+}.
+\]
+
+Así:
+
+\[
+\boxed{
+v_f\approx\SI{21.2}{\meter\per\second}
+}.
+\]
+\end{explicacion}
+
+
+\begin{ejercicio}
+Un proyectil se lanza desde el suelo con:
+
+\[
+v_0=\SI{20.0}{\meter\per\second}
+\]
+
+y:
+
+\[
+\theta_0=30.0\grado.
+\]
+
+El proyectil regresa al mismo nivel desde el cual fue lanzado.
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item el tiempo necesario para alcanzar la altura máxima;
+    \item la altura máxima;
+    \item el tiempo total de vuelo;
+    \item el alcance horizontal.
+\end{enumerate}
+
+Use:
+
+\[
+g=\SI{9.81}{\meter\per\second\squared}.
+\]
+
+\textit{Pista: en la altura máxima, \(v_y=0\).}
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+t_H\approx\SI{1.02}{\second},
+\]
+
+\[
+H\approx\SI{5.10}{\meter},
+\]
+
+\[
+t_{\mathrm{vuelo}}\approx\SI{2.04}{\second},
+\]
+
+\[
+\boxed{
+R\approx\SI{35.3}{\meter}
+}.
+\]
+\end{respuesta}
+
+\begin{explicacion}
+Primero descomponemos la velocidad inicial:
+
+\[
+v_{0x}
+=
+v_0\cos\theta_0.
+\]
+
+Entonces:
+
+\[
+v_{0x}
+=
+20.0\cos(30.0\grado)
+\approx
+\SI{17.3}{\meter\per\second}.
+\]
+
+Verticalmente:
+
+\[
+v_{0y}
+=
+v_0\sen\theta_0.
+\]
+
+Por tanto:
+
+\[
+v_{0y}
+=
+20.0\sen(30.0\grado)
+=
+\SI{10.0}{\meter\per\second}.
+\]
+
+En la altura máxima:
+
+\[
+v_y=0.
+\]
+
+Utilizamos:
+
+\[
+v_y=v_{0y}-gt.
+\]
+
+Entonces:
+
+\[
+0
+=
+10.0-9.81t_H.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+t_H\approx\SI{1.02}{\second}
+}.
+\]
+
+La altura máxima respecto del punto de lanzamiento se obtiene mediante:
+
+\[
+v_y^2
+=
+v_{0y}^2-2gH.
+\]
+
+Como:
+
+\[
+v_y=0,
+\]
+
+tenemos:
+
+\[
+H
+=
+\frac{v_{0y}^2}{2g}.
+\]
+
+Entonces:
+
+\[
+H
+=
+\frac{(10.0)^2}{2(9.81)}.
+\]
+
+Así:
+
+\[
+\boxed{
+H\approx\SI{5.10}{\meter}
+}.
+\]
+
+Como el proyectil regresa a la misma altura:
+
+\[
+t_{\mathrm{vuelo}}=2t_H.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+t_{\mathrm{vuelo}}
+\approx
+\SI{2.04}{\second}
+}.
+\]
+
+Horizontalmente:
+
+\[
+R=v_{0x}t_{\mathrm{vuelo}}.
+\]
+
+Entonces:
+
+\[
+R
+=
+(17.3)(2.04).
+\]
+
+Así:
+
+\[
+\boxed{
+R\approx\SI{35.3}{\meter}
+}.
+\]
+\end{explicacion}
+
+
+\begin{ejercicio}
+Un proyectil se lanza desde el origen con componentes iniciales:
+
+\[
+v_{0x}=\SI{20.0}{\meter\per\second},
+\]
+
+\[
+v_{0y}=\SI{15.0}{\meter\per\second}.
+\]
+
+Determine en:
+
+\[
+t=\SI{1.00}{\second}
+\]
+
+\begin{enumerate}[label=\alph*)]
+    \item su posición;
+    \item su vector velocidad;
+    \item su rapidez.
+\end{enumerate}
+
+Use:
+
+\[
+g=\SI{9.81}{\meter\per\second\squared}.
+\]
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+\vect{r}
+\approx
+(20.0\ihat+10.1\jhat)\,\si{\meter},
+\]
+
+\[
+\vect{v}
+=
+(20.0\ihat+5.19\jhat)
+\,\si{\meter\per\second},
+\]
+
+\[
+\boxed{
+v\approx\SI{20.7}{\meter\per\second}
+}.
+\]
+\end{respuesta}
+
+\begin{explicacion}
+Horizontalmente:
+
+\[
+a_x=0.
+\]
+
+Entonces:
+
+\[
+x=v_{0x}t.
+\]
+
+Por tanto:
+
+\[
+x
+=
+(20.0)(1.00)
+=
+\SI{20.0}{\meter}.
+\]
+
+Verticalmente:
+
+\[
+y
+=
+v_{0y}t
+-
+\frac{1}{2}gt^2.
+\]
+
+Entonces:
+
+\[
+y
+=
+15.0(1.00)
+-
+\frac{1}{2}(9.81)(1.00)^2.
+\]
+
+Así:
+
+\[
+y\approx\SI{10.1}{\meter}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{r}
+\approx
+(20.0\ihat+10.1\jhat)\,\si{\meter}
+}.
+\]
+
+La componente horizontal de la velocidad permanece constante:
+
+\[
+v_x
+=
+\SI{20.0}{\meter\per\second}.
+\]
+
+La componente vertical es:
+
+\[
+v_y
+=
+v_{0y}-gt.
+\]
+
+Entonces:
+
+\[
+v_y
+=
+15.0-9.81(1.00).
+\]
+
+Así:
+
+\[
+v_y
+=
+\SI{5.19}{\meter\per\second}.
+\]
+
+El vector velocidad es:
+
+\[
+\boxed{
+\vect{v}
+=
+(20.0\ihat+5.19\jhat)
+\,\si{\meter\per\second}
+}.
+\]
+
+La rapidez es:
+
+\[
+v
+=
+\sqrt{
+(20.0)^2+(5.19)^2
+}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v\approx\SI{20.7}{\meter\per\second}
+}.
+\]
+
+Como:
+
+\[
+v_y>0,
+\]
+
+el proyectil todavía está ascendiendo.
+\end{explicacion}
+
+
+\begin{ejercicio}
+Un proyectil ideal se encuentra exactamente en el punto más alto de su
+trayectoria.
+
+Indique cuáles de las siguientes afirmaciones son correctas:
+
+\begin{enumerate}[label=\alph*)]
+    \item \(v_x=0\).
+    \item \(v_y=0\).
+    \item \(\vect{v}=\vect{0}\).
+    \item \(a_x=0\).
+    \item \(a_y=-g\).
+    \item La aceleración es cero porque el proyectil deja de subir.
+\end{enumerate}
+
+Justifique físicamente cada respuesta.
+\end{ejercicio}
+
+\begin{respuesta}
+Son correctas:
+
+\[
+\boxed{\text{b), d) y e)}}.
+\]
+
+En general:
+
+\[
+v_x\neq0,
+\qquad
+v_y=0,
+\qquad
+\vect{a}=-g\jhat.
+\]
+\end{respuesta}
+
+\begin{explicacion}
+En el movimiento ideal de proyectiles:
+
+\[
+a_x=0.
+\]
+
+Por ello:
+
+\[
+v_x=v_{0x}
+\]
+
+durante todo el vuelo.
+
+En consecuencia, la afirmación a) es falsa en un lanzamiento oblicuo ordinario.
+
+En el punto más alto:
+
+\[
+\boxed{v_y=0}.
+\]
+
+Por tanto, b) es correcta.
+
+Sin embargo, como:
+
+\[
+v_x\neq0,
+\]
+
+el vector velocidad no es nulo:
+
+\[
+\vect{v}=v_x\ihat.
+\]
+
+Por ello, c) es falsa.
+
+La aceleración horizontal continúa siendo:
+
+\[
+\boxed{a_x=0},
+\]
+
+de modo que d) es correcta.
+
+La aceleración vertical permanece:
+
+\[
+\boxed{a_y=-g}.
+\]
+
+Por tanto, e) es correcta.
+
+La afirmación f) es falsa.
+
+El hecho de que:
+
+\[
+v_y=0
+\]
+
+en un instante no implica:
+
+\[
+a_y=0.
+\]
+
+De hecho, es precisamente la aceleración gravitatoria la que hace que la
+componente vertical cambie de positiva durante el ascenso a negativa durante el
+descenso.
+\end{explicacion}
+
+
+\begin{ejercicio}
+Desde la misma altura se liberan simultáneamente dos esferas.
+
+La esfera \(A\) se deja caer desde el reposo.
+
+La esfera \(B\) se lanza horizontalmente con rapidez:
+
+\[
+v_0=\SI{15}{\meter\per\second}.
+\]
+
+Desprecie la resistencia del aire.
+
+\begin{enumerate}[label=\alph*)]
+    \item ¿Cuál esfera llega primero al suelo?
+    \item ¿Tienen ambas la misma componente vertical de velocidad en cada instante?
+    \item ¿Tienen ambas la misma velocidad vectorial?
+\end{enumerate}
+
+Explique.
+\end{ejercicio}
+
+\begin{respuesta}
+\begin{enumerate}[label=\alph*)]
+    \item Llegan al suelo simultáneamente.
+    \item Sí.
+    \item No.
+\end{enumerate}
+\end{respuesta}
+
+\begin{explicacion}
+Ambas esferas comienzan desde la misma altura y tienen:
+
+\[
+v_{0y}=0.
+\]
+
+También experimentan la misma aceleración vertical:
+
+\[
+a_y=-g.
+\]
+
+Por tanto, sus movimientos verticales están descritos por exactamente las mismas
+ecuaciones:
+
+\[
+y
+=
+y_0-\frac{1}{2}gt^2,
+\]
+
+\[
+v_y=-gt.
+\]
+
+Así, para cualquier instante:
+
+\[
+y_A=y_B
+\]
+
+y:
+
+\[
+(v_y)_A=(v_y)_B.
+\]
+
+Por ello:
+
+\[
+\boxed{\text{ambas llegan al suelo al mismo tiempo}}.
+\]
+
+Sin embargo, la esfera \(B\) posee además una componente horizontal:
+
+\[
+(v_x)_B=\SI{15}{\meter\per\second},
+\]
+
+mientras que para la esfera \(A\):
+
+\[
+(v_x)_A=0.
+\]
+
+Por tanto, sus vectores velocidad completos no son iguales.
+
+El movimiento horizontal no altera el movimiento vertical dentro del modelo
+ideal.
+\end{explicacion}
+
+
+\begin{ejercicio}
+Dos proyectiles se lanzan desde el suelo con la misma rapidez:
+
+\[
+v_0=\SI{18.0}{\meter\per\second}.
+\]
+
+El primero se lanza a:
+
+\[
+\theta_1=30.0\grado,
+\]
+
+y el segundo a:
+
+\[
+\theta_2=60.0\grado.
+\]
+
+Ambos regresan al nivel de lanzamiento.
+
+Determine para cada proyectil:
+
+\begin{enumerate}[label=\alph*)]
+    \item el alcance horizontal;
+    \item el tiempo de vuelo;
+    \item la altura máxima.
+\end{enumerate}
+
+Compare los resultados.
+
+\textit{Pista: \(30\grado\) y \(60\grado\) son ángulos complementarios.}
+\end{ejercicio}
+
+\begin{respuesta}
+Para ambos:
+
+\[
+\boxed{
+R\approx\SI{28.6}{\meter}
+}.
+\]
+
+Para \(30\grado\):
+
+\[
+t_{\mathrm{vuelo}}\approx\SI{1.83}{\second},
+\qquad
+H\approx\SI{4.13}{\meter}.
+\]
+
+Para \(60\grado\):
+
+\[
+t_{\mathrm{vuelo}}\approx\SI{3.18}{\second},
+\qquad
+H\approx\SI{12.4}{\meter}.
+\]
+\end{respuesta}
+
+\begin{explicacion}
+Para el caso simétrico:
+
+\[
+R
+=
+\frac{
+v_0^2\sen(2\theta_0)
+}{
+g
+}.
+\]
+
+Para:
+
+\[
+\theta_1=30\grado,
+\]
+
+tenemos:
+
+\[
+\sen(60\grado).
+\]
+
+Para:
+
+\[
+\theta_2=60\grado,
+\]
+
+tenemos:
+
+\[
+\sen(120\grado).
+\]
+
+Como:
+
+\[
+\sen(60\grado)=\sen(120\grado),
+\]
+
+ambos alcances son iguales:
+
+\[
+R
+=
+\frac{
+(18.0)^2\sen(60\grado)
+}{
+9.81
+}.
+\]
+
+Entonces:
+
+\[
+\boxed{
+R\approx\SI{28.6}{\meter}
+}.
+\]
+
+Para \(30\grado\):
+
+\[
+v_{0y}
+=
+18.0\sen(30\grado)
+=
+\SI{9.0}{\meter\per\second}.
+\]
+
+El tiempo total es:
+
+\[
+t_{\mathrm{vuelo}}
+=
+\frac{2v_{0y}}{g}.
+\]
+
+Entonces:
+
+\[
+\boxed{
+t_{\mathrm{vuelo}}
+\approx
+\SI{1.83}{\second}
+}.
+\]
+
+La altura máxima es:
+
+\[
+H
+=
+\frac{v_{0y}^2}{2g}.
+\]
+
+Así:
+
+\[
+\boxed{
+H\approx\SI{4.13}{\meter}
+}.
+\]
+
+Para \(60\grado\):
+
+\[
+v_{0y}
+=
+18.0\sen(60\grado)
+\approx
+\SI{15.6}{\meter\per\second}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+t_{\mathrm{vuelo}}
+\approx
+\SI{3.18}{\second}
+},
+\]
+
+y:
+
+\[
+\boxed{
+H\approx\SI{12.4}{\meter}
+}.
+\]
+
+Los dos proyectiles tienen el mismo alcance, pero no siguen la misma trayectoria.
+
+El lanzamiento de \(60\grado\) alcanza mayor altura y permanece más tiempo en el
+aire.
+\end{explicacion}
+
+
+\nivelintermedio
+
+
+\begin{ejercicio}
+Desde una plataforma situada a:
+
+\[
+h=\SI{15.0}{\meter}
+\]
+
+sobre el suelo se lanza una pelota con:
+
+\[
+v_0=\SI{18.0}{\meter\per\second}
+\]
+
+y:
+
+\[
+\theta_0=35.0\grado.
+\]
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item las componentes iniciales de la velocidad;
+    \item el tiempo hasta llegar al suelo;
+    \item la distancia horizontal recorrida;
+    \item el vector velocidad justo antes del impacto;
+    \item la rapidez de impacto.
+\end{enumerate}
+
+Use:
+
+\[
+g=\SI{9.81}{\meter\per\second\squared}.
+\]
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+v_{0x}\approx\SI{14.7}{\meter\per\second},
+\qquad
+v_{0y}\approx\SI{10.3}{\meter\per\second},
+\]
+
+\[
+t\approx\SI{3.09}{\second},
+\]
+
+\[
+\Delta x\approx\SI{45.6}{\meter},
+\]
+
+\[
+\vect{v}_f
+\approx
+(14.7\ihat-20.0\jhat)
+\,\si{\meter\per\second},
+\]
+
+\[
+\boxed{
+v_f\approx\SI{24.9}{\meter\per\second}
+}.
+\]
+\end{respuesta}
+
+\begin{explicacion}
+Descomponemos primero la velocidad inicial:
+
+\[
+v_{0x}
+=
+v_0\cos\theta_0.
+\]
+
+Entonces:
+
+\[
+v_{0x}
+=
+18.0\cos(35.0\grado)
+\approx
+\boxed{\SI{14.7}{\meter\per\second}}.
+\]
+
+La componente vertical:
+
+\[
+v_{0y}
+=
+18.0\sen(35.0\grado)
+\approx
+\boxed{\SI{10.3}{\meter\per\second}}.
+\]
+
+Tomamos:
+
+\[
+y_0=\SI{15.0}{\meter},
+\qquad
+y_f=0.
+\]
+
+La ecuación vertical es:
+
+\[
+y_f
+=
+y_0+v_{0y}t-\frac{1}{2}gt^2.
+\]
+
+Por tanto:
+
+\[
+0
+=
+15.0+10.3t-4.905t^2.
+\]
+
+Reordenando:
+
+\[
+4.905t^2-10.3t-15.0=0.
+\]
+
+La ecuación produce una raíz positiva y una negativa.
+
+La raíz físicamente válida es:
+
+\[
+\boxed{
+t\approx\SI{3.09}{\second}
+}.
+\]
+
+Horizontalmente:
+
+\[
+\Delta x=v_{0x}t.
+\]
+
+Entonces:
+
+\[
+\Delta x
+=
+(14.7)(3.09).
+\]
+
+Así:
+
+\[
+\boxed{
+\Delta x\approx\SI{45.6}{\meter}
+}.
+\]
+
+La componente horizontal de la velocidad al impactar es:
+
+\[
+v_x=v_{0x}
+\approx
+\SI{14.7}{\meter\per\second}.
+\]
+
+La componente vertical:
+
+\[
+v_y
+=
+v_{0y}-gt.
+\]
+
+Entonces:
+
+\[
+v_y
+=
+10.3-9.81(3.09).
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v_y\approx-\SI{20.0}{\meter\per\second}
+}.
+\]
+
+Así:
+
+\[
+\boxed{
+\vect{v}_f
+\approx
+(14.7\ihat-20.0\jhat)
+\,\si{\meter\per\second}
+}.
+\]
+
+La rapidez de impacto es:
+
+\[
+v_f
+=
+\sqrt{
+(14.7)^2+(20.0)^2
+}.
+\]
+
+Entonces:
+
+\[
+\boxed{
+v_f\approx\SI{24.9}{\meter\per\second}
+}.
+\]
+
+La rapidez final es mayor que la inicial porque el proyectil termina a una altura
+menor que aquella desde la que fue lanzado.
+\end{explicacion}
+
+
+\begin{ejercicio}
+Un helicóptero vuela horizontalmente a:
+
+\[
+\SI{72.0}{\kilo\meter\per\hour}
+\]
+
+a una altura de:
+
+\[
+\SI{180}{\meter}.
+\]
+
+Debe liberar un paquete para que llegue a un punto situado en el suelo.
+
+Despreciando la resistencia del aire, determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item la rapidez horizontal en unidades SI;
+    \item el tiempo de caída;
+    \item a qué distancia horizontal antes del punto debe liberarse el paquete;
+    \item las componentes de la velocidad al impactar;
+    \item la rapidez de impacto.
+\end{enumerate}
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+v_x=\SI{20.0}{\meter\per\second},
+\]
+
+\[
+t\approx\SI{6.06}{\second},
+\]
+
+\[
+\Delta x\approx\SI{121}{\meter},
+\]
+
+\[
+\vect{v}_f
+\approx
+(20.0\ihat-59.4\jhat)
+\,\si{\meter\per\second},
+\]
+
+\[
+\boxed{
+v_f\approx\SI{62.7}{\meter\per\second}
+}.
+\]
+\end{respuesta}
+
+\begin{explicacion}
+Primero convertimos la rapidez:
+
+\[
+\SI{72.0}{\kilo\meter\per\hour}
+\left(
+\frac{\SI{1000}{\meter}}{\SI{1}{\kilo\meter}}
+\right)
+\left(
+\frac{\SI{1}{\hour}}{\SI{3600}{\second}}
+\right).
+\]
+
+Así:
+
+\[
+\boxed{
+v_x=\SI{20.0}{\meter\per\second}
+}.
+\]
+
+Al liberarse, el paquete conserva la velocidad horizontal del helicóptero.
+
+Verticalmente:
+
+\[
+v_{0y}=0.
+\]
+
+La caída desde:
+
+\[
+h=\SI{180}{\meter}
+\]
+
+satisface:
+
+\[
+h=\frac{1}{2}gt^2.
+\]
+
+Entonces:
+
+\[
+t
+=
+\sqrt{
+\frac{2h}{g}
+}.
+\]
+
+Sustituyendo:
+
+\[
+t
+=
+\sqrt{
+\frac{2(180)}{9.81}
+}.
+\]
+
+Así:
+
+\[
+\boxed{
+t\approx\SI{6.06}{\second}
+}.
+\]
+
+Horizontalmente:
+
+\[
+\Delta x=v_xt.
+\]
+
+Entonces:
+
+\[
+\Delta x
+=
+(20.0)(6.06).
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\Delta x\approx\SI{121}{\meter}
+}.
+\]
+
+La componente vertical de la velocidad al impactar es:
+
+\[
+v_y=-gt.
+\]
+
+Así:
+
+\[
+v_y
+=
+-9.81(6.06)
+\approx
+-\SI{59.4}{\meter\per\second}.
+\]
+
+El vector velocidad es:
+
+\[
+\boxed{
+\vect{v}_f
+\approx
+(20.0\ihat-59.4\jhat)
+\,\si{\meter\per\second}
+}.
+\]
+
+La rapidez:
+
+\[
+v_f
+=
+\sqrt{
+20.0^2+59.4^2
+}.
+\]
+
+Entonces:
+
+\[
+\boxed{
+v_f\approx\SI{62.7}{\meter\per\second}
+}.
+\]
+\end{explicacion}
+
+
+\begin{ejercicio}
+Un proyectil parte de:
+
+\[
+(x_0,y_0)=(0,\SI{2.0}{\meter})
+\]
+
+con componentes iniciales:
+
+\[
+v_{0x}=\SI{15.0}{\meter\per\second},
+\]
+
+\[
+v_{0y}=\SI{20.0}{\meter\per\second}.
+\]
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item la ecuación de la trayectoria \(y(x)\);
+    \item el tiempo para alcanzar la altura máxima;
+    \item las coordenadas del punto más alto;
+    \item la posición horizontal donde llega al suelo.
+\end{enumerate}
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+\boxed{
+y
+=
+2.0
++
+1.333x
+-
+0.0218x^2
+}
+\]
+
+con \(x\) y \(y\) en metros,
+
+\[
+t_H\approx\SI{2.04}{\second},
+\]
+
+\[
+(x_H,y_H)
+\approx
+(\SI{30.6}{\meter},\SI{22.4}{\meter}),
+\]
+
+\[
+\boxed{
+x_f\approx\SI{62.6}{\meter}
+}.
+\]
+\end{respuesta}
+
+\begin{explicacion}
+Las ecuaciones paramétricas son:
+
+\[
+x=v_{0x}t,
+\]
+
+\[
+y
+=
+y_0+v_{0y}t-\frac{1}{2}gt^2.
+\]
+
+De la primera:
+
+\[
+t=\frac{x}{v_{0x}}.
+\]
+
+Entonces:
+
+\[
+t=\frac{x}{15.0}.
+\]
+
+Sustituimos en la ecuación vertical:
+
+\[
+y
+=
+2.0
++
+20.0
+\left(
+\frac{x}{15.0}
+\right)
+-
+\frac{1}{2}(9.81)
+\left(
+\frac{x}{15.0}
+\right)^2.
+\]
+
+Simplificando:
+
+\[
+\boxed{
+y
+=
+2.0
++
+1.333x
+-
+0.0218x^2
+}.
+\]
+
+El término cuadrático negativo confirma que la parábola abre hacia abajo.
+
+Para la altura máxima:
+
+\[
+v_y=0.
+\]
+
+Entonces:
+
+\[
+0=20.0-9.81t_H.
+\]
+
+Así:
+
+\[
+\boxed{
+t_H\approx\SI{2.04}{\second}
+}.
+\]
+
+La coordenada horizontal correspondiente es:
+
+\[
+x_H
+=
+v_{0x}t_H.
+\]
+
+Entonces:
+
+\[
+x_H
+=
+15.0(2.04)
+\approx
+\boxed{\SI{30.6}{\meter}}.
+\]
+
+La altura máxima es:
+
+\[
+y_H
+=
+y_0+\frac{v_{0y}^2}{2g}.
+\]
+
+Entonces:
+
+\[
+y_H
+=
+2.0
++
+\frac{(20.0)^2}{2(9.81)}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+y_H\approx\SI{22.4}{\meter}
+}.
+\]
+
+Para encontrar dónde llega al suelo hacemos:
+
+\[
+y=0.
+\]
+
+Entonces:
+
+\[
+0
+=
+2.0
++
+1.333x
+-
+0.0218x^2.
+\]
+
+La ecuación cuadrática proporciona dos soluciones.
+
+Una es negativa y corresponde a la prolongación matemática de la parábola antes
+del lanzamiento.
+
+La solución física posterior al lanzamiento es:
+
+\[
+\boxed{
+x_f\approx\SI{62.6}{\meter}
+}.
+\]
+\end{explicacion}
+
+
+\begin{ejercicio}
+Un proyectil se lanza desde el origen con:
+
+\[
+v_0=\SI{24.0}{\meter\per\second}
+\]
+
+y:
+
+\[
+\theta_0=40.0\grado.
+\]
+
+Determine los dos instantes en que el proyectil se encuentra a:
+
+\[
+y=\SI{8.0}{\meter}.
+\]
+
+Para cada instante, determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item la posición horizontal;
+    \item la componente vertical de la velocidad;
+    \item si el proyectil asciende o desciende.
+\end{enumerate}
+\end{ejercicio}
+
+\begin{respuesta}
+Primer paso por la altura:
+
+\[
+t_1\approx\SI{0.655}{\second},
+\]
+
+\[
+x_1\approx\SI{12.0}{\meter},
+\]
+
+\[
+v_{y1}\approx+\SI{9.00}{\meter\per\second}.
+\]
+
+Segundo paso:
+
+\[
+t_2\approx\SI{2.49}{\second},
+\]
+
+\[
+x_2\approx\SI{45.8}{\meter},
+\]
+
+\[
+v_{y2}\approx-\SI{9.00}{\meter\per\second}.
+\]
+\end{respuesta}
+
+\begin{explicacion}
+Las componentes iniciales son:
+
+\[
+v_{0x}
+=
+24.0\cos(40.0\grado)
+\approx
+\SI{18.4}{\meter\per\second},
+\]
+
+\[
+v_{0y}
+=
+24.0\sen(40.0\grado)
+\approx
+\SI{15.4}{\meter\per\second}.
+\]
+
+La ecuación vertical es:
+
+\[
+y
+=
+v_{0y}t-\frac{1}{2}gt^2.
+\]
+
+Para:
+
+\[
+y=\SI{8.0}{\meter},
+\]
+
+tenemos:
+
+\[
+8.0
+=
+15.4t-4.905t^2.
+\]
+
+Reordenando:
+
+\[
+4.905t^2-15.4t+8.0=0.
+\]
+
+La ecuación cuadrática produce:
+
+\[
+\boxed{
+t_1\approx\SI{0.655}{\second}
+}
+\]
+
+y:
+
+\[
+\boxed{
+t_2\approx\SI{2.49}{\second}
+}.
+\]
+
+Las posiciones horizontales son:
+
+\[
+x_1=v_{0x}t_1.
+\]
+
+Entonces:
+
+\[
+\boxed{
+x_1\approx\SI{12.0}{\meter}
+}.
+\]
+
+Para el segundo instante:
+
+\[
+x_2=v_{0x}t_2.
+\]
+
+Así:
+
+\[
+\boxed{
+x_2\approx\SI{45.8}{\meter}
+}.
+\]
+
+La componente vertical de velocidad es:
+
+\[
+v_y=v_{0y}-gt.
+\]
+
+Para el primer instante:
+
+\[
+v_{y1}
+=
+15.4-9.81(0.655)
+\approx
++\SI{9.00}{\meter\per\second}.
+\]
+
+Por tanto, el proyectil está ascendiendo.
+
+Para el segundo:
+
+\[
+v_{y2}
+=
+15.4-9.81(2.49)
+\approx
+-\SI{9.00}{\meter\per\second}.
+\]
+
+Por tanto, está descendiendo.
+
+Las magnitudes son iguales y los signos opuestos porque se trata de la misma
+altura en una trayectoria ideal simétrica respecto del ápice.
+\end{explicacion}
+
+
+\begin{ejercicio}
+Una pelota se lanza desde el suelo con:
+
+\[
+v_0=\SI{22.0}{\meter\per\second}
+\]
+
+y:
+
+\[
+\theta_0=45.0\grado.
+\]
+
+A:
+
+\[
+\SI{20.0}{\meter}
+\]
+
+del punto de lanzamiento existe una pared vertical de:
+
+\[
+\SI{10.0}{\meter}
+\]
+
+de altura.
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item la altura de la pelota cuando llega a la posición de la pared;
+    \item si supera la pared;
+    \item las componentes de la velocidad en ese instante;
+    \item la rapidez.
+\end{enumerate}
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+y\approx\SI{11.9}{\meter}.
+\]
+
+La pelota supera la pared por aproximadamente:
+
+\[
+\SI{1.89}{\meter}.
+\]
+
+\[
+\vect{v}
+\approx
+(15.6\ihat+2.94\jhat)
+\,\si{\meter\per\second},
+\]
+
+\[
+\boxed{
+v\approx\SI{15.8}{\meter\per\second}
+}.
+\]
+\end{respuesta}
+
+\begin{explicacion}
+Las componentes iniciales son:
+
+\[
+v_{0x}
+=
+22.0\cos(45.0\grado)
+\approx
+\SI{15.6}{\meter\per\second},
+\]
+
+\[
+v_{0y}
+=
+22.0\sen(45.0\grado)
+\approx
+\SI{15.6}{\meter\per\second}.
+\]
+
+La pelota llega a la pared cuando:
+
+\[
+x=\SI{20.0}{\meter}.
+\]
+
+Horizontalmente:
+
+\[
+x=v_{0x}t.
+\]
+
+Entonces:
+
+\[
+t
+=
+\frac{20.0}{15.6}
+\approx
+\SI{1.29}{\second}.
+\]
+
+La altura es:
+
+\[
+y
+=
+v_{0y}t-\frac{1}{2}gt^2.
+\]
+
+Sustituyendo:
+
+\[
+y
+=
+15.6(1.29)
+-
+4.905(1.29)^2.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+y\approx\SI{11.9}{\meter}
+}.
+\]
+
+Como la pared mide:
+
+\[
+\SI{10.0}{\meter},
+\]
+
+la diferencia es:
+
+\[
+11.9-10.0
+=
+\SI{1.9}{\meter}.
+\]
+
+Por tanto, la pelota sí supera la pared.
+
+La velocidad horizontal sigue siendo:
+
+\[
+v_x\approx\SI{15.6}{\meter\per\second}.
+\]
+
+Verticalmente:
+
+\[
+v_y
+=
+v_{0y}-gt.
+\]
+
+Así:
+
+\[
+v_y
+=
+15.6-9.81(1.29)
+\approx
++\SI{2.94}{\meter\per\second}.
+\]
+
+El signo positivo indica que todavía está ascendiendo.
+
+Entonces:
+
+\[
+\boxed{
+\vect{v}
+\approx
+(15.6\ihat+2.94\jhat)
+\,\si{\meter\per\second}
+}.
+\]
+
+La rapidez es:
+
+\[
+v
+=
+\sqrt{
+15.6^2+2.94^2
+}.
+\]
+
+Así:
+
+\[
+\boxed{
+v\approx\SI{15.8}{\meter\per\second}
+}.
+\]
+\end{explicacion}
+
+
+\begin{ejercicio}
+Un proyectil se lanza desde el origen. Después de:
+
+\[
+t=\SI{2.00}{\second}
+\]
+
+se encuentra en:
+
+\[
+\vect{r}
+=
+(30.0\ihat+10.0\jhat)\,\si{\meter}.
+\]
+
+Despreciando la resistencia del aire, determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item las componentes iniciales de la velocidad;
+    \item la rapidez inicial;
+    \item el ángulo inicial de lanzamiento;
+    \item el vector velocidad en \(t=\SI{2.00}{\second}\);
+    \item si el proyectil está ascendiendo o descendiendo en ese instante.
+\end{enumerate}
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+v_{0x}=\SI{15.0}{\meter\per\second},
+\]
+
+\[
+v_{0y}\approx\SI{14.8}{\meter\per\second},
+\]
+
+\[
+v_0\approx\SI{21.1}{\meter\per\second},
+\]
+
+\[
+\theta_0\approx44.7\grado,
+\]
+
+\[
+\vect{v}(2.00)
+\approx
+(15.0\ihat-4.81\jhat)
+\,\si{\meter\per\second}.
+\]
+
+El proyectil está descendiendo.
+\end{respuesta}
+
+\begin{explicacion}
+Horizontalmente:
+
+\[
+x=v_{0x}t.
+\]
+
+Por tanto:
+
+\[
+v_{0x}
+=
+\frac{x}{t}.
+\]
+
+Sustituyendo:
+
+\[
+v_{0x}
+=
+\frac{\SI{30.0}{\meter}}
+{\SI{2.00}{\second}}.
+\]
+
+Así:
+
+\[
+\boxed{
+v_{0x}=\SI{15.0}{\meter\per\second}
+}.
+\]
+
+Verticalmente:
+
+\[
+y
+=
+v_{0y}t-\frac{1}{2}gt^2.
+\]
+
+Entonces:
+
+\[
+10.0
+=
+v_{0y}(2.00)
+-
+\frac{1}{2}(9.81)(2.00)^2.
+\]
+
+Por tanto:
+
+\[
+10.0
+=
+2v_{0y}-19.62.
+\]
+
+Despejando:
+
+\[
+\boxed{
+v_{0y}\approx\SI{14.8}{\meter\per\second}
+}.
+\]
+
+La rapidez inicial es:
+
+\[
+v_0
+=
+\sqrt{
+v_{0x}^2+v_{0y}^2
+}.
+\]
+
+Entonces:
+
+\[
+v_0
+=
+\sqrt{
+(15.0)^2+(14.8)^2
+}.
+\]
+
+Así:
+
+\[
+\boxed{
+v_0\approx\SI{21.1}{\meter\per\second}
+}.
+\]
+
+La dirección inicial satisface:
+
+\[
+\tan\theta_0
+=
+\frac{v_{0y}}{v_{0x}}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\theta_0\approx44.7\grado
+}.
+\]
+
+En \(t=\SI{2.00}{\second}\):
+
+\[
+v_x=v_{0x}
+=
+\SI{15.0}{\meter\per\second}.
+\]
+
+Verticalmente:
+
+\[
+v_y
+=
+v_{0y}-gt.
+\]
+
+Entonces:
+
+\[
+v_y
+=
+14.8-9.81(2.00)
+\approx
+-\SI{4.81}{\meter\per\second}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{v}(2.00)
+\approx
+(15.0\ihat-4.81\jhat)
+\,\si{\meter\per\second}
+}.
+\]
+
+Como:
+
+\[
+v_y<0,
+\]
+
+el proyectil está descendiendo.
+\end{explicacion}
+
+
+\nivelavanzado
+
+
+\begin{ejercicio}
+Un lanzador puede impartir a una pelota una rapidez inicial fija de:
+
+\[
+v_0=\SI{30.0}{\meter\per\second}.
+\]
+
+Se desea que la pelota pase por el punto:
+
+\[
+(x,y)
+=
+(\SI{50.0}{\meter},\SI{10.0}{\meter})
+\]
+
+respecto del punto de lanzamiento.
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item todos los ángulos de lanzamiento posibles entre \(0\grado\) y
+    \(90\grado\);
+    \item el tiempo necesario para alcanzar el punto en cada trayectoria;
+    \item cuál trayectoria es más alta.
+\end{enumerate}
+
+Desprecie la resistencia del aire.
+\end{ejercicio}
+
+\begin{respuesta}
+Existen dos ángulos:
+
+\[
+\boxed{
+\theta_1\approx29.1\grado
+}
+\]
+
+y:
+
+\[
+\boxed{
+\theta_2\approx72.2\grado
+}.
+\]
+
+Los tiempos son aproximadamente:
+
+\[
+t_1\approx\SI{1.91}{\second},
+\]
+
+\[
+t_2\approx\SI{5.45}{\second}.
+\]
+
+La trayectoria asociada a \(72.2\grado\) es la más alta.
+\end{respuesta}
+
+\begin{explicacion}
+La ecuación general de la trayectoria, tomando el lanzamiento desde el origen,
+es:
+
+\[
+y
+=
+x\tan\theta_0
+-
+\frac{
+gx^2
+}{
+2v_0^2\cos^2\theta_0
+}.
+\]
+
+Introducimos:
+
+\[
+T=\tan\theta_0.
+\]
+
+Utilizamos:
+
+\[
+\frac{1}{\cos^2\theta_0}
+=
+1+\tan^2\theta_0
+=
+1+T^2.
+\]
+
+Entonces:
+
+\[
+y
+=
+xT
+-
+\frac{gx^2}{2v_0^2}
+(1+T^2).
+\]
+
+Sustituimos:
+
+\[
+x=\SI{50.0}{\meter},
+\]
+
+\[
+y=\SI{10.0}{\meter},
+\]
+
+\[
+v_0=\SI{30.0}{\meter\per\second}.
+\]
+
+Calculamos:
+
+\[
+\frac{gx^2}{2v_0^2}
+=
+\frac{
+9.81(50.0)^2
+}{
+2(30.0)^2
+}
+=
+13.625.
+\]
+
+Por tanto:
+
+\[
+10
+=
+50T
+-
+13.625(1+T^2).
+\]
+
+Reordenando:
+
+\[
+13.625T^2
+-
+50T
++
+23.625
+=
+0.
+\]
+
+Aplicando la fórmula cuadrática:
+
+\[
+T
+=
+\frac{
+50
+\pm
+\sqrt{
+50^2
+-
+4(13.625)(23.625)
+}
+}{
+2(13.625)
+}.
+\]
+
+Se obtienen:
+
+\[
+T_1\approx0.557,
+\]
+
+\[
+T_2\approx3.113.
+\]
+
+Entonces:
+
+\[
+\theta_1
+=
+\arctan(0.557)
+\approx
+\boxed{29.1\grado},
+\]
+
+\[
+\theta_2
+=
+\arctan(3.113)
+\approx
+\boxed{72.2\grado}.
+\]
+
+Para cada trayectoria:
+
+\[
+x
+=
+v_0\cos\theta_0\,t.
+\]
+
+Por tanto:
+
+\[
+t
+=
+\frac{x}
+{v_0\cos\theta_0}.
+\]
+
+Para el ángulo menor:
+
+\[
+\boxed{
+t_1\approx\SI{1.91}{\second}
+}.
+\]
+
+Para el ángulo mayor:
+
+\[
+\boxed{
+t_2\approx\SI{5.45}{\second}
+}.
+\]
+
+Existen dos trayectorias posibles para alcanzar el mismo punto: una trayectoria
+baja y rápida y otra más alta con mayor tiempo de vuelo.
+
+La correspondiente a:
+
+\[
+72.2\grado
+\]
+
+posee una componente vertical inicial mucho mayor y, por tanto, alcanza una
+altura máxima mayor.
+\end{explicacion}
+
+
+\begin{ejercicio}
+Para un proyectil lanzado desde el suelo con rapidez inicial \(v_0\) y ángulo
+\(\theta_0\), que regresa al mismo nivel, deduzca:
+
+\begin{enumerate}[label=\alph*)]
+    \item el tiempo total de vuelo;
+    \item el alcance horizontal;
+    \item la relación entre los alcances de dos ángulos complementarios;
+    \item el ángulo que produce el alcance máximo.
+\end{enumerate}
+
+Indique claramente las condiciones bajo las cuales los resultados son válidos.
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+\boxed{
+t_{\mathrm{vuelo}}
+=
+\frac{
+2v_0\sen\theta_0
+}{
+g
+}
+},
+\]
+
+\[
+\boxed{
+R
+=
+\frac{
+v_0^2\sen(2\theta_0)
+}{
+g
+}
+}.
+\]
+
+Los ángulos complementarios producen el mismo alcance.
+
+El alcance máximo ocurre en:
+
+\[
+\boxed{
+\theta_0=45\grado
+}.
+\]
+\end{respuesta}
+
+\begin{explicacion}
+Las componentes iniciales son:
+
+\[
+v_{0x}
+=
+v_0\cos\theta_0,
+\]
+
+\[
+v_{0y}
+=
+v_0\sen\theta_0.
+\]
+
+Como el proyectil regresa al nivel inicial:
+
+\[
+y_f-y_0=0.
+\]
+
+La ecuación vertical es:
+
+\[
+0
+=
+v_{0y}t
+-
+\frac{1}{2}gt^2.
+\]
+
+Factorizamos:
+
+\[
+0
+=
+t
+\left(
+v_{0y}
+-
+\frac{1}{2}gt
+\right).
+\]
+
+Una solución es:
+
+\[
+t=0,
+\]
+
+que corresponde al instante de lanzamiento.
+
+La segunda solución corresponde al regreso:
+
+\[
+v_{0y}
+-
+\frac{1}{2}gt
+=
+0.
+\]
+
+Por tanto:
+
+\[
+t_{\mathrm{vuelo}}
+=
+\frac{
+2v_{0y}
+}{
+g
+}.
+\]
+
+Sustituyendo:
+
+\[
+v_{0y}
+=
+v_0\sen\theta_0,
+\]
+
+obtenemos:
+
+\[
+\boxed{
+t_{\mathrm{vuelo}}
+=
+\frac{
+2v_0\sen\theta_0
+}{
+g
+}
+}.
+\]
+
+Horizontalmente:
+
+\[
+R
+=
+v_{0x}t_{\mathrm{vuelo}}.
+\]
+
+Entonces:
+
+\[
+R
+=
+v_0\cos\theta_0
+\left(
+\frac{
+2v_0\sen\theta_0
+}{
+g
+}
+\right).
+\]
+
+Por tanto:
+
+\[
+R
+=
+\frac{
+2v_0^2
+\sen\theta_0
+\cos\theta_0
+}{
+g
+}.
+\]
+
+Utilizando:
+
+\[
+2\sen\theta_0\cos\theta_0
+=
+\sen(2\theta_0),
+\]
+
+resulta:
+
+\[
+\boxed{
+R
+=
+\frac{
+v_0^2\sen(2\theta_0)
+}{
+g
+}
+}.
+\]
+
+Ahora consideremos:
+
+\[
+\theta_2
+=
+90\grado-\theta_1.
+\]
+
+Entonces:
+
+\[
+2\theta_2
+=
+180\grado-2\theta_1.
+\]
+
+Como:
+
+\[
+\sen(180\grado-\alpha)
+=
+\sen\alpha,
+\]
+
+tenemos:
+
+\[
+R(\theta_1)
+=
+R(\theta_2).
+\]
+
+Por tanto, los ángulos complementarios producen el mismo alcance.
+
+Para rapidez inicial fija:
+
+\[
+R
+\propto
+\sen(2\theta_0).
+\]
+
+El valor máximo del seno es:
+
+\[
+1.
+\]
+
+Entonces:
+
+\[
+2\theta_0=90\grado.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\theta_0=45\grado
+}.
+\]
+
+Estos resultados requieren:
+
+\begin{itemize}
+    \item resistencia del aire despreciable;
+    \item \(g\) constante;
+    \item misma altura inicial y final;
+    \item superficie de referencia horizontal.
+\end{itemize}
+
+Fuera de estas condiciones, el resultado de \(45\grado\) no es necesariamente
+válido.
+\end{explicacion}
+
+
+\begin{ejercicio}
+Un proyectil se lanza desde una plataforma situada a una altura \(h\) sobre un
+terreno horizontal con rapidez inicial fija \(v_0\).
+
+Despreciando la resistencia del aire:
+
+\begin{enumerate}[label=\alph*)]
+    \item deduzca una expresión para el ángulo de lanzamiento que maximiza el
+    alcance horizontal;
+    \item deduzca una expresión para el alcance máximo;
+    \item evalúe ambos resultados para:
+    \[
+    v_0=\SI{25.0}{\meter\per\second},
+    \qquad
+    h=\SI{20.0}{\meter}.
+    \]
+\end{enumerate}
+
+Use:
+
+\[
+g=\SI{9.81}{\meter\per\second\squared}.
+\]
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+\boxed{
+\tan\theta_{\max}
+=
+\frac{
+v_0
+}{
+\sqrt{v_0^2+2gh}
+}
+}
+\]
+
+y:
+
+\[
+\boxed{
+R_{\max}
+=
+\frac{v_0}{g}
+\sqrt{
+v_0^2+2gh
+}
+}.
+\]
+
+Para los datos:
+
+\[
+\boxed{
+\theta_{\max}\approx38.1\grado
+}
+\]
+
+y:
+
+\[
+\boxed{
+R_{\max}\approx\SI{81.3}{\meter}
+}.
+\]
+\end{respuesta}
+
+\begin{explicacion}
+Tomamos el punto de lanzamiento como:
+
+\[
+(x_0,y_0)=(0,h).
+\]
+
+La ecuación de la trayectoria es:
+
+\[
+y
+=
+h
++
+x\tan\theta
+-
+\frac{
+gx^2
+}{
+2v_0^2\cos^2\theta
+}.
+\]
+
+Al llegar al suelo:
+
+\[
+y=0,
+\qquad
+x=R.
+\]
+
+Entonces:
+
+\[
+0
+=
+h
++
+R\tan\theta
+-
+\frac{
+gR^2
+}{
+2v_0^2\cos^2\theta
+}.
+\]
+
+Definimos:
+
+\[
+T=\tan\theta.
+\]
+
+Como:
+
+\[
+\frac{1}{\cos^2\theta}
+=
+1+T^2,
+\]
+
+obtenemos:
+
+\[
+0
+=
+h
++
+RT
+-
+\frac{
+gR^2
+}{
+2v_0^2
+}
+(1+T^2).
+\]
+
+Definamos:
+
+\[
+K
+=
+\frac{
+gR^2
+}{
+2v_0^2
+}.
+\]
+
+Entonces:
+
+\[
+KT^2
+-
+RT
++
+(K-h)
+=
+0.
+\]
+
+Para un alcance \(R\) dado, esta ecuación debe tener una solución real para
+\(T\).
+
+El alcance máximo corresponde al caso límite en el que las dos posibles
+soluciones para el ángulo coinciden.
+
+Por tanto, el discriminante debe ser cero:
+
+\[
+R^2
+-
+4K(K-h)
+=
+0.
+\]
+
+Sustituimos:
+
+\[
+K
+=
+\frac{
+gR^2
+}{
+2v_0^2
+}.
+\]
+
+Después de simplificar:
+
+\[
+R_{\max}^2
+=
+\frac{
+v_0^2
+}{
+g^2
+}
+\left(
+v_0^2+2gh
+\right).
+\]
+
+Por tanto:
+
+\[
+\boxed{
+R_{\max}
+=
+\frac{v_0}{g}
+\sqrt{
+v_0^2+2gh
+}
+}.
+\]
+
+Cuando el discriminante es cero, la raíz de la ecuación cuadrática es:
+
+\[
+T
+=
+\frac{R}{2K}.
+\]
+
+Sustituyendo el valor de \(K\):
+
+\[
+T
+=
+\frac{
+v_0^2
+}{
+gR_{\max}
+}.
+\]
+
+Utilizando la expresión obtenida para \(R_{\max}\):
+
+\[
+\boxed{
+\tan\theta_{\max}
+=
+\frac{
+v_0
+}{
+\sqrt{
+v_0^2+2gh
+}
+}
+}.
+\]
+
+Ahora sustituimos:
+
+\[
+v_0=\SI{25.0}{\meter\per\second},
+\]
+
+\[
+h=\SI{20.0}{\meter}.
+\]
+
+Entonces:
+
+\[
+\sqrt{
+v_0^2+2gh
+}
+=
+\sqrt{
+25.0^2+2(9.81)(20.0)
+}.
+\]
+
+Esto da aproximadamente:
+
+\[
+\SI{31.9}{\meter\per\second}.
+\]
+
+Así:
+
+\[
+\tan\theta_{\max}
+=
+\frac{25.0}{31.9}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\theta_{\max}\approx38.1\grado
+}.
+\]
+
+El alcance máximo es:
+
+\[
+R_{\max}
+=
+\frac{25.0}{9.81}(31.9).
+\]
+
+Entonces:
+
+\[
+\boxed{
+R_{\max}\approx\SI{81.3}{\meter}
+}.
+\]
+
+Observe que:
+
+\[
+38.1\grado<45\grado.
+\]
+
+Esto confirma que \(45\grado\) no es universalmente el ángulo de alcance máximo.
+Cuando el punto de lanzamiento está por encima del punto de llegada, el
+proyectil dispone de tiempo adicional de caída y el ángulo óptimo es menor.
+\end{explicacion}
+
+
+\begin{ejercicio}
+En un experimento se lanza horizontalmente una pequeña esfera.
+
+El análisis de video muestra que su trayectoria, tomando como origen el punto de
+lanzamiento y \(+y\) hacia arriba, está bien descrita por:
+
+\[
+y=-0.0300x^2,
+\]
+
+donde \(x\) y \(y\) se miden en metros.
+
+La componente horizontal de la velocidad, medida experimentalmente, es:
+
+\[
+v_x=\SI{12.8}{\meter\per\second}.
+\]
+
+Suponiendo que la resistencia del aire es despreciable:
+
+\begin{enumerate}[label=\alph*)]
+    \item deduzca la relación entre el coeficiente de \(x^2\), \(g\) y \(v_x\);
+    \item estime experimentalmente \(g\);
+    \item compare el resultado con:
+    \[
+    g=\SI{9.81}{\meter\per\second\squared}.
+    \]
+\end{enumerate}
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+y
+=
+-\frac{g}{2v_x^2}x^2,
+\]
+
+\[
+\boxed{
+g_{\mathrm{exp}}
+\approx
+\SI{9.83}{\meter\per\second\squared}
+}.
+\]
+
+El resultado es muy cercano al valor de referencia.
+\end{respuesta}
+
+\begin{explicacion}
+Para un lanzamiento horizontal desde el origen:
+
+\[
+x=v_xt.
+\]
+
+Por tanto:
+
+\[
+t=\frac{x}{v_x}.
+\]
+
+Verticalmente:
+
+\[
+y=-\frac{1}{2}gt^2.
+\]
+
+Sustituimos el tiempo:
+
+\[
+y
+=
+-\frac{1}{2}g
+\left(
+\frac{x}{v_x}
+\right)^2.
+\]
+
+Entonces:
+
+\[
+\boxed{
+y
+=
+-\frac{g}{2v_x^2}x^2
+}.
+\]
+
+Comparando con el ajuste experimental:
+
+\[
+y=-0.0300x^2,
+\]
+
+obtenemos:
+
+\[
+0.0300
+=
+\frac{g}{2v_x^2}.
+\]
+
+Despejando:
+
+\[
+g
+=
+2(0.0300)v_x^2.
+\]
+
+Sustituyendo:
+
+\[
+v_x=\SI{12.8}{\meter\per\second},
+\]
+
+tenemos:
+
+\[
+g
+=
+2(0.0300)(12.8)^2.
+\]
+
+Entonces:
+
+\[
+\boxed{
+g_{\mathrm{exp}}
+\approx
+\SI{9.83}{\meter\per\second\squared}
+}.
+\]
+
+Comparado con:
+
+\[
+\SI{9.81}{\meter\per\second\squared},
+\]
+
+la diferencia es pequeña.
+
+El experimento muestra que la forma de la trayectoria puede utilizarse para
+inferir cuantitativamente la aceleración gravitatoria cuando el modelo ideal es
+una buena aproximación.
+\end{explicacion}
+
+
+\begin{ejercicio}
+La trayectoria experimental idealizada de un proyectil está descrita por:
+
+\[
+y
+=
+2.00
++
+0.750x
+-
+0.0125x^2,
+\]
+
+donde \(x\) y \(y\) se expresan en metros.
+
+Suponiendo movimiento ideal de proyectil con:
+
+\[
+g=\SI{9.81}{\meter\per\second\squared},
+\]
+
+determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item la altura inicial;
+    \item el ángulo inicial de lanzamiento;
+    \item la rapidez inicial;
+    \item las componentes iniciales de la velocidad;
+    \item las coordenadas de la altura máxima.
+\end{enumerate}
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+y_0=\SI{2.00}{\meter},
+\]
+
+\[
+\theta_0\approx36.9\grado,
+\]
+
+\[
+v_0\approx\SI{24.8}{\meter\per\second},
+\]
+
+\[
+v_{0x}\approx\SI{19.8}{\meter\per\second},
+\]
+
+\[
+v_{0y}\approx\SI{14.9}{\meter\per\second},
+\]
+
+\[
+\boxed{
+(x_H,y_H)
+=
+(\SI{30.0}{\meter},\SI{13.25}{\meter})
+}.
+\]
+\end{respuesta}
+
+\begin{explicacion}
+La ecuación general de la trayectoria es:
+
+\[
+y
+=
+y_0
++
+x\tan\theta_0
+-
+\frac{
+gx^2
+}{
+2v_0^2\cos^2\theta_0
+}.
+\]
+
+La trayectoria dada es:
+
+\[
+y
+=
+2.00
++
+0.750x
+-
+0.0125x^2.
+\]
+
+Comparando términos constantes:
+
+\[
+\boxed{
+y_0=\SI{2.00}{\meter}
+}.
+\]
+
+Comparando los términos lineales:
+
+\[
+\tan\theta_0=0.750.
+\]
+
+Por tanto:
+
+\[
+\theta_0
+=
+\arctan(0.750).
+\]
+
+Así:
+
+\[
+\boxed{
+\theta_0\approx36.9\grado
+}.
+\]
+
+Para este ángulo:
+
+\[
+\cos\theta_0=0.800,
+\]
+
+por lo que:
+
+\[
+\cos^2\theta_0=0.640.
+\]
+
+Comparamos ahora el coeficiente cuadrático:
+
+\[
+0.0125
+=
+\frac{
+g
+}{
+2v_0^2\cos^2\theta_0
+}.
+\]
+
+Entonces:
+
+\[
+v_0^2
+=
+\frac{
+g
+}{
+2(0.0125)(0.640)
+}.
+\]
+
+Sustituyendo:
+
+\[
+v_0^2
+=
+\frac{
+9.81
+}{
+0.0160
+}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v_0\approx\SI{24.8}{\meter\per\second}
+}.
+\]
+
+Las componentes son:
+
+\[
+v_{0x}
+=
+v_0\cos\theta_0.
+\]
+
+Así:
+
+\[
+\boxed{
+v_{0x}\approx\SI{19.8}{\meter\per\second}
+}.
+\]
+
+La componente vertical:
+
+\[
+v_{0y}
+=
+v_0\sen\theta_0.
+\]
+
+Entonces:
+
+\[
+\boxed{
+v_{0y}\approx\SI{14.9}{\meter\per\second}
+}.
+\]
+
+Para hallar el punto máximo podemos utilizar la propia parábola:
+
+\[
+y
+=
+2.00+0.750x-0.0125x^2.
+\]
+
+El vértice de:
+
+\[
+y=ax^2+bx+c
+\]
+
+se encuentra en:
+
+\[
+x_H
+=
+-\frac{b}{2a}.
+\]
+
+En este caso:
+
+\[
+a=-0.0125,
+\qquad
+b=0.750.
+\]
+
+Entonces:
+
+\[
+x_H
+=
+-\frac{0.750}{2(-0.0125)}
+=
+\boxed{\SI{30.0}{\meter}}.
+\]
+
+Sustituyendo en la trayectoria:
+
+\[
+y_H
+=
+2.00
++
+0.750(30.0)
+-
+0.0125(30.0)^2.
+\]
+
+Entonces:
+
+\[
+y_H
+=
+2.00+22.5-11.25.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+y_H=\SI{13.25}{\meter}
+}.
+\]
+
+Así:
+
+\[
+\boxed{
+(x_H,y_H)
+=
+(\SI{30.0}{\meter},\SI{13.25}{\meter})
+}.
+\]
+
+Este problema muestra que la trayectoria espacial contiene información suficiente
+para reconstruir varias características del lanzamiento.
+\end{explicacion}

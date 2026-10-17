@@ -1,0 +1,4696 @@
+﻿\section{Movimiento circular}
+
+Hasta ahora hemos estudiado movimientos rectilíneos y movimientos curvilíneos,
+como el de los proyectiles. En estos últimos, la trayectoria no es una línea
+recta y, por tanto, la dirección del vector velocidad puede cambiar
+continuamente.
+
+Existe un tipo particular de movimiento curvilíneo en el que la trayectoria es
+una circunferencia: el \textbf{movimiento circular}.
+
+Podemos observarlo en numerosos fenómenos y dispositivos:
+
+\begin{itemize}
+    \item las aspas de un ventilador;
+    \item los puntos de una rueda que gira alrededor de un eje fijo;
+    \item el extremo de la manecilla de un reloj;
+    \item una piedra que gira sujeta a una cuerda;
+    \item las piezas de una centrifugadora;
+    \item una cabina de una rueda de observación.
+\end{itemize}
+
+Aunque estos movimientos tienen características diferentes, comparten una
+propiedad geométrica: cada partícula considerada describe una trayectoria
+circular alrededor de un centro.
+
+Surgen entonces algunas preguntas importantes.
+
+¿Por qué un objeto puede acelerar aunque su rapidez permanezca constante?
+¿Cómo se relaciona el número de vueltas con la velocidad? ¿Qué diferencia
+existe entre la velocidad de un punto cercano al centro de una rueda y la de
+otro situado cerca del borde?
+
+Para responderlas necesitamos complementar las magnitudes lineales ya conocidas
+con nuevas magnitudes que describan el cambio de posición angular.
+
+
+\begin{idea}[Idea fundamental]
+
+El movimiento circular puede describirse mediante magnitudes lineales y
+angulares.
+
+Las magnitudes lineales permiten estudiar la posición, la velocidad y la
+aceleración de la partícula en el espacio.
+
+Las magnitudes angulares permiten describir cómo cambia su posición alrededor
+del centro de la circunferencia.
+
+Ambas descripciones corresponden al mismo movimiento y deben ser coherentes
+entre sí.
+
+\end{idea}
+
+
+\section{Concepto de movimiento circular}
+
+\begin{definicion}[Movimiento circular]
+
+El movimiento circular es aquel en el que una partícula describe una
+trayectoria circular respecto de un sistema de referencia determinado.
+
+Durante este movimiento, la distancia entre la partícula y el centro de la
+circunferencia permanece constante.
+
+\end{definicion}
+
+Si llamamos \(R\) al radio de la trayectoria y \(O\) a su centro, entonces:
+
+\[
+OP=R=\text{constante}.
+\]
+
+Esta condición geométrica distingue al movimiento circular de otros
+movimientos curvilíneos.
+
+Sin embargo, no implica que la rapidez de la partícula sea constante.
+
+Una partícula puede recorrer una circunferencia:
+
+\begin{itemize}
+    \item con rapidez constante;
+    \item aumentando su rapidez;
+    \item disminuyendo su rapidez;
+    \item cambiando de sentido.
+\end{itemize}
+
+Por tanto, debemos distinguir entre la forma de la trayectoria y la manera en
+que la partícula se desplaza sobre ella.
+
+
+\section{Modelo físico y sistema de referencia}
+
+Consideraremos una partícula que se mueve sobre una circunferencia fija de
+radio \(R\).
+
+\begin{modelo}[Partícula en trayectoria circular]
+
+Supondremos que:
+
+\begin{itemize}
+    \item el objeto puede representarse mediante una partícula;
+    \item el centro de la circunferencia permanece fijo;
+    \item el radio de la trayectoria es constante;
+    \item el movimiento ocurre en un plano fijo;
+    \item las magnitudes cinemáticas pueden variar con el tiempo.
+\end{itemize}
+
+\end{modelo}
+
+Establecemos un sistema cartesiano \(xy\):
+
+\begin{itemize}
+    \item el origen coincide con el centro \(O\);
+    \item el eje \(+x\) apunta hacia la derecha;
+    \item el eje \(+y\) apunta hacia arriba;
+    \item los vectores unitarios son \(\ihat\) y \(\jhat\);
+    \item los ángulos positivos se miden en sentido antihorario.
+\end{itemize}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+
+    \coordinate (O) at (0,0);
+    \coordinate (P) at (2.4,1.8);
+
+    \draw[-{Latex},thick]
+        (-3.5,0) -- (3.8,0)
+        node[right] {\(x\)};
+
+    \draw[-{Latex},thick]
+        (0,-3.3) -- (0,3.5)
+        node[above] {\(y\)};
+
+    \draw[
+        very thick,
+        AzulPrincipal
+    ]
+        (O) circle (3);
+
+    \draw[-{Latex},very thick,VerdePrincipal]
+        (O) -- (P)
+        node[midway,above left] {\(\vect{r}\)};
+
+    \draw[dashed]
+        (P) -- (2.4,0);
+
+    \draw[dashed]
+        (P) -- (0,1.8);
+
+    \fill (O) circle (2pt);
+    \node[below left] at (O) {\(O\)};
+
+    \fill (P) circle (3pt);
+    \node[above right] at (P) {\(P\)};
+
+    \node[below] at (2.4,0) {\(x\)};
+    \node[left] at (0,1.8) {\(y\)};
+
+    \draw[
+        -{Latex},
+        thick,
+        RojoPrincipal
+    ]
+        (0.85,0)
+        arc[
+            start angle=0,
+            end angle=36.87,
+            radius=0.85
+        ];
+
+    \node[RojoPrincipal] at (1.15,0.38) {\(\theta\)};
+
+    \node at (-2.1,2.5) {\(R\)};
+
+\end{tikzpicture}
+\end{center}
+
+El radio \(R\) es una magnitud escalar positiva:
+
+\[
+R>0.
+\]
+
+El vector de posición cambia de dirección mientras la partícula gira, aunque
+su magnitud permanezca constante:
+
+\[
+\norm{\vect{r}}=R.
+\]
+
+\begin{interpretacion}
+
+La partícula no mantiene constante su vector de posición.
+
+Lo que permanece constante es únicamente su magnitud.
+
+Por ello, incluso cuando el radio no cambia, existe movimiento porque cambia
+la dirección de \(\vect{r}\).
+
+\end{interpretacion}
+
+
+\section{Posición angular}
+
+En una trayectoria rectilínea la posición puede describirse mediante una
+coordenada \(x\).
+
+En una trayectoria circular resulta especialmente conveniente utilizar un
+ángulo.
+
+\begin{definicion}[Posición angular]
+
+La posición angular \(\theta\) es el ángulo orientado que forma el radio
+dirigido hacia la partícula con una dirección de referencia previamente
+establecida.
+
+\end{definicion}
+
+Tomaremos como dirección de referencia el eje \(+x\).
+
+La posición angular se mide positivamente en sentido antihorario.
+
+Por tanto:
+
+\[
+\theta>0
+\]
+
+representa un giro antihorario desde la dirección de referencia, mientras que
+un giro horario corresponde a una variación angular negativa.
+
+La posición angular puede describirse mediante una función:
+
+\[
+\boxed{\theta=\theta(t)}.
+\]
+
+\begin{advertencia}
+
+La posición angular no determina cuántas vueltas ha completado una partícula si
+solamente se informa su orientación final dentro de una vuelta.
+
+Por ejemplo, una partícula situada nuevamente sobre el eje \(+x\) podría
+haber completado cero, una, dos o muchas vueltas.
+
+Para describir el movimiento acumulado necesitamos registrar el ángulo sin
+reducirlo automáticamente al intervalo de una revolución.
+
+\end{advertencia}
+
+
+\section{El radián}
+
+Para relacionar magnitudes angulares con longitudes necesitamos una unidad
+angular especialmente útil: el radián.
+
+Consideremos una circunferencia de radio \(R\).
+
+Un ángulo central determina sobre ella un arco de longitud \(s\).
+
+\begin{definicion}[Radián]
+
+Un radián es el ángulo central que subtiende un arco cuya longitud es igual al
+radio de la circunferencia.
+
+\end{definicion}
+
+Si:
+
+\[
+s=R,
+\]
+
+entonces:
+
+\[
+\theta=\SI{1}{\radian}.
+\]
+
+En general:
+
+\[
+\boxed{\theta=\frac{s}{R}}.
+\]
+
+Esta relación constituye la definición de la medida angular en radianes.
+
+Despejando:
+
+\[
+\boxed{s=R\theta}.
+\]
+
+\begin{condicion}
+
+La relación:
+
+\[
+s=R\theta
+\]
+
+requiere que el ángulo esté expresado en radianes.
+
+Además, \(s\) representa una longitud de arco medida con el signo o la
+orientación apropiados cuando se utilice como desplazamiento angular.
+
+\end{condicion}
+
+
+\subsection{Relación entre radianes, grados y revoluciones}
+
+Una revolución completa corresponde a:
+
+\[
+360\grado.
+\]
+
+Como la longitud de una circunferencia es:
+
+\[
+2\pi R,
+\]
+
+el ángulo correspondiente es:
+
+\[
+\theta
+=
+\frac{2\pi R}{R}
+=
+2\pi.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+1\text{ revolución}
+=
+2\pi\ \si{\radian}
+=
+360\grado
+}.
+\]
+
+De aquí:
+
+\[
+\boxed{
+180\grado=\pi\ \si{\radian}
+}.
+\]
+
+Las conversiones son:
+
+\[
+\theta_{\mathrm{rad}}
+=
+\theta_{\mathrm{grados}}
+\frac{\pi}{180},
+\]
+
+\[
+\theta_{\mathrm{grados}}
+=
+\theta_{\mathrm{rad}}
+\frac{180}{\pi}.
+\]
+
+\begin{interpretacion}
+
+El radián es una unidad coherente del SI para expresar ángulos planos.
+
+Aunque dimensionalmente el cociente \(s/R\) es adimensional, escribir
+\(\si{\radian}\) permite distinguir una magnitud angular de otras cantidades
+adimensionales.
+
+\end{interpretacion}
+
+
+\section{Desplazamiento angular}
+
+Cuando una partícula pasa de una posición angular inicial:
+
+\[
+\theta_i
+\]
+
+a una posición angular final:
+
+\[
+\theta_f,
+\]
+
+definimos su desplazamiento angular.
+
+\begin{definicion}[Desplazamiento angular]
+
+El desplazamiento angular es la diferencia entre la posición angular final y
+la inicial:
+
+\[
+\boxed{
+\Delta\theta=\theta_f-\theta_i
+}.
+\]
+
+\end{definicion}
+
+Si:
+
+\[
+\Delta\theta>0,
+\]
+
+el desplazamiento angular neto corresponde al sentido antihorario.
+
+Si:
+
+\[
+\Delta\theta<0,
+\]
+
+corresponde al sentido horario.
+
+En un movimiento que puede completar varias vueltas, utilizaremos una
+posición angular continua que registre los giros acumulados.
+
+
+\subsection{Longitud de arco y desplazamiento angular}
+
+Si el radio permanece constante, la longitud de arco orientada asociada al
+desplazamiento angular es:
+
+\[
+\boxed{\Delta s=R\Delta\theta}.
+\]
+
+Si el movimiento no cambia de sentido durante el intervalo, la distancia
+recorrida sobre la circunferencia es:
+
+\[
+\boxed{d=R|\Delta\theta|}.
+\]
+
+Si existen cambios de sentido, debemos sumar las longitudes de todos los arcos
+recorridos.
+
+\begin{errorfrecuente}[Arco y desplazamiento rectilíneo]
+
+La longitud del arco recorrido no es igual, en general, a la magnitud del
+vector desplazamiento:
+
+\[
+\norm{\Delta\vect{r}}.
+\]
+
+El arco sigue la circunferencia.
+
+El vector desplazamiento une directamente las posiciones inicial y final.
+
+\end{errorfrecuente}
+
+
+\section{Distancia recorrida y desplazamiento en una vuelta}
+
+Supongamos que una partícula completa una revolución y regresa exactamente a
+su posición inicial.
+
+La distancia recorrida es la longitud de la circunferencia:
+
+\[
+\boxed{d=2\pi R}.
+\]
+
+El desplazamiento angular acumulado, para una vuelta antihoraria, es:
+
+\[
+\boxed{\Delta\theta=2\pi\ \si{\radian}}.
+\]
+
+Pero el vector desplazamiento es:
+
+\[
+\Delta\vect{r}
+=
+\vect{r}_f-\vect{r}_i.
+\]
+
+Como:
+
+\[
+\vect{r}_f=\vect{r}_i,
+\]
+
+obtenemos:
+
+\[
+\boxed{\Delta\vect{r}=\vect{0}}.
+\]
+
+\begin{interpretacion}
+
+Después de una vuelta completa:
+
+\[
+d=2\pi R,
+\]
+
+pero:
+
+\[
+\norm{\Delta\vect{r}}=0.
+\]
+
+Esto demuestra que la distancia recorrida, el desplazamiento vectorial y el
+desplazamiento angular representan magnitudes diferentes.
+
+\end{interpretacion}
+
+
+\section{Ejemplo: desplazamiento angular}
+
+\begin{ejemplo}
+
+Una rueda de radio:
+
+\[
+R=\SI{0.40}{\meter}
+\]
+
+gira un ángulo de:
+
+\[
+150\grado
+\]
+
+en sentido antihorario.
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item el desplazamiento angular en radianes;
+    \item la longitud del arco recorrido por un punto del borde.
+\end{enumerate}
+
+\end{ejemplo}
+
+Primero convertimos el ángulo:
+
+\[
+\Delta\theta
+=
+150\frac{\pi}{180}.
+\]
+
+Entonces:
+
+\[
+\boxed{
+\Delta\theta
+=
+\frac{5\pi}{6}\ \si{\radian}
+\approx
+\SI{2.62}{\radian}
+}.
+\]
+
+Como el punto se mueve sobre una circunferencia de radio constante:
+
+\[
+s=R\Delta\theta.
+\]
+
+Por tanto:
+
+\[
+s
+=
+(\SI{0.40}{\meter})
+\left(
+\frac{5\pi}{6}
+\right).
+\]
+
+Así:
+
+\[
+\boxed{s\approx\SI{1.05}{\meter}}.
+\]
+
+Este resultado representa la longitud del arco recorrido, no la distancia
+recta entre los extremos.
+
+
+\section{Velocidad angular media}
+
+Una vez descrita la posición angular podemos preguntar qué tan rápidamente
+cambia con el tiempo.
+
+\begin{definicion}[Velocidad angular media]
+
+La velocidad angular media es el desplazamiento angular dividido entre el
+intervalo de tiempo:
+
+\[
+\boxed{
+\bar{\omega}
+=
+\frac{\Delta\theta}{\Delta t}
+}.
+\]
+
+\end{definicion}
+
+La unidad SI es:
+
+\[
+\si{\radian\per\second}.
+\]
+
+La velocidad angular media puede ser positiva o negativa.
+
+En nuestra convención:
+
+\[
+\bar{\omega}>0
+\]
+
+indica un desplazamiento angular neto antihorario.
+
+En cambio:
+
+\[
+\bar{\omega}<0
+\]
+
+indica un desplazamiento angular neto horario.
+
+\begin{interpretacion}
+
+Si:
+
+\[
+\bar{\omega}
+=
+\SI{2}{\radian\per\second},
+\]
+
+significa que el desplazamiento angular aumenta, en promedio, dos radianes por
+cada segundo transcurrido.
+
+No significa necesariamente que la partícula mantenga una velocidad angular
+constante durante todo el intervalo.
+
+\end{interpretacion}
+
+
+\section{Velocidad angular instantánea}
+
+La velocidad angular media describe un intervalo temporal.
+
+Para conocer el cambio angular en un instante, tomamos el límite cuando el
+intervalo se hace muy pequeño.
+
+\begin{definicion}[Velocidad angular instantánea]
+
+La velocidad angular instantánea es:
+
+\[
+\boxed{
+\omega
+=
+\lim_{\Delta t\to0}
+\frac{\Delta\theta}{\Delta t}
+=
+\deriv{\theta}{t}
+}.
+\]
+
+\end{definicion}
+
+Esta derivada expresa la tasa instantánea de cambio de la posición angular.
+
+En movimiento circular plano utilizaremos \(\omega\) como cantidad algebraica
+con signo, respecto del eje de rotación previamente definido.
+
+\begin{advertencia}
+
+No debe confundirse:
+
+\[
+\omega
+\]
+
+con:
+
+\[
+\vect{\omega}.
+\]
+
+La primera representa aquí la componente angular con signo.
+
+El vector velocidad angular, cuando se utilice, apunta a lo largo del eje de
+rotación y su sentido se determina mediante la regla de la mano derecha.
+
+\end{advertencia}
+
+
+\section{Velocidad angular vectorial}
+
+Para una trayectoria circular situada en el plano \(xy\), el eje de rotación
+es perpendicular a dicho plano.
+
+Definimos:
+
+\[
+\boxed{
+\vect{\omega}
+=
+\omega\khat
+}.
+\]
+
+Si el giro es antihorario visto desde \(+z\):
+
+\[
+\omega>0,
+\]
+
+y el vector velocidad angular apunta hacia:
+
+\[
++\khat.
+\]
+
+Si el giro es horario:
+
+\[
+\omega<0,
+\]
+
+y apunta hacia:
+
+\[
+-\khat.
+\]
+
+La magnitud del vector es:
+
+\[
+\norm{\vect{\omega}}=|\omega|.
+\]
+
+\begin{interpretacion}
+
+El vector velocidad angular no apunta tangente a la trayectoria.
+
+Su dirección es perpendicular al plano del movimiento.
+
+Esta diferencia es fundamental:
+
+\[
+\vect{v}
+\]
+
+es tangente a la circunferencia, mientras:
+
+\[
+\vect{\omega}
+\]
+
+apunta a lo largo del eje de rotación.
+
+\end{interpretacion}
+
+
+\section{Relación entre velocidad lineal y angular}
+
+Consideremos una partícula que recorre un arco \(s\) de una circunferencia de
+radio constante \(R\).
+
+Sabemos que:
+
+\[
+s=R\theta.
+\]
+
+Para describir el movimiento con signo podemos escribir:
+
+\[
+\dd s=R\,\dd\theta,
+\]
+
+donde \(\dd s\) representa el incremento orientado de arco en el sentido
+angular positivo.
+
+Dividiendo entre \(\dd t\):
+
+\[
+\deriv{s}{t}
+=
+R\deriv{\theta}{t}.
+\]
+
+Como:
+
+\[
+\omega=\deriv{\theta}{t},
+\]
+
+obtenemos:
+
+\[
+\boxed{
+v_{\mathrm{tan}}=R\omega
+}.
+\]
+
+Aquí \(v_{\mathrm{tan}}\) es la componente de velocidad respecto del sentido
+tangencial positivo.
+
+La rapidez, que no puede ser negativa, es:
+
+\[
+\boxed{
+v=R|\omega|
+}.
+\]
+
+\begin{interpretacion}
+
+Para una misma rapidez angular, los puntos situados a mayor distancia del
+centro poseen mayor rapidez lineal.
+
+Por ejemplo, en una rueda rígida que gira alrededor de un eje fijo:
+
+\begin{itemize}
+    \item todos los puntos completan una vuelta en el mismo tiempo;
+    \item todos poseen la misma velocidad angular;
+    \item los puntos cercanos al borde recorren arcos más largos;
+    \item por ello, poseen mayor rapidez lineal.
+\end{itemize}
+
+\end{interpretacion}
+
+
+\section{Relación vectorial entre velocidad angular y velocidad lineal}
+
+La relación anterior también puede escribirse vectorialmente:
+
+\[
+\boxed{
+\vect{v}
+=
+\vect{\omega}\pcross\vect{r}
+}.
+\]
+
+Esta expresión es válida para una partícula que describe una circunferencia
+alrededor del origen fijo, donde \(\vect{r}\) se mide desde el centro.
+
+Como:
+
+\[
+\vect{\omega}
+=
+\omega\khat,
+\]
+
+y:
+
+\[
+\vect{r}
+=
+x\ihat+y\jhat,
+\]
+
+tenemos:
+
+\[
+\vect{v}
+=
+\omega\khat
+\pcross
+(x\ihat+y\jhat).
+\]
+
+Utilizando:
+
+\[
+\khat\pcross\ihat=\jhat,
+\]
+
+\[
+\khat\pcross\jhat=-\ihat,
+\]
+
+obtenemos:
+
+\[
+\boxed{
+\vect{v}
+=
+-\omega y\ihat+\omega x\jhat
+}.
+\]
+
+Por tanto, las componentes rectangulares son:
+
+\[
+\boxed{
+v_x=-\omega y
+},
+\]
+
+\[
+\boxed{
+v_y=\omega x
+}.
+\]
+
+Estas ecuaciones muestran que la velocidad es perpendicular al vector radial.
+
+
+\section{Posición cartesiana de una partícula en movimiento circular}
+
+Volvamos a la geometría de la circunferencia.
+
+Si la partícula se encuentra a una posición angular \(\theta\), entonces:
+
+\[
+x=R\cos\theta,
+\]
+
+\[
+y=R\sen\theta.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{r}(t)
+=
+R\cos\theta(t)\,\ihat
++
+R\sen\theta(t)\,\jhat
+}.
+\]
+
+Esta ecuación permite expresar el movimiento circular en componentes
+rectangulares.
+
+Su importancia es que conserva explícitamente la dependencia temporal de la
+posición.
+
+\begin{interpretacion}
+
+La partícula se mueve en dos dimensiones, aunque su posición pueda describirse
+mediante una sola coordenada angular.
+
+Esto ocurre porque la restricción:
+
+\[
+x^2+y^2=R^2
+\]
+
+relaciona las dos coordenadas cartesianas.
+
+\end{interpretacion}
+
+
+\section{Deducción de las componentes de velocidad}
+
+Partimos de:
+
+\[
+x(t)=R\cos\theta(t),
+\]
+
+\[
+y(t)=R\sen\theta(t).
+\]
+
+La velocidad instantánea se obtiene derivando respecto del tiempo.
+
+Para la componente horizontal:
+
+\[
+v_x=\deriv{x}{t}.
+\]
+
+Aplicando la regla de la cadena:
+
+\[
+v_x
+=
+-R\sen\theta
+\deriv{\theta}{t}.
+\]
+
+Como:
+
+\[
+\deriv{\theta}{t}=\omega,
+\]
+
+obtenemos:
+
+\[
+\boxed{
+v_x=-R\omega\sen\theta
+}.
+\]
+
+Para la componente vertical:
+
+\[
+v_y=\deriv{y}{t}.
+\]
+
+Entonces:
+
+\[
+\boxed{
+v_y=R\omega\cos\theta
+}.
+\]
+
+El vector velocidad es:
+
+\[
+\boxed{
+\vect{v}
+=
+-R\omega\sen\theta\,\ihat
++
+R\omega\cos\theta\,\jhat
+}.
+\]
+
+Calculamos su magnitud:
+
+\[
+v
+=
+\sqrt{v_x^2+v_y^2}.
+\]
+
+Sustituyendo:
+
+\[
+v
+=
+\sqrt{
+R^2\omega^2\sen^2\theta
++
+R^2\omega^2\cos^2\theta
+}.
+\]
+
+Factorizando:
+
+\[
+v
+=
+R|\omega|
+\sqrt{\sen^2\theta+\cos^2\theta}.
+\]
+
+Como:
+
+\[
+\sen^2\theta+\cos^2\theta=1,
+\]
+
+resulta:
+
+\[
+\boxed{
+v=R|\omega|
+}.
+\]
+
+Hemos recuperado la relación entre rapidez lineal y rapidez angular mediante
+componentes rectangulares.
+
+
+\section{Período y frecuencia}
+
+Muchos movimientos circulares se repiten.
+
+Por ejemplo, una rueda que gira uniformemente pasa por una misma posición
+angular una vez en cada vuelta.
+
+Para describir esta repetición introducimos el período y la frecuencia.
+
+
+\subsection{Período}
+
+\begin{definicion}[Período]
+
+El período \(T\) es el tiempo necesario para completar una revolución en un
+movimiento circular periódico.
+
+\end{definicion}
+
+Su unidad SI es:
+
+\[
+\si{\second}.
+\]
+
+Si una partícula completa \(N\) vueltas en un tiempo \(\Delta t\), con vueltas
+de igual duración:
+
+\[
+\boxed{
+T=\frac{\Delta t}{N}
+}.
+\]
+
+
+\subsection{Frecuencia}
+
+\begin{definicion}[Frecuencia]
+
+La frecuencia \(f\) es el número de ciclos completos realizados por unidad de
+tiempo en un movimiento periódico.
+
+\end{definicion}
+
+Su unidad SI es el hercio:
+
+\[
+\SI{1}{\hertz}
+=
+\SI{1}{\per\second}.
+\]
+
+Para un movimiento periódico:
+
+\[
+\boxed{
+f=\frac{1}{T}
+}.
+\]
+
+También:
+
+\[
+\boxed{
+T=\frac{1}{f}
+}.
+\]
+
+\begin{interpretacion}
+
+El período indica cuánto dura una vuelta.
+
+La frecuencia indica cuántas vueltas se completan por segundo.
+
+Son magnitudes inversamente proporcionales.
+
+\end{interpretacion}
+
+
+\section{Relación entre velocidad angular, período y frecuencia}
+
+En una revolución completa:
+
+\[
+|\Delta\theta|=2\pi\ \si{\radian}.
+\]
+
+Si el movimiento circular es uniforme, el tiempo correspondiente es \(T\).
+
+Por tanto:
+
+\[
+|\omega|
+=
+\frac{2\pi}{T}.
+\]
+
+Como:
+
+\[
+f=\frac{1}{T},
+\]
+
+obtenemos:
+
+\[
+\boxed{
+|\omega|=2\pi f
+}.
+\]
+
+Para movimiento antihorario, con nuestra convención:
+
+\[
+\omega=2\pi f.
+\]
+
+Para movimiento horario:
+
+\[
+\omega=-2\pi f.
+\]
+
+La rapidez lineal será:
+
+\[
+v=R|\omega|.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v=\frac{2\pi R}{T}
+}.
+\]
+
+También:
+
+\[
+\boxed{
+v=2\pi Rf
+}.
+\]
+
+Estas relaciones son válidas para movimiento circular uniforme.
+
+\begin{advertencia}
+
+Si la velocidad angular cambia continuamente, las expresiones:
+
+\[
+|\omega|=\frac{2\pi}{T},
+\qquad
+|\omega|=2\pi f
+\]
+
+no deben utilizarse indiscriminadamente con un supuesto período constante.
+
+Un movimiento circular no uniforme puede no ser periódico.
+
+\end{advertencia}
+
+
+\section{Revoluciones por minuto}
+
+En numerosos dispositivos se expresa la rapidez de giro mediante
+revoluciones por minuto:
+
+\[
+\mathrm{rpm}.
+\]
+
+Esta unidad indica cuántas revoluciones se completan en un minuto.
+
+Como:
+
+\[
+1\text{ revolución}=2\pi\ \si{\radian},
+\]
+
+y:
+
+\[
+1\text{ minuto}=\SI{60}{\second},
+\]
+
+tenemos:
+
+\[
+\boxed{
+\SI{1}{rpm}
+=
+\frac{2\pi}{60}
+\ \si{\radian\per\second}
+}.
+\]
+
+Por tanto, si \(n\) representa el valor numérico de las revoluciones por
+minuto:
+
+\[
+\boxed{
+|\omega|
+=
+\frac{2\pi n}{60}
+}.
+\]
+
+El resultado se expresa en:
+
+\[
+\si{\radian\per\second}.
+\]
+
+La dirección del giro debe especificarse por separado.
+
+
+\section{Ejemplo: ventilador en movimiento circular uniforme}
+
+\begin{ejemplo}
+
+Un ventilador gira a:
+
+\[
+120\ \mathrm{rpm}.
+\]
+
+Un punto de una de sus aspas se encuentra a:
+
+\[
+R=\SI{0.15}{\meter}
+\]
+
+del eje de rotación.
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item la frecuencia;
+    \item el período;
+    \item la rapidez angular;
+    \item la rapidez lineal del punto.
+\end{enumerate}
+
+\end{ejemplo}
+
+Primero convertimos las revoluciones por minuto:
+
+\[
+f
+=
+\frac{120}{60}
+\ \si{\per\second}.
+\]
+
+Entonces:
+
+\[
+\boxed{f=\SI{2.0}{\hertz}}.
+\]
+
+El período es:
+
+\[
+T=\frac{1}{f}.
+\]
+
+Por tanto:
+
+\[
+\boxed{T=\SI{0.50}{\second}}.
+\]
+
+La rapidez angular es:
+
+\[
+|\omega|=2\pi f.
+\]
+
+Entonces:
+
+\[
+|\omega|
+=
+2\pi(2.0).
+\]
+
+Así:
+
+\[
+\boxed{
+|\omega|
+\approx
+\SI{12.6}{\radian\per\second}
+}.
+\]
+
+La rapidez lineal del punto es:
+
+\[
+v=R|\omega|.
+\]
+
+Por tanto:
+
+\[
+v
+=
+(\SI{0.15}{\meter})
+(\SI{12.6}{\radian\per\second}).
+\]
+
+Así:
+
+\[
+\boxed{
+v\approx
+\SI{1.88}{\meter\per\second}
+}.
+\]
+
+\begin{interpretacion}
+
+El ventilador completa dos vueltas por segundo.
+
+Todos los puntos de las aspas que giran rígidamente alrededor del mismo eje
+poseen la misma rapidez angular.
+
+Sin embargo, un punto más próximo al eje tiene menor rapidez lineal.
+
+\end{interpretacion}
+
+
+\section{Movimiento circular uniforme}
+
+Ahora podemos definir uno de los modelos principales de este capítulo.
+
+\begin{definicion}[Movimiento circular uniforme]
+
+El movimiento circular uniforme, abreviado MCU, es aquel en el que una
+partícula describe una trayectoria circular con rapidez constante.
+
+\end{definicion}
+
+En este movimiento:
+
+\[
+R=\text{constante},
+\]
+
+\[
+v=\text{constante},
+\]
+
+\[
+|\omega|=\text{constante}.
+\]
+
+Mientras el movimiento conserva su sentido, la velocidad angular algebraica
+también permanece constante:
+
+\[
+\omega=\text{constante}.
+\]
+
+Sin embargo, debemos distinguir dos afirmaciones:
+
+\[
+\text{rapidez constante}
+\]
+
+y:
+
+\[
+\text{velocidad vectorial constante}.
+\]
+
+No significan lo mismo.
+
+
+\section{¿Existe aceleración en el MCU?}
+
+Supongamos que una partícula gira uniformemente alrededor de una circunferencia.
+
+En diferentes puntos de la trayectoria, los vectores velocidad tienen igual
+magnitud:
+
+\[
+v_1=v_2=v.
+\]
+
+Pero sus direcciones son diferentes:
+
+\[
+\vect{v}_1\neq\vect{v}_2.
+\]
+
+Por tanto:
+
+\[
+\Delta\vect{v}
+=
+\vect{v}_2-\vect{v}_1
+\neq\vect{0}.
+\]
+
+Como existe un cambio del vector velocidad, existe aceleración.
+
+\begin{principio}[Aceleración en el movimiento circular]
+
+Toda partícula que se mueve siguiendo una trayectoria circular con rapidez
+distinta de cero experimenta una aceleración asociada al cambio de dirección de
+su velocidad.
+
+En el movimiento circular uniforme, dicha aceleración apunta hacia el centro
+de la circunferencia.
+
+\end{principio}
+
+\begin{idea}
+
+Movimiento uniforme no significa necesariamente aceleración nula.
+
+En movimiento rectilíneo uniforme, la velocidad vectorial permanece constante.
+
+En movimiento circular uniforme, sólo permanece constante su magnitud.
+
+\end{idea}
+
+
+\section{Aceleración centrípeta}
+
+La aceleración asociada al cambio de dirección del vector velocidad recibe el
+nombre de aceleración centrípeta.
+
+\begin{definicion}[Aceleración centrípeta]
+
+La aceleración centrípeta es la componente de la aceleración que apunta hacia
+el centro de curvatura de la trayectoria y describe el cambio de dirección de
+la velocidad.
+
+\end{definicion}
+
+En una trayectoria circular:
+
+\[
+\boxed{
+a_c=\frac{v^2}{R}
+}.
+\]
+
+Como:
+
+\[
+v=R|\omega|,
+\]
+
+obtenemos:
+
+\[
+a_c
+=
+\frac{R^2\omega^2}{R}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+a_c=R\omega^2
+}.
+\]
+
+La aceleración centrípeta es una magnitud positiva:
+
+\[
+a_c\geq0.
+\]
+
+Su dirección apunta siempre hacia el centro.
+
+\begin{advertencia}
+
+El símbolo:
+
+\[
+a_c
+\]
+
+representa aquí la magnitud de la aceleración centrípeta.
+
+No debe confundirse con el vector completo:
+
+\[
+\vect{a}_c.
+\]
+
+La magnitud no posee signo negativo, pero el vector sí tiene dirección y
+sentido.
+
+\end{advertencia}
+
+
+\section{Representación vectorial de la aceleración centrípeta}
+
+Consideremos una partícula en una trayectoria circular de radio \(R\) cuyo
+centro coincide con el origen.
+
+El vector de posición es:
+
+\[
+\vect{r}
+=
+x\ihat+y\jhat.
+\]
+
+La aceleración centrípeta apunta en sentido contrario al vector radial.
+
+Por tanto:
+
+\[
+\boxed{
+\vect{a}_c
+=
+-\frac{v^2}{R^2}\vect{r}
+}.
+\]
+
+Como:
+
+\[
+v^2=R^2\omega^2,
+\]
+
+tenemos:
+
+\[
+\boxed{
+\vect{a}_c=-\omega^2\vect{r}
+}.
+\]
+
+En componentes rectangulares:
+
+\[
+\boxed{
+a_{cx}=-\omega^2x
+},
+\]
+
+\[
+\boxed{
+a_{cy}=-\omega^2y
+}.
+\]
+
+Estas relaciones son válidas también para movimiento circular no uniforme
+cuando describen únicamente la componente centrípeta.
+
+\begin{interpretacion}
+
+El signo negativo indica que la aceleración centrípeta es opuesta al vector
+radial dirigido desde el centro hacia la partícula.
+
+No significa que la aceleración sea siempre negativa en ambos ejes.
+
+Los signos de sus componentes dependen de la posición de la partícula.
+
+\end{interpretacion}
+
+
+\section{Diagrama de velocidad y aceleración centrípeta}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+
+    \coordinate (O) at (0,0);
+
+    \draw[-{Latex},thick]
+        (-3.5,0) -- (3.6,0)
+        node[right] {\(x\)};
+
+    \draw[-{Latex},thick]
+        (0,-3.5) -- (0,3.6)
+        node[above] {\(y\)};
+
+    \draw[very thick,AzulPrincipal]
+        (O) circle (2.5);
+
+    \fill (O) circle (2pt);
+    \node[below left] at (O) {\(O\)};
+
+    \foreach \ang in {0,90,180,270}{
+
+        \pgfmathsetmacro{\px}{2.5*cos(\ang)}
+        \pgfmathsetmacro{\py}{2.5*sin(\ang)}
+
+        \fill (\px,\py) circle (2.5pt);
+
+        \draw[-{Latex},very thick,VerdePrincipal]
+            (\px,\py) --
+            ++({-0.65*sin(\ang)},{0.65*cos(\ang)});
+
+        \draw[-{Latex},very thick,RojoPrincipal]
+            (\px,\py) --
+            ++({-0.75*cos(\ang)},{-0.75*sin(\ang)});
+    }
+
+    \node[VerdePrincipal] at (3.2,0.8) {\(\vect{v}\)};
+    \node[RojoPrincipal] at (1.3,0.35) {\(\vect{a}_c\)};
+
+    \node[VerdePrincipal] at (-1.0,3.1) {\(\vect{v}\)};
+    \node[RojoPrincipal] at (0.65,1.4) {\(\vect{a}_c\)};
+
+\end{tikzpicture}
+\end{center}
+
+En cada punto:
+
+\[
+\vect{v}
+\]
+
+es tangente a la circunferencia, mientras:
+
+\[
+\vect{a}_c
+\]
+
+apunta hacia el centro.
+
+Por tanto:
+
+\[
+\boxed{
+\vect{v}\pdot\vect{a}_c=0
+}.
+\]
+
+Es decir, ambos vectores son perpendiculares.
+
+
+\section{Deducción geométrica de la aceleración centrípeta}
+
+Para comprender de dónde surge:
+
+\[
+a_c=\frac{v^2}{R},
+\]
+
+consideremos una partícula que describe una circunferencia con rapidez
+constante.
+
+En dos instantes próximos, sus velocidades tienen magnitud \(v\), pero
+diferentes direcciones.
+
+Sean:
+
+\[
+\vect{v}_1
+\]
+
+y:
+
+\[
+\vect{v}_2.
+\]
+
+Durante el intervalo \(\Delta t\), el vector velocidad gira un ángulo pequeño
+\(\Delta\theta\).
+
+Como los vectores velocidad tienen la misma magnitud, el triángulo que forman
+sus extremos es semejante, en el límite de ángulos pequeños, al triángulo
+formado por los radios correspondientes.
+
+Por tanto:
+
+\[
+\frac{|\Delta\vect{v}|}{v}
+\approx
+\frac{\Delta s}{R}.
+\]
+
+Como la rapidez es constante:
+
+\[
+\Delta s=v\Delta t.
+\]
+
+Entonces:
+
+\[
+\frac{|\Delta\vect{v}|}{v}
+\approx
+\frac{v\Delta t}{R}.
+\]
+
+Despejando:
+
+\[
+|\Delta\vect{v}|
+\approx
+\frac{v^2\Delta t}{R}.
+\]
+
+Dividimos entre \(\Delta t\):
+
+\[
+\frac{|\Delta\vect{v}|}{\Delta t}
+\approx
+\frac{v^2}{R}.
+\]
+
+En el límite:
+
+\[
+\Delta t\to0,
+\]
+
+la aproximación geométrica se convierte en una igualdad.
+
+Por tanto:
+
+\[
+\boxed{
+a_c=\frac{v^2}{R}
+}.
+\]
+
+\begin{interpretacion}
+
+La aceleración centrípeta aumenta cuando aumenta la rapidez.
+
+En particular:
+
+\[
+a_c\propto v^2
+\]
+
+si el radio permanece constante.
+
+Por ello, duplicar la rapidez cuadruplica la aceleración centrípeta.
+
+También:
+
+\[
+a_c\propto\frac{1}{R}
+\]
+
+cuando la rapidez se mantiene fija.
+
+Una curva más cerrada exige un cambio más rápido de dirección del vector
+velocidad.
+
+\end{interpretacion}
+
+
+\section{Deducción mediante componentes rectangulares}
+
+Podemos obtener el mismo resultado usando las ecuaciones cartesianas.
+
+Para movimiento circular uniforme:
+
+\[
+\theta(t)=\theta_0+\omega t.
+\]
+
+La posición es:
+
+\[
+x(t)=R\cos(\theta_0+\omega t),
+\]
+
+\[
+y(t)=R\sen(\theta_0+\omega t).
+\]
+
+Derivando:
+
+\[
+v_x=-R\omega\sen(\theta_0+\omega t),
+\]
+
+\[
+v_y=R\omega\cos(\theta_0+\omega t).
+\]
+
+Derivamos nuevamente.
+
+Para \(x\):
+
+\[
+a_x
+=
+-R\omega^2\cos(\theta_0+\omega t).
+\]
+
+Para \(y\):
+
+\[
+a_y
+=
+-R\omega^2\sen(\theta_0+\omega t).
+\]
+
+Por tanto:
+
+\[
+\vect{a}
+=
+-R\omega^2
+\left[
+\cos\theta\,\ihat+\sen\theta\,\jhat
+\right].
+\]
+
+Pero:
+
+\[
+\vect{r}
+=
+R
+\left[
+\cos\theta\,\ihat+\sen\theta\,\jhat
+\right].
+\]
+
+Entonces:
+
+\[
+\boxed{
+\vect{a}=-\omega^2\vect{r}
+}.
+\]
+
+En movimiento circular uniforme, esta es toda la aceleración.
+
+Su magnitud es:
+
+\[
+a
+=
+R\omega^2.
+\]
+
+Como:
+
+\[
+v=R|\omega|,
+\]
+
+resulta:
+
+\[
+\boxed{
+a_c=\frac{v^2}{R}=R\omega^2
+}.
+\]
+
+Esta deducción muestra que el resultado geométrico y el cálculo por
+componentes rectangulares son completamente coherentes.
+
+
+\section{Ecuaciones del movimiento circular uniforme}
+
+Si:
+
+\[
+\omega=\text{constante},
+\]
+
+entonces:
+
+\[
+\deriv{\theta}{t}=\omega.
+\]
+
+Integrando:
+
+\[
+\boxed{
+\theta(t)=\theta_0+\omega t
+}.
+\]
+
+Las componentes de posición son:
+
+\[
+\boxed{
+x(t)=R\cos(\theta_0+\omega t)
+},
+\]
+
+\[
+\boxed{
+y(t)=R\sen(\theta_0+\omega t)
+}.
+\]
+
+Las componentes de velocidad:
+
+\[
+\boxed{
+v_x(t)=-R\omega\sen(\theta_0+\omega t)
+},
+\]
+
+\[
+\boxed{
+v_y(t)=R\omega\cos(\theta_0+\omega t)
+}.
+\]
+
+Las componentes de aceleración:
+
+\[
+\boxed{
+a_x(t)=-R\omega^2\cos(\theta_0+\omega t)
+},
+\]
+
+\[
+\boxed{
+a_y(t)=-R\omega^2\sen(\theta_0+\omega t)
+}.
+\]
+
+\begin{condicion}
+
+Estas ecuaciones describen MCU alrededor de un centro fijo situado en el
+origen, con radio y velocidad angular algebraica constantes.
+
+Si el centro está en:
+
+\[
+(x_C,y_C),
+\]
+
+las ecuaciones de posición se modifican a:
+
+\[
+x=x_C+R\cos\theta,
+\]
+
+\[
+y=y_C+R\sen\theta.
+\]
+
+\end{condicion}
+
+
+\section{¿Qué magnitudes permanecen constantes en el MCU?}
+
+En el MCU permanecen constantes:
+
+\[
+R,
+\]
+
+\[
+v,
+\]
+
+\[
+|\omega|,
+\]
+
+\[
+a_c.
+\]
+
+También el período y la frecuencia:
+
+\[
+T=\text{constante},
+\]
+
+\[
+f=\text{constante}.
+\]
+
+Sin embargo, los vectores:
+
+\[
+\vect{r},
+\qquad
+\vect{v},
+\qquad
+\vect{a}
+\]
+
+cambian continuamente de dirección.
+
+\begin{errorfrecuente}
+
+No debe afirmarse que la aceleración vectorial es constante en MCU.
+
+La magnitud:
+
+\[
+a_c=\frac{v^2}{R}
+\]
+
+permanece constante, pero su dirección cambia continuamente para seguir
+apuntando hacia el centro de la trayectoria.
+
+Por tanto:
+
+\[
+\vect{a}\neq\text{constante}.
+\]
+
+\end{errorfrecuente}
+
+
+\section{Gráfica de posición angular contra tiempo}
+
+Para MCU:
+
+\[
+\theta(t)=\theta_0+\omega t.
+\]
+
+Esta ecuación corresponde a una recta.
+
+En una gráfica de posición angular acumulada contra tiempo:
+
+\[
+\boxed{
+\text{pendiente}=\omega
+}.
+\]
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.80\textwidth,
+    height=6cm,
+    axis lines=left,
+    xlabel={\(t\) (\si{\second})},
+    ylabel={\(\theta\) (\si{\radian})},
+    xmin=0,
+    xmax=5,
+    ymin=0,
+    ymax=12,
+    xtick={0,1,2,3,4,5},
+    ytick={0,2,4,6,8,10,12},
+    grid=both
+]
+
+\addplot[
+    AzulPrincipal,
+    very thick,
+    domain=0:5,
+    samples=2
+]
+{1+2*x};
+
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+En esta gráfica:
+
+\[
+\theta_0=\SI{1}{\radian},
+\]
+
+y:
+
+\[
+\omega=\SI{2}{\radian\per\second}.
+\]
+
+La pendiente positiva indica giro antihorario según nuestra convención.
+
+
+\section{Gráficas de posición cartesiana en el MCU}
+
+Aunque:
+
+\[
+\theta(t)
+\]
+
+cambia linealmente con el tiempo, las coordenadas cartesianas no lo hacen.
+
+En MCU:
+
+\[
+x(t)=R\cos(\theta_0+\omega t),
+\]
+
+\[
+y(t)=R\sen(\theta_0+\omega t).
+\]
+
+Por tanto, las gráficas:
+
+\[
+x-t
+\]
+
+y:
+
+\[
+y-t
+\]
+
+son funciones sinusoidales.
+
+\begin{interpretacion}
+
+Una trayectoria circular puede producir gráficas de posición cartesiana
+oscilatorias.
+
+Esto no significa que la partícula se mueva alternativamente sobre una línea
+recta.
+
+Significa que cada proyección cartesiana de su posición cambia de manera
+periódica mientras la partícula recorre la circunferencia.
+
+\end{interpretacion}
+
+
+\section{Ejemplo: movimiento circular uniforme}
+
+\begin{ejemplo}
+
+Una partícula describe una circunferencia de radio:
+
+\[
+R=\SI{2.00}{\meter}
+\]
+
+con frecuencia:
+
+\[
+f=\SI{0.500}{\hertz}.
+\]
+
+En:
+
+\[
+t=0,
+\]
+
+se encuentra sobre el eje \(+x\) y gira en sentido antihorario.
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item el período;
+    \item la velocidad angular;
+    \item la rapidez;
+    \item la aceleración centrípeta;
+    \item los vectores posición, velocidad y aceleración en:
+    \[
+    t=\SI{0.500}{\second}.
+    \]
+\end{enumerate}
+
+\end{ejemplo}
+
+El período es:
+
+\[
+T=\frac{1}{f}.
+\]
+
+Entonces:
+
+\[
+\boxed{
+T=\SI{2.00}{\second}
+}.
+\]
+
+Como el giro es antihorario:
+
+\[
+\omega=2\pi f.
+\]
+
+Entonces:
+
+\[
+\omega
+=
+2\pi(\SI{0.500}{\hertz}).
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\omega=\pi\ \si{\radian\per\second}
+}.
+\]
+
+La rapidez es:
+
+\[
+v=R\omega.
+\]
+
+Así:
+
+\[
+v
+=
+(\SI{2.00}{\meter})
+(\pi\ \si{\radian\per\second}).
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v\approx
+\SI{6.28}{\meter\per\second}
+}.
+\]
+
+La aceleración centrípeta es:
+
+\[
+a_c=R\omega^2.
+\]
+
+Entonces:
+
+\[
+a_c
+=
+2.00\pi^2
+\ \si{\meter\per\second\squared}.
+\]
+
+Así:
+
+\[
+\boxed{
+a_c\approx
+\SI{19.7}{\meter\per\second\squared}
+}.
+\]
+
+Ahora determinamos la posición angular.
+
+Como:
+
+\[
+\theta_0=0,
+\]
+
+tenemos:
+
+\[
+\theta(t)=\omega t.
+\]
+
+Para:
+
+\[
+t=\SI{0.500}{\second},
+\]
+
+resulta:
+
+\[
+\theta
+=
+\pi(0.500)
+=
+\frac{\pi}{2}\ \si{\radian}.
+\]
+
+Entonces:
+
+\[
+\theta=90\grado.
+\]
+
+La partícula se encuentra en el punto superior de la circunferencia:
+
+\[
+x=R\cos90\grado=0,
+\]
+
+\[
+y=R\sen90\grado=\SI{2.00}{\meter}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{r}
+=
+2.00\jhat\ \si{\meter}
+}.
+\]
+
+Las componentes de velocidad son:
+
+\[
+v_x=-R\omega\sen\theta,
+\]
+
+\[
+v_y=R\omega\cos\theta.
+\]
+
+Entonces:
+
+\[
+v_x
+=
+-2.00\pi,
+\]
+
+\[
+v_y=0.
+\]
+
+Así:
+
+\[
+\boxed{
+\vect{v}
+=
+-6.28\ihat\,
+\si{\meter\per\second}
+}.
+\]
+
+La velocidad apunta hacia la izquierda, tangente a la trayectoria.
+
+Finalmente:
+
+\[
+\vect{a}
+=
+-\omega^2\vect{r}.
+\]
+
+Entonces:
+
+\[
+\boxed{
+\vect{a}
+=
+-19.7\jhat\,
+\si{\meter\per\second\squared}
+}.
+\]
+
+La aceleración apunta verticalmente hacia abajo, es decir, hacia el centro.
+
+
+\section{Movimiento circular no uniforme}
+
+Hasta ahora hemos estudiado el caso en el que la rapidez permanece constante.
+
+Pero un objeto también puede moverse sobre una circunferencia mientras
+aumenta o disminuye su rapidez.
+
+Por ejemplo, al poner en marcha un ventilador, los puntos de sus aspas
+comienzan a girar cada vez más rápido.
+
+Cuando se apaga y disminuye su rapidez angular, ocurre lo contrario.
+
+\begin{definicion}[Movimiento circular no uniforme]
+
+El movimiento circular no uniforme es aquel en el que una partícula describe
+una trayectoria circular, pero su rapidez no permanece constante.
+
+\end{definicion}
+
+En este caso el vector velocidad puede cambiar simultáneamente:
+
+\begin{itemize}
+    \item de magnitud;
+    \item de dirección.
+\end{itemize}
+
+Por tanto, necesitamos distinguir dos contribuciones a la aceleración.
+
+
+\section{Aceleración angular media}
+
+La velocidad angular puede cambiar con el tiempo.
+
+Para medir ese cambio introducimos la aceleración angular.
+
+\begin{definicion}[Aceleración angular media]
+
+La aceleración angular media es el cambio de velocidad angular dividido entre
+el intervalo de tiempo:
+
+\[
+\boxed{
+\bar{\alpha}
+=
+\frac{\Delta\omega}{\Delta t}
+}.
+\]
+
+\end{definicion}
+
+La unidad SI es:
+
+\[
+\si{\radian\per\second\squared}.
+\]
+
+Si:
+
+\[
+\bar{\alpha}>0,
+\]
+
+la velocidad angular algebraica aumenta.
+
+Si:
+
+\[
+\bar{\alpha}<0,
+\]
+
+disminuye.
+
+\begin{advertencia}
+
+Una aceleración angular negativa no significa necesariamente que el objeto
+esté disminuyendo su rapidez de giro.
+
+La interpretación depende del signo de \(\omega\).
+
+Si:
+
+\[
+\omega<0,
+\qquad
+\alpha<0,
+\]
+
+la magnitud de la velocidad angular aumenta.
+
+\end{advertencia}
+
+
+\section{Aceleración angular instantánea}
+
+\begin{definicion}[Aceleración angular instantánea]
+
+La aceleración angular instantánea es:
+
+\[
+\boxed{
+\alpha
+=
+\deriv{\omega}{t}
+}.
+\]
+
+Como:
+
+\[
+\omega=\deriv{\theta}{t},
+\]
+
+también:
+
+\[
+\boxed{
+\alpha=\derivdos{\theta}{t}
+}.
+\]
+
+\end{definicion}
+
+En el sistema elegido:
+
+\[
+\vect{\alpha}
+=
+\alpha\khat.
+\]
+
+La aceleración angular indica qué tan rápidamente cambia la velocidad angular.
+
+No debe confundirse con la aceleración lineal de la partícula.
+
+
+\section{Aceleración tangencial}
+
+Supongamos que la rapidez de una partícula cambia mientras recorre una
+circunferencia.
+
+La componente de aceleración responsable de ese cambio recibe el nombre de
+aceleración tangencial.
+
+\begin{definicion}[Aceleración tangencial]
+
+La aceleración tangencial es la componente de la aceleración paralela a la
+tangente de la trayectoria y responsable del cambio de rapidez.
+
+\end{definicion}
+
+Definimos su componente algebraica respecto de la tangente positiva como:
+
+\[
+\boxed{
+a_t=\deriv{v_{\mathrm{tan}}}{t}
+}.
+\]
+
+Como:
+
+\[
+v_{\mathrm{tan}}=R\omega,
+\]
+
+y el radio es constante:
+
+\[
+a_t
+=
+R\deriv{\omega}{t}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+a_t=R\alpha
+}.
+\]
+
+Su magnitud es:
+
+\[
+\boxed{
+|a_t|=R|\alpha|
+}.
+\]
+
+\begin{interpretacion}
+
+La aceleración tangencial modifica la magnitud de la velocidad.
+
+Si apunta en el mismo sentido que la velocidad, la rapidez aumenta.
+
+Si apunta en sentido contrario, la rapidez disminuye.
+
+\end{interpretacion}
+
+
+\section{Aceleración centrípeta en movimiento circular no uniforme}
+
+Aunque la rapidez cambie, la partícula continúa moviéndose sobre una
+circunferencia.
+
+Por ello, la dirección del vector velocidad sigue cambiando.
+
+La componente centrípeta continúa existiendo:
+
+\[
+\boxed{
+a_c=\frac{v^2}{R}
+}.
+\]
+
+Equivalentemente:
+
+\[
+\boxed{
+a_c=R\omega^2
+}.
+\]
+
+El movimiento circular no uniforme presenta entonces dos componentes de
+aceleración:
+
+\begin{itemize}
+    \item aceleración tangencial;
+    \item aceleración centrípeta.
+\end{itemize}
+
+No son dos aceleraciones de partículas diferentes.
+
+Son componentes de un mismo vector aceleración.
+
+
+\section{Aceleración total}
+
+En una trayectoria circular, la aceleración total puede expresarse como:
+
+\[
+\boxed{
+\vect{a}
+=
+\vect{a}_t+\vect{a}_c
+}.
+\]
+
+La aceleración tangencial es paralela a la trayectoria.
+
+La aceleración centrípeta apunta hacia el centro.
+
+Ambas componentes son perpendiculares.
+
+Por tanto, la magnitud de la aceleración total es:
+
+\[
+\boxed{
+a=\sqrt{a_t^2+a_c^2}
+}.
+\]
+
+Sustituyendo sus magnitudes:
+
+\[
+\boxed{
+a
+=
+\sqrt{
+R^2\alpha^2+R^2\omega^4
+}
+}.
+\]
+
+Factorizando:
+
+\[
+\boxed{
+a
+=
+R\sqrt{\alpha^2+\omega^4}
+}.
+\]
+
+\begin{condicion}
+
+Esta expresión requiere movimiento circular de radio constante alrededor de
+un centro fijo.
+
+Las magnitudes \(\alpha\) y \(\omega\) deben expresarse en unidades coherentes
+del SI.
+
+\end{condicion}
+
+
+\section{Representación geométrica de las aceleraciones}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+
+    \coordinate (O) at (0,0);
+    \coordinate (P) at (2.5,0);
+
+    \draw[-{Latex},thick]
+        (-3.3,0) -- (3.5,0)
+        node[right] {\(x\)};
+
+    \draw[-{Latex},thick]
+        (0,-3.3) -- (0,3.4)
+        node[above] {\(y\)};
+
+    \draw[very thick,AzulPrincipal]
+        (O) circle (2.5);
+
+    \fill (O) circle (2pt);
+    \node[below left] at (O) {\(O\)};
+
+    \fill (P) circle (3pt);
+    \node[below right] at (P) {\(P\)};
+
+    \draw[-{Latex},very thick,VerdePrincipal]
+        (P) -- ++(0,1.55)
+        node[above] {\(\vect{v}\)};
+
+    \draw[-{Latex},very thick,RojoPrincipal]
+        (P) -- ++(-1.55,0)
+        node[midway,below] {\(\vect{a}_c\)};
+
+    \draw[-{Latex},very thick,AzulSecundario]
+        (P) -- ++(0,0.85)
+        node[right] {\(\vect{a}_t\)};
+
+    \draw[-{Latex},thick,dashed]
+        (P) -- ++(-1.55,0.85)
+        node[above left] {\(\vect{a}\)};
+
+\end{tikzpicture}
+\end{center}
+
+El dibujo representa un instante en el que la partícula se mueve hacia arriba
+y aumenta su rapidez.
+
+En ese instante:
+
+\[
+\vect{a}_t
+\]
+
+apunta hacia arriba, mientras:
+
+\[
+\vect{a}_c
+\]
+
+apunta hacia el centro.
+
+La aceleración total tiene una dirección intermedia.
+
+Si la partícula estuviera disminuyendo su rapidez, la componente tangencial
+apuntaría en sentido contrario al vector velocidad.
+
+
+\section{Deducción de la aceleración total por componentes rectangulares}
+
+La posición sigue siendo:
+
+\[
+\vect{r}
+=
+R\cos\theta\,\ihat
++
+R\sen\theta\,\jhat.
+\]
+
+Pero ahora:
+
+\[
+\omega=\omega(t).
+\]
+
+La velocidad es:
+
+\[
+\vect{v}
+=
+-R\omega\sen\theta\,\ihat
++
+R\omega\cos\theta\,\jhat.
+\]
+
+Derivamos cada componente.
+
+Para \(x\):
+
+\[
+a_x
+=
+\deriv{}{t}
+(-R\omega\sen\theta).
+\]
+
+Aplicando la regla del producto:
+
+\[
+a_x
+=
+-R\alpha\sen\theta
+-
+R\omega^2\cos\theta.
+\]
+
+Para \(y\):
+
+\[
+a_y
+=
+\deriv{}{t}
+(R\omega\cos\theta).
+\]
+
+Entonces:
+
+\[
+a_y
+=
+R\alpha\cos\theta
+-
+R\omega^2\sen\theta.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+a_x
+=
+-R\alpha\sen\theta
+-
+R\omega^2\cos\theta
+},
+\]
+
+\[
+\boxed{
+a_y
+=
+R\alpha\cos\theta
+-
+R\omega^2\sen\theta
+}.
+\]
+
+El vector aceleración total es:
+
+\[
+\boxed{
+\vect{a}
+=
+\left(
+-R\alpha\sen\theta-R\omega^2\cos\theta
+\right)\ihat
++
+\left(
+R\alpha\cos\theta-R\omega^2\sen\theta
+\right)\jhat
+}.
+\]
+
+Podemos separar dos contribuciones:
+
+\[
+\vect{a}_t
+=
+R\alpha
+\left(
+-\sen\theta\,\ihat+\cos\theta\,\jhat
+\right),
+\]
+
+\[
+\vect{a}_c
+=
+-R\omega^2
+\left(
+\cos\theta\,\ihat+\sen\theta\,\jhat
+\right).
+\]
+
+La primera es tangencial.
+
+La segunda es radial hacia el centro.
+
+\begin{interpretacion}
+
+El análisis por componentes rectangulares demuestra que la aceleración total
+de una partícula en movimiento circular puede cambiar tanto la magnitud como
+la dirección de la velocidad.
+
+No necesitamos abandonar las coordenadas cartesianas para describir el
+movimiento circular.
+
+Las magnitudes angulares permiten simplificar el análisis, pero las
+componentes rectangulares siguen proporcionando una descripción general y
+completa.
+
+\end{interpretacion}
+
+
+\section{Movimiento circular uniformemente acelerado}
+
+Un caso particular del movimiento circular no uniforme ocurre cuando la
+aceleración angular permanece constante.
+
+\begin{definicion}[Movimiento circular con aceleración angular constante]
+
+Es el movimiento circular en el que:
+
+\[
+\boxed{
+\alpha=\text{constante}
+}.
+\]
+
+\end{definicion}
+
+También se conoce como movimiento circular uniformemente variado.
+
+Si:
+
+\[
+\alpha>0,
+\]
+
+la velocidad angular algebraica aumenta.
+
+Si:
+
+\[
+\alpha<0,
+\]
+
+disminuye.
+
+Esto no implica necesariamente que aumente o disminuya la rapidez angular,
+pues debemos considerar también el signo de \(\omega\).
+
+
+\section{Ecuación de velocidad angular}
+
+Partimos de:
+
+\[
+\alpha=\deriv{\omega}{t}.
+\]
+
+Si:
+
+\[
+\alpha=\text{constante},
+\]
+
+entonces:
+
+\[
+\dd\omega=\alpha\,\dd t.
+\]
+
+Integramos desde:
+
+\[
+t=0,
+\qquad
+\omega=\omega_0,
+\]
+
+hasta un tiempo \(t\):
+
+\[
+\int_{\omega_0}^{\omega}\dd\omega
+=
+\int_0^t\alpha\,\dd t.
+\]
+
+Por tanto:
+
+\[
+\omega-\omega_0=\alpha t.
+\]
+
+Así:
+
+\[
+\boxed{
+\omega=\omega_0+\alpha t
+}.
+\]
+
+\begin{interpretacion}
+
+La velocidad angular cambia linealmente con el tiempo.
+
+La cantidad:
+
+\[
+\alpha t
+\]
+
+representa el cambio angular de velocidad acumulado durante el intervalo.
+
+\end{interpretacion}
+
+
+\section{Ecuación de posición angular}
+
+Sabemos que:
+
+\[
+\omega=\deriv{\theta}{t}.
+\]
+
+Como:
+
+\[
+\omega=\omega_0+\alpha t,
+\]
+
+tenemos:
+
+\[
+\deriv{\theta}{t}
+=
+\omega_0+\alpha t.
+\]
+
+Integramos:
+
+\[
+\theta-\theta_0
+=
+\int_0^t
+(\omega_0+\alpha t)\,\dd t.
+\]
+
+Entonces:
+
+\[
+\boxed{
+\theta
+=
+\theta_0
++
+\omega_0t
++
+\frac{1}{2}\alpha t^2
+}.
+\]
+
+Equivalentemente:
+
+\[
+\boxed{
+\Delta\theta
+=
+\omega_0t
++
+\frac{1}{2}\alpha t^2
+}.
+\]
+
+Esta ecuación es análoga a la ecuación de posición del MRUA:
+
+\[
+x=x_0+v_0t+\frac{1}{2}at^2.
+\]
+
+Sin embargo, las magnitudes poseen significados físicos diferentes.
+
+
+\section{Relación angular sin el tiempo}
+
+Partimos de:
+
+\[
+\omega=\omega_0+\alpha t.
+\]
+
+Para aceleración angular constante:
+
+\[
+\Delta\theta
+=
+\frac{\omega_0+\omega}{2}t.
+\]
+
+Despejando:
+
+\[
+t=\frac{\omega-\omega_0}{\alpha},
+\]
+
+para:
+
+\[
+\alpha\neq0.
+\]
+
+Sustituimos:
+
+\[
+\Delta\theta
+=
+\frac{\omega_0+\omega}{2}
+\frac{\omega-\omega_0}{\alpha}.
+\]
+
+Entonces:
+
+\[
+2\alpha\Delta\theta
+=
+(\omega_0+\omega)(\omega-\omega_0).
+\]
+
+Por diferencia de cuadrados:
+
+\[
+2\alpha\Delta\theta
+=
+\omega^2-\omega_0^2.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\omega^2
+=
+\omega_0^2
++
+2\alpha\Delta\theta
+}.
+\]
+
+\begin{condicion}
+
+Esta ecuación requiere aceleración angular constante.
+
+Como contiene velocidades angulares al cuadrado, no determina por sí sola el
+sentido de giro.
+
+Después de resolver, debe recuperarse el signo físico de \(\omega\).
+
+\end{condicion}
+
+
+\section{Ecuaciones angulares con aceleración constante}
+
+Las relaciones principales son:
+
+\[
+\boxed{
+\omega=\omega_0+\alpha t
+},
+\]
+
+\[
+\boxed{
+\theta
+=
+\theta_0+\omega_0t+\frac{1}{2}\alpha t^2
+},
+\]
+
+\[
+\boxed{
+\omega^2
+=
+\omega_0^2+2\alpha\Delta\theta
+},
+\]
+
+\[
+\boxed{
+\Delta\theta
+=
+\frac{\omega_0+\omega}{2}t
+}.
+\]
+
+Estas ecuaciones son válidas únicamente cuando:
+
+\[
+\alpha=\text{constante}.
+\]
+
+
+\section{Comparación entre movimientos lineales y angulares}
+
+Existe una analogía entre las ecuaciones del movimiento rectilíneo con
+aceleración constante y las ecuaciones angulares con aceleración constante.
+
+\begin{center}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X
+                            >{\raggedright\arraybackslash}X}
+\toprule
+Movimiento lineal & Movimiento angular \\
+\midrule
+Posición \(x\) & Posición angular \(\theta\) \\
+
+Velocidad \(v_x\) & Velocidad angular \(\omega\) \\
+
+Aceleración \(a_x\) & Aceleración angular \(\alpha\) \\
+
+\(\Delta x=v_{0x}t+\frac12a_xt^2\)
+&
+\(\Delta\theta=\omega_0t+\frac12\alpha t^2\)
+\\
+
+\(v_x=v_{0x}+a_xt\)
+&
+\(\omega=\omega_0+\alpha t\)
+\\
+
+\(v_x^2=v_{0x}^2+2a_x\Delta x\)
+&
+\(\omega^2=\omega_0^2+2\alpha\Delta\theta\)
+\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\begin{advertencia}
+
+Esta analogía no significa que la aceleración lineal total de una partícula en
+movimiento circular sea constante cuando \(\alpha\) es constante.
+
+Incluso con:
+
+\[
+\alpha=\text{constante},
+\]
+
+la aceleración centrípeta:
+
+\[
+a_c=R\omega^2
+\]
+
+puede cambiar de magnitud porque cambia \(\omega\).
+
+Además, las direcciones de las componentes de aceleración cambian mientras
+la partícula gira.
+
+\end{advertencia}
+
+
+\section{Ejemplo: rueda que aumenta su rapidez angular}
+
+\begin{ejemplo}
+
+Una rueda parte del reposo y gira con aceleración angular constante:
+
+\[
+\alpha=\SI{2.00}{\radian\per\second\squared}.
+\]
+
+Determine después de:
+
+\[
+t=\SI{4.00}{\second}
+\]
+
+\begin{enumerate}[label=\alph*)]
+    \item la velocidad angular;
+    \item el desplazamiento angular;
+    \item el número de revoluciones completadas.
+\end{enumerate}
+
+\end{ejemplo}
+
+Como parte del reposo:
+
+\[
+\omega_0=0.
+\]
+
+La velocidad angular es:
+
+\[
+\omega=\omega_0+\alpha t.
+\]
+
+Sustituyendo:
+
+\[
+\omega
+=
+0+
+(\SI{2.00}{\radian\per\second\squared})
+(\SI{4.00}{\second}).
+\]
+
+Entonces:
+
+\[
+\boxed{
+\omega=\SI{8.00}{\radian\per\second}
+}.
+\]
+
+El desplazamiento angular es:
+
+\[
+\Delta\theta
+=
+\omega_0t+\frac12\alpha t^2.
+\]
+
+Como:
+
+\[
+\omega_0=0,
+\]
+
+resulta:
+
+\[
+\Delta\theta
+=
+\frac12(2.00)(4.00)^2.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\Delta\theta=\SI{16.0}{\radian}
+}.
+\]
+
+Una revolución equivale a:
+
+\[
+2\pi\ \si{\radian}.
+\]
+
+Entonces:
+
+\[
+N
+=
+\frac{\Delta\theta}{2\pi}.
+\]
+
+Así:
+
+\[
+N
+=
+\frac{16.0}{2\pi}
+\approx2.55.
+\]
+
+Por tanto:
+
+\[
+\boxed{N\approx2.55\text{ revoluciones}}.
+\]
+
+La rueda ha completado dos vueltas enteras y una fracción adicional de vuelta.
+
+
+\section{Ejemplo: aceleración tangencial y centrípeta}
+
+\begin{ejemplo}
+
+Una partícula se mueve sobre una circunferencia de radio:
+
+\[
+R=\SI{0.80}{\meter}.
+\]
+
+En cierto instante tiene:
+
+\[
+\omega=\SI{5.0}{\radian\per\second}
+\]
+
+y:
+
+\[
+\alpha=\SI{2.0}{\radian\per\second\squared}.
+\]
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item la rapidez;
+    \item la magnitud de la aceleración tangencial;
+    \item la magnitud de la aceleración centrípeta;
+    \item la magnitud de la aceleración total.
+\end{enumerate}
+
+\end{ejemplo}
+
+La rapidez es:
+
+\[
+v=R|\omega|.
+\]
+
+Entonces:
+
+\[
+v
+=
+(0.80)(5.0).
+\]
+
+Así:
+
+\[
+\boxed{
+v=\SI{4.0}{\meter\per\second}
+}.
+\]
+
+La aceleración tangencial tiene magnitud:
+
+\[
+|a_t|=R|\alpha|.
+\]
+
+Por tanto:
+
+\[
+|a_t|
+=
+(0.80)(2.0).
+\]
+
+Entonces:
+
+\[
+\boxed{
+|a_t|=\SI{1.6}{\meter\per\second\squared}
+}.
+\]
+
+La aceleración centrípeta es:
+
+\[
+a_c=R\omega^2.
+\]
+
+Entonces:
+
+\[
+a_c
+=
+(0.80)(5.0)^2.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+a_c=\SI{20}{\meter\per\second\squared}
+}.
+\]
+
+Como las componentes tangencial y centrípeta son perpendiculares:
+
+\[
+a
+=
+\sqrt{a_t^2+a_c^2}.
+\]
+
+Entonces:
+
+\[
+a
+=
+\sqrt{(1.6)^2+(20)^2}.
+\]
+
+Así:
+
+\[
+\boxed{
+a\approx\SI{20.1}{\meter\per\second\squared}
+}.
+\]
+
+\begin{interpretacion}
+
+En este instante la aceleración centrípeta es mucho mayor que la tangencial.
+
+Por ello, la aceleración total apunta principalmente hacia el centro, aunque
+presenta también una componente tangencial asociada al aumento de rapidez.
+
+\end{interpretacion}
+
+
+\section{Velocidad y aceleración en un punto determinado}
+
+En problemas más completos no basta conocer las magnitudes.
+
+También necesitamos obtener las componentes rectangulares.
+
+Supongamos que una partícula se encuentra en una posición angular \(\theta\).
+
+Entonces:
+
+\[
+x=R\cos\theta,
+\qquad
+y=R\sen\theta.
+\]
+
+Las componentes de velocidad son:
+
+\[
+v_x=-R\omega\sen\theta,
+\]
+
+\[
+v_y=R\omega\cos\theta.
+\]
+
+Las componentes de aceleración total son:
+
+\[
+a_x
+=
+-R\alpha\sen\theta-R\omega^2\cos\theta,
+\]
+
+\[
+a_y
+=
+R\alpha\cos\theta-R\omega^2\sen\theta.
+\]
+
+Estas ecuaciones permiten conocer el vector velocidad y el vector aceleración
+en cualquier punto de la trayectoria, siempre que se conozcan:
+
+\[
+R,\qquad
+\theta,\qquad
+\omega,\qquad
+\alpha.
+\]
+
+
+\section{Ejemplo: análisis mediante componentes rectangulares}
+
+\begin{ejemplo}
+
+Una partícula describe una circunferencia de radio:
+
+\[
+R=\SI{2.0}{\meter}.
+\]
+
+En cierto instante su posición angular es:
+
+\[
+\theta=60\grado,
+\]
+
+su velocidad angular es:
+
+\[
+\omega=\SI{3.0}{\radian\per\second},
+\]
+
+y su aceleración angular es:
+
+\[
+\alpha=-\SI{1.0}{\radian\per\second\squared}.
+\]
+
+Determine los vectores posición, velocidad y aceleración en ese instante.
+
+\end{ejemplo}
+
+La posición es:
+
+\[
+\vect{r}
+=
+R\cos\theta\,\ihat
++
+R\sen\theta\,\jhat.
+\]
+
+Sustituyendo:
+
+\[
+x=2.0\cos60\grado,
+\]
+
+\[
+y=2.0\sen60\grado.
+\]
+
+Por tanto:
+
+\[
+x=\SI{1.00}{\meter},
+\]
+
+\[
+y\approx\SI{1.73}{\meter}.
+\]
+
+Así:
+
+\[
+\boxed{
+\vect{r}
+=
+(1.00\ihat+1.73\jhat)\,\si{\meter}
+}.
+\]
+
+Para la velocidad:
+
+\[
+v_x=-R\omega\sen\theta.
+\]
+
+Entonces:
+
+\[
+v_x
+=
+-(2.0)(3.0)\sen60\grado.
+\]
+
+Por tanto:
+
+\[
+v_x\approx
+-\SI{5.20}{\meter\per\second}.
+\]
+
+La componente vertical es:
+
+\[
+v_y=R\omega\cos\theta.
+\]
+
+Entonces:
+
+\[
+v_y
+=
+(2.0)(3.0)\cos60\grado.
+\]
+
+Así:
+
+\[
+v_y=\SI{3.00}{\meter\per\second}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{v}
+=
+(-5.20\ihat+3.00\jhat)
+\,\si{\meter\per\second}
+}.
+\]
+
+Ahora analizamos la aceleración.
+
+La componente horizontal es:
+
+\[
+a_x
+=
+-R\alpha\sen\theta-R\omega^2\cos\theta.
+\]
+
+Sustituyendo:
+
+\[
+a_x
+=
+-(2.0)(-1.0)\sen60\grado
+-
+(2.0)(3.0)^2\cos60\grado.
+\]
+
+Entonces:
+
+\[
+a_x
+\approx
+1.73-9.00.
+\]
+
+Por tanto:
+
+\[
+a_x
+\approx
+-\SI{7.27}{\meter\per\second\squared}.
+\]
+
+La componente vertical es:
+
+\[
+a_y
+=
+R\alpha\cos\theta-R\omega^2\sen\theta.
+\]
+
+Entonces:
+
+\[
+a_y
+=
+(2.0)(-1.0)\cos60\grado
+-
+(2.0)(3.0)^2\sen60\grado.
+\]
+
+Así:
+
+\[
+a_y
+\approx
+-1.00-15.59.
+\]
+
+Por tanto:
+
+\[
+a_y
+\approx
+-\SI{16.6}{\meter\per\second\squared}.
+\]
+
+Finalmente:
+
+\[
+\boxed{
+\vect{a}
+=
+(-7.27\ihat-16.6\jhat)
+\,\si{\meter\per\second\squared}
+}.
+\]
+
+\begin{interpretacion}
+
+El vector aceleración posee componentes negativas en ambos ejes.
+
+Sin embargo, no debemos interpretar esto como una simple aceleración
+``hacia abajo y hacia la izquierda'' sin considerar la geometría del
+movimiento.
+
+El resultado combina:
+
+\begin{itemize}
+    \item una componente centrípeta hacia el centro;
+    \item una componente tangencial opuesta al sentido del movimiento.
+\end{itemize}
+
+Como:
+
+\[
+\omega>0,
+\qquad
+\alpha<0,
+\]
+
+la partícula gira en sentido antihorario, pero su rapidez está disminuyendo.
+
+\end{interpretacion}
+
+
+\section{Gráficas del movimiento circular con aceleración angular constante}
+
+Cuando:
+
+\[
+\alpha=\text{constante},
+\]
+
+la velocidad angular cambia linealmente:
+
+\[
+\omega=\omega_0+\alpha t.
+\]
+
+Por ello, la gráfica:
+
+\[
+\omega-t
+\]
+
+es una recta.
+
+Su pendiente es:
+
+\[
+\boxed{
+\text{pendiente}=\alpha
+}.
+\]
+
+El área algebraica bajo la gráfica \(\omega-t\) representa:
+
+\[
+\boxed{
+\Delta\theta
+=
+\int_{t_i}^{t_f}\omega(t)\,\dd t
+}.
+\]
+
+La posición angular:
+
+\[
+\theta
+=
+\theta_0+\omega_0t+\frac12\alpha t^2
+\]
+
+es una función cuadrática del tiempo.
+
+Por tanto, su gráfica:
+
+\[
+\theta-t
+\]
+
+es parabólica cuando:
+
+\[
+\alpha\neq0.
+\]
+
+Finalmente, la gráfica:
+
+\[
+\alpha-t
+\]
+
+es una recta horizontal cuando la aceleración angular es constante.
+
+
+\section{Cambio de sentido en el movimiento circular}
+
+Una partícula puede detener momentáneamente su giro y comenzar a moverse en
+sentido contrario.
+
+Esto ocurre cuando la velocidad angular pasa por cero:
+
+\[
+\omega=0.
+\]
+
+Si la aceleración angular es constante:
+
+\[
+\omega=\omega_0+\alpha t.
+\]
+
+Entonces:
+
+\[
+0=\omega_0+\alpha t.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+t_{\mathrm{cambio}}
+=
+-\frac{\omega_0}{\alpha}
+}.
+\]
+
+Esta expresión proporciona un instante posterior al inicial solamente cuando:
+
+\[
+t_{\mathrm{cambio}}>0.
+\]
+
+\begin{interpretacion}
+
+En el instante en que:
+
+\[
+\omega=0,
+\]
+
+la rapidez lineal también es cero:
+
+\[
+v=R|\omega|=0.
+\]
+
+La aceleración centrípeta desaparece momentáneamente:
+
+\[
+a_c=R\omega^2=0.
+\]
+
+Sin embargo, la aceleración tangencial puede continuar siendo distinta de
+cero si:
+
+\[
+\alpha\neq0.
+\]
+
+Por tanto, el reposo instantáneo no implica aceleración nula.
+
+\end{interpretacion}
+
+
+\section{Movimiento circular y observadores}
+
+La descripción de un movimiento circular depende del sistema de referencia.
+
+Por ejemplo, un punto marcado en el borde de una rueda que gira alrededor
+de un eje fijo describe una circunferencia respecto de un observador fijo al
+eje.
+
+Si esa rueda además se traslada sobre el suelo, el mismo punto puede
+describir una trayectoria más compleja respecto de un observador situado en
+la carretera.
+
+Por tanto, es importante especificar si estamos estudiando:
+
+\begin{itemize}
+    \item el movimiento alrededor de un centro fijo;
+    \item el movimiento respecto de un sistema que se traslada;
+    \item la combinación de traslación y rotación.
+\end{itemize}
+
+Las ecuaciones desarrolladas en este capítulo corresponden principalmente al
+primer caso.
+
+
+\section{Aplicaciones del movimiento circular}
+
+\begin{aplicacion}[Centrifugadoras]
+
+Una centrifugadora hace girar muestras alrededor de un eje.
+
+Los puntos situados a mayor distancia del eje y con la misma rapidez angular
+poseen mayor rapidez lineal:
+
+\[
+v=R|\omega|.
+\]
+
+También presentan mayor aceleración centrípeta:
+
+\[
+a_c=R\omega^2.
+\]
+
+Estas relaciones permiten describir cinemáticamente el movimiento de las
+muestras durante el funcionamiento del equipo.
+
+\end{aplicacion}
+
+
+\begin{aplicacion}[Ruedas y mecanismos giratorios]
+
+En una rueda rígida que gira alrededor de un eje fijo, todos los puntos
+comparten la misma velocidad angular.
+
+Sin embargo, la rapidez lineal depende del radio.
+
+Por ello, los puntos del borde se desplazan más rápidamente que los puntos
+cercanos al centro.
+
+\end{aplicacion}
+
+
+\begin{aplicacion}[Movimiento de satélites]
+
+En ciertos problemas resulta útil aproximar la trayectoria de un satélite como
+circular.
+
+Si el radio orbital y el período son conocidos, pueden estimarse la rapidez y
+la aceleración centrípeta mediante:
+
+\[
+v=\frac{2\pi R}{T},
+\]
+
+\[
+a_c=\frac{v^2}{R}.
+\]
+
+Esta descripción es cinemática: permite calcular cómo se mueve el satélite sin
+determinar todavía la interacción responsable de mantener su trayectoria.
+
+\end{aplicacion}
+
+
+\section{Actividad experimental}
+
+Una práctica sencilla consiste en estudiar un objeto que gira alrededor de un
+eje fijo.
+
+Puede utilizarse un disco con puntos marcados a diferentes distancias del
+centro.
+
+Se mide:
+
+\begin{itemize}
+    \item el radio de cada punto;
+    \item el tiempo necesario para completar varias vueltas;
+    \item el número total de vueltas;
+    \item el sentido del movimiento.
+\end{itemize}
+
+Con los datos se determina:
+
+\[
+T=\frac{\Delta t}{N},
+\]
+
+\[
+f=\frac{1}{T},
+\]
+
+\[
+|\omega|=2\pi f.
+\]
+
+Para cada radio puede calcularse:
+
+\[
+v=R|\omega|.
+\]
+
+Si la velocidad angular es común a todos los puntos, una gráfica de rapidez
+lineal contra radio debe ser una recta que pasa por el origen:
+
+\[
+v\propto R.
+\]
+
+Su pendiente corresponde a:
+
+\[
+|\omega|.
+\]
+
+De forma semejante:
+
+\[
+a_c=R\omega^2.
+\]
+
+Por tanto, para velocidad angular constante, una gráfica de \(a_c\) contra \(R\)
+también es lineal, con pendiente:
+
+\[
+\omega^2.
+\]
+
+Esta actividad conecta las mediciones con las relaciones físicas desarrolladas.
+
+
+\section{Estrategia general para resolver problemas}
+
+\begin{estrategia}[Movimiento circular]
+
+Para resolver un problema de movimiento circular:
+
+\begin{enumerate}
+
+    \item Identifique el objeto o punto cuya trayectoria se estudiará.
+
+    \item Determine el centro y el radio de la circunferencia.
+
+    \item Defina el sistema de referencia y el sentido angular positivo.
+
+    \item Identifique si el movimiento es circular uniforme o no uniforme.
+
+    \item Escriba los datos conocidos:
+    \[
+    R,\quad
+    \theta_0,\quad
+    \omega_0,\quad
+    \alpha,\quad
+    t.
+    \]
+
+    \item Convierta las magnitudes angulares a radianes cuando corresponda.
+
+    \item Utilice las ecuaciones angulares apropiadas.
+
+    \item Si se requieren velocidades o aceleraciones lineales, determine las
+    componentes correspondientes.
+
+    \item Para MCU:
+    \[
+    v=R|\omega|,
+    \]
+    \[
+    a_c=R\omega^2.
+    \]
+
+    \item Para movimiento circular no uniforme:
+    \[
+    a_t=R\alpha,
+    \]
+    \[
+    a_c=R\omega^2.
+    \]
+
+    \item Si se pide el vector aceleración, reconstruya sus componentes
+    rectangulares.
+
+    \item Verifique:
+    \begin{itemize}
+        \item unidades;
+        \item signos;
+        \item sentido de giro;
+        \item dirección de la velocidad;
+        \item dirección de la aceleración;
+        \item condiciones de validez.
+    \end{itemize}
+
+\end{enumerate}
+
+\end{estrategia}
+
+
+\section{Errores frecuentes}
+
+\begin{errorfrecuente}
+
+\textbf{Creer que rapidez constante significa aceleración cero.}
+
+En MCU:
+
+\[
+v=\text{constante},
+\]
+
+pero:
+
+\[
+a_c=\frac{v^2}{R}\neq0
+\]
+
+si:
+
+\[
+v\neq0.
+\]
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+
+\textbf{Confundir velocidad angular con velocidad lineal.}
+
+La velocidad angular mide cambio de posición angular por unidad de tiempo.
+
+La velocidad lineal describe el cambio del vector de posición en el espacio.
+
+Sus unidades son diferentes:
+
+\[
+[\omega]=\si{\radian\per\second},
+\]
+
+\[
+[v]=\si{\meter\per\second}.
+\]
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+
+\textbf{Creer que todos los puntos de una rueda poseen la misma rapidez lineal.}
+
+Si giran alrededor del mismo eje con la misma rapidez angular:
+
+\[
+v=R|\omega|.
+\]
+
+Los puntos más alejados del eje tienen mayor rapidez lineal.
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+
+\textbf{Confundir aceleración centrípeta con aceleración tangencial.}
+
+La aceleración centrípeta cambia la dirección de la velocidad.
+
+La aceleración tangencial cambia su magnitud.
+
+Son componentes perpendiculares de la aceleración total.
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+
+\textbf{Creer que la aceleración centrípeta apunta hacia afuera.}
+
+La aceleración centrípeta apunta siempre hacia el centro de la trayectoria.
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+
+\textbf{Afirmar que una aceleración angular negativa siempre reduce la rapidez.}
+
+La rapidez de giro disminuye cuando \(\omega\) y \(\alpha\) tienen signos
+opuestos.
+
+Si poseen el mismo signo, la rapidez de giro aumenta.
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+
+\textbf{Utilizar grados directamente en:}
+
+\[
+s=R\theta.
+\]
+
+El ángulo debe expresarse en radianes.
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+
+\textbf{Confundir una revolución con desplazamiento vectorial.}
+
+Después de una revolución completa:
+
+\[
+|\Delta\theta|=2\pi\ \si{\radian},
+\]
+
+pero:
+
+\[
+\Delta\vect{r}=\vect{0}.
+\]
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+
+\textbf{Confundir aceleración angular constante con aceleración lineal
+vectorial constante.}
+
+Aunque:
+
+\[
+\alpha=\text{constante},
+\]
+
+la aceleración lineal puede cambiar tanto de magnitud como de dirección.
+
+\end{errorfrecuente}
+
+
+\section{Secuencia sugerida para impartir la clase}
+
+\begin{notapedagogica}
+
+Una secuencia posible para desarrollar este capítulo es:
+
+\begin{enumerate}
+
+    \item Mostrar una rueda o un ventilador y preguntar cómo describir la
+    posición de un punto de su borde.
+
+    \item Recordar que la velocidad es tangente a la trayectoria.
+
+    \item Establecer el sistema de referencia y el sentido positivo de giro.
+
+    \item Introducir la posición angular y el radián.
+
+    \item Relacionar arco y ángulo:
+    \[
+    s=R\theta.
+    \]
+
+    \item Diferenciar distancia recorrida, desplazamiento angular y
+    desplazamiento vectorial.
+
+    \item Introducir velocidad angular media e instantánea.
+
+    \item Deducir:
+    \[
+    v=R|\omega|.
+    \]
+
+    \item Explicar período y frecuencia mediante vueltas reales.
+
+    \item Definir movimiento circular uniforme.
+
+    \item Comparar dos vectores velocidad en puntos distintos de una
+    circunferencia.
+
+    \item Establecer que existe aceleración aunque la rapidez sea constante.
+
+    \item Deducir e interpretar:
+    \[
+    a_c=\frac{v^2}{R}.
+    \]
+
+    \item Mostrar los vectores de velocidad y aceleración sobre una
+    circunferencia.
+
+    \item Expresar posición, velocidad y aceleración mediante componentes
+    rectangulares.
+
+    \item Resolver un ejemplo numérico completo de MCU.
+
+    \item Introducir movimiento circular no uniforme.
+
+    \item Definir aceleración angular.
+
+    \item Diferenciar aceleración tangencial y centrípeta.
+
+    \item Construir la aceleración total mediante sus componentes.
+
+    \item Deducir las ecuaciones angulares con aceleración constante.
+
+    \item Resolver ejemplos de aumento y disminución de rapidez angular.
+
+    \item Interpretar las gráficas:
+    \[
+    \theta-t,\qquad
+    \omega-t,\qquad
+    \alpha-t.
+    \]
+
+    \item Finalizar con preguntas que obliguen a distinguir magnitudes
+    angulares, lineales, escalares y vectoriales.
+
+\end{enumerate}
+
+\end{notapedagogica}
+
+
+\section{Preguntas de comprensión}
+
+\begin{enumerate}
+
+    \item ¿Qué característica geométrica define el movimiento circular?
+
+    \item ¿Puede una partícula moverse circularmente con rapidez variable?
+
+    \item ¿Qué representa el radio de la trayectoria?
+
+    \item ¿Qué diferencia existe entre posición angular y desplazamiento
+    angular?
+
+    \item ¿Qué es un radián?
+
+    \item ¿Por qué resulta conveniente utilizar radianes?
+
+    \item ¿Cuántos radianes corresponden a una revolución completa?
+
+    \item ¿Qué representa físicamente:
+    \[
+    s=R\theta?
+    \]
+
+    \item ¿Qué diferencia existe entre la longitud de arco y la magnitud del
+    desplazamiento vectorial?
+
+    \item Después de una vuelta completa, ¿cuál es el desplazamiento vectorial?
+
+    \item ¿Qué representa la velocidad angular?
+
+    \item ¿Cuál es la diferencia entre velocidad angular y rapidez lineal?
+
+    \item ¿Por qué un punto del borde de una rueda posee mayor rapidez lineal
+    que uno próximo al centro?
+
+    \item ¿Qué significa el período?
+
+    \item ¿Qué significa la frecuencia?
+
+    \item ¿Por qué período y frecuencia son inversamente proporcionales?
+
+    \item ¿Qué significa movimiento circular uniforme?
+
+    \item ¿Por qué existe aceleración centrípeta en MCU?
+
+    \item ¿En qué dirección apunta la velocidad instantánea?
+
+    \item ¿En qué dirección apunta la aceleración centrípeta?
+
+    \item ¿Por qué la velocidad y la aceleración centrípeta son
+    perpendiculares?
+
+    \item Si se duplica la rapidez lineal manteniendo el radio, ¿qué ocurre
+    con la aceleración centrípeta?
+
+    \item Si se duplica el radio manteniendo la rapidez angular, ¿qué ocurre
+    con la aceleración centrípeta?
+
+    \item ¿Qué diferencia existe entre la aceleración angular y la
+    aceleración tangencial?
+
+    \item ¿Qué significa que la aceleración angular sea negativa?
+
+    \item ¿Puede un objeto tener aceleración angular negativa mientras
+    aumenta su rapidez de giro?
+
+    \item ¿Cuándo desaparece la aceleración tangencial?
+
+    \item ¿Cuándo desaparece la aceleración centrípeta?
+
+    \item ¿Puede existir aceleración centrípeta sin aceleración tangencial?
+
+    \item ¿Puede una partícula tener aceleración tangencial distinta de cero
+    y rapidez instantánea igual a cero?
+
+    \item ¿Por qué la aceleración lineal total no es constante
+    necesariamente cuando la aceleración angular sí lo es?
+
+    \item ¿Qué representa la pendiente de una gráfica \(\theta-t\)?
+
+    \item ¿Qué representa la pendiente de una gráfica \(\omega-t\)?
+
+    \item ¿Qué representa el área algebraica bajo una gráfica
+    \(\omega-t\)?
+
+    \item ¿Cómo pueden determinarse las componentes rectangulares de la
+    aceleración de una partícula en movimiento circular?
+
+\end{enumerate}
+
+
+\begin{resumen}
+
+El movimiento circular es aquel en el que una partícula describe una
+circunferencia de radio constante.
+
+La posición angular permite describir la ubicación de la partícula alrededor
+del centro:
+
+\[
+\theta=\theta(t).
+\]
+
+La medida angular natural para relacionar ángulos y longitudes es el radián:
+
+\[
+\boxed{s=R\theta}.
+\]
+
+El desplazamiento angular es:
+
+\[
+\boxed{
+\Delta\theta=\theta_f-\theta_i
+}.
+\]
+
+La velocidad angular es:
+
+\[
+\boxed{
+\omega=\deriv{\theta}{t}
+}.
+\]
+
+La aceleración angular es:
+
+\[
+\boxed{
+\alpha=\deriv{\omega}{t}
+}.
+\]
+
+La rapidez lineal se relaciona con la velocidad angular mediante:
+
+\[
+\boxed{
+v=R|\omega|
+}.
+\]
+
+En movimiento circular uniforme:
+
+\[
+R=\text{constante},
+\]
+
+\[
+v=\text{constante},
+\]
+
+\[
+\omega=\text{constante}.
+\]
+
+Sin embargo, la dirección del vector velocidad cambia continuamente.
+
+Por ello existe aceleración centrípeta:
+
+\[
+\boxed{
+a_c=\frac{v^2}{R}=R\omega^2
+}.
+\]
+
+Esta aceleración apunta hacia el centro de la trayectoria.
+
+En componentes rectangulares:
+
+\[
+\boxed{
+\vect{a}_c=-\omega^2\vect{r}
+}.
+\]
+
+Para movimiento circular uniforme también:
+
+\[
+\boxed{
+|\omega|=\frac{2\pi}{T}=2\pi f
+}.
+\]
+
+En movimiento circular no uniforme puede existir aceleración tangencial:
+
+\[
+\boxed{
+a_t=R\alpha
+}.
+\]
+
+La aceleración total combina las componentes centrípeta y tangencial:
+
+\[
+\boxed{
+\vect{a}=\vect{a}_c+\vect{a}_t
+}.
+\]
+
+Como ambas son perpendiculares:
+
+\[
+\boxed{
+a=\sqrt{a_c^2+a_t^2}
+}.
+\]
+
+Cuando la aceleración angular es constante:
+
+\[
+\boxed{
+\omega=\omega_0+\alpha t
+},
+\]
+
+\[
+\boxed{
+\theta
+=
+\theta_0+\omega_0t+\frac12\alpha t^2
+},
+\]
+
+\[
+\boxed{
+\omega^2
+=
+\omega_0^2+2\alpha\Delta\theta
+}.
+\]
+
+Finalmente, el movimiento circular puede describirse completamente mediante
+componentes rectangulares:
+
+\[
+\boxed{
+\vect{r}
+=
+R\cos\theta\,\ihat
++
+R\sen\theta\,\jhat
+},
+\]
+
+\[
+\boxed{
+\vect{v}
+=
+-R\omega\sen\theta\,\ihat
++
+R\omega\cos\theta\,\jhat
+},
+\]
+
+\[
+\boxed{
+\vect{a}
+=
+\left(
+-R\alpha\sen\theta-R\omega^2\cos\theta
+\right)\ihat
++
+\left(
+R\alpha\cos\theta-R\omega^2\sen\theta
+\right)\jhat
+}.
+\]
+
+Estas relaciones permiten describir la posición, velocidad y aceleración de una
+partícula que recorre una circunferencia, conservando la coherencia con la
+cinemática vectorial estudiada anteriormente.
+
+\end{resumen}

@@ -1,0 +1,1458 @@
+﻿\nivelbasico
+
+
+\begin{ejercicio}
+Un automóvil se encuentra en una carretera recta. Se elige un árbol como origen del sistema de referencia y se toma como sentido positivo el que apunta hacia el este.
+
+En cierto instante, el automóvil se encuentra a \(\SI{12}{\meter}\) al este del árbol.
+
+\begin{enumerate}[label=\alph*)]
+    \item ¿Cuál es la posición del automóvil?
+    \item ¿Qué información proporciona el signo de la posición?
+    \item ¿La posición indica por sí sola hacia dónde se mueve el automóvil?
+\end{enumerate}
+
+\textit{Pista: la posición indica dónde se encuentra el objeto respecto del origen; no describe necesariamente su movimiento.}
+\end{ejercicio}
+
+\begin{respuesta}
+\begin{enumerate}[label=\alph*)]
+    \item \(x=+\SI{12}{\meter}\).
+    \item El signo positivo indica que el automóvil está en el lado positivo del origen.
+    \item No.
+\end{enumerate}
+\end{respuesta}
+
+\begin{explicacion}
+El origen se encuentra en el árbol:
+
+\[ x=0. \]
+
+El sentido positivo fue definido hacia el este. Como el automóvil se encuentra \(\SI{12}{\meter}\) al este del árbol:
+
+\[ \boxed{x=+\SI{12}{\meter}}. \]
+
+El signo positivo no significa que el automóvil se esté moviendo hacia el este. Indica únicamente que su \textbf{posición} se encuentra en el lado positivo del sistema de referencia.
+
+El automóvil podría estar:
+
+\begin{itemize}
+    \item moviéndose hacia el este;
+    \item moviéndose hacia el oeste;
+    \item momentáneamente en reposo.
+\end{itemize}
+
+Por tanto, conocer la posición de un objeto no basta para determinar su estado de movimiento.
+\end{explicacion}
+
+
+\begin{ejercicio}
+Sobre una carretera recta se establece un origen \(O\) y se toma hacia la derecha como sentido positivo.
+
+Tres objetos se encuentran en las posiciones mostradas:
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+
+    \draw[-{Latex},thick] (-5.5,0) -- (6,0) node[right] {\(x\)};
+
+    \foreach \x/\lab in {-4/-4,-2/-2,0/0,2/2,4/4}{
+        \draw (\x,0.12) -- (\x,-0.12);
+        \node[below] at (\x,-0.12) {\(\lab\)};
+    }
+
+    \fill (-4,0) circle (2.5pt);
+    \node[above] at (-4,0.12) {\(A\)};
+
+    \fill (0,0) circle (2.5pt);
+    \node[above] at (0,0.12) {\(B\)};
+
+    \fill (4,0) circle (2.5pt);
+    \node[above] at (4,0.12) {\(C\)};
+
+    \node[below] at (5,-0.35) {\(\si{\meter}\)};
+
+\end{tikzpicture}
+\end{center}
+
+Determine la posición de cada objeto e interprete físicamente su signo.
+
+\textit{Pista: el origen tiene posición cero; los puntos a su izquierda tienen coordenada negativa.}
+\end{ejercicio}
+
+\begin{respuesta}
+\[ x_A=-\SI{4}{\meter},\qquad x_B=\SI{0}{\meter},\qquad x_C=+\SI{4}{\meter}. \]
+\end{respuesta}
+
+\begin{explicacion}
+El origen del sistema corresponde a:
+
+\[ x=0. \]
+
+El punto \(A\) está a \(\SI{4}{\meter}\) hacia el lado negativo del eje:
+
+\[ \boxed{x_A=-\SI{4}{\meter}}. \]
+
+El objeto \(B\) se encuentra exactamente en el origen:
+
+\[ \boxed{x_B=\SI{0}{\meter}}. \]
+
+El objeto \(C\) está a \(\SI{4}{\meter}\) hacia el lado positivo:
+
+\[ \boxed{x_C=+\SI{4}{\meter}}. \]
+
+Los signos indican en qué lado del origen se encuentran los objetos. No representan una distancia negativa ni permiten determinar por sí solos hacia dónde se están moviendo.
+\end{explicacion}
+
+
+\begin{ejercicio}
+Una partícula se encuentra inicialmente en:
+
+\[ x_i=-\SI{4}{\meter}. \]
+
+Después se encuentra en:
+
+\[ x_f=+\SI{9}{\meter}. \]
+
+Calcule su desplazamiento.
+
+\textit{Pista: utilice \(\Delta x=x_f-x_i\).}
+\end{ejercicio}
+
+\begin{respuesta}
+\[ \boxed{\Delta x=+\SI{13}{\meter}}. \]
+\end{respuesta}
+
+\begin{explicacion}
+El desplazamiento se define como el cambio de posición:
+
+\[ \Delta x=x_f-x_i. \]
+
+Sustituyendo:
+
+\[
+\Delta x
+=
+\SI{9}{\meter}
+-
+(-\SI{4}{\meter}).
+\]
+
+Entonces:
+
+\[ \boxed{\Delta x=+\SI{13}{\meter}}. \]
+
+El signo positivo indica que el desplazamiento neto tiene el sentido positivo del eje.
+
+Observe que el desplazamiento depende únicamente de la posición inicial y la posición final. No necesitamos conocer todavía cómo se movió la partícula entre ambos puntos.
+\end{explicacion}
+
+
+\begin{ejercicio}
+Una persona camina en línea recta desde:
+
+\[ x_i=\SI{2}{\meter} \]
+
+hasta:
+
+\[ x_f=\SI{11}{\meter}, \]
+
+sin cambiar de sentido.
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item el desplazamiento;
+    \item la distancia recorrida.
+\end{enumerate}
+
+\textit{Pista: si no existe cambio de sentido, la distancia coincide con la magnitud del desplazamiento.}
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+\Delta x=+\SI{9}{\meter},
+\qquad
+d=\SI{9}{\meter}.
+\]
+\end{respuesta}
+
+\begin{explicacion}
+El desplazamiento es:
+
+\[ \Delta x=x_f-x_i. \]
+
+Por tanto:
+
+\[
+\Delta x
+=
+\SI{11}{\meter}
+-
+\SI{2}{\meter}
+=
++\SI{9}{\meter}.
+\]
+
+Así:
+
+\[ \boxed{\Delta x=+\SI{9}{\meter}}. \]
+
+Como la persona se mueve directamente desde \(x=2\) hasta \(x=11\) sin cambiar de sentido, recorre exactamente \(\SI{9}{\meter}\):
+
+\[ \boxed{d=\SI{9}{\meter}}. \]
+
+En este caso:
+
+\[ d=|\Delta x|. \]
+
+Esto ocurre porque no hubo retrocesos ni cambios de sentido.
+\end{explicacion}
+
+
+\begin{ejercicio}
+Una estudiante parte del origen de una pista recta, camina hasta:
+
+\[ x=+\SI{8}{\meter}, \]
+
+y después regresa hasta:
+
+\[ x=+\SI{3}{\meter}. \]
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item la posición final;
+    \item el desplazamiento total;
+    \item la distancia total recorrida.
+\end{enumerate}
+
+\textit{Pista: para la distancia debe sumar la longitud de cada tramo recorrido.}
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+x_f=+\SI{3}{\meter},
+\qquad
+\Delta x=+\SI{3}{\meter},
+\qquad
+d=\SI{13}{\meter}.
+\]
+\end{respuesta}
+
+\begin{explicacion}
+La posición inicial es:
+
+\[ x_i=0. \]
+
+La posición final es:
+
+\[ \boxed{x_f=+\SI{3}{\meter}}. \]
+
+El desplazamiento depende únicamente de las posiciones inicial y final:
+
+\[
+\Delta x=x_f-x_i
+=
+\SI{3}{\meter}-0.
+\]
+
+Por tanto:
+
+\[ \boxed{\Delta x=+\SI{3}{\meter}}. \]
+
+Para determinar la distancia debemos analizar el recorrido.
+
+Primer tramo:
+
+\[ d_1=\SI{8}{\meter}. \]
+
+Segundo tramo, desde \(x=8\) hasta \(x=3\):
+
+\[ d_2=\SI{5}{\meter}. \]
+
+Entonces:
+
+\[
+d=d_1+d_2
+=
+\SI{8}{\meter}
++
+\SI{5}{\meter}.
+\]
+
+Así:
+
+\[ \boxed{d=\SI{13}{\meter}}. \]
+
+La diferencia entre ambos resultados muestra que distancia y desplazamiento no representan la misma magnitud física.
+\end{explicacion}
+
+
+\begin{ejercicio}
+Un experimento comienza en el instante:
+
+\[ t_i=\SI{3.5}{\second} \]
+
+y termina en:
+
+\[ t_f=\SI{11.2}{\second}. \]
+
+Determine el intervalo de tiempo transcurrido.
+
+\textit{Pista: \(\Delta t=t_f-t_i\).}
+\end{ejercicio}
+
+\begin{respuesta}
+\[ \boxed{\Delta t=\SI{7.7}{\second}}. \]
+\end{respuesta}
+
+\begin{explicacion}
+El intervalo de tiempo se define como:
+
+\[ \Delta t=t_f-t_i. \]
+
+Sustituyendo:
+
+\[
+\Delta t
+=
+\SI{11.2}{\second}
+-
+\SI{3.5}{\second}.
+\]
+
+Entonces:
+
+\[ \boxed{\Delta t=\SI{7.7}{\second}}. \]
+
+El instante \(t_i\) indica cuándo comienza el intervalo y \(t_f\) cuándo termina. El intervalo \(\Delta t\) representa cuánto tiempo transcurrió entre ambos acontecimientos.
+\end{explicacion}
+
+
+\begin{ejercicio}
+Clasifique las siguientes trayectorias como \textbf{rectilíneas} o \textbf{curvilíneas}:
+
+\begin{enumerate}[label=\alph*)]
+    \item un ascensor que sube por un conducto vertical recto;
+    \item un automóvil que recorre una curva de una carretera;
+    \item una piedra que se mueve por una guía horizontal recta;
+    \item un punto del borde de una rueda mientras esta gira alrededor de un eje fijo.
+\end{enumerate}
+
+\textit{Pista: la trayectoria es el conjunto de posiciones sucesivas ocupadas por el objeto.}
+\end{ejercicio}
+
+\begin{respuesta}
+\begin{enumerate}[label=\alph*)]
+    \item Rectilínea.
+    \item Curvilínea.
+    \item Rectilínea.
+    \item Curvilínea.
+\end{enumerate}
+\end{respuesta}
+
+\begin{explicacion}
+Una trayectoria es rectilínea cuando todas las posiciones sucesivas del objeto se encuentran sobre una línea recta.
+
+Por tanto:
+
+\begin{enumerate}[label=\alph*)]
+    \item El ascensor se mueve sobre una línea vertical: trayectoria rectilínea.
+
+    \item El automóvil cambia continuamente la dirección geométrica de su recorrido: trayectoria curvilínea.
+
+    \item La piedra permanece sobre una guía recta: trayectoria rectilínea.
+
+    \item El punto del borde de la rueda describe una curva alrededor del eje: trayectoria curvilínea.
+\end{enumerate}
+
+La clasificación se refiere a la forma geométrica de la trayectoria, no a que el objeto tenga rapidez constante o variable.
+\end{explicacion}
+
+
+\begin{ejercicio}
+Indique en cuáles de las siguientes situaciones resulta razonable modelar el objeto como una \textbf{partícula}:
+
+\begin{enumerate}[label=\alph*)]
+    \item estudiar el recorrido de un automóvil entre dos ciudades separadas por \(\SI{300}{\kilo\meter}\);
+    \item estudiar si el automóvil cabe dentro de un espacio de estacionamiento;
+    \item estudiar el movimiento de la Tierra alrededor del Sol;
+    \item estudiar la rotación de la Tierra alrededor de su propio eje.
+\end{enumerate}
+
+Justifique brevemente.
+
+\textit{Pista: pregúntese si el tamaño, la forma o la orientación del cuerpo son importantes para el problema.}
+\end{ejercicio}
+
+\begin{respuesta}
+El modelo de partícula es adecuado en a) y c), pero no resulta suficiente en b) ni d).
+\end{respuesta}
+
+\begin{explicacion}
+Modelar un cuerpo como partícula significa representar su posición mediante un solo punto y despreciar sus dimensiones y orientación.
+
+\begin{enumerate}[label=\alph*)]
+    \item Para estudiar un viaje de cientos de kilómetros, las dimensiones del automóvil son pequeñas respecto de la distancia recorrida. El modelo de partícula es razonable.
+
+    \item Para saber si cabe en un estacionamiento, la longitud y el ancho del automóvil son esenciales. No puede tratarse simplemente como un punto.
+
+    \item Para estudiar la posición de la Tierra a lo largo de su órbita, su tamaño puede ser pequeño comparado con las dimensiones del sistema solar. El modelo de partícula puede ser útil.
+
+    \item Para estudiar la rotación terrestre es indispensable considerar su extensión y orientación. El modelo de partícula no contiene esa información.
+\end{enumerate}
+
+El modelo adecuado depende de la pregunta física que se desea responder.
+\end{explicacion}
+
+
+\nivelintermedio
+
+
+\begin{ejercicio}
+Una persona se mueve sobre una línea recta. Parte de:
+
+\[ x_i=-\SI{5}{\meter}. \]
+
+Luego realiza el siguiente recorrido:
+
+\[
+-\SI{5}{\meter}
+\longrightarrow
++\SI{7}{\meter}
+\longrightarrow
+-\SI{2}{\meter}
+\longrightarrow
++\SI{4}{\meter}.
+\]
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item la posición final;
+    \item el desplazamiento total;
+    \item la distancia total recorrida.
+\end{enumerate}
+
+\textit{Pista: calcule por separado la longitud de cada tramo antes de sumarlos.}
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+x_f=+\SI{4}{\meter},
+\qquad
+\Delta x=+\SI{9}{\meter},
+\qquad
+d=\SI{27}{\meter}.
+\]
+\end{respuesta}
+
+\begin{explicacion}
+La posición inicial es:
+
+\[ x_i=-\SI{5}{\meter}. \]
+
+La posición final es:
+
+\[ x_f=+\SI{4}{\meter}. \]
+
+Por tanto, el desplazamiento es:
+
+\[
+\Delta x
+=
+x_f-x_i
+=
+\SI{4}{\meter}
+-
+(-\SI{5}{\meter}).
+\]
+
+Entonces:
+
+\[ \boxed{\Delta x=+\SI{9}{\meter}}. \]
+
+Para la distancia analizamos cada tramo.
+
+Primer tramo:
+
+\[
+d_1
+=
+|7-(-5)|
+=
+\SI{12}{\meter}.
+\]
+
+Segundo tramo:
+
+\[
+d_2
+=
+|-2-7|
+=
+\SI{9}{\meter}.
+\]
+
+Tercer tramo:
+
+\[
+d_3
+=
+|4-(-2)|
+=
+\SI{6}{\meter}.
+\]
+
+Por tanto:
+
+\[
+d=d_1+d_2+d_3
+=
+12+9+6.
+\]
+
+Así:
+
+\[ \boxed{d=\SI{27}{\meter}}. \]
+
+Aunque la persona recorrió \(\SI{27}{\meter}\), su cambio neto de posición fue solamente de \(\SI{9}{\meter}\) hacia el sentido positivo.
+\end{explicacion}
+
+
+\begin{ejercicio}
+En un sistema de referencia, una motocicleta se encuentra en:
+
+\[ x=\SI{18}{\meter}. \]
+
+Se decide cambiar el origen y colocarlo en un punto que, en el sistema anterior, tenía coordenada:
+
+\[ x_O=\SI{5}{\meter}. \]
+
+El sentido positivo no cambia.
+
+¿Cuál es la posición de la motocicleta en el nuevo sistema?
+
+\textit{Pista: la nueva coordenada mide la separación algebraica respecto del nuevo origen.}
+\end{ejercicio}
+
+\begin{respuesta}
+\[ \boxed{x'=\SI{13}{\meter}}. \]
+\end{respuesta}
+
+\begin{explicacion}
+En el sistema original:
+
+\[ x=\SI{18}{\meter}. \]
+
+El nuevo origen se encuentra en:
+
+\[ x_O=\SI{5}{\meter}. \]
+
+Como el sentido positivo permanece igual, la nueva coordenada es:
+
+\[ x'=x-x_O. \]
+
+Entonces:
+
+\[
+x'
+=
+\SI{18}{\meter}
+-
+\SI{5}{\meter}.
+\]
+
+Por tanto:
+
+\[ \boxed{x'=\SI{13}{\meter}}. \]
+
+El objeto no se movió físicamente. Lo que cambió fue la forma de asignarle una coordenada debido al cambio de origen.
+\end{explicacion}
+
+
+\begin{ejercicio}
+En cierto sistema de referencia, una partícula se mueve desde:
+
+\[ x_i=-\SI{3}{\meter} \]
+
+hasta:
+
+\[ x_f=+\SI{8}{\meter}. \]
+
+\begin{enumerate}[label=\alph*)]
+    \item Determine el desplazamiento usando el eje original.
+    \item Ahora mantenga el mismo origen, pero invierta el sentido positivo del eje. ¿Cuáles serán las nuevas coordenadas \(x_i'\) y \(x_f'\)?
+    \item Determine \(\Delta x'\).
+    \item Explique por qué los signos de ambos desplazamientos son diferentes aunque se trate del mismo movimiento físico.
+\end{enumerate}
+
+\textit{Pista: al invertir el eje, las coordenadas cambian de signo.}
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+\Delta x=+\SI{11}{\meter},
+\qquad
+x_i'=+\SI{3}{\meter},
+\qquad
+x_f'=-\SI{8}{\meter},
+\qquad
+\Delta x'=-\SI{11}{\meter}.
+\]
+\end{respuesta}
+
+\begin{explicacion}
+En el sistema original:
+
+\[
+\Delta x=x_f-x_i.
+\]
+
+Entonces:
+
+\[
+\Delta x
+=
+\SI{8}{\meter}
+-
+(-\SI{3}{\meter})
+=
++\SI{11}{\meter}.
+\]
+
+Al invertir el sentido positivo sin cambiar el origen:
+
+\[
+x_i'=+\SI{3}{\meter},
+\]
+
+y:
+
+\[
+x_f'=-\SI{8}{\meter}.
+\]
+
+Por tanto:
+
+\[
+\Delta x'
+=
+x_f'-x_i'
+=
+-\SI{8}{\meter}
+-
+\SI{3}{\meter}.
+\]
+
+Así:
+
+\[ \boxed{\Delta x'=-\SI{11}{\meter}}. \]
+
+El movimiento físico es exactamente el mismo. Lo que cambia es la componente algebraica utilizada para describirlo.
+
+En el primer sistema, el desplazamiento tiene el sentido positivo; en el segundo, ese mismo sentido físico ha sido definido como negativo.
+
+Esto muestra que los signos dependen del sistema de referencia elegido.
+\end{explicacion}
+
+
+\begin{ejercicio}
+La posición de un móvil se registra solamente en ciertos instantes:
+
+\begin{center}
+\begin{tabular}{c|cccc}
+\toprule
+\(t\) (\si{\second}) & 0 & 1 & 2 & 3 \\
+\midrule
+\(x\) (\si{\meter}) & 2 & 5 & 5 & 1 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item la posición inicial;
+    \item la posición final;
+    \item el desplazamiento entre \(t=0\) y \(t=\SI{3}{\second}\);
+    \item la distancia mínima que necesariamente tuvo que recorrer;
+    \item si puede asegurarse que permaneció en reposo entre \(t=\SI{1}{\second}\) y \(t=\SI{2}{\second}\).
+\end{enumerate}
+
+\textit{Pista: conocer la misma posición en dos instantes no revela necesariamente qué ocurrió entre ellos.}
+\end{ejercicio}
+
+\begin{respuesta}
+\begin{enumerate}[label=\alph*)]
+    \item \(x_i=\SI{2}{\meter}\).
+    \item \(x_f=\SI{1}{\meter}\).
+    \item \(\Delta x=-\SI{1}{\meter}\).
+    \item \(d_{\min}=\SI{7}{\meter}\).
+    \item No puede asegurarse.
+\end{enumerate}
+\end{respuesta}
+
+\begin{explicacion}
+La posición inicial es:
+
+\[ x_i=\SI{2}{\meter}, \]
+
+y la final:
+
+\[ x_f=\SI{1}{\meter}. \]
+
+El desplazamiento total es:
+
+\[
+\Delta x
+=
+x_f-x_i
+=
+1-2.
+\]
+
+Por tanto:
+
+\[ \boxed{\Delta x=-\SI{1}{\meter}}. \]
+
+Para determinar la menor distancia compatible con los datos, suponemos que el móvil recorrió directamente la separación entre cada par de posiciones registradas.
+
+De \(x=2\) a \(x=5\):
+
+\[ d_1=\SI{3}{\meter}. \]
+
+Entre \(t=1\) y \(t=2\), las posiciones registradas son ambas \(x=5\). La distancia mínima posible es:
+
+\[ d_2=0. \]
+
+De \(x=5\) a \(x=1\):
+
+\[ d_3=\SI{4}{\meter}. \]
+
+Así:
+
+\[ \boxed{d_{\min}=\SI{7}{\meter}}. \]
+
+Sin embargo, que:
+
+\[ x(\SI{1}{\second})=x(\SI{2}{\second}) \]
+
+no demuestra que el móvil haya permanecido en reposo. Podría haberse alejado de \(x=5\) y regresar antes de la segunda medición.
+
+Por ello, la información discreta de posición no permite reconstruir necesariamente toda la trayectoria.
+\end{explicacion}
+
+
+\begin{ejercicio}
+Una atleta corre una vuelta completa por una pista cerrada de \(\SI{400}{\meter}\) y termina exactamente en el punto donde comenzó.
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item la distancia recorrida;
+    \item la magnitud del desplazamiento;
+    \item si la trayectoria es rectilínea o curvilínea.
+\end{enumerate}
+
+\textit{Pista: el desplazamiento depende de las posiciones inicial y final, no de la longitud del recorrido.}
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+d=\SI{400}{\meter},
+\qquad
+|\Delta\vect{r}|=0.
+\]
+
+La trayectoria es curvilínea y cerrada.
+\end{respuesta}
+
+\begin{explicacion}
+La atleta completa toda la longitud de la pista:
+
+\[ \boxed{d=\SI{400}{\meter}}. \]
+
+Sin embargo, termina exactamente en la misma posición en la que comenzó.
+
+Por definición:
+
+\[ \Delta\vect{r}=\vect{r}_f-\vect{r}_i. \]
+
+Como:
+
+\[ \vect{r}_f=\vect{r}_i, \]
+
+resulta:
+
+\[ \boxed{\Delta\vect{r}=\vect{0}}. \]
+
+Su magnitud es:
+
+\[ \boxed{|\Delta\vect{r}|=0}. \]
+
+La trayectoria no es una línea recta, sino una curva cerrada.
+
+Este ejemplo muestra claramente que un objeto puede recorrer una distancia grande y, al mismo tiempo, tener desplazamiento nulo.
+\end{explicacion}
+
+
+\begin{ejercicio}
+En una carretera recta se elige un árbol como origen y se toma el este como sentido positivo.
+
+Una casa \(A\) se encuentra en:
+
+\[ x_A=-\SI{35}{\meter}, \]
+
+y una tienda \(B\) en:
+
+\[ x_B=+\SI{20}{\meter}. \]
+
+Una persona camina directamente desde \(A\) hasta \(B\).
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item su desplazamiento;
+    \item la distancia recorrida;
+    \item el sentido del desplazamiento.
+\end{enumerate}
+
+\textit{Pista: ambas posiciones están a lados opuestos del origen.}
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+\Delta x=+\SI{55}{\meter},
+\qquad
+d=\SI{55}{\meter}.
+\]
+
+El desplazamiento apunta hacia el este.
+\end{respuesta}
+
+\begin{explicacion}
+La posición inicial es:
+
+\[ x_i=-\SI{35}{\meter}, \]
+
+y la final:
+
+\[ x_f=+\SI{20}{\meter}. \]
+
+Entonces:
+
+\[
+\Delta x
+=
+x_f-x_i
+=
+20-(-35).
+\]
+
+Por tanto:
+
+\[ \boxed{\Delta x=+\SI{55}{\meter}}. \]
+
+Como la persona camina directamente entre ambos puntos y no cambia de sentido:
+
+\[ \boxed{d=\SI{55}{\meter}}. \]
+
+El signo positivo del desplazamiento indica que su sentido es el definido como positivo, es decir, hacia el este.
+\end{explicacion}
+
+
+\begin{ejercicio}
+En un sistema de referencia se registra:
+
+\[
+x_i=\SI{12}{\meter},
+\qquad
+x_f=-\SI{4}{\meter}.
+\]
+
+Después se cambia el origen al punto que anteriormente tenía coordenada:
+
+\[ x_O=\SI{7}{\meter}, \]
+
+sin modificar el sentido positivo.
+
+\begin{enumerate}[label=\alph*)]
+    \item Determine el desplazamiento en el sistema original.
+    \item Determine las posiciones inicial y final en el nuevo sistema.
+    \item Calcule nuevamente el desplazamiento.
+    \item ¿Cambió el desplazamiento al trasladar el origen?
+\end{enumerate}
+
+\textit{Pista: restar la misma cantidad a ambas posiciones no cambia su diferencia.}
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+\Delta x=-\SI{16}{\meter},
+\]
+
+\[
+x_i'=\SI{5}{\meter},
+\qquad
+x_f'=-\SI{11}{\meter},
+\]
+
+\[
+\Delta x'=-\SI{16}{\meter}.
+\]
+
+El desplazamiento no cambia.
+\end{respuesta}
+
+\begin{explicacion}
+En el sistema original:
+
+\[
+\Delta x=x_f-x_i.
+\]
+
+Entonces:
+
+\[
+\Delta x
+=
+-\SI{4}{\meter}
+-
+\SI{12}{\meter}.
+\]
+
+Por tanto:
+
+\[ \boxed{\Delta x=-\SI{16}{\meter}}. \]
+
+Al trasladar el origen hasta \(x_O=\SI{7}{\meter}\):
+
+\[
+x_i'=x_i-x_O
+=
+12-7
+=
+\SI{5}{\meter},
+\]
+
+y:
+
+\[
+x_f'=x_f-x_O
+=
+-4-7
+=
+-\SI{11}{\meter}.
+\]
+
+El nuevo desplazamiento es:
+
+\[
+\Delta x'
+=
+x_f'-x_i'
+=
+-11-5.
+\]
+
+Así:
+
+\[ \boxed{\Delta x'=-\SI{16}{\meter}}. \]
+
+El desplazamiento permanece igual porque trasladar el origen modifica ambas coordenadas en la misma cantidad.
+
+La posición depende de dónde colocamos el origen; el cambio de posición entre dos puntos no depende de esa traslación.
+\end{explicacion}
+
+
+\begin{ejercicio}
+Dos personas observan a una pasajera sentada dentro de un autobús que avanza por una carretera.
+
+La primera persona está sentada junto a ella dentro del autobús. La segunda se encuentra de pie en la acera.
+
+\begin{enumerate}[label=\alph*)]
+    \item ¿La pasajera está en reposo o en movimiento respecto de la primera persona?
+    \item ¿Está en reposo o en movimiento respecto de la segunda?
+    \item ¿Existe contradicción entre ambas respuestas?
+\end{enumerate}
+
+\textit{Pista: el movimiento debe describirse siempre respecto de un sistema de referencia.}
+\end{ejercicio}
+
+\begin{respuesta}
+\begin{enumerate}[label=\alph*)]
+    \item Está en reposo respecto del observador dentro del autobús.
+    \item Está en movimiento respecto del observador en la acera.
+    \item No existe contradicción.
+\end{enumerate}
+\end{respuesta}
+
+\begin{explicacion}
+Respecto del autobús, la posición de la pasajera sentada no cambia. Por tanto, para el observador que viaja junto a ella se encuentra en reposo.
+
+Respecto de la carretera, la posición de la pasajera cambia continuamente a medida que el autobús avanza. Por tanto, para el observador situado en la acera está en movimiento.
+
+Ambas afirmaciones son correctas porque se refieren a sistemas de referencia diferentes.
+
+\begin{interpretacion}
+Reposo y movimiento no son propiedades absolutas de un objeto.
+
+Siempre deben especificarse respecto de qué sistema de referencia se está describiendo el movimiento.
+\end{interpretacion}
+\end{explicacion}
+
+
+\nivelavanzado
+
+
+\begin{ejercicio}
+Diseñe dos movimientos rectilíneos que comiencen en:
+
+\[ x_i=0 \]
+
+y terminen en:
+
+\[ x_f=+\SI{5}{\meter}, \]
+
+de modo que:
+
+\begin{enumerate}[label=\alph*)]
+    \item en el primer movimiento la distancia recorrida sea \(\SI{5}{\meter}\);
+    \item en el segundo la distancia recorrida sea \(\SI{13}{\meter}\).
+\end{enumerate}
+
+Determine el desplazamiento en ambos casos y explique qué demuestra el resultado acerca de la diferencia entre distancia y desplazamiento.
+\end{ejercicio}
+
+\begin{respuesta}
+Un ejemplo posible es:
+
+\[
+0\longrightarrow5
+\]
+
+para el primer caso, y:
+
+\[
+0\longrightarrow-4\longrightarrow5
+\]
+
+para el segundo.
+
+En ambos:
+
+\[ \Delta x=+\SI{5}{\meter}. \]
+
+Las distancias son, respectivamente:
+
+\[ \SI{5}{\meter}\quad\text{y}\quad\SI{13}{\meter}. \]
+\end{respuesta}
+
+\begin{explicacion}
+En ambos movimientos:
+
+\[
+x_i=0,
+\qquad
+x_f=\SI{5}{\meter}.
+\]
+
+Por tanto, el desplazamiento es necesariamente:
+
+\[
+\Delta x=x_f-x_i
+=
+\SI{5}{\meter}.
+\]
+
+Así:
+
+\[ \boxed{\Delta x=+\SI{5}{\meter}}. \]
+
+Para el primer recorrido podemos movernos directamente:
+
+\[ 0\longrightarrow5. \]
+
+La distancia es:
+
+\[ d_1=\SI{5}{\meter}. \]
+
+Para obtener una distancia mayor sin cambiar las posiciones inicial y final podemos introducir un cambio de sentido:
+
+\[ 0\longrightarrow-4\longrightarrow5. \]
+
+La primera parte mide:
+
+\[ \SI{4}{\meter}. \]
+
+La segunda:
+
+\[ \SI{9}{\meter}. \]
+
+Entonces:
+
+\[
+d_2
+=
+4+9
+=
+\SI{13}{\meter}.
+\]
+
+Por tanto, dos movimientos pueden tener exactamente el mismo desplazamiento y distancias recorridas diferentes.
+
+El desplazamiento contiene información sobre el cambio neto de posición; la distancia contiene información sobre la longitud total del recorrido.
+\end{explicacion}
+
+
+\begin{ejercicio}
+Demuestre, para un movimiento rectilíneo, que la distancia recorrida \(d\) nunca puede ser menor que la magnitud del desplazamiento:
+
+\[ d\geq|\Delta x|. \]
+
+Indique además en qué situación se cumple la igualdad.
+\end{ejercicio}
+
+\begin{respuesta}
+Siempre:
+
+\[ \boxed{d\geq|\Delta x|}. \]
+
+La igualdad se cumple cuando el objeto se mueve directamente entre las posiciones inicial y final sin invertir el sentido.
+\end{respuesta}
+
+\begin{explicacion}
+Supongamos que el movimiento se divide en varios desplazamientos parciales:
+
+\[
+\Delta x_1,\Delta x_2,\ldots,\Delta x_n.
+\]
+
+El desplazamiento total es:
+
+\[
+\Delta x
+=
+\Delta x_1+\Delta x_2+\cdots+\Delta x_n.
+\]
+
+La distancia recorrida es la suma de las magnitudes de esos cambios:
+
+\[
+d
+=
+|\Delta x_1|
++
+|\Delta x_2|
++\cdots+
+|\Delta x_n|.
+\]
+
+Por la desigualdad triangular:
+
+\[
+|\Delta x_1+\Delta x_2+\cdots+\Delta x_n|
+\leq
+|\Delta x_1|
++
+|\Delta x_2|
++\cdots+
+|\Delta x_n|.
+\]
+
+Por tanto:
+
+\[ \boxed{|\Delta x|\leq d}. \]
+
+La igualdad ocurre cuando todos los desplazamientos parciales tienen el mismo sentido, es decir, cuando el objeto no retrocede.
+
+Si existen cambios de sentido, parte de los desplazamientos algebraicos se cancela al calcular \(\Delta x\), pero todas las longitudes recorridas se suman positivamente en \(d\). Por ello:
+
+\[ d>|\Delta x|. \]
+\end{explicacion}
+
+
+\begin{ejercicio}
+De un móvil sólo se conocen los siguientes datos:
+
+\[
+x(0)=\SI{0}{\meter},
+\qquad
+x(\SI{10}{\second})=\SI{0}{\meter}.
+\]
+
+Analice cuáles de las siguientes afirmaciones pueden asegurarse:
+
+\begin{enumerate}[label=\alph*)]
+    \item El desplazamiento durante los \(\SI{10}{\second}\) fue cero.
+    \item La distancia recorrida fue cero.
+    \item El móvil permaneció en reposo durante todo el intervalo.
+    \item El móvil pudo haberse desplazado y luego regresar al origen.
+    \item La distancia recorrida pudo ser mayor que cero.
+\end{enumerate}
+
+Justifique cada respuesta.
+\end{ejercicio}
+
+\begin{respuesta}
+Son necesariamente verdaderas a), d) y e) en el sentido de posibilidad para d) y e). No pueden asegurarse b) ni c).
+\end{respuesta}
+
+\begin{explicacion}
+La posición inicial y la final son iguales:
+
+\[
+x_i=x_f=0.
+\]
+
+Por tanto:
+
+\[
+\Delta x=x_f-x_i=0.
+\]
+
+Así, a) es necesariamente verdadera.
+
+Sin embargo, este resultado no permite determinar la trayectoria intermedia.
+
+Una posibilidad es que el objeto haya permanecido siempre en:
+
+\[ x=0. \]
+
+En ese caso:
+
+\[ d=0. \]
+
+Pero también podría haber realizado, por ejemplo:
+
+\[
+0
+\longrightarrow
++\SI{20}{\meter}
+\longrightarrow
+0.
+\]
+
+Entonces:
+
+\[
+d
+=
+\SI{40}{\meter},
+\]
+
+mientras que:
+
+\[ \Delta x=0. \]
+
+Por tanto, no podemos asegurar que la distancia sea cero ni que el móvil haya permanecido en reposo.
+
+Sí podemos afirmar que es posible que se haya movido y regresado, y que es perfectamente posible que la distancia recorrida sea mayor que cero.
+
+Este ejercicio muestra que conocer únicamente dos posiciones no permite reconstruir todo el movimiento entre ellas.
+\end{explicacion}
+
+
+\begin{ejercicio}
+Un estudiante afirma:
+
+\begin{quote}
+``Si la posición de un objeto es negativa, entonces necesariamente se está moviendo en el sentido negativo del eje''.
+\end{quote}
+
+Analice críticamente la afirmación y construya al menos dos situaciones diferentes que demuestren si es correcta o incorrecta.
+\end{ejercicio}
+
+\begin{respuesta}
+La afirmación es incorrecta.
+
+Un objeto con \(x<0\) puede moverse hacia el sentido positivo, hacia el negativo o incluso estar momentáneamente en reposo.
+\end{respuesta}
+
+\begin{explicacion}
+La posición y el movimiento describen aspectos diferentes.
+
+La condición:
+
+\[ x<0 \]
+
+significa únicamente que el objeto se encuentra en el lado negativo del origen.
+
+Por ejemplo, considere un objeto en:
+
+\[ x=-\SI{6}{\meter}. \]
+
+Primer caso: puede estar desplazándose hacia la derecha, es decir, hacia posiciones mayores. En ese instante se encuentra en una posición negativa, pero su movimiento tiene sentido positivo.
+
+Segundo caso: el mismo objeto puede desplazarse hacia la izquierda. En ese caso tanto su posición como el sentido de su movimiento son negativos.
+
+Tercer caso: también podría encontrarse momentáneamente en reposo en:
+
+\[ x=-\SI{6}{\meter}. \]
+
+Por tanto, el signo de la posición no permite determinar el sentido del movimiento.
+
+\begin{interpretacion}
+La coordenada responde a la pregunta:
+
+\begin{quote}
+¿Dónde está el objeto?
+\end{quote}
+
+El estado de movimiento requiere información adicional acerca de cómo cambia esa posición.
+\end{interpretacion}
+\end{explicacion}
+
+
+\begin{ejercicio}
+Se desea estudiar a una gimnasta durante un salto con giro.
+
+Analice si el modelo de partícula es adecuado para cada uno de los siguientes objetivos:
+
+\begin{enumerate}[label=\alph*)]
+    \item describir aproximadamente cómo se traslada la gimnasta de un extremo al otro del escenario;
+    \item determinar cuántas vueltas completas realiza durante el salto;
+    \item estudiar si sus pies y sus manos ocupan determinadas posiciones durante una figura;
+    \item registrar únicamente la trayectoria de un punto representativo de su cuerpo.
+\end{enumerate}
+
+Explique qué información se pierde cuando se utiliza el modelo de partícula.
+\end{ejercicio}
+
+\begin{respuesta}
+El modelo de partícula puede ser adecuado para a) y d), pero no para b) ni c).
+
+Al utilizarlo se pierde información sobre tamaño, forma, orientación y rotación del cuerpo.
+\end{respuesta}
+
+\begin{explicacion}
+Una partícula posee posición, pero no tiene extensión espacial ni orientación.
+
+Para estudiar únicamente la traslación global de la gimnasta entre dos regiones del escenario, puede bastar con representar su cuerpo mediante un punto.
+
+Del mismo modo, si sólo interesa la trayectoria de un punto representativo, el modelo puede resultar útil.
+
+En cambio, para determinar cuántas vueltas realiza es necesario describir la orientación del cuerpo y su rotación. Esa información desaparece en el modelo de partícula.
+
+También es inadecuado si necesitamos conocer simultáneamente dónde se encuentran manos y pies, porque eso exige considerar dimensiones y forma.
+
+Este ejemplo muestra que un modelo no es correcto o incorrecto en términos absolutos. Su utilidad depende de la pregunta física que queremos responder.
+\end{explicacion}
+
+
+\begin{ejercicio}
+Dos observadores utilizan sistemas de coordenadas diferentes para describir el mismo movimiento rectilíneo.
+
+El observador \(A\) utiliza un eje \(x\). El observador \(B\) utiliza otro eje \(x'\) cuyo origen se encuentra \(\SI{20}{\meter}\) a la derecha del origen de \(A\), pero ambos ejes tienen el mismo sentido positivo.
+
+Un automóvil se mueve desde:
+
+\[ x_i=\SI{8}{\meter} \]
+
+hasta:
+
+\[ x_f=\SI{35}{\meter} \]
+
+según el observador \(A\).
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item las posiciones inicial y final medidas por \(B\);
+    \item el desplazamiento medido por \(A\);
+    \item el desplazamiento medido por \(B\);
+    \item qué magnitudes cambian y cuáles permanecen iguales al trasladar el origen.
+\end{enumerate}
+\end{ejercicio}
+
+\begin{respuesta}
+\[
+x_i'=-\SI{12}{\meter},
+\qquad
+x_f'=+\SI{15}{\meter},
+\]
+
+y:
+
+\[
+\Delta x=\Delta x'=+\SI{27}{\meter}.
+\]
+
+Las posiciones cambian; el desplazamiento no.
+\end{respuesta}
+
+\begin{explicacion}
+El nuevo origen se encuentra en:
+
+\[ x_O=\SI{20}{\meter}. \]
+
+Como los sentidos positivos son iguales:
+
+\[ x'=x-x_O. \]
+
+Para la posición inicial:
+
+\[
+x_i'
+=
+\SI{8}{\meter}
+-
+\SI{20}{\meter}
+=
+-\SI{12}{\meter}.
+\]
+
+Para la posición final:
+
+\[
+x_f'
+=
+\SI{35}{\meter}
+-
+\SI{20}{\meter}
+=
++\SI{15}{\meter}.
+\]
+
+Por tanto:
+
+\[
+\boxed{x_i'=-\SI{12}{\meter}},
+\qquad
+\boxed{x_f'=+\SI{15}{\meter}}.
+\]
+
+El observador \(A\) mide:
+
+\[
+\Delta x
+=
+x_f-x_i
+=
+35-8
+=
++\SI{27}{\meter}.
+\]
+
+El observador \(B\) obtiene:
+
+\[
+\Delta x'
+=
+x_f'-x_i'
+=
+15-(-12)
+=
++\SI{27}{\meter}.
+\]
+
+Así:
+
+\[ \boxed{\Delta x=\Delta x'=+\SI{27}{\meter}}. \]
+
+Las coordenadas individuales dependen de la ubicación elegida para el origen. En cambio, la diferencia entre las posiciones inicial y final permanece igual cuando únicamente trasladamos el origen y mantenemos la orientación del eje.
+
+Este resultado distingue claramente entre \textbf{posición} y \textbf{desplazamiento}.
+\end{explicacion}

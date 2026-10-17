@@ -1,0 +1,1922 @@
+\section{Concepto de campo eléctrico}
+
+La ley de Coulomb permite calcular la fuerza que dos cargas ejercen entre sí.
+Sin embargo, existe una forma más general de describir la interacción eléctrica.
+
+Consideremos una carga \(Q\) situada en una región del espacio. Si colocamos una
+segunda carga \(q\) cerca de ella, aparece una fuerza eléctrica.
+
+Podríamos describir esta situación diciendo simplemente que \(Q\) ejerce una
+fuerza a distancia sobre \(q\). No obstante, resulta más útil interpretar que la
+presencia de \(Q\) establece una propiedad física en el espacio que la rodea.
+
+A esta propiedad la llamamos \textbf{campo eléctrico}.
+
+\begin{idea}
+
+La carga fuente crea un campo eléctrico en el espacio que la rodea.
+
+Si posteriormente colocamos otra carga en ese campo, la carga experimentará
+una fuerza eléctrica.
+
+Por tanto, conviene distinguir entre
+
+\[
+\boxed{\text{fuente del campo}}
+\]
+
+y
+
+\[
+\boxed{\text{carga que experimenta la fuerza}}.
+\]
+
+\end{idea}
+
+El concepto de campo permite separar dos problemas:
+
+\begin{enumerate}
+    \item determinar qué campo produce una distribución de cargas;
+    \item determinar qué fuerza experimenta una carga colocada en ese campo.
+\end{enumerate}
+
+Esta separación será muy útil cuando existan varias cargas o distribuciones
+continuas de carga.
+
+
+\section{Definición de campo eléctrico}
+
+Supongamos que queremos conocer el campo eléctrico en un punto \(P\).
+
+Imaginamos que colocamos en \(P\) una pequeña carga positiva \(q_0\), denominada
+\textbf{carga de prueba}.
+
+Si sobre ella actúa una fuerza eléctrica \(\vec F_0\), definimos el campo eléctrico
+en ese punto como la fuerza eléctrica por unidad de carga de prueba.
+
+\begin{definicion}[Campo eléctrico]
+
+El \textbf{campo eléctrico} en un punto del espacio es una magnitud vectorial
+definida como la fuerza eléctrica que experimentaría una carga de prueba positiva
+por unidad de carga.
+
+\end{definicion}
+
+Matemáticamente,
+
+\begin{equation}
+\boxed{\vec E=\frac{\vec F_0}{q_0}}.
+\label{eq:definicion_campo_electrico}
+\end{equation}
+
+De manera más rigurosa, la carga de prueba debe ser suficientemente pequeña para
+no modificar apreciablemente la distribución de cargas que genera el campo.
+
+Esta idea puede expresarse como
+
+\begin{equation}
+\boxed{\vec E=\lim_{q_0\to0}\frac{\vec F_0}{q_0}}.
+\end{equation}
+
+\begin{idea}
+
+La carga de prueba no define la existencia del campo.
+
+El campo es producido por las \textbf{cargas fuente} y existe en el punto aunque
+no coloquemos allí ninguna carga de prueba.
+
+La carga de prueba es solamente un recurso conceptual para medir o definir el
+campo.
+
+\end{idea}
+
+
+\subsection{Carga fuente y carga de prueba}
+
+Conviene distinguir claramente las dos clases de carga que aparecen en la
+definición.
+
+La \textbf{carga fuente} es la carga que produce el campo eléctrico.
+
+La \textbf{carga de prueba} es una carga imaginaria, positiva y suficientemente
+pequeña, utilizada para determinar la dirección y la magnitud del campo.
+
+Por ejemplo, si una carga fuente \(Q\) produce un campo en el punto \(P\), el campo
+
+\[
+\vec E(P)
+\]
+
+depende de \(Q\), de la posición de \(P\) y de las demás cargas fuente existentes.
+
+No depende de la magnitud de la carga de prueba utilizada para investigarlo.
+
+\begin{errorfrecuente}
+
+No interpretar
+
+\[
+\vec E=\frac{\vec F_0}{q_0}
+\]
+
+como si una carga de prueba grande produjera un campo más pequeño.
+
+Si aumentamos \(q_0\) sin alterar las cargas fuente, también aumenta
+proporcionalmente la fuerza:
+
+\[
+\vec F_0=q_0\vec E.
+\]
+
+Por ello, el cociente permanece igual mientras la carga de prueba no perturbe la
+distribución que genera el campo.
+
+\end{errorfrecuente}
+
+
+\section{El campo eléctrico es una magnitud vectorial}
+
+Como la fuerza eléctrica es vectorial y la carga \(q_0\) es escalar,
+
+\[
+\vec E=\frac{\vec F_0}{q_0}
+\]
+
+también es una magnitud vectorial.
+
+Para especificar un campo eléctrico en un punto debemos conocer:
+
+\[
+\boxed{\text{magnitud, dirección y sentido}}.
+\]
+
+Por convención, la dirección del campo eléctrico es la dirección de la fuerza que
+experimentaría una \textbf{carga de prueba positiva} colocada en ese punto.
+
+Esta convención es fundamental.
+
+Si una carga positiva experimentaría una fuerza hacia la derecha, entonces el campo
+apunta hacia la derecha.
+
+Si experimentaría una fuerza hacia arriba, el campo apunta hacia arriba.
+
+
+\subsection{Unidad del campo eléctrico}
+
+De
+
+\[
+E=\frac{F}{q}
+\]
+
+se obtiene
+
+\[
+[E]=\frac{\si{\newton}}{\si{\coulomb}}.
+\]
+
+Por tanto, en el Sistema Internacional,
+
+\begin{equation}
+\boxed{[E]=\si{\newton\per\coulomb}}.
+\end{equation}
+
+
+\section{Fuerza sobre una carga colocada en un campo}
+
+De la definición
+
+\[
+\vec E=\frac{\vec F}{q}
+\]
+
+podemos despejar la fuerza:
+
+\begin{equation}
+\boxed{\vec F=q\vec E}.
+\label{eq:fuerza_campo_electrico}
+\end{equation}
+
+Esta relación permite calcular la fuerza sobre cualquier carga \(q\) colocada en un
+campo eléctrico conocido.
+
+
+\subsection{Carga positiva}
+
+Si
+
+\[
+q>0,
+\]
+
+entonces
+
+\[
+\vec F=q\vec E
+\]
+
+tiene la misma dirección y el mismo sentido que \(\vec E\).
+
+Por tanto,
+
+\[
+\boxed{q>0\Longrightarrow\vec F\text{ en el mismo sentido que }\vec E}.
+\]
+
+
+\subsection{Carga negativa}
+
+Si
+
+\[
+q<0,
+\]
+
+el factor que multiplica a \(\vec E\) es negativo.
+
+Por tanto, la fuerza tiene sentido opuesto al campo:
+
+\[
+\boxed{q<0\Longrightarrow\vec F\text{ en sentido opuesto a }\vec E}.
+\]
+
+\begin{idea}
+
+El campo eléctrico no cambia de dirección porque coloquemos una carga negativa.
+
+El campo está determinado por las cargas fuente.
+
+Lo que cambia es la dirección de la fuerza que experimenta la carga colocada en ese
+campo.
+
+\end{idea}
+
+
+\subsection{Ejemplo: fuerza sobre una carga en un campo}
+
+\begin{ejemplo}
+
+En cierto punto existe un campo eléctrico uniforme
+
+\[
+\vec E=(3.0\times10^4)\,\hat{\mathbf i}\,\si{\newton\per\coulomb}.
+\]
+
+Se coloca en ese punto una carga
+
+\[
+q=-\SI{2.0}{\nano\coulomb}.
+\]
+
+Determine la fuerza eléctrica sobre la carga.
+
+\end{ejemplo}
+
+Convertimos la carga:
+
+\[
+q=-\SI{2.0e-9}{\coulomb}.
+\]
+
+Aplicamos
+
+\[
+\vec F=q\vec E.
+\]
+
+Entonces,
+
+\[
+\vec F=(-2.0\times10^{-9})(3.0\times10^4)\hat{\mathbf i}\,\si{\newton}.
+\]
+
+Por tanto,
+
+\[
+\boxed{\vec F=-6.0\times10^{-5}\,\hat{\mathbf i}\,\si{\newton}}.
+\]
+
+La magnitud es
+
+\[
+\boxed{F=\SI{6.0e-5}{\newton}}.
+\]
+
+El signo negativo de la componente indica que la fuerza apunta hacia \(-x\).
+
+Esto es coherente con el hecho de que la carga es negativa: la fuerza tiene sentido
+opuesto al campo.
+
+
+\section{Campo eléctrico producido por una carga puntual}
+
+Consideremos una carga fuente puntual \(Q\).
+
+Queremos determinar el campo eléctrico que produce en un punto \(P\) situado a una
+distancia \(r\).
+
+Imaginemos una pequeña carga de prueba positiva \(q_0\) colocada en \(P\).
+
+La magnitud de la fuerza que \(Q\) ejerce sobre \(q_0\) es, por la ley de Coulomb,
+
+\[
+F_0=k\frac{|Qq_0|}{r^2}.
+\]
+
+Como
+
+\[
+E=\frac{F_0}{q_0},
+\]
+
+obtenemos
+
+\[
+E=\frac{1}{q_0}k\frac{|Qq_0|}{r^2}.
+\]
+
+Como \(q_0\) se toma positiva,
+
+\[
+\boxed{E=k\frac{|Q|}{r^2}}.
+\label{eq:campo_carga_puntual_magnitud}
+\]
+
+Esta expresión proporciona la \textbf{magnitud} del campo producido por una carga
+puntual.
+
+
+\subsection{Dirección del campo de una carga puntual}
+
+El campo de una carga puntual es radial.
+
+Si
+
+\[
+Q>0,
+\]
+
+una carga de prueba positiva sería repelida.
+
+Por tanto,
+
+\[
+\boxed{Q>0\Longrightarrow\vec E\text{ apunta alejándose de }Q}.
+\]
+
+Si
+
+\[
+Q<0,
+\]
+
+la carga de prueba positiva sería atraída.
+
+Por tanto,
+
+\[
+\boxed{Q<0\Longrightarrow\vec E\text{ apunta hacia }Q}.
+\]
+
+Así, una carga positiva produce un campo radial hacia afuera y una carga negativa
+produce un campo radial hacia adentro.
+
+
+\subsection{Dependencia con la distancia}
+
+La magnitud del campo de una carga puntual satisface
+
+\[
+E\propto\frac{1}{r^2}.
+\]
+
+Por tanto, si la distancia se duplica,
+
+\[
+r\to2r,
+\]
+
+entonces
+
+\[
+\boxed{E\to\frac{E}{4}}.
+\]
+
+Si la distancia se triplica,
+
+\[
+\boxed{E\to\frac{E}{9}}.
+\]
+
+Si la distancia se reduce a la mitad,
+
+\[
+\boxed{E\to4E}.
+\]
+
+La misma dependencia con \(1/r^2\) que aparece en la fuerza de Coulomb aparece en
+el campo producido por una carga puntual.
+
+
+\subsection{Forma vectorial}
+
+Definamos \(\hat{\mathbf r}\) como un vector unitario dirigido desde la carga fuente
+\(Q\) hasta el punto donde calculamos el campo.
+
+Entonces,
+
+\begin{equation}
+\boxed{\vec E=k\frac{Q}{r^2}\hat{\mathbf r}}.
+\label{eq:campo_carga_puntual_vectorial}
+\end{equation}
+
+En esta expresión no usamos valor absoluto.
+
+Si \(Q>0\), el factor es positivo y el campo tiene el mismo sentido que
+\(\hat{\mathbf r}\).
+
+Si \(Q<0\), el factor es negativo y el campo apunta en sentido opuesto a
+\(\hat{\mathbf r}\), es decir, hacia la carga fuente.
+
+
+\subsection{Campo mediante vectores de posición}
+
+Supongamos que la carga fuente \(Q\) se encuentra en la posición
+
+\[
+\vec r_Q
+\]
+
+y queremos determinar el campo en un punto cuya posición es
+
+\[
+\vec r.
+\]
+
+El vector desde la carga fuente hasta el punto es
+
+\[
+\vec R=\vec r-\vec r_Q.
+\]
+
+Su magnitud es
+
+\[
+R=|\vec r-\vec r_Q|.
+\]
+
+El vector unitario es
+
+\[
+\hat{\mathbf R}=\frac{\vec r-\vec r_Q}{|\vec r-\vec r_Q|}.
+\]
+
+Por tanto,
+
+\begin{equation}
+\boxed{
+\vec E(\vec r)
+=
+kQ\frac{\vec r-\vec r_Q}{|\vec r-\vec r_Q|^3}
+}.
+\label{eq:campo_puntual_posiciones}
+\end{equation}
+
+Esta forma es especialmente útil cuando las cargas y los puntos están definidos
+mediante coordenadas.
+
+
+\subsection{Ejemplo: campo de una carga puntual}
+
+\begin{ejemplo}
+
+Una carga puntual
+
+\[
+Q=+\SI{4.0}{\micro\coulomb}
+\]
+
+produce un campo eléctrico. Determine el campo a una distancia
+
+\[
+r=\SI{0.30}{\metre}.
+\]
+
+\end{ejemplo}
+
+La magnitud es
+
+\[
+E=k\frac{|Q|}{r^2}.
+\]
+
+Sustituyendo,
+
+\[
+E=(8.99\times10^9)\frac{4.0\times10^{-6}}{(0.30)^2}.
+\]
+
+Por tanto,
+
+\[
+\boxed{E\approx\SI{4.00e5}{\newton\per\coulomb}}.
+\]
+
+Como la carga fuente es positiva, el campo está dirigido radialmente hacia afuera.
+
+\begin{interpretacion}
+
+El resultado no representa una fuerza.
+
+Indica que una carga positiva de \(\SI{1}{\coulomb}\), si pudiera colocarse en ese
+punto sin alterar el sistema, experimentaría una fuerza de magnitud
+\(\SI{4.00e5}{\newton}\).
+
+Para una carga diferente, la fuerza se obtiene mediante
+
+\[
+\vec F=q\vec E.
+\]
+
+\end{interpretacion}
+
+
+\section{Principio de superposición de campos eléctricos}
+
+Si existen varias cargas fuente, cada una produce su propio campo eléctrico en el
+punto considerado.
+
+El campo total es la suma vectorial de todos esos campos.
+
+\begin{principio}[Principio de superposición de campos eléctricos]
+
+El campo eléctrico total producido por varias cargas es igual a la suma vectorial
+de los campos que cada carga produciría individualmente.
+
+\end{principio}
+
+Para cargas \(q_1,q_2,\ldots,q_n\),
+
+\begin{equation}
+\boxed{\vec E=\vec E_1+\vec E_2+\cdots+\vec E_n}.
+\end{equation}
+
+De forma compacta,
+
+\begin{equation}
+\boxed{\vec E=\sum_i\vec E_i}.
+\label{eq:superposicion_campo}
+\end{equation}
+
+Cada contribución se calcula mediante
+
+\[
+\vec E_i=k\frac{q_i}{r_i^2}\hat{\mathbf r}_i.
+\]
+
+Por tanto,
+
+\begin{equation}
+\boxed{
+\vec E
+=
+k\sum_i\frac{q_i}{r_i^2}\hat{\mathbf r}_i
+}.
+\end{equation}
+
+
+\subsection{Forma general mediante posiciones}
+
+Si la carga \(q_i\) se encuentra en \(\vec r_i\) y queremos conocer el campo en
+\(\vec r\),
+
+\[
+\boxed{
+\vec E(\vec r)
+=
+k\sum_i
+q_i
+\frac{\vec r-\vec r_i}{|\vec r-\vec r_i|^3}
+}.
+\label{eq:campo_superposicion_posiciones}
+\]
+
+Esta expresión contiene toda la información geométrica del problema.
+
+
+\subsection{Superposición en componentes}
+
+En dos dimensiones,
+
+\[
+\vec E=E_x\hat{\mathbf i}+E_y\hat{\mathbf j}.
+\]
+
+Las componentes totales son
+
+\[
+\boxed{E_x=\sum_iE_{i,x}},
+\qquad
+\boxed{E_y=\sum_iE_{i,y}}.
+\]
+
+Si conocemos la magnitud \(E_i\) y el ángulo \(\theta_i\),
+
+\[
+E_{i,x}=E_i\cos\theta_i,
+\qquad
+E_{i,y}=E_i\sin\theta_i.
+\]
+
+La magnitud resultante es
+
+\[
+\boxed{E=\sqrt{E_x^2+E_y^2}}.
+\]
+
+La dirección puede determinarse a partir de las componentes, teniendo siempre en
+cuenta el cuadrante.
+
+
+\subsection{Método para calcular el campo de varias cargas puntuales}
+
+Un procedimiento sistemático es:
+
+\begin{enumerate}
+    \item identificar el punto donde se desea calcular el campo;
+    \item ubicar todas las cargas fuente;
+    \item elegir un sistema de coordenadas;
+    \item determinar la distancia desde cada carga hasta el punto;
+    \item establecer la dirección de cada campo;
+    \item calcular la magnitud de cada contribución;
+    \item descomponer los campos en componentes cuando sea necesario;
+    \item sumar vectorialmente las contribuciones;
+    \item calcular la magnitud y dirección del campo resultante;
+    \item comprobar que el sentido obtenido sea físicamente razonable.
+\end{enumerate}
+
+\begin{idea}
+
+Para determinar la dirección de \(\vec E_i\), imagine siempre una carga de prueba
+\textbf{positiva} en el punto.
+
+Una carga fuente positiva la repelería.
+
+Una carga fuente negativa la atraería.
+
+\end{idea}
+
+
+\subsection{Ejemplo: campo producido por dos cargas}
+
+\begin{ejemplo}
+
+Una carga \(q_1=+\SI{3.0}{\micro\coulomb}\) se encuentra en el origen y una carga
+\(q_2=-\SI{4.0}{\micro\coulomb}\) se encuentra en \((\SI{0.40}{\metre},0)\).
+
+Determine el campo eléctrico en el punto \(P=(0,\SI{0.30}{\metre})\).
+
+\end{ejemplo}
+
+El campo producido por \(q_1\) en \(P\) apunta hacia arriba, porque \(q_1\) es positiva.
+El campo producido por \(q_2\) apunta desde \(P\) hacia \(q_2\), porque \(q_2\) es negativa.
+
+\begin{center}
+\begin{tikzpicture}[>=Latex,scale=1.1]
+
+\draw[->] (-1.2,0) -- (5.2,0) node[right] {$x$};
+\draw[->] (0,-0.8) -- (0,6.0) node[above] {$y$};
+
+\filldraw (0,0) circle (2.2pt) node[below left=3pt] {$q_1$};
+\filldraw (4,0) circle (2.2pt) node[below=4pt] {$q_2$};
+\filldraw (0,3) circle (2.2pt) node[left=4pt] {$P$};
+
+\draw (4,0.10) -- (4,-0.10) node[below=15pt] {\(\SI{0.40}{\metre}\)};
+\draw (0.10,3) -- (-0.10,3) node[left=16pt] {\(\SI{0.30}{\metre}\)};
+
+\draw[dashed] (0,3) -- (4,0);
+
+\draw[->,very thick] (0,3) -- (0,5.2)
+node[midway,left=5pt] {$E_1$};
+
+\draw[->,very thick] (0,3) -- (2.4,1.2)
+node[midway,below left=2pt] {$E_2$};
+
+\draw[->,thick,dashed] (0,3) -- (1.35,5.5)
+node[pos=0.78,right=4pt] {$E$};
+
+\end{tikzpicture}
+\end{center}
+
+Para la carga \(q_1\), la distancia hasta \(P\) es
+
+\[
+r_1=\SI{0.30}{\metre}.
+\]
+
+La magnitud del campo es
+
+\[
+E_1=k\frac{|q_1|}{r_1^2}
+=(8.99\times10^9)\frac{3.0\times10^{-6}}{(0.30)^2}
+\approx\SI{3.00e5}{\newton\per\coulomb}.
+\]
+
+Como \(E_1\) apunta verticalmente hacia arriba, sus componentes son
+
+\[
+\boxed{E_{1x}=0}, \qquad
+\boxed{E_{1y}=+\SI{3.00e5}{\newton\per\coulomb}}.
+\]
+
+Para \(q_2\), la distancia desde la carga hasta \(P\) se obtiene mediante
+
+\[
+r_2=\sqrt{(0.40)^2+(0.30)^2}=\SI{0.50}{\metre}.
+\]
+
+La magnitud del campo producido por \(q_2\) es
+
+\[
+E_2=k\frac{|q_2|}{r_2^2}
+=(8.99\times10^9)\frac{4.0\times10^{-6}}{(0.50)^2}
+\approx\SI{1.44e5}{\newton\per\coulomb}.
+\]
+
+La geometría forma un triángulo rectángulo de lados \(0.30\), \(0.40\) y
+\(\SI{0.50}{\metre}\), por lo que
+
+\[
+\cos\theta=\frac{0.40}{0.50}=0.80,
+\qquad
+\sin\theta=\frac{0.30}{0.50}=0.60.
+\]
+
+Como \(q_2\) es negativa, el campo en \(P\) apunta hacia \(q_2\): su componente
+horizontal es positiva y su componente vertical es negativa.
+
+Por tanto,
+
+\[
+E_{2x}=E_2\cos\theta=(1.44\times10^5)(0.80)
+\approx\SI{1.15e5}{\newton\per\coulomb},
+\]
+
+\[
+E_{2y}=-E_2\sin\theta=-(1.44\times10^5)(0.60)
+\approx-\SI{8.63e4}{\newton\per\coulomb}.
+\]
+
+Aplicamos el principio de superposición por componentes.
+
+En el eje \(x\),
+
+\[
+E_x=E_{1x}+E_{2x}=0+1.15\times10^5,
+\]
+
+por lo que
+
+\[
+\boxed{E_x\approx+\SI{1.15e5}{\newton\per\coulomb}}.
+\]
+
+En el eje \(y\),
+
+\[
+E_y=E_{1y}+E_{2y}=3.00\times10^5-8.63\times10^4,
+\]
+
+por lo que
+
+\[
+\boxed{E_y\approx+\SI{2.13e5}{\newton\per\coulomb}}.
+\]
+
+La magnitud del campo resultante es
+
+\[
+E=\sqrt{E_x^2+E_y^2}.
+\]
+
+Sustituyendo,
+
+\[
+E=\sqrt{(1.15\times10^5)^2+(2.13\times10^5)^2}
+\approx\SI{2.42e5}{\newton\per\coulomb}.
+\]
+
+Por tanto,
+
+\[
+\boxed{E\approx\SI{2.42e5}{\newton\per\coulomb}}.
+\]
+
+Como
+
+\[
+E_x>0
+\qquad\text{y}\qquad
+E_y>0,
+\]
+
+el campo resultante se encuentra en el primer cuadrante.
+
+Su dirección respecto del eje \(+x\) es
+
+\[
+\theta=\tan^{-1}\left(\frac{E_y}{E_x}\right)
+=\tan^{-1}\left(\frac{2.13\times10^5}{1.15\times10^5}\right)
+\approx61.7^\circ.
+\]
+
+Así,
+
+\[
+\boxed{\theta\approx61.7^\circ\text{ sobre el eje }+x}.
+\]
+
+En conclusión,
+
+\[
+\boxed{
+E_x\approx+\SI{1.15e5}{\newton\per\coulomb},\qquad
+E_y\approx+\SI{2.13e5}{\newton\per\coulomb}
+}
+\]
+
+y
+
+\[
+\boxed{
+E\approx\SI{2.42e5}{\newton\per\coulomb},
+\qquad
+\theta\approx61.7^\circ
+}.
+\]
+
+\section{Puntos donde el campo eléctrico es nulo}
+
+Puede ocurrir que varias cargas produzcan campos no nulos que se cancelen
+vectorialmente en cierto punto.
+
+La condición es
+
+\[
+\boxed{\sum_i\vec E_i=\vec 0}.
+\]
+
+Esto no significa que las cargas hayan dejado de producir campo.
+
+Significa que sus contribuciones se cancelan exactamente en ese punto.
+
+
+\subsection{Dos cargas del mismo signo}
+
+Si dos cargas tienen el mismo signo, entre ellas los campos apuntan en sentidos
+opuestos.
+
+Por ello, puede existir un punto entre las cargas donde
+
+\[
+E_1=E_2.
+\]
+
+El punto de cancelación se encuentra más cerca de la carga de menor magnitud.
+
+
+\subsection{Dos cargas de signos opuestos}
+
+Entre dos cargas de signos opuestos, los campos apuntan en el mismo sentido.
+
+Por tanto, no pueden cancelarse entre ellas en la región comprendida entre las
+cargas.
+
+Si existe un punto de campo nulo sobre la línea que las une, deberá encontrarse
+fuera del segmento y, en general, del lado de la carga de menor magnitud.
+
+\begin{advertencia}
+
+No basta con igualar magnitudes:
+
+\[
+E_1=E_2.
+\]
+
+Antes debe comprobarse que los dos vectores tengan sentidos opuestos en la región
+analizada.
+
+\end{advertencia}
+
+
+\section{Distribuciones continuas de carga}
+
+Hasta ahora hemos considerado cargas puntuales.
+
+Sin embargo, en muchos cuerpos macroscópicos la carga está distribuida sobre una
+línea, una superficie o un volumen.
+
+Cuando existen enormes cantidades de partículas cargadas muy próximas entre sí,
+resulta útil describir la carga mediante una distribución continua.
+
+Dividimos conceptualmente la distribución en elementos infinitesimales de carga
+
+\[
+dq.
+\]
+
+Cada elemento produce una contribución infinitesimal al campo
+
+\[
+d\vec E.
+\]
+
+El campo total se obtiene sumando todas las contribuciones.
+
+En el límite continuo, esta suma se convierte en una integral:
+
+\begin{equation}
+\boxed{\vec E=\int d\vec E}.
+\label{eq:campo_distribucion_continua}
+\end{equation}
+
+
+\subsection{Densidad lineal de carga}
+
+Si la carga se distribuye a lo largo de una línea, definimos la densidad lineal
+
+\begin{equation}
+\boxed{\lambda=\frac{dq}{d\ell}}.
+\end{equation}
+
+Por tanto,
+
+\begin{equation}
+\boxed{dq=\lambda\,d\ell}.
+\end{equation}
+
+Su unidad SI es
+
+\[
+\boxed{[\lambda]=\si{\coulomb\per\metre}}.
+\]
+
+Si la distribución es uniforme sobre una longitud \(L\),
+
+\[
+\boxed{\lambda=\frac{Q}{L}}.
+\]
+
+
+\subsection{Densidad superficial de carga}
+
+Si la carga está distribuida sobre una superficie,
+
+\begin{equation}
+\boxed{\sigma=\frac{dq}{dA}}.
+\end{equation}
+
+Entonces,
+
+\begin{equation}
+\boxed{dq=\sigma\,dA}.
+\end{equation}
+
+Su unidad es
+
+\[
+\boxed{[\sigma]=\si{\coulomb\per\metre\squared}}.
+\]
+
+Para una distribución uniforme sobre un área \(A\),
+
+\[
+\boxed{\sigma=\frac{Q}{A}}.
+\]
+
+
+\subsection{Densidad volumétrica de carga}
+
+Si la carga ocupa un volumen,
+
+\begin{equation}
+\boxed{\rho=\frac{dq}{dV}}.
+\end{equation}
+
+Por tanto,
+
+\begin{equation}
+\boxed{dq=\rho\,dV}.
+\end{equation}
+
+Su unidad es
+
+\[
+\boxed{[\rho]=\si{\coulomb\per\metre\cubed}}.
+\]
+
+Para una distribución uniforme en un volumen \(V\),
+
+\[
+\boxed{\rho=\frac{Q}{V}}.
+\]
+
+\begin{advertencia}
+
+Los símbolos
+
+\[
+\lambda,\qquad\sigma,\qquad\rho
+\]
+
+representan densidades de carga diferentes.
+
+Debe identificarse primero si la distribución es lineal, superficial o
+volumétrica antes de escribir \(dq\).
+
+\end{advertencia}
+
+
+\section{Campo de una distribución continua}
+
+Sea un elemento de carga \(dq\).
+
+La magnitud del campo infinitesimal que produce en un punto situado a distancia
+\(R\) es
+
+\[
+dE=k\frac{|dq|}{R^2}.
+\]
+
+Vectorialmente,
+
+\begin{equation}
+\boxed{d\vec E=k\frac{dq}{R^2}\hat{\mathbf R}},
+\end{equation}
+
+donde \(\hat{\mathbf R}\) apunta desde el elemento de carga hacia el punto donde
+calculamos el campo.
+
+El campo total es
+
+\begin{equation}
+\boxed{
+\vec E
+=
+k\int\frac{dq}{R^2}\hat{\mathbf R}
+}.
+\label{eq:integral_campo_general}
+\end{equation}
+
+En términos de posiciones, si \(\vec r'\) representa la posición del elemento
+fuente y \(\vec r\) el punto donde calculamos el campo,
+
+\begin{equation}
+\boxed{
+\vec E(\vec r)
+=
+k\int
+\frac{\vec r-\vec r'}
+{|\vec r-\vec r'|^3}\,dq
+}.
+\label{eq:campo_continuo_vectorial}
+\end{equation}
+
+
+\subsection{Distribución lineal}
+
+Como
+
+\[
+dq=\lambda\,d\ell,
+\]
+
+tenemos
+
+\begin{equation}
+\boxed{
+\vec E
+=
+k\int
+\frac{\lambda\,d\ell}{R^2}\hat{\mathbf R}
+}.
+\end{equation}
+
+
+\subsection{Distribución superficial}
+
+Como
+
+\[
+dq=\sigma\,dA,
+\]
+
+obtenemos
+
+\begin{equation}
+\boxed{
+\vec E
+=
+k\int
+\frac{\sigma\,dA}{R^2}\hat{\mathbf R}
+}.
+\end{equation}
+
+
+\subsection{Distribución volumétrica}
+
+Como
+
+\[
+dq=\rho\,dV,
+\]
+
+resulta
+
+\begin{equation}
+\boxed{
+\vec E
+=
+k\int
+\frac{\rho\,dV}{R^2}\hat{\mathbf R}
+}.
+\end{equation}
+
+
+\section{Simetría en distribuciones continuas}
+
+Antes de integrar es fundamental analizar la geometría.
+
+La simetría puede indicar qué componentes del campo se cancelan.
+
+Por ejemplo, si dos elementos de carga simétricos producen campos
+
+\[
+d\vec E_1
+\qquad\text{y}\qquad
+d\vec E_2,
+\]
+
+puede ocurrir que
+
+\[
+dE_{1,y}=-dE_{2,y},
+\]
+
+de modo que
+
+\[
+dE_{1,y}+dE_{2,y}=0.
+\]
+
+Mientras tanto, sus componentes en otra dirección pueden sumarse.
+
+\begin{idea}
+
+En problemas con distribuciones continuas no conviene comenzar inmediatamente con
+la integral.
+
+Primero debe preguntarse:
+
+\begin{enumerate}
+    \item ¿qué simetría tiene la distribución?;
+    \item ¿qué componentes se cancelan?;
+    \item ¿en qué dirección debe apuntar el campo resultante?;
+    \item ¿qué variable conviene utilizar para describir \(dq\)?
+\end{enumerate}
+
+La física debe determinar la estructura de la integral antes de realizar el cálculo.
+
+\end{idea}
+
+
+\section{Ejemplo: campo sobre el eje de un anillo cargado}
+
+\begin{ejemplo}
+
+Un anillo de radio \(a\) posee una carga total \(Q\) distribuida uniformemente.
+
+Determine el campo eléctrico en un punto situado sobre el eje del anillo a una
+distancia \(x\) de su centro.
+
+\end{ejemplo}
+
+Consideremos un pequeño elemento de carga \(dq\).
+
+La distancia desde cualquier elemento del anillo hasta el punto es la misma:
+
+\[
+R=\sqrt{x^2+a^2}.
+\]
+
+El elemento produce un campo de magnitud
+
+\[
+dE=k\frac{dq}{R^2}.
+\]
+
+Por simetría, a cada elemento del anillo le corresponde otro elemento opuesto cuyas
+componentes perpendiculares al eje se cancelan.
+
+Por tanto, solamente sobreviven las componentes paralelas al eje.
+
+Si \(\theta\) es el ángulo entre \(d\vec E\) y el eje,
+
+\[
+dE_x=dE\cos\theta.
+\]
+
+Geométricamente,
+
+\[
+\cos\theta=\frac{x}{R}.
+\]
+
+Entonces,
+
+\[
+dE_x
+=
+k\frac{dq}{R^2}\frac{x}{R}
+=
+k\frac{x\,dq}{R^3}.
+\]
+
+Como \(R\) es constante para todos los elementos,
+
+\[
+E_x
+=
+k\frac{x}{R^3}\int dq.
+\]
+
+Pero
+
+\[
+\int dq=Q.
+\]
+
+Por tanto,
+
+\[
+E_x=k\frac{Qx}{R^3}.
+\]
+
+Sustituyendo
+
+\[
+R=\sqrt{x^2+a^2},
+\]
+
+obtenemos
+
+\begin{equation}
+\boxed{
+\vec E
+=
+k\frac{Qx}{(x^2+a^2)^{3/2}}\hat{\mathbf x}
+}.
+\label{eq:campo_anillo_eje}
+\end{equation}
+
+\begin{interpretacion}
+
+En el centro del anillo,
+
+\[
+x=0,
+\]
+
+por lo que
+
+\[
+\boxed{\vec E=\vec 0}.
+\]
+
+Esto también puede deducirse directamente mediante simetría.
+
+Para puntos muy alejados,
+
+\[
+x\gg a,
+\]
+
+tenemos aproximadamente
+
+\[
+(x^2+a^2)^{3/2}\approx x^3.
+\]
+
+Entonces,
+
+\[
+E\approx k\frac{Q}{x^2}.
+\]
+
+A grandes distancias, el anillo se comporta aproximadamente como una carga puntual
+de carga total \(Q\).
+
+\end{interpretacion}
+
+
+\section{Campo uniforme y campo no uniforme}
+
+Un campo eléctrico es \textbf{uniforme} en una región si el vector \(\vec E\) tiene
+la misma magnitud, dirección y sentido en todos los puntos de esa región.
+
+Es decir,
+
+\[
+\boxed{\vec E=\text{constante}}.
+\]
+
+En una representación mediante líneas de campo, un campo uniforme se dibuja mediante
+líneas:
+
+\begin{itemize}
+    \item paralelas;
+    \item igualmente separadas;
+    \item orientadas en el mismo sentido.
+\end{itemize}
+
+Un campo es \textbf{no uniforme} cuando su magnitud, su dirección o ambas cambian con
+la posición.
+
+El campo de una carga puntual es un ejemplo de campo no uniforme porque
+
+\[
+E=k\frac{|Q|}{r^2}
+\]
+
+depende de la distancia.
+
+
+\section{Líneas de campo eléctrico}
+
+El campo eléctrico es un vector definido en cada punto del espacio.
+
+Para visualizar una distribución completa de vectores sería necesario dibujar una
+gran cantidad de flechas.
+
+Una representación más conveniente consiste en utilizar
+\textbf{líneas de campo eléctrico}.
+
+\begin{definicion}[Línea de campo eléctrico]
+
+Una \textbf{línea de campo eléctrico} es una curva imaginaria cuya tangente en cada
+punto tiene la misma dirección que el vector campo eléctrico en ese punto.
+
+\end{definicion}
+
+Las líneas no son objetos materiales.
+
+Son una representación gráfica del campo.
+
+
+\subsection{Dirección de las líneas}
+
+En cualquier punto,
+
+\[
+\boxed{
+\vec E
+\text{ es tangente a la línea de campo}
+}.
+\]
+
+Las flechas sobre las líneas indican el sentido del campo.
+
+
+\subsection{Líneas de una carga positiva}
+
+Para una carga puntual positiva, el campo apunta radialmente hacia afuera.
+
+Por tanto, las líneas de campo
+
+\[
+\boxed{\text{salen de las cargas positivas}}.
+\]
+
+
+\subsection{Líneas de una carga negativa}
+
+Para una carga puntual negativa, el campo apunta radialmente hacia la carga.
+
+Por tanto,
+
+\[
+\boxed{\text{las líneas entran en las cargas negativas}}.
+\]
+
+
+\subsection{Intensidad y densidad de líneas}
+
+La separación entre las líneas permite representar cualitativamente la magnitud del
+campo.
+
+Donde las líneas están más próximas,
+
+\[
+\boxed{E\text{ es mayor}}.
+\]
+
+Donde las líneas están más separadas,
+
+\[
+\boxed{E\text{ es menor}}.
+\]
+
+Para una carga puntual, las líneas aparecen cada vez más separadas conforme aumenta
+la distancia, en concordancia con
+
+\[
+E\propto\frac{1}{r^2}.
+\]
+
+\begin{advertencia}
+
+El número absoluto de líneas que dibujamos es arbitrario.
+
+Lo importante es conservar una representación coherente en la que una carga de mayor
+magnitud tenga proporcionalmente más líneas asociadas.
+
+\end{advertencia}
+
+
+\section{Reglas para dibujar líneas de campo}
+
+Las líneas de campo electrostático deben cumplir varias propiedades.
+
+\begin{enumerate}
+    \item Salen de cargas positivas y terminan en cargas negativas.
+
+    \item Si existe exceso de carga positiva, algunas líneas pueden extenderse hasta
+    el infinito.
+
+    \item Si existe exceso de carga negativa, algunas líneas pueden provenir del
+    infinito.
+
+    \item La tangente a una línea en cada punto indica la dirección de \(\vec E\).
+
+    \item Una mayor densidad de líneas representa un campo de mayor magnitud.
+
+    \item El número relativo de líneas asociado a una carga debe ser proporcional a
+    la magnitud de la carga.
+
+    \item Dos líneas de campo eléctrico no pueden cruzarse.
+
+    \item En electrostática, las líneas no forman curvas cerradas.
+\end{enumerate}
+
+
+\subsection{¿Por qué las líneas no pueden cruzarse?}
+
+Supongamos que dos líneas de campo se cruzaran en un punto.
+
+Cada línea tendría una tangente diferente en ese punto.
+
+Esto implicaría que el campo eléctrico tendría simultáneamente dos direcciones
+distintas en el mismo lugar.
+
+Pero en un punto determinado el vector
+
+\[
+\vec E
+\]
+
+tiene una única dirección.
+
+Por tanto,
+
+\[
+\boxed{\text{dos líneas de campo no pueden cruzarse}}.
+\]
+
+
+\section{Líneas de campo de dos cargas}
+
+\subsection{Dos cargas de signos opuestos}
+
+Para dos cargas de igual magnitud y signos opuestos, muchas líneas salen de la carga
+positiva y terminan en la negativa.
+
+Esta configuración recibe el nombre de \textbf{dipolo eléctrico}.
+
+Cerca de cada carga las líneas son aproximadamente radiales.
+
+Entre las cargas existe una alta concentración de líneas, indicando que el campo
+puede ser intenso en esa región.
+
+
+\subsection{Dos cargas del mismo signo}
+
+Si las dos cargas son positivas, las líneas salen de ambas.
+
+Las líneas no pueden conectarse de una carga positiva a otra positiva porque el campo
+apunta alejándose de ambas.
+
+En una configuración de dos cargas positivas iguales existe un punto medio donde,
+por simetría,
+
+\[
+\vec E=\vec 0.
+\]
+
+Las líneas se curvan alejándose de la región entre las cargas.
+
+Para dos cargas negativas iguales ocurre una configuración análoga, pero las flechas
+apuntan hacia las cargas.
+
+
+\section{Las líneas de campo no son trayectorias}
+
+Una confusión frecuente consiste en interpretar las líneas de campo como caminos que
+necesariamente siguen las partículas cargadas.
+
+Esto no es correcto.
+
+Las líneas indican la dirección instantánea del campo eléctrico en cada punto.
+
+La trayectoria de una partícula depende de su:
+
+\begin{itemize}
+    \item carga;
+    \item masa;
+    \item posición inicial;
+    \item velocidad inicial;
+    \item fuerzas adicionales que puedan actuar.
+\end{itemize}
+
+Por ejemplo, una carga negativa experimenta una fuerza en sentido opuesto a
+\(\vec E\), por lo que no seguiría las flechas de las líneas de campo.
+
+Incluso una carga positiva con velocidad inicial puede describir una trayectoria que
+no coincida con una línea de campo.
+
+\begin{idea}
+
+\[
+\boxed{\text{línea de campo}\neq\text{trayectoria de una partícula}}
+\]
+
+Una línea de campo representa una propiedad del espacio.
+
+Una trayectoria representa el movimiento de un objeto.
+
+\end{idea}
+
+
+\section{Campo eléctrico y fuerza eléctrica}
+
+Es importante distinguir los dos conceptos.
+
+La fuerza eléctrica
+
+\[
+\vec F
+\]
+
+describe la interacción que experimenta una carga específica.
+
+El campo eléctrico
+
+\[
+\vec E
+\]
+
+describe una propiedad de una región del espacio producida por las cargas fuente.
+
+La relación entre ambos es
+
+\[
+\boxed{\vec F=q\vec E}.
+\]
+
+Esto significa que en un mismo punto pueden colocarse diferentes cargas y obtenerse
+diferentes fuerzas, aunque el campo sea el mismo.
+
+Por ejemplo, si
+
+\[
+q_2=2q_1,
+\]
+
+entonces, dentro del mismo campo,
+
+\[
+\vec F_2=2\vec F_1.
+\]
+
+Pero
+
+\[
+\vec E
+\]
+
+no cambia por ese hecho, siempre que las cargas introducidas no alteren
+significativamente las cargas fuente.
+
+
+\section{Errores y confusiones frecuentes}
+
+\begin{errorfrecuente}
+
+\textbf{Confundir campo eléctrico con fuerza eléctrica.}
+
+El campo se mide en
+
+\[
+\si{\newton\per\coulomb},
+\]
+
+mientras que la fuerza se mide en
+
+\[
+\si{\newton}.
+\]
+
+Están relacionados mediante
+
+\[
+\vec F=q\vec E.
+\]
+
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+
+\textbf{Pensar que el campo depende de la carga de prueba.}
+
+El campo está determinado por las cargas fuente.
+
+La carga de prueba solamente permite definir o medir el campo.
+
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+
+\textbf{Determinar la dirección del campo utilizando una carga de prueba negativa.}
+
+Por convenio, la dirección de \(\vec E\) es la dirección de la fuerza que
+experimentaría una carga de prueba \textbf{positiva}.
+
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+
+\textbf{Pensar que una carga negativa produce un campo de magnitud negativa.}
+
+La magnitud
+
+\[
+E=k\frac{|Q|}{r^2}
+\]
+
+es siempre no negativa.
+
+El signo de \(Q\) determina el sentido del vector campo.
+
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+
+\textbf{Pensar que una carga negativa colocada en un campo se mueve necesariamente
+en la dirección del campo.}
+
+La fuerza sobre una carga negativa apunta en sentido opuesto:
+
+\[
+\vec F=q\vec E,
+\qquad q<0.
+\]
+
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+
+\textbf{Sumar magnitudes de campos que tienen diferentes direcciones.}
+
+La superposición es vectorial:
+
+\[
+\vec E=\sum_i\vec E_i.
+\]
+
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+
+\textbf{Asignar el signo de una componente según el signo de la carga fuente.}
+
+Los signos de \(E_x\) y \(E_y\) dependen de la dirección del vector respecto de los
+ejes elegidos.
+
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+
+\textbf{Olvidar que la distancia en el campo de una carga puntual aparece al
+cuadrado.}
+
+\[
+E=k\frac{|Q|}{r^2}.
+\]
+
+Duplicar \(r\) reduce \(E\) a la cuarta parte.
+
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+
+\textbf{Igualar campos para buscar un punto de cancelación sin analizar primero sus
+direcciones.}
+
+Para que
+
+\[
+\vec E_1+\vec E_2=\vec 0,
+\]
+
+no basta con que
+
+\[
+E_1=E_2.
+\]
+
+También deben tener sentidos opuestos.
+
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+
+\textbf{Pensar que las líneas de campo son objetos físicos.}
+
+Las líneas son una representación gráfica del campo y el número exacto de líneas
+dibujadas es una elección del esquema.
+
+\end{errorfrecuente}
+
+\begin{errorfrecuente}
+
+\textbf{Pensar que las líneas de campo son siempre trayectorias de partículas.}
+
+Las líneas representan la dirección del campo, no necesariamente el movimiento de una
+partícula.
+
+\end{errorfrecuente}
+
+
+\section{Preguntas para comprobar comprensión}
+
+\begin{enumerate}
+    \item ¿Qué diferencia existe entre una carga fuente y una carga de prueba?
+
+    \item ¿Puede existir un campo eléctrico en un punto donde no haya ninguna carga?
+
+    \item ¿Por qué la carga de prueba debe ser suficientemente pequeña?
+
+    \item ¿Qué representa físicamente la relación
+    \[
+    \vec E=\frac{\vec F}{q_0}?
+    \]
+
+    \item ¿Cuál es la unidad SI del campo eléctrico?
+
+    \item ¿Qué dirección se utiliza para definir el vector campo eléctrico?
+
+    \item Si colocamos una carga positiva en un campo, ¿en qué dirección actúa la
+    fuerza?
+
+    \item Si colocamos una carga negativa, ¿en qué dirección actúa la fuerza?
+
+    \item ¿Una carga negativa produce un campo eléctrico negativo?
+
+    \item ¿En qué dirección apunta el campo alrededor de una carga puntual positiva?
+
+    \item ¿Y alrededor de una carga puntual negativa?
+
+    \item Si duplicamos la distancia a una carga puntual, ¿cómo cambia el campo?
+
+    \item ¿Qué principio utilizamos para determinar el campo de varias cargas?
+
+    \item ¿Por qué los campos deben sumarse vectorialmente?
+
+    \item ¿Puede el campo total ser cero aunque cada carga produzca un campo distinto
+    de cero?
+
+    \item ¿Qué representan \(\lambda\), \(\sigma\) y \(\rho\)?
+
+    \item ¿Por qué usamos una integral para calcular el campo de una distribución
+    continua?
+
+    \item ¿Qué información puede obtenerse de la simetría antes de integrar?
+
+    \item ¿Qué representa la tangente a una línea de campo?
+
+    \item ¿Qué significa que las líneas estén muy próximas entre sí?
+
+    \item ¿Por qué las líneas de campo no pueden cruzarse?
+
+    \item ¿Por qué las líneas salen de cargas positivas y entran en cargas negativas?
+
+    \item ¿Una línea de campo representa necesariamente la trayectoria de una
+    partícula cargada?
+
+    \item ¿Qué características gráficas tendría un campo eléctrico uniforme?
+\end{enumerate}
+
+
+\begin{resumen}
+
+\begin{itemize}
+    \item El campo eléctrico describe la influencia eléctrica producida por una
+    distribución de cargas en una región del espacio.
+
+    \item Se define mediante
+    \[
+    \boxed{\vec E=\frac{\vec F_0}{q_0}},
+    \]
+    donde \(q_0\) es una carga de prueba positiva suficientemente pequeña.
+
+    \item El campo es una magnitud vectorial y su unidad SI es
+    \[
+    \boxed{\si{\newton\per\coulomb}}.
+    \]
+
+    \item La fuerza sobre una carga colocada en un campo es
+    \[
+    \boxed{\vec F=q\vec E}.
+    \]
+
+    \item Para una carga positiva, la fuerza tiene el mismo sentido que el campo; para
+    una carga negativa, tiene sentido opuesto.
+
+    \item El campo producido por una carga puntual tiene magnitud
+    \[
+    \boxed{E=k\frac{|Q|}{r^2}}.
+    \]
+
+    \item Vectorialmente,
+    \[
+    \boxed{\vec E=k\frac{Q}{r^2}\hat{\mathbf r}}.
+    \]
+
+    \item El campo apunta alejándose de una carga positiva y hacia una carga
+    negativa.
+
+    \item El campo de varias cargas se obtiene mediante superposición:
+    \[
+    \boxed{\vec E=\sum_i\vec E_i}.
+    \]
+
+    \item En términos de las posiciones de cargas puntuales,
+    \[
+    \boxed{
+    \vec E(\vec r)
+    =
+    k\sum_i q_i
+    \frac{\vec r-\vec r_i}{|\vec r-\vec r_i|^3}
+    }.
+    \]
+
+    \item Para distribuciones continuas,
+    \[
+    \boxed{\vec E=\int d\vec E}.
+    \]
+
+    \item Las densidades de carga son
+    \[
+    \boxed{\lambda=\frac{dq}{d\ell}},
+    \qquad
+    \boxed{\sigma=\frac{dq}{dA}},
+    \qquad
+    \boxed{\rho=\frac{dq}{dV}}.
+    \]
+
+    \item La expresión general para una distribución continua es
+    \[
+    \boxed{
+    \vec E(\vec r)
+    =
+    k\int
+    \frac{\vec r-\vec r'}
+    {|\vec r-\vec r'|^3}\,dq
+    }.
+    \]
+
+    \item Las líneas de campo son tangentes al vector \(\vec E\) en cada punto.
+
+    \item Las líneas salen de cargas positivas y terminan en cargas negativas o en el
+    infinito.
+
+    \item Una mayor densidad de líneas representa un campo más intenso.
+
+    \item Dos líneas de campo no pueden cruzarse.
+
+    \item Las líneas de campo no deben confundirse con trayectorias de partículas.
+
+    \item Un campo uniforme posee la misma magnitud y dirección en todos los puntos
+    de la región considerada.
+\end{itemize}
+
+\end{resumen}

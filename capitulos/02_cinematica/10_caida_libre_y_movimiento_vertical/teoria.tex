@@ -1,0 +1,1806 @@
+﻿\section{Caída libre y movimiento vertical}
+
+Cuando soltamos un objeto desde cierta altura observamos que su rapidez aumenta mientras desciende. Si, en cambio, lanzamos una pelota verticalmente hacia arriba, su rapidez disminuye hasta que se detiene momentáneamente y después comienza a descender.
+
+A primera vista podrían parecer movimientos diferentes. Sin embargo, si despreciamos la resistencia del aire, ambos están gobernados por la misma aceleración: la aceleración debida a la gravedad.
+
+Este capítulo estudia el movimiento vertical de los cuerpos cerca de la superficie terrestre y muestra que constituye una aplicación particular del movimiento rectilíneo con aceleración constante.
+
+\begin{idea}[Una misma aceleración para movimientos aparentemente diferentes]
+Una pelota lanzada hacia arriba, una piedra soltada desde un edificio y un objeto lanzado verticalmente hacia abajo pueden tener velocidades iniciales muy diferentes.
+
+Sin embargo, una vez que se mueven únicamente bajo la influencia de la gravedad y se desprecia la resistencia del aire, todos presentan la misma aceleración vertical hacia abajo.
+
+La diferencia entre estos movimientos está en sus condiciones iniciales, no en la aceleración gravitatoria.
+\end{idea}
+
+
+\section{La caída de los cuerpos}
+
+Durante mucho tiempo se pensó que los objetos más pesados debían caer más rápidamente que los ligeros.
+
+Las investigaciones iniciadas por Galileo mostraron que esta conclusión no describe correctamente el movimiento cuando los efectos del aire pueden despreciarse.
+
+Si dos cuerpos se dejan caer desde la misma altura en ausencia de resistencia del aire, ambos adquieren la misma aceleración gravitatoria, independientemente de sus masas.
+
+\begin{interpretacion}
+En la experiencia cotidiana una hoja de papel puede caer más lentamente que una moneda.
+
+Esto no significa que la gravedad produzca una aceleración gravitatoria diferente sobre ellas dentro del modelo de caída libre.
+
+La diferencia observable se debe principalmente a que la resistencia del aire afecta de manera distinta a los objetos.
+\end{interpretacion}
+
+Si eliminamos suficientemente el efecto del aire, las diferencias disminuyen. Por esta razón, al estudiar inicialmente el movimiento bajo gravedad utilizaremos un modelo idealizado.
+
+
+\section{El modelo de caída libre}
+
+\begin{definicion}[Caída libre]
+Un cuerpo está en \textbf{caída libre} cuando su movimiento ocurre únicamente bajo la influencia de la gravedad y se desprecia cualquier otra interacción que afecte significativamente su movimiento, como la resistencia del aire.
+\end{definicion}
+
+El término puede resultar engañoso porque en el lenguaje cotidiano ``caer'' suele significar moverse hacia abajo.
+
+En Física, un cuerpo lanzado verticalmente hacia arriba también está en caída libre después de abandonar la mano, siempre que podamos despreciar la resistencia del aire.
+
+Por tanto, son ejemplos de caída libre:
+
+\begin{itemize}
+    \item un objeto soltado desde el reposo;
+    \item un objeto lanzado verticalmente hacia abajo;
+    \item un objeto lanzado verticalmente hacia arriba;
+    \item un objeto que asciende, alcanza una altura máxima y vuelve a descender.
+\end{itemize}
+
+\begin{modelo}[Caída libre cerca de la superficie terrestre]
+En este capítulo utilizaremos el siguiente modelo:
+
+\begin{itemize}
+    \item el cuerpo se representa como una partícula;
+    \item la resistencia del aire se desprecia;
+    \item el movimiento ocurre cerca de la superficie terrestre;
+    \item las distancias recorridas son suficientemente pequeñas para considerar constante la aceleración gravitatoria;
+    \item el movimiento estudiado es vertical.
+\end{itemize}
+
+Dentro de estas condiciones, el movimiento puede analizarse como un MRUA vertical.
+\end{modelo}
+
+
+\section{Aceleración debida a la gravedad}
+
+Cerca de la superficie terrestre, la magnitud de la aceleración gravitatoria puede aproximarse mediante:
+
+\[ \boxed{g\approx\SI{9.81}{\meter\per\second\squared}}. \]
+
+Para estimaciones rápidas también puede utilizarse:
+
+\[ g\approx\SI{9.8}{\meter\per\second\squared}. \]
+
+La cantidad \(g\) representa la \textbf{magnitud} de la aceleración gravitatoria y, por tanto, se toma positiva:
+
+\[ g>0. \]
+
+Su dirección es vertical y su sentido es hacia el centro de la Tierra.
+
+Cerca de la superficie terrestre esto equivale, localmente, a decir que apunta hacia abajo.
+
+\begin{advertencia}[El signo de \(g\)]
+No debe memorizarse:
+
+\[ g=-\SI{9.81}{\meter\per\second\squared}. \]
+
+La cantidad \(g\) representa la magnitud de la aceleración y se considera positiva.
+
+El signo de la componente de la aceleración depende del sistema de referencia elegido.
+\end{advertencia}
+
+
+\subsection{¿Es exactamente igual \(g\) en todos los lugares?}
+
+No.
+
+El valor de la aceleración gravitatoria presenta pequeñas variaciones con:
+
+\begin{itemize}
+    \item la altitud;
+    \item la latitud;
+    \item la distribución local de masa;
+    \item la rotación terrestre.
+\end{itemize}
+
+Sin embargo, para los problemas de movimiento vertical desarrollados aquí, estas variaciones suelen ser mucho menores que la precisión requerida y utilizaremos un valor constante de \(g\).
+
+
+\section{Sistema de referencia para el movimiento vertical}
+
+Los signos en los problemas de caída libre no pueden establecerse correctamente sin definir primero un eje.
+
+Utilizaremos habitualmente un eje vertical \(y\) con sentido positivo hacia arriba.
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+
+    \draw[-{Latex},thick] (0,-3.0) -- (0,3.2);
+    \node[above] at (0,3.2) {\(+y\)};
+
+    \draw (-0.15,0) -- (0.15,0);
+    \node[left] at (-0.15,0) {\(y=0\)};
+
+    \fill (0,1.7) circle (2.5pt);
+    \node[right] at (0.15,1.7) {objeto};
+
+    \draw[-{Latex},very thick,RojoPrincipal] (0.65,1.3) -- (0.65,0.2);
+    \node[right] at (0.75,0.75) {\(\vect{a}\)};
+
+    \node[right] at (0.75,-0.1) {\(a_y=-g\)};
+
+\end{tikzpicture}
+\end{center}
+
+Con esta elección:
+
+\[
+\boxed{a_y=-g}.
+\]
+
+El signo negativo indica únicamente que la aceleración apunta en sentido contrario al eje positivo.
+
+Por tanto:
+
+\[
+\boxed{a_y\approx-\SI{9.81}{\meter\per\second\squared}}.
+\]
+
+\begin{interpretacion}
+Si elegimos \(+y\) hacia arriba:
+
+\begin{itemize}
+    \item una velocidad hacia arriba es positiva;
+    \item una velocidad hacia abajo es negativa;
+    \item un desplazamiento hacia arriba es positivo;
+    \item un desplazamiento hacia abajo es negativo;
+    \item la aceleración gravitatoria es negativa.
+\end{itemize}
+\end{interpretacion}
+
+
+\subsection{¿Podemos elegir el eje positivo hacia abajo?}
+
+Sí.
+
+La elección del sistema de referencia es arbitraria.
+
+Si elegimos el sentido positivo hacia abajo:
+
+\[ a_y=+g. \]
+
+Las ecuaciones físicas producen el mismo resultado observable si los signos se utilizan de manera consistente.
+
+\begin{advertencia}
+El error no consiste en elegir \(+y\) hacia arriba o hacia abajo.
+
+El error consiste en comenzar con una convención y cambiar los signos durante el procedimiento sin redefinir el sistema de referencia.
+\end{advertencia}
+
+En este capítulo utilizaremos preferentemente:
+
+\[ \boxed{+y\text{ hacia arriba}} \]
+
+y, por tanto:
+
+\[ \boxed{a_y=-g}. \]
+
+
+\section{La caída libre como un caso de MRUA}
+
+En el capítulo anterior obtuvimos las ecuaciones para movimiento rectilíneo con aceleración constante.
+
+Para un movimiento vertical:
+
+\[
+x\longrightarrow y,
+\qquad
+v_x\longrightarrow v_y,
+\qquad
+a_x\longrightarrow a_y.
+\]
+
+Con \(+y\) hacia arriba:
+
+\[ a_y=-g. \]
+
+Por tanto, no necesitamos construir un conjunto completamente nuevo de ecuaciones. Basta aplicar las ecuaciones generales del MRUA al eje vertical.
+
+
+\subsection{Velocidad en función del tiempo}
+
+La ecuación general es:
+
+\[ v_y=v_{0y}+a_yt. \]
+
+Como:
+
+\[ a_y=-g, \]
+
+obtenemos:
+
+\[ \boxed{v_y=v_{0y}-gt}. \]
+
+Esta ecuación indica que la componente vertical de la velocidad disminuye linealmente con el tiempo cuando el eje positivo apunta hacia arriba.
+
+
+\subsection{Posición en función del tiempo}
+
+La ecuación general del MRUA es:
+
+\[ y=y_0+v_{0y}t+\frac{1}{2}a_yt^2. \]
+
+Sustituyendo:
+
+\[ a_y=-g, \]
+
+obtenemos:
+
+\[ \boxed{y=y_0+v_{0y}t-\frac{1}{2}gt^2}. \]
+
+También puede escribirse en términos del desplazamiento vertical:
+
+\[ \Delta y=y-y_0. \]
+
+Entonces:
+
+\[ \boxed{\Delta y=v_{0y}t-\frac{1}{2}gt^2}. \]
+
+
+\subsection{Velocidad y desplazamiento sin utilizar el tiempo}
+
+La relación general:
+
+\[ v_y^2=v_{0y}^2+2a_y\Delta y \]
+
+se convierte en:
+
+\[ \boxed{v_y^2=v_{0y}^2-2g\Delta y}. \]
+
+Esta expresión resulta especialmente útil cuando conocemos posiciones y velocidades pero no necesitamos determinar el tiempo.
+
+
+\subsection{Desplazamiento mediante la velocidad media}
+
+Como la aceleración es constante:
+
+\[ \bar{v}_y=\frac{v_{0y}+v_y}{2}. \]
+
+Por tanto:
+
+\[ \boxed{\Delta y=\frac{v_{0y}+v_y}{2}\,t}. \]
+
+Todas estas ecuaciones son simplemente las ecuaciones del MRUA aplicadas al movimiento vertical.
+
+
+\begin{recordatorio}
+Para \(+y\) hacia arriba y caída libre ideal:
+
+\[
+a_y=-g.
+\]
+
+Por tanto:
+
+\[
+v_y=v_{0y}-gt,
+\]
+
+\[
+y=y_0+v_{0y}t-\frac{1}{2}gt^2,
+\]
+
+\[
+v_y^2=v_{0y}^2-2g(y-y_0).
+\]
+
+No deben memorizarse como ecuaciones independientes de la cinemática general. Son casos particulares de movimiento con aceleración constante.
+\end{recordatorio}
+
+
+\section{Interpretación física de la aceleración gravitatoria}
+
+Supongamos que:
+
+\[ +y\text{ apunta hacia arriba}. \]
+
+Entonces:
+
+\[ a_y=-g. \]
+
+Esto significa que durante cada segundo la velocidad vertical cambia aproximadamente en:
+
+\[ -\SI{9.81}{\meter\per\second}. \]
+
+Por ejemplo, si inicialmente:
+
+\[ v_{0y}=\SI{20}{\meter\per\second}, \]
+
+aproximadamente un segundo después:
+
+\[ v_y\approx\SI{10.2}{\meter\per\second}. \]
+
+Después de aproximadamente dos segundos:
+
+\[ v_y\approx\SI{0.4}{\meter\per\second}. \]
+
+Un segundo más tarde:
+
+\[ v_y\approx-\SI{9.4}{\meter\per\second}. \]
+
+El signo cambia porque el objeto ha pasado de moverse hacia arriba a moverse hacia abajo.
+
+La aceleración, sin embargo, continúa siendo:
+
+\[ a_y=-g. \]
+
+
+\section{Objeto soltado desde el reposo}
+
+Consideremos primero el caso más sencillo.
+
+Un objeto se libera sin velocidad inicial:
+
+\[ v_{0y}=0. \]
+
+Si tomamos el punto de liberación como origen:
+
+\[ y_0=0. \]
+
+Entonces:
+
+\[ v_y=-gt, \]
+
+y:
+
+\[ y=-\frac{1}{2}gt^2. \]
+
+El signo negativo de \(y\) indica que el objeto se encuentra debajo del origen.
+
+La distancia vertical recorrida hacia abajo tendrá magnitud:
+
+\[ h=\frac{1}{2}gt^2. \]
+
+Por tanto:
+
+\[ \boxed{h=\frac{1}{2}gt^2} \]
+
+es una forma útil para el caso particular de un objeto soltado desde el reposo cuando \(h\) representa una distancia positiva de caída.
+
+\begin{advertencia}
+La expresión:
+
+\[ h=\frac{1}{2}gt^2 \]
+
+no debe tratarse como la ecuación general de caída libre.
+
+Corresponde al caso particular:
+
+\[
+v_{0y}=0
+\]
+
+y a una definición de \(h\) como magnitud positiva de la distancia vertical descendida.
+\end{advertencia}
+
+
+\section{Ejemplo: objeto soltado desde una altura}
+
+\begin{ejemplo}[Caída desde un edificio]
+Una piedra se suelta desde el reposo a una altura de:
+
+\[ h=\SI{45.0}{\meter} \]
+
+sobre el suelo.
+
+Despreciando la resistencia del aire, determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item el tiempo que tarda en llegar al suelo;
+    \item su velocidad inmediatamente antes de llegar.
+\end{enumerate}
+\end{ejemplo}
+
+
+\subsubsection*{Sistema de referencia}
+
+Tomaremos:
+
+\[
++y\text{ hacia arriba},
+\]
+
+con el suelo en:
+
+\[ y=0. \]
+
+Entonces:
+
+\[
+y_0=\SI{45.0}{\meter},
+\qquad
+v_{0y}=0,
+\qquad
+a_y=-g.
+\]
+
+
+\subsubsection*{Tiempo de caída}
+
+Utilizamos:
+
+\[ y=y_0+v_{0y}t-\frac{1}{2}gt^2. \]
+
+Al llegar al suelo:
+
+\[ y=0. \]
+
+Por tanto:
+
+\[
+0
+=
+\SI{45.0}{\meter}
+-
+\frac{1}{2}
+(\SI{9.81}{\meter\per\second\squared})t^2.
+\]
+
+Despejando:
+
+\[ t=\sqrt{\frac{2h}{g}}. \]
+
+Entonces:
+
+\[
+t
+=
+\sqrt{
+\frac{2(\SI{45.0}{\meter})}
+{\SI{9.81}{\meter\per\second\squared}}
+}.
+\]
+
+Por tanto:
+
+\[ \boxed{t\approx\SI{3.03}{\second}}. \]
+
+
+\subsubsection*{Velocidad de impacto}
+
+Utilizamos:
+
+\[ v_y=v_{0y}-gt. \]
+
+Como \(v_{0y}=0\):
+
+\[
+v_y
+=
+-(\SI{9.81}{\meter\per\second\squared})
+(\SI{3.03}{\second}).
+\]
+
+Así:
+
+\[ \boxed{v_y\approx-\SI{29.7}{\meter\per\second}}. \]
+
+El signo negativo indica que la velocidad está dirigida hacia abajo.
+
+La rapidez de impacto es:
+
+\[ \boxed{v\approx\SI{29.7}{\meter\per\second}}. \]
+
+\begin{interpretacion}
+La piedra tarda aproximadamente \(\SI{3.03}{\second}\) en recorrer los \(\SI{45.0}{\meter}\).
+
+Durante ese tiempo su velocidad cambia continuamente hacia valores cada vez más negativos porque la aceleración permanece dirigida hacia abajo.
+\end{interpretacion}
+
+
+\section{Lanzamiento vertical hacia abajo}
+
+Un objeto también puede comenzar su caída con una velocidad inicial dirigida hacia abajo.
+
+Con nuestra convención:
+
+\[ +y\text{ hacia arriba}, \]
+
+una velocidad inicial hacia abajo tiene signo negativo:
+
+\[ v_{0y}<0. \]
+
+Las ecuaciones siguen siendo exactamente las mismas:
+
+\[ v_y=v_{0y}-gt, \]
+
+\[ y=y_0+v_{0y}t-\frac{1}{2}gt^2. \]
+
+No es necesario crear nuevas fórmulas.
+
+
+\begin{interpretacion}
+Si un objeto ya se mueve hacia abajo y además posee aceleración hacia abajo:
+
+\[
+v_y<0,
+\qquad
+a_y<0,
+\]
+
+velocidad y aceleración tienen el mismo signo.
+
+Por tanto, la rapidez aumenta.
+\end{interpretacion}
+
+
+\section{Ejemplo: lanzamiento vertical hacia abajo}
+
+\begin{ejemplo}[Objeto lanzado desde un edificio]
+Desde una altura de:
+
+\[ \SI{30.0}{\meter} \]
+
+se lanza una pelota verticalmente hacia abajo con rapidez inicial:
+
+\[ \SI{5.00}{\meter\per\second}. \]
+
+Despreciando la resistencia del aire, determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item el tiempo necesario para llegar al suelo;
+    \item la velocidad inmediatamente antes del impacto.
+\end{enumerate}
+\end{ejemplo}
+
+
+\subsubsection*{Sistema de referencia y datos}
+
+Tomamos:
+
+\[
++y\text{ hacia arriba},
+\]
+
+con:
+
+\[
+y_0=\SI{30.0}{\meter},
+\qquad
+y=0.
+\]
+
+Como la velocidad inicial apunta hacia abajo:
+
+\[ v_{0y}=-\SI{5.00}{\meter\per\second}. \]
+
+La aceleración es:
+
+\[ a_y=-\SI{9.81}{\meter\per\second\squared}. \]
+
+
+\subsubsection*{Tiempo}
+
+Utilizamos:
+
+\[ y=y_0+v_{0y}t-\frac{1}{2}gt^2. \]
+
+Sustituyendo:
+
+\[
+0
+=
+30.0
+-
+5.00t
+-
+4.905t^2.
+\]
+
+Reordenando:
+
+\[ 4.905t^2+5.00t-30.0=0. \]
+
+Aplicando la fórmula cuadrática:
+
+\[
+t
+=
+\frac{
+-5.00\pm
+\sqrt{(5.00)^2-4(4.905)(-30.0)}
+}{
+2(4.905)
+}.
+\]
+
+Aparecen dos soluciones matemáticas, pero solamente una corresponde a un instante posterior al lanzamiento.
+
+La solución físicamente válida es:
+
+\[ \boxed{t\approx\SI{2.02}{\second}}. \]
+
+
+\subsubsection*{Velocidad de impacto}
+
+\[ v_y=v_{0y}-gt. \]
+
+Entonces:
+
+\[
+v_y
+=
+-\SI{5.00}{\meter\per\second}
+-
+(\SI{9.81}{\meter\per\second\squared})
+(\SI{2.02}{\second}).
+\]
+
+Por tanto:
+
+\[ \boxed{v_y\approx-\SI{24.8}{\meter\per\second}}. \]
+
+La rapidez de impacto es:
+
+\[ \boxed{v\approx\SI{24.8}{\meter\per\second}}. \]
+
+\begin{interpretacion}
+El resultado negativo de la velocidad no significa que la rapidez sea negativa.
+
+Indica que el movimiento ocurre en el sentido negativo del eje elegido, es decir, hacia abajo.
+\end{interpretacion}
+
+
+\section{Lanzamiento vertical hacia arriba}
+
+Consideremos ahora una pelota lanzada verticalmente hacia arriba.
+
+Elegimos nuevamente:
+
+\[ +y\text{ hacia arriba}. \]
+
+La velocidad inicial es entonces positiva:
+
+\[ v_{0y}>0. \]
+
+Pero la aceleración sigue siendo:
+
+\[ a_y=-g. \]
+
+Por tanto, mientras la pelota asciende:
+
+\[
+v_y>0,
+\qquad
+a_y<0.
+\]
+
+Como velocidad y aceleración tienen signos opuestos, la rapidez disminuye.
+
+
+\subsection{El punto más alto}
+
+A medida que la pelota asciende, su velocidad vertical disminuye.
+
+En el punto más alto:
+
+\[ \boxed{v_y=0}. \]
+
+Sin embargo:
+
+\[ \boxed{a_y=-g}. \]
+
+\begin{errorfrecuente}[Velocidad y aceleración en la altura máxima]
+Es incorrecto afirmar que en la altura máxima:
+
+\[ v_y=0 \]
+
+y:
+
+\[ a_y=0. \]
+
+La velocidad es momentáneamente cero, pero la aceleración continúa siendo:
+
+\[ a_y=-g. \]
+
+Si la aceleración también fuera cero, el objeto permanecería en reposo en ese punto y no comenzaría a descender.
+\end{errorfrecuente}
+
+
+\subsection{Después de alcanzar la altura máxima}
+
+Después del punto más alto, la velocidad cambia de signo:
+
+\[ v_y<0. \]
+
+La aceleración continúa siendo:
+
+\[ a_y<0. \]
+
+Ahora velocidad y aceleración tienen el mismo signo, por lo que la rapidez aumenta.
+
+Podemos resumir el proceso:
+
+\[
+\begin{array}{c|c|c|c}
+\text{Etapa} & v_y & a_y & \text{Rapidez} \\ \hline
+\text{Ascenso} & + & - & \text{disminuye} \\
+\text{Altura máxima} & 0 & - & 0 \\
+\text{Descenso} & - & - & \text{aumenta}
+\end{array}
+\]
+
+
+\section{Altura máxima}
+
+Supongamos que un objeto se lanza hacia arriba desde:
+
+\[ y=y_0 \]
+
+con velocidad inicial:
+
+\[ v_{0y}>0. \]
+
+En la altura máxima:
+
+\[ v_y=0. \]
+
+Utilizamos:
+
+\[ v_y^2=v_{0y}^2-2g(y-y_0). \]
+
+Entonces:
+
+\[ 0=v_{0y}^2-2g(y_{\max}-y_0). \]
+
+Por tanto:
+
+\[ 2g(y_{\max}-y_0)=v_{0y}^2. \]
+
+Así:
+
+\[ \boxed{y_{\max}-y_0=\frac{v_{0y}^2}{2g}}. \]
+
+La altura ganada respecto del punto de lanzamiento es:
+
+\[ \boxed{\Delta y_{\max}=\frac{v_{0y}^2}{2g}}. \]
+
+\begin{interpretacion}
+La altura máxima depende del cuadrado de la rapidez inicial.
+
+Por ejemplo, si la rapidez inicial se duplica:
+
+\[
+v_{0y}'=2v_{0y},
+\]
+
+entonces:
+
+\[
+\Delta y_{\max}'
+=
+\frac{(2v_{0y})^2}{2g}
+=
+4\Delta y_{\max}.
+\]
+
+Duplicar la rapidez inicial cuadruplica la altura máxima dentro del modelo ideal.
+\end{interpretacion}
+
+
+\section{Tiempo para alcanzar la altura máxima}
+
+Partimos de:
+
+\[ v_y=v_{0y}-gt. \]
+
+En la altura máxima:
+
+\[ v_y=0. \]
+
+Entonces:
+
+\[ 0=v_{0y}-gt_{\text{subida}}. \]
+
+De donde:
+
+\[ \boxed{t_{\text{subida}}=\frac{v_{0y}}{g}}. \]
+
+Esta expresión es válida para un lanzamiento vertical hacia arriba cuando el tiempo se mide desde el instante del lanzamiento.
+
+
+\section{Regreso a la misma altura}
+
+Consideremos un objeto lanzado hacia arriba desde una posición \(y_0\).
+
+Si posteriormente vuelve exactamente a esa misma altura, y despreciamos la resistencia del aire, existe una importante simetría cinemática.
+
+En el instante de regreso:
+
+\[ y=y_0. \]
+
+Utilizamos:
+
+\[ v_y^2=v_{0y}^2-2g(y-y_0). \]
+
+Como:
+
+\[ y-y_0=0, \]
+
+obtenemos:
+
+\[ v_y^2=v_{0y}^2. \]
+
+Por tanto:
+
+\[ |v_y|=|v_{0y}|. \]
+
+En el regreso el movimiento es hacia abajo, así que:
+
+\[ \boxed{v_y=-v_{0y}}. \]
+
+\begin{principio}[Simetría a la misma altura]
+En caída libre ideal, si un objeto lanzado verticalmente hacia arriba vuelve a la misma altura desde la que fue lanzado:
+
+\begin{itemize}
+    \item su rapidez tiene la misma magnitud que al lanzamiento;
+    \item su velocidad tiene sentido opuesto;
+    \item el tiempo de descenso desde la altura máxima hasta esa posición es igual al tiempo de ascenso.
+\end{itemize}
+\end{principio}
+
+
+\subsection{Tiempo total cuando regresa al mismo nivel}
+
+El tiempo de subida es:
+
+\[ t_{\text{subida}}=\frac{v_{0y}}{g}. \]
+
+Por simetría:
+
+\[ t_{\text{bajada}}=t_{\text{subida}}. \]
+
+Por tanto:
+
+\[ t_{\text{total}}=2t_{\text{subida}}. \]
+
+Así:
+
+\[ \boxed{t_{\text{total}}=\frac{2v_{0y}}{g}}. \]
+
+\begin{advertencia}
+La expresión:
+
+\[ t_{\text{total}}=\frac{2v_{0y}}{g} \]
+
+solamente es válida cuando el objeto regresa a la misma altura desde la que fue lanzado.
+
+No puede utilizarse directamente si el punto final se encuentra a una altura diferente.
+\end{advertencia}
+
+
+\section{Ejemplo: lanzamiento vertical hacia arriba}
+
+\begin{ejemplo}[Pelota lanzada hacia arriba]
+Una pelota se lanza verticalmente hacia arriba desde el suelo con rapidez inicial:
+
+\[ v_{0y}=\SI{18.0}{\meter\per\second}. \]
+
+Despreciando la resistencia del aire, determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item el tiempo necesario para alcanzar la altura máxima;
+    \item la altura máxima respecto del punto de lanzamiento;
+    \item el tiempo total para regresar al suelo;
+    \item la velocidad inmediatamente antes de regresar al punto de lanzamiento.
+\end{enumerate}
+\end{ejemplo}
+
+
+\subsubsection*{Sistema de referencia}
+
+Tomaremos:
+
+\[ y_0=0 \]
+
+en el punto de lanzamiento y:
+
+\[ +y\text{ hacia arriba}. \]
+
+Entonces:
+
+\[
+v_{0y}=\SI{18.0}{\meter\per\second},
+\qquad
+a_y=-g.
+\]
+
+
+\subsubsection*{Tiempo de subida}
+
+En la altura máxima:
+
+\[ v_y=0. \]
+
+Utilizamos:
+
+\[ v_y=v_{0y}-gt. \]
+
+Entonces:
+
+\[
+0
+=
+\SI{18.0}{\meter\per\second}
+-
+(\SI{9.81}{\meter\per\second\squared})t.
+\]
+
+Por tanto:
+
+\[ \boxed{t_{\text{subida}}\approx\SI{1.83}{\second}}. \]
+
+
+\subsubsection*{Altura máxima}
+
+Utilizamos:
+
+\[ v_y^2=v_{0y}^2-2g\Delta y. \]
+
+En el punto más alto:
+
+\[ v_y=0. \]
+
+Entonces:
+
+\[ \Delta y_{\max}=\frac{v_{0y}^2}{2g}. \]
+
+Sustituyendo:
+
+\[
+\Delta y_{\max}
+=
+\frac{
+(\SI{18.0}{\meter\per\second})^2
+}{
+2(\SI{9.81}{\meter\per\second\squared})
+}.
+\]
+
+Así:
+
+\[ \boxed{\Delta y_{\max}\approx\SI{16.5}{\meter}}. \]
+
+
+\subsubsection*{Tiempo total}
+
+Como la pelota regresa a la misma altura:
+
+\[ t_{\text{total}}=2t_{\text{subida}}. \]
+
+Por tanto:
+
+\[ \boxed{t_{\text{total}}\approx\SI{3.67}{\second}}. \]
+
+
+\subsubsection*{Velocidad al regresar}
+
+Por simetría:
+
+\[ v_y=-v_{0y}. \]
+
+Entonces:
+
+\[ \boxed{v_y=-\SI{18.0}{\meter\per\second}}. \]
+
+La rapidez es la misma que al lanzamiento, pero la velocidad apunta hacia abajo.
+
+\begin{interpretacion}
+Durante el ascenso la gravedad disminuye la rapidez de la pelota.
+
+En el punto más alto la velocidad es cero, pero la aceleración continúa hacia abajo.
+
+Durante el descenso la gravedad aumenta nuevamente la rapidez.
+
+Al regresar al mismo nivel y dentro del modelo ideal, recupera la rapidez inicial.
+\end{interpretacion}
+
+
+\section{Una misma posición puede alcanzarse dos veces}
+
+Durante un lanzamiento vertical hacia arriba, muchas posiciones pueden alcanzarse en dos instantes diferentes:
+
+\begin{itemize}
+    \item una vez durante el ascenso;
+    \item otra vez durante el descenso.
+\end{itemize}
+
+Esto explica por qué algunas ecuaciones producen dos soluciones físicamente válidas.
+
+
+\subsection{Dos velocidades posibles en una misma altura}
+
+Supongamos que:
+
+\[ y>y_0 \]
+
+pero:
+
+\[ y<y_{\max}. \]
+
+De:
+
+\[ v_y^2=v_{0y}^2-2g(y-y_0), \]
+
+obtenemos:
+
+\[ v_y=\pm\sqrt{v_{0y}^2-2g(y-y_0)}. \]
+
+El signo positivo corresponde generalmente al ascenso:
+
+\[ v_y>0, \]
+
+mientras que el negativo corresponde al descenso:
+
+\[ v_y<0. \]
+
+\begin{interpretacion}
+La posición por sí sola no determina la velocidad.
+
+Para conocer completamente el estado del movimiento necesitamos también información sobre el sentido en el que se mueve el objeto.
+\end{interpretacion}
+
+
+\subsection{Dos tiempos posibles}
+
+La ecuación:
+
+\[ y=y_0+v_{0y}t-\frac{1}{2}gt^2 \]
+
+es cuadrática en \(t\).
+
+Al fijar una altura intermedia puede producir dos valores positivos de tiempo.
+
+Estos dos valores corresponden normalmente al instante de ascenso y al instante de descenso.
+
+
+\section{Gráficas del movimiento vertical}
+
+Las gráficas permiten visualizar con claridad cómo cambia el movimiento durante un lanzamiento vertical.
+
+
+\subsection{Gráfica posición--tiempo}
+
+Para:
+
+\[ y=y_0+v_{0y}t-\frac{1}{2}gt^2, \]
+
+la gráfica \(y-t\) es una parábola con concavidad hacia abajo.
+
+Consideremos un lanzamiento desde:
+
+\[ y_0=0 \]
+
+con:
+
+\[ v_{0y}>0. \]
+
+\begin{center}
+\begin{tikzpicture}
+
+\begin{axis}[
+    width=0.82\textwidth,
+    height=6.5cm,
+    axis lines=left,
+    xlabel={\(t\)},
+    ylabel={\(y\)},
+    xmin=0,
+    xmax=4,
+    ymin=0,
+    ymax=18,
+    xtick={0,1.835,3.67},
+    xticklabels={\(0\),\(t_{\max}\),\(t_{\text{total}}\)},
+    ytick={0,16.5},
+    yticklabels={\(0\),\(y_{\max}\)},
+    samples=150
+]
+
+\addplot[
+    very thick,
+    AzulPrincipal,
+    domain=0:3.67
+]
+{18*x-4.905*x^2};
+
+\end{axis}
+
+\end{tikzpicture}
+\end{center}
+
+La pendiente de esta gráfica representa la velocidad vertical.
+
+Durante el ascenso:
+
+\[ \frac{\dd y}{\dd t}>0. \]
+
+En la altura máxima:
+
+\[ \frac{\dd y}{\dd t}=0. \]
+
+Durante el descenso:
+
+\[ \frac{\dd y}{\dd t}<0. \]
+
+
+\subsection{Gráfica velocidad--tiempo}
+
+La velocidad está dada por:
+
+\[ v_y=v_{0y}-gt. \]
+
+Por tanto, la gráfica \(v_y-t\) es una recta con pendiente:
+
+\[ -g. \]
+
+\begin{center}
+\begin{tikzpicture}
+
+\begin{axis}[
+    width=0.82\textwidth,
+    height=6.5cm,
+    axis lines=middle,
+    xlabel={\(t\)},
+    ylabel={\(v_y\)},
+    xmin=0,
+    xmax=4,
+    ymin=-20,
+    ymax=20,
+    xtick={0,1.835,3.67},
+    xticklabels={\(0\),\(t_{\max}\),\(t_{\text{total}}\)},
+    ytick={-18,0,18},
+    yticklabels={\(-v_0\),\(0\),\(v_0\)},
+    samples=2
+]
+
+\addplot[
+    very thick,
+    VerdePrincipal,
+    domain=0:3.67
+]
+{18-9.81*x};
+
+\end{axis}
+
+\end{tikzpicture}
+\end{center}
+
+La recta atraviesa \(v_y=0\) precisamente en la altura máxima.
+
+El área algebraica bajo la gráfica \(v_y-t\) representa el desplazamiento vertical.
+
+
+\subsection{Gráfica aceleración--tiempo}
+
+Durante todo el movimiento ideal:
+
+\[ a_y=-g. \]
+
+Por tanto, la gráfica \(a_y-t\) es una línea horizontal.
+
+\begin{center}
+\begin{tikzpicture}
+
+\begin{axis}[
+    width=0.82\textwidth,
+    height=5.5cm,
+    axis lines=middle,
+    xlabel={\(t\)},
+    ylabel={\(a_y\)},
+    xmin=0,
+    xmax=4,
+    ymin=-12,
+    ymax=3,
+    ytick={-9.81,0},
+    yticklabels={\(-g\),\(0\)},
+    samples=2
+]
+
+\addplot[
+    very thick,
+    RojoPrincipal,
+    domain=0:3.8
+]
+{-9.81};
+
+\end{axis}
+
+\end{tikzpicture}
+\end{center}
+
+La aceleración no cambia de signo cuando el objeto alcanza la altura máxima.
+
+\begin{errorfrecuente}
+La gráfica \(y-t\) no representa la trayectoria geométrica del objeto.
+
+El movimiento real ocurre sobre una línea vertical.
+
+La parábola representa cómo cambia la coordenada vertical con el tiempo.
+\end{errorfrecuente}
+
+
+\section{Relación entre los signos de velocidad y aceleración}
+
+La caída libre proporciona un ejemplo especialmente útil para recordar que una aceleración negativa no significa necesariamente disminución de rapidez.
+
+Con:
+
+\[ +y\text{ hacia arriba}, \]
+
+tenemos siempre:
+
+\[ a_y<0. \]
+
+
+\subsection{Durante el ascenso}
+
+\[ v_y>0,\qquad a_y<0. \]
+
+Los signos son opuestos.
+
+Por tanto:
+
+\[ \boxed{\text{la rapidez disminuye}}. \]
+
+
+\subsection{Durante el descenso}
+
+\[ v_y<0,\qquad a_y<0. \]
+
+Los signos son iguales.
+
+Por tanto:
+
+\[ \boxed{\text{la rapidez aumenta}}. \]
+
+\begin{interpretacion}
+La aceleración gravitatoria no ``sabe'' si el objeto está subiendo o bajando.
+
+Su sentido permanece hacia abajo.
+
+Lo que cambia es la relación entre la dirección de la velocidad y la dirección de la aceleración.
+\end{interpretacion}
+
+
+\section{¿Todos los cuerpos caen con la misma aceleración?}
+
+Dentro del modelo de caída libre ideal, sí.
+
+La aceleración gravitatoria cerca de un mismo lugar es independiente de:
+
+\begin{itemize}
+    \item la masa del cuerpo;
+    \item su composición;
+    \item su velocidad inicial.
+\end{itemize}
+
+Esto no significa que todos los objetos reales que se dejan caer en el aire lleguen simultáneamente al suelo.
+
+La resistencia del aire puede modificar considerablemente el movimiento.
+
+
+\subsection{El papel de la resistencia del aire}
+
+Una hoja extendida y una moneda pueden caer de manera muy diferente en el aire.
+
+La hoja presenta una interacción con el aire mucho mayor en relación con su peso.
+
+Si la hoja se arruga, el efecto de la resistencia del aire disminuye y su movimiento se aproxima más al modelo de caída libre.
+
+\begin{advertencia}
+La aceleración constante:
+
+\[ a_y=-g \]
+
+es una característica del \textbf{modelo ideal de caída libre}.
+
+No debe aplicarse sin analizar la situación a objetos para los cuales la resistencia del aire sea importante.
+\end{advertencia}
+
+
+\section{Estrategia general para resolver problemas de caída libre}
+
+\begin{estrategia}[Procedimiento recomendado]
+Para resolver un problema de caída libre o movimiento vertical:
+
+\begin{enumerate}
+    \item Identifique el cuerpo y el intervalo de movimiento que se analizará.
+
+    \item Compruebe que pueda despreciarse la resistencia del aire.
+
+    \item Dibuje, cuando sea útil, un esquema vertical.
+
+    \item Defina el origen del eje \(y\).
+
+    \item Defina explícitamente el sentido positivo.
+
+    \item Asigne signos a:
+    \[
+    y_0,\qquad y,\qquad v_{0y},\qquad v_y,\qquad a_y.
+    \]
+
+    \item Si \(+y\) apunta hacia arriba, utilice:
+    \[
+    a_y=-g.
+    \]
+
+    \item Identifique las magnitudes conocidas y la incógnita.
+
+    \item Seleccione la ecuación de MRUA que relacione las magnitudes necesarias.
+
+    \item Realice primero el planteamiento simbólico cuando sea conveniente.
+
+    \item Sustituya los valores con unidades compatibles.
+
+    \item Interprete el signo del resultado.
+
+    \item Compruebe si el tiempo obtenido es físicamente admisible y si el orden de magnitud resulta razonable.
+\end{enumerate}
+\end{estrategia}
+
+
+\subsection{Selección de la ecuación}
+
+Para \(+y\) hacia arriba:
+
+\[
+v_y=v_{0y}-gt
+\]
+
+resulta útil cuando no se requiere la posición.
+
+La ecuación:
+
+\[
+y=y_0+v_{0y}t-\frac{1}{2}gt^2
+\]
+
+relaciona posición y tiempo.
+
+La ecuación:
+
+\[
+v_y^2=v_{0y}^2-2g(y-y_0)
+\]
+
+es especialmente útil cuando el tiempo no aparece en los datos ni en la incógnita.
+
+No debe elegirse una ecuación únicamente porque parezca familiar. Primero debe identificarse qué información física se conoce y qué se desea determinar.
+
+
+\section{Raíces matemáticas y soluciones físicas}
+
+Al resolver:
+
+\[ y=y_0+v_{0y}t-\frac{1}{2}gt^2, \]
+
+puede aparecer una ecuación cuadrática.
+
+Una ecuación cuadrática puede producir:
+
+\begin{itemize}
+    \item dos tiempos positivos;
+    \item un tiempo positivo y uno negativo;
+    \item una raíz doble.
+\end{itemize}
+
+No todas las soluciones matemáticas tienen necesariamente significado para el intervalo físico que estamos estudiando.
+
+
+\subsection{Tiempo negativo}
+
+Un valor:
+
+\[ t<0 \]
+
+puede describir matemáticamente cómo tendría que haberse movido el objeto antes de establecer:
+
+\[ t=0. \]
+
+Si el problema pregunta por lo que ocurre después del lanzamiento, esa raíz debe descartarse.
+
+\begin{advertencia}
+No se descarta una raíz simplemente porque ``no nos gusta''.
+
+Debe interpretarse físicamente respecto del origen temporal definido en el problema.
+\end{advertencia}
+
+
+\subsection{Dos tiempos positivos}
+
+Si una pelota es lanzada hacia arriba y se pregunta cuándo se encuentra a cierta altura intermedia, pueden aparecer dos tiempos positivos.
+
+Ambos pueden ser físicamente correctos:
+
+\begin{itemize}
+    \item uno corresponde al ascenso;
+    \item el otro corresponde al descenso.
+\end{itemize}
+
+
+\section{Casos especiales importantes}
+
+\subsection{Objeto soltado}
+
+Si:
+
+\[ v_{0y}=0, \]
+
+el cuerpo comienza desde el reposo.
+
+
+\subsection{Lanzamiento hacia arriba}
+
+Si elegimos \(+y\) hacia arriba:
+
+\[ v_{0y}>0. \]
+
+
+\subsection{Lanzamiento hacia abajo}
+
+Con la misma elección:
+
+\[ v_{0y}<0. \]
+
+
+\subsection{Altura máxima}
+
+En el punto más alto:
+
+\[ v_y=0, \]
+
+pero:
+
+\[ a_y=-g. \]
+
+
+\subsection{Regreso al mismo nivel}
+
+Si no existe resistencia del aire:
+
+\[ |v_y|=|v_{0y}|. \]
+
+
+\subsection{Caída desde una altura muy pequeña}
+
+Cuando:
+
+\[ \Delta y\to0, \]
+
+el tiempo de caída y el cambio de rapidez tienden también a cero, como es físicamente razonable.
+
+
+\section{Aplicaciones}
+
+El estudio de la caída libre y del movimiento vertical aparece en numerosas situaciones.
+
+Entre ellas:
+
+\begin{itemize}
+    \item lanzamiento vertical de objetos;
+    \item deportes;
+    \item caída de herramientas;
+    \item movimiento de gotas cuando la resistencia del aire puede aproximarse como despreciable durante ciertos intervalos;
+    \item experimentos de laboratorio para medir \(g\);
+    \item análisis inicial de trayectorias de proyectiles;
+    \item movimiento cerca de superficies de otros cuerpos astronómicos.
+\end{itemize}
+
+
+\begin{aplicacion}[Medición experimental de \(g\)]
+Si un objeto se deja caer desde el reposo y la resistencia del aire puede despreciarse:
+
+\[ h=\frac{1}{2}gt^2. \]
+
+Por tanto:
+
+\[ g=\frac{2h}{t^2}. \]
+
+Midiendo una altura conocida y el tiempo de caída puede obtenerse experimentalmente una estimación de \(g\).
+
+Una medición más completa puede realizarse registrando varias posiciones y tiempos y estudiando la relación entre \(h\) y \(t^2\).
+\end{aplicacion}
+
+
+\section{Errores frecuentes}
+
+\begin{errorfrecuente}
+\textbf{Pensar que \(g\) siempre debe escribirse como un número negativo.}
+
+\(g\) es la magnitud de la aceleración gravitatoria y es positiva.
+
+El signo aparece al escribir la componente de la aceleración según el eje elegido.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Cambiar la dirección positiva durante el problema.}
+
+Una vez elegido el sistema de referencia, todos los signos deben mantenerse coherentes con él.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Pensar que caída libre significa únicamente movimiento hacia abajo.}
+
+Un objeto lanzado hacia arriba está en caída libre después de ser liberado si sólo consideramos la gravedad.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Suponer que en la altura máxima la aceleración es cero.}
+
+En la altura máxima:
+
+\[ v_y=0, \]
+
+pero:
+
+\[ a_y=-g. \]
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Confundir velocidad cero con ausencia de movimiento posterior.}
+
+Que la velocidad sea cero en un instante no implica que el objeto permanezca en reposo.
+
+Si existe aceleración, la velocidad comenzará a cambiar inmediatamente.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Utilizar siempre \(h=\frac{1}{2}gt^2\).}
+
+Esta relación sólo corresponde a un objeto soltado desde el reposo bajo una elección adecuada de \(h\).
+
+Si existe velocidad inicial, debe utilizarse la ecuación general.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Creer que los objetos más pesados tienen mayor aceleración de caída libre.}
+
+En el modelo ideal, todos los cuerpos cercanos a un mismo lugar tienen la misma aceleración gravitatoria.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Confundir rapidez con velocidad.}
+
+Una velocidad:
+
+\[ v_y=-\SI{20}{\meter\per\second} \]
+
+indica movimiento hacia abajo si \(+y\) apunta hacia arriba.
+
+La rapidez correspondiente es:
+
+\[ \SI{20}{\meter\per\second}. \]
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Descartar automáticamente una segunda solución temporal.}
+
+En un lanzamiento hacia arriba, una misma altura puede alcanzarse durante el ascenso y durante el descenso.
+
+Ambos tiempos pueden ser físicamente correctos.
+\end{errorfrecuente}
+
+
+\section{Secuencia sugerida para impartir la clase}
+
+\begin{notapedagogica}
+Una posible secuencia para desarrollar este tema en clase es:
+
+\begin{enumerate}
+    \item Mostrar o describir la caída de dos objetos diferentes y preguntar si deberían caer con la misma aceleración.
+
+    \item Discutir brevemente el efecto de la resistencia del aire y construir el modelo ideal de caída libre.
+
+    \item Definir claramente qué significa ``caída libre'' y enfatizar que también incluye objetos lanzados hacia arriba.
+
+    \item Introducir la magnitud:
+    \[
+    g\approx\SI{9.81}{\meter\per\second\squared}.
+    \]
+
+    \item Dibujar un eje vertical y elegir inicialmente:
+    \[
+    +y\text{ hacia arriba}.
+    \]
+
+    \item Establecer:
+    \[
+    a_y=-g.
+    \]
+
+    \item Recuperar las ecuaciones del MRUA y adaptarlas al movimiento vertical, evitando presentar fórmulas nuevas como relaciones aisladas.
+
+    \item Resolver primero un ejemplo de un objeto soltado desde el reposo.
+
+    \item Analizar después un objeto lanzado hacia abajo para trabajar correctamente el signo de la velocidad inicial.
+
+    \item Introducir el lanzamiento hacia arriba mediante una discusión cualitativa de los signos de \(v_y\) y \(a_y\).
+
+    \item Preguntar qué ocurre con la aceleración en la altura máxima antes de mostrar la respuesta.
+
+    \item Deducir el tiempo de subida y la altura máxima.
+
+    \item Discutir la simetría al regresar a la misma altura.
+
+    \item Mostrar conjuntamente las gráficas \(y-t\), \(v_y-t\) y \(a_y-t\).
+
+    \item Resolver un ejemplo completo de lanzamiento vertical hacia arriba.
+
+    \item Presentar un problema que produzca una ecuación cuadrática y discutir el significado físico de sus raíces.
+
+    \item Finalizar con preguntas conceptuales sobre signos, velocidad, aceleración y condiciones de validez del modelo.
+\end{enumerate}
+\end{notapedagogica}
+
+
+\section{Preguntas de comprensión}
+
+\begin{enumerate}
+    \item ¿Qué significa físicamente que un objeto esté en caída libre?
+
+    \item ¿Puede un objeto estar moviéndose hacia arriba y encontrarse en caída libre?
+
+    \item ¿Por qué una hoja de papel puede caer más lentamente que una moneda en el aire?
+
+    \item Si se desprecia la resistencia del aire, ¿depende la aceleración de caída libre de la masa del objeto?
+
+    \item ¿Qué representa la cantidad \(g\)?
+
+    \item Si \(+y\) apunta hacia arriba, ¿qué signo tiene \(a_y\)?
+
+    \item Si elegimos \(+y\) hacia abajo, ¿qué signo tiene \(a_y\)?
+
+    \item ¿Cambió físicamente la gravedad al cambiar el eje?
+
+    \item Durante el ascenso de una pelota, ¿la aceleración apunta hacia arriba o hacia abajo?
+
+    \item Durante el descenso, ¿cambia el sentido de la aceleración?
+
+    \item ¿Qué valor tiene la velocidad vertical en la altura máxima?
+
+    \item ¿Qué valor tiene la aceleración vertical en la altura máxima?
+
+    \item ¿Por qué una pelota comienza a descender si su velocidad es cero en el punto más alto?
+
+    \item Durante el ascenso, ¿la rapidez aumenta o disminuye? Explique mediante los signos de velocidad y aceleración.
+
+    \item Durante el descenso, ¿la rapidez aumenta o disminuye?
+
+    \item Si una pelota vuelve a la misma altura desde la que fue lanzada, ¿qué relación existe entre su rapidez inicial y su rapidez al regresar?
+
+    \item ¿Por qué una misma altura puede corresponder a dos tiempos diferentes?
+
+    \item ¿Por qué una misma altura puede corresponder a dos velocidades de signos opuestos?
+
+    \item ¿Cuándo puede utilizarse:
+    \[
+    h=\frac{1}{2}gt^2?
+    \]
+
+    \item ¿Por qué las ecuaciones de caída libre son realmente casos particulares de las ecuaciones de MRUA?
+
+    \item ¿Qué forma tiene la gráfica \(y-t\) de un lanzamiento vertical hacia arriba?
+
+    \item ¿Qué representa la pendiente de la gráfica \(v_y-t\)?
+
+    \item ¿Qué significado físico puede tener una solución negativa para el tiempo?
+
+    \item ¿Qué condiciones pueden hacer que el modelo de caída libre deje de ser adecuado?
+\end{enumerate}
+
+
+\begin{resumen}
+La caída libre es el movimiento de un cuerpo cuando se considera únicamente la influencia de la gravedad y se desprecia la resistencia del aire.
+
+Cerca de la superficie terrestre, para distancias no demasiado grandes, la magnitud de la aceleración gravitatoria puede aproximarse como constante:
+
+\[ g\approx\SI{9.81}{\meter\per\second\squared}. \]
+
+La cantidad \(g\) es positiva. El signo de la componente de la aceleración depende del sistema de referencia.
+
+Si elegimos:
+
+\[ +y\text{ hacia arriba}, \]
+
+entonces:
+
+\[ \boxed{a_y=-g}. \]
+
+El movimiento es un caso particular del MRUA:
+
+\[ \boxed{v_y=v_{0y}-gt}, \]
+
+\[ \boxed{y=y_0+v_{0y}t-\frac{1}{2}gt^2}, \]
+
+\[ \boxed{v_y^2=v_{0y}^2-2g(y-y_0)}. \]
+
+Un objeto soltado desde el reposo tiene:
+
+\[ v_{0y}=0. \]
+
+Un objeto lanzado hacia arriba tiene inicialmente:
+
+\[ v_{0y}>0 \]
+
+cuando \(+y\) apunta hacia arriba.
+
+Durante el ascenso:
+
+\[
+v_y>0,
+\qquad
+a_y<0,
+\]
+
+por lo que su rapidez disminuye.
+
+En la altura máxima:
+
+\[
+v_y=0,
+\qquad
+a_y=-g.
+\]
+
+Durante el descenso:
+
+\[
+v_y<0,
+\qquad
+a_y<0,
+\]
+
+por lo que su rapidez aumenta.
+
+Para un lanzamiento vertical hacia arriba:
+
+\[ \boxed{t_{\text{subida}}=\frac{v_{0y}}{g}}, \]
+
+y la altura máxima respecto del punto de lanzamiento es:
+
+\[ \boxed{\Delta y_{\max}=\frac{v_{0y}^2}{2g}}. \]
+
+Si el objeto regresa a la misma altura de lanzamiento y se desprecia la resistencia del aire:
+
+\[ \boxed{v_y=-v_{0y}}, \]
+
+y:
+
+\[ \boxed{t_{\text{total}}=\frac{2v_{0y}}{g}}. \]
+
+Estas últimas relaciones son casos particulares y no deben utilizarse cuando la posición final sea diferente de la inicial.
+
+La clave para resolver correctamente problemas de caída libre no consiste en memorizar signos, sino en:
+
+\begin{enumerate}
+    \item elegir un sistema de referencia;
+    \item asignar los signos de acuerdo con ese sistema;
+    \item reconocer que la aceleración es constante;
+    \item utilizar las ecuaciones generales del MRUA;
+    \item interpretar físicamente el resultado.
+\end{enumerate}
+\end{resumen}

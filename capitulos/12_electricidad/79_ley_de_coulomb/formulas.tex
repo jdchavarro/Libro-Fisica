@@ -1,0 +1,487 @@
+\section{Formulario}
+
+\subsection{Ley de Coulomb}
+
+Para dos cargas puntuales \(q_1\) y \(q_2\) separadas una distancia \(r\), la magnitud de la fuerza eléctrica es
+
+\[
+\boxed{F=k\frac{|q_1q_2|}{r^2}}
+\]
+
+donde
+
+\[
+\boxed{k\approx\SI{8.99e9}{\newton\metre\squared\per\coulomb\squared}}
+\]
+
+y, para cálculos aproximados,
+
+\[
+\boxed{k\approx\SI{9.0e9}{\newton\metre\squared\per\coulomb\squared}}.
+\]
+
+La constante de Coulomb puede escribirse como
+
+\[
+\boxed{k=\frac{1}{4\pi\varepsilon_0}}
+\]
+
+con
+
+\[
+\boxed{\varepsilon_0\approx\SI{8.854e-12}{\farad\per\metre}}.
+\]
+
+Por tanto,
+
+\[
+\boxed{F=\frac{1}{4\pi\varepsilon_0}\frac{|q_1q_2|}{r^2}}.
+\]
+
+\begin{center}
+\begin{tabular}{cl}
+\toprule
+Símbolo & Significado \\
+\midrule
+\(F\) & magnitud de la fuerza eléctrica \\
+\(q_1,q_2\) & cargas eléctricas \\
+\(r\) & distancia entre las cargas \\
+\(k\) & constante de Coulomb \\
+\(\varepsilon_0\) & permitividad eléctrica del vacío \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{advertencia}
+La expresión anterior se aplica directamente a cargas puntuales en reposo. También puede emplearse cuando los cuerpos pueden aproximarse razonablemente como cargas puntuales.
+
+Con \(k\) expresada en unidades SI, las cargas deben estar en coulombs y las distancias en metros.
+\end{advertencia}
+
+
+\subsection{Carácter atractivo o repulsivo}
+
+\[
+\boxed{q_1q_2>0\Longrightarrow\text{repulsión}}
+\]
+
+\[
+\boxed{q_1q_2<0\Longrightarrow\text{atracción}}.
+\]
+
+La fuerza actúa a lo largo de la recta que une las dos cargas.
+
+\begin{advertencia}
+En
+
+\[
+F=k\frac{|q_1q_2|}{r^2},
+\]
+
+\(F\) representa una magnitud y, por tanto, no es negativa. El signo de las cargas se utiliza para determinar el sentido de la interacción.
+\end{advertencia}
+
+
+\subsection{Dependencias de la fuerza}
+
+\[
+\boxed{F\propto |q_1q_2|}
+\]
+
+\[
+\boxed{F\propto\frac{1}{r^2}}.
+\]
+
+Cambios frecuentes:
+
+\[
+q_1\to aq_1
+\quad\Longrightarrow\quad
+F\to aF
+\]
+
+si todo lo demás permanece constante.
+
+\[
+q_1\to aq_1,\qquad q_2\to bq_2
+\quad\Longrightarrow\quad
+F\to abF.
+\]
+
+\[
+r\to ar
+\quad\Longrightarrow\quad
+F\to\frac{F}{a^2}.
+\]
+
+En particular,
+
+\[
+r\to2r\Longrightarrow F\to\frac{F}{4},
+\]
+
+\[
+r\to3r\Longrightarrow F\to\frac{F}{9},
+\]
+
+\[
+r\to\frac{r}{2}\Longrightarrow F\to4F.
+\]
+
+
+\subsection{Comparación entre dos situaciones}
+
+Si las cargas o la distancia cambian,
+
+\[
+\boxed{
+\frac{F'}{F}
+=
+\frac{|q_1'q_2'|}{|q_1q_2|}
+\frac{r^2}{r'^2}
+}.
+\]
+
+Esta relación permite comparar fuerzas sin calcularlas individualmente.
+
+
+\subsection{Tercera ley de Newton}
+
+Las fuerzas que dos cargas ejercen mutuamente satisfacen
+
+\[
+\boxed{\vec{F}_{1\to2}=-\vec{F}_{2\to1}}.
+\]
+
+Por tanto, sus magnitudes son iguales:
+
+\[
+\boxed{F_{1\to2}=F_{2\to1}}.
+\]
+
+Las fuerzas tienen sentidos opuestos, pero actúan sobre cuerpos diferentes.
+
+
+\subsection{Forma vectorial de la ley de Coulomb}
+
+Si \(\hat{\mathbf r}_{12}\) es un vector unitario dirigido desde \(q_1\) hacia \(q_2\),
+
+\[
+\boxed{
+\vec{F}_{1\to2}
+=
+k\frac{q_1q_2}{r_{12}^2}\hat{\mathbf r}_{12}
+}.
+\]
+
+En esta forma se conserva el signo de \(q_1q_2\).
+
+Si
+
+\[
+q_1q_2>0,
+\]
+
+la fuerza tiene el mismo sentido que \(\hat{\mathbf r}_{12}\).
+
+Si
+
+\[
+q_1q_2<0,
+\]
+
+la fuerza tiene sentido opuesto a \(\hat{\mathbf r}_{12}\).
+
+
+\subsection{Forma vectorial mediante posiciones}
+
+Si las cargas se encuentran en \(\vec r_1\) y \(\vec r_2\),
+
+\[
+\boxed{\vec r_{12}=\vec r_2-\vec r_1}
+\]
+
+\[
+\boxed{r_{12}=|\vec r_2-\vec r_1|}
+\]
+
+\[
+\boxed{
+\hat{\mathbf r}_{12}
+=
+\frac{\vec r_2-\vec r_1}{|\vec r_2-\vec r_1|}
+}.
+\]
+
+Entonces,
+
+\[
+\boxed{
+\vec F_{1\to2}
+=
+kq_1q_2
+\frac{\vec r_2-\vec r_1}
+{|\vec r_2-\vec r_1|^3}
+}.
+\]
+
+
+\subsection{Distancia entre cargas}
+
+En una dimensión,
+
+\[
+\boxed{r=|x_2-x_1|}.
+\]
+
+En dos dimensiones,
+
+\[
+\boxed{
+r=
+\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}
+}.
+\]
+
+En tres dimensiones,
+
+\[
+\boxed{
+r=
+\sqrt{
+(x_2-x_1)^2+
+(y_2-y_1)^2+
+(z_2-z_1)^2
+}
+}.
+\]
+
+
+\subsection{Principio de superposición}
+
+La fuerza eléctrica neta sobre una carga \(q_i\) es
+
+\[
+\boxed{
+\vec F_i=\sum_{j\neq i}\vec F_{j\to i}
+}.
+\]
+
+Utilizando directamente las posiciones,
+
+\[
+\boxed{
+\vec F_i
+=
+\sum_{j\neq i}
+kq_iq_j
+\frac{\vec r_i-\vec r_j}
+{|\vec r_i-\vec r_j|^3}
+}.
+\]
+
+Cada fuerza individual se calcula por separado y posteriormente se realiza la suma vectorial.
+
+
+\subsection{Superposición en una dimensión}
+
+Después de elegir un eje y un sentido positivo,
+
+\[
+\boxed{F_{\text{neta},x}=\sum_iF_{i,x}}.
+\]
+
+Por ejemplo, si \(+x\) apunta hacia la derecha,
+
+\[
+F_x>0\Longrightarrow\text{fuerza hacia la derecha},
+\]
+
+\[
+F_x<0\Longrightarrow\text{fuerza hacia la izquierda}.
+\]
+
+\begin{advertencia}
+El signo de una componente de fuerza depende de su sentido respecto del sistema de coordenadas, no del signo de la carga.
+\end{advertencia}
+
+
+\subsection{Componentes en dos dimensiones}
+
+Si una fuerza de magnitud \(F\) forma un ángulo \(\theta\) medido desde el eje \(+x\),
+
+\[
+\boxed{F_x=F\cos\theta}
+\]
+
+\[
+\boxed{F_y=F\sin\theta}.
+\]
+
+Los signos deben asignarse de acuerdo con el cuadrante del vector.
+
+
+\subsection{Fuerza neta en dos dimensiones}
+
+\[
+\boxed{F_{\text{neta},x}=\sum_iF_{i,x}}
+\]
+
+\[
+\boxed{F_{\text{neta},y}=\sum_iF_{i,y}}.
+\]
+
+En forma vectorial,
+
+\[
+\boxed{
+\vec F_{\text{neta}}
+=
+F_{\text{neta},x}\hat{\mathbf i}
++
+F_{\text{neta},y}\hat{\mathbf j}
+}.
+\]
+
+Su magnitud es
+
+\[
+\boxed{
+F_{\text{neta}}
+=
+\sqrt{
+F_{\text{neta},x}^2+
+F_{\text{neta},y}^2
+}
+}.
+\]
+
+Para determinar un ángulo de referencia,
+
+\[
+\boxed{
+\tan\theta
+=
+\frac{|F_{\text{neta},y}|}
+{|F_{\text{neta},x}|}
+}.
+\]
+
+Después debe identificarse el cuadrante mediante los signos de las componentes.
+
+
+\subsection{Caso de dos fuerzas con ángulo conocido}
+
+Si dos fuerzas \(\vec F_1\) y \(\vec F_2\) forman entre sí un ángulo \(\theta\), la magnitud de la resultante puede calcularse mediante
+
+\[
+\boxed{
+F_R=
+\sqrt{
+F_1^2+F_2^2+2F_1F_2\cos\theta
+}
+}.
+\]
+
+Esta expresión es equivalente a realizar la suma vectorial por componentes.
+
+Casos particulares:
+
+\[
+\theta=0^\circ
+\quad\Longrightarrow\quad
+\boxed{F_R=F_1+F_2},
+\]
+
+\[
+\theta=180^\circ
+\quad\Longrightarrow\quad
+\boxed{F_R=|F_1-F_2|},
+\]
+
+\[
+\theta=90^\circ
+\quad\Longrightarrow\quad
+\boxed{F_R=\sqrt{F_1^2+F_2^2}}.
+\]
+
+
+\subsection{Equilibrio eléctrico}
+
+Una carga se encuentra en equilibrio respecto de las fuerzas eléctricas cuando
+
+\[
+\boxed{\sum_i\vec F_i=\vec 0}.
+\]
+
+En componentes,
+
+\[
+\boxed{\sum_iF_{i,x}=0},
+\qquad
+\boxed{\sum_iF_{i,y}=0}.
+\]
+
+En una dimensión,
+
+\[
+\boxed{\sum_iF_{i,x}=0}.
+\]
+
+La fuerza neta nula no implica necesariamente ausencia de fuerzas individuales.
+
+
+\subsection{Conversiones frecuentes}
+
+\[
+\boxed{\SI{1}{\milli\coulomb}=\SI{1e-3}{\coulomb}}
+\]
+
+\[
+\boxed{\SI{1}{\micro\coulomb}=\SI{1e-6}{\coulomb}}
+\]
+
+\[
+\boxed{\SI{1}{\nano\coulomb}=\SI{1e-9}{\coulomb}}
+\]
+
+\[
+\boxed{\SI{1}{\pico\coulomb}=\SI{1e-12}{\coulomb}}.
+\]
+
+
+\subsection{Procedimiento rápido}
+
+\begin{enumerate}
+    \item Identificar la carga sobre la cual se pide la fuerza.
+    \item Dibujar las cargas y establecer los ejes.
+    \item Convertir cargas a coulombs y distancias a metros.
+    \item Determinar si cada interacción es atractiva o repulsiva.
+    \item Calcular cada magnitud con
+    \[
+    F=k\frac{|q_1q_2|}{r^2}.
+    \]
+    \item Asignar dirección y sentido a cada vector.
+    \item Descomponer en componentes si es necesario.
+    \item Aplicar
+    \[
+    \vec F_{\text{neta}}=\sum_i\vec F_i.
+    \]
+    \item Calcular magnitud y dirección de la resultante.
+\end{enumerate}
+
+
+\subsection{Resumen de fórmulas}
+
+\begin{align*}
+F &= k\frac{|q_1q_2|}{r^2}, \\[0.3em]
+k &= \frac{1}{4\pi\varepsilon_0}, \\[0.3em]
+\vec F_{1\to2} &= k\frac{q_1q_2}{r_{12}^2}\hat{\mathbf r}_{12}, \\[0.3em]
+\vec F_{1\to2} &=
+kq_1q_2\frac{\vec r_2-\vec r_1}{|\vec r_2-\vec r_1|^3}, \\[0.3em]
+\vec F_i &= \sum_{j\neq i}\vec F_{j\to i}, \\[0.3em]
+F_x &= F\cos\theta, \qquad F_y=F\sin\theta, \\[0.3em]
+F_{\text{neta}} &=
+\sqrt{F_{\text{neta},x}^2+F_{\text{neta},y}^2}, \\[0.3em]
+\sum_i\vec F_i &= \vec 0 \qquad \text{(equilibrio)}.
+\end{align*}

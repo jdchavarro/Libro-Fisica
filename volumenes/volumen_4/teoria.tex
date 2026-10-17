@@ -1,0 +1,142 @@
+﻿\documentclass[11pt,letterpaper,openany]{book}
+
+% ============================================================
+% VERSIÃ“N DEL DOCUMENTO
+% ============================================================
+
+% Este archivo compila Ãºnicamente la teorÃ­a.
+
+\newcommand{\versiondocumento}{teoria}
+
+% Ruta desde volumenes/volumen_X hasta la raÃ­z.
+\newcommand{\rutaraiz}{../..}
+
+
+% ============================================================
+% INFORMACIÃ“N DEL VOLUMEN
+% ============================================================
+
+\newcommand{\numerovolumen}{IV}
+\newcommand{\nombrevolumen}{FÃ­sica moderna}
+\newcommand{\tipodocumento}{TeorÃ­a}
+
+
+% ============================================================
+% CONFIGURACIÃ“N GENERAL
+% ============================================================
+
+\input{\rutaraiz/config/configuracion}
+
+
+% ============================================================
+% DOCUMENTO
+% ============================================================
+
+\begin{document}
+
+
+% ============================================================
+% PORTADA
+% ============================================================
+
+\begin{titlepage}
+
+    \centering
+
+    \vspace*{2.5cm}
+
+    {\color{RojoPrincipal}
+    \Huge\bfseries
+    FÃ­sica
+    \par}
+
+    \vspace{0.8cm}
+
+    {\color{AzulPrincipal}
+    \LARGE\bfseries
+    Volumen \numerovolumen
+    \par}
+
+    \vspace{0.5cm}
+
+    {\Large
+    \nombrevolumen
+    \par}
+
+    \vspace{1.5cm}
+
+    {\color{AzulPrincipal}
+    \Large
+    \tipodocumento
+    \par}
+
+    \vfill
+
+    {\Large\bfseries
+    \autorlibro
+    \par}
+
+    \vspace{2cm}
+
+\end{titlepage}
+
+
+% ============================================================
+% MATERIAL PRELIMINAR
+% ============================================================
+
+\frontmatter
+
+\tableofcontents
+
+\cleardoublepage
+
+
+% ============================================================
+% CONTENIDO PRINCIPAL
+% ============================================================
+
+\mainmatter
+
+% ------------------------------------------------------------
+% Partes XVI--XIX
+% CapÃ­tulos 117--140
+% ------------------------------------------------------------
+%
+% Este documento carga Ãºnicamente los archivos:
+%
+% teoria.tex
+%
+% de cada tema.
+%
+% Ejemplo:
+%
+% \part{CinemÃ¡tica}
+%
+% \chapter{DescripciÃ³n del movimiento}
+%
+% \input{
+% \rutaraiz/capitulos/
+% 02_cinematica/
+% 07_descripcion_del_movimiento/
+% teoria
+% }
+%
+% \chapter{Movimiento rectilÃ­neo}
+%
+% \input{
+% \rutaraiz/capitulos/
+% 02_cinematica/
+% 08_movimiento_rectilineo/
+% teoria
+% }
+
+
+% ============================================================
+% MATERIAL FINAL
+% ============================================================
+
+\backmatter
+
+
+\end{document}

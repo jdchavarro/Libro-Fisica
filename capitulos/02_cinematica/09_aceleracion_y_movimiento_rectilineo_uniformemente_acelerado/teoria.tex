@@ -1,0 +1,1865 @@
+﻿En el capítulo anterior estudiamos el movimiento rectilíneo uniforme, en el
+cual la velocidad permanece constante.
+
+Sin embargo, la mayoría de los movimientos que observamos no son así.
+
+Un automóvil puede arrancar desde el reposo, aumentar su rapidez, frenar o
+cambiar de sentido. En todas estas situaciones la velocidad está cambiando.
+
+La magnitud física que nos permite describir ese cambio es la
+\textbf{aceleración}.
+
+\begin{notapedagogica}
+Una forma directa de comenzar la clase es plantear tres situaciones:
+
+\begin{enumerate}
+    \item un automóvil pasa de \(\SI{0}{\meter\per\second}\) a
+    \(\SI{20}{\meter\per\second}\);
+
+    \item un automóvil pasa de \(\SI{20}{\meter\per\second}\) a
+    \(\SI{5}{\meter\per\second}\);
+
+    \item un automóvil que se mueve hacia la izquierda cambia su velocidad
+    de \(-\SI{5}{\meter\per\second}\) a
+    \(-\SI{15}{\meter\per\second}\).
+\end{enumerate}
+
+En los tres casos hay aceleración porque la velocidad cambia.
+
+Esto permite corregir desde el comienzo la idea equivocada de que
+``acelerar'' significa únicamente ``ir cada vez más rápido''.
+\end{notapedagogica}
+
+
+\section{El concepto de aceleración}
+
+La velocidad nos indica qué tan rápidamente cambia la posición.
+
+Ahora queremos describir qué tan rápidamente cambia la propia velocidad.
+
+\begin{definicion}[Aceleración]
+La \textbf{aceleración} es la magnitud vectorial que describe la razón de
+cambio de la velocidad con respecto al tiempo.
+\end{definicion}
+
+En movimiento rectilíneo trabajaremos con la componente de aceleración sobre
+el eje elegido, que representaremos mediante \(a_x\), o simplemente \(a\)
+cuando no exista posibilidad de confusión.
+
+\begin{idea}
+La aceleración no nos dice directamente qué tan rápido se mueve un cuerpo.
+
+Nos dice \textbf{qué tan rápidamente está cambiando su velocidad}.
+\end{idea}
+
+
+\section{Aceleración media}
+
+Supongamos que en el instante \(t_i\) una partícula tiene velocidad \(v_i\)
+y que en un instante posterior \(t_f\) tiene velocidad \(v_f\).
+
+El cambio de velocidad es
+
+\[ \Delta v=v_f-v_i. \]
+
+El intervalo de tiempo es
+
+\[ \Delta t=t_f-t_i. \]
+
+\begin{definicion}[Aceleración media]
+La \textbf{aceleración media} durante un intervalo de tiempo es el cociente
+entre el cambio de velocidad y el intervalo de tiempo en el que ocurre.
+\end{definicion}
+
+En movimiento rectilíneo,
+
+\[ \boxed{\bar{a}=\frac{\Delta v}{\Delta t}
+=\frac{v_f-v_i}{t_f-t_i}}. \]
+
+La unidad de aceleración en el Sistema Internacional es
+
+\[ \si{\meter\per\second\squared}. \]
+
+
+\subsection{¿Qué significa \(\si{\meter\per\second\squared}\)?}
+
+La unidad
+
+\[ \si{\meter\per\second\squared} \]
+
+puede interpretarse como
+
+\[ \frac{\si{\meter\per\second}}{\si{\second}}. \]
+
+Por ejemplo, si
+
+\[ a=+\SI{3}{\meter\per\second\squared}, \]
+
+significa que la componente de la velocidad aumenta
+
+\[ \SI{3}{\meter\per\second} \]
+
+por cada segundo transcurrido, siempre que la aceleración permanezca
+constante.
+
+Si inicialmente
+
+\[ v_0=\SI{2}{\meter\per\second}, \]
+
+entonces:
+
+\[
+\begin{array}{c|c}
+t\;(\si{\second}) & v\;(\si{\meter\per\second})\\
+\hline
+0 & 2\\
+1 & 5\\
+2 & 8\\
+3 & 11
+\end{array}
+\]
+
+\begin{interpretacion}
+Una aceleración de
+
+\[ \SI{3}{\meter\per\second\squared} \]
+
+no significa que el cuerpo recorra tres metros cada segundo.
+
+Significa que su \textbf{velocidad cambia}
+\(\SI{3}{\meter\per\second}\) cada segundo.
+\end{interpretacion}
+
+
+\begin{ejemplo}[Cálculo de aceleración media]
+
+La velocidad de un automóvil cambia de
+
+\[ v_i=\SI{8}{\meter\per\second} \]
+
+a
+
+\[ v_f=\SI{20}{\meter\per\second} \]
+
+en un intervalo de
+
+\[ \Delta t=\SI{4}{\second}. \]
+
+La aceleración media es
+
+\[
+\bar{a}
+=
+\frac{v_f-v_i}{\Delta t}.
+\]
+
+Sustituyendo,
+
+\[
+\bar{a}
+=
+\frac{
+\SI{20}{\meter\per\second}
+-
+\SI{8}{\meter\per\second}
+}{
+\SI{4}{\second}
+}.
+\]
+
+Por tanto,
+
+\[ \boxed{\bar{a}=\SI{3}{\meter\per\second\squared}}. \]
+
+Esto significa que, en promedio, la velocidad aumentó
+\(\SI{3}{\meter\per\second}\) por cada segundo.
+\end{ejemplo}
+
+
+\section{Aceleración instantánea}
+
+La aceleración media describe el cambio de velocidad durante un intervalo.
+
+Pero, al igual que hicimos con la velocidad, podemos preguntarnos:
+
+\begin{quote}
+¿Cuál es la aceleración exactamente en un instante determinado?
+\end{quote}
+
+Para responder, hacemos cada vez más pequeño el intervalo de tiempo utilizado
+para calcular la aceleración media.
+
+\begin{definicion}[Aceleración instantánea]
+La \textbf{aceleración instantánea} es el límite de la aceleración media
+cuando el intervalo de tiempo tiende a cero.
+\end{definicion}
+
+Matemáticamente,
+
+\[ \boxed{a=\lim_{\Delta t\to0}\frac{\Delta v}{\Delta t}}. \]
+
+Utilizando cálculo diferencial,
+
+\[ \boxed{a=\frac{\dd v}{\dd t}}. \]
+
+Como
+
+\[ v=\frac{\dd x}{\dd t}, \]
+
+también podemos escribir
+
+\[ \boxed{a=\frac{\dd^2x}{\dd t^2}}. \]
+
+\begin{interpretacion}
+La aceleración es la tasa instantánea de cambio de la velocidad.
+
+Por eso la relación entre posición, velocidad y aceleración puede resumirse
+como
+
+\[
+x(t)
+\quad
+\xrightarrow{\;\deriv{}{t}\;}
+\quad
+v(t)
+\quad
+\xrightarrow{\;\deriv{}{t}\;}
+\quad
+a(t).
+\]
+\end{interpretacion}
+
+
+\section{El signo de la aceleración}
+
+En movimiento rectilíneo, el signo de la aceleración depende del sistema de
+referencia elegido.
+
+Si escogemos hacia la derecha como sentido positivo:
+
+\begin{itemize}
+    \item \(a>0\) significa que la velocidad cambia en el sentido positivo;
+    \item \(a<0\) significa que la velocidad cambia en el sentido negativo.
+\end{itemize}
+
+\begin{advertencia}
+Una aceleración negativa no significa necesariamente que el cuerpo esté
+frenando.
+
+El signo de la aceleración indica su dirección respecto del eje elegido.
+
+Para saber si la rapidez aumenta o disminuye debemos comparar los signos de
+la velocidad y la aceleración.
+\end{advertencia}
+
+
+\section{¿Cuándo aumenta o disminuye la rapidez?}
+
+Esta relación es fundamental.
+
+Si velocidad y aceleración tienen el \textbf{mismo signo}, la rapidez
+aumenta.
+
+Si tienen \textbf{signos opuestos}, la rapidez disminuye.
+
+\begin{table}[H]
+    \centering
+
+    \caption{Relación entre los signos de velocidad y aceleración.}
+
+    \begin{tabular}{ccc}
+        \toprule
+        Velocidad & Aceleración & Comportamiento de la rapidez \\
+        \midrule
+        \(v>0\) & \(a>0\) & aumenta \\
+        \(v>0\) & \(a<0\) & disminuye \\
+        \(v<0\) & \(a<0\) & aumenta \\
+        \(v<0\) & \(a>0\) & disminuye \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{idea}
+La regla correcta es:
+
+\[
+\boxed{
+v\text{ y }a\text{ con el mismo signo}
+\Longrightarrow
+\text{aumenta la rapidez}
+}
+\]
+
+\[
+\boxed{
+v\text{ y }a\text{ con signos opuestos}
+\Longrightarrow
+\text{disminuye la rapidez}
+}
+\]
+\end{idea}
+
+
+\begin{ejemplo}[Velocidad y aceleración negativas]
+
+Un automóvil se mueve hacia la izquierda con
+
+\[ v=-\SI{10}{\meter\per\second} \]
+
+y tiene aceleración
+
+\[ a=-\SI{2}{\meter\per\second\squared}. \]
+
+La velocidad y la aceleración tienen el mismo signo.
+
+Después de un segundo, si la aceleración permanece constante,
+
+\[ v=-\SI{12}{\meter\per\second}. \]
+
+La rapidez pasó de
+
+\[ \SI{10}{\meter\per\second} \]
+
+a
+
+\[ \SI{12}{\meter\per\second}. \]
+
+Por tanto, el automóvil está aumentando su rapidez aunque su aceleración sea
+negativa.
+\end{ejemplo}
+
+
+\begin{ejemplo}[Aceleración positiva y disminución de rapidez]
+
+Una partícula se mueve hacia la izquierda con
+
+\[ v=-\SI{12}{\meter\per\second} \]
+
+y tiene aceleración
+
+\[ a=+\SI{3}{\meter\per\second\squared}. \]
+
+La velocidad es negativa y la aceleración positiva.
+
+Tienen signos opuestos.
+
+Por ello la rapidez disminuye.
+
+Un segundo después,
+
+\[ v=-\SI{9}{\meter\per\second}. \]
+
+La partícula continúa moviéndose hacia la izquierda, pero cada vez con menor
+rapidez.
+\end{ejemplo}
+
+
+\section{Velocidad nula no significa aceleración nula}
+
+Un cuerpo puede tener velocidad cero en un instante y, sin embargo, tener
+aceleración distinta de cero.
+
+Por ejemplo, un objeto puede disminuir su rapidez hasta detenerse
+momentáneamente y después comenzar a moverse en el sentido contrario.
+
+En el instante exacto en que cambia de sentido,
+
+\[ v=0, \]
+
+pero la aceleración puede continuar siendo distinta de cero.
+
+\begin{idea}
+La velocidad describe el estado instantáneo del movimiento.
+
+La aceleración describe cómo está cambiando ese estado.
+
+Por eso
+
+\[ v=0 \]
+
+no implica necesariamente
+
+\[ a=0. \]
+\end{idea}
+
+
+\section{Interpretación de la gráfica velocidad-tiempo}
+
+Consideremos una gráfica de velocidad en función del tiempo.
+
+La pendiente entre dos puntos es
+
+\[
+m
+=
+\frac{v_f-v_i}{t_f-t_i}.
+\]
+
+Pero
+
+\[
+v_f-v_i=\Delta v
+\]
+
+y
+
+\[
+t_f-t_i=\Delta t.
+\]
+
+Por tanto,
+
+\[ \boxed{m=\frac{\Delta v}{\Delta t}=\bar{a}}. \]
+
+\begin{idea}
+En una gráfica \(v-t\),
+
+\[
+\boxed{
+\text{pendiente de una secante}
+=
+\text{aceleración media}
+}.
+\]
+
+En el límite,
+
+\[
+\boxed{
+\text{pendiente de la tangente}
+=
+\text{aceleración instantánea}
+}.
+\]
+\end{idea}
+
+
+\section{Movimiento con aceleración constante}
+
+Estudiaremos ahora un caso particular muy importante.
+
+\begin{definicion}[Movimiento rectilíneo uniformemente acelerado]
+El \textbf{movimiento rectilíneo uniformemente acelerado}, abreviado MRUA,
+es un movimiento rectilíneo en el cual la aceleración permanece constante
+durante el intervalo considerado.
+\end{definicion}
+
+En este movimiento,
+
+\[ a=\text{constante}. \]
+
+Esto significa que la velocidad experimenta cambios iguales durante
+intervalos de tiempo iguales.
+
+Por ejemplo, si
+
+\[ a=\SI{2}{\meter\per\second\squared}, \]
+
+la velocidad aumenta
+
+\[ \SI{2}{\meter\per\second} \]
+
+cada segundo.
+
+\begin{nota}
+Matemáticamente, el caso \(a=0\) también corresponde a una aceleración
+constante.
+
+En ese caso el MRUA se reduce al movimiento rectilíneo uniforme.
+
+Habitualmente, cuando hablamos de MRUA nos interesa especialmente el caso
+
+\[ a\neq0. \]
+\end{nota}
+
+
+\section{Primera ecuación: velocidad en función del tiempo}
+
+Para aceleración constante,
+
+\[ a=\frac{\Delta v}{\Delta t}. \]
+
+Por tanto,
+
+\[ a=\frac{v_f-v_i}{t_f-t_i}. \]
+
+Multiplicando,
+
+\[ v_f-v_i=a(t_f-t_i). \]
+
+Así,
+
+\[ \boxed{v_f=v_i+a(t_f-t_i)}. \]
+
+Si elegimos
+
+\[ t_i=0, \]
+
+y escribimos la velocidad inicial como \(v_0\), obtenemos
+
+\[ \boxed{v=v_0+at}. \]
+
+\begin{interpretacion}
+La velocidad final es igual a:
+
+\[
+\text{velocidad inicial}
++
+\text{cambio de velocidad}.
+\]
+
+El término
+
+\[ at \]
+
+representa cuánto cambió la velocidad durante el intervalo.
+\end{interpretacion}
+
+
+\begin{ejemplo}[Velocidad después de cierto tiempo]
+
+Un automóvil tiene velocidad inicial
+
+\[ v_0=\SI{5}{\meter\per\second} \]
+
+y aceleración constante
+
+\[ a=\SI{3}{\meter\per\second\squared}. \]
+
+¿Cuál es su velocidad después de
+
+\[ t=\SI{4}{\second}? \]
+
+Utilizamos
+
+\[ v=v_0+at. \]
+
+Sustituyendo,
+
+\[
+v
+=
+\SI{5}{\meter\per\second}
++
+\left(\SI{3}{\meter\per\second\squared}\right)
+\left(\SI{4}{\second}\right).
+\]
+
+Por tanto,
+
+\[
+v
+=
+\SI{5}{\meter\per\second}
++
+\SI{12}{\meter\per\second}.
+\]
+
+Así,
+
+\[ \boxed{v=\SI{17}{\meter\per\second}}. \]
+\end{ejemplo}
+
+
+\section{Gráfica velocidad-tiempo en MRUA}
+
+Como
+
+\[ v=v_0+at, \]
+
+la velocidad es una función lineal del tiempo.
+
+Por tanto, la gráfica \(v-t\) es una línea recta.
+
+\begin{figure}[H]
+    \centering
+
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines=middle,
+            xlabel={$t$},
+            ylabel={$v$},
+            xmin=0,
+            xmax=6,
+            ymin=0,
+            ymax=16,
+            width=9cm,
+            height=6cm
+        ]
+
+            \addplot[
+                domain=0:5,
+                samples=2,
+                thick
+            ] {3+2*x};
+
+        \end{axis}
+    \end{tikzpicture}
+
+    \caption{Gráfica velocidad-tiempo para una aceleración constante positiva.}
+\end{figure}
+
+La pendiente es
+
+\[ a. \]
+
+El punto donde la recta corta el eje vertical es
+
+\[ v_0. \]
+
+Por tanto,
+
+\[
+\boxed{
+\text{pendiente de la gráfica }v-t=a
+}.
+\]
+
+
+\section{Desplazamiento como área bajo la gráfica velocidad-tiempo}
+
+En el capítulo anterior establecimos que el área algebraica bajo una gráfica
+velocidad-tiempo representa el desplazamiento.
+
+Para aceleración constante, la gráfica entre \(v_0\) y \(v\) forma un
+trapecio.
+
+Su área es
+
+\[
+\Delta x
+=
+\frac{v_0+v}{2}\,t.
+\]
+
+Por tanto,
+
+\[ \boxed{\Delta x=\frac{v_0+v}{2}\,t}. \]
+
+Esto permite introducir una propiedad especial del MRUA.
+
+\begin{definicion}[Velocidad media con aceleración constante]
+Cuando la aceleración es constante, la velocidad media durante un intervalo
+es igual al promedio aritmético entre la velocidad inicial y la velocidad
+final:
+\end{definicion}
+
+\[ \boxed{\bar{v}=\frac{v_0+v}{2}}. \]
+
+\begin{advertencia}
+La expresión
+
+\[ \bar{v}=\frac{v_0+v}{2} \]
+
+no es válida para cualquier movimiento.
+
+Es válida cuando la velocidad cambia linealmente con el tiempo, es decir,
+cuando la aceleración es constante.
+\end{advertencia}
+
+
+\section{Segunda ecuación: posición en función del tiempo}
+
+Partimos de
+
+\[ \Delta x=\frac{v_0+v}{2}\,t. \]
+
+Sabemos también que
+
+\[ v=v_0+at. \]
+
+Sustituimos:
+
+\[
+\Delta x
+=
+\frac{v_0+(v_0+at)}{2}\,t.
+\]
+
+Simplificando,
+
+\[
+\Delta x
+=
+\frac{2v_0+at}{2}\,t.
+\]
+
+Entonces,
+
+\[ \boxed{\Delta x=v_0t+\frac{1}{2}at^2}. \]
+
+Como
+
+\[ \Delta x=x-x_0, \]
+
+obtenemos
+
+\[ \boxed{x=x_0+v_0t+\frac{1}{2}at^2}. \]
+
+\begin{interpretacion}
+La posición tiene tres contribuciones:
+
+\[
+x
+=
+\underbrace{x_0}_{\text{posición inicial}}
++
+\underbrace{v_0t}_{\text{movimiento que tendría sin acelerar}}
++
+\underbrace{\frac{1}{2}at^2}_{\text{efecto de la aceleración}}.
+\]
+\end{interpretacion}
+
+
+\subsection{Comprobación dimensional}
+
+Cada término debe tener unidades de longitud.
+
+Para
+
+\[ v_0t, \]
+
+tenemos
+
+\[
+\left(\si{\meter\per\second}\right)
+(\si{\second})
+=
+\si{\meter}.
+\]
+
+Para
+
+\[ \frac{1}{2}at^2, \]
+
+tenemos
+
+\[
+\left(\si{\meter\per\second\squared}\right)
+(\si{\second\squared})
+=
+\si{\meter}.
+\]
+
+Por tanto, la ecuación es dimensionalmente homogénea.
+
+
+\begin{ejemplo}[Partícula que parte del reposo]
+
+Un vehículo parte del reposo y mantiene una aceleración constante
+
+\[ a=\SI{2.0}{\meter\per\second\squared}. \]
+
+¿Cuánto se desplaza durante los primeros
+
+\[ t=\SI{5.0}{\second}? \]
+
+Como parte del reposo,
+
+\[ v_0=0. \]
+
+Utilizamos
+
+\[ \Delta x=v_0t+\frac{1}{2}at^2. \]
+
+Entonces,
+
+\[
+\Delta x
+=
+0
++
+\frac{1}{2}
+\left(\SI{2.0}{\meter\per\second\squared}\right)
+\left(\SI{5.0}{\second}\right)^2.
+\]
+
+Por tanto,
+
+\[
+\Delta x
+=
+\frac{1}{2}(2.0)(25)\,\si{\meter}.
+\]
+
+Así,
+
+\[ \boxed{\Delta x=\SI{25}{\meter}}. \]
+\end{ejemplo}
+
+
+\section{Gráfica posición-tiempo en MRUA}
+
+La ecuación
+
+\[ x=x_0+v_0t+\frac{1}{2}at^2 \]
+
+es una función cuadrática del tiempo.
+
+Por ello, la gráfica posición-tiempo es una parábola.
+
+Si
+
+\[ a>0, \]
+
+la gráfica tiene concavidad hacia arriba.
+
+Si
+
+\[ a<0, \]
+
+la gráfica tiene concavidad hacia abajo.
+
+\begin{figure}[H]
+    \centering
+
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines=middle,
+            xlabel={$t$},
+            ylabel={$x$},
+            xmin=0,
+            xmax=5,
+            ymin=0,
+            ymax=18,
+            width=9cm,
+            height=6cm
+        ]
+
+            \addplot[
+                domain=0:4,
+                samples=100,
+                thick
+            ] {1+x+0.5*x^2};
+
+        \end{axis}
+    \end{tikzpicture}
+
+    \caption{Ejemplo de una gráfica posición-tiempo con aceleración constante
+    positiva.}
+\end{figure}
+
+\begin{interpretacion}
+La pendiente de la gráfica \(x-t\) continúa representando la velocidad.
+
+Como la pendiente cambia con el tiempo, la velocidad también cambia.
+
+La curvatura de la gráfica revela la presencia de aceleración.
+\end{interpretacion}
+
+
+\section{Tercera ecuación: relación entre velocidad y posición}
+
+En algunos problemas conocemos la aceleración y el desplazamiento, pero no
+conocemos el tiempo.
+
+Conviene obtener una ecuación que no contenga \(t\).
+
+Partimos de
+
+\[ v=v_0+at. \]
+
+Despejamos:
+
+\[ t=\frac{v-v_0}{a}. \]
+
+También tenemos
+
+\[ \Delta x=\frac{v_0+v}{2}\,t. \]
+
+Sustituimos el tiempo:
+
+\[
+\Delta x
+=
+\frac{v_0+v}{2}
+\left(
+\frac{v-v_0}{a}
+\right).
+\]
+
+Utilizamos la identidad
+
+\[
+(v_0+v)(v-v_0)
+=
+v^2-v_0^2.
+\]
+
+Entonces,
+
+\[
+\Delta x
+=
+\frac{v^2-v_0^2}{2a}.
+\]
+
+Por tanto,
+
+\[ \boxed{v^2=v_0^2+2a\Delta x}. \]
+
+O, utilizando posiciones,
+
+\[ \boxed{v^2=v_0^2+2a(x-x_0)}. \]
+
+\begin{idea}
+Esta ecuación es especialmente útil cuando el problema no proporciona el
+tiempo ni lo solicita.
+\end{idea}
+
+
+\begin{ejemplo}[Frenado de un automóvil]
+
+Un automóvil se mueve inicialmente con
+
+\[ v_0=\SI{20}{\meter\per\second} \]
+
+y frena con aceleración constante
+
+\[ a=-\SI{4.0}{\meter\per\second\squared}. \]
+
+Determine la distancia necesaria para detenerse.
+
+Elegimos como positivo el sentido inicial del movimiento.
+
+Al detenerse,
+
+\[ v=0. \]
+
+Utilizamos
+
+\[ v^2=v_0^2+2a\Delta x. \]
+
+Entonces,
+
+\[
+0
+=
+\left(\SI{20}{\meter\per\second}\right)^2
++
+2
+\left(-\SI{4.0}{\meter\per\second\squared}\right)
+\Delta x.
+\]
+
+Por tanto,
+
+\[
+0
+=
+400\,\si{\meter\squared\per\second\squared}
+-
+8.0\,\si{\meter\per\second\squared}\,\Delta x.
+\]
+
+Despejando,
+
+\[
+\Delta x
+=
+\frac{400}{8.0}\,\si{\meter}.
+\]
+
+Así,
+
+\[ \boxed{\Delta x=\SI{50}{\meter}}. \]
+
+\begin{interpretacion}
+La aceleración es negativa porque hemos elegido como positivo el sentido
+inicial del movimiento.
+
+Como velocidad y aceleración tienen signos opuestos, la rapidez disminuye
+hasta llegar a cero.
+\end{interpretacion}
+\end{ejemplo}
+
+
+\section{Las ecuaciones del MRUA}
+
+Para aceleración constante y tomando \(t_0=0\), las relaciones principales
+son:
+
+\[
+\boxed{v=v_0+at}
+\]
+
+\[
+\boxed{\Delta x=\frac{v_0+v}{2}\,t}
+\]
+
+\[
+\boxed{\Delta x=v_0t+\frac{1}{2}at^2}
+\]
+
+\[
+\boxed{v^2=v_0^2+2a\Delta x}
+\]
+
+y
+
+\[
+\boxed{x=x_0+v_0t+\frac{1}{2}at^2}.
+\]
+
+\begin{advertencia}
+Estas ecuaciones no constituyen cinco leyes físicas diferentes.
+
+Son relaciones matemáticas equivalentes que se obtienen a partir de una
+misma hipótesis física:
+
+\[
+\boxed{a=\text{constante}}.
+\]
+
+No deben utilizarse cuando la aceleración varía significativamente durante
+el intervalo considerado.
+\end{advertencia}
+
+
+\section{¿Qué ecuación conviene utilizar?}
+
+No es necesario memorizar una fórmula distinta para cada tipo de problema.
+
+Una estrategia más útil consiste en identificar:
+
+\begin{itemize}
+    \item posición inicial \(x_0\);
+    \item posición final \(x\);
+    \item desplazamiento \(\Delta x\);
+    \item velocidad inicial \(v_0\);
+    \item velocidad final \(v\);
+    \item aceleración \(a\);
+    \item tiempo \(t\).
+\end{itemize}
+
+Después elegimos una ecuación que contenga los datos conocidos y la
+incógnita, evitando introducir variables adicionales innecesarias.
+
+\begin{table}[H]
+    \centering
+
+    \caption{Ecuaciones de MRUA y variable que no aparece en cada una.}
+
+    \begin{tabular}{lc}
+        \toprule
+        Ecuación & Variable ausente \\
+        \midrule
+        \(v=v_0+at\) & \(\Delta x\) \\
+        \(\Delta x=\dfrac{v_0+v}{2}t\) & \(a\) \\
+        \(\Delta x=v_0t+\dfrac{1}{2}at^2\) & \(v\) \\
+        \(v^2=v_0^2+2a\Delta x\) & \(t\) \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{notapedagogica}
+Este cuadro es más útil si se presenta después de haber deducido las
+ecuaciones.
+
+La intención no es que el estudiante escoja fórmulas mecánicamente, sino que
+comprenda qué magnitudes relaciona cada una.
+\end{notapedagogica}
+
+
+\section{Gráfica aceleración-tiempo}
+
+En MRUA,
+
+\[ a=\text{constante}. \]
+
+Por tanto, la gráfica \(a-t\) es una línea horizontal.
+
+\begin{figure}[H]
+    \centering
+
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines=middle,
+            xlabel={$t$},
+            ylabel={$a$},
+            xmin=0,
+            xmax=6,
+            ymin=0,
+            ymax=5,
+            width=9cm,
+            height=6cm
+        ]
+
+            \addplot[
+                domain=0:5,
+                samples=2,
+                thick
+            ] {2};
+
+        \end{axis}
+    \end{tikzpicture}
+
+    \caption{Gráfica aceleración-tiempo para una aceleración constante
+    positiva.}
+\end{figure}
+
+El área bajo la gráfica es
+
+\[ A=a\Delta t. \]
+
+Pero
+
+\[ \Delta v=a\Delta t. \]
+
+Por tanto,
+
+\[ \boxed{\Delta v=A}. \]
+
+\begin{interpretacion}
+En una gráfica aceleración-tiempo, el área algebraica representa el cambio
+de velocidad.
+\end{interpretacion}
+
+
+\section{Relación entre las tres gráficas}
+
+Las gráficas de posición, velocidad y aceleración no son representaciones
+independientes.
+
+Están conectadas entre sí.
+
+En una gráfica \(x-t\):
+
+\[ \boxed{\text{pendiente}=v}. \]
+
+En una gráfica \(v-t\):
+
+\[ \boxed{\text{pendiente}=a}. \]
+
+Además,
+
+\[
+\boxed{
+\text{área bajo }v-t
+=
+\Delta x
+}
+\]
+
+y
+
+\[
+\boxed{
+\text{área bajo }a-t
+=
+\Delta v
+}.
+\]
+
+Para MRUA:
+
+\begin{itemize}
+    \item \(a-t\) es una línea horizontal;
+    \item \(v-t\) es una línea recta;
+    \item \(x-t\) es una parábola.
+\end{itemize}
+
+\begin{idea}
+Puede recordarse la cadena conceptual:
+
+\[
+x
+\xrightarrow{\text{pendiente}}
+v
+\xrightarrow{\text{pendiente}}
+a
+\]
+
+y, en sentido inverso,
+
+\[
+a
+\xrightarrow{\text{área}}
+\Delta v
+\xrightarrow{\text{área}}
+\Delta x.
+\]
+\end{idea}
+
+
+\section{Cambio de sentido en un MRUA}
+
+Una partícula puede reducir su rapidez, detenerse y posteriormente comenzar
+a moverse en sentido contrario.
+
+El cambio de sentido ocurre cuando
+
+\[ v=0. \]
+
+Si
+
+\[ v=v_0+at, \]
+
+podemos encontrar el instante de cambio de sentido haciendo
+
+\[ 0=v_0+at. \]
+
+Por tanto,
+
+\[ \boxed{t=-\frac{v_0}{a}}. \]
+
+Para que este instante sea físicamente posterior al inicial debe resultar
+
+\[ t>0. \]
+
+Esto ocurre cuando \(v_0\) y \(a\) tienen signos opuestos.
+
+
+\begin{ejemplo}[Partícula que se detiene y regresa]
+
+Una partícula tiene inicialmente
+
+\[ v_0=+\SI{12}{\meter\per\second} \]
+
+y aceleración constante
+
+\[ a=-\SI{3}{\meter\per\second\squared}. \]
+
+Determine cuándo se detiene momentáneamente.
+
+Utilizamos
+
+\[ v=v_0+at. \]
+
+En el instante de detención,
+
+\[ v=0. \]
+
+Entonces,
+
+\[
+0
+=
+\SI{12}{\meter\per\second}
+-
+\left(\SI{3}{\meter\per\second\squared}\right)t.
+\]
+
+Por tanto,
+
+\[ \boxed{t=\SI{4}{\second}}. \]
+
+Antes de ese instante,
+
+\[ v>0. \]
+
+Después de ese instante,
+
+\[ v<0. \]
+
+Por ello, la partícula cambia de sentido.
+
+\begin{interpretacion}
+En \(t=\SI{4}{\second}\), la velocidad es cero, pero la aceleración continúa
+siendo
+
+\[ a=-\SI{3}{\meter\per\second\squared}. \]
+
+Por eso la partícula no permanece detenida.
+\end{interpretacion}
+\end{ejemplo}
+
+
+\section{Ejemplo integrador}
+
+\begin{ejemplo}[Automóvil con aceleración constante]
+
+Un automóvil se encuentra inicialmente en
+
+\[ x_0=\SI{10}{\meter}. \]
+
+Su velocidad inicial es
+
+\[ v_0=\SI{4}{\meter\per\second} \]
+
+y experimenta una aceleración constante
+
+\[ a=\SI{2}{\meter\per\second\squared}. \]
+
+Determine, después de
+
+\[ t=\SI{5}{\second}: \]
+
+\begin{enumerate}[label=\alph*)]
+    \item la velocidad;
+    \item el desplazamiento;
+    \item la posición final.
+\end{enumerate}
+\end{ejemplo}
+
+Para la velocidad utilizamos
+
+\[ v=v_0+at. \]
+
+Entonces,
+
+\[
+v
+=
+\SI{4}{\meter\per\second}
++
+\left(\SI{2}{\meter\per\second\squared}\right)
+\left(\SI{5}{\second}\right).
+\]
+
+Así,
+
+\[ \boxed{v=\SI{14}{\meter\per\second}}. \]
+
+Para el desplazamiento,
+
+\[ \Delta x=v_0t+\frac{1}{2}at^2. \]
+
+Sustituyendo,
+
+\[
+\Delta x
+=
+\left(\SI{4}{\meter\per\second}\right)
+\left(\SI{5}{\second}\right)
++
+\frac{1}{2}
+\left(\SI{2}{\meter\per\second\squared}\right)
+\left(\SI{5}{\second}\right)^2.
+\]
+
+Entonces,
+
+\[
+\Delta x
+=
+\SI{20}{\meter}
++
+\SI{25}{\meter}.
+\]
+
+Por tanto,
+
+\[ \boxed{\Delta x=\SI{45}{\meter}}. \]
+
+Finalmente,
+
+\[
+x=x_0+\Delta x.
+\]
+
+Así,
+
+\[
+x
+=
+\SI{10}{\meter}
++
+\SI{45}{\meter}.
+\]
+
+Por tanto,
+
+\[ \boxed{x=\SI{55}{\meter}}. \]
+
+\begin{interpretacion}
+El automóvil comenzó a \(\SI{10}{\meter}\) del origen.
+
+Durante los cinco segundos avanzó \(\SI{45}{\meter}\), mientras su velocidad
+aumentó de \(\SI{4}{\meter\per\second}\) a
+\(\SI{14}{\meter\per\second}\).
+\end{interpretacion}
+
+
+\section{Procedimiento para resolver problemas de MRUA}
+
+\begin{notapedagogica}
+Una estrategia útil para enseñar la resolución de problemas es:
+
+\begin{enumerate}
+
+    \item Dibujar un esquema.
+
+    \item Elegir el eje y su sentido positivo.
+
+    \item Identificar la posición inicial.
+
+    \item Asignar signos a \(v_0\), \(v\), \(a\) y \(\Delta x\).
+
+    \item Escribir los datos con unidades coherentes.
+
+    \item Identificar la incógnita.
+
+    \item Confirmar que el problema puede modelarse con aceleración constante.
+
+    \item Elegir la relación que conecta los datos con la incógnita.
+
+    \item Despejar algebraicamente antes de sustituir, cuando ayude a la
+    claridad.
+
+    \item Sustituir con unidades.
+
+    \item Verificar dimensiones.
+
+    \item Interpretar el signo y el valor del resultado.
+
+\end{enumerate}
+
+La parte más importante suele ocurrir antes de utilizar las ecuaciones:
+\textbf{definir correctamente el sistema de referencia y los signos}.
+\end{notapedagogica}
+
+
+\section{Casos especiales importantes}
+
+\subsection{Partícula que parte del reposo}
+
+Si
+
+\[ v_0=0, \]
+
+entonces
+
+\[ v=at, \]
+
+\[ \Delta x=\frac{1}{2}at^2, \]
+
+y
+
+\[ v^2=2a\Delta x. \]
+
+Estas ecuaciones son casos particulares de las ecuaciones generales, no
+fórmulas nuevas.
+
+
+\subsection{Aceleración nula}
+
+Si
+
+\[ a=0, \]
+
+entonces
+
+\[ v=v_0=\text{constante}. \]
+
+Además,
+
+\[ \Delta x=v_0t. \]
+
+Recuperamos así el movimiento rectilíneo uniforme.
+
+\begin{idea}
+El MRU puede verse como el caso particular del movimiento con aceleración
+constante en el que
+
+\[ a=0. \]
+\end{idea}
+
+
+\subsection{Objeto que se detiene}
+
+Cuando un móvil se detiene instantáneamente,
+
+\[ v=0. \]
+
+Esto no significa necesariamente que:
+
+\[ a=0. \]
+
+Si la aceleración continúa actuando, el móvil puede invertir posteriormente
+su sentido.
+
+
+\section{Condiciones de validez del modelo}
+
+\begin{condicion}
+Las ecuaciones de MRUA pueden utilizarse cuando:
+
+\begin{itemize}
+    \item el movimiento se analiza en una dimensión;
+    \item la aceleración permanece constante durante el intervalo;
+    \item se utiliza un único sistema de referencia;
+    \item los signos de posiciones, velocidades y aceleraciones son
+    consistentes con el eje elegido.
+\end{itemize}
+\end{condicion}
+
+Si la aceleración cambia con el tiempo, las ecuaciones
+
+\[ v=v_0+at \]
+
+y
+
+\[ x=x_0+v_0t+\frac{1}{2}at^2 \]
+
+ya no describen, en general, el movimiento completo.
+
+
+\section{Errores y confusiones frecuentes}
+
+\begin{errorfrecuente}
+\textbf{Creer que aceleración significa siempre aumento de rapidez.}
+
+Un cuerpo también tiene aceleración cuando disminuye su rapidez o cambia de
+sentido.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Pensar que una aceleración negativa significa frenado.}
+
+El signo indica dirección.
+
+La rapidez disminuye únicamente cuando velocidad y aceleración tienen signos
+opuestos.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Confundir velocidad cero con aceleración cero.}
+
+Un cuerpo puede detenerse instantáneamente y conservar una aceleración
+distinta de cero.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Interpretar \(\si{\meter\per\second\squared}\) como una distancia.}
+
+La aceleración expresa cambio de velocidad por unidad de tiempo.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Utilizar}
+
+\[ \bar{v}=\frac{v_0+v}{2} \]
+
+para cualquier movimiento.
+
+Esta relación requiere aceleración constante.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Usar las ecuaciones de MRUA cuando la aceleración no es constante.}
+
+Las ecuaciones cinemáticas deducidas en este capítulo dependen de la
+hipótesis
+
+\[ a=\text{constante}. \]
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Escoger signos diferentes para cada ecuación.}
+
+El sentido positivo debe establecerse una sola vez y mantenerse durante todo
+el problema.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Asignar el signo de la aceleración basándose únicamente en que el
+objeto ``frena''.}
+
+Primero se define el eje.
+
+Después se determina la dirección del vector aceleración.
+
+El signo resulta de esa elección.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Confundir el área bajo una gráfica \(v-t\) con la distancia
+recorrida.}
+
+El área algebraica representa el desplazamiento.
+
+Si la velocidad cambia de signo, para obtener la distancia deben sumarse las
+magnitudes de los desplazamientos de cada tramo.
+\end{errorfrecuente}
+
+
+\section{Secuencia conceptual para explicar el tema}
+
+\begin{notapedagogica}
+Una secuencia clara para dictar esta clase es:
+
+\begin{enumerate}
+
+    \item Recordar que la velocidad describe el cambio de posición.
+
+    \item Plantear situaciones en las que la velocidad cambia.
+
+    \item Preguntar qué magnitud necesitamos para describir ese cambio.
+
+    \item Definir aceleración media:
+
+    \[
+    \bar{a}=\frac{\Delta v}{\Delta t}.
+    \]
+
+    \item Explicar cuidadosamente la unidad
+
+    \[
+    \si{\meter\per\second\squared}.
+    \]
+
+    \item Resolver un ejemplo sencillo de aceleración media.
+
+    \item Introducir aceleración instantánea mediante intervalos cada vez más
+    pequeños.
+
+    \item Presentar
+
+    \[
+    a=\frac{\dd v}{\dd t}.
+    \]
+
+    \item Comparar los signos de \(v\) y \(a\).
+
+    \item Establecer que misma señal significa aumento de rapidez y signos
+    opuestos disminución de rapidez.
+
+    \item Mostrar ejemplos con \(v<0\) para evitar que el estudiante asocie
+    automáticamente aceleración negativa con frenado.
+
+    \item Analizar la pendiente de una gráfica \(v-t\).
+
+    \item Introducir el MRUA como el caso de aceleración constante.
+
+    \item Construir primero
+
+    \[
+    v=v_0+at.
+    \]
+
+    \item Utilizar la gráfica \(v-t\) para obtener el desplazamiento.
+
+    \item Introducir
+
+    \[
+    \bar{v}=\frac{v_0+v}{2}
+    \]
+
+    únicamente bajo la condición de aceleración constante.
+
+    \item Deducir
+
+    \[
+    \Delta x=v_0t+\frac{1}{2}at^2.
+    \]
+
+    \item Relacionar esta ecuación con la gráfica parabólica \(x-t\).
+
+    \item Eliminar el tiempo para obtener
+
+    \[
+    v^2=v_0^2+2a\Delta x.
+    \]
+
+    \item Relacionar las tres gráficas \(x-t\), \(v-t\) y \(a-t\).
+
+    \item Resolver un ejemplo de frenado.
+
+    \item Resolver un ejemplo donde el móvil se detiene y cambia de sentido.
+
+    \item Finalizar mostrando que todas las ecuaciones provienen de una sola
+    condición:
+
+    \[
+    a=\text{constante}.
+    \]
+
+\end{enumerate}
+\end{notapedagogica}
+
+
+\section{Preguntas para comprobar comprensión}
+
+Antes de pasar a una colección formal de ejercicios pueden plantearse
+preguntas como:
+
+\begin{enumerate}
+
+    \item ¿Qué significa físicamente que un cuerpo tenga aceleración?
+
+    \item ¿Qué significa una aceleración de
+
+    \[
+    \SI{4}{\meter\per\second\squared}?
+    \]
+
+    \item ¿Puede un cuerpo tener aceleración aunque su rapidez disminuya?
+
+    \item ¿Una aceleración negativa significa necesariamente que el cuerpo
+    está frenando?
+
+    \item Si \(v>0\) y \(a<0\), ¿la rapidez aumenta o disminuye?
+
+    \item Si \(v<0\) y \(a<0\), ¿la rapidez aumenta o disminuye?
+
+    \item ¿Puede ocurrir simultáneamente
+
+    \[
+    v=0
+    \]
+
+    y
+
+    \[
+    a\neq0?
+    \]
+
+    \item ¿Qué representa la pendiente de una gráfica \(v-t\)?
+
+    \item ¿Qué representa el área bajo una gráfica \(v-t\)?
+
+    \item ¿Qué representa el área bajo una gráfica \(a-t\)?
+
+    \item ¿Qué forma tiene la gráfica \(v-t\) cuando la aceleración es
+    constante?
+
+    \item ¿Qué forma tiene la gráfica \(x-t\) en MRUA?
+
+    \item ¿Por qué la relación
+
+    \[
+    \bar{v}=\frac{v_0+v}{2}
+    \]
+
+    requiere aceleración constante?
+
+    \item ¿Qué ecuación de MRUA resulta especialmente conveniente si no
+    conocemos el tiempo?
+
+    \item Si \(a=0\), ¿qué tipo de movimiento obtenemos?
+
+    \item ¿Qué condición permite identificar un instante de cambio de
+    sentido?
+
+\end{enumerate}
+
+
+\section{Conexión con el tema siguiente}
+
+Las ecuaciones desarrolladas en este capítulo permiten describir cualquier
+movimiento rectilíneo cuya aceleración sea constante.
+
+Existe un caso particularmente importante en la naturaleza: el movimiento
+vertical de un objeto cuando la única interacción relevante es la gravedad
+y podemos despreciar la resistencia del aire.
+
+Cerca de la superficie terrestre, este movimiento puede modelarse mediante
+una aceleración aproximadamente constante.
+
+En el siguiente capítulo aplicaremos por tanto toda la estructura del MRUA
+al estudio de la \textbf{caída libre y el movimiento vertical}.
+
+
+\begin{resumen}
+
+\begin{itemize}
+
+    \item La aceleración describe el cambio de velocidad con respecto al
+    tiempo.
+
+    \item La aceleración media es
+
+    \[
+    \boxed{\bar{a}=\frac{\Delta v}{\Delta t}}.
+    \]
+
+    \item La aceleración instantánea es
+
+    \[
+    \boxed{a=\frac{\dd v}{\dd t}}
+    \]
+
+    y también
+
+    \[
+    \boxed{a=\frac{\dd^2x}{\dd t^2}}.
+    \]
+
+    \item La unidad SI de aceleración es
+
+    \[
+    \si{\meter\per\second\squared}.
+    \]
+
+    \item Si \(v\) y \(a\) tienen el mismo signo, la rapidez aumenta.
+
+    \item Si \(v\) y \(a\) tienen signos opuestos, la rapidez disminuye.
+
+    \item Una aceleración negativa no implica necesariamente disminución de
+    rapidez.
+
+    \item Una velocidad instantánea nula no implica necesariamente
+    aceleración nula.
+
+    \item En una gráfica \(v-t\), la pendiente representa la aceleración.
+
+    \item En MRUA,
+
+    \[
+    \boxed{a=\text{constante}}.
+    \]
+
+    \item La velocidad cambia linealmente con el tiempo:
+
+    \[
+    \boxed{v=v_0+at}.
+    \]
+
+    \item Para aceleración constante,
+
+    \[
+    \boxed{\bar{v}=\frac{v_0+v}{2}}.
+    \]
+
+    \item El desplazamiento puede calcularse mediante
+
+    \[
+    \boxed{\Delta x=\frac{v_0+v}{2}\,t}.
+    \]
+
+    \item También,
+
+    \[
+    \boxed{\Delta x=v_0t+\frac{1}{2}at^2}.
+    \]
+
+    \item La posición está dada por
+
+    \[
+    \boxed{x=x_0+v_0t+\frac{1}{2}at^2}.
+    \]
+
+    \item La relación que no contiene explícitamente el tiempo es
+
+    \[
+    \boxed{v^2=v_0^2+2a\Delta x}.
+    \]
+
+    \item En MRUA, la gráfica \(a-t\) es una línea horizontal.
+
+    \item La gráfica \(v-t\) es una línea recta.
+
+    \item La gráfica \(x-t\) es una parábola.
+
+    \item El área bajo una gráfica \(v-t\) representa desplazamiento.
+
+    \item El área bajo una gráfica \(a-t\) representa cambio de velocidad.
+
+    \item Todas las ecuaciones cinemáticas del MRUA dependen de la condición
+
+    \[
+    a=\text{constante}.
+    \]
+
+\end{itemize}
+
+\end{resumen}

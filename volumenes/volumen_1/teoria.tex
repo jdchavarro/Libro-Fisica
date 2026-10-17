@@ -1,0 +1,578 @@
+﻿\documentclass[11pt,letterpaper,openany]{book}
+
+% ============================================================
+% RUTA DEL PROYECTO
+% ============================================================
+
+% Desde volumenes/volumen_1 hasta la raíz del proyecto.
+\newcommand{\rutaraiz}{../..}
+
+
+% ============================================================
+% INFORMACIÓN DEL VOLUMEN
+% ============================================================
+
+\newcommand{\numerovolumen}{I}
+\newcommand{\nombrevolumen}{Fundamentos y mecánica}
+\newcommand{\tipodocumento}{Teoría}
+
+
+% ============================================================
+% CONFIGURACIÓN GENERAL
+% ============================================================
+
+\input{\rutaraiz/config/configuracion}
+
+
+% ============================================================
+% DOCUMENTO
+% ============================================================
+
+\begin{document}
+
+
+% ============================================================
+% PORTADA
+% ============================================================
+
+\begin{titlepage}
+
+    \centering
+
+    \vspace*{2.5cm}
+
+    {\color{RojoPrincipal}
+    \Huge\bfseries
+    Física
+    \par}
+
+    \vspace{0.8cm}
+
+    {\color{AzulPrincipal}
+    \LARGE\bfseries
+    Volumen \numerovolumen
+    \par}
+
+    \vspace{0.5cm}
+
+    {\Large
+    \nombrevolumen
+    \par}
+
+    \vspace{1.5cm}
+
+    {\color{AzulPrincipal}
+    \Large
+    \tipodocumento
+    \par}
+
+    \vfill
+
+    {\Large\bfseries
+    \autorlibro
+    \par}
+
+    \vspace{2cm}
+
+\end{titlepage}
+
+
+% ============================================================
+% MATERIAL PRELIMINAR
+% ============================================================
+
+\frontmatter
+
+\tableofcontents
+
+\cleardoublepage
+
+
+% ============================================================
+% CONTENIDO PRINCIPAL
+% ============================================================
+
+\mainmatter
+
+\setcounter{part}{0}
+\setcounter{chapter}{0}
+
+
+% ============================================================
+% PARTE I — FUNDAMENTOS DE LA FÍSICA
+% Capítulos 1--6
+% ============================================================
+
+\part{Fundamentos de la Física}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 1
+% ------------------------------------------------------------
+
+\chapter{La Física y la descripción de la naturaleza}
+
+\input{\rutaraiz/capitulos/01_fundamentos_de_la_fisica/01_la_fisica_y_la_descripcion_de_la_naturaleza/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 2
+% ------------------------------------------------------------
+
+\chapter{Magnitudes físicas y sistemas de unidades}
+
+\input{\rutaraiz/capitulos/01_fundamentos_de_la_fisica/02_magnitudes_fisicas_y_sistemas_de_unidades/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 3
+% ------------------------------------------------------------
+
+\chapter{Medición, incertidumbre y cifras significativas}
+
+\input{\rutaraiz/capitulos/01_fundamentos_de_la_fisica/03_medicion_incertidumbre_y_cifras_significativas/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 4
+% ------------------------------------------------------------
+
+\chapter{Análisis dimensional}
+
+\input{\rutaraiz/capitulos/01_fundamentos_de_la_fisica/04_analisis_dimensional/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 5
+% ------------------------------------------------------------
+
+\chapter{Herramientas matemáticas para la Física}
+
+\input{\rutaraiz/capitulos/01_fundamentos_de_la_fisica/05_herramientas_matematicas_para_la_fisica/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 6
+% ------------------------------------------------------------
+
+\chapter{Vectores}
+
+\input{\rutaraiz/capitulos/01_fundamentos_de_la_fisica/06_vectores/teoria}
+
+
+% ============================================================
+% PARTE II — CINEMÁTICA
+% Capítulos 7--14
+% ============================================================
+
+\part{Cinemática}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 7
+% ------------------------------------------------------------
+
+\chapter{Descripción del movimiento}
+
+\input{\rutaraiz/capitulos/02_cinematica/07_descripcion_del_movimiento/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 8
+% ------------------------------------------------------------
+
+\chapter{Movimiento rectilíneo}
+
+\input{\rutaraiz/capitulos/02_cinematica/08_movimiento_rectilineo/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 9
+% ------------------------------------------------------------
+
+\chapter{Aceleración y movimiento rectilíneo uniformemente acelerado}
+
+\input{\rutaraiz/capitulos/02_cinematica/09_aceleracion_y_movimiento_rectilineo_uniformemente_acelerado/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 10
+% ------------------------------------------------------------
+
+\chapter{Caída libre y movimiento vertical}
+
+\input{\rutaraiz/capitulos/02_cinematica/10_caida_libre_y_movimiento_vertical/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 11
+% ------------------------------------------------------------
+
+\chapter{Movimiento en dos y tres dimensiones}
+
+\input{\rutaraiz/capitulos/02_cinematica/11_movimiento_en_dos_y_tres_dimensiones/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 12
+% ------------------------------------------------------------
+
+\chapter{Movimiento de proyectiles}
+
+\input{\rutaraiz/capitulos/02_cinematica/12_movimiento_de_proyectiles/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 13
+% ------------------------------------------------------------
+
+\chapter{Movimiento circular}
+
+\input{\rutaraiz/capitulos/02_cinematica/13_movimiento_circular/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 14
+% ------------------------------------------------------------
+
+\chapter{Movimiento relativo}
+
+\input{\rutaraiz/capitulos/02_cinematica/14_movimiento_relativo/teoria}
+
+
+% ============================================================
+% PARTE III — DINÁMICA Y ESTÁTICA
+% Capítulos 15--24
+% ============================================================
+
+\part{Dinámica y estática}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 15
+% ------------------------------------------------------------
+
+\chapter{Fuerza e interacción}
+
+\input{\rutaraiz/capitulos/03_dinamica_y_estatica/15_fuerza_e_interaccion/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 16
+% ------------------------------------------------------------
+
+\chapter{Primera ley de Newton}
+
+\input{\rutaraiz/capitulos/03_dinamica_y_estatica/16_primera_ley_de_newton/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 17
+% ------------------------------------------------------------
+
+\chapter{Segunda ley de Newton}
+
+\input{\rutaraiz/capitulos/03_dinamica_y_estatica/17_segunda_ley_de_newton/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 18
+% ------------------------------------------------------------
+
+\chapter{Tercera ley de Newton}
+
+\input{\rutaraiz/capitulos/03_dinamica_y_estatica/18_tercera_ley_de_newton/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 19
+% ------------------------------------------------------------
+
+\chapter{Fuerzas mecánicas comunes}
+
+\input{\rutaraiz/capitulos/03_dinamica_y_estatica/19_fuerzas_mecanicas_comunes/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 20
+% ------------------------------------------------------------
+
+\chapter{Rozamiento y fuerzas resistivas}
+
+\input{\rutaraiz/capitulos/03_dinamica_y_estatica/20_rozamiento_y_fuerzas_resistivas/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 21
+% ------------------------------------------------------------
+
+\chapter{Dinámica del movimiento circular}
+
+\input{\rutaraiz/capitulos/03_dinamica_y_estatica/21_dinamica_del_movimiento_circular/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 22
+% ------------------------------------------------------------
+
+\chapter{Equilibrio de una partícula}
+
+\input{\rutaraiz/capitulos/03_dinamica_y_estatica/22_equilibrio_de_una_particula/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 23
+% ------------------------------------------------------------
+
+\chapter{Momento de una fuerza y equilibrio de cuerpos rígidos}
+
+\input{\rutaraiz/capitulos/03_dinamica_y_estatica/23_momento_de_una_fuerza_y_equilibrio_de_cuerpos_rigidos/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 24
+% ------------------------------------------------------------
+
+\chapter{Máquinas simples y ventaja mecánica}
+
+\input{\rutaraiz/capitulos/03_dinamica_y_estatica/24_maquinas_simples_y_ventaja_mecanica/teoria}
+
+
+% ============================================================
+% PARTE IV — TRABAJO Y ENERGÍA
+% Capítulos 25--29
+% ============================================================
+
+\part{Trabajo y energía}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 25
+% ------------------------------------------------------------
+
+\chapter{Trabajo}
+
+\input{\rutaraiz/capitulos/04_trabajo_y_energia/25_trabajo/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 26
+% ------------------------------------------------------------
+
+\chapter{Energía cinética y teorema trabajo--energía}
+
+\input{\rutaraiz/capitulos/04_trabajo_y_energia/26_energia_cinetica_y_teorema_trabajo_energia/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 27
+% ------------------------------------------------------------
+
+\chapter{Energía potencial}
+
+\input{\rutaraiz/capitulos/04_trabajo_y_energia/27_energia_potencial/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 28
+% ------------------------------------------------------------
+
+\chapter{Conservación de la energía}
+
+\input{\rutaraiz/capitulos/04_trabajo_y_energia/28_conservacion_de_la_energia/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 29
+% ------------------------------------------------------------
+
+\chapter{Potencia y eficiencia}
+
+\input{\rutaraiz/capitulos/04_trabajo_y_energia/29_potencia_y_eficiencia/teoria}
+
+
+% ============================================================
+% PARTE V — CANTIDAD DE MOVIMIENTO Y SISTEMAS DE PARTÍCULAS
+% Capítulos 30--34
+% ============================================================
+
+\part{Cantidad de movimiento y sistemas de partículas}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 30
+% ------------------------------------------------------------
+
+\chapter{Cantidad de movimiento lineal e impulso}
+
+\input{\rutaraiz/capitulos/05_cantidad_de_movimiento_y_sistemas_de_particulas/30_cantidad_de_movimiento_lineal_e_impulso/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 31
+% ------------------------------------------------------------
+
+\chapter{Conservación de la cantidad de movimiento}
+
+\input{\rutaraiz/capitulos/05_cantidad_de_movimiento_y_sistemas_de_particulas/31_conservacion_de_la_cantidad_de_movimiento/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 32
+% ------------------------------------------------------------
+
+\chapter{Colisiones y explosiones}
+
+\input{\rutaraiz/capitulos/05_cantidad_de_movimiento_y_sistemas_de_particulas/32_colisiones_y_explosiones/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 33
+% ------------------------------------------------------------
+
+\chapter{Centro de masa y sistemas de partículas}
+
+\input{\rutaraiz/capitulos/05_cantidad_de_movimiento_y_sistemas_de_particulas/33_centro_de_masa_y_sistemas_de_particulas/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 34
+% ------------------------------------------------------------
+
+\chapter{Sistemas de masa variable y propulsión}
+
+\input{\rutaraiz/capitulos/05_cantidad_de_movimiento_y_sistemas_de_particulas/34_sistemas_de_masa_variable_y_propulsion/teoria}
+
+
+% ============================================================
+% PARTE VI — ROTACIÓN
+% Capítulos 35--41
+% ============================================================
+
+\part{Rotación}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 35
+% ------------------------------------------------------------
+
+\chapter{Cinemática rotacional}
+
+\input{\rutaraiz/capitulos/06_rotacion/35_cinematica_rotacional/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 36
+% ------------------------------------------------------------
+
+\chapter{Momento de inercia}
+
+\input{\rutaraiz/capitulos/06_rotacion/36_momento_de_inercia/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 37
+% ------------------------------------------------------------
+
+\chapter{Dinámica rotacional}
+
+\input{\rutaraiz/capitulos/06_rotacion/37_dinamica_rotacional/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 38
+% ------------------------------------------------------------
+
+\chapter{Trabajo y energía en la rotación}
+
+\input{\rutaraiz/capitulos/06_rotacion/38_trabajo_y_energia_en_la_rotacion/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 39
+% ------------------------------------------------------------
+
+\chapter{Rodamiento}
+
+\input{\rutaraiz/capitulos/06_rotacion/39_rodamiento/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 40
+% ------------------------------------------------------------
+
+\chapter{Cantidad de movimiento angular}
+
+\input{\rutaraiz/capitulos/06_rotacion/40_cantidad_de_movimiento_angular/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 41
+% ------------------------------------------------------------
+
+\chapter{Giroscopios y precesión}
+
+\input{\rutaraiz/capitulos/06_rotacion/41_giroscopios_y_precesion/teoria}
+
+
+% ============================================================
+% PARTE VII — GRAVITACIÓN
+% Capítulos 42--46
+% ============================================================
+
+\part{Gravitación}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 42
+% ------------------------------------------------------------
+
+\chapter{Ley de gravitación universal}
+
+\input{\rutaraiz/capitulos/07_gravitacion/42_ley_de_gravitacion_universal/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 43
+% ------------------------------------------------------------
+
+\chapter{Campo gravitatorio}
+
+\input{\rutaraiz/capitulos/07_gravitacion/43_campo_gravitatorio/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 44
+% ------------------------------------------------------------
+
+\chapter{Energía y potencial gravitatorios}
+
+\input{\rutaraiz/capitulos/07_gravitacion/44_energia_y_potencial_gravitatorios/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 45
+% ------------------------------------------------------------
+
+\chapter{Movimiento planetario y leyes de Kepler}
+
+\input{\rutaraiz/capitulos/07_gravitacion/45_movimiento_planetario_y_leyes_de_kepler/teoria}
+
+
+% ------------------------------------------------------------
+% CAPÍTULO 46
+% ------------------------------------------------------------
+
+\chapter{Satélites y órbitas}
+
+\input{\rutaraiz/capitulos/07_gravitacion/46_satelites_y_orbitas/teoria}
+
+
+% ============================================================
+% MATERIAL FINAL
+% ============================================================
+
+\backmatter
+
+
+\end{document}

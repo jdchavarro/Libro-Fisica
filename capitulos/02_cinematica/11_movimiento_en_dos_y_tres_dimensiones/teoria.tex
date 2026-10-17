@@ -1,0 +1,3698 @@
+\section{Movimiento en dos y tres dimensiones}
+
+Hasta ahora hemos estudiado principalmente movimientos que pueden describirse
+mediante una sola coordenada. Por ejemplo, un automóvil que avanza por una
+carretera completamente recta puede describirse, durante cierto intervalo,
+mediante una posición \(x(t)\).
+
+Sin embargo, una gran cantidad de movimientos reales no ocurre sobre una sola
+línea.
+
+Un automóvil puede tomar una curva, un dron puede desplazarse simultáneamente
+hacia adelante y hacia arriba, una embarcación puede cambiar su posición en dos
+direcciones sobre la superficie del agua y una aeronave puede modificar las tres
+coordenadas espaciales durante su movimiento.
+
+En estas situaciones ya no basta una sola coordenada.
+
+Necesitamos describir la posición, el desplazamiento, la velocidad y la
+aceleración mediante \textbf{vectores}.
+
+\begin{idea}[La extensión fundamental]
+El paso del movimiento en una dimensión al movimiento en dos o tres dimensiones
+no exige abandonar los conceptos de cinemática ya construidos.
+
+Las ideas siguen siendo las mismas:
+
+\[
+\text{posición}
+\longrightarrow
+\text{desplazamiento}
+\longrightarrow
+\text{velocidad}
+\longrightarrow
+\text{aceleración}.
+\]
+
+La diferencia fundamental es que estas magnitudes deben tratarse ahora como
+vectores y, por tanto, poseen componentes, magnitud, dirección y sentido.
+\end{idea}
+
+
+\section{¿Cuántas dimensiones necesita un movimiento?}
+
+La cantidad de dimensiones necesarias depende de cuántas coordenadas espaciales
+deben cambiar para describir el movimiento.
+
+\subsection{Movimiento en una dimensión}
+
+Si el objeto permanece sobre una línea recta, una sola coordenada puede ser
+suficiente:
+
+\[
+x=x(t).
+\]
+
+Por ejemplo, el movimiento de un ascensor idealizado puede describirse utilizando
+únicamente una coordenada vertical.
+
+\subsection{Movimiento en dos dimensiones}
+
+Si la partícula se mueve dentro de un plano, necesitamos dos coordenadas:
+
+\[
+x=x(t),
+\qquad
+y=y(t).
+\]
+
+El movimiento ocurre en el plano \(xy\).
+
+\subsection{Movimiento en tres dimensiones}
+
+Para describir un movimiento espacial general necesitamos tres coordenadas:
+
+\[
+x=x(t),
+\qquad
+y=y(t),
+\qquad
+z=z(t).
+\]
+
+\begin{interpretacion}
+La dimensionalidad del movimiento no depende de que el objeto real sea
+tridimensional.
+
+Un automóvil es un cuerpo tridimensional, pero si se mueve a lo largo de una
+carretera recta y sólo queremos estudiar su traslación, su movimiento puede
+modelarse como unidimensional.
+
+La dimensionalidad se refiere al número de coordenadas necesarias para describir
+el movimiento que estamos estudiando.
+\end{interpretacion}
+
+
+\section{Modelo de partícula}
+
+Continuaremos utilizando el modelo de partícula desarrollado anteriormente.
+
+\begin{modelo}[Partícula]
+Representamos el objeto mediante un punto cuando sus dimensiones, forma y
+orientación no son importantes para responder la pregunta física planteada.
+
+El punto conserva la información necesaria sobre la posición y el movimiento
+traslacional del objeto, pero ignora detalles como su tamaño y su rotación.
+\end{modelo}
+
+Este modelo permite estudiar mediante las mismas ecuaciones el movimiento de
+objetos físicamente muy diferentes, siempre que sus dimensiones no sean
+relevantes para el problema considerado.
+
+
+\section{Sistema de referencia en dos dimensiones}
+
+Antes de describir un movimiento debemos establecer un sistema de referencia.
+
+En un plano cartesiano utilizamos dos ejes mutuamente perpendiculares:
+
+\[
+x
+\qquad\text{y}\qquad
+y.
+\]
+
+Definimos también los vectores unitarios:
+
+\[
+\ihat
+\qquad\text{y}\qquad
+\jhat,
+\]
+
+que apuntan, respectivamente, hacia los sentidos positivos de los ejes \(x\) y
+\(y\).
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+
+    \draw[-{Latex},thick] (-0.5,0) -- (5.3,0)
+        node[right] {\(x\)};
+
+    \draw[-{Latex},thick] (0,-0.5) -- (0,4.2)
+        node[above] {\(y\)};
+
+    \fill (3.5,2.6) circle (2.5pt);
+    \node[above right] at (3.5,2.6) {\(P(x,y)\)};
+
+    \draw[dashed] (3.5,0) -- (3.5,2.6);
+    \draw[dashed] (0,2.6) -- (3.5,2.6);
+
+    \draw[-{Latex},very thick,AzulPrincipal]
+        (0,0) -- (3.5,2.6)
+        node[midway,above left] {\(\vect{r}\)};
+
+    \node[below] at (3.5,0) {\(x\)};
+    \node[left] at (0,2.6) {\(y\)};
+
+    \draw[-{Latex},thick,VerdePrincipal]
+        (0.4,0.45) -- (1.25,0.45)
+        node[midway,below] {\(\ihat\)};
+
+    \draw[-{Latex},thick,VerdePrincipal]
+        (0.4,0.45) -- (0.4,1.30)
+        node[midway,left] {\(\jhat\)};
+
+\end{tikzpicture}
+\end{center}
+
+\begin{advertencia}
+Los signos de las componentes \(x\) y \(y\) no poseen significado absoluto.
+
+Su interpretación depende de:
+
+\begin{itemize}
+    \item dónde se encuentra el origen;
+    \item cómo están orientados los ejes;
+    \item qué sentidos se eligieron como positivos.
+\end{itemize}
+
+Estas decisiones deben establecerse antes de analizar el movimiento.
+\end{advertencia}
+
+
+\section{Sistema de referencia en tres dimensiones}
+
+Para un movimiento espacial introducimos un tercer eje:
+
+\[
+z,
+\]
+
+perpendicular a los otros dos, y el vector unitario correspondiente:
+
+\[
+\khat.
+\]
+
+Utilizaremos un sistema cartesiano de mano derecha formado por:
+
+\[
+\ihat,
+\qquad
+\jhat,
+\qquad
+\khat.
+\]
+
+Una posición espacial se especificará entonces mediante las tres coordenadas:
+
+\[
+(x,y,z).
+\]
+
+\begin{recordatorio}[Componentes rectangulares]
+En todo este capítulo utilizaremos prioritariamente componentes cartesianas.
+
+Para cualquier vector tridimensional:
+
+\[
+\vect{A}
+=
+A_x\ihat+A_y\jhat+A_z\khat.
+\]
+
+Su magnitud es:
+
+\[
+A
+=
+\norm{\vect{A}}
+=
+\sqrt{A_x^2+A_y^2+A_z^2}.
+\]
+
+En dos dimensiones basta tomar:
+
+\[
+A_z=0.
+\]
+\end{recordatorio}
+
+
+\section{Vector de posición}
+
+En movimiento rectilíneo utilizábamos una coordenada \(x\) para indicar dónde se
+encontraba la partícula.
+
+En dos o tres dimensiones necesitamos un vector.
+
+\begin{definicion}[Vector de posición]
+El vector de posición \(\vect{r}\) es el vector que se extiende desde el origen
+del sistema de referencia hasta la posición ocupada por la partícula.
+\end{definicion}
+
+En tres dimensiones:
+
+\[
+\boxed{
+\vect{r}
+=
+x\ihat+y\jhat+z\khat
+}.
+\]
+
+En dos dimensiones:
+
+\[
+\boxed{
+\vect{r}
+=
+x\ihat+y\jhat
+}.
+\]
+
+Las coordenadas:
+
+\[
+x,\qquad y,\qquad z
+\]
+
+son las componentes rectangulares del vector de posición.
+
+En el SI se expresan en metros.
+
+\subsection{Magnitud del vector de posición}
+
+La magnitud del vector de posición es:
+
+\[
+r
+=
+\norm{\vect{r}}
+=
+\sqrt{x^2+y^2+z^2}.
+\]
+
+En un movimiento bidimensional:
+
+\[
+r=\sqrt{x^2+y^2}.
+\]
+
+Esta magnitud representa la distancia geométrica entre el origen y la posición
+actual de la partícula.
+
+\begin{errorfrecuente}[Magnitud de la posición y distancia recorrida]
+La cantidad:
+
+\[
+\norm{\vect{r}}
+\]
+
+no representa, en general, la distancia que ha recorrido la partícula.
+
+Solamente indica qué tan lejos se encuentra la posición actual respecto del
+origen.
+
+Una partícula podría haber seguido una trayectoria muy larga y terminar cerca
+del origen.
+\end{errorfrecuente}
+
+
+\section{La posición depende del tiempo}
+
+Si una partícula se mueve, sus coordenadas pueden cambiar con el tiempo:
+
+\[
+x=x(t),
+\qquad
+y=y(t),
+\qquad
+z=z(t).
+\]
+
+Por tanto, podemos escribir:
+
+\[
+\boxed{
+\vect{r}(t)
+=
+x(t)\ihat+y(t)\jhat+z(t)\khat
+}.
+\]
+
+Esta función vectorial contiene la descripción cinemática de la posición de la
+partícula en cada instante.
+
+\begin{interpretacion}
+Conocer \(\vect{r}(t)\) significa conocer simultáneamente:
+
+\[
+x(t),\qquad y(t),\qquad z(t).
+\]
+
+No son tres tiempos diferentes ni tres movimientos desconectados.
+
+Son tres componentes espaciales del mismo movimiento y todas se evalúan en el
+mismo instante \(t\).
+\end{interpretacion}
+
+
+\section{Trayectoria}
+
+A medida que cambia el vector de posición, la partícula va ocupando diferentes
+puntos del espacio.
+
+El conjunto de esos puntos forma su trayectoria.
+
+\begin{definicion}[Trayectoria]
+La trayectoria es la curva geométrica formada por las posiciones sucesivas que
+ocupa una partícula durante su movimiento.
+\end{definicion}
+
+Una trayectoria puede ser:
+
+\begin{itemize}
+    \item rectilínea;
+    \item curvilínea;
+    \item plana;
+    \item espacial.
+\end{itemize}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.95]
+
+    \draw[-{Latex},thick] (-0.5,0) -- (6.6,0)
+        node[right] {\(x\)};
+
+    \draw[-{Latex},thick] (0,-0.5) -- (0,4.5)
+        node[above] {\(y\)};
+
+    \draw[
+        very thick,
+        AzulSecundario,
+        smooth
+    ]
+    plot coordinates {
+        (0.7,0.8)
+        (1.6,1.7)
+        (2.6,2.2)
+        (3.8,2.0)
+        (4.8,2.8)
+        (5.8,3.7)
+    };
+
+    \fill (0.7,0.8) circle (2.5pt);
+    \node[below right] at (0.7,0.8) {\(P_i\)};
+
+    \fill (5.8,3.7) circle (2.5pt);
+    \node[above left] at (5.8,3.7) {\(P_f\)};
+
+    \node[above] at (3.1,2.45) {trayectoria};
+
+\end{tikzpicture}
+\end{center}
+
+
+\section{Ecuaciones paramétricas de la trayectoria}
+
+Cuando conocemos:
+
+\[
+x=x(t),
+\qquad
+y=y(t),
+\]
+
+estas dos ecuaciones describen la trayectoria de manera paramétrica.
+
+El tiempo \(t\) actúa como parámetro común.
+
+En tres dimensiones tendríamos:
+
+\[
+x=x(t),
+\qquad
+y=y(t),
+\qquad
+z=z(t).
+\]
+
+\subsection{Eliminar el tiempo}
+
+En algunos casos podemos eliminar \(t\) entre las ecuaciones y obtener una
+relación directa entre las coordenadas.
+
+Por ejemplo, si:
+
+\[
+x=2t
+\]
+
+y:
+
+\[
+y=t^2,
+\]
+
+de la primera relación:
+
+\[
+t=\frac{x}{2}.
+\]
+
+Sustituyendo en la segunda:
+
+\[
+y=\left(\frac{x}{2}\right)^2.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+y=\frac{x^2}{4}
+}.
+\]
+
+Esta ecuación describe la forma geométrica de la trayectoria en el plano \(xy\).
+
+\begin{interpretacion}
+Las ecuaciones:
+
+\[
+x(t),\qquad y(t)
+\]
+
+indican \textbf{cómo cambia la posición con el tiempo}.
+
+La ecuación:
+
+\[
+y=y(x)
+\]
+
+describe \textbf{la forma geométrica de la trayectoria} después de haber
+eliminado el tiempo.
+
+Son representaciones diferentes del mismo movimiento.
+\end{interpretacion}
+
+
+\section{Desplazamiento en dos y tres dimensiones}
+
+Supongamos que en el instante \(t_i\) una partícula tiene posición:
+
+\[
+\vect{r}_i,
+\]
+
+y en un instante posterior \(t_f\):
+
+\[
+\vect{r}_f.
+\]
+
+El desplazamiento continúa siendo el cambio de posición.
+
+\begin{definicion}[Vector desplazamiento]
+El desplazamiento de una partícula entre dos posiciones es:
+
+\[
+\boxed{
+\Delta\vect{r}
+=
+\vect{r}_f-\vect{r}_i
+}.
+\]
+\end{definicion}
+
+Si:
+
+\[
+\vect{r}_i
+=
+x_i\ihat+y_i\jhat+z_i\khat
+\]
+
+y:
+
+\[
+\vect{r}_f
+=
+x_f\ihat+y_f\jhat+z_f\khat,
+\]
+
+entonces:
+
+\[
+\Delta\vect{r}
+=
+(x_f-x_i)\ihat
++
+(y_f-y_i)\jhat
++
+(z_f-z_i)\khat.
+\]
+
+Definiendo:
+
+\[
+\Delta x=x_f-x_i,
+\]
+
+\[
+\Delta y=y_f-y_i,
+\]
+
+\[
+\Delta z=z_f-z_i,
+\]
+
+obtenemos:
+
+\[
+\boxed{
+\Delta\vect{r}
+=
+\Delta x\,\ihat
++
+\Delta y\,\jhat
++
+\Delta z\,\khat
+}.
+\]
+
+
+\subsection{Interpretación geométrica}
+
+El vector desplazamiento apunta directamente desde la posición inicial hasta la
+posición final.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.95]
+
+    \draw[-{Latex},thick] (-0.5,0) -- (6.5,0)
+        node[right] {\(x\)};
+
+    \draw[-{Latex},thick] (0,-0.5) -- (0,4.6)
+        node[above] {\(y\)};
+
+    \coordinate (A) at (1.2,1.0);
+    \coordinate (B) at (5.3,3.4);
+
+    \draw[
+        very thick,
+        AzulSecundario,
+        smooth
+    ]
+    plot coordinates {
+        (1.2,1.0)
+        (2.0,2.0)
+        (3.1,2.6)
+        (4.1,2.2)
+        (5.3,3.4)
+    };
+
+    \draw[-{Latex},thick,AzulPrincipal]
+        (0,0) -- (A)
+        node[midway,below right] {\(\vect{r}_i\)};
+
+    \draw[-{Latex},thick,AzulPrincipal]
+        (0,0) -- (B)
+        node[midway,above left] {\(\vect{r}_f\)};
+
+    \draw[-{Latex},very thick,VerdePrincipal]
+        (A) -- (B)
+        node[midway,below right] {\(\Delta\vect{r}\)};
+
+    \fill (A) circle (2.5pt);
+    \fill (B) circle (2.5pt);
+
+    \node[left] at (A) {\(P_i\)};
+    \node[right] at (B) {\(P_f\)};
+
+\end{tikzpicture}
+\end{center}
+
+\begin{interpretacion}
+El desplazamiento no describe todo el camino recorrido.
+
+Sólo compara las posiciones inicial y final.
+
+Por ello, dos trayectorias completamente diferentes pueden producir exactamente
+el mismo vector desplazamiento si comienzan y terminan en los mismos puntos.
+\end{interpretacion}
+
+
+\section{Distancia recorrida y magnitud del desplazamiento}
+
+La distancia recorrida mide la longitud total de la trayectoria.
+
+La magnitud del desplazamiento es:
+
+\[
+\norm{\Delta\vect{r}}
+=
+\sqrt{
+(\Delta x)^2
++
+(\Delta y)^2
++
+(\Delta z)^2
+}.
+\]
+
+En general:
+
+\[
+\boxed{
+d\geq\norm{\Delta\vect{r}}
+}.
+\]
+
+La igualdad se produce solamente cuando la trayectoria recorrida entre las dos
+posiciones coincide con el segmento recto que las une y no existe retroceso.
+
+Para una descripción continua, la distancia recorrida puede escribirse como:
+
+\[
+d
+=
+\int_{t_i}^{t_f}
+\norm{\vect{v}(t)}
+\,\dd t.
+\]
+
+Más adelante veremos que:
+
+\[
+\norm{\vect{v}(t)}
+\]
+
+es precisamente la rapidez instantánea.
+
+\begin{errorfrecuente}
+No debe calcularse la distancia total simplemente mediante:
+
+\[
+\sqrt{(\Delta x)^2+(\Delta y)^2}
+\]
+
+cuando la trayectoria es curva.
+
+Esa expresión proporciona la magnitud del \textbf{desplazamiento}, no la longitud
+de una trayectoria arbitraria.
+\end{errorfrecuente}
+
+
+\section{Ejemplo: posición y desplazamiento en un plano}
+
+\begin{ejemplo}[Movimiento entre dos puntos]
+Una partícula se mueve en un plano desde:
+
+\[
+P_i=(-2,1)\,\si{\meter}
+\]
+
+hasta:
+
+\[
+P_f=(4,5)\,\si{\meter}.
+\]
+
+Determine el vector desplazamiento y su magnitud.
+\end{ejemplo}
+
+Los vectores de posición son:
+
+\[
+\vect{r}_i
+=
+(-2\ihat+\jhat)\,\si{\meter},
+\]
+
+\[
+\vect{r}_f
+=
+(4\ihat+5\jhat)\,\si{\meter}.
+\]
+
+El desplazamiento es:
+
+\[
+\Delta\vect{r}
+=
+\vect{r}_f-\vect{r}_i.
+\]
+
+Trabajando por componentes:
+
+\[
+\Delta x
+=
+4-(-2)
+=
+\SI{6}{\meter},
+\]
+
+\[
+\Delta y
+=
+5-1
+=
+\SI{4}{\meter}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\Delta\vect{r}
+=
+(6\ihat+4\jhat)\,\si{\meter}
+}.
+\]
+
+Su magnitud es:
+
+\[
+\norm{\Delta\vect{r}}
+=
+\sqrt{6^2+4^2}\,\si{\meter}.
+\]
+
+Así:
+
+\[
+\boxed{
+\norm{\Delta\vect{r}}
+=
+\sqrt{52}\,\si{\meter}
+\approx
+\SI{7.21}{\meter}
+}.
+\]
+
+\begin{interpretacion}
+El resultado indica que la posición final está:
+
+\begin{itemize}
+    \item \(\SI{6}{\meter}\) más hacia \(+x\);
+    \item \(\SI{4}{\meter}\) más hacia \(+y\);
+\end{itemize}
+
+que la posición inicial.
+
+La magnitud \(\SI{7.21}{\meter}\) es la separación recta entre las posiciones
+inicial y final. No podemos determinar la distancia realmente recorrida sin
+conocer la trayectoria.
+\end{interpretacion}
+
+
+\section{Velocidad media}
+
+En una dimensión definimos la velocidad media como el desplazamiento dividido
+entre el intervalo de tiempo.
+
+La misma idea se conserva en varias dimensiones.
+
+\begin{definicion}[Velocidad media]
+La velocidad media de una partícula durante un intervalo \(\Delta t\) es:
+
+\[
+\boxed{
+\vect{\bar{v}}
+=
+\frac{\Delta\vect{r}}{\Delta t}
+}.
+\]
+\end{definicion}
+
+Como:
+
+\[
+\Delta t=t_f-t_i>0,
+\]
+
+la velocidad media tiene la misma dirección y sentido que el desplazamiento.
+
+En componentes:
+
+\[
+\boxed{
+\bar{v}_x
+=
+\frac{\Delta x}{\Delta t}
+},
+\]
+
+\[
+\boxed{
+\bar{v}_y
+=
+\frac{\Delta y}{\Delta t}
+},
+\]
+
+\[
+\boxed{
+\bar{v}_z
+=
+\frac{\Delta z}{\Delta t}
+}.
+\]
+
+Por tanto:
+
+\[
+\vect{\bar{v}}
+=
+\bar{v}_x\ihat
++
+\bar{v}_y\jhat
++
+\bar{v}_z\khat.
+\]
+
+La unidad SI es:
+
+\[
+\si{\meter\per\second}.
+\]
+
+\begin{interpretacion}
+La velocidad media contiene información sobre el cambio neto de posición por
+unidad de tiempo.
+
+No describe necesariamente cómo fue la velocidad durante cada instante del
+recorrido.
+\end{interpretacion}
+
+
+\subsection{Ejemplo}
+
+Si en el ejemplo anterior la partícula tarda:
+
+\[
+\Delta t=\SI{2.0}{\second},
+\]
+
+su velocidad media es:
+
+\[
+\vect{\bar{v}}
+=
+\frac{
+(6\ihat+4\jhat)\,\si{\meter}
+}{
+\SI{2.0}{\second}
+}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{\bar{v}}
+=
+(3.0\ihat+2.0\jhat)\,
+\si{\meter\per\second}
+}.
+\]
+
+Su magnitud es:
+
+\[
+\norm{\vect{\bar{v}}}
+=
+\sqrt{3.0^2+2.0^2}\,
+\si{\meter\per\second}.
+\]
+
+Así:
+
+\[
+\boxed{
+\norm{\vect{\bar{v}}}
+\approx
+\SI{3.61}{\meter\per\second}
+}.
+\]
+
+
+\section{Velocidad instantánea}
+
+La velocidad media describe un intervalo completo.
+
+Sin embargo, con frecuencia queremos saber cómo se mueve la partícula en un
+instante determinado.
+
+Para ello reducimos progresivamente el intervalo temporal.
+
+\[
+\vect{\bar{v}}
+=
+\frac{\Delta\vect{r}}{\Delta t}.
+\]
+
+Cuando:
+
+\[
+\Delta t\to0,
+\]
+
+el desplazamiento también se hace muy pequeño y obtenemos la velocidad
+instantánea.
+
+\begin{definicion}[Velocidad instantánea]
+La velocidad instantánea es:
+
+\[
+\boxed{
+\vect{v}
+=
+\lim_{\Delta t\to0}
+\frac{\Delta\vect{r}}{\Delta t}
+=
+\deriv{\vect{r}}{t}
+}.
+\]
+\end{definicion}
+
+Esta ecuación significa físicamente que la velocidad es la tasa instantánea de
+cambio del vector de posición con respecto al tiempo.
+
+
+\section{La velocidad es tangente a la trayectoria}
+
+Esta propiedad es una de las ideas geométricas más importantes del movimiento en
+dos y tres dimensiones.
+
+Durante un intervalo finito, el desplazamiento:
+
+\[
+\Delta\vect{r}
+\]
+
+une dos puntos de la trayectoria.
+
+La velocidad media tiene la misma dirección que ese desplazamiento.
+
+A medida que hacemos más pequeño el intervalo:
+
+\[
+\Delta t\to0,
+\]
+
+los dos puntos se aproximan y la dirección del desplazamiento se aproxima a la
+dirección tangente a la curva.
+
+Por ello:
+
+\begin{principio}[Dirección de la velocidad instantánea]
+En cada punto de una trayectoria, el vector velocidad instantánea es tangente a
+la trayectoria y apunta en el sentido instantáneo del movimiento.
+\end{principio}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+
+    \draw[-{Latex},thick] (-0.5,0) -- (6.6,0)
+        node[right] {\(x\)};
+
+    \draw[-{Latex},thick] (0,-0.5) -- (0,4.5)
+        node[above] {\(y\)};
+
+    \draw[
+        very thick,
+        AzulSecundario,
+        smooth
+    ]
+    plot coordinates {
+        (0.8,0.8)
+        (1.7,1.4)
+        (2.8,2.3)
+        (3.7,2.9)
+        (4.8,3.1)
+        (5.8,2.7)
+    };
+
+    \coordinate (P) at (3.7,2.9);
+
+    \fill (P) circle (2.5pt);
+    \node[below right] at (P) {\(P\)};
+
+    \draw[-{Latex},very thick,VerdePrincipal]
+        (P) -- ++(1.7,0.45)
+        node[right] {\(\vect{v}\)};
+
+    \node[above left] at (2.6,2.25) {trayectoria};
+
+\end{tikzpicture}
+\end{center}
+
+\begin{errorfrecuente}
+La velocidad instantánea no apunta necesariamente desde el origen hacia la
+partícula.
+
+El vector:
+
+\[
+\vect{r}
+\]
+
+apunta desde el origen hasta la posición.
+
+El vector:
+
+\[
+\vect{v}
+\]
+
+es tangente a la trayectoria.
+
+Son vectores físicamente diferentes.
+\end{errorfrecuente}
+
+
+\section{Componentes de la velocidad}
+
+Escribimos:
+
+\[
+\vect{r}
+=
+x\ihat+y\jhat+z\khat.
+\]
+
+Los vectores unitarios cartesianos son constantes cuando los ejes están fijos:
+
+\[
+\deriv{\ihat}{t}
+=
+\deriv{\jhat}{t}
+=
+\deriv{\khat}{t}
+=
+0.
+\]
+
+Por tanto:
+
+\[
+\vect{v}
+=
+\deriv{\vect{r}}{t}
+=
+\deriv{x}{t}\ihat
++
+\deriv{y}{t}\jhat
++
+\deriv{z}{t}\khat.
+\]
+
+Comparando con:
+
+\[
+\vect{v}
+=
+v_x\ihat+v_y\jhat+v_z\khat,
+\]
+
+obtenemos:
+
+\[
+\boxed{
+v_x=\deriv{x}{t}
+},
+\]
+
+\[
+\boxed{
+v_y=\deriv{y}{t}
+},
+\]
+
+\[
+\boxed{
+v_z=\deriv{z}{t}
+}.
+\]
+
+\begin{interpretacion}
+Cada componente de la velocidad indica qué tan rápidamente cambia la coordenada
+correspondiente.
+
+Por ejemplo:
+
+\[
+v_x>0
+\]
+
+significa que, en ese instante, la coordenada \(x\) está aumentando.
+
+En cambio:
+
+\[
+v_y<0
+\]
+
+significa que la coordenada \(y\) está disminuyendo.
+
+Estos signos deben interpretarse respecto de los ejes previamente definidos.
+\end{interpretacion}
+
+
+\section{Rapidez}
+
+La rapidez continúa siendo una magnitud escalar.
+
+\begin{definicion}[Rapidez instantánea]
+La rapidez es la magnitud del vector velocidad:
+
+\[
+\boxed{
+v=\norm{\vect{v}}
+}.
+\]
+\end{definicion}
+
+En tres dimensiones:
+
+\[
+\boxed{
+v
+=
+\sqrt{v_x^2+v_y^2+v_z^2}
+}.
+\]
+
+En el plano:
+
+\[
+\boxed{
+v
+=
+\sqrt{v_x^2+v_y^2}
+}.
+\]
+
+La rapidez siempre es:
+
+\[
+v\geq0.
+\]
+
+\begin{advertencia}
+No deben confundirse:
+
+\[
+\vect{v}
+\]
+
+y:
+
+\[
+v=\norm{\vect{v}}.
+\]
+
+La velocidad posee dirección y sentido.
+
+La rapidez solamente representa su magnitud.
+\end{advertencia}
+
+
+\section{Dirección de la velocidad en un plano}
+
+Si:
+
+\[
+\vect{v}
+=
+v_x\ihat+v_y\jhat,
+\]
+
+y medimos el ángulo \(\theta\) desde el eje \(+x\), entonces:
+
+\[
+v_x=v\cos\theta,
+\]
+
+\[
+v_y=v\sin\theta.
+\]
+
+Cuando conocemos las componentes:
+
+\[
+\tan\theta=\frac{v_y}{v_x}.
+\]
+
+Así:
+
+\[
+\theta
+=
+\arctan\left(\frac{v_y}{v_x}\right),
+\]
+
+pero el cuadrante debe determinarse observando los signos de \(v_x\) y \(v_y\).
+
+\begin{errorfrecuente}[El cuadrante]
+La calculadora puede devolver un ángulo cuya tangente sea correcta pero que no
+corresponda al cuadrante físico del vector.
+
+Por ello, antes de dar una dirección final siempre deben examinarse los signos de:
+
+\[
+v_x
+\qquad\text{y}\qquad
+v_y.
+\]
+\end{errorfrecuente}
+
+
+\section{Aceleración media}
+
+La aceleración mide cómo cambia la velocidad.
+
+Ahora debemos recordar que la velocidad es un vector.
+
+Supongamos que:
+
+\[
+\vect{v}_i
+\]
+
+es la velocidad inicial y:
+
+\[
+\vect{v}_f
+\]
+
+la velocidad final.
+
+El cambio de velocidad es:
+
+\[
+\Delta\vect{v}
+=
+\vect{v}_f-\vect{v}_i.
+\]
+
+\begin{definicion}[Aceleración media]
+La aceleración media durante un intervalo \(\Delta t\) es:
+
+\[
+\boxed{
+\vect{\bar{a}}
+=
+\frac{\Delta\vect{v}}{\Delta t}
+}.
+\]
+\end{definicion}
+
+En componentes:
+
+\[
+\bar{a}_x
+=
+\frac{\Delta v_x}{\Delta t},
+\]
+
+\[
+\bar{a}_y
+=
+\frac{\Delta v_y}{\Delta t},
+\]
+
+\[
+\bar{a}_z
+=
+\frac{\Delta v_z}{\Delta t}.
+\]
+
+La unidad SI es:
+
+\[
+\si{\meter\per\second\squared}.
+\]
+
+
+\section{Aceleración instantánea}
+
+Al tomar el límite:
+
+\[
+\Delta t\to0,
+\]
+
+obtenemos la aceleración instantánea.
+
+\begin{definicion}[Aceleración instantánea]
+La aceleración instantánea es:
+
+\[
+\boxed{
+\vect{a}
+=
+\lim_{\Delta t\to0}
+\frac{\Delta\vect{v}}{\Delta t}
+=
+\deriv{\vect{v}}{t}
+}.
+\]
+\end{definicion}
+
+Como:
+
+\[
+\vect{v}
+=
+\deriv{\vect{r}}{t},
+\]
+
+también:
+
+\[
+\boxed{
+\vect{a}
+=
+\derivdos{\vect{r}}{t}
+}.
+\]
+
+Por componentes:
+
+\[
+\boxed{
+a_x=\deriv{v_x}{t}
+=
+\derivdos{x}{t}
+},
+\]
+
+\[
+\boxed{
+a_y=\deriv{v_y}{t}
+=
+\derivdos{y}{t}
+},
+\]
+
+\[
+\boxed{
+a_z=\deriv{v_z}{t}
+=
+\derivdos{z}{t}
+}.
+\]
+
+
+\section{¿Qué puede cambiar cuando existe aceleración?}
+
+En movimiento rectilíneo era fácil concentrarse en el aumento o disminución de
+la rapidez.
+
+En varias dimensiones aparece una posibilidad adicional.
+
+Como la velocidad es un vector, puede cambiar:
+
+\begin{enumerate}
+    \item su magnitud;
+    \item su dirección;
+    \item su magnitud y su dirección simultáneamente.
+\end{enumerate}
+
+Por tanto:
+
+\begin{idea}[Acelerar no significa únicamente aumentar la rapidez]
+Existe aceleración siempre que cambie el vector velocidad.
+
+Eso puede ocurrir incluso si la rapidez permanece constante, siempre que cambie
+la dirección del movimiento.
+\end{idea}
+
+
+\subsection{Cambio de magnitud}
+
+Si el vector velocidad conserva su dirección pero aumenta o disminuye su
+magnitud, existe aceleración.
+
+Este caso incluye muchos movimientos rectilíneos.
+
+
+\subsection{Cambio de dirección}
+
+Supongamos que:
+
+\[
+\norm{\vect{v}_i}
+=
+\norm{\vect{v}_f},
+\]
+
+pero:
+
+\[
+\vect{v}_i\neq\vect{v}_f.
+\]
+
+La rapidez inicial y final pueden ser iguales, pero como cambió la dirección:
+
+\[
+\Delta\vect{v}\neq0.
+\]
+
+Por tanto:
+
+\[
+\vect{a}\neq0.
+\]
+
+\begin{errorfrecuente}[Rapidez constante no implica aceleración nula]
+La afirmación:
+
+\[
+v=\text{constante}
+\quad\Longrightarrow\quad
+\vect{a}=0
+\]
+
+es falsa en general.
+
+Sólo una \textbf{velocidad vectorial constante} implica:
+
+\[
+\vect{a}=0.
+\]
+
+Una partícula puede conservar su rapidez y, al mismo tiempo, acelerar porque
+cambia la dirección de \(\vect{v}\).
+\end{errorfrecuente}
+
+
+\section{Dirección de la aceleración}
+
+La aceleración no tiene por qué apuntar en la misma dirección que la velocidad.
+
+Podemos encontrar situaciones en las que:
+
+\begin{itemize}
+    \item \(\vect{a}\) sea paralela a \(\vect{v}\);
+    \item \(\vect{a}\) sea opuesta a \(\vect{v}\);
+    \item \(\vect{a}\) forme un ángulo con \(\vect{v}\);
+    \item \(\vect{a}\) sea perpendicular a \(\vect{v}\) en cierto instante.
+\end{itemize}
+
+\begin{interpretacion}
+La velocidad responde principalmente a:
+
+\begin{quote}
+¿hacia dónde y qué tan rápido se mueve la partícula?
+\end{quote}
+
+La aceleración responde a:
+
+\begin{quote}
+¿cómo está cambiando ese vector velocidad?
+\end{quote}
+
+Por ello, no existe una regla general que obligue a ambos vectores a tener la
+misma dirección.
+\end{interpretacion}
+
+
+\section{Posición, velocidad y aceleración: estructura matemática}
+
+Las relaciones fundamentales pueden resumirse mediante:
+
+\[
+\vect{r}(t)
+\]
+
+\[
+\Downarrow\quad
+\deriv{}{t}
+\]
+
+\[
+\vect{v}(t)
+=
+\deriv{\vect{r}}{t}
+\]
+
+\[
+\Downarrow\quad
+\deriv{}{t}
+\]
+
+\[
+\vect{a}(t)
+=
+\deriv{\vect{v}}{t}.
+\]
+
+En componentes:
+
+\[
+x(t)
+\longrightarrow
+v_x(t)
+\longrightarrow
+a_x(t),
+\]
+
+\[
+y(t)
+\longrightarrow
+v_y(t)
+\longrightarrow
+a_y(t),
+\]
+
+\[
+z(t)
+\longrightarrow
+v_z(t)
+\longrightarrow
+a_z(t).
+\]
+
+\begin{interpretacion}
+Las derivadas no son únicamente operaciones matemáticas.
+
+Expresan relaciones físicas:
+
+\[
+\deriv{x}{t}
+\]
+
+mide qué tan rápidamente cambia la coordenada \(x\), mientras:
+
+\[
+\deriv{v_x}{t}
+\]
+
+mide qué tan rápidamente cambia la componente \(x\) de la velocidad.
+\end{interpretacion}
+
+
+\section{La relación integral}
+
+También podemos recorrer el proceso en sentido contrario.
+
+Si conocemos la aceleración:
+
+\[
+\vect{a}(t),
+\]
+
+el cambio de velocidad entre \(t_i\) y \(t_f\) es:
+
+\[
+\boxed{
+\Delta\vect{v}
+=
+\int_{t_i}^{t_f}
+\vect{a}(t)\,\dd t
+}.
+\]
+
+Y si conocemos la velocidad:
+
+\[
+\boxed{
+\Delta\vect{r}
+=
+\int_{t_i}^{t_f}
+\vect{v}(t)\,\dd t
+}.
+\]
+
+Por componentes:
+
+\[
+\Delta x
+=
+\int_{t_i}^{t_f}
+v_x(t)\,\dd t,
+\]
+
+\[
+\Delta y
+=
+\int_{t_i}^{t_f}
+v_y(t)\,\dd t,
+\]
+
+\[
+\Delta z
+=
+\int_{t_i}^{t_f}
+v_z(t)\,\dd t.
+\]
+
+\begin{interpretacion}
+La integración representa acumulación.
+
+Acumular pequeños cambios de velocidad produce un cambio total de velocidad.
+
+Acumular pequeños desplazamientos produce el desplazamiento total.
+\end{interpretacion}
+
+
+\section{El método de componentes rectangulares}
+
+El procedimiento más general para trabajar con movimiento en dos o tres
+dimensiones consiste en escribir todas las magnitudes vectoriales mediante sus
+componentes rectangulares.
+
+Por ejemplo:
+
+\[
+\vect{r}
+=
+x\ihat+y\jhat,
+\]
+
+\[
+\vect{v}
+=
+v_x\ihat+v_y\jhat,
+\]
+
+\[
+\vect{a}
+=
+a_x\ihat+a_y\jhat.
+\]
+
+Las ecuaciones vectoriales pueden entonces convertirse en ecuaciones para cada
+eje.
+
+\begin{estrategia}[Idea central]
+Para analizar un movimiento multidimensional:
+
+\begin{enumerate}
+    \item defina el sistema de referencia;
+    \item escriba los vectores mediante componentes;
+    \item aplique las relaciones cinemáticas a cada componente;
+    \item utilice el mismo tiempo para todas las componentes;
+    \item reconstruya el vector final;
+    \item determine magnitud y dirección sólo después de obtener las componentes.
+\end{enumerate}
+\end{estrategia}
+
+Este procedimiento es preferible a intentar trabajar directamente con
+magnitudes y ángulos durante todo el cálculo.
+
+
+\section{¿Son independientes los movimientos en cada eje?}
+
+Con ejes cartesianos fijos, las ecuaciones vectoriales pueden escribirse por
+componentes.
+
+Por ejemplo:
+
+\[
+\vect{a}
+=
+a_x\ihat+a_y\jhat
+\]
+
+equivale a estudiar:
+
+\[
+a_x,
+\qquad
+a_y.
+\]
+
+Esto permite resolver las ecuaciones correspondientes a \(x\) y \(y\) por
+separado.
+
+Sin embargo, no significa que estemos estudiando dos partículas distintas.
+
+\begin{interpretacion}
+Las componentes comparten una condición fundamental:
+
+\[
+\boxed{\text{el mismo tiempo }t}.
+\]
+
+La partícula posee simultáneamente una posición \(x(t)\) y una posición \(y(t)\).
+
+La trayectoria completa aparece al combinar ambas componentes.
+\end{interpretacion}
+
+Además, algunos sistemas físicos pueden imponer restricciones que relacionen
+las diferentes componentes. Por ello, la posibilidad de escribir las ecuaciones
+por componentes no debe confundirse con una independencia física universal.
+
+
+\section{Ejemplo: de la posición a la trayectoria}
+
+\begin{ejemplo}[Partícula con movimiento curvilíneo]
+Una partícula se mueve en el plano según:
+
+\[
+\vect{r}(t)
+=
+(1+2t)\ihat
++
+(4t-t^2)\jhat,
+\]
+
+donde las posiciones se expresan en metros y el tiempo en segundos.
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item las ecuaciones \(x(t)\) y \(y(t)\);
+    \item la velocidad;
+    \item la aceleración;
+    \item la posición y la velocidad en \(t=\SI{1.0}{\second}\);
+    \item la ecuación de la trayectoria.
+\end{enumerate}
+\end{ejemplo}
+
+Las componentes de posición son:
+
+\[
+x(t)=1+2t,
+\]
+
+\[
+y(t)=4t-t^2.
+\]
+
+La velocidad es:
+
+\[
+\vect{v}
+=
+\deriv{\vect{r}}{t}.
+\]
+
+Por componentes:
+
+\[
+v_x
+=
+\deriv{}{t}(1+2t)
+=
+2,
+\]
+
+\[
+v_y
+=
+\deriv{}{t}(4t-t^2)
+=
+4-2t.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{v}(t)
+=
+2\ihat+(4-2t)\jhat
+}
+\]
+
+en \(\si{\meter\per\second}\).
+
+La aceleración es:
+
+\[
+\vect{a}
+=
+\deriv{\vect{v}}{t}.
+\]
+
+Entonces:
+
+\[
+a_x=0,
+\]
+
+\[
+a_y=-2.
+\]
+
+Así:
+
+\[
+\boxed{
+\vect{a}
+=
+-2\jhat\,
+\si{\meter\per\second\squared}
+}.
+\]
+
+Para:
+
+\[
+t=\SI{1.0}{\second},
+\]
+
+la posición es:
+
+\[
+x=1+2(1)=\SI{3}{\meter},
+\]
+
+\[
+y=4(1)-(1)^2=\SI{3}{\meter}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{r}
+=
+(3\ihat+3\jhat)\,\si{\meter}
+}.
+\]
+
+La velocidad en ese instante es:
+
+\[
+\vect{v}
+=
+(2\ihat+2\jhat)\,
+\si{\meter\per\second}.
+\]
+
+La rapidez es:
+
+\[
+v
+=
+\sqrt{2^2+2^2}\,
+\si{\meter\per\second}.
+\]
+
+Así:
+
+\[
+\boxed{
+v
+=
+2\sqrt{2}\,\si{\meter\per\second}
+\approx
+\SI{2.83}{\meter\per\second}
+}.
+\]
+
+Como ambas componentes de la velocidad son positivas e iguales:
+
+\[
+\theta=45\grado.
+\]
+
+Para obtener la trayectoria despejamos el tiempo de:
+
+\[
+x=1+2t.
+\]
+
+Entonces:
+
+\[
+t=\frac{x-1}{2}.
+\]
+
+Sustituyendo en:
+
+\[
+y=4t-t^2,
+\]
+
+obtenemos:
+
+\[
+y
+=
+2(x-1)
+-
+\frac{(x-1)^2}{4}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+y
+=
+2(x-1)
+-
+\frac{(x-1)^2}{4}
+}.
+\]
+
+\begin{interpretacion}
+La partícula tiene:
+
+\[
+v_x=\SI{2}{\meter\per\second}
+\]
+
+constante, mientras que \(v_y\) cambia con el tiempo.
+
+Por ello, aunque una componente del movimiento sea uniforme, la trayectoria
+completa no tiene por qué ser rectilínea.
+\end{interpretacion}
+
+
+\section{Movimiento con aceleración constante en varias dimensiones}
+
+Consideremos ahora el caso en el que el vector aceleración permanece constante:
+
+\[
+\boxed{
+\vect{a}=\text{constante}
+}.
+\]
+
+Esto significa que todas sus componentes cartesianas son constantes:
+
+\[
+a_x=\text{constante},
+\]
+
+\[
+a_y=\text{constante},
+\]
+
+\[
+a_z=\text{constante}.
+\]
+
+\begin{modelo}[Partícula con aceleración constante]
+Durante el intervalo considerado suponemos que el vector aceleración mantiene:
+
+\begin{itemize}
+    \item la misma magnitud;
+    \item la misma dirección;
+    \item el mismo sentido.
+\end{itemize}
+
+Esta condición permite integrar directamente las ecuaciones cinemáticas.
+\end{modelo}
+
+
+\section{Velocidad para aceleración constante}
+
+Partimos de:
+
+\[
+\vect{a}
+=
+\deriv{\vect{v}}{t}.
+\]
+
+Si \(\vect{a}\) es constante:
+
+\[
+\dd\vect{v}
+=
+\vect{a}\,\dd t.
+\]
+
+Integramos desde:
+
+\[
+t=0
+\]
+
+hasta un instante \(t\), y desde:
+
+\[
+\vect{v}_0
+\]
+
+hasta:
+
+\[
+\vect{v}.
+\]
+
+Entonces:
+
+\[
+\int_{\vect{v}_0}^{\vect{v}}
+\dd\vect{v}
+=
+\int_0^t
+\vect{a}\,\dd t.
+\]
+
+Por tanto:
+
+\[
+\vect{v}-\vect{v}_0
+=
+\vect{a}t.
+\]
+
+Finalmente:
+
+\[
+\boxed{
+\vect{v}
+=
+\vect{v}_0+\vect{a}t
+}.
+\]
+
+\begin{interpretacion}
+El término:
+
+\[
+\vect{a}t
+\]
+
+representa el cambio de velocidad producido durante el intervalo.
+
+La ecuación es vectorial. Por tanto, no afirma que \(\vect{v}\),
+\(\vect{v}_0\) y \(\vect{a}\) tengan necesariamente la misma dirección.
+\end{interpretacion}
+
+
+\subsection{Forma por componentes}
+
+En tres dimensiones:
+
+\[
+\boxed{
+v_x=v_{0x}+a_xt
+},
+\]
+
+\[
+\boxed{
+v_y=v_{0y}+a_yt
+},
+\]
+
+\[
+\boxed{
+v_z=v_{0z}+a_zt
+}.
+\]
+
+
+\section{Posición para aceleración constante}
+
+Sabemos que:
+
+\[
+\vect{v}
+=
+\deriv{\vect{r}}{t}.
+\]
+
+Además:
+
+\[
+\vect{v}
+=
+\vect{v}_0+\vect{a}t.
+\]
+
+Por tanto:
+
+\[
+\deriv{\vect{r}}{t}
+=
+\vect{v}_0+\vect{a}t.
+\]
+
+Multiplicando por \(\dd t\):
+
+\[
+\dd\vect{r}
+=
+(\vect{v}_0+\vect{a}t)\,\dd t.
+\]
+
+Integramos desde la posición inicial \(\vect{r}_0\) hasta \(\vect{r}\):
+
+\[
+\vect{r}-\vect{r}_0
+=
+\int_0^t
+(\vect{v}_0+\vect{a}t)\,\dd t.
+\]
+
+Como \(\vect{v}_0\) y \(\vect{a}\) son constantes:
+
+\[
+\vect{r}-\vect{r}_0
+=
+\vect{v}_0t+\frac{1}{2}\vect{a}t^2.
+\]
+
+Así:
+
+\[
+\boxed{
+\vect{r}
+=
+\vect{r}_0
++
+\vect{v}_0t
++
+\frac{1}{2}\vect{a}t^2
+}.
+\]
+
+Equivalentemente:
+
+\[
+\boxed{
+\Delta\vect{r}
+=
+\vect{v}_0t
++
+\frac{1}{2}\vect{a}t^2
+}.
+\]
+
+
+\subsection{Interpretación de los términos}
+
+La ecuación:
+
+\[
+\vect{r}
+=
+\vect{r}_0
++
+\vect{v}_0t
++
+\frac{1}{2}\vect{a}t^2
+\]
+
+puede leerse físicamente.
+
+El término:
+
+\[
+\vect{r}_0
+\]
+
+representa la posición inicial.
+
+El término:
+
+\[
+\vect{v}_0t
+\]
+
+representa el desplazamiento que tendría la partícula si mantuviera su velocidad
+inicial.
+
+El término:
+
+\[
+\frac{1}{2}\vect{a}t^2
+\]
+
+representa la modificación del desplazamiento producida por la aceleración.
+
+
+\section{Ecuaciones por componentes para aceleración constante}
+
+La ecuación vectorial de posición equivale a tres ecuaciones escalares.
+
+Para \(x\):
+
+\[
+\boxed{
+x
+=
+x_0+v_{0x}t+\frac{1}{2}a_xt^2
+}.
+\]
+
+Para \(y\):
+
+\[
+\boxed{
+y
+=
+y_0+v_{0y}t+\frac{1}{2}a_yt^2
+}.
+\]
+
+Para \(z\):
+
+\[
+\boxed{
+z
+=
+z_0+v_{0z}t+\frac{1}{2}a_zt^2
+}.
+\]
+
+De forma similar:
+
+\[
+v_x=v_{0x}+a_xt,
+\]
+
+\[
+v_y=v_{0y}+a_yt,
+\]
+
+\[
+v_z=v_{0z}+a_zt.
+\]
+
+\begin{idea}[Una sola ecuación vectorial, varias ecuaciones escalares]
+Las ecuaciones por componentes no son nuevas leyes.
+
+Son la expresión cartesiana de las mismas ecuaciones vectoriales:
+
+\[
+\vect{v}
+=
+\vect{v}_0+\vect{a}t,
+\]
+
+\[
+\vect{r}
+=
+\vect{r}_0+\vect{v}_0t+\frac{1}{2}\vect{a}t^2.
+\]
+\end{idea}
+
+
+\section{Caso especial: una componente de aceleración nula}
+
+Supongamos que:
+
+\[
+a_x=0.
+\]
+
+Entonces:
+
+\[
+v_x=v_{0x},
+\]
+
+es decir, la componente horizontal de la velocidad permanece constante.
+
+Además:
+
+\[
+x=x_0+v_{0x}t.
+\]
+
+Esto no implica que toda la velocidad sea constante.
+
+Si:
+
+\[
+a_y\neq0,
+\]
+
+la componente \(v_y\) continúa cambiando.
+
+\begin{interpretacion}
+Una partícula puede tener simultáneamente:
+
+\[
+\text{movimiento uniforme en una coordenada}
+\]
+
+y:
+
+\[
+\text{movimiento acelerado en otra}.
+\]
+
+El movimiento completo se obtiene combinando ambas componentes en cada instante.
+\end{interpretacion}
+
+
+\section{Caso especial: aceleración nula}
+
+Si:
+
+\[
+\vect{a}=\vect{0},
+\]
+
+entonces:
+
+\[
+\vect{v}=\vect{v}_0=\text{constante}.
+\]
+
+La posición queda:
+
+\[
+\boxed{
+\vect{r}
+=
+\vect{r}_0+\vect{v}_0t
+}.
+\]
+
+Como la dirección de \(\vect{v}_0\) permanece constante, la trayectoria es una
+línea recta.
+
+\begin{advertencia}
+No debe confundirse:
+
+\[
+\vect{a}=\vect{0}
+\]
+
+con:
+
+\[
+v=\text{constante}.
+\]
+
+Aceleración nula exige que el \textbf{vector velocidad completo} sea constante,
+no solamente su magnitud.
+\end{advertencia}
+
+
+\section{Una relación sin el tiempo}
+
+En una dimensión obtuvimos una relación entre velocidad, aceleración y
+desplazamiento que no contiene explícitamente el tiempo.
+
+Existe una generalización útil para aceleración vectorial constante.
+
+De:
+
+\[
+\vect{v}
+=
+\vect{v}_0+\vect{a}t
+\]
+
+obtenemos:
+
+\[
+v^2
+=
+(\vect{v}_0+\vect{a}t)
+\pdot
+(\vect{v}_0+\vect{a}t).
+\]
+
+Entonces:
+
+\[
+v^2
+=
+v_0^2
++
+2\vect{a}\pdot\vect{v}_0t
++
+a^2t^2.
+\]
+
+Por otra parte:
+
+\[
+\Delta\vect{r}
+=
+\vect{v}_0t
++
+\frac{1}{2}\vect{a}t^2.
+\]
+
+Multiplicando escalarmente por \(2\vect{a}\):
+
+\[
+2\vect{a}\pdot\Delta\vect{r}
+=
+2\vect{a}\pdot\vect{v}_0t
++
+a^2t^2.
+\]
+
+Comparando ambas expresiones:
+
+\[
+\boxed{
+v^2
+=
+v_0^2
++
+2\vect{a}\pdot\Delta\vect{r}
+}.
+\]
+
+\begin{condicion}
+Esta relación requiere:
+
+\[
+\vect{a}=\text{constante}.
+\]
+
+Además, \(v\) y \(v_0\) representan las magnitudes de las velocidades.
+
+La ecuación permite relacionar rapidez y desplazamiento, pero por sí sola no
+determina toda la dirección del vector velocidad final.
+\end{condicion}
+
+
+\section{Ejemplo: aceleración constante en un plano}
+
+\begin{ejemplo}[Movimiento bidimensional]
+Una partícula tiene inicialmente:
+
+\[
+\vect{r}_0
+=
+(-2\ihat+\jhat)\,\si{\meter},
+\]
+
+\[
+\vect{v}_0
+=
+(3\ihat+2\jhat)\,
+\si{\meter\per\second},
+\]
+
+y experimenta la aceleración constante:
+
+\[
+\vect{a}
+=
+(\ihat-2\jhat)\,
+\si{\meter\per\second\squared}.
+\]
+
+Determine su posición, velocidad y rapidez en:
+
+\[
+t=\SI{3.0}{\second}.
+\]
+\end{ejemplo}
+
+Primero analizamos las componentes.
+
+Los datos son:
+
+\[
+x_0=-\SI{2}{\meter},
+\qquad
+y_0=\SI{1}{\meter},
+\]
+
+\[
+v_{0x}=\SI{3}{\meter\per\second},
+\qquad
+v_{0y}=\SI{2}{\meter\per\second},
+\]
+
+\[
+a_x=\SI{1}{\meter\per\second\squared},
+\qquad
+a_y=-\SI{2}{\meter\per\second\squared}.
+\]
+
+Para la componente \(x\):
+
+\[
+x
+=
+x_0+v_{0x}t+\frac{1}{2}a_xt^2.
+\]
+
+Entonces:
+
+\[
+x
+=
+-2+3(3)+\frac{1}{2}(1)(3)^2.
+\]
+
+Así:
+
+\[
+x=\SI{11.5}{\meter}.
+\]
+
+Para la componente \(y\):
+
+\[
+y
+=
+y_0+v_{0y}t+\frac{1}{2}a_yt^2.
+\]
+
+Entonces:
+
+\[
+y
+=
+1+2(3)+\frac{1}{2}(-2)(3)^2.
+\]
+
+Por tanto:
+
+\[
+y=-\SI{2.0}{\meter}.
+\]
+
+La posición es:
+
+\[
+\boxed{
+\vect{r}
+=
+(11.5\ihat-2.0\jhat)\,\si{\meter}
+}.
+\]
+
+Ahora calculamos la velocidad.
+
+Para \(x\):
+
+\[
+v_x
+=
+v_{0x}+a_xt.
+\]
+
+Entonces:
+
+\[
+v_x
+=
+3+1(3)
+=
+\SI{6.0}{\meter\per\second}.
+\]
+
+Para \(y\):
+
+\[
+v_y
+=
+v_{0y}+a_yt.
+\]
+
+Entonces:
+
+\[
+v_y
+=
+2-2(3)
+=
+-\SI{4.0}{\meter\per\second}.
+\]
+
+Así:
+
+\[
+\boxed{
+\vect{v}
+=
+(6.0\ihat-4.0\jhat)\,
+\si{\meter\per\second}
+}.
+\]
+
+La rapidez es:
+
+\[
+v
+=
+\sqrt{6.0^2+(-4.0)^2}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v
+=
+\sqrt{52}\,
+\si{\meter\per\second}
+\approx
+\SI{7.21}{\meter\per\second}
+}.
+\]
+
+Como:
+
+\[
+v_x>0
+\]
+
+y:
+
+\[
+v_y<0,
+\]
+
+la velocidad apunta hacia el cuarto cuadrante.
+
+El ángulo respecto del eje \(+x\) tiene magnitud:
+
+\[
+\theta
+=
+\arctan\left(\frac{4}{6}\right)
+\approx
+33.7\grado.
+\]
+
+Por tanto, la velocidad apunta aproximadamente:
+
+\[
+\boxed{
+33.7\grado
+\text{ por debajo del eje }+x
+}.
+\]
+
+\begin{interpretacion}
+La aceleración no es paralela a la velocidad.
+
+Por ello, el vector velocidad no sólo puede modificar su magnitud, sino también
+su dirección durante el movimiento.
+\end{interpretacion}
+
+
+\section{Movimiento en tres dimensiones}
+
+No aparece un principio cinemático nuevo al pasar de dos a tres dimensiones.
+
+Simplemente añadimos una tercera componente.
+
+La posición es:
+
+\[
+\vect{r}
+=
+x\ihat+y\jhat+z\khat.
+\]
+
+La velocidad:
+
+\[
+\vect{v}
+=
+v_x\ihat+v_y\jhat+v_z\khat.
+\]
+
+La aceleración:
+
+\[
+\vect{a}
+=
+a_x\ihat+a_y\jhat+a_z\khat.
+\]
+
+Sus magnitudes son:
+
+\[
+r
+=
+\sqrt{x^2+y^2+z^2},
+\]
+
+\[
+v
+=
+\sqrt{v_x^2+v_y^2+v_z^2},
+\]
+
+\[
+a
+=
+\sqrt{a_x^2+a_y^2+a_z^2}.
+\]
+
+\begin{interpretacion}
+La dificultad conceptual del movimiento tridimensional no está en una nueva
+definición de velocidad o aceleración.
+
+Está principalmente en organizar correctamente las tres componentes y
+reconstruir después el vector físico completo.
+\end{interpretacion}
+
+
+\section{Ejemplo: movimiento espacial}
+
+\begin{ejemplo}[Movimiento de un dron]
+La posición de un dron se modela mediante:
+
+\[
+\vect{r}(t)
+=
+(1+t)\ihat
++
+2t^2\jhat
++
+\left(3-\frac{1}{2}t\right)\khat,
+\]
+
+con posiciones en metros y tiempo en segundos.
+
+Determine la posición, velocidad, aceleración y rapidez en:
+
+\[
+t=\SI{2.0}{\second}.
+\]
+\end{ejemplo}
+
+Las componentes de posición son:
+
+\[
+x=1+t,
+\]
+
+\[
+y=2t^2,
+\]
+
+\[
+z=3-\frac{1}{2}t.
+\]
+
+En:
+
+\[
+t=\SI{2}{\second},
+\]
+
+obtenemos:
+
+\[
+x=\SI{3}{\meter},
+\]
+
+\[
+y=\SI{8}{\meter},
+\]
+
+\[
+z=\SI{2}{\meter}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{r}(2)
+=
+(3\ihat+8\jhat+2\khat)\,\si{\meter}
+}.
+\]
+
+La velocidad es:
+
+\[
+\vect{v}
+=
+\deriv{\vect{r}}{t}.
+\]
+
+Entonces:
+
+\[
+\vect{v}(t)
+=
+\ihat+4t\jhat-\frac{1}{2}\khat
+\]
+
+en \(\si{\meter\per\second}\).
+
+Para \(t=\SI{2}{\second}\):
+
+\[
+\boxed{
+\vect{v}(2)
+=
+\left(
+\ihat+8\jhat-\frac{1}{2}\khat
+\right)
+\si{\meter\per\second}
+}.
+\]
+
+La aceleración es:
+
+\[
+\vect{a}
+=
+\deriv{\vect{v}}{t}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{a}
+=
+4\jhat\,
+\si{\meter\per\second\squared}
+}.
+\]
+
+La rapidez en \(t=\SI{2}{\second}\) es:
+
+\[
+v
+=
+\sqrt{
+1^2
++
+8^2
++
+\left(-\frac{1}{2}\right)^2
+}.
+\]
+
+Así:
+
+\[
+v
+=
+\sqrt{65.25}\,
+\si{\meter\per\second}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v\approx
+\SI{8.08}{\meter\per\second}
+}.
+\]
+
+\begin{interpretacion}
+Aunque el movimiento ocurre en tres dimensiones, el procedimiento no cambió:
+
+\begin{enumerate}
+    \item identificamos las componentes;
+    \item derivamos cada componente;
+    \item reconstruimos los vectores;
+    \item calculamos la magnitud sólo al final.
+\end{enumerate}
+\end{interpretacion}
+
+
+\section{Representaciones gráficas del movimiento multidimensional}
+
+En una dimensión una gráfica \(x-t\) permite representar directamente la
+posición en función del tiempo.
+
+En varias dimensiones conviene distinguir diferentes representaciones.
+
+
+\subsection{Gráfica \(x-t\)}
+
+Representa:
+
+\[
+x=x(t).
+\]
+
+Su pendiente instantánea es:
+
+\[
+v_x=\deriv{x}{t}.
+\]
+
+
+\subsection{Gráfica \(y-t\)}
+
+Representa:
+
+\[
+y=y(t).
+\]
+
+Su pendiente es:
+
+\[
+v_y=\deriv{y}{t}.
+\]
+
+
+\subsection{Gráfica \(z-t\)}
+
+Representa:
+
+\[
+z=z(t).
+\]
+
+Su pendiente es:
+
+\[
+v_z=\deriv{z}{t}.
+\]
+
+
+\subsection{Gráfica de la trayectoria}
+
+Una gráfica con:
+
+\[
+x
+\]
+
+en un eje espacial y:
+
+\[
+y
+\]
+
+en el otro representa la trayectoria en el plano.
+
+En esta gráfica el tiempo no aparece necesariamente como uno de los ejes.
+
+\begin{errorfrecuente}[Trayectoria y gráfica posición--tiempo]
+Una gráfica \(x-t\) no debe confundirse con una trayectoria.
+
+En una gráfica \(x-t\):
+
+\begin{itemize}
+    \item un eje representa posición;
+    \item el otro representa tiempo.
+\end{itemize}
+
+En una trayectoria \(y-x\):
+
+\begin{itemize}
+    \item ambos ejes representan coordenadas espaciales.
+\end{itemize}
+
+Son representaciones físicamente diferentes.
+\end{errorfrecuente}
+
+
+\section{Cómo reconstruir el movimiento a partir de sus componentes}
+
+Supongamos que conocemos:
+
+\[
+x(t)
+\]
+
+y:
+
+\[
+y(t).
+\]
+
+Para comprender el movimiento completo podemos seguir esta secuencia:
+
+\begin{enumerate}
+    \item calcular la posición:
+    \[
+    \vect{r}(t)
+    =
+    x(t)\ihat+y(t)\jhat;
+    \]
+
+    \item derivar para obtener:
+    \[
+    v_x(t),
+    \qquad
+    v_y(t);
+    \]
+
+    \item formar:
+    \[
+    \vect{v}(t)
+    =
+    v_x(t)\ihat+v_y(t)\jhat;
+    \]
+
+    \item calcular:
+    \[
+    v(t)
+    =
+    \sqrt{v_x^2+v_y^2};
+    \]
+
+    \item derivar nuevamente:
+    \[
+    a_x(t),
+    \qquad
+    a_y(t);
+    \]
+
+    \item formar:
+    \[
+    \vect{a}(t)
+    =
+    a_x(t)\ihat+a_y(t)\jhat;
+    \]
+
+    \item eliminar \(t\), cuando sea útil, para obtener la trayectoria:
+    \[
+    y=y(x).
+    \]
+\end{enumerate}
+
+Esta secuencia conecta las representaciones:
+
+\[
+\text{paramétrica}
+\longleftrightarrow
+\text{vectorial}
+\longleftrightarrow
+\text{geométrica}.
+\]
+
+
+\section{Estrategia general para resolver problemas}
+
+\begin{estrategia}[Movimiento en dos y tres dimensiones]
+Ante un problema de cinemática multidimensional:
+
+\begin{enumerate}
+    \item Identifique el objeto que será modelado como partícula.
+
+    \item Determine si el movimiento requiere una, dos o tres dimensiones.
+
+    \item Defina un sistema de referencia:
+    \[
+    O,\qquad x,\qquad y,\qquad z.
+    \]
+
+    \item Establezca claramente los sentidos positivos.
+
+    \item Dibuje la trayectoria o un esquema cuando facilite la interpretación.
+
+    \item Exprese las posiciones, velocidades y aceleraciones mediante componentes
+    rectangulares.
+
+    \item Determine qué modelo cinemático corresponde:
+    \begin{itemize}
+        \item velocidad constante;
+        \item aceleración constante;
+        \item funciones generales de \(t\).
+    \end{itemize}
+
+    \item Escriba las relaciones físicas por componentes.
+
+    \item Utilice el mismo tiempo en todos los ejes.
+
+    \item Resuelva primero las componentes desconocidas.
+
+    \item Reconstruya después el vector completo.
+
+    \item Calcule magnitud y dirección cuando sean necesarias.
+
+    \item Compruebe:
+    \begin{itemize}
+        \item unidades;
+        \item signos;
+        \item cuadrante;
+        \item sentido físico;
+        \item coherencia con la trayectoria.
+    \end{itemize}
+\end{enumerate}
+\end{estrategia}
+
+
+\section{Selección del método}
+
+No todos los problemas multidimensionales requieren el mismo procedimiento.
+
+\subsection{Si se conoce \texorpdfstring{\(\vect{r}(t)\)}{r(t)}}
+
+Utilice:
+
+\[
+\vect{v}
+=
+\deriv{\vect{r}}{t}
+\]
+
+y:
+
+\[
+\vect{a}
+=
+\deriv{\vect{v}}{t}.
+\]
+
+
+\subsection{Si se conoce \texorpdfstring{\(\vect{a}(t)\)}{a(t)}}
+
+Puede obtener el cambio de velocidad mediante:
+
+\[
+\Delta\vect{v}
+=
+\int\vect{a}\,\dd t.
+\]
+
+Después, a partir de \(\vect{v}(t)\), puede determinarse la posición.
+
+
+\subsection{Si la aceleración es constante}
+
+Utilice directamente:
+
+\[
+\vect{v}
+=
+\vect{v}_0+\vect{a}t
+\]
+
+y:
+
+\[
+\vect{r}
+=
+\vect{r}_0
++
+\vect{v}_0t
++
+\frac{1}{2}\vect{a}t^2.
+\]
+
+Luego trabaje por componentes.
+
+
+\section{Errores frecuentes}
+
+\begin{errorfrecuente}
+\textbf{Sumar magnitudes en lugar de componentes.}
+
+Si:
+
+\[
+\vect{A}=A_x\ihat+A_y\jhat
+\]
+
+y:
+
+\[
+\vect{B}=B_x\ihat+B_y\jhat,
+\]
+
+la suma correcta es:
+
+\[
+\vect{A}+\vect{B}
+=
+(A_x+B_x)\ihat
++
+(A_y+B_y)\jhat.
+\]
+
+No deben sumarse directamente las magnitudes salvo en casos geométricos
+particulares.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Confundir el vector de posición con el desplazamiento.}
+
+El vector:
+
+\[
+\vect{r}
+\]
+
+describe dónde está la partícula respecto del origen.
+
+El vector:
+
+\[
+\Delta\vect{r}
+\]
+
+describe el cambio entre dos posiciones.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Confundir desplazamiento con distancia recorrida.}
+
+El desplazamiento depende sólo de los extremos.
+
+La distancia depende de toda la trayectoria.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Creer que la velocidad siempre apunta en la dirección del vector de
+posición.}
+
+La velocidad instantánea es tangente a la trayectoria.
+
+No tiene por qué apuntar radialmente desde el origen.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Creer que la aceleración siempre apunta en la dirección del movimiento.}
+
+La aceleración indica cómo cambia \(\vect{v}\).
+
+Puede tener una dirección diferente de la velocidad.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Concluir que rapidez constante significa aceleración cero.}
+
+Una rapidez constante sólo implica que:
+
+\[
+\norm{\vect{v}}
+\]
+
+no cambia.
+
+Si cambia la dirección de \(\vect{v}\), existe aceleración.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Usar tiempos distintos para cada componente.}
+
+Las ecuaciones:
+
+\[
+x(t),
+\qquad
+y(t),
+\qquad
+z(t)
+\]
+
+describen simultáneamente la misma partícula.
+
+El tiempo es común a todas las componentes.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Aplicar las ecuaciones de aceleración constante cuando
+\(\vect{a}\) no es constante.}
+
+Las relaciones:
+
+\[
+\vect{v}
+=
+\vect{v}_0+\vect{a}t
+\]
+
+y:
+
+\[
+\vect{r}
+=
+\vect{r}_0+\vect{v}_0t+\frac{1}{2}\vect{a}t^2
+\]
+
+requieren aceleración vectorial constante durante el intervalo considerado.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Obtener un ángulo con la calculadora y no comprobar el cuadrante.}
+
+La relación:
+
+\[
+\tan\theta=\frac{A_y}{A_x}
+\]
+
+no determina por sí sola cuál de los posibles cuadrantes contiene el vector.
+
+Siempre deben analizarse los signos de las componentes.
+\end{errorfrecuente}
+
+
+\section{Aplicaciones}
+
+La descripción vectorial del movimiento aparece en numerosos sistemas reales.
+
+\begin{aplicacion}[Navegación y seguimiento]
+Los sistemas de navegación pueden representar la posición de un vehículo
+mediante coordenadas que cambian con el tiempo.
+
+A partir de esas posiciones pueden determinarse desplazamientos y velocidades.
+
+Cuando el movimiento ocurre sobre una superficie se utilizan esencialmente dos
+coordenadas; para vehículos aéreos se requiere también información sobre la
+altura.
+\end{aplicacion}
+
+
+\begin{aplicacion}[Robótica]
+Un robot móvil puede programarse mediante coordenadas de posición:
+
+\[
+(x,y)
+\]
+
+o:
+
+\[
+(x,y,z).
+\]
+
+La planificación de su movimiento exige controlar cómo cambian esas coordenadas
+con el tiempo y, por tanto, cómo cambian sus vectores de velocidad y
+aceleración.
+\end{aplicacion}
+
+
+\begin{aplicacion}[Registro experimental de trayectorias]
+Mediante una cámara puede registrarse la posición de un objeto en diferentes
+instantes.
+
+Si se establece una escala espacial y un sistema de coordenadas, pueden
+obtenerse datos:
+
+\[
+x(t),
+\qquad
+y(t).
+\]
+
+A partir de ellos pueden estimarse las componentes de velocidad y aceleración.
+
+Un intervalo temporal cada vez menor permite aproximarse mejor a las magnitudes
+instantáneas, aunque en una medición real aparecen limitaciones experimentales.
+\end{aplicacion}
+
+
+\section{Secuencia sugerida para impartir la clase}
+
+\begin{notapedagogica}
+Una secuencia posible para desarrollar este capítulo directamente en clase es:
+
+\begin{enumerate}
+    \item Dibujar primero una carretera recta y preguntar cuántas coordenadas se
+    necesitan para localizar un automóvil.
+
+    \item Dibujar después una trayectoria curva sobre un plano y preguntar por qué
+    una sola coordenada deja de ser suficiente.
+
+    \item Recordar brevemente el método de componentes rectangulares.
+
+    \item Introducir el vector de posición:
+    \[
+    \vect{r}=x\ihat+y\jhat.
+    \]
+
+    \item Mostrar que diferentes valores de \(t\) producen diferentes posiciones y
+    construyen una trayectoria.
+
+    \item Diferenciar cuidadosamente:
+    \[
+    \vect{r},
+    \qquad
+    \Delta\vect{r},
+    \qquad
+    d.
+    \]
+
+    \item Construir la velocidad media a partir del desplazamiento.
+
+    \item Reducir conceptualmente el intervalo temporal hasta introducir:
+    \[
+    \vect{v}=\deriv{\vect{r}}{t}.
+    \]
+
+    \item Utilizar un dibujo para mostrar que la velocidad instantánea es tangente
+    a la trayectoria.
+
+    \item Obtener:
+    \[
+    v_x=\deriv{x}{t},
+    \qquad
+    v_y=\deriv{y}{t}.
+    \]
+
+    \item Diferenciar velocidad y rapidez.
+
+    \item Introducir el cambio del vector velocidad y construir:
+    \[
+    \vect{a}=\deriv{\vect{v}}{t}.
+    \]
+
+    \item Mostrar mediante dos vectores de igual magnitud y distinta dirección que
+    puede existir aceleración con rapidez constante.
+
+    \item Resolver un ejemplo a partir de una función:
+    \[
+    \vect{r}(t).
+    \]
+
+    \item Introducir después el modelo de aceleración constante.
+
+    \item Deducir primero:
+    \[
+    \vect{v}=\vect{v}_0+\vect{a}t,
+    \]
+    y después:
+    \[
+    \vect{r}
+    =
+    \vect{r}_0+\vect{v}_0t+\frac{1}{2}\vect{a}t^2.
+    \]
+
+    \item Descomponer explícitamente ambas ecuaciones en componentes \(x\), \(y\)
+    y \(z\).
+
+    \item Resolver un ejemplo completo mediante componentes rectangulares.
+
+    \item Finalizar comparando:
+    \[
+    x-t,\qquad y-t,\qquad y-x,
+    \]
+    para evitar que los estudiantes confundan una gráfica temporal con una
+    trayectoria.
+\end{enumerate}
+\end{notapedagogica}
+
+
+\section{Preguntas de comprensión}
+
+\begin{enumerate}
+    \item ¿Qué hace que un movimiento sea bidimensional?
+
+    \item ¿Un cuerpo tridimensional necesariamente realiza un movimiento
+    tridimensional?
+
+    \item ¿Qué representa físicamente el vector de posición?
+
+    \item ¿Qué diferencia existe entre:
+    \[
+    \vect{r}
+    \]
+    y:
+    \[
+    \Delta\vect{r}?
+    \]
+
+    \item ¿La magnitud del desplazamiento siempre coincide con la distancia
+    recorrida?
+
+    \item Si una partícula regresa a su punto inicial después de seguir una
+    trayectoria curva, ¿cuál es su desplazamiento?
+
+    \item ¿Qué dirección posee la velocidad media respecto del desplazamiento?
+
+    \item ¿Por qué la velocidad instantánea es tangente a la trayectoria?
+
+    \item ¿Puede el vector velocidad ser perpendicular al vector de posición?
+
+    \item ¿Qué representan físicamente \(v_x\), \(v_y\) y \(v_z\)?
+
+    \item ¿Qué diferencia existe entre velocidad y rapidez?
+
+    \item ¿Puede una partícula tener rapidez constante y aceleración distinta de
+    cero?
+
+    \item ¿Qué debe cambiar necesariamente para que exista aceleración?
+
+    \item ¿La aceleración debe tener siempre la misma dirección que la velocidad?
+
+    \item Si:
+    \[
+    a_x=0,
+    \]
+    ¿qué puede afirmarse acerca de \(v_x\)?
+
+    \item Si:
+    \[
+    \vect{a}=\vect{0},
+    \]
+    ¿qué puede afirmarse acerca del vector velocidad?
+
+    \item ¿Por qué los movimientos descritos por \(x(t)\) y \(y(t)\) deben utilizar
+    el mismo tiempo?
+
+    \item ¿Qué diferencia existe entre una gráfica \(x-t\) y una gráfica \(y-x\)?
+
+    \item ¿Qué condición debe cumplirse para utilizar:
+    \[
+    \vect{v}=\vect{v}_0+\vect{a}t?
+    \]
+
+    \item ¿Qué información adicional aporta escribir una respuesta como vector en
+    lugar de proporcionar únicamente su magnitud?
+
+    \item Si dos velocidades poseen la misma magnitud pero diferentes direcciones,
+    ¿su cambio de velocidad es necesariamente cero?
+
+    \item ¿Por qué el método de componentes rectangulares resulta útil para
+    movimientos en varias dimensiones?
+
+    \item ¿Puede una componente de la velocidad permanecer constante mientras otra
+    cambia?
+
+    \item ¿Qué información se pierde si solamente conocemos la rapidez de una
+    partícula?
+\end{enumerate}
+
+
+\begin{resumen}
+El movimiento en dos y tres dimensiones es una extensión vectorial de la
+cinemática desarrollada para el movimiento rectilíneo.
+
+La posición de una partícula se describe mediante:
+
+\[
+\vect{r}
+=
+x\ihat+y\jhat+z\khat.
+\]
+
+El desplazamiento es el cambio del vector de posición:
+
+\[
+\Delta\vect{r}
+=
+\vect{r}_f-\vect{r}_i.
+\]
+
+Su magnitud no debe confundirse con la distancia total recorrida.
+
+La velocidad media es:
+
+\[
+\vect{\bar{v}}
+=
+\frac{\Delta\vect{r}}{\Delta t}.
+\]
+
+La velocidad instantánea es la tasa de cambio de la posición:
+
+\[
+\vect{v}
+=
+\deriv{\vect{r}}{t},
+\]
+
+y es tangente a la trayectoria.
+
+Sus componentes cartesianas son:
+
+\[
+v_x=\deriv{x}{t},
+\qquad
+v_y=\deriv{y}{t},
+\qquad
+v_z=\deriv{z}{t}.
+\]
+
+La rapidez es la magnitud del vector velocidad:
+
+\[
+v=\norm{\vect{v}}.
+\]
+
+La aceleración es la tasa de cambio del vector velocidad:
+
+\[
+\vect{a}
+=
+\deriv{\vect{v}}{t}
+=
+\derivdos{\vect{r}}{t}.
+\]
+
+Por ello, existe aceleración si cambia la magnitud de la velocidad, su dirección
+o ambas.
+
+Una rapidez constante no implica necesariamente aceleración nula.
+
+Cuando el vector aceleración es constante:
+
+\[
+\vect{v}
+=
+\vect{v}_0+\vect{a}t,
+\]
+
+y:
+
+\[
+\vect{r}
+=
+\vect{r}_0
++
+\vect{v}_0t
++
+\frac{1}{2}\vect{a}t^2.
+\]
+
+Estas relaciones vectoriales pueden aplicarse componente a componente:
+
+\[
+x,\qquad y,\qquad z.
+\]
+
+El procedimiento general consiste en establecer primero el sistema de
+referencia, trabajar mediante componentes rectangulares y reconstruir al final
+la magnitud, dirección y sentido del vector buscado.
+
+La idea central puede expresarse mediante la cadena:
+
+\[
+\boxed{
+\vect{r}(t)
+\longrightarrow
+\vect{v}(t)
+=
+\deriv{\vect{r}}{t}
+\longrightarrow
+\vect{a}(t)
+=
+\deriv{\vect{v}}{t}
+}.
+\]
+
+La descripción completa de un movimiento multidimensional surge de combinar
+correctamente sus componentes espaciales en un mismo instante de tiempo.
+\end{resumen}

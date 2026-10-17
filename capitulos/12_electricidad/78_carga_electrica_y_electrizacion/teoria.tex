@@ -1,0 +1,1682 @@
+% ============================================================
+% CARGA ELÉCTRICA Y ELECTRIZACIÓN
+% ============================================================
+
+
+% ============================================================
+% INTRODUCCIÓN AL FENÓMENO
+% ============================================================
+
+\section{Carga eléctrica y electrización}
+
+Antes de hablar de campos eléctricos, potenciales o circuitos, debemos
+responder una pregunta más fundamental:
+
+\begin{quote}
+¿Qué propiedad de la materia hace posibles los fenómenos eléctricos?
+\end{quote}
+
+Todos hemos observado alguna manifestación de la electricidad.
+
+En un día seco, al quitarnos una prenda podemos escuchar pequeños
+chasquidos. Después de caminar sobre una alfombra podemos sentir una
+descarga al tocar una superficie metálica. Un peine frotado contra el cabello
+puede atraer pequeños trozos de papel. En una escala muchísimo mayor,
+durante una tormenta observamos descargas eléctricas en forma de rayos.
+
+Aunque estos fenómenos parecen diferentes, todos están relacionados con una
+propiedad fundamental de la materia: la \textbf{carga eléctrica}.
+
+\begin{notapedagogica}
+Una forma útil de comenzar la clase es realizar o plantear una experiencia
+muy sencilla.
+
+Frote un peine plástico, una regla o un globo contra el cabello y acérquelo
+a pequeños trozos de papel.
+
+Antes de explicar el fenómeno, pregunte:
+
+\begin{enumerate}
+    \item ¿Por qué el plástico puede atraer el papel después de frotarlo?
+    \item ¿Apareció algo nuevo en el plástico?
+    \item ¿Se creó carga eléctrica al frotarlo?
+    \item Si el papel es eléctricamente neutro, ¿por qué puede ser atraído?
+\end{enumerate}
+
+No es necesario responder inmediatamente todas las preguntas. Conviene
+utilizarlas como hilo conductor de la clase.
+\end{notapedagogica}
+
+
+% ============================================================
+% ELECTROSTÁTICA
+% ============================================================
+
+\subsection{Electrostática}
+
+El estudio de la electricidad suele dividirse inicialmente según el estado
+de las cargas que analizamos.
+
+\begin{definicion}[Electrostática]
+La \textbf{electrostática} es la parte de la Física que estudia las
+propiedades e interacciones de distribuciones de carga eléctrica que pueden
+considerarse en reposo.
+\end{definicion}
+
+Esto no significa que las cargas nunca puedan haberse movido.
+
+Por ejemplo, durante un proceso de electrización pueden transferirse
+electrones de un cuerpo a otro. Después de esa transferencia podemos estudiar
+la distribución resultante mediante la electrostática.
+
+Más adelante estudiaremos cargas en movimiento de forma sostenida, lo cual
+nos conducirá al concepto de corriente eléctrica.
+
+
+% ============================================================
+% LA MATERIA Y SU ESTRUCTURA ELÉCTRICA
+% ============================================================
+
+\subsection{La materia posee estructura eléctrica}
+
+Para comprender la carga eléctrica debemos recordar que la materia está
+formada por átomos.
+
+En una descripción elemental, un átomo contiene:
+
+\begin{itemize}
+    \item protones;
+    \item neutrones;
+    \item electrones.
+\end{itemize}
+
+Los protones y neutrones se encuentran en el núcleo, mientras que los
+electrones forman la estructura electrónica que rodea al núcleo.
+
+Estas partículas presentan diferentes propiedades eléctricas.
+
+\begin{table}[H]
+    \centering
+
+    \caption{Carga eléctrica de las principales partículas del átomo.}
+
+    \begin{tabular}{lcc}
+        \toprule
+        Partícula & Símbolo & Carga eléctrica \\
+        \midrule
+        Protón    & \(p\) & \(+e\) \\
+        Electrón  & \(e^{-}\) & \(-e\) \\
+        Neutrón   & \(n\) & \(0\) \\
+        \bottomrule
+    \end{tabular}
+
+\end{table}
+
+La magnitud \(e\) recibe el nombre de \textbf{carga elemental}.
+
+\begin{equation}
+    e
+    =
+    \SI{1.602176634e-19}{\coulomb}.
+    \label{eq:carga_elemental}
+\end{equation}
+
+La carga del protón es
+
+\begin{equation}
+    q_p=+e,
+\end{equation}
+
+mientras que la carga del electrón es
+
+\begin{equation}
+    q_e=-e.
+\end{equation}
+
+Las dos poseen la misma magnitud y signos opuestos.
+
+\begin{idea}
+En los procesos electrostáticos ordinarios de sólidos no suelen desplazarse
+los protones de un objeto a otro.
+
+Los protones permanecen ligados a los núcleos.
+
+Las partículas que normalmente se transfieren o redistribuyen son los
+\textbf{electrones}.
+\end{idea}
+
+
+% ============================================================
+% DEFINICIÓN DE CARGA ELÉCTRICA
+% ============================================================
+
+\subsection{¿Qué es la carga eléctrica?}
+
+\begin{definicion}[Carga eléctrica]
+La \textbf{carga eléctrica} es una propiedad física fundamental de la materia
+que determina su participación en las interacciones electromagnéticas.
+\end{definicion}
+
+Representaremos habitualmente la carga mediante la letra
+
+\[
+q
+\]
+
+o, cuando nos refiramos a la carga total de un sistema,
+
+\[
+Q.
+\]
+
+La carga eléctrica es una \textbf{magnitud escalar}.
+
+Esto significa que distintas cantidades de carga se combinan
+algebraicamente teniendo en cuenta sus signos.
+
+Si un sistema contiene varias cargas,
+
+\begin{equation}
+    Q=q_1+q_2+\cdots+q_n.
+    \label{eq:carga_total}
+\end{equation}
+
+
+% ============================================================
+% UNIDAD
+% ============================================================
+
+\subsection{Unidad de carga eléctrica}
+
+En el Sistema Internacional, la unidad de carga eléctrica es el
+\textbf{coulomb}, cuyo símbolo es
+
+\[
+\si{\coulomb}.
+\]
+
+El coulomb es una cantidad de carga muy grande comparada con la carga de un
+solo electrón.
+
+Como
+
+\[
+e=\SI{1.602176634e-19}{\coulomb},
+\]
+
+un coulomb corresponde aproximadamente a
+
+\begin{equation}
+    \frac{\SI{1}{\coulomb}}{e}
+    \approx
+    6.24\times10^{18}
+\end{equation}
+
+cargas elementales.
+
+\begin{interpretacion}
+Esto ayuda a entender por qué una carga macroscópica aparentemente pequeña,
+por ejemplo algunos microcoulombs, representa en realidad un enorme número
+de electrones transferidos.
+\end{interpretacion}
+
+
+% ============================================================
+% DOS TIPOS DE CARGA
+% ============================================================
+
+\subsection{Carga positiva y carga negativa}
+
+Experimentalmente encontramos dos clases de carga eléctrica, que por
+convención llamamos:
+
+\begin{itemize}
+    \item \textbf{carga positiva};
+    \item \textbf{carga negativa}.
+\end{itemize}
+
+El protón posee carga positiva y el electrón carga negativa.
+
+La elección de los nombres positivo y negativo es histórica. Podrían haberse
+intercambiado los nombres sin modificar la Física, siempre que toda la
+convención se utilizara consistentemente.
+
+
+% ============================================================
+% INTERACCIÓN CUALITATIVA
+% ============================================================
+
+\subsection{Interacción entre cargas}
+
+Una de las primeras propiedades observadas experimentalmente es que los
+cuerpos cargados pueden atraerse o repelerse.
+
+La regla cualitativa es:
+
+\begin{equation}
+    \boxed{
+    \text{cargas del mismo signo se repelen}
+    }
+\end{equation}
+
+y
+
+\begin{equation}
+    \boxed{
+    \text{cargas de signos opuestos se atraen}
+    }.
+\end{equation}
+
+Por tanto:
+
+\begin{itemize}
+    \item positiva con positiva: repulsión;
+    \item negativa con negativa: repulsión;
+    \item positiva con negativa: atracción.
+\end{itemize}
+
+\begin{notapedagogica}
+En esta clase conviene quedarse todavía en la descripción cualitativa.
+
+La pregunta
+
+\begin{quote}
+¿Cuánto vale la fuerza de atracción o repulsión?
+\end{quote}
+
+se responderá en el siguiente capítulo mediante la ley de Coulomb.
+
+Aquí lo fundamental es establecer primero qué es la carga y cuáles son sus
+propiedades.
+\end{notapedagogica}
+
+
+% ============================================================
+% CUERPO NEUTRO
+% ============================================================
+
+\subsection{¿Qué significa que un cuerpo sea eléctricamente neutro?}
+
+Un error frecuente consiste en pensar que un cuerpo neutro no posee cargas
+eléctricas.
+
+Esto no es correcto.
+
+Un cuerpo ordinario contiene una enorme cantidad de protones y electrones.
+
+\begin{definicion}[Cuerpo eléctricamente neutro]
+Un cuerpo es \textbf{eléctricamente neutro} cuando su carga eléctrica neta
+es cero.
+\end{definicion}
+
+Si un cuerpo contiene igual cantidad total de carga positiva y negativa,
+
+\[
+Q_{+}+Q_{-}=0,
+\]
+
+entonces
+
+\[
+Q=0.
+\]
+
+\begin{idea}
+\textbf{Neutro no significa ``sin cargas''.}
+
+Significa que las cargas positivas y negativas se compensan exactamente en
+la carga neta.
+\end{idea}
+
+
+% ============================================================
+% EXCESO Y DEFECTO DE ELECTRONES
+% ============================================================
+
+\subsection{¿Cómo adquiere carga un cuerpo?}
+
+En los fenómenos electrostáticos ordinarios, un cuerpo se carga
+principalmente porque cambia su número de electrones.
+
+Si un cuerpo inicialmente neutro \textbf{pierde electrones}, queda con un
+exceso relativo de carga positiva.
+
+Por tanto,
+
+\begin{equation}
+    \boxed{
+    \text{pierde electrones}
+    \Longrightarrow
+    \text{carga positiva}
+    }.
+\end{equation}
+
+Si un cuerpo inicialmente neutro \textbf{gana electrones}, posee un exceso de
+carga negativa.
+
+Por tanto,
+
+\begin{equation}
+    \boxed{
+    \text{gana electrones}
+    \Longrightarrow
+    \text{carga negativa}
+    }.
+\end{equation}
+
+\begin{notapedagogica}
+Conviene detenerse aquí y preguntar:
+
+\begin{quote}
+Si un cuerpo queda cargado positivamente,
+¿ganó cargas positivas?
+\end{quote}
+
+En los procesos de electrización ordinarios, la respuesta es
+\textbf{no necesariamente y, en sólidos comunes, normalmente no}.
+
+Generalmente el cuerpo quedó positivo porque
+\textbf{perdió electrones}.
+\end{notapedagogica}
+
+\begin{errorfrecuente}
+No decir que un cuerpo metálico se carga positivamente porque
+``ganó protones''.
+
+Los protones permanecen ligados en los núcleos.
+
+En los procesos electrostáticos habituales entre cuerpos sólidos, son los
+electrones los que se transfieren.
+\end{errorfrecuente}
+
+
+% ============================================================
+% EXPRESIÓN MEDIANTE NÚMERO DE ELECTRONES
+% ============================================================
+
+\subsection{Carga neta y número de electrones transferidos}
+
+Si un cuerpo inicialmente neutro pierde \(N\) electrones, su carga es
+
+\begin{equation}
+    Q=+Ne.
+    \label{eq:carga_perdida_electrones}
+\end{equation}
+
+Si gana \(N\) electrones,
+
+\begin{equation}
+    Q=-Ne.
+    \label{eq:carga_ganada_electrones}
+\end{equation}
+
+Por tanto, si conocemos la magnitud de la carga podemos determinar cuántos
+electrones han sido transferidos:
+
+\begin{equation}
+    \boxed{
+    N=\frac{\abs{Q}}{e}
+    }.
+    \label{eq:numero_electrones_carga}
+\end{equation}
+
+
+% ============================================================
+% EJEMPLO
+% ============================================================
+
+\subsection{Ejemplo: cuerpo que pierde electrones}
+
+\begin{ejemplo}
+Un cuerpo inicialmente neutro pierde
+
+\[
+N=5.0\times10^{12}
+\]
+
+electrones.
+
+¿Cuál es su carga final?
+\end{ejemplo}
+
+Como el cuerpo \textbf{pierde electrones}, sabemos antes de hacer cualquier
+cálculo que deberá quedar con carga positiva.
+
+Utilizamos
+
+\[
+Q=+Ne.
+\]
+
+Entonces,
+
+\begin{align}
+    Q
+    &=
+    \paren{5.0\times10^{12}}
+    \paren{\SI{1.602176634e-19}{\coulomb}}
+    \\
+    &\approx
+    \SI{8.0e-7}{\coulomb}.
+\end{align}
+
+Por tanto,
+
+\begin{equation}
+    \boxed{
+    Q\approx+\SI{8.0e-7}{\coulomb}
+    }.
+\end{equation}
+
+También puede escribirse como
+
+\begin{equation}
+    \boxed{
+    Q\approx+\SI{0.80}{\micro\coulomb}
+    }.
+\end{equation}
+
+\begin{interpretacion}
+El signo positivo no apareció por una regla matemática arbitraria.
+
+Lo anticipamos físicamente desde el comienzo: el cuerpo perdió electrones,
+por lo que quedó con déficit de carga negativa.
+\end{interpretacion}
+
+
+% ============================================================
+% CONSERVACIÓN DE LA CARGA
+% ============================================================
+
+\section{Conservación de la carga eléctrica}
+
+Una de las propiedades fundamentales de la carga eléctrica es su
+conservación.
+
+\begin{principio}[Principio de conservación de la carga eléctrica]
+La carga eléctrica total de un sistema aislado permanece constante.
+\end{principio}
+
+Matemáticamente,
+
+\begin{equation}
+    \boxed{
+    Q_{\text{total,inicial}}
+    =
+    Q_{\text{total,final}}
+    }.
+    \label{eq:conservacion_carga}
+\end{equation}
+
+Esto significa que en los procesos ordinarios de electrización la carga no
+aparece de la nada ni desaparece.
+
+Lo que ocurre es una \textbf{transferencia} o una
+\textbf{redistribución} de carga.
+
+
+% ============================================================
+% EJEMPLO CON DOS CUERPOS
+% ============================================================
+
+\subsection{Interpretación de la conservación}
+
+Supongamos que tenemos dos cuerpos inicialmente neutros.
+
+Por tanto,
+
+\[
+Q_{\text{inicial}}=0.
+\]
+
+Después de cierto proceso, el cuerpo A pierde electrones y queda con carga
+
+\[
++Q.
+\]
+
+Los electrones transferidos llegan al cuerpo B, que queda con carga
+
+\[
+-Q.
+\]
+
+La carga total final es
+
+\begin{equation}
+    Q_{\text{final}}
+    =
+    (+Q)+(-Q)
+    =
+    0.
+\end{equation}
+
+Así,
+
+\[
+Q_{\text{inicial}}
+=
+Q_{\text{final}}.
+\]
+
+\begin{idea}
+Cuando dos cuerpos inicialmente neutros se electrizan entre sí y el sistema
+puede considerarse aislado, uno no puede adquirir una carga sin que aparezca
+una carga compensadora en otra parte del sistema.
+\end{idea}
+
+
+% ============================================================
+% FROTAMIENTO Y CONSERVACIÓN
+% ============================================================
+
+\begin{notapedagogica}
+Este es un momento apropiado para regresar al experimento inicial del peine,
+la regla o el globo.
+
+Puede preguntarse:
+
+\begin{quote}
+Cuando frotamos dos cuerpos, ¿el frotamiento crea electrones?
+\end{quote}
+
+La respuesta es no.
+
+Los electrones ya existían.
+
+El proceso favorece su transferencia de un material al otro.
+
+Por eso la electrización por frotamiento debe explicarse como
+\textbf{transferencia de carga}, no como creación de carga.
+\end{notapedagogica}
+
+
+% ============================================================
+% CUANTIZACIÓN
+% ============================================================
+
+\section{Cuantización de la carga eléctrica}
+
+La carga eléctrica posee otra propiedad fundamental: está cuantizada.
+
+\begin{principio}[Cuantización de la carga]
+La carga eléctrica neta observable en los procesos ordinarios aparece en
+múltiplos enteros de la carga elemental \(e\).
+\end{principio}
+
+Por tanto,
+
+\begin{equation}
+    \boxed{
+    Q=ne
+    },
+    \qquad
+    n=0,\pm1,\pm2,\pm3,\ldots
+    \label{eq:cuantizacion_carga}
+\end{equation}
+
+Esto significa que un cuerpo puede tener, por ejemplo,
+
+\[
+Q=e,
+\]
+
+\[
+Q=-3e,
+\]
+
+o
+
+\[
+Q=1500e,
+\]
+
+pero en el contexto electrostático ordinario no encontraremos un objeto
+aislado con
+
+\[
+Q=1.37e.
+\]
+
+\begin{interpretacion}
+La palabra \textit{cuantizada} significa que la carga no cambia de manera
+arbitrariamente continua a escala microscópica.
+
+La transferencia ocurre en unidades elementales asociadas, en los procesos
+ordinarios, al número entero de electrones transferidos.
+\end{interpretacion}
+
+
+% ============================================================
+% EJEMPLO DE CUANTIZACIÓN
+% ============================================================
+
+\subsection{Ejemplo: identificar una carga posible}
+
+Supongamos que una partícula tiene una carga
+
+\[
+Q=-3.204353268\times10^{-19}\,\si{\coulomb}.
+\]
+
+Dividimos su magnitud entre la carga elemental:
+
+\begin{align}
+    N
+    &=
+    \frac{\abs{Q}}{e}
+    \\
+    &=
+    \frac{3.204353268\times10^{-19}}
+    {1.602176634\times10^{-19}}
+    \\
+    &=2.
+\end{align}
+
+Por tanto,
+
+\[
+Q=-2e.
+\]
+
+La carga corresponde a dos cargas elementales negativas.
+
+\begin{nota}
+En la física de partículas existen constituyentes fundamentales, como los
+quarks, a los que se asignan cargas fraccionarias de \(e\).
+
+Sin embargo, los quarks no se observan aislados en las situaciones
+electrostáticas ordinarias. Para el estudio que desarrollamos aquí, la
+relación \(Q=ne\) describe las cargas netas que encontraremos.
+\end{nota}
+
+
+% ============================================================
+% CONDUCTORES Y AISLANTES
+% ============================================================
+
+\section{Conductores y aislantes}
+
+Hasta ahora hemos preguntado cuánto vale la carga de un cuerpo.
+
+Ahora debemos hacer una pregunta diferente:
+
+\begin{quote}
+¿Qué tan fácilmente puede moverse la carga dentro del material?
+\end{quote}
+
+La respuesta depende de la estructura microscópica del material.
+
+
+% ============================================================
+% CONDUCTORES
+% ============================================================
+
+\subsection{Conductores}
+
+\begin{definicion}[Conductor eléctrico]
+Un \textbf{conductor} es un material en el cual existen portadores de carga
+que pueden desplazarse con relativa facilidad a través del material.
+\end{definicion}
+
+Los metales son ejemplos importantes de conductores.
+
+En un metal, algunos electrones se encuentran débilmente ligados a átomos
+individuales y pueden desplazarse a través de la estructura metálica.
+
+Por esta razón, cuando depositamos carga en un conductor, esta puede
+redistribuirse.
+
+Entre los conductores encontramos, por ejemplo:
+
+\begin{itemize}
+    \item cobre;
+    \item aluminio;
+    \item plata;
+    \item otros metales;
+    \item el cuerpo humano, en muchas situaciones;
+    \item soluciones que contienen iones móviles.
+\end{itemize}
+
+\begin{idea}
+Que un material sea conductor no significa que tenga más electrones que un
+aislante.
+
+La diferencia fundamental está en la
+\textbf{movilidad de los portadores de carga}.
+\end{idea}
+
+
+% ============================================================
+% AISLANTES
+% ============================================================
+
+\subsection{Aislantes}
+
+\begin{definicion}[Aislante eléctrico]
+Un \textbf{aislante} es un material en el cual las cargas no pueden
+desplazarse libremente a través de grandes distancias dentro del material en
+las condiciones consideradas.
+\end{definicion}
+
+En los aislantes, los electrones se encuentran mucho más ligados a átomos o
+moléculas particulares.
+
+Son ejemplos comunes:
+
+\begin{itemize}
+    \item plástico;
+    \item vidrio;
+    \item caucho;
+    \item cerámica;
+    \item aire seco en condiciones ordinarias.
+\end{itemize}
+
+Si frotamos una barra aislante y depositamos carga en una región, esa carga
+puede permanecer relativamente localizada en ella.
+
+Esto contrasta con un conductor, donde la carga tiene mayor libertad para
+redistribuirse.
+
+
+% ============================================================
+% COMPARACIÓN
+% ============================================================
+
+\subsection{Comparación entre conductor y aislante}
+
+\begin{table}[H]
+    \centering
+
+    \caption{Comparación cualitativa entre conductores y aislantes.}
+
+    \begin{tabularx}{\textwidth}{lYY}
+        \toprule
+        & \textbf{Conductor} & \textbf{Aislante} \\
+        \midrule
+
+        Movilidad de carga
+        &
+        Relativamente alta
+        &
+        Muy reducida
+        \\
+
+        Redistribución
+        &
+        La carga puede redistribuirse fácilmente
+        &
+        La carga suele permanecer más localizada
+        \\
+
+        Ejemplos
+        &
+        Metales
+        &
+        Plástico, vidrio, caucho
+        \\
+
+        \bottomrule
+    \end{tabularx}
+
+\end{table}
+
+\begin{advertencia}
+La distinción entre conductor y aislante no es absolutamente rígida.
+
+La conductividad depende del material y también de condiciones como
+temperatura, humedad, impurezas y magnitud del campo eléctrico.
+
+Por ejemplo, el aire normalmente actúa como aislante, pero puede ionizarse
+durante una descarga eléctrica intensa y permitir el paso de carga.
+\end{advertencia}
+
+
+% ============================================================
+% POLARIZACIÓN
+% ============================================================
+
+\section{Polarización eléctrica}
+
+Existe una situación que parece contradictoria:
+
+\begin{quote}
+¿Cómo puede un objeto cargado atraer a un cuerpo que es eléctricamente
+neutro?
+\end{quote}
+
+La respuesta está en la redistribución de las cargas.
+
+
+% ============================================================
+% POLARIZACIÓN EN CONDUCTOR
+% ============================================================
+
+\subsection{Polarización de un conductor}
+
+Consideremos un conductor neutro.
+
+Inicialmente su carga neta es cero.
+
+Ahora acercamos, sin tocarlo, una barra con carga negativa.
+
+Los electrones móviles del conductor experimentan repulsión y se desplazan
+hacia la región más alejada de la barra.
+
+Como consecuencia:
+
+\begin{itemize}
+    \item en la región próxima a la barra aparece un déficit relativo de
+    electrones;
+
+    \item en la región más alejada aparece un exceso de electrones.
+\end{itemize}
+
+El conductor continúa teniendo carga neta cero, pero sus cargas se han
+separado espacialmente.
+
+\begin{definicion}[Polarización]
+La \textbf{polarización eléctrica} es la separación o redistribución de
+cargas positivas y negativas dentro de un cuerpo, sin que necesariamente
+cambie su carga neta.
+\end{definicion}
+
+\begin{idea}
+Un objeto puede ser:
+
+\[
+\text{neutro}
+\]
+
+y al mismo tiempo
+
+\[
+\text{polarizado}.
+\]
+
+No existe contradicción.
+
+Ser neutro se refiere a la \textbf{carga neta}.
+
+Estar polarizado se refiere a la \textbf{distribución espacial} de las
+cargas.
+\end{idea}
+
+
+% ============================================================
+% ATRACCIÓN DE UN CUERPO NEUTRO
+% ============================================================
+
+\subsection{¿Por qué una carga puede atraer un objeto neutro?}
+
+Supongamos que un cuerpo negativo se acerca a un objeto neutro.
+
+La carga del objeto neutro puede redistribuirse o polarizarse de modo que las
+cargas de signo opuesto queden, en promedio, más cerca del cuerpo cargado.
+
+Como la interacción eléctrica depende de la distancia, la atracción de las
+cargas más cercanas puede superar la repulsión de las cargas más alejadas.
+
+El resultado puede ser una fuerza neta de atracción.
+
+\begin{notapedagogica}
+Aquí puede retomarse el experimento del peine y los trozos de papel.
+
+La conclusión importante es:
+
+\begin{quote}
+Que un cuerpo cargado atraiga a otro cuerpo no demuestra por sí solo que
+ambos posean cargas netas de signos opuestos.
+\end{quote}
+
+Un cuerpo eléctricamente neutro también puede ser atraído debido a
+polarización.
+\end{notapedagogica}
+
+\begin{errorfrecuente}
+La regla
+
+\begin{quote}
+``si dos objetos se atraen, entonces tienen cargas opuestas''
+\end{quote}
+
+no siempre es válida.
+
+La repulsión sí permite concluir que ambos objetos tienen cargas netas del
+mismo signo.
+
+La atracción puede ocurrir entre cargas opuestas o entre un cuerpo cargado
+y otro neutro polarizado.
+\end{errorfrecuente}
+
+
+% ============================================================
+% ELECTRIZACIÓN
+% ============================================================
+
+\section{Electrización}
+
+Ya podemos responder una pregunta central:
+
+\begin{quote}
+¿Qué significa electrizar un cuerpo?
+\end{quote}
+
+\begin{definicion}[Electrización]
+La \textbf{electrización} es el proceso mediante el cual un cuerpo adquiere
+una carga eléctrica neta o modifica su estado eléctrico mediante transferencia
+o redistribución de cargas.
+\end{definicion}
+
+En los fenómenos ordinarios estudiaremos tres métodos principales:
+
+\begin{enumerate}
+    \item electrización por frotamiento;
+    \item electrización por contacto;
+    \item electrización por inducción.
+\end{enumerate}
+
+
+% ============================================================
+% FROTAMIENTO
+% ============================================================
+
+\subsection{Electrización por frotamiento}
+
+Consideremos dos cuerpos inicialmente neutros hechos de materiales diferentes.
+
+Al ponerlos en contacto y frotarlos, determinados electrones pueden
+transferirse de un material al otro.
+
+El cuerpo que pierde electrones queda cargado positivamente.
+
+El cuerpo que gana electrones queda cargado negativamente.
+
+Si el sistema puede considerarse aislado,
+
+\[
+Q_{\text{total,inicial}}=0
+\]
+
+y, después del proceso,
+
+\[
+Q_1+Q_2=0.
+\]
+
+Por tanto,
+
+\begin{equation}
+    Q_1=-Q_2.
+\end{equation}
+
+\begin{idea}
+El frotamiento no crea carga eléctrica.
+
+Facilita la transferencia de electrones entre los materiales.
+\end{idea}
+
+\begin{notapedagogica}
+La explicación en clase puede formularse de manera muy directa:
+
+\begin{quote}
+Antes de frotarlos, los dos cuerpos son neutros.
+
+Durante el contacto algunos electrones pasan de uno al otro.
+
+El que pierde electrones queda positivo.
+
+El que gana electrones queda negativo.
+
+Si consideramos ambos cuerpos juntos, la carga total sigue siendo la misma.
+\end{quote}
+
+De esta manera se conecta inmediatamente la electrización con el principio
+de conservación de la carga.
+\end{notapedagogica}
+
+
+% ============================================================
+% CONTACTO
+% ============================================================
+
+\subsection{Electrización por contacto}
+
+Supongamos ahora que tenemos un conductor cargado y otro conductor
+inicialmente neutro.
+
+Cuando los ponemos en contacto, los portadores de carga pueden desplazarse
+entre ambos cuerpos.
+
+La carga se redistribuye hasta alcanzar una nueva situación de equilibrio.
+
+\begin{definicion}[Electrización por contacto]
+La \textbf{electrización por contacto} ocurre cuando un cuerpo adquiere
+carga eléctrica mediante contacto directo con otro cuerpo cargado.
+\end{definicion}
+
+Después de separarlos, el cuerpo que inicialmente era neutro puede quedar
+cargado con el mismo signo que el cuerpo que produjo la electrización.
+
+\begin{advertencia}
+No debe suponerse automáticamente que la carga se divide exactamente por la
+mitad.
+
+Eso ocurre únicamente en situaciones especiales, por ejemplo cuando se
+ponen en contacto dos conductores idénticos y aislados bajo condiciones
+simétricas.
+
+En general, la distribución final depende de la geometría y de las
+características de los conductores.
+\end{advertencia}
+
+
+% ============================================================
+% INDUCCIÓN
+% ============================================================
+
+\subsection{Electrización por inducción}
+
+Existe un método aún más interesante.
+
+Es posible cargar un conductor sin que el cuerpo utilizado para producir la
+electrización llegue a tocarlo.
+
+Este procedimiento recibe el nombre de \textbf{inducción}.
+
+\begin{definicion}[Electrización por inducción]
+La \textbf{electrización por inducción} es un proceso mediante el cual un
+conductor adquiere carga neta debido a la influencia de un cuerpo cargado,
+sin contacto directo con este.
+\end{definicion}
+
+
+% ============================================================
+% CONEXIÓN A TIERRA
+% ============================================================
+
+\subsection{Conexión a tierra}
+
+Para comprender la inducción debemos introducir la idea de
+\textbf{conexión a tierra}.
+
+La Tierra puede actuar, en muchas situaciones electrostáticas, como un enorme
+reservorio capaz de recibir o suministrar electrones sin experimentar un
+cambio apreciable en su estado eléctrico global.
+
+Representaremos la conexión a tierra mediante un camino conductor entre el
+objeto y la Tierra.
+
+
+% ============================================================
+% PROCEDIMIENTO DE INDUCCIÓN
+% ============================================================
+
+\subsection{Proceso de carga por inducción}
+
+Supongamos que queremos cargar un conductor inicialmente neutro utilizando
+una barra con carga negativa.
+
+El procedimiento puede analizarse paso a paso.
+
+\subsubsection*{Paso 1: acercar la barra}
+
+Acercamos la barra negativa al conductor sin tocarlo.
+
+Los electrones móviles del conductor son repelidos hacia el lado opuesto.
+
+El conductor se polariza.
+
+Todavía,
+
+\[
+Q_{\text{conductor}}=0.
+\]
+
+
+\subsubsection*{Paso 2: conectar el conductor a tierra}
+
+Mientras la barra permanece cerca, conectamos el conductor a tierra.
+
+Debido a la repulsión producida por la barra negativa, algunos electrones
+pueden abandonar el conductor y pasar hacia la Tierra.
+
+Ahora el conductor ha perdido electrones.
+
+
+\subsubsection*{Paso 3: retirar primero la conexión a tierra}
+
+Sin retirar todavía la barra cargada, desconectamos el conductor de la
+Tierra.
+
+Los electrones que abandonaron el conductor ya no pueden regresar por ese
+camino.
+
+
+\subsubsection*{Paso 4: retirar la barra inductora}
+
+Finalmente alejamos la barra negativa.
+
+La carga que permanece en el conductor se redistribuye.
+
+Como el conductor perdió electrones, queda con carga neta positiva.
+
+\begin{equation}
+    \boxed{
+    \text{inductor negativo}
+    \Longrightarrow
+    \text{conductor inducido positivo}
+    }
+\end{equation}
+
+Si utilizamos un inductor positivo, el proceso se invierte y el conductor
+puede quedar cargado negativamente.
+
+\begin{idea}
+En una electrización por inducción bien realizada, el cuerpo inducido queda
+con signo opuesto al del cuerpo inductor.
+\end{idea}
+
+
+% ============================================================
+% DIFERENCIA ENTRE POLARIZACIÓN E INDUCCIÓN
+% ============================================================
+
+\subsection{Polarización no es lo mismo que electrización por inducción}
+
+Esta distinción es fundamental.
+
+Si simplemente acercamos una barra cargada a un conductor neutro,
+
+\[
+\text{se redistribuyen las cargas},
+\]
+
+pero
+
+\[
+Q_{\text{neto}}=0.
+\]
+
+El conductor está \textbf{polarizado}, pero sigue siendo neutro.
+
+Para que quede finalmente cargado por inducción debe existir un mecanismo
+que permita transferencia de carga, por ejemplo una conexión a tierra.
+
+\begin{errorfrecuente}
+No llamar automáticamente ``carga por inducción'' a cualquier separación de
+cargas causada por acercar un objeto cargado.
+
+Acercar el objeto produce inicialmente
+\textbf{polarización}.
+
+La electrización por inducción requiere que el cuerpo termine con una carga
+neta diferente de cero.
+\end{errorfrecuente}
+
+
+% ============================================================
+% COMPARACIÓN DE LOS MÉTODOS
+% ============================================================
+
+\subsection{Comparación de los métodos de electrización}
+
+\begin{table}[H]
+    \centering
+
+    \caption{Comparación cualitativa de los principales métodos de
+    electrización.}
+
+    \begin{tabularx}{\textwidth}{lYYY}
+        \toprule
+        Método
+        &
+        ¿Hay contacto?
+        &
+        ¿Hay transferencia de electrones?
+        &
+        Resultado típico
+        \\
+        \midrule
+
+        Frotamiento
+        &
+        Sí
+        &
+        Sí
+        &
+        Los cuerpos quedan con cargas de signos opuestos
+        \\
+
+        Contacto
+        &
+        Sí
+        &
+        Sí
+        &
+        El cuerpo neutro adquiere normalmente el signo del cuerpo cargado
+        \\
+
+        Inducción
+        &
+        No con el inductor
+        &
+        Sí, mediante tierra u otro camino conductor
+        &
+        El cuerpo inducido queda con signo opuesto al inductor
+        \\
+
+        \bottomrule
+    \end{tabularx}
+
+\end{table}
+
+
+% ============================================================
+% UNA DISTINCIÓN MUY IMPORTANTE
+% ============================================================
+
+\subsection{Transferencia de carga y redistribución de carga}
+
+A lo largo de esta clase han aparecido dos procesos diferentes.
+
+\subsubsection{Transferencia}
+
+En una transferencia, electrones pasan de un cuerpo a otro.
+
+Esto ocurre, por ejemplo, durante:
+
+\begin{itemize}
+    \item frotamiento;
+    \item contacto;
+    \item inducción cuando existe conexión a tierra.
+\end{itemize}
+
+
+\subsubsection{Redistribución}
+
+En una redistribución, las cargas que ya se encuentran dentro de un cuerpo
+cambian de posición sin que necesariamente cambie la carga neta del cuerpo.
+
+Esto ocurre durante la polarización.
+
+\begin{idea}
+Esta distinción será muy importante más adelante:
+
+\[
+\boxed{
+\text{redistribuir carga}
+\neq
+\text{crear carga}
+}
+\]
+
+y
+
+\[
+\boxed{
+\text{polarizar un cuerpo}
+\neq
+\text{darle necesariamente carga neta}
+}.
+\]
+\end{idea}
+
+
+% ============================================================
+% ERRORES FRECUENTES
+% ============================================================
+
+\section{Errores y confusiones frecuentes}
+
+\begin{errorfrecuente}
+\textbf{Pensar que un cuerpo neutro no contiene cargas.}
+
+Un cuerpo neutro posee cargas positivas y negativas; simplemente su suma
+algebraica es cero.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Decir que la fricción crea carga eléctrica.}
+
+La electrización por frotamiento implica transferencia de electrones.
+
+La carga total se conserva.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Pensar que un cuerpo positivo ganó protones.}
+
+En los procesos electrostáticos ordinarios de sólidos, un cuerpo queda
+positivo normalmente porque perdió electrones.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Confundir carga positiva con ``más carga''.}
+
+Los signos positivo y negativo indican dos tipos de carga, no una comparación
+entre cantidades grandes y pequeñas.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Pensar que los electrones tienen mayor carga que los protones.}
+
+La magnitud de las cargas es la misma:
+
+\[
+\abs{q_e}
+=
+\abs{q_p}
+=
+e.
+\]
+
+Sus signos son opuestos.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Confundir conductor con cuerpo cargado.}
+
+Un conductor puede ser eléctricamente neutro.
+
+Ser conductor describe la movilidad de los portadores de carga, no la carga
+neta del cuerpo.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Confundir aislante con material sin cargas eléctricas.}
+
+Los aislantes también están formados por partículas cargadas.
+
+La diferencia es que sus cargas tienen mucha menor libertad de movimiento
+macroscópico.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Concluir que dos cuerpos que se atraen necesariamente poseen cargas
+opuestas.}
+
+Un cuerpo cargado puede atraer un cuerpo neutro debido a polarización.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Confundir polarización con electrización por inducción.}
+
+La polarización redistribuye las cargas.
+
+La electrización por inducción deja finalmente al cuerpo con una carga neta.
+\end{errorfrecuente}
+
+
+% ============================================================
+% SECUENCIA PARA DICTAR LA CLASE
+% ============================================================
+
+\section{Secuencia conceptual para explicar el tema}
+
+\begin{notapedagogica}
+Una secuencia especialmente clara para dictar esta clase es:
+
+\begin{enumerate}
+
+    \item Comenzar con una experiencia:
+    peine, regla o globo frotado que atrae pequeños trozos de papel.
+
+    \item Preguntar qué cambió en el cuerpo después de frotarlo.
+
+    \item Introducir la idea de electrostática.
+
+    \item Recordar brevemente la estructura del átomo:
+    protones, neutrones y electrones.
+
+    \item Introducir la carga eléctrica como propiedad fundamental de la
+    materia.
+
+    \item Establecer los dos signos de carga:
+    positiva y negativa.
+
+    \item Explicar cualitativamente:
+
+    \[
+    \text{iguales se repelen},
+    \qquad
+    \text{opuestas se atraen}.
+    \]
+
+    \item Explicar qué significa realmente que un cuerpo sea neutro.
+
+    \item Establecer la idea central:
+
+    \begin{quote}
+    perder electrones produce carga positiva;
+    ganar electrones produce carga negativa.
+    \end{quote}
+
+    \item Introducir el coulomb y la carga elemental.
+
+    \item Explicar el principio de conservación de la carga.
+
+    \item Volver al frotamiento y aclarar que la carga no fue creada:
+    simplemente se transfirió.
+
+    \item Introducir la cuantización:
+
+    \[
+    Q=ne.
+    \]
+
+    \item Explicar conductores y aislantes desde la movilidad de los
+    portadores de carga.
+
+    \item Mostrar que un objeto neutro puede polarizarse.
+
+    \item Utilizar la polarización para explicar por qué un cuerpo cargado
+    puede atraer objetos neutros.
+
+    \item Explicar electrización por frotamiento.
+
+    \item Explicar electrización por contacto.
+
+    \item Explicar electrización por inducción paso a paso, incluyendo la
+    conexión a tierra.
+
+    \item Comparar los tres métodos.
+
+    \item Finalizar conectando el tema con la siguiente pregunta:
+
+    \begin{quote}
+    Ya sabemos que las cargas pueden atraerse o repelerse.
+
+    ¿Cómo podemos calcular la magnitud de esa fuerza?
+    \end{quote}
+
+    Esta pregunta conduce directamente a la ley de Coulomb.
+
+\end{enumerate}
+\end{notapedagogica}
+
+
+% ============================================================
+% PREGUNTAS DURANTE LA CLASE
+% ============================================================
+
+\section{Preguntas para comprobar comprensión}
+
+Antes de pasar a ejercicios formales pueden realizarse preguntas orales como:
+
+\begin{enumerate}
+
+    \item ¿Un cuerpo eléctricamente neutro carece de cargas eléctricas?
+
+    \item ¿Cuál es la diferencia entre un cuerpo neutro y un cuerpo cargado?
+
+    \item ¿Qué ocurre si un cuerpo inicialmente neutro pierde electrones?
+
+    \item ¿Qué ocurre si gana electrones?
+
+    \item ¿Por qué no decimos normalmente que un objeto se carga
+    positivamente porque ganó protones?
+
+    \item ¿Qué tienen en común la magnitud de la carga del protón y la del
+    electrón?
+
+    \item ¿Qué significa afirmar que la carga se conserva?
+
+    \item Cuando frotamos dos cuerpos neutros, ¿se está creando carga?
+
+    \item ¿Qué significa que la carga eléctrica está cuantizada?
+
+    \item ¿Puede existir, dentro del modelo estudiado, una carga neta de
+
+    \[
+    2.5e?
+    \]
+
+    \item ¿Cuál es la diferencia fundamental entre un conductor y un
+    aislante?
+
+    \item ¿Puede un conductor ser eléctricamente neutro?
+
+    \item ¿Puede un aislante contener electrones?
+
+    \item ¿Puede un cuerpo cargado atraer a otro cuerpo eléctricamente
+    neutro?
+
+    \item Si dos cuerpos se repelen, ¿qué podemos afirmar acerca de sus
+    cargas?
+
+    \item ¿Cuál es la diferencia entre polarización y electrización?
+
+    \item ¿En cuál método de electrización no es necesario tocar el cuerpo
+    con el objeto cargado?
+
+    \item ¿Qué función cumple la conexión a tierra durante una electrización
+    por inducción?
+
+\end{enumerate}
+
+
+% ============================================================
+% RESUMEN
+% ============================================================
+
+\begin{resumen}
+
+\begin{itemize}
+
+    \item La carga eléctrica es una propiedad fundamental de la materia
+    relacionada con las interacciones electromagnéticas.
+
+    \item Existen dos signos de carga:
+
+    \[
+    \text{positiva}
+    \qquad\text{y}\qquad
+    \text{negativa}.
+    \]
+
+    \item Cargas del mismo signo se repelen y cargas de signo opuesto se
+    atraen.
+
+    \item El protón tiene carga
+
+    \[
+    q_p=+e,
+    \]
+
+    el electrón
+
+    \[
+    q_e=-e,
+    \]
+
+    y el neutrón tiene carga neta cero.
+
+    \item La carga elemental es
+
+    \[
+    e=
+    \SI{1.602176634e-19}{\coulomb}.
+    \]
+
+    \item La unidad SI de carga es el coulomb.
+
+    \item Un cuerpo neutro no carece de cargas; posee carga neta igual a
+    cero.
+
+    \item En los procesos electrostáticos ordinarios:
+
+    \[
+    \text{perder electrones}
+    \Longrightarrow
+    Q>0,
+    \]
+
+    mientras que
+
+    \[
+    \text{ganar electrones}
+    \Longrightarrow
+    Q<0.
+    \]
+
+    \item La carga eléctrica se conserva:
+
+    \[
+    Q_{\text{inicial}}
+    =
+    Q_{\text{final}}
+    \]
+
+    para un sistema aislado.
+
+    \item La carga está cuantizada:
+
+    \[
+    Q=ne.
+    \]
+
+    \item Un conductor permite que los portadores de carga se desplacen con
+    relativa facilidad.
+
+    \item En un aislante las cargas tienen mucha menor libertad para
+    desplazarse a través del material.
+
+    \item La polarización consiste en una redistribución de cargas y puede
+    ocurrir sin cambiar la carga neta del cuerpo.
+
+    \item Un objeto cargado puede atraer un objeto neutro debido a
+    polarización.
+
+    \item Los principales mecanismos de electrización estudiados son:
+
+    \begin{enumerate}
+        \item frotamiento;
+        \item contacto;
+        \item inducción.
+    \end{enumerate}
+
+    \item La electrización por frotamiento implica transferencia de
+    electrones entre materiales.
+
+    \item La electrización por contacto implica transferencia directa de
+    carga al poner cuerpos en contacto.
+
+    \item La electrización por inducción permite cargar un conductor sin
+    contacto directo con el cuerpo inductor y normalmente requiere un camino
+    para transferir carga, como una conexión a tierra.
+
+    \item La carga no se crea durante estos procesos: se transfiere o se
+    redistribuye.
+
+\end{itemize}
+
+\end{resumen}

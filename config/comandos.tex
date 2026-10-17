@@ -1,0 +1,108 @@
+﻿% ------------------------------------------------------------
+% DATOS DEL LIBRO
+% ------------------------------------------------------------
+
+\newcommand{\tituloobra}{Física}
+\newcommand{\autorlibro}{Julian David Chavarro Balanta}
+
+\providecommand{\titulovolumen}{}
+\providecommand{\subtitulovolumen}{}
+
+
+% ------------------------------------------------------------
+% MATEMÁTICAS GENERALES
+% ------------------------------------------------------------
+
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\newcommand{\fr}[2]{\dfrac{#1}{#2}}
+
+\newcommand{\paren}[1]{\left(#1\right)}
+\newcommand{\bracket}[1]{\left[#1\right]}
+\newcommand{\braces}[1]{\left\{#1\right\}}
+
+
+% ------------------------------------------------------------
+% VECTORES
+% ------------------------------------------------------------
+
+\newcommand{\vect}[1]{\bm{#1}}
+
+\newcommand{\uvec}[1]{\hat{\bm{#1}}}
+
+\newcommand{\ihat}{\hat{\bm{\imath}}}
+\newcommand{\jhat}{\hat{\bm{\jmath}}}
+\newcommand{\khat}{\hat{\bm{k}}}
+
+\newcommand{\pdot}{\mathbin{\bm{\cdot}}}
+\newcommand{\pcross}{\mathbin{\bm{\times}}}
+
+
+% ------------------------------------------------------------
+% CÁLCULO
+% ------------------------------------------------------------
+
+\newcommand{\dd}{\mathop{}\!\mathrm{d}}
+
+\newcommand{\deriv}[2]{
+    \frac{\dd #1}{\dd #2}
+}
+
+\newcommand{\derivdos}[2]{
+    \frac{\dd^{2}#1}{\dd #2^{2}}
+}
+
+\newcommand{\derivn}[3]{
+    \frac{\dd^{#3}#1}{\dd #2^{#3}}
+}
+
+\newcommand{\pderiv}[2]{
+    \frac{\partial #1}{\partial #2}
+}
+
+\newcommand{\pderivdos}[2]{
+    \frac{\partial^{2}#1}{\partial #2^{2}}
+}
+
+
+% ------------------------------------------------------------
+% SÍMBOLOS GENERALES
+% ------------------------------------------------------------
+
+\newcommand{\grado}{^{\circ}}
+\newcommand{\implica}{\Longrightarrow}
+\newcommand{\sii}{\Longleftrightarrow}
+\newcommand{\proporcional}{\propto}
+
+
+% ------------------------------------------------------------
+% OPERADORES
+% ------------------------------------------------------------
+
+\DeclareMathOperator{\sen}{sen}
+\DeclareMathOperator{\arcsen}{arcsen}
+
+
+% ------------------------------------------------------------
+% TABLAS
+% ------------------------------------------------------------
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+
+% ------------------------------------------------------------
+% NIVELES DE EJERCICIOS
+% ------------------------------------------------------------
+
+\newcommand{\nivelbasico}{
+    \subsubsection*{Nivel básico}
+}
+
+\newcommand{\nivelintermedio}{
+    \subsubsection*{Nivel intermedio}
+}
+
+\newcommand{\nivelavanzado}{
+    \subsubsection*{Nivel avanzado}
+}

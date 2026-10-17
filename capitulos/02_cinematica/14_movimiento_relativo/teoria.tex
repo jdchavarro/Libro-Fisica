@@ -1,0 +1,4933 @@
+﻿\section{Movimiento relativo}
+
+Cuando observamos el movimiento de un objeto, normalmente describimos
+su posición, velocidad y aceleración respecto de algún sistema de
+referencia.
+
+Sin embargo, un mismo objeto puede parecer que se mueve de maneras
+diferentes cuando es observado desde sistemas de referencia distintos.
+
+Por ejemplo, imaginemos a una persona que camina por el pasillo de un
+tren en movimiento.
+
+Para otro pasajero sentado dentro del tren, la persona puede avanzar
+lentamente hacia la parte delantera.
+
+En cambio, para alguien que permanece en una estación, esa misma
+persona se desplaza con una velocidad diferente, porque además de
+caminar participa del movimiento del tren.
+
+También podemos considerar dos automóviles que circulan por una
+carretera. Aunque ambos estén en movimiento respecto del suelo,
+uno puede parecer prácticamente en reposo cuando se observa desde
+el otro.
+
+Estas situaciones muestran una característica fundamental de la
+cinemática:
+
+\begin{idea}[El movimiento depende del sistema de referencia]
+
+No basta con afirmar que un objeto tiene una determinada velocidad.
+
+Para describir correctamente su movimiento debemos indicar
+\textbf{respecto de qué sistema de referencia} se mide esa velocidad.
+
+Un mismo objeto puede tener velocidades diferentes respecto de
+observadores distintos, sin que exista contradicción física.
+
+\end{idea}
+
+El objetivo de este capítulo es aprender a relacionar las posiciones,
+velocidades y aceleraciones medidas desde diferentes sistemas de
+referencia.
+
+
+\section{El carácter relativo del movimiento}
+
+En los capítulos anteriores establecimos sistemas de referencia para
+describir movimientos rectilíneos, movimientos en varias dimensiones,
+proyectiles y movimientos circulares.
+
+En muchos ejemplos elegimos como referencia el suelo y lo
+consideramos aproximadamente fijo.
+
+Pero esta elección no es obligatoria.
+
+Podemos estudiar un movimiento respecto de:
+
+\begin{itemize}
+    \item el suelo;
+    \item un automóvil;
+    \item un tren;
+    \item una embarcación;
+    \item una aeronave;
+    \item otro objeto que también se encuentre en movimiento.
+\end{itemize}
+
+La posición y la velocidad asignadas al objeto pueden ser diferentes
+en cada uno de estos sistemas.
+
+\begin{definicion}[Movimiento relativo]
+
+El movimiento relativo es la descripción del cambio de posición de
+un cuerpo respecto de otro cuerpo o sistema de referencia.
+
+\end{definicion}
+
+Esta definición no significa que cualquier descripción sea
+arbitraria.
+
+Una vez elegido el sistema de referencia, las posiciones,
+velocidades y aceleraciones deben determinarse mediante relaciones
+matemáticas coherentes.
+
+\begin{interpretacion}
+
+Decir que un automóvil se mueve a
+\(\SI{20}{\meter\per\second}\) tiene un significado incompleto
+si no especificamos la referencia.
+
+Habitualmente se sobreentiende que esa velocidad se mide respecto
+del suelo.
+
+Pero también podríamos medir la velocidad del automóvil respecto
+de otro vehículo, y obtener un resultado diferente.
+
+\end{interpretacion}
+
+
+\section{Observadores y sistemas de referencia}
+
+En Física utilizamos la palabra \textbf{observador} para referirnos
+a quien realiza o describe mediciones desde un determinado sistema
+de referencia.
+
+No es necesario imaginar a una persona observando directamente
+el movimiento.
+
+Un sistema de referencia puede estar asociado a instrumentos
+de medición, cámaras o sistemas de navegación.
+
+Para estudiar el movimiento relativo necesitamos, al menos,
+dos sistemas de referencia.
+
+Consideremos:
+
+\begin{itemize}
+    \item \(S\): sistema de referencia fijo al suelo;
+    \item \(S'\): sistema de referencia asociado a un vehículo.
+\end{itemize}
+
+El sistema \(S'\) puede moverse respecto del sistema \(S\).
+
+Un mismo objeto \(P\) tendrá una posición medida desde \(S\)
+y otra posición medida desde \(S'\).
+
+\begin{modelo}[Sistemas de referencia en traslación]
+
+Inicialmente estudiaremos sistemas cuyos ejes cartesianos
+permanecen paralelos entre sí.
+
+El origen de uno puede trasladarse respecto del otro, pero
+no consideraremos rotaciones relativas de los ejes.
+
+Además, utilizaremos la descripción clásica o galileana
+del movimiento, apropiada cuando las velocidades involucradas
+son mucho menores que la velocidad de la luz.
+
+\end{modelo}
+
+Esta elección permitirá construir las relaciones del movimiento
+relativo sin introducir todavía efectos asociados a sistemas
+de referencia en rotación.
+
+
+\section{Notación para las magnitudes relativas}
+
+Cuando intervienen varios observadores es indispensable
+establecer una notación que evite ambigüedades.
+
+Utilizaremos:
+
+\[
+\vect{r}_{A/B}
+\]
+
+para representar la posición de \(A\) respecto de \(B\).
+
+Asimismo:
+
+\[
+\vect{v}_{A/B}
+\]
+
+representará la velocidad de \(A\) respecto de \(B\).
+
+Finalmente:
+
+\[
+\vect{a}_{A/B}
+\]
+
+representará la aceleración de \(A\) respecto de \(B\).
+
+\begin{recordatorio}[Lectura de subíndices]
+
+La expresión:
+
+\[
+\vect{v}_{A/B}
+\]
+
+se lee:
+
+\begin{center}
+``velocidad de \(A\) respecto de \(B\)''.
+\end{center}
+
+El primer subíndice identifica el objeto cuyo movimiento
+se describe.
+
+El segundo identifica la referencia.
+
+\end{recordatorio}
+
+No debemos confundir:
+
+\[
+\vect{v}_{A/B}
+\]
+
+con:
+
+\[
+\vect{v}_{B/A}.
+\]
+
+Son magnitudes relacionadas, pero sus sentidos son opuestos
+cuando ambas se expresan mediante ejes paralelos.
+
+
+\section{Posición relativa entre dos partículas}
+
+Comenzaremos por el caso más sencillo.
+
+Supongamos que dos partículas, \(A\) y \(B\), ocupan
+diferentes posiciones en un mismo sistema cartesiano.
+
+Sus vectores de posición son:
+
+\[
+\vect{r}_A
+\]
+
+y:
+
+\[
+\vect{r}_B.
+\]
+
+Queremos determinar dónde se encuentra \(A\) cuando tomamos
+como referencia la posición de \(B\).
+
+\begin{center}
+\begin{tikzpicture}[scale=0.95]
+
+    \coordinate (O) at (0,0);
+    \coordinate (A) at (5.3,3.2);
+    \coordinate (B) at (2.1,1.1);
+
+    \draw[-{Latex},thick]
+        (-0.5,0) -- (6.6,0)
+        node[right] {\(x\)};
+
+    \draw[-{Latex},thick]
+        (0,-0.5) -- (0,4.4)
+        node[above] {\(y\)};
+
+    \draw[-{Latex},very thick,AzulPrincipal]
+        (O) -- (A)
+        node[midway,above left] {\(\vect{r}_A\)};
+
+    \draw[-{Latex},very thick,VerdePrincipal]
+        (O) -- (B)
+        node[midway,below right] {\(\vect{r}_B\)};
+
+    \draw[-{Latex},very thick,RojoPrincipal]
+        (B) -- (A)
+        node[midway,below right] {\(\vect{r}_{A/B}\)};
+
+    \fill (O) circle (2pt);
+    \fill (A) circle (2.5pt);
+    \fill (B) circle (2.5pt);
+
+    \node[below left] at (O) {\(O\)};
+    \node[above right] at (A) {\(A\)};
+    \node[above left] at (B) {\(B\)};
+
+\end{tikzpicture}
+\end{center}
+
+Geométricamente:
+
+\[
+\vect{r}_B+\vect{r}_{A/B}=\vect{r}_A.
+\]
+
+Despejando:
+
+\[
+\boxed{
+\vect{r}_{A/B}=\vect{r}_A-\vect{r}_B
+}.
+\]
+
+Esta es la relación fundamental de posición relativa entre
+dos partículas medidas desde un mismo sistema de referencia.
+
+\begin{interpretacion}
+
+El vector:
+
+\[
+\vect{r}_{A/B}
+\]
+
+apunta desde \(B\) hacia \(A\).
+
+No representa necesariamente el movimiento realizado
+por ninguna de las partículas.
+
+Representa su separación vectorial en un instante determinado.
+
+\end{interpretacion}
+
+
+\section{Posición relativa mediante componentes rectangulares}
+
+En dos dimensiones:
+
+\[
+\vect{r}_A=x_A\ihat+y_A\jhat,
+\]
+
+\[
+\vect{r}_B=x_B\ihat+y_B\jhat.
+\]
+
+Entonces:
+
+\[
+\vect{r}_{A/B}
+=
+(x_A-x_B)\ihat+(y_A-y_B)\jhat.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+x_{A/B}=x_A-x_B
+},
+\]
+
+\[
+\boxed{
+y_{A/B}=y_A-y_B
+}.
+\]
+
+En tres dimensiones:
+
+\[
+\boxed{
+\vect{r}_{A/B}
+=
+(x_A-x_B)\ihat
++
+(y_A-y_B)\jhat
++
+(z_A-z_B)\khat
+}.
+\]
+
+La magnitud de la separación es:
+
+\[
+\boxed{
+r_{A/B}
+=
+\sqrt{
+(x_A-x_B)^2+
+(y_A-y_B)^2+
+(z_A-z_B)^2
+}
+}.
+\]
+
+En dos dimensiones se omite el término correspondiente a \(z\).
+
+\begin{advertencia}
+
+La separación entre dos partículas es una magnitud escalar
+no negativa.
+
+El vector posición relativa, en cambio, contiene dirección
+y sentido.
+
+Por ello no debemos reemplazar automáticamente:
+
+\[
+\vect{r}_{A/B}
+\]
+
+por:
+
+\[
+r_{A/B}.
+\]
+
+\end{advertencia}
+
+
+\section{Ejemplo: posición relativa en dos dimensiones}
+
+\begin{ejemplo}[Localización de dos vehículos]
+
+En un sistema cartesiano fijo al suelo, dos vehículos
+se encuentran en las posiciones:
+
+\[
+\vect{r}_A
+=
+(120\ihat+80\jhat)\,\si{\meter},
+\]
+
+\[
+\vect{r}_B
+=
+(40\ihat+140\jhat)\,\si{\meter}.
+\]
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item La posición de \(A\) respecto de \(B\).
+    \item La distancia entre ambos vehículos.
+    \item La dirección de \(A\) respecto de \(B\).
+\end{enumerate}
+
+\end{ejemplo}
+
+\subsection*{Posición relativa}
+
+Partimos de:
+
+\[
+\vect{r}_{A/B}=\vect{r}_A-\vect{r}_B.
+\]
+
+Por componentes:
+
+\[
+x_{A/B}=120-40=\SI{80}{\meter},
+\]
+
+\[
+y_{A/B}=80-140=-\SI{60}{\meter}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{r}_{A/B}
+=
+(80\ihat-60\jhat)\,\si{\meter}
+}.
+\]
+
+\subsection*{Distancia}
+
+La magnitud es:
+
+\[
+r_{A/B}
+=
+\sqrt{80^2+(-60)^2}\,\si{\meter}.
+\]
+
+Entonces:
+
+\[
+\boxed{
+r_{A/B}=\SI{100}{\meter}
+}.
+\]
+
+\subsection*{Dirección}
+
+El vector tiene:
+
+\[
+x_{A/B}>0,
+\qquad
+y_{A/B}<0.
+\]
+
+Por tanto, apunta hacia el cuarto cuadrante.
+
+La magnitud del ángulo respecto de \(+x\) es:
+
+\[
+\theta
+=
+\arctan\left(\frac{60}{80}\right).
+\]
+
+Así:
+
+\[
+\boxed{
+\theta\approx36.9\grado
+}
+\]
+
+por debajo del eje \(+x\).
+
+\begin{interpretacion}
+
+Desde la posición de \(B\), el vehículo \(A\) está
+\(\SI{80}{\meter}\) hacia \(+x\) y
+\(\SI{60}{\meter}\) hacia \(-y\).
+
+La distancia recta entre ellos es \(\SI{100}{\meter}\).
+
+\end{interpretacion}
+
+
+\section{Velocidad relativa entre dos partículas}
+
+La posición relativa puede cambiar con el tiempo.
+
+Si ambas partículas se mueven, tenemos:
+
+\[
+\vect{r}_{A/B}(t)
+=
+\vect{r}_A(t)-\vect{r}_B(t).
+\]
+
+La velocidad relativa es la tasa instantánea de cambio
+de la posición relativa:
+
+\[
+\vect{v}_{A/B}
+=
+\deriv{\vect{r}_{A/B}}{t}.
+\]
+
+Derivando:
+
+\[
+\vect{v}_{A/B}
+=
+\deriv{\vect{r}_A}{t}
+-
+\deriv{\vect{r}_B}{t}.
+\]
+
+Como:
+
+\[
+\vect{v}_A=\deriv{\vect{r}_A}{t},
+\]
+
+\[
+\vect{v}_B=\deriv{\vect{r}_B}{t},
+\]
+
+obtenemos:
+
+\[
+\boxed{
+\vect{v}_{A/B}
+=
+\vect{v}_A-\vect{v}_B
+}.
+\]
+
+\begin{definicion}[Velocidad relativa]
+
+La velocidad relativa de \(A\) respecto de \(B\) es
+la tasa de cambio temporal de la posición de \(A\)
+respecto de \(B\).
+
+Para partículas medidas desde un mismo sistema de
+referencia cartesiano:
+
+\[
+\boxed{
+\vect{v}_{A/B}=\vect{v}_A-\vect{v}_B
+}.
+\]
+
+\end{definicion}
+
+Su unidad SI es:
+
+\[
+\si{\meter\per\second}.
+\]
+
+\begin{interpretacion}
+
+La velocidad relativa describe cómo cambia la separación
+vectorial entre dos partículas.
+
+No indica necesariamente la rapidez con la que cambia
+la distancia escalar entre ellas.
+
+Esta diferencia resulta importante en movimientos
+bidimensionales.
+
+\end{interpretacion}
+
+
+\section{Componentes rectangulares de la velocidad relativa}
+
+Si:
+
+\[
+\vect{v}_A=v_{Ax}\ihat+v_{Ay}\jhat,
+\]
+
+\[
+\vect{v}_B=v_{Bx}\ihat+v_{By}\jhat,
+\]
+
+entonces:
+
+\[
+\vect{v}_{A/B}
+=
+(v_{Ax}-v_{Bx})\ihat
++
+(v_{Ay}-v_{By})\jhat.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v_{A/B,x}=v_{Ax}-v_{Bx}
+},
+\]
+
+\[
+\boxed{
+v_{A/B,y}=v_{Ay}-v_{By}
+}.
+\]
+
+En tres dimensiones también:
+
+\[
+\boxed{
+v_{A/B,z}=v_{Az}-v_{Bz}
+}.
+\]
+
+La magnitud es:
+
+\[
+\boxed{
+v_{A/B}
+=
+\sqrt{
+v_{A/B,x}^2+
+v_{A/B,y}^2+
+v_{A/B,z}^2
+}
+}.
+\]
+
+Esta es una relación vectorial y debe resolverse por componentes
+cuando el movimiento ocurre en varias dimensiones.
+
+
+\section{Cambio del orden de los observadores}
+
+Para estudiar la velocidad de \(B\) respecto de \(A\):
+
+\[
+\vect{v}_{B/A}=\vect{v}_B-\vect{v}_A.
+\]
+
+Comparando:
+
+\[
+\vect{v}_{A/B}=\vect{v}_A-\vect{v}_B,
+\]
+
+obtenemos:
+
+\[
+\boxed{
+\vect{v}_{B/A}=-\vect{v}_{A/B}
+}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v_{B/A}=v_{A/B}
+}.
+\]
+
+Las magnitudes de ambas velocidades relativas son iguales,
+pero sus sentidos son opuestos.
+
+\begin{interpretacion}
+
+Si desde el automóvil \(B\) observamos que el automóvil \(A\)
+se mueve hacia la derecha a cierta rapidez relativa, desde
+\(A\) observaremos que \(B\) se mueve hacia la izquierda
+con esa misma rapidez relativa, siempre que comparemos
+mediciones expresadas sobre ejes paralelos.
+
+\end{interpretacion}
+
+
+\section{Movimiento relativo en una dimensión}
+
+Comenzaremos con movimientos sobre una misma línea recta.
+
+Elegimos:
+
+\[
++x
+\]
+
+hacia la derecha.
+
+Las velocidades pueden tener valores positivos o negativos.
+
+La relación es:
+
+\[
+\boxed{
+v_{A/B,x}=v_{Ax}-v_{Bx}
+}.
+\]
+
+Esta única ecuación permite analizar movimientos:
+
+\begin{itemize}
+    \item en el mismo sentido;
+    \item en sentidos contrarios;
+    \item con uno de los objetos en reposo.
+\end{itemize}
+
+No es necesario memorizar reglas independientes para cada situación.
+
+
+\section{Objetos que se mueven en el mismo sentido}
+
+Consideremos dos automóviles que se desplazan hacia \(+x\).
+
+Sus velocidades respecto del suelo son:
+
+\[
+v_A=\SI{25}{\meter\per\second},
+\]
+
+\[
+v_B=\SI{18}{\meter\per\second}.
+\]
+
+La velocidad de \(A\) respecto de \(B\) es:
+
+\[
+v_{A/B}=v_A-v_B.
+\]
+
+Entonces:
+
+\[
+v_{A/B}=25-18.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v_{A/B}=+\SI{7}{\meter\per\second}
+}.
+\]
+
+\begin{interpretacion}
+
+Para una persona que se desplaza junto con \(B\), el
+automóvil \(A\) avanza hacia \(+x\) a
+\(\SI{7}{\meter\per\second}\).
+
+Aunque ambos vehículos se mueven rápidamente respecto
+del suelo, la velocidad relativa es menor.
+
+\end{interpretacion}
+
+
+\section{Objetos que se mueven en sentidos contrarios}
+
+Consideremos ahora:
+
+\[
+v_A=+\SI{20}{\meter\per\second},
+\]
+
+\[
+v_B=-\SI{15}{\meter\per\second}.
+\]
+
+La velocidad relativa es:
+
+\[
+v_{A/B}=v_A-v_B.
+\]
+
+Sustituyendo:
+
+\[
+v_{A/B}=20-(-15).
+\]
+
+Entonces:
+
+\[
+\boxed{
+v_{A/B}=+\SI{35}{\meter\per\second}
+}.
+\]
+
+\begin{interpretacion}
+
+En este caso las magnitudes parecen sumarse porque las
+velocidades tienen signos opuestos.
+
+Pero no hemos utilizado una regla especial de suma.
+
+Hemos aplicado exactamente la misma relación general:
+
+\[
+v_{A/B}=v_A-v_B.
+\]
+
+\end{interpretacion}
+
+
+\section{Velocidad relativa y rapidez de acercamiento}
+
+Cuando dos objetos se mueven sobre la misma línea, suele
+interesarnos saber si se están acercando o alejando.
+
+Esta pregunta requiere analizar no sólo la velocidad
+relativa, sino también la posición relativa.
+
+Definimos:
+
+\[
+x_{A/B}=x_A-x_B.
+\]
+
+La velocidad relativa es:
+
+\[
+v_{A/B}=\deriv{x_{A/B}}{t}.
+\]
+
+La distancia entre los objetos es:
+
+\[
+d=|x_{A/B}|.
+\]
+
+Cuando:
+
+\[
+x_{A/B}\neq0,
+\]
+
+la tasa de cambio de la distancia es:
+
+\[
+\boxed{
+\deriv{d}{t}
+=
+\frac{x_{A/B}}{|x_{A/B}|}
+v_{A/B}
+}.
+\]
+
+Si:
+
+\[
+\deriv{d}{t}<0,
+\]
+
+la distancia disminuye y los objetos se acercan.
+
+Si:
+
+\[
+\deriv{d}{t}>0,
+\]
+
+la distancia aumenta y se alejan.
+
+\begin{advertencia}
+
+La rapidez relativa no debe confundirse automáticamente
+con la rapidez de acercamiento.
+
+Incluso en una dimensión es necesario saber qué objeto
+se encuentra delante.
+
+En dos dimensiones, la distinción es todavía más importante.
+
+\end{advertencia}
+
+
+\section{Ejemplo: persecución entre automóviles}
+
+\begin{ejemplo}[Encuentro en una carretera]
+
+Dos automóviles se mueven sobre una carretera recta
+en la dirección \(+x\).
+
+En \(t=0\), el automóvil \(A\) se encuentra en:
+
+\[
+x_{A0}=\SI{0}{\meter},
+\]
+
+con velocidad:
+
+\[
+v_A=\SI{25}{\meter\per\second}.
+\]
+
+El automóvil \(B\) está inicialmente en:
+
+\[
+x_{B0}=\SI{150}{\meter},
+\]
+
+con velocidad:
+
+\[
+v_B=\SI{15}{\meter\per\second}.
+\]
+
+Ambos mantienen velocidades constantes.
+
+Determine cuánto tiempo tarda \(A\) en alcanzar a \(B\)
+y dónde ocurre el encuentro.
+
+\end{ejemplo}
+
+\subsection*{Modelo físico}
+
+Utilizamos movimiento rectilíneo uniforme para ambos vehículos.
+
+El eje \(+x\) apunta en el sentido de sus movimientos.
+
+Las posiciones son:
+
+\[
+x_A(t)=x_{A0}+v_At,
+\]
+
+\[
+x_B(t)=x_{B0}+v_Bt.
+\]
+
+Por tanto:
+
+\[
+x_A(t)=25t,
+\]
+
+\[
+x_B(t)=150+15t.
+\]
+
+\subsection*{Condición de encuentro}
+
+Los automóviles se encuentran cuando:
+
+\[
+x_A=x_B.
+\]
+
+Entonces:
+
+\[
+25t=150+15t.
+\]
+
+Despejando:
+
+\[
+10t=150.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+t=\SI{15.0}{\second}
+}.
+\]
+
+\subsection*{Posición del encuentro}
+
+Sustituimos en la ecuación de \(A\):
+
+\[
+x_A=25(15.0).
+\]
+
+Entonces:
+
+\[
+\boxed{
+x=\SI{375}{\meter}
+}.
+\]
+
+Comprobamos con \(B\):
+
+\[
+x_B=150+15(15.0)=\SI{375}{\meter}.
+\]
+
+Ambas posiciones coinciden.
+
+\begin{interpretacion}
+
+El automóvil \(A\) se acerca a \(B\) con rapidez relativa:
+
+\[
+25-15=\SI{10}{\meter\per\second}.
+\]
+
+Como la separación inicial es \(\SI{150}{\meter}\),
+necesita \(\SI{15}{\second}\) para eliminarla.
+
+El método relativo proporciona el mismo resultado que
+el análisis de ambas posiciones.
+
+\end{interpretacion}
+
+
+\section{Aceleración relativa entre dos partículas}
+
+La velocidad relativa también puede cambiar con el tiempo.
+
+Partimos de:
+
+\[
+\vect{v}_{A/B}=\vect{v}_A-\vect{v}_B.
+\]
+
+Derivamos:
+
+\[
+\deriv{\vect{v}_{A/B}}{t}
+=
+\deriv{\vect{v}_A}{t}
+-
+\deriv{\vect{v}_B}{t}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{a}_{A/B}=\vect{a}_A-\vect{a}_B
+}.
+\]
+
+\begin{definicion}[Aceleración relativa]
+
+La aceleración relativa de \(A\) respecto de \(B\) es
+la tasa de cambio temporal de la velocidad relativa.
+
+Para partículas descritas mediante un mismo sistema
+cartesiano:
+
+\[
+\boxed{
+\vect{a}_{A/B}=\vect{a}_A-\vect{a}_B
+}.
+\]
+
+\end{definicion}
+
+En componentes:
+
+\[
+\boxed{
+a_{A/B,x}=a_{Ax}-a_{Bx}
+},
+\]
+
+\[
+\boxed{
+a_{A/B,y}=a_{Ay}-a_{By}
+},
+\]
+
+\[
+\boxed{
+a_{A/B,z}=a_{Az}-a_{Bz}
+}.
+\]
+
+La unidad SI es:
+
+\[
+\si{\meter\per\second\squared}.
+\]
+
+
+\section{Aceleración relativa nula}
+
+Si dos partículas tienen la misma aceleración:
+
+\[
+\vect{a}_A=\vect{a}_B,
+\]
+
+entonces:
+
+\[
+\boxed{
+\vect{a}_{A/B}=\vect{0}
+}.
+\]
+
+Esto significa que la velocidad relativa permanece constante.
+
+Sin embargo, no implica que ambas partículas tengan
+la misma velocidad.
+
+Por ejemplo, dos cuerpos que caen libremente cerca
+de la superficie terrestre pueden tener diferentes
+velocidades iniciales, pero experimentar la misma
+aceleración gravitatoria.
+
+Despreciando el aire:
+
+\[
+\vect{a}_A=-g\jhat,
+\]
+
+\[
+\vect{a}_B=-g\jhat.
+\]
+
+Por tanto:
+
+\[
+\vect{a}_{A/B}
+=
+-g\jhat-(-g\jhat)
+=
+\vect{0}.
+\]
+
+\begin{interpretacion}
+
+Si ambos cuerpos experimentan exactamente la misma
+aceleración, esa aceleración no modifica su velocidad
+relativa.
+
+El cambio de velocidad que ambos experimentan
+es igual y se cancela al restar los vectores.
+
+\end{interpretacion}
+
+
+\section{Sistemas de referencia móviles}
+
+Hasta ahora hemos comparado directamente dos partículas
+respecto de un mismo sistema.
+
+Consideraremos ahora un objeto observado desde dos sistemas
+de referencia diferentes.
+
+Sean:
+
+\begin{itemize}
+    \item \(S\): sistema asociado al suelo;
+    \item \(S'\): sistema que se traslada respecto de \(S\);
+    \item \(P\): partícula cuyo movimiento queremos describir.
+\end{itemize}
+
+Los orígenes de ambos sistemas pueden estar en posiciones
+diferentes.
+
+Denotamos mediante:
+
+\[
+\vect{R}(t)
+\]
+
+el vector que va desde el origen de \(S\) hasta el origen
+de \(S'\), medido en \(S\).
+
+Supondremos que los ejes de ambos sistemas mantienen
+orientaciones paralelas.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.95]
+
+    \coordinate (O) at (0,0);
+    \coordinate (Op) at (3.0,1.1);
+    \coordinate (P) at (5.8,3.0);
+
+    \draw[-{Latex},thick]
+        (-0.5,0) -- (6.8,0)
+        node[right] {\(x\)};
+
+    \draw[-{Latex},thick]
+        (0,-0.4) -- (0,4.0)
+        node[above] {\(y\)};
+
+    \draw[-{Latex},thick,AzulSecundario]
+        (2.5,1.1) -- (6.5,1.1)
+        node[right] {\(x'\)};
+
+    \draw[-{Latex},thick,AzulSecundario]
+        (3.0,0.7) -- (3.0,4.0)
+        node[above] {\(y'\)};
+
+    \draw[-{Latex},very thick,VerdePrincipal]
+        (O) -- (Op)
+        node[midway,below] {\(\vect{R}\)};
+
+    \draw[-{Latex},very thick,RojoPrincipal]
+        (Op) -- (P)
+        node[midway,below right] {\(\vect{r}'_P\)};
+
+    \draw[-{Latex},very thick,AzulPrincipal]
+        (O) -- (P)
+        node[midway,above left] {\(\vect{r}_P\)};
+
+    \fill (O) circle (2pt);
+    \fill (Op) circle (2.5pt);
+    \fill (P) circle (2.5pt);
+
+    \node[below left] at (O) {\(O\)};
+    \node[below right] at (Op) {\(O'\)};
+    \node[above right] at (P) {\(P\)};
+
+\end{tikzpicture}
+\end{center}
+
+
+\section{Transformación de posiciones}
+
+La posición de \(P\) respecto de \(S\) se obtiene sumando:
+
+\begin{itemize}
+    \item la posición del origen de \(S'\) respecto de \(S\);
+    \item la posición de \(P\) respecto de \(S'\).
+\end{itemize}
+
+Geométricamente:
+
+\[
+\boxed{
+\vect{r}_P=\vect{R}+\vect{r}'_P
+}.
+\]
+
+Esta ecuación expresa que podemos llegar desde el origen
+de \(S\) hasta \(P\) siguiendo dos desplazamientos sucesivos.
+
+Si:
+
+\[
+\vect{R}=X\ihat+Y\jhat,
+\]
+
+y:
+
+\[
+\vect{r}'_P=x'\ihat+y'\jhat,
+\]
+
+entonces:
+
+\[
+\boxed{
+x=X+x'
+},
+\]
+
+\[
+\boxed{
+y=Y+y'
+}.
+\]
+
+En tres dimensiones:
+
+\[
+\boxed{
+z=Z+z'
+}.
+\]
+
+\begin{interpretacion}
+
+La transformación de posiciones no altera la ubicación
+física de la partícula.
+
+Lo que cambia son las coordenadas utilizadas para
+describir esa ubicación.
+
+\end{interpretacion}
+
+
+\section{Transformación de velocidades}
+
+Derivamos la relación:
+
+\[
+\vect{r}_P=\vect{R}+\vect{r}'_P.
+\]
+
+Como los ejes permanecen paralelos:
+
+\[
+\deriv{\vect{r}_P}{t}
+=
+\deriv{\vect{R}}{t}
++
+\deriv{\vect{r}'_P}{t}.
+\]
+
+Definimos:
+
+\[
+\vect{v}_{P/S}
+=
+\deriv{\vect{r}_P}{t},
+\]
+
+\[
+\vect{v}_{S'/S}
+=
+\deriv{\vect{R}}{t},
+\]
+
+\[
+\vect{v}_{P/S'}
+=
+\deriv{\vect{r}'_P}{t}.
+\]
+
+Así obtenemos:
+
+\[
+\boxed{
+\vect{v}_{P/S}
+=
+\vect{v}_{P/S'}
++
+\vect{v}_{S'/S}
+}.
+\]
+
+Esta relación también se conoce como
+\textbf{composición galileana de velocidades}.
+
+\begin{principio}[Composición clásica de velocidades]
+
+Para sistemas de referencia cuyos ejes permanecen paralelos,
+la velocidad de una partícula respecto de un sistema puede
+obtenerse sumando vectorialmente:
+
+\begin{itemize}
+    \item la velocidad de la partícula respecto del sistema móvil;
+    \item la velocidad del sistema móvil respecto del sistema
+    de referencia considerado.
+\end{itemize}
+
+\[
+\boxed{
+\vect{v}_{P/S}
+=
+\vect{v}_{P/S'}
++
+\vect{v}_{S'/S}
+}.
+\]
+
+Esta composición corresponde a la cinemática clásica.
+
+\end{principio}
+
+
+\section{Interpretación de la composición de velocidades}
+
+La ecuación:
+
+\[
+\vect{v}_{P/S}
+=
+\vect{v}_{P/S'}
++
+\vect{v}_{S'/S}
+\]
+
+puede leerse como:
+
+\[
+\text{velocidad respecto del suelo}
+\]
+
+igual a:
+
+\[
+\text{velocidad respecto del vehículo}
+\]
+
+más:
+
+\[
+\text{velocidad del vehículo respecto del suelo}.
+\]
+
+Por ejemplo, una persona camina dentro de un tren.
+
+La velocidad de la persona respecto del suelo depende
+de dos movimientos simultáneos:
+
+\begin{itemize}
+    \item el movimiento de la persona dentro del tren;
+    \item el movimiento del tren respecto del suelo.
+\end{itemize}
+
+\begin{advertencia}
+
+La ecuación es vectorial.
+
+En dos o tres dimensiones no debemos sumar automáticamente
+las magnitudes de las velocidades.
+
+Primero debemos sumar sus componentes rectangulares.
+
+\end{advertencia}
+
+
+\section{Composición de velocidades en una dimensión}
+
+Si todos los movimientos ocurren a lo largo de un mismo eje:
+
+\[
+\boxed{
+v_{P/S,x}
+=
+v_{P/S',x}
++
+v_{S'/S,x}
+}.
+\]
+
+Los signos se determinan respecto del eje elegido.
+
+Por ejemplo, tomemos \(+x\) hacia la parte delantera
+de un tren.
+
+Si el tren avanza respecto del suelo con:
+
+\[
+v_{T/S}=+\SI{15}{\meter\per\second},
+\]
+
+y una persona camina hacia adelante con:
+
+\[
+v_{P/T}=+\SI{2}{\meter\per\second},
+\]
+
+entonces:
+
+\[
+v_{P/S}=2+15.
+\]
+
+Así:
+
+\[
+\boxed{
+v_{P/S}=+\SI{17}{\meter\per\second}
+}.
+\]
+
+Si la persona camina hacia atrás con:
+
+\[
+v_{P/T}=-\SI{2}{\meter\per\second},
+\]
+
+tenemos:
+
+\[
+v_{P/S}=-2+15.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v_{P/S}=+\SI{13}{\meter\per\second}
+}.
+\]
+
+\begin{interpretacion}
+
+Caminar hacia atrás dentro del tren no significa
+necesariamente desplazarse hacia atrás respecto del suelo.
+
+Aunque la persona retroceda respecto del tren,
+puede continuar avanzando respecto del suelo.
+
+\end{interpretacion}
+
+
+\section{Ejemplo: persona sobre una banda transportadora}
+
+\begin{ejemplo}[Movimiento sobre una banda móvil]
+
+Una banda transportadora horizontal se mueve hacia
+la derecha con velocidad:
+
+\[
+\vect{v}_{B/S}
+=
+3.0\ihat\,
+\si{\meter\per\second}.
+\]
+
+Una persona camina sobre ella hacia la izquierda
+con velocidad relativa a la banda:
+
+\[
+\vect{v}_{P/B}
+=
+-1.2\ihat\,
+\si{\meter\per\second}.
+\]
+
+Determine la velocidad de la persona respecto del suelo.
+
+\end{ejemplo}
+
+Elegimos \(+x\) hacia la derecha.
+
+Aplicamos:
+
+\[
+\vect{v}_{P/S}
+=
+\vect{v}_{P/B}
++
+\vect{v}_{B/S}.
+\]
+
+Sustituyendo:
+
+\[
+\vect{v}_{P/S}
+=
+(-1.2\ihat+3.0\ihat)
+\,\si{\meter\per\second}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{v}_{P/S}
+=
+1.8\ihat\,
+\si{\meter\per\second}
+}.
+\]
+
+\begin{interpretacion}
+
+La persona camina hacia la izquierda respecto de la banda,
+pero se mueve hacia la derecha respecto del suelo.
+
+Esto ocurre porque la banda transportadora avanza hacia
+la derecha más rápidamente de lo que la persona camina
+hacia la izquierda respecto de ella.
+
+\end{interpretacion}
+
+
+\section{Composición de velocidades en dos dimensiones}
+
+Cuando los movimientos no ocurren sobre una misma recta,
+debemos utilizar componentes rectangulares.
+
+La relación vectorial es:
+
+\[
+\vect{v}_{P/S}
+=
+\vect{v}_{P/S'}
++
+\vect{v}_{S'/S}.
+\]
+
+Si:
+
+\[
+\vect{v}_{P/S'}
+=
+v_{P/S',x}\ihat+v_{P/S',y}\jhat,
+\]
+
+y:
+
+\[
+\vect{v}_{S'/S}
+=
+v_{S'/S,x}\ihat+v_{S'/S,y}\jhat,
+\]
+
+entonces:
+
+\[
+\boxed{
+v_{P/S,x}
+=
+v_{P/S',x}+v_{S'/S,x}
+},
+\]
+
+\[
+\boxed{
+v_{P/S,y}
+=
+v_{P/S',y}+v_{S'/S,y}
+}.
+\]
+
+Finalmente:
+
+\[
+v_{P/S}
+=
+\sqrt{
+v_{P/S,x}^2+v_{P/S,y}^2
+}.
+\]
+
+La dirección se determina a partir de los signos de
+las componentes y del cuadrante correspondiente.
+
+
+\section{Ejemplo: velocidades perpendiculares}
+
+\begin{ejemplo}[Movimiento sobre una plataforma móvil]
+
+Una plataforma se desplaza hacia \(+x\) con velocidad:
+
+\[
+\vect{v}_{B/S}
+=
+4.0\ihat\,
+\si{\meter\per\second}.
+\]
+
+Sobre ella, una persona camina hacia \(+y\) con
+velocidad relativa:
+
+\[
+\vect{v}_{P/B}
+=
+3.0\jhat\,
+\si{\meter\per\second}.
+\]
+
+Determine la velocidad de la persona respecto del suelo,
+su rapidez y su dirección.
+
+\end{ejemplo}
+
+Aplicamos la composición vectorial:
+
+\[
+\vect{v}_{P/S}
+=
+\vect{v}_{P/B}+\vect{v}_{B/S}.
+\]
+
+Sumamos por componentes:
+
+\[
+v_{P/S,x}=\SI{4.0}{\meter\per\second},
+\]
+
+\[
+v_{P/S,y}=\SI{3.0}{\meter\per\second}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{v}_{P/S}
+=
+(4.0\ihat+3.0\jhat)
+\,\si{\meter\per\second}
+}.
+\]
+
+La rapidez es:
+
+\[
+v_{P/S}
+=
+\sqrt{4.0^2+3.0^2}\,
+\si{\meter\per\second}.
+\]
+
+Así:
+
+\[
+\boxed{
+v_{P/S}=\SI{5.0}{\meter\per\second}
+}.
+\]
+
+Para determinar la dirección:
+
+\[
+\tan\theta=\frac{3.0}{4.0}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\theta\approx36.9\grado
+}
+\]
+
+por encima de \(+x\).
+
+\begin{interpretacion}
+
+La persona no se mueve exclusivamente en la dirección
+en la que camina respecto de la plataforma.
+
+Para el observador del suelo, su movimiento es el resultado
+de combinar ambas velocidades.
+
+\end{interpretacion}
+
+
+\section{Movimiento relativo en tres dimensiones}
+
+La composición de velocidades no cambia conceptualmente
+cuando añadimos una tercera dimensión.
+
+Tenemos:
+
+\[
+\boxed{
+\vect{v}_{P/S}
+=
+\vect{v}_{P/S'}
++
+\vect{v}_{S'/S}
+}.
+\]
+
+La única diferencia es que ahora necesitamos tres componentes:
+
+\[
+\boxed{
+v_{P/S,x}
+=
+v_{P/S',x}+v_{S'/S,x}
+},
+\]
+
+\[
+\boxed{
+v_{P/S,y}
+=
+v_{P/S',y}+v_{S'/S,y}
+},
+\]
+
+\[
+\boxed{
+v_{P/S,z}
+=
+v_{P/S',z}+v_{S'/S,z}
+}.
+\]
+
+La rapidez es:
+
+\[
+\boxed{
+v_{P/S}
+=
+\sqrt{
+v_{P/S,x}^2+
+v_{P/S,y}^2+
+v_{P/S,z}^2
+}
+}.
+\]
+
+\begin{idea}
+
+El movimiento relativo en una, dos o tres dimensiones
+se describe mediante el mismo principio vectorial.
+
+La diferencia está en la cantidad de componentes necesarias.
+
+\end{idea}
+
+
+\section{Transformación de aceleraciones entre sistemas móviles}
+
+Derivamos la composición de velocidades:
+
+\[
+\vect{v}_{P/S}
+=
+\vect{v}_{P/S'}
++
+\vect{v}_{S'/S}.
+\]
+
+Entonces:
+
+\[
+\boxed{
+\vect{a}_{P/S}
+=
+\vect{a}_{P/S'}
++
+\vect{a}_{S'/S}
+}.
+\]
+
+Esta relación es válida para sistemas cuyos ejes
+permanecen paralelos y sin rotación relativa.
+
+El término:
+
+\[
+\vect{a}_{S'/S}
+\]
+
+es la aceleración del origen del sistema móvil
+respecto del sistema \(S\).
+
+
+\section{Sistemas móviles con velocidad constante}
+
+Si el sistema móvil se traslada con velocidad vectorial
+constante:
+
+\[
+\vect{v}_{S'/S}=\text{constante},
+\]
+
+entonces:
+
+\[
+\vect{a}_{S'/S}=\vect{0}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{a}_{P/S}=\vect{a}_{P/S'}
+}.
+\]
+
+\begin{principio}[Invariancia galileana de la aceleración]
+
+Dos sistemas cartesianos cuyos ejes permanecen paralelos
+y que se mueven uno respecto del otro con velocidad
+vectorial constante miden la misma aceleración para
+una partícula.
+
+\[
+\boxed{
+\vect{a}'=\vect{a}
+}.
+\]
+
+\end{principio}
+
+\begin{interpretacion}
+
+Un cambio entre sistemas de referencia en traslación
+uniforme puede modificar la velocidad atribuida
+a un objeto.
+
+Sin embargo, no modifica su aceleración clásica.
+
+Esta propiedad será especialmente importante al
+estudiar los sistemas de referencia inerciales
+en dinámica.
+
+\end{interpretacion}
+
+
+\section{Sistemas móviles acelerados}
+
+Si el sistema móvil tiene aceleración respecto del suelo:
+
+\[
+\vect{a}_{S'/S}\neq\vect{0},
+\]
+
+las aceleraciones medidas desde ambos sistemas
+no son necesariamente iguales.
+
+De:
+
+\[
+\vect{a}_{P/S}
+=
+\vect{a}_{P/S'}
++
+\vect{a}_{S'/S},
+\]
+
+obtenemos:
+
+\[
+\boxed{
+\vect{a}_{P/S'}
+=
+\vect{a}_{P/S}
+-
+\vect{a}_{S'/S}
+}.
+\]
+
+\begin{interpretacion}
+
+Un objeto puede encontrarse en reposo respecto de
+un vehículo que acelera, pero poseer aceleración
+respecto del suelo.
+
+No existe contradicción.
+
+Las aceleraciones corresponden a sistemas de referencia
+diferentes.
+
+\end{interpretacion}
+
+
+\section{Ejemplo: objeto dentro de un vehículo acelerado}
+
+\begin{ejemplo}
+
+Un automóvil acelera horizontalmente hacia la derecha con:
+
+\[
+\vect{a}_{A/S}
+=
+2.0\ihat\,
+\si{\meter\per\second\squared}.
+\]
+
+Un objeto permanece fijo respecto del interior
+del automóvil.
+
+Determine su aceleración respecto del automóvil
+y respecto del suelo.
+
+\end{ejemplo}
+
+Como el objeto permanece fijo respecto del automóvil:
+
+\[
+\vect{v}_{P/A}=\vect{0},
+\]
+
+y:
+
+\[
+\boxed{
+\vect{a}_{P/A}=\vect{0}
+}.
+\]
+
+La composición de aceleraciones es:
+
+\[
+\vect{a}_{P/S}
+=
+\vect{a}_{P/A}
++
+\vect{a}_{A/S}.
+\]
+
+Sustituyendo:
+
+\[
+\vect{a}_{P/S}
+=
+\vect{0}
++
+2.0\ihat\,
+\si{\meter\per\second\squared}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{a}_{P/S}
+=
+2.0\ihat\,
+\si{\meter\per\second\squared}
+}.
+\]
+
+\begin{interpretacion}
+
+El objeto está en reposo respecto del automóvil
+porque mantiene constante su posición dentro de él.
+
+Sin embargo, acelera respecto del suelo porque
+participa del movimiento acelerado del vehículo.
+
+\end{interpretacion}
+
+
+\section{Movimiento relativo de una embarcación}
+
+Uno de los ejemplos más importantes del movimiento
+relativo bidimensional es el de una embarcación
+que cruza un río.
+
+En esta situación intervienen tres elementos:
+
+\begin{itemize}
+    \item la embarcación;
+    \item el agua;
+    \item la orilla o el suelo.
+\end{itemize}
+
+La velocidad de la embarcación respecto del suelo
+es la suma de:
+
+\[
+\vect{v}_{B/A},
+\]
+
+velocidad de la embarcación respecto del agua, y:
+
+\[
+\vect{v}_{A/S},
+\]
+
+velocidad del agua respecto del suelo.
+
+Por tanto:
+
+\[
+\boxed{
+\vect{v}_{B/S}
+=
+\vect{v}_{B/A}
++
+\vect{v}_{A/S}
+}.
+\]
+
+\begin{advertencia}
+
+La rapidez que desarrolla la embarcación respecto
+del agua no es necesariamente igual a su rapidez
+respecto de la orilla.
+
+La corriente modifica la velocidad resultante
+medida desde el suelo.
+
+\end{advertencia}
+
+
+\section{Elección de ejes para cruzar un río}
+
+Consideremos un río cuyas orillas son aproximadamente
+rectas y paralelas.
+
+Elegimos:
+
+\begin{itemize}
+    \item \(+x\): perpendicular a las orillas, hacia la opuesta;
+    \item \(+y\): paralelo a la corriente, aguas abajo.
+\end{itemize}
+
+La corriente tiene velocidad:
+
+\[
+\vect{v}_{A/S}
+=
+u\jhat,
+\]
+
+donde:
+
+\[
+u>0.
+\]
+
+La velocidad de la embarcación respecto del agua
+puede tener componentes:
+
+\[
+\vect{v}_{B/A}
+=
+v_{Bx/A}\ihat+v_{By/A}\jhat.
+\]
+
+Entonces:
+
+\[
+\boxed{
+\vect{v}_{B/S}
+=
+v_{Bx/A}\ihat
++
+(v_{By/A}+u)\jhat
+}.
+\]
+
+Por componentes:
+
+\[
+\boxed{
+v_{Bx/S}=v_{Bx/A}
+},
+\]
+
+\[
+\boxed{
+v_{By/S}=v_{By/A}+u
+}.
+\]
+
+Estas dos relaciones permiten analizar diferentes
+estrategias de cruce.
+
+
+\section{Embarcación dirigida perpendicularmente a la orilla}
+
+Supongamos que la embarcación apunta directamente
+hacia la orilla opuesta.
+
+Su velocidad respecto del agua es:
+
+\[
+\vect{v}_{B/A}=v\ihat.
+\]
+
+La corriente lleva:
+
+\[
+\vect{v}_{A/S}=u\jhat.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{v}_{B/S}=v\ihat+u\jhat
+}.
+\]
+
+La trayectoria observada desde la orilla
+no es perpendicular al río.
+
+La embarcación avanza hacia la otra orilla
+y simultáneamente deriva aguas abajo.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.95]
+
+    \fill[AzulSecundario!10]
+        (0,0) rectangle (7.2,4.3);
+
+    \draw[thick]
+        (0,0) -- (7.2,0);
+
+    \draw[thick]
+        (0,4.3) -- (7.2,4.3);
+
+    \node[above] at (3.6,4.3) {orilla opuesta};
+
+    \node[below] at (3.6,0) {orilla de partida};
+
+    \coordinate (P) at (1.2,0.5);
+
+    \draw[-{Latex},very thick,AzulPrincipal]
+        (P) -- ++(0,2.2)
+        node[left] {\(\vect{v}_{B/A}\)};
+
+    \draw[-{Latex},very thick,VerdePrincipal]
+        (P) -- ++(2.2,0)
+        node[below] {\(\vect{v}_{A/S}\)};
+
+    \draw[-{Latex},very thick,RojoPrincipal]
+        (P) -- ++(2.2,2.2)
+        node[above right] {\(\vect{v}_{B/S}\)};
+
+    \draw[-{Latex},thick,dashed]
+        (P) -- ++(4.0,4.0);
+
+    \draw[-{Latex},thick]
+        (5.7,2.1) -- (6.7,2.1)
+        node[right] {corriente};
+
+\end{tikzpicture}
+\end{center}
+
+El dibujo representa la composición vectorial;
+la dirección del cruce se ha dispuesto verticalmente
+para facilitar su lectura.
+
+
+\section{Tiempo de cruce}
+
+Sea \(D\) el ancho del río.
+
+Si la componente perpendicular a las orillas
+es constante:
+
+\[
+v_{Bx/S}=v_{Bx/A},
+\]
+
+el tiempo de cruce es:
+
+\[
+\boxed{
+t=\frac{D}{v_{Bx/A}}
+}.
+\]
+
+En el caso de una embarcación dirigida
+perpendicularmente:
+
+\[
+v_{Bx/A}=v.
+\]
+
+Entonces:
+
+\[
+\boxed{
+t=\frac{D}{v}
+}.
+\]
+
+\begin{interpretacion}
+
+Si la corriente es paralela a las orillas,
+no aporta componente de velocidad perpendicular.
+
+Por tanto, para una embarcación que apunta
+perpendicularmente, el tiempo de cruce
+no depende de la rapidez de la corriente.
+
+La corriente sí modifica el desplazamiento
+aguas abajo.
+
+\end{interpretacion}
+
+
+\section{Deriva aguas abajo}
+
+La velocidad paralela a las orillas es:
+
+\[
+v_{By/S}=u.
+\]
+
+Si la corriente es uniforme, el desplazamiento
+aguas abajo durante el cruce es:
+
+\[
+\Delta y=ut.
+\]
+
+Sustituyendo:
+
+\[
+t=\frac{D}{v},
+\]
+
+obtenemos:
+
+\[
+\boxed{
+\Delta y=\frac{uD}{v}
+}.
+\]
+
+\begin{condicion}
+
+Esta relación corresponde al caso en el que:
+
+\begin{itemize}
+    \item la embarcación apunta perpendicularmente a las orillas;
+    \item su velocidad respecto del agua es constante;
+    \item la corriente es uniforme y paralela a las orillas;
+    \item el río tiene ancho constante en la zona considerada.
+\end{itemize}
+
+\end{condicion}
+
+
+\section{Ejemplo: cruce con deriva}
+
+\begin{ejemplo}
+
+Una embarcación cruza un río de ancho:
+
+\[
+D=\SI{120}{\meter}.
+\]
+
+Su rapidez respecto del agua es:
+
+\[
+v=\SI{4.0}{\meter\per\second},
+\]
+
+y apunta perpendicularmente a las orillas.
+
+La corriente tiene rapidez:
+
+\[
+u=\SI{3.0}{\meter\per\second}.
+\]
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item El vector velocidad respecto del suelo.
+    \item La rapidez respecto del suelo.
+    \item El tiempo de cruce.
+    \item La deriva aguas abajo.
+\end{enumerate}
+
+\end{ejemplo}
+
+Elegimos \(+x\) hacia la orilla opuesta
+y \(+y\) aguas abajo.
+
+Las velocidades son:
+
+\[
+\vect{v}_{B/A}
+=
+4.0\ihat\,
+\si{\meter\per\second},
+\]
+
+\[
+\vect{v}_{A/S}
+=
+3.0\jhat\,
+\si{\meter\per\second}.
+\]
+
+Entonces:
+
+\[
+\boxed{
+\vect{v}_{B/S}
+=
+(4.0\ihat+3.0\jhat)
+\,\si{\meter\per\second}
+}.
+\]
+
+La rapidez respecto del suelo es:
+
+\[
+v_{B/S}
+=
+\sqrt{4.0^2+3.0^2}\,
+\si{\meter\per\second}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v_{B/S}=\SI{5.0}{\meter\per\second}
+}.
+\]
+
+El tiempo de cruce depende de la componente
+perpendicular:
+
+\[
+t=\frac{D}{v_{Bx/S}}.
+\]
+
+Entonces:
+
+\[
+t=\frac{120}{4.0}.
+\]
+
+Así:
+
+\[
+\boxed{
+t=\SI{30}{\second}
+}.
+\]
+
+La deriva es:
+
+\[
+\Delta y=ut.
+\]
+
+Por tanto:
+
+\[
+\Delta y=(3.0)(30).
+\]
+
+Así:
+
+\[
+\boxed{
+\Delta y=\SI{90}{\meter}
+}.
+\]
+
+\begin{interpretacion}
+
+Aunque la embarcación apunta directamente
+hacia la orilla opuesta, llega
+\(\SI{90}{\meter}\) aguas abajo
+del punto situado frente a su posición inicial.
+
+La dirección de la embarcación respecto del agua
+no coincide con la dirección de su trayectoria
+respecto del suelo.
+
+\end{interpretacion}
+
+
+\section{Cruzar sin deriva}
+
+Ahora queremos que la embarcación llegue al punto
+directamente opuesto al de partida.
+
+Para ello, su desplazamiento paralelo a la corriente
+debe ser cero.
+
+Si las velocidades son constantes:
+
+\[
+v_{By/S}=0.
+\]
+
+Pero:
+
+\[
+v_{By/S}=v_{By/A}+u.
+\]
+
+Entonces:
+
+\[
+v_{By/A}+u=0.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v_{By/A}=-u
+}.
+\]
+
+La embarcación debe apuntar parcialmente
+aguas arriba para compensar la corriente.
+
+Si su rapidez respecto del agua es \(v\),
+sus componentes deben satisfacer:
+
+\[
+v^2=v_{Bx/A}^2+v_{By/A}^2.
+\]
+
+Como:
+
+\[
+v_{By/A}=-u,
+\]
+
+tenemos:
+
+\[
+v_{Bx/A}^2=v^2-u^2.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v_{Bx/A}=\sqrt{v^2-u^2}
+}.
+\]
+
+Elegimos la raíz positiva porque queremos avanzar
+hacia la orilla opuesta.
+
+\begin{condicion}
+
+Para cruzar sin deriva con una velocidad de embarcación
+constante respecto del agua es necesario:
+
+\[
+v>u.
+\]
+
+Si:
+
+\[
+v=u,
+\]
+
+la única manera de cancelar completamente la corriente
+es apuntar aguas arriba sin componente de avance
+hacia la otra orilla.
+
+Si:
+
+\[
+v<u,
+\]
+
+no es posible cancelar la corriente y simultáneamente
+cruzar bajo este modelo.
+
+\end{condicion}
+
+
+\section{Ángulo necesario para evitar la deriva}
+
+Sea \(\phi\) el ángulo que forma la dirección de
+la embarcación con la perpendicular a las orillas,
+medido hacia aguas arriba.
+
+Las componentes son:
+
+\[
+v_{Bx/A}=v\cos\phi,
+\]
+
+\[
+v_{By/A}=-v\sen\phi.
+\]
+
+Para evitar la deriva:
+
+\[
+-v\sen\phi+u=0.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\sen\phi=\frac{u}{v}
+}.
+\]
+
+Así:
+
+\[
+\boxed{
+\phi=\arcsen\left(\frac{u}{v}\right)
+}.
+\]
+
+El tiempo de cruce será:
+
+\[
+t=\frac{D}{v\cos\phi}.
+\]
+
+Utilizando:
+
+\[
+v\cos\phi=\sqrt{v^2-u^2},
+\]
+
+obtenemos:
+
+\[
+\boxed{
+t=\frac{D}{\sqrt{v^2-u^2}}
+}.
+\]
+
+
+\section{Ejemplo: embarcación sin deriva}
+
+\begin{ejemplo}
+
+Una embarcación debe cruzar un río de:
+
+\[
+D=\SI{150}{\meter}
+\]
+
+y llegar directamente al punto opuesto.
+
+La corriente tiene rapidez:
+
+\[
+u=\SI{3.0}{\meter\per\second}.
+\]
+
+La embarcación mantiene una rapidez respecto del agua de:
+
+\[
+v=\SI{5.0}{\meter\per\second}.
+\]
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item La dirección que debe adoptar.
+    \item Las componentes de su velocidad respecto del agua.
+    \item Su velocidad respecto del suelo.
+    \item El tiempo de cruce.
+\end{enumerate}
+
+\end{ejemplo}
+
+Elegimos \(+x\) perpendicular a las orillas
+y \(+y\) aguas abajo.
+
+Para no derivar:
+
+\[
+v_{By/S}=0.
+\]
+
+Por tanto:
+
+\[
+v_{By/A}=-u.
+\]
+
+Así:
+
+\[
+\boxed{
+v_{By/A}=-\SI{3.0}{\meter\per\second}
+}.
+\]
+
+La componente perpendicular es:
+
+\[
+v_{Bx/A}=\sqrt{v^2-u^2}.
+\]
+
+Sustituyendo:
+
+\[
+v_{Bx/A}=\sqrt{5.0^2-3.0^2}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v_{Bx/A}=\SI{4.0}{\meter\per\second}
+}.
+\]
+
+El vector velocidad respecto del agua es:
+
+\[
+\boxed{
+\vect{v}_{B/A}
+=
+(4.0\ihat-3.0\jhat)
+\,\si{\meter\per\second}
+}.
+\]
+
+La dirección respecto de la perpendicular satisface:
+
+\[
+\tan\phi=\frac{3.0}{4.0}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\phi\approx36.9\grado
+}
+\]
+
+hacia aguas arriba.
+
+La corriente posee:
+
+\[
+\vect{v}_{A/S}
+=
+3.0\jhat\,
+\si{\meter\per\second}.
+\]
+
+Sumando:
+
+\[
+\vect{v}_{B/S}
+=
+(4.0\ihat-3.0\jhat)
++
+3.0\jhat.
+\]
+
+Así:
+
+\[
+\boxed{
+\vect{v}_{B/S}
+=
+4.0\ihat\,
+\si{\meter\per\second}
+}.
+\]
+
+La velocidad resultante es perpendicular
+a las orillas.
+
+Finalmente:
+
+\[
+t=\frac{D}{v_{Bx/S}}.
+\]
+
+Entonces:
+
+\[
+t=\frac{150}{4.0}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+t=\SI{37.5}{\second}
+}.
+\]
+
+\begin{interpretacion}
+
+La embarcación debe orientar su movimiento
+aguas arriba, aunque su desplazamiento respecto
+del suelo será directamente hacia la orilla opuesta.
+
+Esto muestra que dirección de avance respecto
+del agua y trayectoria respecto del suelo
+son conceptos distintos.
+
+\end{interpretacion}
+
+
+\section{Cruce más rápido y cruce sin deriva}
+
+Las dos estrategias estudiadas responden
+a objetivos diferentes.
+
+Si la embarcación mantiene rapidez \(v\)
+respecto del agua y la corriente es uniforme,
+el menor tiempo para alcanzar la orilla opuesta
+se obtiene maximizando la componente perpendicular:
+
+\[
+v_{Bx/A}.
+\]
+
+Esto ocurre cuando la embarcación apunta
+perpendicularmente a las orillas:
+
+\[
+v_{Bx/A}=v.
+\]
+
+Entonces:
+
+\[
+\boxed{
+t_{\min}=\frac{D}{v}
+}.
+\]
+
+Pero esa estrategia produce deriva
+cuando:
+
+\[
+u\neq0.
+\]
+
+Para llegar directamente al punto opuesto,
+la embarcación debe orientar parte de su
+velocidad aguas arriba.
+
+Entonces:
+
+\[
+v_{Bx/A}<v.
+\]
+
+Por tanto:
+
+\[
+t_{\mathrm{sin\ deriva}}>t_{\min}.
+\]
+
+\begin{idea}
+
+El trayecto de menor tiempo y el trayecto
+que termina directamente frente al punto
+de partida no tienen por qué coincidir.
+
+La estrategia depende de qué condición
+física queremos satisfacer.
+
+\end{idea}
+
+
+\section{Movimiento relativo de una aeronave}
+
+El movimiento de una aeronave respecto del suelo
+también depende del movimiento del medio.
+
+La aeronave se desplaza respecto del aire,
+pero el aire puede moverse respecto del suelo.
+
+Por tanto:
+
+\[
+\boxed{
+\vect{v}_{P/S}
+=
+\vect{v}_{P/A}
++
+\vect{v}_{A/S}
+}.
+\]
+
+Aquí:
+
+\[
+\vect{v}_{P/A}
+\]
+
+representa la velocidad de la aeronave
+respecto del aire.
+
+\[
+\vect{v}_{A/S}
+\]
+
+representa la velocidad del viento respecto del suelo.
+
+\[
+\vect{v}_{P/S}
+\]
+
+representa la velocidad de la aeronave
+respecto del suelo.
+
+\begin{interpretacion}
+
+Una aeronave puede apuntar hacia una dirección
+y desplazarse respecto del suelo en otra.
+
+El viento modifica la trayectoria observada
+desde la superficie terrestre.
+
+\end{interpretacion}
+
+
+\section{Viento de cola y viento de frente}
+
+Si todos los movimientos son colineales,
+basta trabajar con una componente.
+
+Elegimos \(+x\) en la dirección del vuelo.
+
+Si la aeronave vuela respecto del aire con:
+
+\[
+v_{P/A}=+\SI{70}{\meter\per\second},
+\]
+
+y existe viento de cola:
+
+\[
+v_{A/S}=+\SI{15}{\meter\per\second},
+\]
+
+entonces:
+
+\[
+v_{P/S}=70+15.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v_{P/S}=+\SI{85}{\meter\per\second}
+}.
+\]
+
+Si el viento es de frente:
+
+\[
+v_{A/S}=-\SI{15}{\meter\per\second},
+\]
+
+entonces:
+
+\[
+v_{P/S}=70-15.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v_{P/S}=+\SI{55}{\meter\per\second}
+}.
+\]
+
+\begin{interpretacion}
+
+La rapidez de la aeronave respecto del aire
+puede mantenerse constante mientras
+su rapidez respecto del suelo cambia
+debido a la velocidad del viento.
+
+\end{interpretacion}
+
+
+\section{Viento lateral y corrección de rumbo}
+
+Supongamos que una aeronave debe desplazarse
+hacia el norte sin desviarse hacia el este.
+
+Elegimos:
+
+\[
++x:\text{ este},
+\]
+
+\[
++y:\text{ norte}.
+\]
+
+El viento sopla hacia el este con rapidez \(u\):
+
+\[
+\vect{v}_{A/S}=u\ihat.
+\]
+
+La aeronave debe apuntar parcialmente
+hacia el oeste para compensarlo.
+
+Su velocidad respecto del aire tendrá:
+
+\[
+v_{Px/A}<0.
+\]
+
+Para que la trayectoria respecto del suelo
+no tenga componente horizontal:
+
+\[
+v_{Px/S}=0.
+\]
+
+Entonces:
+
+\[
+v_{Px/A}+u=0.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+v_{Px/A}=-u
+}.
+\]
+
+Si la rapidez respecto del aire es \(v\),
+la componente hacia el norte será:
+
+\[
+\boxed{
+v_{Py/A}=\sqrt{v^2-u^2}
+}.
+\]
+
+De esta manera, el viento lateral
+se compensa mediante una orientación
+apropiada de la aeronave.
+
+\begin{condicion}
+
+Esta construcción supone velocidades constantes,
+ejes paralelos y un viento uniforme durante
+el intervalo considerado.
+
+También requiere:
+
+\[
+v>u
+\]
+
+para conservar una componente de avance
+hacia el norte después de compensar el viento.
+
+\end{condicion}
+
+
+\section{Ejemplo: aeronave con viento lateral}
+
+\begin{ejemplo}
+
+Una aeronave debe desplazarse hacia el norte.
+
+Su rapidez respecto del aire es:
+
+\[
+v=\SI{80.0}{\meter\per\second}.
+\]
+
+El viento sopla hacia el este con rapidez:
+
+\[
+u=\SI{20.0}{\meter\per\second}.
+\]
+
+Determine el ángulo de corrección que debe adoptar
+para seguir una trayectoria directamente hacia el norte
+y su rapidez respecto del suelo.
+
+\end{ejemplo}
+
+Elegimos \(+x\) hacia el este y \(+y\)
+hacia el norte.
+
+El viento tiene velocidad:
+
+\[
+\vect{v}_{A/S}
+=
+20.0\ihat\,
+\si{\meter\per\second}.
+\]
+
+Para anular la componente este de la
+velocidad respecto del suelo:
+
+\[
+v_{Px/A}=-\SI{20.0}{\meter\per\second}.
+\]
+
+Como la magnitud de la velocidad
+respecto del aire es \(\SI{80.0}{\meter\per\second}\):
+
+\[
+v_{Py/A}
+=
+\sqrt{80.0^2-20.0^2}.
+\]
+
+Entonces:
+
+\[
+v_{Py/A}
+=
+\sqrt{6000}\,
+\si{\meter\per\second}.
+\]
+
+Así:
+
+\[
+\boxed{
+v_{Py/A}\approx
+\SI{77.5}{\meter\per\second}
+}.
+\]
+
+El ángulo de corrección \(\phi\),
+medido hacia el oeste desde el norte,
+satisface:
+
+\[
+\sen\phi=\frac{20.0}{80.0}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\phi\approx14.5\grado
+}.
+\]
+
+La velocidad de la aeronave respecto del suelo es:
+
+\[
+\vect{v}_{P/S}
+=
+\vect{v}_{P/A}+\vect{v}_{A/S}.
+\]
+
+Entonces:
+
+\[
+\vect{v}_{P/S}
+=
+(-20.0\ihat+77.5\jhat)
++
+20.0\ihat.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{v}_{P/S}
+=
+77.5\jhat\,
+\si{\meter\per\second}
+}.
+\]
+
+\begin{interpretacion}
+
+La aeronave apunta hacia el noroeste,
+pero se desplaza respecto del suelo
+directamente hacia el norte.
+
+La corrección de rumbo cancela
+la componente lateral del viento.
+
+\end{interpretacion}
+
+
+\section{Movimiento relativo entre dos objetos en el plano}
+
+El movimiento relativo también permite estudiar
+la separación entre dos objetos que se desplazan
+en diferentes direcciones.
+
+Supongamos que:
+
+\[
+\vect{r}_A(t)
+\]
+
+y:
+
+\[
+\vect{r}_B(t)
+\]
+
+son sus posiciones respecto del suelo.
+
+La posición relativa es:
+
+\[
+\boxed{
+\vect{r}_{A/B}(t)
+=
+\vect{r}_A(t)-\vect{r}_B(t)
+}.
+\]
+
+La velocidad relativa es:
+
+\[
+\boxed{
+\vect{v}_{A/B}(t)
+=
+\vect{v}_A(t)-\vect{v}_B(t)
+}.
+\]
+
+Si ambas velocidades son constantes:
+
+\[
+\vect{r}_A(t)
+=
+\vect{r}_{A0}+\vect{v}_At,
+\]
+
+\[
+\vect{r}_B(t)
+=
+\vect{r}_{B0}+\vect{v}_Bt.
+\]
+
+Restando:
+
+\[
+\vect{r}_{A/B}(t)
+=
+(\vect{r}_{A0}-\vect{r}_{B0})
++
+(\vect{v}_A-\vect{v}_B)t.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{r}_{A/B}(t)
+=
+\vect{r}_{A/B,0}
++
+\vect{v}_{A/B}t
+}.
+\]
+
+Esta es una ecuación especialmente útil
+para estudiar encuentros y aproximaciones.
+
+
+\section{Condición de encuentro}
+
+Dos partículas se encuentran cuando ocupan
+la misma posición en el mismo instante.
+
+Por tanto:
+
+\[
+\vect{r}_A(t)=\vect{r}_B(t).
+\]
+
+Equivalentemente:
+
+\[
+\boxed{
+\vect{r}_{A/B}(t)=\vect{0}
+}.
+\]
+
+En dos dimensiones esto requiere:
+
+\[
+\boxed{
+x_{A/B}(t)=0
+},
+\]
+
+\[
+\boxed{
+y_{A/B}(t)=0
+}.
+\]
+
+Ambas condiciones deben cumplirse
+para el mismo valor de \(t\).
+
+\begin{advertencia}
+
+Que dos partículas tengan una coordenada igual
+no significa necesariamente que se encuentren.
+
+En dos dimensiones deben coincidir
+simultáneamente sus coordenadas \(x\) e \(y\).
+
+En tres dimensiones también debe coincidir \(z\).
+
+\end{advertencia}
+
+
+\section{Ejemplo: encuentro en dos dimensiones}
+
+\begin{ejemplo}
+
+Dos partículas se mueven en un plano
+con velocidades constantes.
+
+En \(t=0\):
+
+\[
+\vect{r}_{A0}
+=
+(0\ihat+20\jhat)\,\si{\meter},
+\]
+
+\[
+\vect{r}_{B0}
+=
+(30\ihat+0\jhat)\,\si{\meter}.
+\]
+
+Sus velocidades son:
+
+\[
+\vect{v}_A
+=
+(5\ihat+2\jhat)\,
+\si{\meter\per\second},
+\]
+
+\[
+\vect{v}_B
+=
+(2\ihat+4\jhat)\,
+\si{\meter\per\second}.
+\]
+
+Determine si se encuentran
+durante su movimiento.
+
+\end{ejemplo}
+
+La posición relativa inicial es:
+
+\[
+\vect{r}_{A/B,0}
+=
+\vect{r}_{A0}-\vect{r}_{B0}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{r}_{A/B,0}
+=
+(-30\ihat+20\jhat)\,\si{\meter}
+}.
+\]
+
+La velocidad relativa es:
+
+\[
+\vect{v}_{A/B}
+=
+\vect{v}_A-\vect{v}_B.
+\]
+
+Entonces:
+
+\[
+\boxed{
+\vect{v}_{A/B}
+=
+(3\ihat-2\jhat)\,
+\si{\meter\per\second}
+}.
+\]
+
+La posición relativa es:
+
+\[
+\vect{r}_{A/B}(t)
+=
+(-30+3t)\ihat+(20-2t)\jhat.
+\]
+
+Para el encuentro:
+
+\[
+-30+3t=0,
+\]
+
+\[
+20-2t=0.
+\]
+
+De la primera:
+
+\[
+t=\SI{10}{\second}.
+\]
+
+De la segunda:
+
+\[
+t=\SI{10}{\second}.
+\]
+
+Como ambas condiciones se satisfacen
+en el mismo instante:
+
+\[
+\boxed{
+t=\SI{10}{\second}
+}.
+\]
+
+La posición de encuentro se obtiene
+con la ecuación de \(A\):
+
+\[
+\vect{r}_A(t)
+=
+\vect{r}_{A0}+\vect{v}_At.
+\]
+
+Entonces:
+
+\[
+\vect{r}_A(10)
+=
+(0\ihat+20\jhat)
++
+(5\ihat+2\jhat)(10).
+\]
+
+Por tanto:
+
+\[
+\boxed{
+\vect{r}_{\mathrm{encuentro}}
+=
+(50\ihat+40\jhat)\,\si{\meter}
+}.
+\]
+
+\begin{interpretacion}
+
+Las partículas tienen velocidades distintas
+y parten de posiciones diferentes.
+
+Sin embargo, sus movimientos permiten
+que ambas ocupen simultáneamente
+el punto \((50,40)\,\si{\meter}\).
+
+El método relativo convierte el problema
+de dos movimientos en el movimiento
+de una posición de separación.
+
+\end{interpretacion}
+
+
+\section{Distancia entre dos partículas móviles}
+
+La posición relativa permite conocer
+la separación entre dos partículas:
+
+\[
+\vect{r}_{A/B}
+=
+\vect{r}_A-\vect{r}_B.
+\]
+
+La distancia entre ellas es:
+
+\[
+\boxed{
+d(t)=\norm{\vect{r}_{A/B}(t)}
+}.
+\]
+
+En dos dimensiones:
+
+\[
+\boxed{
+d(t)
+=
+\sqrt{
+x_{A/B}^2(t)+y_{A/B}^2(t)
+}
+}.
+\]
+
+Si la posición relativa depende del tiempo,
+la distancia también puede cambiar.
+
+Pero la dirección de la velocidad relativa
+no tiene por qué coincidir con la dirección
+de la separación.
+
+
+\section{Rapidez de acercamiento en varias dimensiones}
+
+Definamos:
+
+\[
+\vect{r}
+=
+\vect{r}_{A/B}.
+\]
+
+La distancia es:
+
+\[
+d=\norm{\vect{r}}.
+\]
+
+Entonces:
+
+\[
+d^2=\vect{r}\pdot\vect{r}.
+\]
+
+Derivando respecto del tiempo:
+
+\[
+2d\deriv{d}{t}
+=
+2\vect{r}\pdot\deriv{\vect{r}}{t}.
+\]
+
+Como:
+
+\[
+\deriv{\vect{r}}{t}
+=
+\vect{v}_{A/B},
+\]
+
+obtenemos:
+
+\[
+\boxed{
+\deriv{d}{t}
+=
+\frac{
+\vect{r}_{A/B}\pdot\vect{v}_{A/B}
+}{
+\norm{\vect{r}_{A/B}}
+}
+}.
+\]
+
+Esta relación es válida cuando:
+
+\[
+d\neq0.
+\]
+
+\begin{interpretacion}
+
+La tasa de cambio de la distancia depende
+de la componente de velocidad relativa
+en la dirección de separación.
+
+Si:
+
+\[
+\deriv{d}{t}<0,
+\]
+
+las partículas se están acercando.
+
+Si:
+
+\[
+\deriv{d}{t}>0,
+\]
+
+se están alejando.
+
+Si:
+
+\[
+\deriv{d}{t}=0,
+\]
+
+la distancia no cambia instantáneamente,
+aunque ambas partículas puedan continuar
+en movimiento.
+
+\end{interpretacion}
+
+
+\section{Máxima aproximación entre dos partículas}
+
+Consideremos dos partículas que tienen
+velocidades constantes.
+
+Definimos:
+
+\[
+\vect{r}_0=\vect{r}_{A/B,0},
+\]
+
+\[
+\vect{v}=\vect{v}_{A/B}.
+\]
+
+La separación relativa es:
+
+\[
+\vect{r}(t)=\vect{r}_0+\vect{v}t.
+\]
+
+La distancia al cuadrado es:
+
+\[
+d^2(t)
+=
+(\vect{r}_0+\vect{v}t)
+\pdot
+(\vect{r}_0+\vect{v}t).
+\]
+
+Desarrollando:
+
+\[
+d^2(t)
+=
+r_0^2
++
+2(\vect{r}_0\pdot\vect{v})t
++
+v^2t^2.
+\]
+
+Para encontrar un mínimo de distancia,
+podemos derivar \(d^2\):
+
+\[
+\deriv{(d^2)}{t}
+=
+2\vect{r}_0\pdot\vect{v}
++
+2v^2t.
+\]
+
+En el instante de mínima separación:
+
+\[
+\deriv{(d^2)}{t}=0.
+\]
+
+Por tanto:
+
+\[
+\vect{r}_0\pdot\vect{v}
++
+v^2t_{\min}=0.
+\]
+
+Despejando:
+
+\[
+\boxed{
+t_{\min}
+=
+-\frac{
+\vect{r}_0\pdot\vect{v}
+}{
+v^2
+}
+}.
+\]
+
+\begin{condicion}
+
+Esta expresión supone velocidad relativa constante
+y distinta de cero.
+
+Si sólo estudiamos el intervalo posterior
+a \(t=0\), un resultado:
+
+\[
+t_{\min}<0
+\]
+
+indica que la máxima aproximación de
+las trayectorias rectilíneas prolongadas
+ocurrió antes del instante inicial.
+
+En ese caso, la mínima distancia del intervalo
+\(t\geq0\) ocurre en \(t=0\).
+
+\end{condicion}
+
+Después de determinar el instante físicamente
+válido, calculamos:
+
+\[
+\boxed{
+d_{\min}
+=
+\norm{\vect{r}_0+\vect{v}t_{\min}}
+}.
+\]
+
+\begin{interpretacion}
+
+Dos objetos pueden pasar muy cerca sin encontrarse.
+
+La condición de mínima distancia no exige:
+
+\[
+\vect{r}_{A/B}=\vect{0}.
+\]
+
+Sólo exige que la distancia deje de disminuir
+instantáneamente y comience a aumentar,
+o que alcance el extremo del intervalo estudiado.
+
+\end{interpretacion}
+
+
+\section{Ejemplo: distancia mínima entre vehículos}
+
+\begin{ejemplo}
+
+Dos vehículos se desplazan con velocidades constantes
+sobre un plano.
+
+En \(t=0\), sus posiciones relativas satisfacen:
+
+\[
+\vect{r}_{A/B,0}
+=
+(100\ihat+60\jhat)\,\si{\meter}.
+\]
+
+Su velocidad relativa es:
+
+\[
+\vect{v}_{A/B}
+=
+(-10\ihat-2\jhat)\,
+\si{\meter\per\second}.
+\]
+
+Determine el instante de máxima aproximación
+y la distancia mínima entre ambos.
+
+\end{ejemplo}
+
+Definimos:
+
+\[
+\vect{r}_0
+=
+(100\ihat+60\jhat)\,\si{\meter},
+\]
+
+\[
+\vect{v}
+=
+(-10\ihat-2\jhat)\,
+\si{\meter\per\second}.
+\]
+
+La velocidad relativa es constante.
+
+Calculamos el producto escalar:
+
+\[
+\vect{r}_0\pdot\vect{v}
+=
+100(-10)+60(-2).
+\]
+
+Por tanto:
+
+\[
+\vect{r}_0\pdot\vect{v}
+=
+-1120\,
+\si{\meter\squared\per\second}.
+\]
+
+La magnitud al cuadrado de la velocidad relativa es:
+
+\[
+v^2=(-10)^2+(-2)^2.
+\]
+
+Así:
+
+\[
+v^2
+=
+104\,\si{\meter\squared\per\second\squared}.
+\]
+
+El instante de mínima distancia es:
+
+\[
+t_{\min}
+=
+-\frac{\vect{r}_0\pdot\vect{v}}{v^2}.
+\]
+
+Entonces:
+
+\[
+t_{\min}=\frac{1120}{104}.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+t_{\min}\approx\SI{10.77}{\second}
+}.
+\]
+
+La posición relativa en ese instante es:
+
+\[
+\vect{r}(t_{\min})
+=
+(100-10t_{\min})\ihat
++
+(60-2t_{\min})\jhat.
+\]
+
+Sustituyendo:
+
+\[
+x_{A/B}\approx-\SI{7.69}{\meter},
+\]
+
+\[
+y_{A/B}\approx\SI{38.46}{\meter}.
+\]
+
+La distancia mínima es:
+
+\[
+d_{\min}
+=
+\sqrt{
+(-7.69)^2+(38.46)^2
+}\,\si{\meter}.
+\]
+
+Así:
+
+\[
+\boxed{
+d_{\min}\approx\SI{39.2}{\meter}
+}.
+\]
+
+\begin{interpretacion}
+
+Los vehículos se acercan inicialmente,
+pero no llegan a encontrarse.
+
+Su separación mínima es aproximadamente
+\(\SI{39.2}{\meter}\).
+
+Después de ese instante, la distancia
+entre ellos aumenta.
+
+\end{interpretacion}
+
+
+\section{Movimiento relativo y trayectorias}
+
+Una misma partícula puede describir trayectorias
+diferentes desde sistemas de referencia distintos.
+
+Consideremos una partícula cuya posición en un sistema
+móvil es:
+
+\[
+\vect{r}'(t).
+\]
+
+Si el origen de ese sistema móvil se desplaza según:
+
+\[
+\vect{R}(t),
+\]
+
+entonces:
+
+\[
+\vect{r}(t)=\vect{R}(t)+\vect{r}'(t).
+\]
+
+La trayectoria respecto del suelo se obtiene
+combinando ambas funciones del tiempo.
+
+Por ejemplo, una pelota lanzada verticalmente
+dentro de un vehículo que se mueve horizontalmente
+puede describir:
+
+\begin{itemize}
+    \item una trayectoria vertical respecto del vehículo;
+    \item una trayectoria parabólica respecto del suelo.
+\end{itemize}
+
+Ambas descripciones pueden ser correctas
+para el mismo movimiento físico.
+
+
+\section{Ejemplo: pelota lanzada dentro de un tren}
+
+\begin{ejemplo}
+
+Un tren se mueve horizontalmente hacia \(+x\)
+con velocidad constante:
+
+\[
+\vect{v}_{T/S}
+=
+12\ihat\,
+\si{\meter\per\second}.
+\]
+
+Un pasajero lanza una pelota verticalmente hacia arriba
+con velocidad inicial respecto del tren:
+
+\[
+\vect{v}_{P/T,0}
+=
+8\jhat\,
+\si{\meter\per\second}.
+\]
+
+Despreciando la resistencia del aire, determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item La velocidad inicial de la pelota
+    respecto del suelo.
+    \item Sus ecuaciones de posición respecto del suelo,
+    tomando el lanzamiento en el origen.
+    \item La forma de la trayectoria vista desde
+    el tren y desde el suelo.
+\end{enumerate}
+
+\end{ejemplo}
+
+\subsection*{Velocidad inicial}
+
+Aplicamos:
+
+\[
+\vect{v}_{P/S,0}
+=
+\vect{v}_{P/T,0}
++
+\vect{v}_{T/S}.
+\]
+
+Por tanto:
+
+\[
+\vect{v}_{P/S,0}
+=
+8\jhat+12\ihat.
+\]
+
+Así:
+
+\[
+\boxed{
+\vect{v}_{P/S,0}
+=
+(12\ihat+8\jhat)\,
+\si{\meter\per\second}
+}.
+\]
+
+\subsection*{Movimiento respecto del suelo}
+
+Tomamos el instante de lanzamiento como \(t=0\).
+
+Las componentes iniciales son:
+
+\[
+v_{0x}=\SI{12}{\meter\per\second},
+\]
+
+\[
+v_{0y}=\SI{8}{\meter\per\second}.
+\]
+
+La aceleración es:
+
+\[
+\vect{a}_{P/S}=-g\jhat.
+\]
+
+Horizontalmente:
+
+\[
+\boxed{
+x(t)=12t
+}.
+\]
+
+Verticalmente:
+
+\[
+\boxed{
+y(t)=8t-\frac12gt^2
+}.
+\]
+
+Las coordenadas se expresan en metros
+cuando \(t\) se expresa en segundos.
+
+Eliminando el tiempo:
+
+\[
+t=\frac{x}{12}.
+\]
+
+Entonces:
+
+\[
+y
+=
+8\left(\frac{x}{12}\right)
+-
+\frac12g\left(\frac{x}{12}\right)^2.
+\]
+
+Por tanto, la trayectoria respecto del suelo
+es una parábola.
+
+\subsection*{Movimiento respecto del tren}
+
+Como el tren se mueve horizontalmente
+con velocidad constante, su posición relativa
+al suelo es:
+
+\[
+X_T(t)=12t.
+\]
+
+La coordenada horizontal relativa de la pelota es:
+
+\[
+x'(t)=x(t)-X_T(t).
+\]
+
+Entonces:
+
+\[
+x'(t)=12t-12t=0.
+\]
+
+Por tanto:
+
+\[
+\boxed{
+x'(t)=0
+}.
+\]
+
+La coordenada vertical es:
+
+\[
+\boxed{
+y'(t)=8t-\frac12gt^2
+}.
+\]
+
+Desde el tren, la pelota describe
+una trayectoria vertical.
+
+\begin{interpretacion}
+
+Desde el tren, la pelota sube y baja
+sobre una misma línea vertical.
+
+Desde el suelo, la pelota avanza
+horizontalmente mientras sube y baja.
+
+No se trata de dos movimientos físicos distintos.
+
+Son dos descripciones del mismo movimiento
+desde sistemas de referencia diferentes.
+
+\end{interpretacion}
+
+
+\section{Transformaciones galileanas}
+
+Cuando el sistema \(S'\) se mueve respecto de \(S\)
+con velocidad vectorial constante:
+
+\[
+\vect{u},
+\]
+
+podemos escribir:
+
+\[
+\vect{R}(t)=\vect{R}_0+\vect{u}t.
+\]
+
+La relación entre posiciones es:
+
+\[
+\vect{r}=\vect{R}+\vect{r}'.
+\]
+
+Entonces:
+
+\[
+\vect{r}'
+=
+\vect{r}-\vect{R}_0-\vect{u}t.
+\]
+
+Si los orígenes coinciden cuando \(t=0\):
+
+\[
+\vect{R}_0=\vect{0}.
+\]
+
+Así:
+
+\[
+\boxed{
+\vect{r}'=\vect{r}-\vect{u}t
+}.
+\]
+
+Estas relaciones forman parte de las
+transformaciones galileanas.
+
+
+\section{Transformaciones por componentes}
+
+Si el sistema móvil se desplaza con:
+
+\[
+\vect{u}
+=
+u_x\ihat+u_y\jhat+u_z\khat,
+\]
+
+y los orígenes coinciden en \(t=0\),
+entonces:
+
+\[
+\boxed{
+x'=x-u_xt
+},
+\]
+
+\[
+\boxed{
+y'=y-u_yt
+},
+\]
+
+\[
+\boxed{
+z'=z-u_zt
+}.
+\]
+
+Derivando:
+
+\[
+\boxed{
+v_x'=v_x-u_x
+},
+\]
+
+\[
+\boxed{
+v_y'=v_y-u_y
+},
+\]
+
+\[
+\boxed{
+v_z'=v_z-u_z
+}.
+\]
+
+Como las componentes de \(\vect{u}\)
+son constantes:
+
+\[
+\boxed{
+a_x'=a_x
+},
+\]
+
+\[
+\boxed{
+a_y'=a_y
+},
+\]
+
+\[
+\boxed{
+a_z'=a_z
+}.
+\]
+
+En la descripción clásica también se supone:
+
+\[
+\boxed{
+t'=t
+}.
+\]
+
+Es decir, el tiempo transcurrido es el mismo
+para ambos sistemas.
+
+
+\section{Condiciones de validez de las transformaciones galileanas}
+
+Las transformaciones desarrolladas corresponden
+a la mecánica clásica.
+
+Su aplicación supone:
+
+\begin{itemize}
+    \item velocidades mucho menores que la velocidad
+    de la luz;
+    \item ejes cartesianos paralelos;
+    \item ausencia de rotación relativa;
+    \item traslación uniforme entre los sistemas
+    cuando se utiliza la forma galileana
+    con \(\vect{u}\) constante.
+\end{itemize}
+
+\begin{advertencia}
+
+La expresión:
+
+\[
+\vect{v}_{P/S}
+=
+\vect{v}_{P/S'}+\vect{u}
+\]
+
+no es una regla universal para todas las velocidades
+y todos los sistemas de referencia.
+
+Cuando las velocidades son comparables
+con la velocidad de la luz, debemos utilizar
+las transformaciones de la relatividad especial.
+
+Asimismo, cuando los sistemas de referencia giran
+uno respecto del otro, aparecen términos adicionales
+en las relaciones de velocidad y aceleración.
+
+\end{advertencia}
+
+
+\section{Sistemas de referencia en rotación}
+
+Hasta ahora hemos supuesto que los ejes del sistema
+móvil permanecen paralelos a los ejes del sistema fijo.
+
+Un sistema que gira constituye una situación diferente.
+
+Por ejemplo:
+
+\begin{itemize}
+    \item una persona sobre una plataforma giratoria;
+    \item un observador dentro de un carrusel;
+    \item un sistema de referencia unido a una rueda.
+\end{itemize}
+
+En estos casos, los vectores unitarios del sistema
+móvil cambian de dirección respecto del sistema fijo.
+
+Por ello, al derivar una posición expresada
+en el sistema giratorio, también deben considerarse
+las derivadas de esos vectores unitarios.
+
+En general, no basta con escribir:
+
+\[
+\vect{v}_{P/S}
+=
+\vect{v}_{P/S'}
++
+\vect{v}_{S'/S}
+\]
+
+si los ejes de \(S'\) están girando.
+
+\begin{observacion}
+
+La descripción completa de sistemas de referencia
+en rotación requiere incorporar la velocidad angular
+del sistema móvil.
+
+En dinámica, además, aparecen las llamadas
+fuerzas aparentes asociadas a sistemas
+de referencia no inerciales.
+
+Estos efectos deben distinguirse de la simple
+composición de velocidades por traslación.
+
+\end{observacion}
+
+
+\section{Movimiento relativo y sistemas inerciales}
+
+Un sistema de referencia inercial es aquel
+en el que se cumplen las leyes de Newton
+en su formulación habitual.
+
+En la mecánica clásica, si \(S\) es inercial
+y \(S'\) se traslada respecto de \(S\)
+con velocidad vectorial constante, sin rotación,
+entonces \(S'\) también es inercial.
+
+En ambos sistemas:
+
+\[
+\vect{a}'=\vect{a}.
+\]
+
+Esta propiedad permite que las leyes
+de la dinámica tengan la misma forma
+en todos los sistemas inerciales clásicos.
+
+\begin{interpretacion}
+
+La posición y la velocidad dependen
+del sistema de referencia.
+
+Sin embargo, la aceleración es la misma
+para observadores inerciales relacionados
+por transformaciones galileanas.
+
+Esto conecta la cinemática relativa
+con el estudio posterior de las leyes
+del movimiento.
+
+\end{interpretacion}
+
+
+\section{Aplicaciones del movimiento relativo}
+
+\begin{aplicacion}[Navegación]
+
+La navegación de embarcaciones requiere distinguir
+entre la velocidad respecto del agua
+y la velocidad respecto del suelo.
+
+La corriente puede modificar el rumbo efectivo,
+el tiempo de llegada y la posición final.
+
+\end{aplicacion}
+
+\begin{aplicacion}[Aviación]
+
+En aviación es necesario distinguir
+entre la velocidad respecto del aire
+y la velocidad respecto del suelo.
+
+El viento puede alterar la trayectoria
+y el tiempo necesario para recorrer
+una determinada distancia.
+
+\end{aplicacion}
+
+\begin{aplicacion}[Tránsito vehicular]
+
+La velocidad relativa permite analizar
+el acercamiento, adelantamiento y separación
+entre vehículos.
+
+También facilita el estudio de encuentros
+en una o varias dimensiones.
+
+\end{aplicacion}
+
+\begin{aplicacion}[Seguimiento de objetos]
+
+En sistemas de seguimiento, las posiciones
+de diferentes objetos pueden describirse
+respecto de un observador o vehículo móvil.
+
+Las diferencias de posición y velocidad
+permiten analizar cómo cambia la separación
+entre ellos.
+
+\end{aplicacion}
+
+
+\section{Estrategia general para resolver problemas}
+
+\begin{estrategia}[Movimiento relativo]
+
+Para resolver un problema de movimiento relativo:
+
+\begin{enumerate}
+
+    \item Identifique todos los objetos y sistemas
+    de referencia involucrados.
+
+    \item Establezca qué movimiento se desea
+    describir y respecto de cuál referencia.
+
+    \item Defina un sistema cartesiano con origen,
+    ejes y sentidos positivos.
+
+    \item Dibuje un esquema cuando existan
+    varias direcciones de movimiento.
+
+    \item Escriba explícitamente las velocidades
+    utilizando subíndices de referencia.
+
+    \item Construya la relación vectorial
+    correspondiente:
+    \[
+    \vect{v}_{A/C}
+    =
+    \vect{v}_{A/B}
+    +
+    \vect{v}_{B/C}.
+    \]
+
+    \item Descomponga los vectores en componentes
+    rectangulares.
+
+    \item Resuelva primero las componentes desconocidas.
+
+    \item Reconstruya el vector resultante.
+
+    \item Determine magnitud y dirección,
+    verificando los signos y el cuadrante.
+
+    \item Si se trata de un encuentro, establezca
+    la igualdad de posiciones en el mismo instante.
+
+    \item Si se estudia una mínima separación,
+    analice la evolución de la posición relativa.
+
+    \item Verifique las condiciones de validez
+    del modelo elegido.
+
+    \item Interprete físicamente el resultado.
+
+\end{enumerate}
+
+\end{estrategia}
+
+
+\section{Errores frecuentes}
+
+\begin{errorfrecuente}[Omitir la referencia]
+
+No es suficiente escribir:
+
+\[
+v_A=\SI{20}{\meter\per\second}
+\]
+
+si existen varios sistemas de referencia.
+
+Debe indicarse respecto de qué sistema
+se mide la velocidad, por ejemplo:
+
+\[
+\vect{v}_{A/S}.
+\]
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}[Confundir rapidez con velocidad]
+
+La velocidad relativa es vectorial:
+
+\[
+\vect{v}_{A/B}
+=
+\vect{v}_A-\vect{v}_B.
+\]
+
+No debe obtenerse restando magnitudes
+sin considerar direcciones y signos.
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}[Invertir los subíndices]
+
+Las velocidades:
+
+\[
+\vect{v}_{A/B}
+\]
+
+y:
+
+\[
+\vect{v}_{B/A}
+\]
+
+tienen sentidos opuestos.
+
+La relación correcta es:
+
+\[
+\vect{v}_{A/B}
+=
+-\vect{v}_{B/A}.
+\]
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}[Confundir dirección de orientación y trayectoria]
+
+Una embarcación o aeronave puede apuntar
+hacia una dirección diferente de su
+velocidad respecto del suelo.
+
+La trayectoria depende de la velocidad
+resultante, no únicamente de la dirección
+del vehículo respecto del medio.
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}[Confundir rapidez relativa y acercamiento]
+
+En dos dimensiones, la magnitud:
+
+\[
+\norm{\vect{v}_{A/B}}
+\]
+
+no representa necesariamente la rapidez
+con la que disminuye la distancia entre
+las partículas.
+
+Debe considerarse la dirección de la
+velocidad relativa respecto de la
+separación.
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}[Aplicar composición por traslación a sistemas giratorios]
+
+Las relaciones desarrolladas para ejes
+paralelos no deben aplicarse directamente
+a un sistema de referencia que gira.
+
+En esos casos aparecen contribuciones
+adicionales asociadas a la rotación.
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}[Utilizar tiempos diferentes para un encuentro]
+
+Para que dos partículas se encuentren,
+sus posiciones deben coincidir
+en el mismo instante.
+
+No basta con que ambas pasen por
+el mismo lugar en momentos diferentes.
+
+\end{errorfrecuente}
+
+
+\section{Secuencia sugerida para impartir la clase}
+
+\begin{notapedagogica}
+
+Una secuencia apropiada para desarrollar
+este capítulo es:
+
+\begin{enumerate}
+
+    \item Presentar una persona que camina
+    dentro de un tren.
+
+    \item Preguntar si su velocidad es la misma
+    para un pasajero y para alguien en la estación.
+
+    \item Recordar el concepto de sistema
+    de referencia.
+
+    \item Introducir la notación:
+    \[
+    \vect{r}_{A/B},
+    \qquad
+    \vect{v}_{A/B}.
+    \]
+
+    \item Construir geométricamente
+    la posición relativa entre dos partículas.
+
+    \item Deducir:
+    \[
+    \vect{v}_{A/B}
+    =
+    \vect{v}_A-\vect{v}_B.
+    \]
+
+    \item Resolver ejemplos rectilíneos
+    con igual sentido y sentidos contrarios.
+
+    \item Introducir la composición
+    de velocidades entre tres referencias.
+
+    \item Explicar el modelo de sistemas
+    con ejes paralelos.
+
+    \item Resolver el ejemplo de banda
+    transportadora.
+
+    \item Extender la composición
+    a componentes rectangulares.
+
+    \item Resolver un ejemplo bidimensional
+    con velocidades perpendiculares.
+
+    \item Analizar una embarcación
+    que cruza un río con deriva.
+
+    \item Plantear cómo evitar la deriva
+    mediante una orientación aguas arriba.
+
+    \item Comparar cruce más rápido
+    y cruce sin deriva.
+
+    \item Aplicar el mismo razonamiento
+    al movimiento de una aeronave con viento.
+
+    \item Introducir velocidad y aceleración
+    relativas entre dos partículas.
+
+    \item Resolver un problema de encuentro
+    en dos dimensiones.
+
+    \item Analizar el concepto
+    de distancia mínima.
+
+    \item Presentar una pelota lanzada
+    verticalmente dentro de un tren.
+
+    \item Comparar sus trayectorias
+    desde ambos sistemas de referencia.
+
+    \item Deducir las transformaciones
+    galileanas.
+
+    \item Explicar las condiciones
+    de validez de la composición clásica.
+
+    \item Finalizar con preguntas conceptuales
+    que distingan movimiento relativo,
+    composición vectorial y sistemas
+    de referencia.
+
+\end{enumerate}
+
+\end{notapedagogica}
+
+
+\section{Preguntas de comprensión}
+
+\begin{enumerate}
+
+    \item ¿Por qué la velocidad de un objeto
+    depende del sistema de referencia?
+
+    \item ¿Qué significa la expresión
+    \(\vect{v}_{A/B}\)?
+
+    \item ¿Qué diferencia existe entre
+    \(\vect{v}_{A/B}\) y \(\vect{v}_{B/A}\)?
+
+    \item ¿Puede un objeto encontrarse en reposo
+    respecto de un observador y moverse
+    respecto de otro?
+
+    \item ¿Qué representa físicamente
+    la posición relativa?
+
+    \item ¿Cuál es la diferencia entre
+    posición relativa y distancia entre partículas?
+
+    \item ¿Por qué la velocidad relativa
+    debe tratarse como un vector?
+
+    \item ¿Cuándo una resta de velocidades
+    produce una magnitud igual a la suma
+    de las rapideces?
+
+    \item ¿Es suficiente conocer las rapideces
+    de dos vehículos para determinar
+    su velocidad relativa?
+
+    \item ¿Qué diferencia existe entre
+    velocidad relativa y rapidez de acercamiento?
+
+    \item ¿Por qué una embarcación puede
+    derivar aunque apunte perpendicularmente
+    a la orilla?
+
+    \item ¿De qué depende el tiempo de cruce
+    de un río con corriente uniforme?
+
+    \item ¿Cómo puede una embarcación evitar
+    la deriva aguas abajo?
+
+    \item ¿Qué condición debe cumplirse
+    para cruzar sin deriva manteniendo
+    constante la velocidad respecto del agua?
+
+    \item ¿Por qué el cruce más rápido
+    no coincide necesariamente con
+    el cruce sin deriva?
+
+    \item ¿Qué diferencia existe entre
+    la velocidad de una aeronave respecto
+    del aire y respecto del suelo?
+
+    \item ¿Qué condición debe cumplirse
+    para que dos partículas se encuentren?
+
+    \item ¿Pueden dos partículas pasar
+    por el mismo punto y no encontrarse?
+
+    \item ¿Qué significa que la distancia
+    entre dos partículas alcance un mínimo?
+
+    \item ¿Puede existir velocidad relativa
+    no nula mientras la distancia
+    permanece instantáneamente constante?
+
+    \item ¿Por qué dos observadores pueden
+    describir trayectorias diferentes
+    para un mismo objeto?
+
+    \item ¿Qué condiciones permiten utilizar
+    las transformaciones galileanas?
+
+    \item ¿Por qué dos sistemas en traslación
+    uniforme miden la misma aceleración?
+
+    \item ¿Qué cambia cuando uno de
+    los sistemas de referencia acelera?
+
+    \item ¿Por qué un sistema en rotación
+    requiere un tratamiento diferente?
+
+    \item ¿Por qué la composición clásica
+    de velocidades no puede aplicarse
+    universalmente a velocidades
+    comparables con la velocidad de la luz?
+
+\end{enumerate}
+
+
+\begin{resumen}
+
+El movimiento relativo permite describir
+cómo cambia la posición de un objeto
+respecto de diferentes sistemas de referencia.
+
+Las posiciones, velocidades y aceleraciones
+deben expresarse especificando claramente
+la referencia utilizada.
+
+La posición relativa de \(A\)
+respecto de \(B\) es:
+
+\[
+\boxed{
+\vect{r}_{A/B}
+=
+\vect{r}_A-\vect{r}_B
+}.
+\]
+
+La velocidad relativa es:
+
+\[
+\boxed{
+\vect{v}_{A/B}
+=
+\vect{v}_A-\vect{v}_B
+}.
+\]
+
+La aceleración relativa es:
+
+\[
+\boxed{
+\vect{a}_{A/B}
+=
+\vect{a}_A-\vect{a}_B
+}.
+\]
+
+Para sistemas cuyos ejes permanecen paralelos:
+
+\[
+\boxed{
+\vect{r}_{P/S}
+=
+\vect{R}
++
+\vect{r}_{P/S'}
+}.
+\]
+
+La composición de velocidades es:
+
+\[
+\boxed{
+\vect{v}_{P/S}
+=
+\vect{v}_{P/S'}
++
+\vect{v}_{S'/S}
+}.
+\]
+
+Esta relación debe resolverse
+mediante componentes rectangulares
+cuando intervienen varias dimensiones.
+
+La composición de aceleraciones es:
+
+\[
+\boxed{
+\vect{a}_{P/S}
+=
+\vect{a}_{P/S'}
++
+\vect{a}_{S'/S}
+}.
+\]
+
+Si el sistema móvil se traslada
+con velocidad vectorial constante:
+
+\[
+\boxed{
+\vect{a}_{P/S}
+=
+\vect{a}_{P/S'}
+}.
+\]
+
+En mecánica clásica, las transformaciones
+galileanas relacionan sistemas inerciales
+en traslación uniforme.
+
+Si sus orígenes coinciden inicialmente:
+
+\[
+\boxed{
+\vect{r}'=\vect{r}-\vect{u}t
+},
+\]
+
+\[
+\boxed{
+\vect{v}'=\vect{v}-\vect{u}
+},
+\]
+
+\[
+\boxed{
+\vect{a}'=\vect{a}
+}.
+\]
+
+La aplicación del movimiento relativo
+permite estudiar:
+
+\begin{itemize}
+    \item personas que caminan en vehículos;
+    \item automóviles que se persiguen;
+    \item embarcaciones en ríos;
+    \item aeronaves bajo la influencia del viento;
+    \item encuentros entre partículas;
+    \item distancias mínimas entre objetos móviles.
+\end{itemize}
+
+En dos o tres dimensiones debe utilizarse
+prioritariamente el método de componentes rectangulares.
+
+Las ecuaciones clásicas desarrolladas
+requieren ejes paralelos y velocidades
+suficientemente pequeñas frente a
+la velocidad de la luz.
+
+La idea fundamental del capítulo es:
+
+\[
+\boxed{
+\text{El movimiento se describe
+respecto de un sistema de referencia.}
+}
+\]
+
+Un mismo objeto puede tener diferentes
+posiciones, velocidades y trayectorias
+según el observador, pero las diferentes
+descripciones deben relacionarse
+mediante ecuaciones físicas coherentes.
+
+\end{resumen}

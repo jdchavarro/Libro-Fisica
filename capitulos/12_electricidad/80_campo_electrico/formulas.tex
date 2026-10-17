@@ -1,0 +1,637 @@
+\section{Formulario}
+
+\subsection{Definición de campo eléctrico}
+
+El campo eléctrico se define como la fuerza eléctrica por unidad de carga de prueba positiva:
+
+\[
+\boxed{\vec E=\frac{\vec F_0}{q_0}}
+\]
+
+En magnitud,
+
+\[
+\boxed{E=\frac{F_0}{q_0}}.
+\]
+
+En componentes rectangulares,
+
+\[
+\boxed{E_x=\frac{F_x}{q_0}}, \qquad
+\boxed{E_y=\frac{F_y}{q_0}}.
+\]
+
+Unidad SI:
+
+\[
+\boxed{[E]=\si{\newton\per\coulomb}}.
+\]
+
+
+\subsection{Fuerza sobre una carga en un campo eléctrico}
+
+\[
+\boxed{\vec F=q\vec E}
+\]
+
+En componentes,
+
+\[
+\boxed{F_x=qE_x}, \qquad
+\boxed{F_y=qE_y}.
+\]
+
+Magnitud:
+
+\[
+\boxed{F=|q|E}
+\]
+
+Dirección:
+
+\[
+q>0 \Longrightarrow \vec F \text{ tiene el mismo sentido que }\vec E,
+\]
+
+\[
+q<0 \Longrightarrow \vec F \text{ tiene sentido opuesto a }\vec E.
+\]
+
+
+\subsection{Campo eléctrico de una carga puntual}
+
+Para una carga fuente puntual \(Q\), a una distancia \(r\),
+
+\[
+\boxed{E=k\frac{|Q|}{r^2}}
+\]
+
+con
+
+\[
+\boxed{k\approx\SI{8.99e9}{\newton\metre\squared\per\coulomb\squared}}.
+\]
+
+Dirección del campo:
+
+\[
+Q>0 \Longrightarrow \text{el campo apunta alejándose de la carga},
+\]
+
+\[
+Q<0 \Longrightarrow \text{el campo apunta hacia la carga}.
+\]
+
+Dependencia con la distancia:
+
+\[
+\boxed{E\propto\frac{1}{r^2}}.
+\]
+
+Por tanto,
+
+\[
+r\to2r \Longrightarrow E\to\frac{E}{4},
+\]
+
+\[
+r\to3r \Longrightarrow E\to\frac{E}{9},
+\]
+
+\[
+r\to\frac{r}{2} \Longrightarrow E\to4E.
+\]
+
+
+\subsection{Campo de una carga puntual mediante coordenadas}
+
+Si una carga fuente \(q_i\) está situada en
+
+\[
+(x_i,y_i)
+\]
+
+y queremos calcular el campo en
+
+\[
+P=(x,y),
+\]
+
+definimos
+
+\[
+\boxed{\Delta x_i=x-x_i}, \qquad
+\boxed{\Delta y_i=y-y_i}.
+\]
+
+La distancia entre la carga y el punto es
+
+\[
+\boxed{r_i=\sqrt{(\Delta x_i)^2+(\Delta y_i)^2}}.
+\]
+
+La magnitud del campo es
+
+\[
+\boxed{E_i=k\frac{|q_i|}{r_i^2}}.
+\]
+
+Si se conoce el ángulo \(\theta_i\) del campo respecto del eje \(+x\),
+
+\[
+\boxed{E_{i,x}=E_i\cos\theta_i},
+\qquad
+\boxed{E_{i,y}=E_i\sin\theta_i}.
+\]
+
+Los signos de las componentes se determinan según el sentido real del campo en el plano.
+
+
+\subsection{Componentes directas a partir de las coordenadas}
+
+Las componentes también pueden calcularse directamente mediante
+
+\[
+\boxed{
+E_{i,x}
+=
+kq_i\frac{x-x_i}{r_i^3}
+}
+\]
+
+y
+
+\[
+\boxed{
+E_{i,y}
+=
+kq_i\frac{y-y_i}{r_i^3}
+},
+\]
+
+donde
+
+\[
+r_i=\sqrt{(x-x_i)^2+(y-y_i)^2}.
+\]
+
+Estas expresiones incorporan automáticamente el signo de la carga fuente.
+
+
+\subsection{Principio de superposición}
+
+El campo total es la suma vectorial de los campos producidos por todas las cargas.
+
+Trabajando por componentes rectangulares,
+
+\[
+\boxed{E_x=\sum_i E_{i,x}},
+\qquad
+\boxed{E_y=\sum_i E_{i,y}}.
+\]
+
+La magnitud del campo resultante es
+
+\[
+\boxed{E=\sqrt{E_x^2+E_y^2}}.
+\]
+
+Para obtener un ángulo de referencia,
+
+\[
+\boxed{
+\theta_r=
+\tan^{-1}\left(\frac{|E_y|}{|E_x|}\right)
+}.
+\]
+
+El cuadrante se determina con los signos de \(E_x\) y \(E_y\):
+
+\[
+\begin{array}{c|c|c}
+E_x & E_y & \text{cuadrante}\\
+\hline
++ & + & \text{I}\\
+- & + & \text{II}\\
+- & - & \text{III}\\
++ & - & \text{IV}
+\end{array}
+\]
+
+
+\subsection{Superposición en una dimensión}
+
+Si todos los campos están sobre el eje \(x\),
+
+\[
+\boxed{E_x=\sum_iE_{i,x}}.
+\]
+
+Si
+
+\[
+E_x>0,
+\]
+
+el campo resultante apunta hacia \(+x\).
+
+Si
+
+\[
+E_x<0,
+\]
+
+apunta hacia \(-x\).
+
+
+\subsection{Campo eléctrico nulo}
+
+La condición general es
+
+\[
+\boxed{\vec E=\vec 0}.
+\]
+
+En componentes rectangulares,
+
+\[
+\boxed{E_x=0},
+\qquad
+\boxed{E_y=0}.
+\]
+
+En una dimensión,
+
+\[
+\boxed{\sum_iE_{i,x}=0}.
+\]
+
+Para dos contribuciones opuestas sobre una misma recta,
+
+\[
+\boxed{E_1=E_2}.
+\]
+
+Antes de igualar magnitudes debe comprobarse que los campos tengan sentidos opuestos.
+
+
+\subsection{Dos cargas del mismo signo}
+
+Sobre la línea que une dos cargas del mismo signo, el punto de campo nulo puede encontrarse entre ellas.
+
+Si las cargas son \(q_1\) y \(q_2\), separadas una distancia \(L\), y \(x\) se mide desde \(q_1\),
+
+\[
+k\frac{|q_1|}{x^2}
+=
+k\frac{|q_2|}{(L-x)^2}.
+\]
+
+Por tanto,
+
+\[
+\boxed{
+\frac{|q_1|}{x^2}
+=
+\frac{|q_2|}{(L-x)^2}
+}.
+\]
+
+El punto se encuentra más cerca de la carga de menor magnitud.
+
+
+\subsection{Dos cargas de signos opuestos}
+
+Entre dos cargas de signos opuestos, los campos apuntan en el mismo sentido, por lo que
+
+\[
+\boxed{\text{no existe punto de campo nulo entre ellas}}.
+\]
+
+Si existe un punto de cancelación sobre la línea que las une, debe buscarse fuera del segmento que contiene las cargas.
+
+
+\subsection{Distribuciones continuas de carga}
+
+Para un elemento infinitesimal \(dq\),
+
+\[
+\boxed{dE=k\frac{|dq|}{R^2}}.
+\]
+
+El campo total se obtiene mediante integración:
+
+\[
+\boxed{\vec E=\int d\vec E}.
+\]
+
+Trabajando por componentes,
+
+\[
+\boxed{E_x=\int dE_x},
+\qquad
+\boxed{E_y=\int dE_y}.
+\]
+
+
+\subsection{Componentes de un elemento de campo}
+
+Si el elemento \(dq\) produce un campo \(dE\) que forma un ángulo \(\theta\) con el eje \(+x\),
+
+\[
+\boxed{dE_x=dE\cos\theta},
+\qquad
+\boxed{dE_y=dE\sin\theta}.
+\]
+
+Los signos se asignan según el sentido de cada componente.
+
+
+\subsection{Densidad lineal de carga}
+
+\[
+\boxed{\lambda=\frac{dq}{d\ell}}
+\]
+
+por lo que
+
+\[
+\boxed{dq=\lambda\,d\ell}.
+\]
+
+Unidad SI:
+
+\[
+\boxed{[\lambda]=\si{\coulomb\per\metre}}.
+\]
+
+Para una distribución uniforme de longitud \(L\),
+
+\[
+\boxed{\lambda=\frac{Q}{L}}.
+\]
+
+
+\subsection{Densidad superficial de carga}
+
+\[
+\boxed{\sigma=\frac{dq}{dA}}
+\]
+
+y
+
+\[
+\boxed{dq=\sigma\,dA}.
+\]
+
+Unidad SI:
+
+\[
+\boxed{[\sigma]=\si{\coulomb\per\metre\squared}}.
+\]
+
+Para una distribución uniforme sobre un área \(A\),
+
+\[
+\boxed{\sigma=\frac{Q}{A}}.
+\]
+
+
+\subsection{Densidad volumétrica de carga}
+
+\[
+\boxed{\rho=\frac{dq}{dV}}
+\]
+
+y
+
+\[
+\boxed{dq=\rho\,dV}.
+\]
+
+Unidad SI:
+
+\[
+\boxed{[\rho]=\si{\coulomb\per\metre\cubed}}.
+\]
+
+Para una distribución uniforme en un volumen \(V\),
+
+\[
+\boxed{\rho=\frac{Q}{V}}.
+\]
+
+
+\subsection{Campo de una distribución lineal}
+
+Como
+
+\[
+dq=\lambda\,d\ell,
+\]
+
+la magnitud diferencial es
+
+\[
+\boxed{dE=k\frac{|\lambda\,d\ell|}{R^2}}.
+\]
+
+Por componentes,
+
+\[
+\boxed{E_x=\int dE_x},
+\qquad
+\boxed{E_y=\int dE_y}.
+\]
+
+
+\subsection{Campo de una distribución superficial}
+
+Como
+
+\[
+dq=\sigma\,dA,
+\]
+
+\[
+\boxed{dE=k\frac{|\sigma\,dA|}{R^2}}.
+\]
+
+El campo se obtiene integrando las componentes correspondientes.
+
+
+\subsection{Campo de una distribución volumétrica}
+
+Como
+
+\[
+dq=\rho\,dV,
+\]
+
+\[
+\boxed{dE=k\frac{|\rho\,dV|}{R^2}}.
+\]
+
+El campo total se obtiene integrando sobre todo el volumen cargado.
+
+
+\subsection{Campo sobre el eje de un anillo uniformemente cargado}
+
+Para un anillo de radio \(a\), carga total \(Q\) y un punto situado a una distancia \(x\) sobre su eje,
+
+\[
+\boxed{
+E_x=
+k\frac{Qx}{(x^2+a^2)^{3/2}}
+}.
+\]
+
+Por simetría,
+
+\[
+\boxed{E_y=0}.
+\]
+
+En el centro,
+
+\[
+x=0
+\quad\Longrightarrow\quad
+\boxed{E=0}.
+\]
+
+Si
+
+\[
+x\gg a,
+\]
+
+entonces
+
+\[
+\boxed{E\approx k\frac{|Q|}{x^2}},
+\]
+
+por lo que el anillo se comporta aproximadamente como una carga puntual vista desde muy lejos.
+
+
+\subsection{Campo uniforme}
+
+Un campo es uniforme cuando
+
+\[
+\boxed{\vec E=\text{constante}}
+\]
+
+en la región considerada.
+
+Esto significa que su magnitud y dirección no cambian con la posición.
+
+En componentes,
+
+\[
+\boxed{E_x=\text{constante}},
+\qquad
+\boxed{E_y=\text{constante}}.
+\]
+
+
+\subsection{Líneas de campo eléctrico}
+
+Reglas principales:
+
+\begin{itemize}
+    \item Las líneas salen de cargas positivas.
+    \item Las líneas entran en cargas negativas.
+    \item La tangente a una línea indica la dirección de \(\vec E\).
+    \item Una mayor densidad de líneas representa un campo más intenso.
+    \item Dos líneas de campo no pueden cruzarse.
+    \item En electrostática, las líneas de campo no forman curvas cerradas.
+\end{itemize}
+
+Para una carga positiva,
+
+\[
+\boxed{\text{campo radial hacia afuera}}.
+\]
+
+Para una carga negativa,
+
+\[
+\boxed{\text{campo radial hacia adentro}}.
+\]
+
+
+\subsection{Conversión de cargas}
+
+\[
+\boxed{\SI{1}{\milli\coulomb}=\SI{1e-3}{\coulomb}}
+\]
+
+\[
+\boxed{\SI{1}{\micro\coulomb}=\SI{1e-6}{\coulomb}}
+\]
+
+\[
+\boxed{\SI{1}{\nano\coulomb}=\SI{1e-9}{\coulomb}}
+\]
+
+\[
+\boxed{\SI{1}{\pico\coulomb}=\SI{1e-12}{\coulomb}}.
+\]
+
+
+\subsection{Procedimiento para varias cargas puntuales}
+
+\begin{enumerate}
+    \item Ubicar las cargas y el punto donde se desea calcular el campo.
+    \item Determinar la distancia desde cada carga hasta el punto.
+    \item Identificar el sentido de cada campo:
+    \[
+    q_i>0\Rightarrow\text{se aleja de }q_i,
+    \qquad
+    q_i<0\Rightarrow\text{apunta hacia }q_i.
+    \]
+    \item Calcular
+    \[
+    E_i=k\frac{|q_i|}{r_i^2}.
+    \]
+    \item Obtener las componentes
+    \[
+    E_{i,x}=E_i\cos\theta_i,
+    \qquad
+    E_{i,y}=E_i\sin\theta_i.
+    \]
+    \item Asignar los signos según el sentido de cada componente.
+    \item Sumar:
+    \[
+    E_x=\sum_iE_{i,x},
+    \qquad
+    E_y=\sum_iE_{i,y}.
+    \]
+    \item Calcular
+    \[
+    E=\sqrt{E_x^2+E_y^2}.
+    \]
+    \item Determinar la dirección analizando el cuadrante.
+\end{enumerate}
+
+
+\subsection{Resumen de fórmulas}
+
+\begin{align*}
+E &= \frac{F}{q_0},\\
+F &= |q|E,\\
+F_x &= qE_x, \qquad F_y=qE_y,\\
+E &= k\frac{|Q|}{r^2},\\
+r_i &= \sqrt{(x-x_i)^2+(y-y_i)^2},\\
+E_{i,x} &= E_i\cos\theta_i, \qquad E_{i,y}=E_i\sin\theta_i,\\
+E_x &= \sum_iE_{i,x}, \qquad E_y=\sum_iE_{i,y},\\
+E &= \sqrt{E_x^2+E_y^2},\\
+\theta_r &= \tan^{-1}\left(\frac{|E_y|}{|E_x|}\right),\\
+\lambda &= \frac{dq}{d\ell}, \qquad dq=\lambda\,d\ell,\\
+\sigma &= \frac{dq}{dA}, \qquad dq=\sigma\,dA,\\
+\rho &= \frac{dq}{dV}, \qquad dq=\rho\,dV,\\
+E_x &= \int dE_x, \qquad E_y=\int dE_y,\\
+E_{\text{anillo},x} &= k\frac{Qx}{(x^2+a^2)^{3/2}}.
+\end{align*}

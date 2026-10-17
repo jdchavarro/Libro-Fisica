@@ -1,0 +1,730 @@
+\section{Formulario}
+
+\subsection{Flujo eléctrico}
+
+Para una superficie plana de área \(A\) en un campo eléctrico uniforme,
+
+\[
+\boxed{\Phi_E=EA\cos\theta}
+\]
+
+donde \(\theta\) es el ángulo entre el campo eléctrico y la normal a la superficie.
+
+Casos particulares:
+
+\[
+\theta=0^\circ
+\quad\Longrightarrow\quad
+\boxed{\Phi_E=EA}
+\]
+
+\[
+\theta=90^\circ
+\quad\Longrightarrow\quad
+\boxed{\Phi_E=0}
+\]
+
+\[
+\theta=180^\circ
+\quad\Longrightarrow\quad
+\boxed{\Phi_E=-EA}.
+\]
+
+Unidad SI:
+
+\[
+\boxed{
+[\Phi_E]=\si{\newton\metre\squared\per\coulomb}
+}.
+\]
+
+
+\subsection{Signo del flujo}
+
+Para una superficie cerrada,
+
+\[
+\boxed{\text{campo saliente}\Longrightarrow\Phi_E>0}
+\]
+
+\[
+\boxed{\text{campo entrante}\Longrightarrow\Phi_E<0}.
+\]
+
+Un flujo nulo no implica necesariamente un campo nulo:
+
+\[
+\boxed{\Phi_E=0\;\not\Rightarrow\;E=0}.
+\]
+
+
+\subsection{Flujo sobre una superficie general}
+
+Para un elemento de área \(dA\),
+
+\[
+\boxed{d\Phi_E=E\cos\theta\,dA}.
+\]
+
+Para una superficie abierta,
+
+\[
+\boxed{
+\Phi_E=\int_S\vec E\cdot d\vec A
+}
+\]
+
+o, equivalentemente,
+
+\[
+\boxed{
+\Phi_E=\int_S E\cos\theta\,dA
+}.
+\]
+
+
+\subsection{Flujo sobre una superficie cerrada}
+
+\[
+\boxed{
+\Phi_E=\oint_S\vec E\cdot d\vec A
+}
+\]
+
+En una superficie cerrada, \(d\vec A\) se define siempre hacia el exterior.
+
+
+\subsection{Ley de Gauss}
+
+\[
+\boxed{
+\oint_S\vec E\cdot d\vec A
+=
+\frac{Q_{\text{enc}}}{\varepsilon_0}
+}
+\]
+
+Por tanto,
+
+\[
+\boxed{
+\Phi_E=\frac{Q_{\text{enc}}}{\varepsilon_0}
+}.
+\]
+
+Permitividad eléctrica del vacío:
+
+\[
+\boxed{
+\varepsilon_0\approx
+\SI{8.854e-12}{\coulomb\squared\per\newton\metre\squared}
+}.
+\]
+
+Relación con la constante de Coulomb:
+
+\[
+\boxed{
+k=\frac{1}{4\pi\varepsilon_0}
+}.
+\]
+
+
+\subsection{Carga neta encerrada}
+
+Para cargas puntuales,
+
+\[
+\boxed{
+Q_{\text{enc}}=\sum_iq_i
+}.
+\]
+
+La suma es algebraica y conserva el signo de cada carga.
+
+Si
+
+\[
+Q_{\text{enc}}>0,
+\]
+
+entonces
+
+\[
+\boxed{\Phi_E>0}.
+\]
+
+Si
+
+\[
+Q_{\text{enc}}<0,
+\]
+
+entonces
+
+\[
+\boxed{\Phi_E<0}.
+\]
+
+Si
+
+\[
+Q_{\text{enc}}=0,
+\]
+
+entonces
+
+\[
+\boxed{\Phi_E=0}.
+\]
+
+
+\subsection{Cargas externas}
+
+Las cargas situadas fuera de una superficie cerrada no forman parte de
+\(Q_{\text{enc}}\).
+
+Su contribución al flujo neto es
+
+\[
+\boxed{
+\Phi_{E,\text{externa}}=0
+}.
+\]
+
+Esto no significa que su campo sobre la superficie sea nulo.
+
+
+\subsection{Distribuciones continuas y carga encerrada}
+
+Para una distribución lineal,
+
+\[
+\boxed{
+Q_{\text{enc}}=\int\lambda\,d\ell
+}.
+\]
+
+Si \(\lambda\) es constante,
+
+\[
+\boxed{Q_{\text{enc}}=\lambda L}.
+\]
+
+Para una distribución superficial,
+
+\[
+\boxed{
+Q_{\text{enc}}=\int\sigma\,dA
+}.
+\]
+
+Si \(\sigma\) es constante,
+
+\[
+\boxed{Q_{\text{enc}}=\sigma A}.
+\]
+
+Para una distribución volumétrica,
+
+\[
+\boxed{
+Q_{\text{enc}}=\int\rho\,dV
+}.
+\]
+
+Si \(\rho\) es constante,
+
+\[
+\boxed{Q_{\text{enc}}=\rho V}.
+\]
+
+
+\subsection{Simetría esférica}
+
+Para una superficie gaussiana esférica de radio \(r\),
+
+\[
+\boxed{A=4\pi r^2}.
+\]
+
+Si el campo tiene magnitud constante sobre la superficie y es radial,
+
+\[
+\boxed{\Phi_E=E(4\pi r^2)}.
+\]
+
+La ley de Gauss queda
+
+\[
+\boxed{
+E(4\pi r^2)
+=
+\frac{Q_{\text{enc}}}{\varepsilon_0}
+}.
+\]
+
+Por tanto,
+
+\[
+\boxed{
+E=
+\frac{|Q_{\text{enc}}|}
+{4\pi\varepsilon_0r^2}
+}
+\]
+
+cuando la simetría permite tratar \(Q_{\text{enc}}\) de esta forma.
+
+
+\subsection{Carga puntual}
+
+Para una carga puntual \(Q\),
+
+\[
+\boxed{
+E=k\frac{|Q|}{r^2}
+}
+\]
+
+con
+
+\[
+\boxed{
+k=\frac{1}{4\pi\varepsilon_0}
+}.
+\]
+
+Si
+
+\[
+Q>0,
+\]
+
+el campo apunta radialmente hacia afuera.
+
+Si
+
+\[
+Q<0,
+\]
+
+el campo apunta radialmente hacia la carga.
+
+
+\subsection{Cáscara esférica uniformemente cargada}
+
+Para una cáscara esférica delgada de radio \(R\) y carga total \(Q\):
+
+Exterior,
+
+\[
+\boxed{
+E=k\frac{|Q|}{r^2}
+\qquad (r>R)
+}.
+\]
+
+Interior,
+
+\[
+\boxed{
+E=0
+\qquad (r<R)
+}.
+\]
+
+En la superficie,
+
+\[
+\boxed{
+E(R)=k\frac{|Q|}{R^2}
+}.
+\]
+
+
+\subsection{Esfera sólida uniformemente cargada}
+
+Para una esfera no conductora de radio \(R\) y carga total \(Q\),
+
+\[
+\boxed{
+\rho=\frac{Q}{\frac43\pi R^3}
+}.
+\]
+
+Para
+
+\[
+r<R,
+\]
+
+la carga encerrada es
+
+\[
+\boxed{
+Q_{\text{enc}}
+=
+Q\frac{r^3}{R^3}
+}.
+\]
+
+El campo interior es
+
+\[
+\boxed{
+E=k\frac{|Q|}{R^3}r
+\qquad (r<R)
+}.
+\]
+
+Por tanto,
+
+\[
+\boxed{E\propto r\qquad(r<R)}.
+\]
+
+Para
+
+\[
+r\geq R,
+\]
+
+\[
+\boxed{
+E=k\frac{|Q|}{r^2}
+}.
+\]
+
+En el centro,
+
+\[
+\boxed{E(0)=0}.
+\]
+
+En la superficie,
+
+\[
+\boxed{
+E(R)=k\frac{|Q|}{R^2}
+}.
+\]
+
+
+\subsection{Simetría cilíndrica}
+
+Para una superficie gaussiana cilíndrica de radio \(r\) y longitud \(L\),
+
+\[
+\boxed{
+A_{\text{lateral}}=2\pi rL
+}.
+\]
+
+Si el campo es radial,
+
+\[
+\boxed{
+\Phi_{\text{lateral}}=E(2\pi rL)
+}.
+\]
+
+Si el campo es paralelo a las tapas,
+
+\[
+\boxed{
+\Phi_{\text{tapas}}=0
+}.
+\]
+
+
+\subsection{Línea infinita uniformemente cargada}
+
+Para una línea infinita con densidad lineal \(\lambda\),
+
+\[
+\boxed{
+Q_{\text{enc}}=\lambda L
+}.
+\]
+
+Aplicando Gauss,
+
+\[
+E(2\pi rL)
+=
+\frac{\lambda L}{\varepsilon_0}.
+\]
+
+Por tanto,
+
+\[
+\boxed{
+E=\frac{|\lambda|}{2\pi\varepsilon_0r}
+}
+\]
+
+o
+
+\[
+\boxed{
+E=\frac{2k|\lambda|}{r}
+}.
+\]
+
+Dependencia con la distancia:
+
+\[
+\boxed{
+E\propto\frac{1}{r}
+}.
+\]
+
+Si
+
+\[
+\lambda>0,
+\]
+
+el campo apunta alejándose de la línea.
+
+Si
+
+\[
+\lambda<0,
+\]
+
+el campo apunta hacia la línea.
+
+
+\subsection{Simetría plana}
+
+Para una lámina infinita uniformemente cargada, se utiliza una superficie
+gaussiana cilíndrica que atraviesa la lámina.
+
+El flujo por la superficie lateral es
+
+\[
+\boxed{\Phi_{\text{lateral}}=0}.
+\]
+
+Si cada tapa tiene área \(A\),
+
+\[
+\boxed{\Phi_E=2EA}.
+\]
+
+
+\subsection{Lámina infinita uniformemente cargada}
+
+Para una densidad superficial \(\sigma\),
+
+\[
+\boxed{
+Q_{\text{enc}}=\sigma A
+}.
+\]
+
+Aplicando la ley de Gauss,
+
+\[
+2EA=\frac{\sigma A}{\varepsilon_0}.
+\]
+
+Por tanto,
+
+\[
+\boxed{
+E=\frac{|\sigma|}{2\varepsilon_0}
+}.
+\]
+
+El campo es independiente de la distancia:
+
+\[
+\boxed{E=\text{constante respecto de la distancia}}.
+\]
+
+Si
+
+\[
+\sigma>0,
+\]
+
+el campo apunta alejándose de la lámina.
+
+Si
+
+\[
+\sigma<0,
+\]
+
+el campo apunta hacia ella.
+
+
+\subsection{Comparación de dependencias con la distancia}
+
+Carga puntual o distribución esférica exterior:
+
+\[
+\boxed{
+E\propto\frac{1}{r^2}
+}.
+\]
+
+Línea infinita:
+
+\[
+\boxed{
+E\propto\frac{1}{r}
+}.
+\]
+
+Lámina infinita:
+
+\[
+\boxed{
+E\propto r^0
+}
+\]
+
+es decir,
+
+\[
+\boxed{E=\text{constante}}.
+\]
+
+
+\subsection{Condiciones útiles para simplificar el flujo}
+
+Si el campo es perpendicular a la superficie,
+
+\[
+\theta=0^\circ
+\quad\Longrightarrow\quad
+\boxed{d\Phi_E=E\,dA}.
+\]
+
+Si el campo es paralelo a la superficie,
+
+\[
+\theta=90^\circ
+\quad\Longrightarrow\quad
+\boxed{d\Phi_E=0}.
+\]
+
+Si \(E\) es constante sobre una región de área \(A\),
+
+\[
+\boxed{
+\int E\,dA=EA
+}.
+\]
+
+
+\subsection{Superficies gaussianas frecuentes}
+
+\[
+\boxed{
+\begin{array}{c|c}
+\text{Simetría} & \text{Superficie gaussiana conveniente}\\
+\hline
+\text{Esférica} & \text{Esfera concéntrica}\\
+\text{Cilíndrica} & \text{Cilindro coaxial}\\
+\text{Plana} & \text{Cilindro corto o pastilla}
+\end{array}
+}
+\]
+
+
+\subsection{Procedimiento para calcular flujo}
+
+\begin{enumerate}
+    \item Identificar la superficie.
+    \item Determinar el campo \(E\).
+    \item Determinar el área \(A\).
+    \item Identificar el ángulo entre el campo y la normal.
+    \item Aplicar
+    \[
+    \Phi_E=EA\cos\theta
+    \]
+    si \(E\) y \(\theta\) son constantes.
+    \item Si cambian sobre la superficie, utilizar
+    \[
+    \Phi_E=\int E\cos\theta\,dA.
+    \]
+    \item Asignar correctamente el signo del flujo.
+\end{enumerate}
+
+
+\subsection{Procedimiento para aplicar la ley de Gauss}
+
+\begin{enumerate}
+    \item Identificar la simetría de la distribución.
+    \item Determinar cualitativamente la dirección del campo.
+    \item Elegir una superficie gaussiana cerrada compatible con la simetría.
+    \item Identificar qué partes de la superficie aportan flujo.
+    \item Calcular \(Q_{\text{enc}}\).
+    \item Aplicar
+    \[
+    \oint_S\vec E\cdot d\vec A
+    =
+    \frac{Q_{\text{enc}}}{\varepsilon_0}.
+    \]
+    \item Simplificar la integral mediante la simetría.
+    \item Despejar \(E\).
+    \item Determinar el sentido del campo según el signo de la carga.
+\end{enumerate}
+
+
+\subsection{Advertencias}
+
+\begin{itemize}
+    \item En
+    \[
+    \Phi_E=EA\cos\theta,
+    \]
+    \(\theta\) se mide respecto de la normal, no respecto del plano.
+
+    \item La ley de Gauss requiere una superficie cerrada.
+
+    \item Sólo las cargas encerradas forman parte de \(Q_{\text{enc}}\).
+
+    \item Las cargas externas pueden producir campo sobre la superficie, aunque su
+    contribución al flujo neto sea cero.
+
+    \item
+    \[
+    \Phi_E=0
+    \]
+    no implica
+    \[
+    E=0.
+    \]
+
+    \item La ley de Gauss siempre es válida, pero sólo permite calcular \(E\)
+    fácilmente cuando existe suficiente simetría.
+
+    \item Una superficie gaussiana es imaginaria; no tiene que coincidir con una
+    superficie física.
+\end{itemize}
+
+
+\subsection{Resumen de fórmulas}
+
+\begin{align*}
+\Phi_E &= EA\cos\theta,\\
+\Phi_E &= \int_S\vec E\cdot d\vec A,\\
+\Phi_E &= \oint_S\vec E\cdot d\vec A,\\
+\Phi_E &= \frac{Q_{\text{enc}}}{\varepsilon_0},\\
+Q_{\text{enc}} &= \sum_iq_i,\\
+Q_{\text{enc}} &= \int\lambda\,d\ell,\\
+Q_{\text{enc}} &= \int\sigma\,dA,\\
+Q_{\text{enc}} &= \int\rho\,dV,\\
+E_{\text{esférica}}(4\pi r^2) &= \frac{Q_{\text{enc}}}{\varepsilon_0},\\
+E_{\text{puntual}} &= k\frac{|Q|}{r^2},\\
+E_{\text{cáscara,int}} &= 0,\\
+E_{\text{esfera,int}} &= k\frac{|Q|}{R^3}r,\\
+E_{\text{línea}} &= \frac{|\lambda|}{2\pi\varepsilon_0r},\\
+E_{\text{lámina}} &= \frac{|\sigma|}{2\varepsilon_0}.
+\end{align*}

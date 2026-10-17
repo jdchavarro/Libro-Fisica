@@ -1,0 +1,1787 @@
+﻿La descripción del movimiento realizada en el capítulo anterior nos permitió
+establecer un sistema de referencia, definir la posición de una partícula y
+distinguir entre distancia recorrida y desplazamiento.
+
+Ahora queremos avanzar un paso más.
+
+No solamente nos interesa saber dónde se encuentra un cuerpo o cuánto cambió
+su posición. También queremos saber \textbf{qué tan rápidamente cambia esa
+posición con el tiempo}.
+
+Esta pregunta conduce al concepto de velocidad.
+
+En este capítulo estudiaremos movimientos cuya trayectoria es una línea
+recta. Aunque se trata del caso geométricamente más sencillo, aquí aparecen
+conceptos fundamentales que utilizaremos posteriormente en prácticamente
+toda la mecánica.
+
+
+\section{Movimiento en una dimensión}
+
+Cuando una partícula se mueve sobre una trayectoria recta podemos hacer
+coincidir uno de los ejes de coordenadas con esa trayectoria.
+
+Por ejemplo, si el movimiento ocurre horizontalmente, podemos utilizar el
+eje \(x\):
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[-{Latex},thick] (-5,0) -- (5,0) node[right] {$x$};
+
+    \foreach \x in {-4,-2,0,2,4}
+    {
+        \draw (\x,-0.12) -- (\x,0.12);
+    }
+
+    \node[below] at (0,-0.15) {$0$};
+    \node[above] at (4,0.15) {sentido positivo};
+\end{tikzpicture}
+\end{center}
+
+Una vez elegido el sentido positivo, cualquier posición puede representarse
+mediante una sola coordenada \(x\).
+
+La posición de la partícula puede cambiar con el tiempo, por lo que escribimos
+
+\[ x=x(t). \]
+
+\begin{interpretacion}
+La expresión \(x(t)\) contiene la información fundamental del movimiento
+rectilíneo.
+
+Si conocemos \(x(t)\), sabemos dónde se encuentra la partícula en cada
+instante y, a partir de esa información, podemos estudiar su velocidad y
+posteriormente su aceleración.
+\end{interpretacion}
+
+
+\section{Velocidad media}
+
+Supongamos que una partícula se encuentra inicialmente en la posición
+\(x_i\) en el instante \(t_i\) y posteriormente se encuentra en la posición
+\(x_f\) en el instante \(t_f\).
+
+El desplazamiento es
+
+\[ \Delta x=x_f-x_i, \]
+
+y el intervalo de tiempo es
+
+\[ \Delta t=t_f-t_i. \]
+
+Queremos comparar cuánto cambió la posición con el tiempo empleado en
+producir ese cambio.
+
+\begin{definicion}[Velocidad media]
+La \textbf{velocidad media} de una partícula durante un intervalo de tiempo
+se define como el cociente entre su desplazamiento y el intervalo de tiempo
+transcurrido.
+\end{definicion}
+
+En movimiento rectilíneo,
+
+\[ \boxed{\bar{v}_x=\frac{\Delta x}{\Delta t}
+=\frac{x_f-x_i}{t_f-t_i}}. \]
+
+Aquí:
+
+\begin{itemize}
+    \item \(\bar{v}_x\) es la velocidad media;
+    \item \(\Delta x\) es el desplazamiento;
+    \item \(\Delta t\) es el intervalo de tiempo.
+\end{itemize}
+
+En el Sistema Internacional,
+
+\[ [\bar{v}_x]=\si{\meter\per\second}. \]
+
+\begin{interpretacion}
+La velocidad media indica el cambio de posición que correspondería, en
+promedio, a cada unidad de tiempo durante el intervalo considerado.
+
+No nos dice necesariamente cómo se movió el cuerpo en cada instante.
+\end{interpretacion}
+
+
+\subsection{El signo de la velocidad media}
+
+Como siempre consideramos
+
+\[ \Delta t>0, \]
+
+el signo de la velocidad media depende del signo del desplazamiento.
+
+Si
+
+\[ \Delta x>0, \]
+
+entonces
+
+\[ \bar{v}_x>0. \]
+
+El desplazamiento neto ocurrió en el sentido positivo del eje.
+
+Si
+
+\[ \Delta x<0, \]
+
+entonces
+
+\[ \bar{v}_x<0. \]
+
+El desplazamiento neto ocurrió en el sentido negativo.
+
+Si
+
+\[ \Delta x=0, \]
+
+entonces
+
+\[ \bar{v}_x=0. \]
+
+\begin{advertencia}
+Una velocidad media igual a cero no significa necesariamente que el cuerpo
+permaneció en reposo.
+
+Puede haberse movido y posteriormente haber regresado a su posición inicial.
+\end{advertencia}
+
+
+\begin{ejemplo}[Velocidad media positiva]
+
+Un automóvil se encuentra en
+
+\[ x_i=-\SI{20}{\meter} \]
+
+cuando
+
+\[ t_i=\SI{2}{\second}, \]
+
+y posteriormente se encuentra en
+
+\[ x_f=\SI{40}{\meter} \]
+
+cuando
+
+\[ t_f=\SI{7}{\second}. \]
+
+El desplazamiento es
+
+\[
+\Delta x=x_f-x_i
+=\SI{40}{\meter}-(-\SI{20}{\meter})
+=\SI{60}{\meter}.
+\]
+
+El intervalo de tiempo es
+
+\[
+\Delta t=t_f-t_i
+=\SI{7}{\second}-\SI{2}{\second}
+=\SI{5}{\second}.
+\]
+
+Por tanto,
+
+\[
+\bar{v}_x
+=\frac{\Delta x}{\Delta t}
+=\frac{\SI{60}{\meter}}{\SI{5}{\second}}
+=\SI{12}{\meter\per\second}.
+\]
+
+Así,
+
+\[ \boxed{\bar{v}_x=+\SI{12}{\meter\per\second}}. \]
+
+El signo positivo indica que el desplazamiento neto ocurrió en el sentido
+positivo del eje.
+\end{ejemplo}
+
+
+\begin{ejemplo}[Velocidad media negativa]
+
+Una motocicleta se encuentra inicialmente en
+
+\[ x_i=\SI{50}{\meter} \]
+
+y, \(\SI{10}{\second}\) después, se encuentra en
+
+\[ x_f=-\SI{30}{\meter}. \]
+
+Su desplazamiento es
+
+\[
+\Delta x
+=x_f-x_i
+=-\SI{30}{\meter}-\SI{50}{\meter}
+=-\SI{80}{\meter}.
+\]
+
+Por tanto,
+
+\[
+\bar{v}_x
+=\frac{-\SI{80}{\meter}}{\SI{10}{\second}}
+=-\SI{8.0}{\meter\per\second}.
+\]
+
+Entonces,
+
+\[ \boxed{\bar{v}_x=-\SI{8.0}{\meter\per\second}}. \]
+
+El resultado negativo no significa que la motocicleta se moviera
+``lentamente''.
+
+El signo informa sobre el sentido del desplazamiento neto.
+\end{ejemplo}
+
+
+\section{Rapidez media}
+
+En el lenguaje cotidiano solemos utilizar rapidez y velocidad como si fueran
+sinónimos.
+
+En Física debemos distinguirlas.
+
+La velocidad media se calcula utilizando el \textbf{desplazamiento}.
+
+La rapidez media se calcula utilizando la \textbf{distancia total recorrida}.
+
+\begin{definicion}[Rapidez media]
+La \textbf{rapidez media} es el cociente entre la distancia total recorrida
+y el intervalo de tiempo empleado.
+\end{definicion}
+
+Si \(s\) representa la distancia total recorrida,
+
+\[ \boxed{\bar{v}_{\text{rap}}=\frac{s}{\Delta t}}. \]
+
+La rapidez media es una magnitud escalar y, por tanto,
+
+\[ \bar{v}_{\text{rap}}\geq 0. \]
+
+
+\subsection{Velocidad media y rapidez media}
+
+Las expresiones
+
+\[ \bar{v}_x=\frac{\Delta x}{\Delta t} \]
+
+y
+
+\[ \bar{v}_{\text{rap}}=\frac{s}{\Delta t} \]
+
+parecen similares, pero describen cantidades diferentes.
+
+La diferencia fundamental está en el numerador:
+
+\[
+\text{velocidad media}
+\quad\longrightarrow\quad
+\text{desplazamiento},
+\]
+
+mientras que
+
+\[
+\text{rapidez media}
+\quad\longrightarrow\quad
+\text{distancia recorrida}.
+\]
+
+\begin{idea}
+En general,
+
+\[ \boxed{\bar{v}_{\text{rap}}\neq\abs{\bar{v}_x}}. \]
+
+Solo coinciden cuando la distancia recorrida es igual a la magnitud del
+desplazamiento, como ocurre en un movimiento rectilíneo sin cambio de
+sentido durante el intervalo considerado.
+\end{idea}
+
+
+\begin{ejemplo}[Rapidez media y velocidad media diferentes]
+
+Una persona camina
+
+\[ \SI{60}{\meter} \]
+
+hacia la derecha y después
+
+\[ \SI{20}{\meter} \]
+
+hacia la izquierda.
+
+El recorrido completo dura
+
+\[ \SI{40}{\second}. \]
+
+Elegimos la derecha como sentido positivo.
+
+La distancia total es
+
+\[
+s=\SI{60}{\meter}+\SI{20}{\meter}
+=\SI{80}{\meter}.
+\]
+
+La rapidez media es
+
+\[
+\bar{v}_{\text{rap}}
+=\frac{\SI{80}{\meter}}{\SI{40}{\second}}
+=\SI{2.0}{\meter\per\second}.
+\]
+
+El desplazamiento es
+
+\[
+\Delta x
+=\SI{60}{\meter}-\SI{20}{\meter}
+=\SI{40}{\meter}.
+\]
+
+Por tanto,
+
+\[
+\bar{v}_x
+=\frac{\SI{40}{\meter}}{\SI{40}{\second}}
+=\SI{1.0}{\meter\per\second}.
+\]
+
+Así,
+
+\[
+\boxed{\bar{v}_{\text{rap}}
+=\SI{2.0}{\meter\per\second}}
+\]
+
+y
+
+\[
+\boxed{\bar{v}_x
+=+\SI{1.0}{\meter\per\second}}.
+\]
+
+La diferencia aparece porque la distancia recorrida y el desplazamiento no
+son iguales.
+\end{ejemplo}
+
+
+\begin{ejemplo}[Velocidad media cero con rapidez media distinta de cero]
+
+Un corredor avanza
+
+\[ \SI{100}{\meter} \]
+
+y posteriormente regresa hasta el punto de partida.
+
+El recorrido completo dura
+
+\[ \SI{50}{\second}. \]
+
+La distancia recorrida es
+
+\[
+s=\SI{200}{\meter}.
+\]
+
+Por tanto,
+
+\[
+\bar{v}_{\text{rap}}
+=\frac{\SI{200}{\meter}}{\SI{50}{\second}}
+=\SI{4.0}{\meter\per\second}.
+\]
+
+Como termina en el mismo punto donde comenzó,
+
+\[ \Delta x=0. \]
+
+Entonces,
+
+\[
+\bar{v}_x=0.
+\]
+
+Por tanto,
+
+\[
+\boxed{\bar{v}_{\text{rap}}
+=\SI{4.0}{\meter\per\second}},
+\qquad
+\boxed{\bar{v}_x=0}.
+\]
+
+Este ejemplo muestra por qué la rapidez media no debe calcularse tomando
+simplemente el valor absoluto de la velocidad media.
+\end{ejemplo}
+
+
+\section{Velocidad instantánea}
+
+La velocidad media describe un intervalo completo.
+
+Pero imaginemos que un automóvil realiza un viaje de una hora.
+
+Saber su velocidad media durante toda la hora no nos dice necesariamente qué
+velocidad tenía exactamente a los veinte minutos.
+
+Para describir el movimiento en un instante determinado necesitamos el
+concepto de \textbf{velocidad instantánea}.
+
+\begin{notapedagogica}
+Puede introducirse esta idea preguntando:
+
+\begin{quote}
+¿Qué indica realmente el velocímetro de un automóvil?
+\end{quote}
+
+No está mostrando la velocidad media desde que comenzó el viaje.
+
+Está indicando qué tan rápido se mueve el automóvil en ese momento.
+\end{notapedagogica}
+
+
+\subsection{De un intervalo a un instante}
+
+Supongamos que queremos conocer la velocidad de una partícula en el instante
+\(t\).
+
+Podemos calcular primero la velocidad media en un intervalo relativamente
+grande alrededor de ese instante.
+
+Después reducimos el intervalo.
+
+Por ejemplo:
+
+\[
+\Delta t=\SI{1}{\second},
+\]
+
+luego
+
+\[
+\Delta t=\SI{0.1}{\second},
+\]
+
+después
+
+\[
+\Delta t=\SI{0.01}{\second},
+\]
+
+y así sucesivamente.
+
+A medida que el intervalo se hace más pequeño, la velocidad media describe
+cada vez mejor el movimiento alrededor del instante considerado.
+
+\begin{definicion}[Velocidad instantánea]
+La \textbf{velocidad instantánea} es el límite de la velocidad media cuando
+el intervalo de tiempo tiende a cero.
+\end{definicion}
+
+Matemáticamente,
+
+\[ \boxed{v_x=\lim_{\Delta t\to0}\frac{\Delta x}{\Delta t}}. \]
+
+En lenguaje del cálculo diferencial,
+
+\[ \boxed{v_x=\frac{\dd x}{\dd t}}. \]
+
+\begin{interpretacion}
+La velocidad instantánea es la tasa instantánea de cambio de la posición
+respecto del tiempo.
+
+Nos indica qué tan rápidamente está cambiando la posición y en qué sentido
+lo hace en un instante determinado.
+\end{interpretacion}
+
+\begin{nota}
+La definición mediante derivadas permite describir con precisión movimientos
+en los que la velocidad cambia continuamente.
+
+Cuando todavía no se dispone de cálculo diferencial, la misma idea puede
+comprenderse y utilizarse gráficamente mediante la pendiente de una recta
+tangente a la gráfica posición-tiempo.
+\end{nota}
+
+
+\subsection{Rapidez instantánea}
+
+La rapidez instantánea es la magnitud de la velocidad instantánea.
+
+En una dimensión,
+
+\[ \boxed{v=\abs{v_x}}. \]
+
+Por tanto,
+
+\[ v\geq0. \]
+
+Por ejemplo, las velocidades
+
+\[ v_x=+\SI{15}{\meter\per\second} \]
+
+y
+
+\[ v_x=-\SI{15}{\meter\per\second} \]
+
+corresponden a movimientos en sentidos opuestos, pero ambos tienen la misma
+rapidez:
+
+\[ v=\SI{15}{\meter\per\second}. \]
+
+
+\begin{ejemplo}[Velocidad instantánea a partir de una función]
+
+La posición de una partícula está dada por
+
+\[ x(t)=2t^2+3t-1, \]
+
+donde \(x\) se expresa en metros y \(t\) en segundos.
+
+Queremos determinar su velocidad instantánea.
+
+Por definición,
+
+\[
+v_x=\frac{\dd x}{\dd t}.
+\]
+
+Derivando,
+
+\[
+v_x(t)
+=\frac{\dd}{\dd t}\left(2t^2+3t-1\right),
+\]
+
+por lo que
+
+\[ v_x(t)=4t+3. \]
+
+Así,
+
+\[ \boxed{v_x(t)=4t+3}. \]
+
+En \(t=\SI{2}{\second}\),
+
+\[
+v_x(2)
+=4(2)+3
+=11.
+\]
+
+Por tanto,
+
+\[ \boxed{v_x=\SI{11}{\meter\per\second}}. \]
+
+El signo positivo indica que en ese instante la posición está aumentando y
+la partícula se mueve en el sentido positivo del eje.
+\end{ejemplo}
+
+
+\section{Interpretación de una gráfica posición-tiempo}
+
+Una de las formas más útiles de representar el movimiento consiste en
+construir una gráfica de posición \(x\) en función del tiempo \(t\).
+
+En el eje horizontal colocamos el tiempo.
+
+En el eje vertical colocamos la posición.
+
+\begin{figure}[H]
+    \centering
+
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines=middle,
+            xlabel={$t$},
+            ylabel={$x$},
+            xmin=0,
+            xmax=6,
+            ymin=-1,
+            ymax=8,
+            width=10cm,
+            height=7cm,
+            xtick={0,1,2,3,4,5},
+            ytick={0,2,4,6}
+        ]
+
+            \addplot[
+                domain=0:5,
+                samples=2,
+                thick
+            ] {1+1.2*x};
+
+        \end{axis}
+    \end{tikzpicture}
+
+    \caption{Ejemplo de gráfica de posición en función del tiempo.}
+    \label{fig:posicion_tiempo_rectilineo}
+\end{figure}
+
+Cada punto de la gráfica responde una pregunta:
+
+\begin{quote}
+¿Dónde se encontraba la partícula en determinado instante?
+\end{quote}
+
+Sin embargo, la gráfica contiene aún más información.
+
+Su pendiente está relacionada con la velocidad.
+
+
+\subsection{Pendiente y velocidad media}
+
+Consideremos dos puntos de la gráfica:
+
+\[
+(t_i,x_i)
+\]
+
+y
+
+\[
+(t_f,x_f).
+\]
+
+La pendiente de la recta secante que une estos puntos es
+
+\[
+m
+=
+\frac{x_f-x_i}{t_f-t_i}.
+\]
+
+Pero
+
+\[
+x_f-x_i=\Delta x
+\]
+
+y
+
+\[
+t_f-t_i=\Delta t.
+\]
+
+Por tanto,
+
+\[ \boxed{m=\frac{\Delta x}{\Delta t}=\bar{v}_x}. \]
+
+\begin{idea}
+En una gráfica de posición contra tiempo,
+
+\[
+\boxed{
+\text{pendiente de una secante}
+=
+\text{velocidad media}
+}.
+\]
+\end{idea}
+
+
+\subsection{Pendiente y velocidad instantánea}
+
+Si hacemos que los dos puntos de la secante se aproximen cada vez más entre
+sí, la recta secante se aproxima a la recta tangente.
+
+Por ello,
+
+\[
+\boxed{
+\text{pendiente de la tangente}
+=
+\text{velocidad instantánea}
+}.
+\]
+
+Matemáticamente,
+
+\[ v_x=\frac{\dd x}{\dd t}. \]
+
+
+\subsection{Cómo leer cualitativamente la pendiente}
+
+La forma de la gráfica permite interpretar el movimiento sin realizar
+cálculos.
+
+Si la pendiente es positiva,
+
+\[ v_x>0, \]
+
+y la partícula se mueve en el sentido positivo.
+
+Si la pendiente es negativa,
+
+\[ v_x<0, \]
+
+y la partícula se mueve en el sentido negativo.
+
+Si la pendiente es cero,
+
+\[ v_x=0, \]
+
+y la partícula se encuentra instantáneamente en reposo.
+
+Además, cuanto mayor sea el valor absoluto de la pendiente, mayor será la
+rapidez.
+
+\begin{idea}
+En una gráfica \(x-t\):
+
+\begin{itemize}
+    \item pendiente positiva \(\rightarrow\) velocidad positiva;
+    \item pendiente negativa \(\rightarrow\) velocidad negativa;
+    \item pendiente nula \(\rightarrow\) reposo;
+    \item mayor inclinación en valor absoluto \(\rightarrow\) mayor rapidez.
+\end{itemize}
+\end{idea}
+
+
+\begin{advertencia}
+Una gráfica posición-tiempo no representa necesariamente el dibujo de la
+trayectoria.
+
+En movimiento rectilíneo la trayectoria física es una línea recta.
+
+La gráfica \(x-t\) muestra cómo cambia la posición con el tiempo.
+\end{advertencia}
+
+
+\section{Movimiento rectilíneo uniforme}
+
+Hasta ahora hemos descrito movimientos rectilíneos de manera general.
+
+Consideremos ahora un caso particularmente importante: aquel en el cual la
+velocidad no cambia.
+
+\begin{definicion}[Movimiento rectilíneo uniforme]
+El \textbf{movimiento rectilíneo uniforme}, abreviado MRU, es un movimiento
+cuya trayectoria es una línea recta y cuya velocidad permanece constante.
+\end{definicion}
+
+Que la velocidad sea constante significa que no cambian:
+
+\begin{itemize}
+    \item su magnitud;
+    \item su dirección;
+    \item su sentido.
+\end{itemize}
+
+En consecuencia, una partícula en MRU experimenta desplazamientos iguales
+durante intervalos de tiempo iguales.
+
+Por ejemplo, si
+
+\[ v_x=\SI{5}{\meter\per\second}, \]
+
+la partícula experimenta cada segundo un desplazamiento de
+
+\[ +\SI{5}{\meter}. \]
+
+Si
+
+\[ v_x=-\SI{5}{\meter\per\second}, \]
+
+cada segundo experimenta un desplazamiento de
+
+\[ -\SI{5}{\meter}. \]
+
+
+\subsection{Construcción de la ecuación del MRU}
+
+En MRU la velocidad es constante.
+
+Por tanto, la velocidad media en cualquier intervalo coincide con esa
+velocidad constante:
+
+\[ v_x=\frac{\Delta x}{\Delta t}. \]
+
+Multiplicando por \(\Delta t\),
+
+\[ \Delta x=v_x\Delta t. \]
+
+Como
+
+\[ \Delta x=x_f-x_i, \]
+
+tenemos
+
+\[ x_f-x_i=v_x(t_f-t_i). \]
+
+Por tanto,
+
+\[ \boxed{x_f=x_i+v_x(t_f-t_i)}. \]
+
+Esta es la ecuación general de posición para un movimiento rectilíneo con
+velocidad constante.
+
+Si elegimos
+
+\[ t_i=0 \]
+
+y escribimos la posición inicial como \(x_0\),
+
+\[ \boxed{x(t)=x_0+v_xt}. \]
+
+\begin{interpretacion}
+La expresión
+
+\[ x(t)=x_0+v_xt \]
+
+dice que la posición actual se obtiene sumando:
+
+\[
+\text{posición inicial}
++
+\text{cambio de posición producido por el movimiento}.
+\]
+
+El término
+
+\[ v_xt \]
+
+representa el desplazamiento realizado desde \(t=0\).
+\end{interpretacion}
+
+
+\subsection{¿Qué significa cada término?}
+
+En
+
+\[ x=x_0+v_xt, \]
+
+tenemos:
+
+\begin{itemize}
+    \item \(x\): posición en el instante \(t\);
+    \item \(x_0\): posición inicial;
+    \item \(v_x\): velocidad constante;
+    \item \(t\): tiempo transcurrido desde el instante inicial elegido.
+\end{itemize}
+
+Cada término posee dimensiones de longitud:
+
+\[
+[x]=[x_0]=\si{\meter}
+\]
+
+y
+
+\[
+[v_xt]
+=
+\left(\si{\meter\per\second}\right)
+(\si{\second})
+=
+\si{\meter}.
+\]
+
+La ecuación es, por tanto, dimensionalmente homogénea.
+
+
+\begin{advertencia}
+No conviene memorizar simplemente
+
+\[ d=vt \]
+
+como ecuación universal del movimiento.
+
+La relación físicamente más completa es
+
+\[ \Delta x=v_x\Delta t. \]
+
+El desplazamiento puede ser positivo o negativo.
+
+La distancia recorrida es una magnitud escalar y debe analizarse
+separadamente.
+\end{advertencia}
+
+
+\section{Gráfica posición-tiempo en MRU}
+
+Si
+
+\[ x=x_0+v_xt, \]
+
+la posición depende linealmente del tiempo.
+
+Matemáticamente, esta ecuación tiene la forma
+
+\[ y=b+mx, \]
+
+donde la pendiente corresponde a la velocidad.
+
+En una gráfica \(x-t\):
+
+\[
+\boxed{\text{pendiente}=v_x}.
+\]
+
+Por tanto, un MRU siempre produce una línea recta en la gráfica
+posición-tiempo.
+
+
+\subsection{Velocidad positiva}
+
+Si
+
+\[ v_x>0, \]
+
+la recta tiene pendiente positiva.
+
+La posición aumenta con el tiempo.
+
+\begin{figure}[H]
+    \centering
+
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines=middle,
+            xlabel={$t$},
+            ylabel={$x$},
+            xmin=0,
+            xmax=6,
+            ymin=0,
+            ymax=14,
+            width=9cm,
+            height=6cm
+        ]
+
+            \addplot[
+                domain=0:5,
+                samples=2,
+                thick
+            ] {2+2*x};
+
+        \end{axis}
+    \end{tikzpicture}
+
+    \caption{Gráfica \(x-t\) para un MRU con velocidad positiva.}
+\end{figure}
+
+
+\subsection{Velocidad negativa}
+
+Si
+
+\[ v_x<0, \]
+
+la recta tiene pendiente negativa.
+
+La posición disminuye con el tiempo.
+
+\begin{figure}[H]
+    \centering
+
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines=middle,
+            xlabel={$t$},
+            ylabel={$x$},
+            xmin=0,
+            xmax=6,
+            ymin=-2,
+            ymax=12,
+            width=9cm,
+            height=6cm
+        ]
+
+            \addplot[
+                domain=0:5,
+                samples=2,
+                thick
+            ] {10-2*x};
+
+        \end{axis}
+    \end{tikzpicture}
+
+    \caption{Gráfica \(x-t\) para un MRU con velocidad negativa.}
+\end{figure}
+
+
+\subsection{Reposo}
+
+Un objeto en reposo tiene
+
+\[ v_x=0. \]
+
+Su posición permanece constante:
+
+\[ x=x_0. \]
+
+La gráfica posición-tiempo es una línea horizontal.
+
+\begin{figure}[H]
+    \centering
+
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines=middle,
+            xlabel={$t$},
+            ylabel={$x$},
+            xmin=0,
+            xmax=6,
+            ymin=0,
+            ymax=8,
+            width=9cm,
+            height=6cm
+        ]
+
+            \addplot[
+                domain=0:5,
+                samples=2,
+                thick
+            ] {5};
+
+        \end{axis}
+    \end{tikzpicture}
+
+    \caption{Gráfica \(x-t\) para una partícula en reposo.}
+\end{figure}
+
+
+\section{Gráfica velocidad-tiempo en MRU}
+
+En MRU la velocidad permanece constante.
+
+Por tanto, una gráfica de velocidad contra tiempo es una línea horizontal.
+
+\begin{figure}[H]
+    \centering
+
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines=middle,
+            xlabel={$t$},
+            ylabel={$v_x$},
+            xmin=0,
+            xmax=6,
+            ymin=0,
+            ymax=8,
+            width=9cm,
+            height=6cm
+        ]
+
+            \addplot[
+                domain=0:5,
+                samples=2,
+                thick
+            ] {4};
+
+        \end{axis}
+    \end{tikzpicture}
+
+    \caption{Gráfica \(v_x-t\) para un MRU con velocidad constante positiva.}
+\end{figure}
+
+Durante un intervalo \(\Delta t\), el área rectangular bajo la gráfica es
+
+\[
+A=v_x\Delta t.
+\]
+
+Pero para MRU,
+
+\[
+\Delta x=v_x\Delta t.
+\]
+
+Por tanto,
+
+\[ \boxed{\Delta x=A}. \]
+
+\begin{interpretacion}
+En una gráfica velocidad-tiempo, el área algebraica comprendida entre la
+gráfica y el eje del tiempo representa el desplazamiento.
+
+En MRU esta relación aparece inmediatamente porque el área es simplemente la
+de un rectángulo.
+\end{interpretacion}
+
+\begin{nota}
+Más adelante ampliaremos esta interpretación a movimientos cuya velocidad
+no sea constante.
+\end{nota}
+
+
+\section{Ejemplos de movimiento rectilíneo uniforme}
+
+\begin{ejemplo}[Determinar la posición]
+
+Un automóvil se mueve con velocidad constante
+
+\[ v_x=\SI{15}{\meter\per\second}. \]
+
+En \(t=0\) se encuentra en
+
+\[ x_0=\SI{20}{\meter}. \]
+
+Determine su posición después de
+
+\[ t=\SI{8}{\second}. \]
+
+Como la velocidad es constante, utilizamos
+
+\[ x=x_0+v_xt. \]
+
+Sustituyendo,
+
+\[
+x
+=
+\SI{20}{\meter}
++
+\left(\SI{15}{\meter\per\second}\right)
+\left(\SI{8}{\second}\right).
+\]
+
+Entonces,
+
+\[
+x
+=
+\SI{20}{\meter}
++
+\SI{120}{\meter}.
+\]
+
+Por tanto,
+
+\[ \boxed{x=\SI{140}{\meter}}. \]
+
+\begin{interpretacion}
+El automóvil comenzó a veinte metros del origen y realizó un desplazamiento
+de ciento veinte metros en el sentido positivo.
+\end{interpretacion}
+\end{ejemplo}
+
+
+\begin{ejemplo}[Velocidad negativa]
+
+Una partícula se encuentra inicialmente en
+
+\[ x_0=\SI{30}{\meter} \]
+
+y se mueve con velocidad constante
+
+\[ v_x=-\SI{4.0}{\meter\per\second}. \]
+
+Determine su posición después de
+
+\[ t=\SI{6}{\second}. \]
+
+Aplicamos
+
+\[ x=x_0+v_xt. \]
+
+Entonces,
+
+\[
+x
+=
+\SI{30}{\meter}
++
+\left(-\SI{4.0}{\meter\per\second}\right)
+\left(\SI{6}{\second}\right).
+\]
+
+Por tanto,
+
+\[
+x
+=
+\SI{30}{\meter}
+-
+\SI{24}{\meter}
+=
+\SI{6}{\meter}.
+\]
+
+Así,
+
+\[ \boxed{x=\SI{6}{\meter}}. \]
+
+La partícula sigue encontrándose en una posición positiva, aunque su
+velocidad sea negativa.
+
+\begin{interpretacion}
+Este ejemplo muestra nuevamente que el signo de la posición y el signo de la
+velocidad describen cosas diferentes.
+
+La partícula está en el lado positivo del origen, pero se mueve en el sentido
+negativo.
+\end{interpretacion}
+\end{ejemplo}
+
+
+\begin{ejemplo}[Determinar cuándo alcanza una posición]
+
+Un ciclista se mueve en línea recta con velocidad constante
+
+\[ v_x=\SI{6.0}{\meter\per\second}. \]
+
+En \(t=0\) se encuentra en
+
+\[ x_0=-\SI{12}{\meter}. \]
+
+¿En qué instante alcanza la posición
+
+\[ x=\SI{30}{\meter}? \]
+
+Partimos de
+
+\[ x=x_0+v_xt. \]
+
+Despejamos el tiempo:
+
+\[ t=\frac{x-x_0}{v_x}. \]
+
+Sustituimos:
+
+\[
+t
+=
+\frac{
+\SI{30}{\meter}-(-\SI{12}{\meter})
+}{
+\SI{6.0}{\meter\per\second}
+}.
+\]
+
+Entonces,
+
+\[
+t
+=
+\frac{\SI{42}{\meter}}
+{\SI{6.0}{\meter\per\second}}
+=
+\SI{7.0}{\second}.
+\]
+
+Por tanto,
+
+\[ \boxed{t=\SI{7.0}{\second}}. \]
+\end{ejemplo}
+
+
+\section{Encuentro de dos móviles}
+
+La ecuación de posición permite estudiar situaciones con varios móviles.
+
+La idea fundamental es sencilla:
+
+\begin{quote}
+dos móviles se encuentran cuando tienen la misma posición en el mismo
+instante.
+\end{quote}
+
+Por tanto, si sus posiciones son
+
+\[ x_A(t) \]
+
+y
+
+\[ x_B(t), \]
+
+la condición de encuentro es
+
+\[ \boxed{x_A(t)=x_B(t)}. \]
+
+
+\begin{ejemplo}[Dos móviles que se aproximan]
+
+Dos ciclistas se encuentran inicialmente separados
+\(\SI{100}{\meter}\) sobre una carretera recta.
+
+Elegimos el origen en la posición inicial del ciclista A y el sentido
+positivo hacia el ciclista B.
+
+El ciclista A se mueve con velocidad constante
+
+\[ v_A=+\SI{6}{\meter\per\second}, \]
+
+mientras que el ciclista B comienza en
+
+\[ x_{B0}=\SI{100}{\meter} \]
+
+y se mueve hacia A con
+
+\[ v_B=-\SI{4}{\meter\per\second}. \]
+
+La posición de A es
+
+\[ x_A=6t. \]
+
+La posición de B es
+
+\[ x_B=100-4t. \]
+
+En el encuentro,
+
+\[ x_A=x_B. \]
+
+Por tanto,
+
+\[
+6t=100-4t.
+\]
+
+Agrupando,
+
+\[
+10t=100.
+\]
+
+Así,
+
+\[ t=\SI{10}{\second}. \]
+
+La posición de encuentro es
+
+\[
+x_A
+=
+\left(\SI{6}{\meter\per\second}\right)
+\left(\SI{10}{\second}\right)
+=
+\SI{60}{\meter}.
+\]
+
+Por tanto,
+
+\[
+\boxed{t_{\text{encuentro}}=\SI{10}{\second}}
+\]
+
+y
+
+\[
+\boxed{x_{\text{encuentro}}=\SI{60}{\meter}}.
+\]
+
+\begin{interpretacion}
+No fue necesario memorizar una fórmula especial para ``problemas de
+encuentro''.
+
+Bastó escribir correctamente la ecuación de posición de cada móvil y utilizar
+la condición física de que ambos ocupan el mismo lugar en el mismo instante.
+\end{interpretacion}
+\end{ejemplo}
+
+
+\section{Procedimiento para resolver problemas de MRU}
+
+\begin{notapedagogica}
+Para evitar que los problemas de movimiento se conviertan en sustituciones
+automáticas, puede enseñarse el siguiente procedimiento:
+
+\begin{enumerate}
+
+    \item Dibujar un esquema sencillo de la situación.
+
+    \item Elegir el origen.
+
+    \item Elegir el sentido positivo del eje.
+
+    \item Escribir las posiciones iniciales con sus signos.
+
+    \item Asignar el signo correcto a cada velocidad.
+
+    \item Identificar qué magnitud se busca.
+
+    \item Escribir la ecuación de posición:
+
+    \[
+    x=x_0+v_xt.
+    \]
+
+    \item Sustituir los datos con unidades coherentes.
+
+    \item Resolver algebraicamente.
+
+    \item Interpretar el signo y el valor obtenido.
+
+\end{enumerate}
+
+La elección del sistema de referencia debe hacerse antes de introducir los
+signos en las ecuaciones.
+\end{notapedagogica}
+
+
+\section{Cuándo puede utilizarse el modelo de MRU}
+
+El movimiento rectilíneo uniforme es un modelo idealizado.
+
+\begin{condicion}
+La ecuación
+
+\[ x=x_0+v_xt \]
+
+puede utilizarse durante un intervalo en el que:
+
+\begin{itemize}
+    \item la trayectoria sea recta;
+    \item la velocidad pueda considerarse constante;
+    \item se mantenga el mismo sistema de referencia;
+    \item las posiciones y tiempos se midan respecto de los orígenes
+    establecidos.
+\end{itemize}
+\end{condicion}
+
+Muchos movimientos reales no mantienen exactamente una velocidad constante.
+
+Sin embargo, el MRU puede proporcionar una descripción adecuada durante
+intervalos en los que las variaciones de velocidad sean despreciables para
+el propósito del análisis.
+
+
+\section{Errores y confusiones frecuentes}
+
+\begin{errorfrecuente}
+\textbf{Confundir velocidad media con rapidez media.}
+
+La velocidad media utiliza desplazamiento:
+
+\[ \bar{v}_x=\frac{\Delta x}{\Delta t}. \]
+
+La rapidez media utiliza distancia:
+
+\[ \bar{v}_{\text{rap}}=\frac{s}{\Delta t}. \]
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Pensar que una velocidad negativa significa una rapidez negativa.}
+
+La rapidez nunca es negativa.
+
+El signo de una componente de velocidad indica el sentido del movimiento.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Confundir posición negativa con velocidad negativa.}
+
+Un objeto puede encontrarse en \(x<0\) y moverse con \(v_x>0\).
+
+También puede encontrarse en \(x>0\) y moverse con \(v_x<0\).
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Pensar que la velocidad media describe necesariamente la velocidad
+en todos los instantes.}
+
+Esto solo ocurre en el caso particular en que la velocidad permanece
+constante.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Calcular rapidez media utilizando el desplazamiento.}
+
+Si el móvil cambia de sentido, debe calcularse primero la distancia total
+recorrida.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Interpretar la altura de una gráfica \(x-t\) como velocidad.}
+
+En una gráfica posición-tiempo, la coordenada vertical representa posición.
+
+La velocidad está relacionada con la \textbf{pendiente}.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Pensar que una recta horizontal en una gráfica \(x-t\) representa
+movimiento uniforme.}
+
+Una recta horizontal significa
+
+\[ x=\text{constante}, \]
+
+por tanto,
+
+\[ v_x=0. \]
+
+El cuerpo está en reposo.
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+\textbf{Usar \(d=vt\) sin definir dirección ni signos.}
+
+En problemas unidimensionales es preferible trabajar con
+
+\[ \Delta x=v_x\Delta t \]
+
+o con
+
+\[ x=x_0+v_xt. \]
+
+Estas expresiones conservan explícitamente la información sobre el sentido
+del movimiento.
+\end{errorfrecuente}
+
+
+\section{Secuencia conceptual para explicar el tema}
+
+\begin{notapedagogica}
+Una secuencia adecuada para dictar esta clase es:
+
+\begin{enumerate}
+
+    \item Recordar brevemente posición, desplazamiento, distancia e intervalo
+    de tiempo.
+
+    \item Plantear la pregunta:
+
+    \begin{quote}
+    ¿Cómo podemos expresar qué tan rápidamente cambia la posición?
+    \end{quote}
+
+    \item Introducir la velocidad media como desplazamiento dividido entre
+    tiempo.
+
+    \item Analizar inmediatamente el signo de la velocidad media.
+
+    \item Resolver un ejemplo con velocidad media positiva y otro con
+    velocidad media negativa.
+
+    \item Introducir rapidez media y compararla con velocidad media.
+
+    \item Resolver un ejemplo con cambio de sentido para mostrar que
+    rapidez media y magnitud de la velocidad media no son iguales en
+    general.
+
+    \item Preguntar qué información falta si solamente conocemos la velocidad
+    media durante un intervalo largo.
+
+    \item Introducir intuitivamente la velocidad instantánea mediante
+    intervalos cada vez más pequeños.
+
+    \item Presentar formalmente
+
+    \[
+    v_x=\frac{\dd x}{\dd t}.
+    \]
+
+    \item Relacionar rapidez instantánea con
+
+    \[
+    v=\abs{v_x}.
+    \]
+
+    \item Introducir la gráfica posición-tiempo.
+
+    \item Explicar que la pendiente de una secante representa velocidad
+    media.
+
+    \item Explicar que la pendiente de una tangente representa velocidad
+    instantánea.
+
+    \item Interpretar gráficamente velocidades positivas, negativas y nulas.
+
+    \item Introducir el MRU como el caso especial de velocidad constante.
+
+    \item Construir, en lugar de memorizar, la ecuación
+
+    \[
+    x=x_0+v_xt.
+    \]
+
+    \item Interpretar cada término físicamente.
+
+    \item Dibujar las gráficas \(x-t\) y \(v-t\) del MRU.
+
+    \item Resolver ejemplos con velocidad positiva y negativa.
+
+    \item Resolver un problema de encuentro utilizando dos ecuaciones de
+    posición.
+
+    \item Finalizar señalando que en la siguiente etapa estudiaremos qué
+    ocurre cuando la velocidad deja de ser constante.
+
+\end{enumerate}
+\end{notapedagogica}
+
+
+\section{Preguntas para comprobar comprensión}
+
+Antes de continuar con aceleración pueden plantearse preguntas como:
+
+\begin{enumerate}
+
+    \item ¿Cuál es la diferencia entre desplazamiento y distancia recorrida?
+
+    \item ¿Cuál es la diferencia entre velocidad media y rapidez media?
+
+    \item ¿Puede una velocidad media ser negativa?
+
+    \item ¿Puede una rapidez media ser negativa?
+
+    \item ¿Puede un objeto tener rapidez media distinta de cero y velocidad
+    media igual a cero?
+
+    \item ¿Qué significa físicamente una velocidad negativa?
+
+    \item Si \(x<0\), ¿podemos concluir que \(v_x<0\)?
+
+    \item ¿Qué representa la pendiente de una recta secante en una gráfica
+    \(x-t\)?
+
+    \item ¿Qué representa la pendiente de una recta tangente?
+
+    \item ¿Qué significa una pendiente horizontal en una gráfica \(x-t\)?
+
+    \item ¿Qué movimiento representa una línea recta inclinada en una gráfica
+    \(x-t\)?
+
+    \item Si dos rectas \(x-t\) tienen pendientes positivas, ¿cómo podemos
+    saber qué móvil tiene mayor rapidez?
+
+    \item ¿Qué significa que un movimiento sea uniforme?
+
+    \item Si un objeto tiene velocidad constante negativa, ¿su posición
+    aumenta o disminuye con el tiempo?
+
+    \item ¿Por qué en un MRU la gráfica \(x-t\) debe ser una línea recta?
+
+    \item ¿Qué condición matemática permite encontrar el instante en que dos
+    móviles se encuentran?
+
+\end{enumerate}
+
+
+\section{Conexión con el tema siguiente}
+
+El movimiento rectilíneo uniforme constituye un caso especial:
+
+\[ v_x=\text{constante}. \]
+
+Sin embargo, la mayoría de los movimientos reales presentan cambios de
+velocidad.
+
+Un automóvil puede arrancar, aumentar su rapidez, frenar o cambiar el sentido
+de su movimiento.
+
+La pregunta natural es entonces:
+
+\begin{quote}
+¿Cómo describimos qué tan rápidamente cambia la velocidad?
+\end{quote}
+
+La respuesta conducirá al concepto de \textbf{aceleración}.
+
+A partir de allí estudiaremos el movimiento rectilíneo con aceleración
+constante.
+
+
+\begin{resumen}
+
+\begin{itemize}
+
+    \item En movimiento rectilíneo la posición puede describirse mediante una
+    sola coordenada:
+
+    \[
+    x=x(t).
+    \]
+
+    \item La velocidad media es
+
+    \[
+    \boxed{\bar{v}_x=\frac{\Delta x}{\Delta t}}.
+    \]
+
+    \item La velocidad media depende del desplazamiento y puede ser positiva,
+    negativa o cero.
+
+    \item La rapidez media es
+
+    \[
+    \boxed{\bar{v}_{\text{rap}}=\frac{s}{\Delta t}}.
+    \]
+
+    \item La rapidez media depende de la distancia total recorrida y nunca es
+    negativa.
+
+    \item En general,
+
+    \[
+    \bar{v}_{\text{rap}}\neq\abs{\bar{v}_x}.
+    \]
+
+    \item La velocidad instantánea se define como
+
+    \[
+    \boxed{
+    v_x
+    =
+    \lim_{\Delta t\to0}
+    \frac{\Delta x}{\Delta t}
+    =
+    \frac{\dd x}{\dd t}
+    }.
+    \]
+
+    \item La rapidez instantánea es la magnitud de la velocidad:
+
+    \[
+    \boxed{v=\abs{v_x}}.
+    \]
+
+    \item En una gráfica posición-tiempo, la pendiente de una secante
+    representa la velocidad media.
+
+    \item La pendiente de la tangente representa la velocidad instantánea.
+
+    \item Una pendiente positiva indica velocidad positiva.
+
+    \item Una pendiente negativa indica velocidad negativa.
+
+    \item Una pendiente nula indica reposo instantáneo.
+
+    \item El movimiento rectilíneo uniforme tiene trayectoria recta y
+    velocidad constante.
+
+    \item En MRU,
+
+    \[
+    \boxed{\Delta x=v_x\Delta t}.
+    \]
+
+    \item La ecuación general de posición es
+
+    \[
+    \boxed{x_f=x_i+v_x(t_f-t_i)}.
+    \]
+
+    \item Si \(t_i=0\),
+
+    \[
+    \boxed{x(t)=x_0+v_xt}.
+    \]
+
+    \item La gráfica \(x-t\) de un MRU es una línea recta cuya pendiente es
+    la velocidad.
+
+    \item La gráfica \(v_x-t\) de un MRU es una línea horizontal.
+
+    \item En un problema con dos móviles, el encuentro ocurre cuando
+
+    \[
+    \boxed{x_A(t)=x_B(t)}.
+    \]
+
+\end{itemize}
+
+\end{resumen}

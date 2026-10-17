@@ -1,0 +1,1778 @@
+\section{Flujo eléctrico}
+
+En el estudio del campo eléctrico hemos aprendido a determinar la magnitud y la
+dirección de \(\vec E\) en diferentes puntos del espacio.
+
+Ahora introduciremos una magnitud que permite describir cuánto campo eléctrico
+atraviesa una superficie.
+
+Esta magnitud se denomina \textbf{flujo eléctrico}.
+
+La idea puede entenderse inicialmente mediante las líneas de campo. Si muchas líneas
+atraviesan una superficie, asociamos a esa situación un flujo eléctrico grande. Si pocas
+líneas la atraviesan, el flujo es menor.
+
+Sin embargo, las líneas de campo son solamente una representación gráfica. El flujo
+eléctrico se define matemáticamente a partir del campo eléctrico y de la geometría de
+la superficie.
+
+
+\subsection{Campo uniforme perpendicular a una superficie}
+
+Consideremos una superficie plana de área \(A\) colocada en un campo eléctrico
+uniforme de magnitud \(E\).
+
+Si el campo atraviesa perpendicularmente la superficie, el flujo eléctrico es
+
+\[
+\boxed{\Phi_E=EA}.
+\]
+
+El flujo aumenta si aumenta la intensidad del campo o si aumenta el área atravesada.
+
+\begin{idea}
+
+El flujo eléctrico no mide simplemente el valor del campo eléctrico.
+
+También depende del tamaño y de la orientación de la superficie que el campo
+atraviesa.
+
+\end{idea}
+
+
+\subsection{Vector área}
+
+Para describir la orientación de una superficie plana asociamos a ella un
+\textbf{vector área} \(\vec A\).
+
+Su magnitud es igual al área de la superficie:
+
+\[
+|\vec A|=A,
+\]
+
+y su dirección es perpendicular a la superficie.
+
+Una superficie plana posee dos posibles direcciones normales. En una superficie
+abierta puede elegirse cualquiera de ellas siempre que se mantenga la elección de
+forma consistente.
+
+En una superficie cerrada existe una convención específica: el vector área apunta
+siempre hacia el exterior.
+
+
+\subsection{Superficie inclinada respecto del campo}
+
+Supongamos ahora que el campo eléctrico forma un ángulo \(\theta\) con la dirección
+normal a la superficie.
+
+El flujo eléctrico es
+
+\begin{equation}
+\boxed{\Phi_E=EA\cos\theta}.
+\label{eq:flujo_superficie_plana}
+\end{equation}
+
+El ángulo \(\theta\) se mide entre el campo eléctrico y la \textbf{normal a la superficie},
+no entre el campo y el plano de la superficie.
+
+\begin{center}
+\begin{tikzpicture}[>=Latex,scale=1.0]
+
+\draw[thick] (-2,-0.6) -- (1.8,0.5) -- (3.2,1.8) -- (-0.6,0.7) -- cycle;
+
+\draw[->,very thick] (-3,0.6) -- (3.7,0.6) node[right] {$\vec E$};
+
+\coordinate (C) at (0.6,0.55);
+\draw[->,very thick] (C) -- (1.8,2.9) node[above] {normal};
+
+\draw (1.15,0.55) arc[start angle=0,end angle=63,radius=0.55];
+\node at (1.55,1.05) {$\theta$};
+
+\node at (0,-0.55) {superficie de área \(A\)};
+
+\end{tikzpicture}
+\end{center}
+
+La cantidad
+
+\[
+A\cos\theta
+\]
+
+puede interpretarse como el área efectiva perpendicular al campo.
+
+
+\subsection{Casos particulares}
+
+Si
+
+\[
+\theta=0^\circ,
+\]
+
+el campo es perpendicular a la superficie y paralelo a su normal. Entonces,
+
+\[
+\Phi_E=EA.
+\]
+
+El flujo tiene su valor máximo positivo.
+
+Si
+
+\[
+\theta=90^\circ,
+\]
+
+el campo es paralelo a la superficie. Entonces,
+
+\[
+\boxed{\Phi_E=0}.
+\]
+
+En este caso el campo no atraviesa la superficie.
+
+Si
+
+\[
+\theta=180^\circ,
+\]
+
+el campo es opuesto a la normal:
+
+\[
+\boxed{\Phi_E=-EA}.
+\]
+
+El signo negativo indica que el campo atraviesa la superficie en sentido contrario al
+vector área elegido.
+
+
+\begin{advertencia}
+
+Un flujo igual a cero no implica necesariamente que
+
+\[
+E=0.
+\]
+
+Puede existir un campo eléctrico distinto de cero y, sin embargo, ser paralelo a la
+superficie, de manera que no la atraviese.
+
+\end{advertencia}
+
+
+\subsection{Unidad del flujo eléctrico}
+
+Como
+
+\[
+\Phi_E=EA,
+\]
+
+la unidad SI es
+
+\[
+[\Phi_E]
+=
+\left(\si{\newton\per\coulomb}\right)
+\left(\si{\metre\squared}\right).
+\]
+
+Por tanto,
+
+\[
+\boxed{
+[\Phi_E]=\si{\newton\metre\squared\per\coulomb}
+}.
+\]
+
+
+\subsection{Ejemplo: flujo a través de una superficie plana}
+
+\begin{ejemplo}
+
+Una superficie plana de área
+
+\[
+A=\SI{0.20}{\metre\squared}
+\]
+
+se encuentra en un campo eléctrico uniforme de magnitud
+
+\[
+E=\SI{500}{\newton\per\coulomb}.
+\]
+
+La normal a la superficie forma un ángulo de \(60^\circ\) con el campo.
+
+Determine el flujo eléctrico.
+
+\end{ejemplo}
+
+Aplicamos
+
+\[
+\Phi_E=EA\cos\theta.
+\]
+
+Sustituyendo,
+
+\[
+\Phi_E=(500)(0.20)\cos60^\circ.
+\]
+
+Como
+
+\[
+\cos60^\circ=0.50,
+\]
+
+obtenemos
+
+\[
+\boxed{
+\Phi_E=\SI{50}{\newton\metre\squared\per\coulomb}
+}.
+\]
+
+Si en lugar de \(60^\circ\) con la normal nos hubieran dado el ángulo con el plano de
+la superficie, primero habría sido necesario obtener el ángulo complementario.
+
+
+\section{Flujo a través de una superficie no uniforme}
+
+La expresión
+
+\[
+\Phi_E=EA\cos\theta
+\]
+
+sólo puede utilizarse directamente cuando el campo es uniforme sobre toda la superficie
+y la orientación de ésta es constante.
+
+Si la superficie es curva o el campo cambia de un punto a otro, debemos dividirla
+conceptualmente en pequeños elementos de área \(dA\).
+
+Cada elemento puede considerarse aproximadamente plano.
+
+El flujo infinitesimal es
+
+\[
+d\Phi_E=E\cos\theta\,dA.
+\]
+
+Por tanto, el flujo total se obtiene integrando:
+
+\begin{equation}
+\boxed{
+\Phi_E=\int_S \vec E\cdot d\vec A
+}.
+\label{eq:flujo_superficie_general}
+\end{equation}
+
+De forma escalar,
+
+\[
+\boxed{
+\Phi_E=\int_S E\cos\theta\,dA
+}.
+\]
+
+Aquí \(\theta\) puede cambiar de un punto a otro.
+
+
+\begin{idea}
+
+La integral de flujo suma únicamente la componente del campo perpendicular a cada
+elemento de superficie.
+
+La componente paralela a la superficie no contribuye al flujo.
+
+\end{idea}
+
+
+\section{Superficies abiertas y cerradas}
+
+Una superficie puede ser abierta o cerrada.
+
+Una superficie plana, un disco o una hoja son ejemplos de superficies abiertas.
+
+Una esfera, un cubo o un cilindro con sus dos tapas son ejemplos de superficies cerradas.
+
+En una superficie cerrada se utiliza el símbolo
+
+\[
+\oint
+\]
+
+para indicar que la integración se realiza sobre toda la superficie.
+
+El flujo neto es
+
+\begin{equation}
+\boxed{
+\Phi_E=\oint_S\vec E\cdot d\vec A
+}.
+\label{eq:flujo_superficie_cerrada}
+\end{equation}
+
+Para una superficie cerrada, \(d\vec A\) apunta siempre hacia afuera.
+
+
+\subsection{Flujo positivo y negativo}
+
+En una superficie cerrada:
+
+\[
+\boxed{\text{campo saliente}\Longrightarrow d\Phi_E>0}
+\]
+
+y
+
+\[
+\boxed{\text{campo entrante}\Longrightarrow d\Phi_E<0}.
+\]
+
+Por ello, el flujo neto es la diferencia entre las contribuciones salientes y entrantes.
+
+
+\subsection{Flujo neto igual a cero}
+
+Puede ocurrir que parte del campo entre a una superficie cerrada y otra parte salga.
+
+Si las contribuciones positivas y negativas se cancelan,
+
+\[
+\Phi_E=0.
+\]
+
+Esto no significa que el campo sea cero sobre la superficie.
+
+\begin{errorfrecuente}
+
+No confundir
+
+\[
+\boxed{\Phi_E=0}
+\]
+
+con
+
+\[
+\boxed{E=0}.
+\]
+
+Son afirmaciones diferentes.
+
+Un flujo neto nulo significa únicamente que las contribuciones entrantes y salientes
+se compensan.
+
+\end{errorfrecuente}
+
+
+\section{Carga encerrada}
+
+Para aplicar la ley de Gauss es necesario distinguir entre la carga
+\textbf{encerrada} y las cargas que se encuentran fuera de una superficie cerrada.
+
+Denotaremos por
+
+\[
+Q_{\text{enc}}
+\]
+
+la carga neta total encerrada.
+
+Si dentro existen varias cargas,
+
+\[
+\boxed{Q_{\text{enc}}=\sum_iq_i}.
+\]
+
+Debe realizarse una suma algebraica, teniendo en cuenta sus signos.
+
+Por ejemplo, si una superficie encierra
+
+\[
++\SI{5}{\micro\coulomb},
+\qquad
+-\SI{2}{\micro\coulomb},
+\qquad
++\SI{1}{\micro\coulomb},
+\]
+
+entonces
+
+\[
+Q_{\text{enc}}
+=
+5-2+1
+=
++\SI{4}{\micro\coulomb}.
+\]
+
+
+\section{Ley de Gauss}
+
+Existe una relación fundamental entre el flujo eléctrico neto a través de una superficie
+cerrada y la carga neta que dicha superficie encierra.
+
+\begin{principio}[Ley de Gauss]
+
+El flujo eléctrico neto a través de cualquier superficie cerrada es igual a la carga neta
+encerrada dividida entre la permitividad eléctrica del vacío.
+
+\end{principio}
+
+Matemáticamente,
+
+\begin{equation}
+\boxed{
+\oint_S\vec E\cdot d\vec A
+=
+\frac{Q_{\text{enc}}}{\varepsilon_0}
+}.
+\label{eq:ley_gauss}
+\end{equation}
+
+Como el miembro izquierdo es el flujo eléctrico neto,
+
+\begin{equation}
+\boxed{
+\Phi_E=\frac{Q_{\text{enc}}}{\varepsilon_0}
+}.
+\label{eq:gauss_flujo}
+\end{equation}
+
+La permitividad eléctrica del vacío es aproximadamente
+
+\[
+\boxed{
+\varepsilon_0\approx
+\SI{8.854e-12}{\coulomb\squared\per\newton\metre\squared}
+}.
+\]
+
+
+\subsection{Significado físico}
+
+La ley de Gauss establece que el flujo eléctrico neto a través de una superficie cerrada
+depende exclusivamente de la carga neta encerrada.
+
+Por tanto,
+
+\[
+Q_{\text{enc}}>0
+\Longrightarrow
+\Phi_E>0,
+\]
+
+\[
+Q_{\text{enc}}<0
+\Longrightarrow
+\Phi_E<0,
+\]
+
+y
+
+\[
+Q_{\text{enc}}=0
+\Longrightarrow
+\Phi_E=0.
+\]
+
+Una carga positiva encerrada produce un exceso neto de flujo saliente.
+
+Una carga negativa encerrada produce un exceso neto de flujo entrante.
+
+
+\section{Las cargas externas y el flujo neto}
+
+Una carga situada fuera de una superficie cerrada puede producir un campo eléctrico
+sobre dicha superficie.
+
+Sin embargo, su contribución al flujo \textbf{neto} es cero.
+
+Las líneas asociadas a una carga externa que entran en la superficie deben volver a salir.
+
+La entrada produce flujo negativo y la salida flujo positivo, de modo que el balance es
+
+\[
+\boxed{\Phi_{E,\text{carga externa}}=0}.
+\]
+
+\begin{advertencia}
+
+Una carga externa puede modificar considerablemente el campo eléctrico sobre una
+superficie gaussiana.
+
+Lo que no modifica es el flujo neto asociado a la carga encerrada.
+
+La ley de Gauss relaciona
+
+\[
+\oint_S\vec E\cdot d\vec A
+\]
+
+con \(Q_{\text{enc}}\), no con la carga total existente en todo el espacio.
+
+\end{advertencia}
+
+
+\section{La forma y el tamaño de la superficie cerrada}
+
+Según la ley de Gauss,
+
+\[
+\Phi_E=\frac{Q_{\text{enc}}}{\varepsilon_0}.
+\]
+
+Por tanto, mientras la misma carga permanezca encerrada, el flujo total no depende:
+
+\begin{itemize}
+    \item del tamaño de la superficie;
+    \item de su forma;
+    \item de la posición de la carga dentro de la superficie.
+\end{itemize}
+
+La distribución local del flujo sí puede cambiar, pero el flujo neto permanece igual.
+
+
+\subsection{Ejemplo conceptual}
+
+\begin{ejemplo}
+
+Una carga puntual \(+q\) está dentro de una superficie cerrada.
+
+¿Qué sucede con el flujo total si:
+
+\begin{enumerate}
+    \item se duplica el tamaño de la superficie;
+    \item la esfera se reemplaza por un cubo;
+    \item la carga se desplaza dentro de la superficie sin salir de ella?
+\end{enumerate}
+
+\end{ejemplo}
+
+En los tres casos la carga encerrada continúa siendo \(+q\).
+
+Por tanto,
+
+\[
+\boxed{\Phi_E=\frac{q}{\varepsilon_0}}
+\]
+
+permanece constante.
+
+El campo puede cambiar de un punto a otro de la nueva superficie, pero el flujo neto
+no cambia.
+
+
+\section{Superficie gaussiana}
+
+Una \textbf{superficie gaussiana} es una superficie cerrada imaginaria elegida para
+aplicar la ley de Gauss.
+
+No necesita coincidir con una superficie física.
+
+\begin{idea}
+
+La superficie gaussiana es una herramienta matemática.
+
+No es una barrera, una membrana ni una superficie material.
+
+\end{idea}
+
+La ley de Gauss puede aplicarse a cualquier superficie cerrada.
+
+Sin embargo, si queremos utilizarla para calcular el campo eléctrico, no cualquier
+superficie resulta conveniente.
+
+
+\section{Ley de Gauss y simetría}
+
+La ley de Gauss es válida para cualquier distribución de carga.
+
+Pero para despejar fácilmente \(E\) de
+
+\[
+\oint_S\vec E\cdot d\vec A
+=
+\frac{Q_{\text{enc}}}{\varepsilon_0},
+\]
+
+debemos conocer suficiente información sobre el campo en la superficie elegida.
+
+Esto ocurre especialmente cuando existe:
+
+\begin{itemize}
+    \item simetría esférica;
+    \item simetría cilíndrica;
+    \item simetría plana.
+\end{itemize}
+
+Una buena superficie gaussiana debe aprovechar esa simetría.
+
+
+\subsection{Qué buscamos al elegir una superficie gaussiana}
+
+Conviene escoger una superficie donde ocurra una o varias de las siguientes situaciones:
+
+\begin{enumerate}
+    \item la magnitud \(E\) es constante sobre una parte de la superficie;
+    \item el campo es perpendicular a la superficie, de modo que
+    \[
+    \cos\theta=1;
+    \]
+    \item el campo es paralelo a la superficie, de modo que
+    \[
+    \cos\theta=0;
+    \]
+    \item alguna región posee campo nulo.
+\end{enumerate}
+
+Estas condiciones permiten simplificar la integral de flujo.
+
+
+\begin{advertencia}
+
+La superficie gaussiana no se elige porque ``se parece'' simplemente al dibujo del
+problema.
+
+Debe elegirse de forma que refleje la \textbf{simetría de la distribución de carga y
+del campo eléctrico}.
+
+\end{advertencia}
+
+
+\section{Relación entre la ley de Coulomb y la ley de Gauss}
+
+Consideremos una carga puntual positiva \(Q\) y una superficie gaussiana esférica
+de radio \(r\) centrada en ella.
+
+Por simetría esférica:
+
+\begin{itemize}
+    \item el campo es radial;
+    \item tiene la misma magnitud en todos los puntos de la esfera;
+    \item es perpendicular a la superficie.
+\end{itemize}
+
+Por tanto,
+
+\[
+\oint_S\vec E\cdot d\vec A
+=
+E\oint_SdA.
+\]
+
+El área de la esfera es
+
+\[
+A=4\pi r^2.
+\]
+
+Entonces,
+
+\[
+\Phi_E=E(4\pi r^2).
+\]
+
+La ley de Gauss establece
+
+\[
+E(4\pi r^2)=\frac{Q}{\varepsilon_0}.
+\]
+
+Despejando,
+
+\[
+E=\frac{1}{4\pi\varepsilon_0}\frac{Q}{r^2}.
+\]
+
+Como
+
+\[
+k=\frac{1}{4\pi\varepsilon_0},
+\]
+
+obtenemos
+
+\[
+\boxed{E=k\frac{Q}{r^2}}.
+\]
+
+Para la magnitud,
+
+\[
+\boxed{E=k\frac{|Q|}{r^2}}.
+\]
+
+Por tanto, para una carga puntual, la ley de Gauss conduce al mismo resultado obtenido
+a partir de la ley de Coulomb.
+
+
+\begin{interpretacion}
+
+El flujo a través de la esfera es
+
+\[
+\Phi_E=E(4\pi r^2).
+\]
+
+El campo disminuye como
+
+\[
+\frac{1}{r^2},
+\]
+
+pero el área de la esfera aumenta como
+
+\[
+r^2.
+\]
+
+Ambos efectos se compensan, por lo que el flujo total es independiente del radio:
+
+\[
+\boxed{\Phi_E=\frac{Q}{\varepsilon_0}}.
+\]
+
+\end{interpretacion}
+
+
+\section{Procedimiento para aplicar la ley de Gauss}
+
+Cuando se quiere determinar un campo eléctrico mediante la ley de Gauss, conviene
+seguir un procedimiento sistemático.
+
+\begin{enumerate}
+    \item Identificar la simetría de la distribución de carga.
+    \item Determinar cualitativamente la dirección del campo.
+    \item Elegir una superficie gaussiana compatible con la simetría.
+    \item Analizar qué partes de la superficie aportan flujo.
+    \item Calcular la carga encerrada \(Q_{\text{enc}}\).
+    \item Aplicar
+    \[
+    \oint_S\vec E\cdot d\vec A
+    =
+    \frac{Q_{\text{enc}}}{\varepsilon_0}.
+    \]
+    \item Simplificar la integral utilizando la simetría.
+    \item Despejar \(E\).
+    \item Determinar el sentido del campo según el signo de la distribución de carga.
+    \item Comprobar las unidades y el comportamiento físico del resultado.
+\end{enumerate}
+
+
+\section{Simetría esférica}
+
+Una distribución posee simetría esférica cuando sus propiedades no cambian al girarla
+alrededor de su centro.
+
+En este caso, el campo eléctrico debe ser radial y su magnitud sólo puede depender de
+la distancia \(r\) al centro:
+
+\[
+E=E(r).
+\]
+
+La superficie gaussiana natural es una esfera concéntrica.
+
+Sobre esa esfera:
+
+\[
+E=\text{constante}
+\]
+
+y el campo es perpendicular a la superficie.
+
+Por tanto,
+
+\[
+\Phi_E=E(4\pi r^2).
+\]
+
+La ley de Gauss queda
+
+\begin{equation}
+\boxed{
+E(4\pi r^2)=\frac{Q_{\text{enc}}}{\varepsilon_0}
+}.
+\label{eq:gauss_simetria_esferica}
+\end{equation}
+
+
+\section{Cáscara esférica uniformemente cargada}
+
+Consideremos una cáscara esférica delgada de radio \(R\) con carga total \(Q\)
+distribuida uniformemente sobre su superficie.
+
+
+\subsection{Campo exterior}
+
+Para
+
+\[
+r>R,
+\]
+
+una superficie gaussiana esférica de radio \(r\) encierra toda la carga:
+
+\[
+Q_{\text{enc}}=Q.
+\]
+
+Entonces,
+
+\[
+E(4\pi r^2)=\frac{Q}{\varepsilon_0},
+\]
+
+y
+
+\begin{equation}
+\boxed{
+E=\frac{1}{4\pi\varepsilon_0}\frac{|Q|}{r^2}
+=k\frac{|Q|}{r^2}
+}.
+\label{eq:campo_cascara_exterior}
+\end{equation}
+
+Exteriormente, una distribución esféricamente simétrica se comporta como si toda su
+carga estuviera concentrada en el centro.
+
+
+\subsection{Campo interior}
+
+Para
+
+\[
+r<R,
+\]
+
+la superficie gaussiana no encierra carga:
+
+\[
+Q_{\text{enc}}=0.
+\]
+
+Entonces,
+
+\[
+E(4\pi r^2)=0.
+\]
+
+Por tanto,
+
+\begin{equation}
+\boxed{E=0\qquad(r<R)}.
+\label{eq:campo_cascara_interior}
+\end{equation}
+
+Este resultado se debe a la simetría esférica y no requiere que la cáscara sea conductora.
+
+
+\section{Esfera aislante uniformemente cargada}
+
+Consideremos ahora una esfera sólida no conductora de radio \(R\), carga total \(Q\)
+y densidad volumétrica uniforme.
+
+La densidad es
+
+\[
+\rho=\frac{Q}{\frac43\pi R^3}.
+\]
+
+
+\subsection{Campo exterior}
+
+Para
+
+\[
+r\geq R,
+\]
+
+la superficie gaussiana encierra toda la carga:
+
+\[
+Q_{\text{enc}}=Q.
+\]
+
+Por tanto,
+
+\[
+\boxed{
+E=k\frac{|Q|}{r^2}
+\qquad(r\geq R)
+}.
+\]
+
+
+\subsection{Campo interior}
+
+Para
+
+\[
+r<R,
+\]
+
+la superficie gaussiana encierra solamente una parte de la carga.
+
+El volumen encerrado es
+
+\[
+V_{\text{enc}}=\frac43\pi r^3.
+\]
+
+Por tanto,
+
+\[
+Q_{\text{enc}}=\rho V_{\text{enc}}
+=\rho\frac43\pi r^3.
+\]
+
+Como
+
+\[
+\rho=\frac{Q}{\frac43\pi R^3},
+\]
+
+obtenemos
+
+\[
+Q_{\text{enc}}=Q\frac{r^3}{R^3}.
+\]
+
+Aplicamos la ley de Gauss:
+
+\[
+E(4\pi r^2)
+=
+\frac{1}{\varepsilon_0}
+Q\frac{r^3}{R^3}.
+\]
+
+Despejando,
+
+\[
+\boxed{
+E=
+\frac{|Q|}{4\pi\varepsilon_0R^3}r
+}.
+\]
+
+También puede escribirse como
+
+\begin{equation}
+\boxed{
+E=k\frac{|Q|}{R^3}r
+\qquad(r<R)
+}.
+\label{eq:campo_esfera_uniforme_interior}
+\end{equation}
+
+Así, dentro de una esfera uniformemente cargada,
+
+\[
+\boxed{E\propto r}.
+\]
+
+En el centro,
+
+\[
+r=0
+\Longrightarrow
+\boxed{E=0}.
+\]
+
+En la superficie,
+
+\[
+r=R,
+\]
+
+las expresiones interior y exterior dan el mismo valor:
+
+\[
+E(R)=k\frac{|Q|}{R^2}.
+\]
+
+
+\subsection{Comportamiento del campo}
+
+Para una esfera sólida uniformemente cargada:
+
+\[
+E\propto r
+\qquad
+(r<R),
+\]
+
+mientras que
+
+\[
+E\propto\frac{1}{r^2}
+\qquad
+(r>R).
+\]
+
+Por tanto, el campo aumenta linealmente desde cero en el centro hasta alcanzar su
+valor máximo en la superficie y luego disminuye con el inverso del cuadrado de la
+distancia.
+
+
+\section{Simetría cilíndrica}
+
+Una línea recta infinitamente larga con carga uniforme posee simetría cilíndrica.
+
+El campo debe ser perpendicular a la línea y su magnitud sólo puede depender de la
+distancia perpendicular \(r\):
+
+\[
+E=E(r).
+\]
+
+Para aprovechar esta simetría elegimos una superficie gaussiana cilíndrica coaxial
+con la línea, de radio \(r\) y longitud \(L\).
+
+\begin{center}
+\begin{tikzpicture}[>=Latex,scale=0.95]
+
+\draw[dashed] (0,-2.8) -- (0,2.8);
+\draw[very thick] (0,-2.5) -- (0,2.5) node[above] {línea cargada};
+
+\draw (-1.6,-2) arc[start angle=180,end angle=360,x radius=1.6,y radius=0.45];
+\draw[dashed] (-1.6,-2) arc[start angle=180,end angle=0,x radius=1.6,y radius=0.45];
+
+\draw (-1.6,2) arc[start angle=180,end angle=360,x radius=1.6,y radius=0.45];
+\draw[dashed] (-1.6,2) arc[start angle=180,end angle=0,x radius=1.6,y radius=0.45];
+
+\draw (-1.6,-2) -- (-1.6,2);
+\draw (1.6,-2) -- (1.6,2);
+
+\draw[->,thick] (1.6,0) -- (2.6,0) node[right] {$E$};
+\draw[->,thick] (-1.6,0) -- (-2.6,0) node[left] {$E$};
+
+\node at (0,-3.15) {superficie gaussiana cilíndrica};
+
+\end{tikzpicture}
+\end{center}
+
+Sobre la superficie lateral, \(E\) es constante y perpendicular a la superficie.
+
+El área lateral es
+
+\[
+A_{\text{lateral}}=2\pi rL.
+\]
+
+En las tapas del cilindro el campo es paralelo a las superficies, por lo que
+
+\[
+\Phi_{\text{tapas}}=0.
+\]
+
+Por tanto,
+
+\[
+\Phi_E=E(2\pi rL).
+\]
+
+
+\section{Campo de una línea infinita de carga}
+
+Sea \(\lambda\) la densidad lineal de carga.
+
+La carga encerrada por un cilindro de longitud \(L\) es
+
+\[
+Q_{\text{enc}}=\lambda L.
+\]
+
+Aplicamos Gauss:
+
+\[
+E(2\pi rL)=\frac{\lambda L}{\varepsilon_0}.
+\]
+
+Cancelamos \(L\) y despejamos:
+
+\begin{equation}
+\boxed{
+E=\frac{|\lambda|}{2\pi\varepsilon_0r}
+}.
+\label{eq:campo_linea_infinita}
+\end{equation}
+
+Como
+
+\[
+k=\frac{1}{4\pi\varepsilon_0},
+\]
+
+también puede escribirse
+
+\[
+\boxed{
+E=\frac{2k|\lambda|}{r}
+}.
+\]
+
+Si
+
+\[
+\lambda>0,
+\]
+
+el campo apunta alejándose radialmente de la línea.
+
+Si
+
+\[
+\lambda<0,
+\]
+
+apunta hacia ella.
+
+Observe que
+
+\[
+\boxed{E\propto\frac{1}{r}}.
+\]
+
+El campo de una línea infinita disminuye más lentamente con la distancia que el campo
+de una carga puntual.
+
+
+\section{Simetría plana}
+
+Consideremos una lámina plana, infinita y no conductora con densidad superficial de
+carga uniforme \(\sigma\).
+
+Por simetría, el campo debe ser perpendicular al plano.
+
+Además, su magnitud debe ser la misma a ambos lados de la lámina.
+
+Elegimos una superficie gaussiana cilíndrica que atraviese la lámina y cuyas tapas,
+de área \(A\), sean paralelas a ella.
+
+Esta superficie suele denominarse \textbf{pastilla gaussiana} o \textbf{pillbox}.
+
+\begin{center}
+\begin{tikzpicture}[>=Latex,scale=0.95]
+
+\draw[thick] (-3,0) -- (3,0) node[right] {lámina};
+
+\draw (-1,-1.7) -- (-1,1.7);
+\draw (1,-1.7) -- (1,1.7);
+\draw (-1,1.7) -- (1,1.7);
+\draw (-1,-1.7) -- (1,-1.7);
+
+\draw[->,very thick] (0,1.7) -- (0,2.8) node[above] {$E$};
+\draw[->,very thick] (0,-1.7) -- (0,-2.8) node[below] {$E$};
+
+\node at (1.8,1.35) {superficie};
+\node at (1.8,0.95) {gaussiana};
+
+\end{tikzpicture}
+\end{center}
+
+El campo es perpendicular a las dos tapas y paralelo a la superficie lateral.
+
+Por tanto, la superficie lateral no aporta flujo.
+
+Cada tapa aporta
+
+\[
+EA.
+\]
+
+El flujo total es
+
+\[
+\Phi_E=2EA.
+\]
+
+
+\section{Campo de una lámina infinita uniformemente cargada}
+
+La carga encerrada por la superficie gaussiana es
+
+\[
+Q_{\text{enc}}=\sigma A.
+\]
+
+La ley de Gauss establece
+
+\[
+2EA=\frac{\sigma A}{\varepsilon_0}.
+\]
+
+Cancelando \(A\),
+
+\begin{equation}
+\boxed{
+E=\frac{|\sigma|}{2\varepsilon_0}
+}.
+\label{eq:campo_lamina_infinita}
+\end{equation}
+
+Una característica notable es que la magnitud del campo no depende de la distancia
+a la lámina.
+
+Si
+
+\[
+\sigma>0,
+\]
+
+el campo apunta alejándose de la lámina en ambos lados.
+
+Si
+
+\[
+\sigma<0,
+\]
+
+apunta hacia ella.
+
+
+\begin{interpretacion}
+
+La independencia respecto de la distancia es consecuencia de la idealización de una
+lámina infinita.
+
+Una lámina física finita sólo se aproxima a este resultado en regiones donde sus
+dimensiones sean mucho mayores que la distancia desde el punto de observación hasta
+la lámina.
+
+\end{interpretacion}
+
+
+\section{Comparación de las dependencias con la distancia}
+
+Los resultados anteriores muestran que la geometría de la distribución de carga afecta
+la manera en que el campo disminuye con la distancia.
+
+Para una carga puntual o una distribución esféricamente simétrica exterior,
+
+\[
+\boxed{E\propto\frac{1}{r^2}}.
+\]
+
+Para una línea infinita,
+
+\[
+\boxed{E\propto\frac{1}{r}}.
+\]
+
+Para una lámina infinita,
+
+\[
+\boxed{E=\text{constante respecto de la distancia}}.
+\]
+
+Estas diferencias no son casuales. Se relacionan con la manera en que el flujo eléctrico
+se distribuye sobre superficies gaussianas cuyo tamaño aumenta.
+
+
+\section{Cuándo no conviene usar la ley de Gauss para calcular el campo}
+
+La ley de Gauss sigue siendo válida aunque una distribución de carga carezca de
+simetría.
+
+Sin embargo, puede ocurrir que no podamos sacar \(E\) fuera de la integral:
+
+\[
+\oint_S\vec E\cdot d\vec A.
+\]
+
+Por ejemplo, para una distribución irregular de cargas puntuales, el campo puede variar
+en magnitud y dirección sobre toda la superficie gaussiana.
+
+En esas situaciones, la ley de Gauss puede proporcionar información sobre el flujo neto,
+pero no necesariamente constituye el método más sencillo para calcular el campo en un
+punto.
+
+
+\begin{idea}
+
+\[
+\boxed{\text{La ley de Gauss siempre es válida}}
+\]
+
+pero
+
+\[
+\boxed{\text{no siempre es útil para despejar }E}.
+\]
+
+Su mayor poder aparece cuando existe suficiente simetría.
+
+\end{idea}
+
+
+\section{Ejemplo: flujo a partir de la carga encerrada}
+
+\begin{ejemplo}
+
+Una superficie cerrada encierra tres cargas:
+
+\[
+q_1=+\SI{4.0}{\micro\coulomb},\qquad
+q_2=-\SI{1.0}{\micro\coulomb},\qquad
+q_3=+\SI{2.0}{\micro\coulomb}.
+\]
+
+Determine el flujo eléctrico neto a través de la superficie.
+
+\end{ejemplo}
+
+La carga neta encerrada es
+
+\[
+Q_{\text{enc}}=q_1+q_2+q_3.
+\]
+
+Por tanto,
+
+\[
+Q_{\text{enc}}=(4.0-1.0+2.0)\,\si{\micro\coulomb}
+=\SI{5.0}{\micro\coulomb}.
+\]
+
+Aplicamos la ley de Gauss:
+
+\[
+\Phi_E=\frac{Q_{\text{enc}}}{\varepsilon_0}.
+\]
+
+Entonces,
+
+\[
+\Phi_E=
+\frac{5.0\times10^{-6}}{8.854\times10^{-12}}
+\approx
+\SI{5.6e5}{\newton\metre\squared\per\coulomb}.
+\]
+
+Por tanto,
+
+\[
+\boxed{
+\Phi_E\approx
++\SI{5.6e5}{\newton\metre\squared\per\coulomb}
+}.
+\]
+
+El signo positivo indica que existe un flujo neto saliente.
+
+
+\section{Ejemplo: una carga externa}
+
+\begin{ejemplo}
+
+Una superficie cerrada no contiene ninguna carga, pero existe una carga puntual
+positiva fuera de ella.
+
+Determine el flujo eléctrico neto a través de la superficie.
+
+\end{ejemplo}
+
+La carga externa produce un campo eléctrico sobre la superficie.
+
+Sin embargo,
+
+\[
+Q_{\text{enc}}=0.
+\]
+
+Por la ley de Gauss,
+
+\[
+\Phi_E=\frac{Q_{\text{enc}}}{\varepsilon_0}=0.
+\]
+
+Por tanto,
+
+\[
+\boxed{\Phi_E=0}.
+\]
+
+Esto no significa que
+
+\[
+E=0
+\]
+
+en la superficie.
+
+El campo puede ser diferente de cero en todos sus puntos. El flujo neto es cero porque
+las contribuciones entrantes y salientes se cancelan.
+
+
+\section{Densidades de carga y carga encerrada}
+
+En problemas con distribuciones continuas, la ley de Gauss exige calcular
+correctamente \(Q_{\text{enc}}\).
+
+Para una distribución lineal,
+
+\[
+dq=\lambda\,d\ell,
+\]
+
+de modo que
+
+\[
+\boxed{
+Q_{\text{enc}}=\int\lambda\,d\ell
+}.
+\]
+
+Para una distribución superficial,
+
+\[
+dq=\sigma\,dA,
+\]
+
+y
+
+\[
+\boxed{
+Q_{\text{enc}}=\int\sigma\,dA
+}.
+\]
+
+Para una distribución volumétrica,
+
+\[
+dq=\rho\,dV,
+\]
+
+por lo que
+
+\[
+\boxed{
+Q_{\text{enc}}=\int\rho\,dV
+}.
+\]
+
+Si la densidad es uniforme, estas expresiones se reducen a
+
+\[
+Q_{\text{enc}}=\lambda L,
+\]
+
+\[
+Q_{\text{enc}}=\sigma A,
+\]
+
+o
+
+\[
+Q_{\text{enc}}=\rho V,
+\]
+
+según el tipo de distribución.
+
+
+\section{Errores y confusiones frecuentes}
+
+\begin{errorfrecuente}
+
+\textbf{Medir el ángulo con la superficie en lugar de con la normal.}
+
+En
+
+\[
+\Phi_E=EA\cos\theta,
+\]
+
+\(\theta\) es el ángulo entre el campo y la normal a la superficie.
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+
+\textbf{Pensar que flujo nulo significa campo nulo.}
+
+Puede existir
+
+\[
+\Phi_E=0
+\]
+
+con
+
+\[
+E\neq0.
+\]
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+
+\textbf{Incluir cargas externas en \(Q_{\text{enc}}\).}
+
+La ley de Gauss utiliza solamente la carga neta situada dentro de la superficie
+gaussiana.
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+
+\textbf{Pensar que las cargas externas no producen campo sobre la superficie.}
+
+Sí pueden producirlo.
+
+Lo que ocurre es que su contribución al flujo neto de una superficie cerrada es cero.
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+
+\textbf{Sumar las magnitudes de las cargas encerradas sin considerar sus signos.}
+
+La carga encerrada es una suma algebraica:
+
+\[
+Q_{\text{enc}}=\sum_iq_i.
+\]
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+
+\textbf{Utilizar directamente \(\Phi_E=EA\) en cualquier situación.}
+
+Esta expresión sólo se obtiene directamente cuando el campo es constante sobre la
+superficie considerada y es perpendicular a ella.
+
+En general debe emplearse
+
+\[
+\Phi_E=\int_S\vec E\cdot d\vec A.
+\]
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+
+\textbf{Aplicar la ley de Gauss a una superficie abierta.}
+
+La expresión
+
+\[
+\oint_S\vec E\cdot d\vec A
+=
+\frac{Q_{\text{enc}}}{\varepsilon_0}
+\]
+
+se aplica a superficies cerradas.
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+
+\textbf{Creer que una superficie gaussiana debe ser una superficie material.}
+
+La superficie gaussiana es imaginaria y se elige para facilitar el análisis.
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+
+\textbf{Suponer que cualquier superficie gaussiana permite calcular fácilmente \(E\).}
+
+La ley de Gauss es siempre válida, pero sólo permite despejar el campo de forma sencilla
+cuando la simetría proporciona información suficiente sobre su magnitud y dirección.
+
+\end{errorfrecuente}
+
+
+\begin{errorfrecuente}
+
+\textbf{Confundir la superficie gaussiana con la distribución de carga.}
+
+La distribución de carga es física.
+
+La superficie gaussiana es una construcción matemática elegida para analizar el campo.
+
+\end{errorfrecuente}
+
+
+\section{Preguntas para comprobar comprensión}
+
+\begin{enumerate}
+    \item ¿Qué representa físicamente el flujo eléctrico?
+
+    \item ¿De qué magnitudes depende el flujo a través de una superficie plana en un
+    campo uniforme?
+
+    \item ¿Con respecto a qué dirección se mide el ángulo de
+    \[
+    \Phi_E=EA\cos\theta?
+    \]
+
+    \item ¿Cuándo es máximo el flujo a través de una superficie plana?
+
+    \item ¿Cuándo es cero?
+
+    \item ¿Qué significa que el flujo sea negativo?
+
+    \item ¿Cuál es la unidad SI del flujo eléctrico?
+
+    \item ¿Qué diferencia existe entre una superficie abierta y una cerrada?
+
+    \item ¿En qué dirección se define el vector área de una superficie cerrada?
+
+    \item ¿Qué representa \(Q_{\text{enc}}\)?
+
+    \item ¿Las cargas externas forman parte de \(Q_{\text{enc}}\)?
+
+    \item ¿Puede una carga externa producir campo eléctrico sobre una superficie
+    gaussiana?
+
+    \item ¿Por qué una carga externa no produce flujo neto a través de una superficie
+    cerrada?
+
+    \item Si \(Q_{\text{enc}}=0\), ¿debe ser necesariamente \(E=0\)?
+
+    \item Si una superficie gaussiana cambia de forma sin dejar salir la carga encerrada,
+    ¿cambia el flujo neto?
+
+    \item ¿Qué es una superficie gaussiana?
+
+    \item ¿Por qué la ley de Gauss es especialmente útil en situaciones con simetría?
+
+    \item ¿Qué superficie gaussiana conviene utilizar para una distribución con simetría
+    esférica?
+
+    \item ¿Qué superficie conviene para una línea infinita de carga?
+
+    \item ¿Qué superficie conviene para una lámina infinita?
+
+    \item ¿Cómo depende de \(r\) el campo exterior de una distribución esféricamente
+    simétrica?
+
+    \item ¿Cómo depende de \(r\) el campo de una línea infinita?
+
+    \item ¿Cómo depende de la distancia el campo de una lámina infinita ideal?
+
+    \item ¿Por qué el campo en el interior de una cáscara esférica uniformemente cargada
+    es cero?
+
+    \item ¿Cómo varía el campo dentro de una esfera sólida con carga volumétrica uniforme?
+\end{enumerate}
+
+
+\begin{resumen}
+
+\begin{itemize}
+    \item El flujo eléctrico mide la cantidad de campo eléctrico que atraviesa una
+    superficie.
+
+    \item Para una superficie plana en un campo uniforme,
+    \[
+    \boxed{\Phi_E=EA\cos\theta},
+    \]
+    donde \(\theta\) es el ángulo entre el campo y la normal a la superficie.
+
+    \item Para una superficie general,
+    \[
+    \boxed{\Phi_E=\int_S\vec E\cdot d\vec A}.
+    \]
+
+    \item Para una superficie cerrada,
+    \[
+    \boxed{\Phi_E=\oint_S\vec E\cdot d\vec A}.
+    \]
+
+    \item En una superficie cerrada, el vector área apunta hacia afuera.
+
+    \item El flujo saliente es positivo y el flujo entrante es negativo.
+
+    \item La ley de Gauss es
+    \[
+    \boxed{
+    \oint_S\vec E\cdot d\vec A
+    =
+    \frac{Q_{\text{enc}}}{\varepsilon_0}
+    }.
+    \]
+
+    \item La carga encerrada es una suma algebraica:
+    \[
+    \boxed{Q_{\text{enc}}=\sum_iq_i}.
+    \]
+
+    \item Las cargas externas pueden modificar el campo sobre la superficie, pero no
+    contribuyen al flujo neto.
+
+    \item Un flujo neto nulo no implica un campo eléctrico nulo.
+
+    \item Una superficie gaussiana es una superficie cerrada imaginaria utilizada para
+    aplicar la ley de Gauss.
+
+    \item La ley de Gauss siempre es válida, pero resulta especialmente útil para calcular
+    campos con simetría esférica, cilíndrica o plana.
+
+    \item Para una distribución esféricamente simétrica, una superficie gaussiana esférica
+    permite escribir
+    \[
+    \boxed{
+    E(4\pi r^2)=\frac{Q_{\text{enc}}}{\varepsilon_0}
+    }.
+    \]
+
+    \item Fuera de una distribución esféricamente simétrica,
+    \[
+    \boxed{E=k\frac{|Q|}{r^2}}.
+    \]
+
+    \item Dentro de una cáscara esférica uniformemente cargada,
+    \[
+    \boxed{E=0}.
+    \]
+
+    \item Dentro de una esfera sólida uniformemente cargada,
+    \[
+    \boxed{E=k\frac{|Q|}{R^3}r}.
+    \]
+
+    \item Para una línea infinita de carga,
+    \[
+    \boxed{E=\frac{|\lambda|}{2\pi\varepsilon_0r}}.
+    \]
+
+    \item Para una lámina infinita uniformemente cargada,
+    \[
+    \boxed{E=\frac{|\sigma|}{2\varepsilon_0}}.
+    \]
+
+    \item Para distribuciones continuas,
+    \[
+    Q_{\text{enc}}
+    =
+    \int\lambda\,d\ell,
+    \qquad
+    \int\sigma\,dA,
+    \qquad
+    \int\rho\,dV,
+    \]
+    según corresponda.
+\end{itemize}
+
+\end{resumen}
